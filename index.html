@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edusphere with Satyam - Educational notes, PPTs, MCQs and learning resources.">
+  <title>Edusphere with Satyam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#home">Edusphere <span>with Satyam</span></a>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+    <div class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#resources">Resources</a>
+      <a href="#practice">MCQs</a>
+      <a href="#articles">Articles</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="eyebrow">LEARN • PRACTICE • GROW</p>
+    <h1>Welcome to <span>Edusphere with Satyam</span></h1>
+    <p class="lead">A simple learning space for notes, presentations, practice questions and useful educational content.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#resources">Explore Resources</a>
+      <a class="btn secondary" href="#about">About the Teacher</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="card-icon">🎓</div>
+    <h3>Learning made simple</h3>
+    <p>Organised study material for students, teachers and competitive-exam learners.</p>
+  </div>
+</section>
+
+<section class="section" id="subjects">
+  <div class="section-heading">
+    <p class="eyebrow">EXPLORE</p>
+    <h2>Subjects & Learning Areas</h2>
+    <p>Start with a subject and explore the available resources.</p>
+  </div>
+  <div class="grid">
+    <article class="subject"><div>💻</div><h3>Information Technology</h3><p>Computer fundamentals, applications, practical topics and classroom resources.</p></article>
+    <article class="subject"><div>📈</div><h3>Economics</h3><p>Class 11 and 12 concepts, explanations, examples and revision material.</p></article>
+    <article class="subject"><div>⚖️</div><h3>Indian Polity</h3><p>Constitutional provisions, Fundamental Rights, articles, cases and revision notes.</p></article>
+    <article class="subject"><div>📝</div><h3>Competitive Exams</h3><p>Practice material, basic concepts, MCQs and exam-oriented revision.</p></article>
+  </div>
+</section>
+
+<section class="section soft" id="resources">
+  <div class="section-heading">
+    <p class="eyebrow">STUDY MATERIAL</p>
+    <h2>Notes, PDFs & PPTs</h2>
+    <p>Replace the sample buttons below with links to your Google Drive files, PDFs or presentations.</p>
+  </div>
+  <div class="resource-list">
+    <div class="resource"><span>📄</span><div><h3>Class Notes</h3><p>Topic-wise notes for students.</p></div><a href="#" onclick="demo(event)">Open</a></div>
+    <div class="resource"><span>📊</span><div><h3>Teaching PPTs</h3><p>Presentation-ready educational slides.</p></div><a href="#" onclick="demo(event)">Open</a></div>
+    <div class="resource"><span>📚</span><div><h3>PDF Library</h3><p>Downloadable revision and study material.</p></div><a href="#" onclick="demo(event)">Open</a></div>
+  </div>
+</section>
+
+<section class="section" id="practice">
+  <div class="section-heading">
+    <p class="eyebrow">PRACTICE</p>
+    <h2>MCQs & Quick Revision</h2>
+    <p>Build your own question bank here as the website grows.</p>
+  </div>
+  <div class="quiz-card">
+    <h3>Sample Question</h3>
+    <p>Which Article of the Constitution guarantees equality before law?</p>
+    <div class="answers">
+      <button onclick="checkAnswer(this, false)">Article 12</button>
+      <button onclick="checkAnswer(this, true)">Article 14</button>
+      <button onclick="checkAnswer(this, false)">Article 19</button>
+      <button onclick="checkAnswer(this, false)">Article 21</button>
+    </div>
+    <p id="result" class="result"></p>
+  </div>
+</section>
+
+<section class="section soft" id="articles">
+  <div class="section-heading">
+    <p class="eyebrow">BLOG</p>
+    <h2>Educational Articles</h2>
+    <p>Publish explanations, exam tips and useful learning articles here.</p>
+  </div>
+  <div class="grid">
+    <article class="article"><p class="tag">POLITY</p><h3>Understanding Fundamental Rights</h3><p>Use this space for a short introduction to your article.</p><a href="#" onclick="demo(event)">Read article →</a></article>
+    <article class="article"><p class="tag">ECONOMICS</p><h3>Economics Concepts Made Simple</h3><p>Explain difficult concepts using simple examples and diagrams.</p><a href="#" onclick="demo(event)">Read article →</a></article>
+    <article class="article"><p class="tag">IT</p><h3>Computer Basics for Students</h3><p>Create beginner-friendly lessons and revision guides.</p><a href="#" onclick="demo(event)">Read article →</a></article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <p class="eyebrow">ABOUT</p>
+    <h2>About Satyam</h2>
+    <p>Welcome to Edusphere with Satyam. This platform is designed to make educational resources organised, accessible and easy to understand.</p>
+    <p>You can customise this section with your teaching profile, qualifications, subjects and social links.</p>
+  </div>
+  <div class="contact-box">
+    <h3>Stay Connected</h3>
+    <p>Add your YouTube, Instagram, email or other educational links here.</p>
+    <a class="btn primary" href="mailto:your-email@example.com">Contact</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Edusphere with Satyam. All rights reserved.</p>
+  <p>Learn • Practice • Grow</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
