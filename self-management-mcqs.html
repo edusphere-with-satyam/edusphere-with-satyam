@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Self-Management Skills-I | 100 MCQs | Edusphere with Satyam</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f5f7fa;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:#12355b;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+.container{
+    max-width:950px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.question{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.question h3{
+    color:#12355b;
+    margin-top:0;
+}
+
+.option{
+    display:block;
+    background:#f1f5f9;
+    padding:12px;
+    margin:8px 0;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#e2e8f0;
+}
+
+.check{
+    margin-top:10px;
+    padding:9px 16px;
+    border:0;
+    border-radius:6px;
+    background:#12355b;
+    color:white;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.correct{
+    background:#d1fae5 !important;
+}
+
+.wrong{
+    background:#fee2e2 !important;
+}
+
+.score-box{
+    position:sticky;
+    bottom:0;
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 -2px 8px rgba(0,0,0,0.15);
+}
+
+.score-btn{
+    padding:12px 22px;
+    background:#12355b;
+    color:white;
+    border:0;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.back{
+    display:inline-block;
+    margin:20px 0;
+    padding:10px 18px;
+    background:#12355b;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Self-Management Skills-I</h1>
+    <p>100 Interactive Multiple Choice Questions</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="self-management-skills.html">
+← Back to Self-Management Skills-I
+</a>
+
+<div id="quiz"></div>
+
+</div>
+
+<div class="score-box">
+    <button class="score-btn" onclick="showScore()">
+        Check Final Score
+    </button>
+    <p id="score"></p>
+</div>
+
+<script>
+
+const questions = [
+
+{
+q:"1. What is self-management?",
+o:["The ability to manage oneself effectively","The ability to control other people","The ability to avoid all responsibilities","The ability to work without planning"],
+a:0
+},
+
+{
+q:"2. Which of the following is an important part of self-management?",
+o:["Time management","Ignoring responsibilities","Avoiding goals","Blaming others"],
+a:0
+},
+
+{
+q:"3. What does self-awareness mean?",
+o:["Understanding yourself","Understanding only other people","Avoiding all emotions","Ignoring weaknesses"],
+a:0
+},
+
+{
+q:"4. Which of these is a strength?",
+o:["An ability in which a person performs well","A habit that causes problems","A weakness","A source of stress"],
+a:0
+},
+
+{
+q:"5. Which of the following can be considered a weakness?",
+o:["An area that needs improvement","A personal achievement","A skill mastered completely","A successful habit"],
+a:0
+},
+
+{
+q:"6. Why is self-awareness important?",
+o:["It helps us understand our strengths and weaknesses","It helps us avoid learning","It prevents us from setting goals","It removes all responsibilities"],
+a:0
+},
+
+{
+q:"7. Self-awareness helps a person make:",
+o:["Better decisions","Random decisions","Unnecessary decisions","No decisions"],
+a:0
+},
+
+{
+q:"8. Which is an example of self-awareness?",
+o:["Recognising that you need more practice in Mathematics","Blaming a friend for poor marks","Ignoring your mistakes","Avoiding feedback"],
+a:0
+},
+
+{
+q:"9. Self-confidence means:",
+o:["Having reasonable trust in your abilities","Thinking you are better than everyone","Never accepting mistakes","Never asking for help"],
+a:0
+},
+
+{
+q:"10. Which behaviour shows self-confidence?",
+o:["Trying a new task after preparing for it","Giving up immediately","Avoiding every challenge","Refusing feedback"],
+a:0
+},
+
+{
+q:"11. A confident person usually:",
+o:["Learns from mistakes","Never makes mistakes","Never listens to others","Avoids responsibility"],
+a:0
+},
+
+{
+q:"12. Which can help develop self-confidence?",
+o:["Regular practice","Avoiding practice","Comparing yourself constantly","Ignoring feedback"],
+a:0
+},
+
+{
+q:"13. Accepting constructive feedback can help a person:",
+o:["Improve","Stop learning","Avoid responsibility","Lose all motivation"],
+a:0
+},
+
+{
+q:"14. Self-motivation means:",
+o:["Encouraging yourself to work towards a goal","Waiting for others to force you","Avoiding difficult tasks","Ignoring goals"],
+a:0
+},
+
+{
+q:"15. Self-motivation mainly comes from:",
+o:["Within the individual","Other people's orders only","Fear only","Random events"],
+a:0
+},
+
+{
+q:"16. Which is an example of self-motivation?",
+o:["Practising a skill because you want to improve","Studying only when forced","Avoiding practice","Giving up after one mistake"],
+a:0
+},
+
+{
+q:"17. Self-motivation helps us to:",
+o:["Continue working towards our goals","Avoid all work","Ignore deadlines","Avoid learning"],
+a:0
+},
+
+{
+q:"18. Which is a useful source of motivation?",
+o:["Clear goals","Confusion","Lack of planning","Constant distraction"],
+a:0
+},
+
+{
+q:"19. Positive thinking means:",
+o:["Approaching situations constructively","Ignoring every problem","Pretending problems do not exist","Always expecting everything to be perfect"],
+a:0
+},
+
+{
+q:"20. Which statement shows positive thinking?",
+o:["I can improve with practice.","I can never learn this.","There is no point trying.","I always fail."],
+a:0
+},
+
+{
+q:"21. Positive thinking helps a person:",
+o:["Focus on possible solutions","Avoid every challenge","Ignore responsibilities","Stop learning"],
+a:0
+},
+
+{
+q:"22. Positive thinking does NOT mean:",
+o:["Ignoring real problems","Looking for constructive solutions","Maintaining hope","Learning from difficulties"],
+a:0
+},
+
+{
+q:"23. Which is an example of negative thinking?",
+o:["I cannot do this, so I will not even try.","I can improve with practice.","I will find another method.","I can learn from my mistake."],
+a:0
+},
+
+{
+q:"24. Goal setting means:",
+o:["Deciding what you want to achieve and planning how to achieve it","Avoiding plans","Waiting for success","Doing everything randomly"],
+a:0
+},
+
+{
+q:"25. A good goal should be:",
+o:["Clear and achievable","Impossible","Completely unclear","Without any time limit"],
+a:0
+},
+
+{
+q:"26. What does SMART stand for in goal setting?",
+o:["Specific, Measurable, Achievable, Realistic, Time-bound","Simple, Modern, Active, Rapid, True","Strong, Meaningful, Accurate, Regular, Timely","Short, Measured, Automatic, Real, Target"],
+a:0
+},
+
+{
+q:"27. Which is a specific goal?",
+o:["I will complete two chapters this week.","I will study more someday.","I will become better.","I will work harder."],
+a:0
+},
+
+{
+q:"28. A time-bound goal has:",
+o:["A deadline or specific time period","No deadline","No target","No plan"],
+a:0
+},
+
+{
+q:"29. Which is a short-term goal?",
+o:["Completing today's homework","Becoming a professional after many years","Buying a house after ten years","Planning retirement"],
+a:0
+},
+
+{
+q:"30. Which is a long-term goal?",
+o:["Building a career over several years","Completing today's homework","Reading one page","Finishing today's classwork"],
+a:0
+},
+
+{
+q:"31. Time management means:",
+o:["Using available time effectively","Using time randomly","Avoiding schedules","Delaying every task"],
+a:0
+},
+
+{
+q:"32. Which is useful for time management?",
+o:["Preparing a schedule","Ignoring deadlines","Procrastinating","Doing everything at the last minute"],
+a:0
+},
+
+{
+q:"33. What is a deadline?",
+o:["The latest time by which a task should be completed","A free period","A break","A holiday"],
+a:0
+},
+
+{
+q:"34. Which activity is a time waster?",
+o:["Unnecessary distraction during study time","Completing homework","Planning tasks","Reviewing work"],
+a:0
+},
+
+{
+q:"35. Prioritisation means:",
+o:["Arranging tasks according to importance and urgency","Doing tasks randomly","Avoiding difficult tasks","Doing only easy tasks"],
+a:0
+},
+
+{
+q:"36. Which task normally deserves higher priority?",
+o:["Homework due tomorrow","Watching entertainment","Unnecessary browsing","An activity with no deadline"],
+a:0
+},
+
+{
+q:"37. Breaking a large task into smaller tasks can:",
+o:["Make the task easier to manage","Make planning impossible","Waste all available time","Remove the need for effort"],
+a:0
+},
+
+{
+q:"38. Which habit improves time management?",
+o:["Starting work before the deadline","Always delaying work","Ignoring schedules","Avoiding priorities"],
+a:0
+},
+
+{
+q:"39. Procrastination means:",
+o:["Delaying a task unnecessarily","Completing work early","Planning work","Setting priorities"],
+a:0
+},
+
+{
+q:"40. Which can reduce procrastination?",
+o:["Starting with a small manageable task","Waiting until the last minute","Avoiding deadlines","Ignoring the task"],
+a:0
+},
+
+{
+q:"41. Stress management means:",
+o:["Using healthy methods to handle pressure","Ignoring every problem","Avoiding all responsibilities","Suppressing every emotion"],
+a:0
+},
+
+{
+q:"42. Which can cause stress among students?",
+o:["Examination pressure","Proper planning","Regular rest","Good organisation"],
+a:0
+},
+
+{
+q:"43. Which is a healthy way to manage stress?",
+o:["Planning work properly","Ignoring the problem","Avoiding sleep","Keeping everything to yourself"],
+a:0
+},
+
+{
+q:"44. Taking appropriate breaks can help:",
+o:["Maintain concentration and manage pressure","Increase unnecessary stress","Avoid all responsibilities","Remove the need for planning"],
+a:0
+},
+
+{
+q:"45. A student who starts exam preparation early is likely to:",
+o:["Reduce last-minute pressure","Increase procrastination","Avoid learning","Create unnecessary confusion"],
+a:0
+},
+
+{
+q:"46. Asking a trusted person for appropriate support can be:",
+o:["A healthy way of dealing with difficulties","A sign of failure","Always unnecessary","A waste of time"],
+a:0
+},
+
+{
+q:"47. Self-control means:",
+o:["Managing thoughts, emotions and behaviour appropriately","Doing whatever you feel immediately","Ignoring consequences","Reacting without thinking"],
+a:0
+},
+
+{
+q:"48. Which behaviour shows self-control?",
+o:["Pausing before reacting when angry","Immediately shouting","Breaking things","Blaming everyone"],
+a:0
+},
+
+{
+q:"49. Self-control helps improve:",
+o:["Decision-making","Impulsive behaviour","Conflicts","Distraction"],
+a:0
+},
+
+{
+q:"50. Before making an important decision, a person should:",
+o:["Consider possible consequences","Act immediately without thinking","Ignore information","Blame others"],
+a:0
+},
+
+{
+q:"51. Good habits are:",
+o:["Positive behaviours practised regularly","One-time actions","Always harmful behaviours","Unplanned activities"],
+a:0
+},
+
+{
+q:"52. Which is a good study habit?",
+o:["Studying regularly","Studying only before exams","Ignoring homework","Avoiding revision"],
+a:0
+},
+
+{
+q:"53. Punctuality means:",
+o:["Being on time","Being late","Avoiding schedules","Ignoring deadlines"],
+a:0
+},
+
+{
+q:"54. Discipline helps students:",
+o:["Follow routines and complete responsibilities","Avoid all rules","Ignore deadlines","Stop learning"],
+a:0
+},
+
+{
+q:"55. Consistency means:",
+o:["Doing something regularly over time","Doing it only once","Changing plans every minute","Avoiding practice"],
+a:0
+},
+
+{
+q:"56. Responsibility means:",
+o:["Fulfilling one's duties and commitments","Blaming others","Avoiding assigned work","Ignoring expectations"],
+a:0
+},
+
+{
+q:"57. Which is an example of responsibility?",
+o:["Submitting an assignment on time","Ignoring an assignment","Blaming a classmate","Missing every deadline"],
+a:0
+},
+
+{
+q:"58. Accountability means:",
+o:["Accepting ownership of one's actions and outcomes","Blaming others","Avoiding consequences","Ignoring mistakes"],
+a:0
+},
+
+{
+q:"59. Responsibility mainly focuses on:",
+o:["Performing a duty or task","Blaming others","Avoiding work","Ignoring outcomes"],
+a:0
+},
+
+{
+q:"60. Accountability mainly focuses on:",
+o:["Accepting ownership of actions and results","Avoiding duties","Ignoring results","Avoiding decisions"],
+a:0
+},
+
+{
+q:"61. Which statement is correct?",
+o:["A person can be responsible and accountable at the same time.","Responsibility and accountability are always opposites.","Neither is useful.","Both mean avoiding work."],
+a:0
+},
+
+{
+q:"62. Organising study materials helps with:",
+o:["Effective self-management","Confusion","Procrastination","Poor planning"],
+a:0
+},
+
+{
+q:"63. A timetable is useful because it:",
+o:["Provides a planned structure for activities","Removes all responsibilities","Prevents learning","Creates unnecessary work"],
+a:0
+},
+
+{
+q:"64. Which is an example of poor time management?",
+o:["Leaving important work until the deadline","Planning tasks","Setting priorities","Starting work early"],
+a:0
+},
+
+{
+q:"65. Which activity should generally be given priority?",
+o:["An important task with an approaching deadline","An unnecessary activity","A random activity","Entertainment without a deadline"],
+a:0
+},
+
+{
+q:"66. What should you do after making a mistake?",
+o:["Learn from it and try to improve","Give up immediately","Blame someone else","Ignore everything"],
+a:0
+},
+
+{
+q:"67. Constructive feedback is useful because it:",
+o:["Helps identify areas for improvement","Always discourages learning","Prevents growth","Removes responsibility"],
+a:0
+},
+
+{
+q:"68. Which skill helps a student recognise their learning needs?",
+o:["Self-awareness","Procrastination","Carelessness","Avoidance"],
+a:0
+},
+
+{
+q:"69. Which is most closely related to trusting your own abilities?",
+o:["Self-confidence","Time management","Stress","Prioritisation"],
+a:0
+},
+
+{
+q:"70. Which is most closely related to internal encouragement?",
+o:["Self-motivation","Punctuality","Accountability","Organisation"],
+a:0
+},
+
+{
+q:"71. Which skill helps a student decide what to do first?",
+o:["Prioritisation","Self-awareness","Self-confidence","Positive thinking"],
+a:0
+},
+
+{
+q:"72. Which skill helps a student use available time effectively?",
+o:["Time management","Self-confidence","Self-awareness","Accountability"],
+a:0
+},
+
+{
+q:"73. Which skill helps a person handle pressure appropriately?",
+o:["Stress management","Procrastination","Avoidance","Carelessness"],
+a:0
+},
+
+{
+q:"74. Which skill helps prevent impulsive reactions?",
+o:["Self-control","Procrastination","Negative thinking","Disorganisation"],
+a:0
+},
+
+{
+q:"75. Which of the following supports personal development?",
+o:["Self-awareness","Ignoring weaknesses","Avoiding feedback","Giving up"],
+a:0
+},
+
+{
+q:"76. A student identifies that they become distracted while studying and decides to keep the phone away. This shows:",
+o:["Self-awareness and self-management","Carelessness","Negative thinking","Avoidance"],
+a:0
+},
+
+{
+q:"77. A student creates a weekly study plan. This mainly demonstrates:",
+o:["Time management","Negative thinking","Lack of discipline","Avoidance"],
+a:0
+},
+
+{
+q:"78. A student continues practising after making mistakes. This demonstrates:",
+o:["Self-motivation and positive attitude","Avoidance","Poor self-control","Procrastination"],
+a:0
+},
+
+{
+q:"79. A student accepts that they need improvement in a subject. This demonstrates:",
+o:["Self-awareness","Overconfidence","Carelessness","Avoidance"],
+a:0
+},
+
+{
+q:"80. A student calmly responds to criticism and considers useful suggestions. This demonstrates:",
+o:["Self-control and willingness to improve","Negative thinking","Poor discipline","Procrastination"],
+a:0
+},
+
+{
+q:"81. Which is an example of effective self-management?",
+o:["Setting goals, planning time and completing responsibilities","Avoiding all tasks","Ignoring deadlines","Doing everything randomly"],
+a:0
+},
+
+{
+q:"82. Why should goals be realistic?",
+o:["So that they can be pursued through reasonable effort and available resources","So that they are impossible","So that they have no purpose","So that they create confusion"],
+a:0
+},
+
+{
+q:"83. What is the benefit of setting measurable goals?",
+o:["Progress can be checked","Progress cannot be identified","Planning becomes impossible","Deadlines disappear"],
+a:0
+},
+
+{
+q:"84. Which behaviour can improve concentration?",
+o:["Reducing unnecessary distractions","Constantly checking messages","Multitasking unnecessarily","Ignoring schedules"],
+a:0
+},
+
+{
+q:"85. Which is an example of positive self-talk?",
+o:["I can improve if I practise regularly.","I will never improve.","There is no point trying.","I cannot learn anything."],
+a:0
+},
+
+{
+q:"86. Which person demonstrates accountability?",
+o:["A student who accepts responsibility for not completing an assignment","A student who blames others","A student who hides the mistake","A student who refuses to discuss it"],
+a:0
+},
+
+{
+q:"87. Which is NOT a good self-management practice?",
+o:["Constantly delaying important work","Planning activities","Setting goals","Reviewing progress"],
+a:0
+},
+
+{
+q:"88. Reviewing your progress helps you:",
+o:["Identify improvement and areas needing further work","Avoid learning","Remove all goals","Ignore mistakes"],
+a:0
+},
+
+{
+q:"89. Why is regular practice important?",
+o:["It helps develop and improve skills","It guarantees instant success","It removes all challenges","It eliminates the need for planning"],
+a:0
+},
+
+{
+q:"90. Which is an example of being organised?",
+o:["Keeping books and study materials arranged","Losing materials regularly","Ignoring assignments","Forgetting deadlines"],
+a:0
+},
+
+{
+q:"91. Which skill is useful when a student has several tasks?",
+o:["Prioritisation","Avoidance","Negative thinking","Carelessness"],
+a:0
+},
+
+{
+q:"92. Which action can help avoid last-minute stress?",
+o:["Starting important work early","Waiting until the deadline","Ignoring the schedule","Avoiding preparation"],
+a:0
+},
+
+{
+q:"93. Which statement about self-management is correct?",
+o:["It can be developed through practice and regular habits.","It cannot be improved.","It is useful only for adults.","It has no connection with student life."],
+a:0
+},
+
+{
+q:"94. Which of the following is an important quality of a good goal?",
+o:["Specificity","Confusion","Uncertainty","No deadline"],
+a:0
+},
+
+{
+q:"95. Which of the following is most useful for completing work on time?",
+o:["Planning and scheduling","Procrastination","Distraction","Ignoring priorities"],
+a:0
+},
+
+{
+q:"96. A student who understands their emotions and reactions is developing:",
+o:["Self-awareness","Procrastination","Carelessness","Poor discipline"],
+a:0
+},
+
+{
+q:"97. A student who trusts their ability after proper preparation demonstrates:",
+o:["Self-confidence","Negative thinking","Avoidance","Poor self-control"],
+a:0
+},
+
+{
+q:"98. A student who motivates themselves to continue studying despite difficulty demonstrates:",
+o:["Self-motivation","Procrastination","Carelessness","Avoidance"],
+a:0
+},
+
+{
+q:"99. The overall purpose of self-management skills is to:",
+o:["Help individuals manage themselves effectively and achieve their goals","Avoid all responsibilities","Depend completely on others","Ignore personal development"],
+a:0
+},
+
+{
+q:"100. Which combination represents important self-management skills?",
+o:["Self-awareness, self-confidence, motivation, goal setting and time management","Carelessness, procrastination and avoidance","Blaming, distraction and confusion","Ignoring goals and responsibilities"],
+a:0
+}
+
+];
+
+let score=0;
+let answered=0;
+
+const quiz=document.getElementById("quiz");
+
+questions.forEach((item,index)=>{
+
+    const box=document.createElement("div");
+    box.className="question";
+
+    let html="<h3>"+item.q+"</h3>";
+
+    item.o.forEach((option,i)=>{
+        html+=`
+        <label class="option">
+            <input type="radio" name="q${index}" value="${i}">
+            ${option}
+        </label>`;
+    });
+
+    html+=`
+        <button class="check" onclick="checkAnswer(${index})">
+            Check Answer
+        </button>
+        <div class="result" id="result${index}"></div>
+    `;
+
+    box.innerHTML=html;
+    quiz.appendChild(box);
+});
+
+
+function checkAnswer(index){
+
+    co
