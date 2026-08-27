@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Skills-I — 100 MCQs</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.question {
+    margin-bottom: 25px;
+}
+
+.option {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: #c8e6c9;
+}
+
+.wrong {
+    background-color: #ffcdd2;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌱 Green Skills-I — 100 MCQs</h1>
+
+<p>
+Choose the correct answer for each question and click
+<strong>Submit Test</strong> to see your score.
+</p>
+
+<div id="quiz"></div>
+
+<button onclick="submitQuiz()">Submit Test</button>
+<button onclick="reattempt()">Reattempt</button>
+
+<div id="result"></div>
+
+<script>
+
+const questions = [
+
+{
+q:"1. What are green skills?",
+o:["Skills related only to computers","Skills that support environmental responsibility and sustainability","Skills related only to sports","Skills used only in business"],
+a:1
+},
+
+{
+q:"2. Which of the following is an important purpose of green skills?",
+o:["Increasing waste","Protecting the environment","Increasing pollution","Wasting natural resources"],
+a:1
+},
+
+{
+q:"3. Green skills help people to use natural resources:",
+o:["Carelessly","Efficiently and responsibly","Without limits","Only for business"],
+a:1
+},
+
+{
+q:"4. Which is an example of a green practice?",
+o:["Leaving lights switched on","Wasting water","Switching off unused electrical appliances","Burning plastic"],
+a:2
+},
+
+{
+q:"5. Green skills are useful for:",
+o:["Only students","Only farmers","Only engineers","Individuals, workplaces and society"],
+a:3
+},
+
+{
+q:"6. Which activity supports environmental sustainability?",
+o:["Reducing unnecessary waste","Throwing waste on roads","Cutting trees unnecessarily","Wasting electricity"],
+a:0
+},
+
+{
+q:"7. Green skills include knowledge about:",
+o:["Environmental protection","Only entertainment","Only sports","Only banking"],
+a:0
+},
+
+{
+q:"8. Which is NOT a green practice?",
+o:["Saving water","Recycling materials","Wasting electricity","Reducing plastic use"],
+a:2
+},
+
+{
+q:"9. Green skills can help reduce:",
+o:["Environmental damage","Knowledge","Education","Responsible behaviour"],
+a:0
+},
+
+{
+q:"10. Why are green skills important for students?",
+o:["They encourage responsible environmental behaviour","They encourage waste","They increase pollution","They discourage conservation"],
+a:0
+},
+
+{
+q:"11. What is the environment?",
+o:["Only forests","Only buildings","The surroundings in which living organisms live and interact","Only air"],
+a:2
+},
+
+{
+q:"12. Which is a component of the natural environment?",
+o:["Air","Water","Soil","All of these"],
+a:3
+},
+
+{
+q:"13. Which of the following is a living component of the environment?",
+o:["Water","Air","Plants","Soil"],
+a:2
+},
+
+{
+q:"14. Which of the following is a non-living component?",
+o:["Animals","Plants","Air","Human beings"],
+a:2
+},
+
+{
+q:"15. Why is a clean environment important?",
+o:["It supports healthy living","It increases pollution","It wastes resources","It damages ecosystems"],
+a:0
+},
+
+{
+q:"16. Which activity can harm the environment?",
+o:["Planting trees","Recycling","Uncontrolled pollution","Saving water"],
+a:2
+},
+
+{
+q:"17. Environmental protection is the responsibility of:",
+o:["Only governments","Only schools","Only industries","Everyone"],
+a:3
+},
+
+{
+q:"18. Which resource is essential for life?",
+o:["Water","Plastic","Noise","Smoke"],
+a:0
+},
+
+{
+q:"19. Human activities can:",
+o:["Never affect the environment","Affect the environment positively or negatively","Only improve the environment","Have no connection with nature"],
+a:1
+},
+
+{
+q:"20. Which action helps maintain a clean environment?",
+o:["Proper waste disposal","Littering","Burning plastic","Dumping chemicals"],
+a:0
+},
+
+{
+q:"21. What is sustainable development?",
+o:["Development without considering future generations","Development that meets present needs while considering future needs","Development based only on profit","Development that increases pollution"],
+a:1
+},
+
+{
+q:"22. Sustainable development tries to balance:",
+o:["Economic, social and environmental needs","Only business profits","Only technology","Only population"],
+a:0
+},
+
+{
+q:"23. Why is sustainable development necessary?",
+o:["Resources are unlimited","Resources are limited","Pollution is useful","Waste should increase"],
+a:1
+},
+
+{
+q:"24. Sustainable development protects the interests of:",
+o:["Only the present generation","Only businesses","Present and future generations","Only industries"],
+a:2
+},
+
+{
+q:"25. Which is an example of sustainable development?",
+o:["Using resources efficiently","Wasting water","Destroying forests","Increasing unnecessary consumption"],
+a:0
+},
+
+{
+q:"26. Which statement is correct about natural resources?",
+o:["They should always be wasted","They should be used responsibly","They are unlimited","They have no importance"],
+a:1
+},
+
+{
+q:"27. Which activity supports sustainability?",
+o:["Reusing materials","Unnecessary consumption","Littering","Deforestation"],
+a:0
+},
+
+{
+q:"28. Sustainable development considers:",
+o:["Only economic growth","Only environmental protection","Economic, social and environmental factors","Only technology"],
+a:2
+},
+
+{
+q:"29. Which generation should be considered while using resources today?",
+o:["Only current generation","Only previous generation","Future generations as well","No generation"],
+a:2
+},
+
+{
+q:"30. A major aim of sustainable development is to:",
+o:["Increase environmental damage","Maintain a balance between development and environmental protection","Increase waste","Exhaust resources"],
+a:1
+},
+
+{
+q:"31. What are natural resources?",
+o:["Resources obtained from nature","Only man-made products","Only electronic devices","Only buildings"],
+a:0
+},
+
+{
+q:"32. Which is a natural resource?",
+o:["Water","Plastic bottle","Computer","Chair"],
+a:0
+},
+
+{
+q:"33. Which is a renewable resource?",
+o:["Coal","Petroleum","Sunlight","Natural gas"],
+a:2
+},
+
+{
+q:"34. Which is a non-renewable resource?",
+o:["Wind","Sunlight","Coal","Water"],
+a:2
+},
+
+{
+q:"35. Renewable resources can:",
+o:["Never be replenished","Naturally replenish under suitable conditions","Only be produced in factories","Always become waste"],
+a:1
+},
+
+{
+q:"36. Which is a fossil fuel?",
+o:["Coal","Wind","Sunlight","Hydropower"],
+a:0
+},
+
+{
+q:"37. Which resource should be conserved carefully?",
+o:["Only plastic","Natural resources","Only toys","Only furniture"],
+a:1
+},
+
+{
+q:"38. Which activity helps conserve water?",
+o:["Leaving taps running","Repairing leaking taps","Wasting drinking water","Polluting rivers"],
+a:1
+},
+
+{
+q:"39. Which resource is commonly used to generate solar energy?",
+o:["Sunlight","Coal","Petroleum","Natural gas"],
+a:0
+},
+
+{
+q:"40. Which action helps conserve forests?",
+o:["Uncontrolled cutting","Planting and protecting trees","Burning forests","Wasting paper"],
+a:1
+},
+
+{
+q:"41. What is air pollution?",
+o:["Clean air","Contamination of air by harmful substances","Saving air","Movement of wind"],
+a:1
+},
+
+{
+q:"42. Which can contribute to air pollution?",
+o:["Smoke","Fresh air","Trees","Rainwater"],
+a:0
+},
+
+{
+q:"43. Water pollution occurs when:",
+o:["Water is kept clean","Harmful substances contaminate water","Water is conserved","Rain falls"],
+a:1
+},
+
+{
+q:"44. Which is an example of water pollution?",
+o:["Dumping waste into a river","Saving water","Rainwater harvesting","Cleaning a pond"],
+a:0
+},
+
+{
+q:"45. Soil pollution can be caused by:",
+o:["Harmful chemicals and waste","Planting trees","Composting","Conservation"],
+a:0
+},
+
+{
+q:"46. Noise pollution means:",
+o:["Useful communication","Excessive or unwanted sound","Clean air","Clean water"],
+a:1
+},
+
+{
+q:"47. Which can help reduce air pollution?",
+o:["Using public transport","Burning waste","Increasing vehicle emissions","Burning plastic"],
+a:0
+},
+
+{
+q:"48. Deforestation means:",
+o:["Planting trees","Large-scale removal of forests","Protecting forests","Recycling paper"],
+a:1
+},
+
+{
+q:"49. Which activity helps prevent water pollution?",
+o:["Dumping chemicals in rivers","Proper disposal of waste","Throwing plastic into lakes","Discharging untreated waste"],
+a:1
+},
+
+{
+q:"50. Environmental pollution can affect:",
+o:["Only humans","Only animals","Only plants","Humans, animals, plants and ecosystems"],
+a:3
+},
+
+{
+q:"51. What is waste management?",
+o:["Careless disposal of waste","Systematic handling, treatment, reuse, recycling and disposal of waste","Increasing waste","Burning every type of waste"],
+a:1
+},
+
+{
+q:"52. Which is biodegradable waste?",
+o:["Vegetable peels","Glass","Many plastics","Metal"],
+a:0
+},
+
+{
+q:"53. Which is generally non-biodegradable?",
+o:["Leaves","Food waste","Many plastics","Vegetable peels"],
+a:2
+},
+
+{
+q:"54. Which of the following is a major principle of waste management?",
+o:["Reduce waste","Increase waste","Litter everywhere","Ignore waste"],
+a:0
+},
+
+{
+q:"55. What does the first R in 3Rs stand for?",
+o:["Recycle","Reduce","Repair","Replace"],
+a:1
+},
+
+{
+q:"56. What does Reuse mean?",
+o:["Throwing an item away","Using an item again","Burning an item","Buying more items"],
+a:1
+},
+
+{
+q:"57. What does Recycle mean?",
+o:["Processing waste materials to make useful new materials or products","Throwing waste away","Burning all waste","Keeping waste on roads"],
+a:0
+},
+
+{
+q:"58. Which practice follows the 3Rs?",
+o:["Reduce, Reuse and Recycle","Read, Repeat and Remember","Remove, Replace and Return","Reduce, Repair and Remove"],
+a:0
+},
+
+{
+q:"59. Waste should preferably be:",
+o:["Thrown anywhere","Managed and disposed of responsibly","Burned everywhere","Mixed without consideration"],
+a:1
+},
+
+{
+q:"60. Waste segregation means:",
+o:["Mixing all waste","Separating different types of waste","Burning waste","Ignoring waste"],
+a:1
+},
+
+{
+q:"61. What is e-waste?",
+o:["Electronic waste","Food waste","Garden waste","Paper waste"],
+a:0
+},
+
+{
+q:"62. Which is an example of e-waste?",
+o:["Old computer","Vegetable peel","Dry leaf","Food waste"],
+a:0
+},
+
+{
+q:"63. Which item can become e-waste?",
+o:["Keyboard","Banana peel","Cotton cloth","Leaves"],
+a:0
+},
+
+{
+q:"64. E-waste should be:",
+o:["Thrown into rivers","Handled through responsible collection and recycling systems","Burned openly","Thrown on roads"],
+a:1
+},
+
+{
+q:"65. Why should e-waste be managed responsibly?",
+o:["It may contain materials that can harm the environment if improperly handled","It is always harmless","It improves pollution","It should be mixed with food"],
+a:0
+},
+
+{
+q:"66. Which is an electronic device?",
+o:["Printer","Leaf","Book","Vegetable"],
+a:0
+},
+
+{
+q:"67. Responsible e-waste management helps:",
+o:["Reduce environmental harm","Increase pollution","Increase litter","Waste resources"],
+a:0
+},
+
+{
+q:"68. Which is NOT e-waste?",
+o:["Old mobile phone","Old keyboard","Old printer","Vegetable peel"],
+a:3
+},
+
+{
+q:"69. Old electronic equipment should preferably be:",
+o:["Sent to appropriate collection or recycling systems","Thrown into a river","Burned in an open area","Left on the roadside"],
+a:0
+},
+
+{
+q:"70. Recycling e-waste can help:",
+o:["Recover useful materials","Increase litter","Pollute water intentionally","Waste all resources"],
+a:0
+},
+
+{
+q:"71. What is energy conservation?",
+o:["Wasting energy","Reducing unnecessary energy use and using energy efficiently","Using electricity continuously","Increasing fuel wastage"],
+a:1
+},
+
+{
+q:"72. Which is a renewable energy source?",
+o:["Solar energy","Coal","Petroleum","Natural gas"],
+a:0
+},
+
+{
+q:"73. Wind energy is obtained from:",
+o:["Moving air","Coal","Petroleum","Plastic"],
+a:0
+},
+
+{
+q:"74. Hydropower uses:",
+o:["Moving water","Plastic","Coal only","Noise"],
+a:0
+},
+
+{
+q:"75. Which action saves electricity?",
+o:["Leaving lights on","Switching off unused lights","Keeping computers running unnecessarily","Using appliances without need"],
+a:1
+},
+
+{
+q:"76. Which is an energy-efficient practice?",
+o:["Using energy-efficient appliances","Wasting electricity","Leaving fans running in empty rooms","Keeping all lights on"],
+a:0
+},
+
+{
+q:"77. Solar energy comes from:",
+o:["The Sun","Coal","Petroleum","Natural gas"],
+a:0
+},
+
+{
+q:"78. Which energy source is non-renewable?",
+o:["Wind","Solar","Coal","Hydropower"],
+a:2
+},
+
+{
+q:"79. Why should energy be conserved?",
+o:["To reduce unnecessary resource use and environmental impact","To increase wastage","To increase pollution","To waste fuel"],
+a:0
+},
+
+{
+q:"80. Which practice is suitable in a computer lab?",
+o:["Keep computers on unnecessarily","Shut down computers properly after use","Leave lights on all day","Waste electricity"],
+a:1
+},
+
+{
+q:"81. What is a green economy?",
+o:["An economy that supports environmental sustainability","An economy based only on pollution","An economy that wastes resources","An economy without jobs"],
+a:0
+},
+
+{
+q:"82. A green economy promotes:",
+o:["Efficient use of resources","Resource wastage","Uncontrolled pollution","Environmental damage"],
+a:0
+},
+
+{
+q:"83. What are green jobs?",
+o:["Jobs that contribute to environmental protection or resource efficiency","Jobs that increase pollution","Jobs with no relation to resources","Only office jobs"],
+a:0
+},
+
+{
+q:"84. Which is an example of a green job?",
+o:["Solar energy technician","Illegal waste dumper","Pollution creator","Forest destroyer"],
+a:0
+},
+
+{
+q:"85. Which professional may work in environmental protection?",
+o:["Environmental scientist","Only actor","Only athlete","Only singer"],
+a:0
+},
+
+{
+q:"86. Green jobs can help:",
+o:["Create employment and support environmental protection","Increase pollution","Destroy natural resources","Increase waste"],
+a:0
+},
+
+{
+q:"87. Which is related to renewable energy?",
+o:["Solar energy technician","Coal waste collector","Plastic burner","Illegal logger"],
+a:0
+},
+
+{
+q:"88. Green economy aims to reduce:",
+o:["Environmental risks","Responsible resource use","Sustainability","Clean technology"],
+a:0
+},
+
+{
+q:"89. Energy auditors can help organisations:",
+o:["Identify opportunities for efficient energy use","Increase unnecessary electricity use","Waste fuel","Increase pollution"],
+a:0
+},
+
+{
+q:"90. Green jobs are important because they:",
+o:["Support both employment and environmental goals","Only increase waste","Only increase pollution","Have no social value"],
+a:0
+},
+
+{
+q:"91. Which action can an individual take to protect the environment?",
+o:["Save water","Waste water","Burn plastic","Litter"],
+a:0
+},
+
+{
+q:"92. Which practice reduces plastic waste?",
+o:["Using reusable items when appropriate","Using unnecessary single-use plastic","Throwing plastic in open spaces","Burning plastic"],
+a:0
+},
+
+{
+q:"93. Which is a green practice in a school?",
+o:["Avoiding unnecessary printing","Printing everything unnecessarily","Leaving lights on","Wasting paper"],
+a:0
+},
+
+{
+q:"94. Which practice can reduce paper consumption?",
+o:["Using digital documents when appropriate","Printing every message","Wasting paper","Throwing unused paper"],
+a:0
+},
+
+{
+q:"95. Which practice is suitable in a workplace?",
+o:["Switching off unused electrical equipment","Leaving all equipment on","Wasting paper","Ignoring waste"],
+a:0
+},
+
+{
+q:"96. Why should lights and fans be switched off when not required?",
+o:["To conserve energy","To waste electricity","To increase pollution","To damage equipment"],
+a:0
+},
+
+{
+q:"97. Which practice helps keep surroundings clean?",
+o:["Proper waste disposal","Littering","Dumping waste","Throwing plastic everywhere"],
+a:0
+},
+
+{
+q:"98. Which principle encourages responsible consumption?",
+o:["Reduce, Reuse and Recycle","Waste, Throw and Burn","Buy, Use and Throw","Ignore and Waste"],
+a:0
+},
+
+{
+q:"99. Which is an example of responsible computer use?",
+o:["Shutting down the computer properly after use","Leaving it running unnecessarily","Throwing electronic devices away carelessly","Wasting electricity"],
+a:0
+},
+
+{
+q:"100. The main purpose of Green Skills-I is to encourage students to:",
+o:["Use resources responsibly and protect the environment","Increase pollution","Waste natural resources","Ignore environmental problems"],
+a:0
+}
+
+];
+
+function loadQuiz() {
+
+    const quiz = document.getElementById("quiz");
+
+    questions.forEach((item, index) => {
+
+        let html = `
+        <div class="question">
+            <h3>${item.q}</h3>
+        `;
+
+        item.o.forEach((option, optionIndex) => {
+
+            html += `
+            <label class="option">
+                <input type="radio"
+                       name="question${index}"
+                       value="${optionIndex}">
+                ${String.fromCharCode(65 + optionIndex)}. ${option}
+            </label>
+            `;
+
+        });
+
+        html += `</div>`;
+
+        quiz.innerHTML += html;
+
+    });
+
+}
+
+function submitQuiz() {
+
+    let score = 0;
+    let attempted = 0;
+
+    questions.forEach((item, index) => {
+
+        const selected =
+            document.querySelector(
+                `input[name="question${index}"]:checked`
+            );
+
+        const options =
+            document.querySelectorAll(
+                `input[name="question${index}"]`
+            );
+
+        if (selected) {
+
+            attempted++;
+
+            if (Number(selected.value) === item.a) {
+                score++;
+            }
+
+        }
+
+        options.forEach(input => {
+
+            const label = input.parentElement;
+
+            label.classList.remove("correct");
+            label.classList.remove("wrong");
+
+            if (Number(input.value) === item.a) {
+                label.classList.add("correct");
+            }
+
+            if (
+                selected &&
+                input === selected &&
+                Number(input.value) !== item.a
+            ) {
+                label.classList.add("wrong");
+            }
+
+        });
+
+    });
+
+    const percentage = (score / 100) * 100;
+
+    document.getElementById("result").innerHTML =
+        "Score: " + score + " / 100" +
+        "<br>Attempted: " + attempted + " / 100" +
+        "<br>Percentage: " + percentage.toFixed(2) + "%";
+
+}
+
+function reattempt() {
+
+    document.querySelectorAll(
+        "input[type='radio']"
+    ).forEach(input => {
+        input.checked = false;
+    });
+
+    document.querySelectorAll(
+        ".option"
+    ).forEach(label => {
+        label.classList.remove("correct");
+        label.classList.remove("wrong");
+    });
+
+    document.getElementById("result").innerHTML = "";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+loadQuiz();
+
+</script>
+
+</body>
+</html>
