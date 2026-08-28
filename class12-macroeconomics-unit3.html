@@ -1,651 +1,1104 @@
-<!-- =========================================================
-     SECTION 1 — NATIONAL INCOME & BASIC CONCEPTS
-     ========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 12 Economics - Unit 3: Determination of Income and Employment</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
+    color:#1f2937;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#172554,#4338ca,#0f766e);
+    color:white;
+    text-align:center;
+    padding:40px 18px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:8px 0;
+    font-size:17px;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin:24px 0;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.card h2{
+    color:#312e81;
+    border-bottom:3px solid #818cf8;
+    padding-bottom:8px;
+}
+
+.card h3{
+    color:#0f766e;
+}
+
+.definition{
+    background:#fefce8;
+    border-left:6px solid #eab308;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.highlight{
+    background:linear-gradient(135deg,#eff6ff,#ecfeff);
+    border-left:6px solid #4f46e5;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.point{
+    background:#f8fafc;
+    padding:14px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #e5e7eb;
+}
+
+.formula{
+    background:linear-gradient(135deg,#ede9fe,#e0f2fe);
+    border:2px solid #818cf8;
+    padding:18px;
+    text-align:center;
+    font-size:19px;
+    font-weight:bold;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.booster{
+    background:linear-gradient(135deg,#fff7ed,#fef3c7);
+    border-left:6px solid #f59e0b;
+    padding:20px;
+    border-radius:14px;
+}
+
+.exam{
+    background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+    border-left:6px solid #059669;
+    padding:20px;
+    border-radius:14px;
+}
+
+.warning{
+    background:#fff1f2;
+    border-left:6px solid #e11d48;
+    padding:18px;
+    border-radius:12px;
+}
+
+.question{
+    background:linear-gradient(135deg,#f8fafc,#eef2ff);
+    border-left:6px solid #4f46e5;
+    padding:20px;
+    margin:20px 0;
+    border-radius:14px;
+}
+
+.question h3{
+    margin-top:0;
+    color:#312e81;
+}
+
+.option{
+    display:block;
+    background:white;
+    border:1px solid #cbd5e1;
+    padding:11px 14px;
+    margin:9px 0;
+    border-radius:9px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#eef2ff;
+    transform:translateX(3px);
+}
+
+.option input{
+    margin-right:8px;
+}
+
+.show-answer{
+    background:#312e81;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.answer{
+    display:none;
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:12px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#e0e7ff;
+    color:#312e81;
+}
+
+.section-title{
+    background:linear-gradient(135deg,#312e81,#0f766e);
+    color:white;
+    padding:20px;
+    border-radius:16px;
+    margin-top:30px;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:28px;
+    margin-top:35px;
+}
+
+@media(max-width:650px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .container{
+        padding:12px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Class 12 Economics</h1>
+
+<p>Introductory Macroeconomics</p>
+
+<p><b>Unit 3: Determination of Income and Employment</b></p>
+
+<p>Complete Notes • Concepts • Numericals • MCQs • Exam Booster</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- ====================================================== -->
+<!-- SECTION 1 -->
+<!-- ====================================================== -->
+
+<div class="section-title">
+
+<h2>📘 SECTION 1 — Aggregate Demand, Consumption & Saving</h2>
+
+<p>Complete conceptual foundation of the unit</p>
+
+</div>
+
 
 <div class="card">
 
-<span class="topic">SECTION 1</span>
+<h2>🎯 Learning Objectives</h2>
 
-<h2>📘 Introduction to Income and Employment</h2>
-
-<div class="highlight">
-
-<strong>What you will learn in this section:</strong><br><br>
-
-• Meaning of Income<br>
-• Meaning of Employment<br>
-• Aggregate Demand<br>
-• Aggregate Supply<br>
-• Ex-Ante and Ex-Post Concepts<br>
-• Planned and Unplanned Changes in Inventories<br>
-• Consumption<br>
-• Saving<br>
-• Investment<br>
-• Basic Relationship between Income, Consumption and Saving
-
+<div class="point">
+Understand the meaning and components of Aggregate Demand.
 </div>
 
-<div class="definition">
-
-<strong>Meaning of Income:</strong><br><br>
-
-Income refers to the flow of earnings received by individuals,
-firms or the economy during a particular period from economic
-activities.
-
+<div class="point">
+Understand Consumption Function and Saving Function.
 </div>
 
-<div class="definition">
-
-<strong>Meaning of Employment:</strong><br><br>
-
-Employment refers to the engagement of people in productive
-economic activities in return for income or remuneration.
-
+<div class="point">
+Understand APC, MPC, APS and MPS.
 </div>
 
-<div class="important">
-
-<strong>Macroeconomic Focus:</strong><br><br>
-
-In this chapter, we mainly study the determination of the level
-of income and employment in an economy and the factors that
-influence Aggregate Demand and Aggregate Supply.
-
+<div class="point">
+Understand the relationship between consumption and saving.
 </div>
 
 </div>
 
-
-<!-- AGGREGATE DEMAND -->
 
 <div class="card">
 
-<span class="topic">1. AGGREGATE DEMAND</span>
-
-<h2>📈 Aggregate Demand (AD)</h2>
+<h2>1. Aggregate Demand</h2>
 
 <div class="definition">
 
-<strong>Definition:</strong><br><br>
-
-Aggregate Demand refers to the total planned expenditure on
-final goods and services in an economy during a given period.
+<b>Aggregate Demand (AD)</b> refers to the total planned expenditure on goods and services in an economy during a given period.
 
 </div>
 
-<div class="highlight">
+<p>
+In a simple two-sector economy consisting of households and firms,
+aggregate demand consists of expenditure on consumption and investment.
+</p>
 
-<strong>In a simple two-sector economy:</strong><br><br>
-
-Aggregate Demand = Consumption + Investment
-
-<br><br>
-
-<strong>AD = C + I</strong>
-
-</div>
-
-<h3>Components of Aggregate Demand</h3>
-
-<ul>
-
-<li>Consumption Expenditure (C)</li>
-<li>Investment Expenditure (I)</li>
-
-</ul>
-
-<div class="example">
-
-<strong>Example:</strong><br><br>
-
-Suppose households plan to spend ₹800 crore on consumption and
-firms plan to invest ₹200 crore.
-
-<br><br>
+<div class="formula">
 
 AD = C + I
 
-<br><br>
-
-AD = ₹800 crore + ₹200 crore
-
-<br><br>
-
-<strong>AD = ₹1,000 crore</strong>
-
 </div>
 
-<div class="important">
+<p>
+Where:
+</p>
 
-<strong>PYQ / Exam Point ⭐</strong><br><br>
+<div class="point">
+<b>C</b> = Consumption expenditure
+</div>
 
-For a two-sector economy:
-
-<br>
-
-<strong>AD = C + I</strong>
-
+<div class="point">
+<b>I</b> = Investment expenditure
 </div>
 
 </div>
 
-
-<!-- AGGREGATE SUPPLY -->
 
 <div class="card">
 
-<span class="topic">2. AGGREGATE SUPPLY</span>
+<h2>2. Components of Aggregate Demand</h2>
 
-<h2>📊 Aggregate Supply (AS)</h2>
+<div class="point">
+<b>1. Consumption Expenditure (C):</b>
+Expenditure by households on consumption goods and services.
+</div>
+
+<div class="point">
+<b>2. Investment Expenditure (I):</b>
+Expenditure by firms on capital goods such as machinery, equipment and inventories.
+</div>
+
+<div class="highlight">
+
+In the simple two-sector model:
+
+<br><br>
+
+<b>AD = C + I</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>3. Consumption Function</h2>
 
 <div class="definition">
 
-<strong>Definition:</strong><br><br>
+Consumption function shows the functional relationship between consumption expenditure and income.
 
-Aggregate Supply refers to the total value of goods and services
-that firms plan to produce during a given period.
+</div>
+
+<div class="formula">
+
+C = C̄ + bY
+
+</div>
+
+<p>
+Where:
+</p>
+
+<div class="point">
+<b>C̄</b> = Autonomous consumption
+</div>
+
+<div class="point">
+<b>b</b> = Marginal Propensity to Consume (MPC)
+</div>
+
+<div class="point">
+<b>Y</b> = Income
+</div>
+
+<div class="highlight">
+
+<b>Autonomous Consumption:</b>
+Consumption which takes place even when income is zero.
+
+<br><br>
+
+<b>Induced Consumption:</b>
+Consumption which changes with the level of income.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>4. Average Propensity to Consume (APC)</h2>
+
+<div class="definition">
+
+APC shows the ratio of consumption expenditure to income.
+
+</div>
+
+<div class="formula">
+
+APC = C / Y
+
+</div>
+
+<p>
+APC can be expressed as a percentage by multiplying the result by 100.
+</p>
+
+<div class="point">
+APC can be greater than 1 when consumption is greater than income.
+</div>
+
+<div class="point">
+APC = 1 when consumption equals income.
+</div>
+
+<div class="point">
+APC is generally greater than MPC when autonomous consumption is positive.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>5. Marginal Propensity to Consume (MPC)</h2>
+
+<div class="definition">
+
+MPC measures the change in consumption due to a change in income.
+
+</div>
+
+<div class="formula">
+
+MPC = ΔC / ΔY
+
+</div>
+
+<div class="point">
+In the simple model, MPC lies between 0 and 1.
+</div>
+
+<div class="point">
+A higher MPC means a larger portion of additional income is spent on consumption.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>6. Saving Function</h2>
+
+<div class="definition">
+
+Saving is the part of income which is not spent on consumption.
+
+</div>
+
+<div class="formula">
+
+S = Y − C
 
 </div>
 
 <div class="highlight">
 
-In the simple Keynesian model, Aggregate Supply is represented
-by the level of income.
+If income is ₹1,000 and consumption is ₹800:
 
 <br><br>
 
-<strong>AS = Y</strong>
-
-</div>
-
-<div class="example">
-
-<strong>Example:</strong><br><br>
-
-If the total income generated in an economy is ₹5,000 crore,
-Aggregate Supply in the simple model is represented by ₹5,000 crore.
-
-</div>
-
-<div class="important">
-
-<strong>Remember:</strong><br><br>
-
-In the simple income determination model:
-
-<br>
-
-<strong>AD = C + I</strong>
-
-<br>
-
-<strong>AS = Y</strong>
+Saving = ₹1,000 − ₹800 = <b>₹200</b>
 
 </div>
 
 </div>
 
-
-<!-- EX-ANTE AND EX-POST -->
 
 <div class="card">
 
-<span class="topic">3. EX-ANTE & EX-POST</span>
+<h2>7. Average Propensity to Save (APS)</h2>
 
-<h2>⏳ Ex-Ante and Ex-Post Concepts</h2>
+<div class="formula">
 
-<div class="definition">
-
-<strong>Ex-Ante:</strong><br><br>
-
-Ex-ante refers to planned or intended values of economic
-variables before the actual economic activity takes place.
+APS = S / Y
 
 </div>
 
-<div class="definition">
-
-<strong>Ex-Post:</strong><br><br>
-
-Ex-post refers to actual or realised values after the economic
-activity has taken place.
+<p>
+APS shows the proportion of income saved.
+</p>
 
 </div>
+
+
+<div class="card">
+
+<h2>8. Marginal Propensity to Save (MPS)</h2>
+
+<div class="formula">
+
+MPS = ΔS / ΔY
+
+</div>
+
+<p>
+MPS shows the change in saving resulting from a change in income.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>9. Important Relationships</h2>
+
+<div class="formula">
+
+APC + APS = 1
+
+</div>
+
+<div class="formula">
+
+MPC + MPS = 1
+
+</div>
+
+<div class="highlight">
+
+Therefore:
+
+<br><br>
+
+<b>MPC = 1 − MPS</b>
+
+<br><br>
+
+<b>MPS = 1 − MPC</b>
+
+<br><br>
+
+<b>APC = 1 − APS</b>
+
+<br><br>
+
+<b>APS = 1 − APC</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>⚡ SECTION 1 BOOSTER</h2>
+
+<div class="booster">
+
+<p>✔ AD = C + I</p>
+
+<p>✔ Saving = Income − Consumption</p>
+
+<p>✔ APC = C/Y</p>
+
+<p>✔ MPC = ΔC/ΔY</p>
+
+<p>✔ APS = S/Y</p>
+
+<p>✔ MPS = ΔS/ΔY</p>
+
+<p>✔ MPC + MPS = 1</p>
+
+<p>✔ APC + APS = 1</p>
+
+</div>
+
+</div>
+
+
+<!-- ====================================================== -->
+<!-- SECTION 2 -->
+<!-- ====================================================== -->
+
+<div class="section-title">
+
+<h2>📊 SECTION 2 — Equilibrium Income & Investment Multiplier</h2>
+
+<p>Most important numerical and analytical portion</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>10. Equilibrium Level of Income</h2>
+
+<div class="definition">
+
+Equilibrium level of income is the level at which planned aggregate demand is equal to planned output.
+
+</div>
+
+<div class="formula">
+
+AD = AS
+
+</div>
+
+<p>
+In the simple two-sector model:
+</p>
+
+<div class="formula">
+
+Y = C + I
+
+</div>
+
+<p>
+At equilibrium, there is no tendency for producers to increase or decrease output.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>11. Equilibrium Through Saving-Investment Approach</h2>
+
+<p>
+Another way of determining equilibrium income is through the equality of planned saving and planned investment.
+</p>
+
+<div class="formula">
+
+S = I
+
+</div>
+
+<div class="highlight">
+
+At equilibrium:
+
+<b>Planned Saving = Planned Investment</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>12. Numerical Example — Equilibrium Income</h2>
+
+<p>
+Suppose:
+
+</p>
+
+<div class="point">
+Consumption function: C = 100 + 0.8Y
+</div>
+
+<div class="point">
+Investment: I = 100
+</div>
+
+<p>
+At equilibrium:
+</p>
+
+<div class="formula">
+
+Y = C + I
+
+</div>
+
+<p>
+
+Y = 100 + 0.8Y + 100
+
+</p>
+
+<p>
+
+Y − 0.8Y = 200
+
+</p>
+
+<p>
+
+0.2Y = 200
+
+</p>
+
+<p>
+
+<b>Y = ₹1,000</b>
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>13. Investment Multiplier</h2>
+
+<div class="definition">
+
+Investment multiplier shows the change in income resulting from a change in autonomous investment.
+
+</div>
+
+<div class="formula">
+
+K = ΔY / ΔI
+
+</div>
+
+<p>
+In a simple economy:
+</p>
+
+<div class="formula">
+
+K = 1 / (1 − MPC)
+
+</div>
+
+<div class="formula">
+
+K = 1 / MPS
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>14. Numerical Example — Multiplier</h2>
+
+<p>
+If MPC = 0.8:
+</p>
+
+<div class="formula">
+
+K = 1 / (1 − 0.8)
+
+<br><br>
+
+K = 1 / 0.2
+
+<br><br>
+
+<b>K = 5</b>
+
+</div>
+
+<p>
+If investment increases by ₹100 crore:
+</p>
+
+<div class="formula">
+
+ΔY = K × ΔI
+
+<br><br>
+
+ΔY = 5 × 100
+
+<br><br>
+
+<b>ΔY = ₹500 crore</b>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>15. Important Multiplier Relationships</h2>
 
 <table>
 
 <tr>
-<th>Basis</th>
-<th>Ex-Ante</th>
-<th>Ex-Post</th>
+<th>MPC</th>
+<th>MPS</th>
+<th>Multiplier</th>
 </tr>
 
 <tr>
-<td>Meaning</td>
-<td>Planned / intended</td>
-<td>Actual / realised</td>
+<td>0.5</td>
+<td>0.5</td>
+<td>2</td>
 </tr>
 
 <tr>
-<td>Time</td>
-<td>Before activity</td>
-<td>After activity</td>
+<td>0.6</td>
+<td>0.4</td>
+<td>2.5</td>
 </tr>
 
 <tr>
-<td>Example</td>
-<td>Planned investment</td>
-<td>Actual investment</td>
+<td>0.75</td>
+<td>0.25</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>0.8</td>
+<td>0.2</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>0.9</td>
+<td>0.1</td>
+<td>10</td>
 </tr>
 
 </table>
 
-<div class="important">
+<div class="highlight">
 
-<strong>PYQ Tip ⭐</strong><br><br>
+<b>Higher MPC → Higher Multiplier</b>
 
-Ex-ante = <strong>Planned</strong><br>
-Ex-post = <strong>Actual</strong>
+<br>
+
+<b>Higher MPS → Lower Multiplier</b>
 
 </div>
 
 </div>
 
-
-<!-- INVENTORY -->
 
 <div class="card">
 
-<span class="topic">4. INVENTORY</span>
+<h2>16. Investment Multiplier Process</h2>
 
-<h2>📦 Planned and Unplanned Inventory Changes</h2>
-
-<div class="definition">
-
-<strong>Inventory:</strong><br><br>
-
-Inventory refers to stocks of goods held by firms, including
-finished goods, semi-finished goods and raw materials.
-
+<div class="point">
+1️⃣ Initial increase in investment creates additional income.
 </div>
 
-<h3>Planned Inventory Change</h3>
-
-<p>
-A planned inventory change is the change in stock that firms
-intentionally decide to maintain as part of their business plans.
-</p>
-
-<div class="example">
-
-<strong>Example:</strong><br><br>
-
-A shopkeeper intentionally keeps 100 extra notebooks before the
-school session begins because he expects higher demand.
-
+<div class="point">
+2️⃣ Recipients spend a part of this additional income.
 </div>
 
-<h3>Unplanned Inventory Change</h3>
-
-<p>
-An unplanned inventory change occurs when actual sales differ
-from what firms had expected.
-</p>
-
-<div class="example">
-
-<strong>Example:</strong><br><br>
-
-A firm expected to sell 1,000 units but actually sold only
-800 units. The unsold 200 units become an unplanned increase
-in inventory.
-
+<div class="point">
+3️⃣ This expenditure becomes income for others.
 </div>
 
-<div class="important">
+<div class="point">
+4️⃣ They again spend a part of their additional income.
+</div>
 
-<strong>Important:</strong><br><br>
+<div class="point">
+5️⃣ The process continues in successive rounds.
+</div>
 
-At the equilibrium level of income, there is no unintended
-change in inventories.
+<div class="highlight">
 
-<br><br>
-
-Therefore, planned expenditure becomes equal to actual output.
+Therefore, an initial change in investment causes a multiple change in income.
 
 </div>
 
 </div>
 
-
-<!-- CONSUMPTION -->
 
 <div class="card">
 
-<span class="topic">5. CONSUMPTION</span>
+<h2>🧮 Numerical Booster</h2>
 
-<h2>🛒 Consumption Expenditure</h2>
+<div class="booster">
 
-<div class="definition">
-
-<strong>Definition:</strong><br><br>
-
-Consumption expenditure is the expenditure made by households
-on goods and services for the satisfaction of their wants.
-
-</div>
-
-<h3>Consumption Function</h3>
+<p><b>Question:</b> MPC = 0.75 and investment increases by ₹200 crore. Find change in income.</p>
 
 <p>
-The consumption function shows the functional relationship
-between consumption expenditure and income.
+MPS = 1 − 0.75 = 0.25
 </p>
 
-<div class="formula">
+<p>
+K = 1/0.25 = 4
+</p>
 
-<strong>C = C̄ + cY</strong>
+<p>
+ΔY = 4 × 200
+</p>
 
-<br><br>
-
-C = Consumption expenditure<br>
-C̄ = Autonomous consumption<br>
-c = Marginal Propensity to Consume (MPC)<br>
-Y = Income
-
-</div>
-
-<div class="definition">
-
-<strong>Autonomous Consumption:</strong><br><br>
-
-Autonomous consumption is the level of consumption that does
-not depend on current income.
-
-</div>
-
-<div class="example">
-
-<strong>Example:</strong><br><br>
-
-Even when current income is zero, a household may still have
-some essential expenditure by using past savings or borrowing.
-
-</div>
-
-<div class="important">
-
-<strong>Key Point ⭐</strong><br><br>
-
-Autonomous consumption is generally represented by
-<strong>C̄</strong> in the consumption function.
+<p>
+<b>Answer = ₹800 crore</b>
+</p>
 
 </div>
 
 </div>
 
-
-<!-- SAVING -->
 
 <div class="card">
 
-<span class="topic">6. SAVING</span>
+<h2>🚨 Common Numerical Mistakes</h2>
 
-<h2>💰 Saving</h2>
+<div class="warning">
 
-<div class="definition">
+<p>❌ Do not use MPC directly as the multiplier.</p>
 
-<strong>Definition:</strong><br><br>
+<p>❌ Do not confuse ΔY with ΔI.</p>
 
-Saving is that part of income which is not spent on consumption.
+<p>❌ Remember: MPS = 1 − MPC.</p>
+
+<p>❌ Multiplier = 1/MPS = 1/(1−MPC).</p>
+
+<p>❌ At equilibrium, AD = AS or S = I.</p>
 
 </div>
 
-<div class="formula">
+</div>
 
-<strong>S = Y − C</strong>
 
-<br><br>
+<!-- ====================================================== -->
+<!-- SECTION 3 -->
+<!-- ====================================================== -->
 
-Saving = Income − Consumption
+<div class="section-title">
+
+<h2>📈 SECTION 3 — Full Employment & Excess Demand</h2>
+
+<p>Meaning, causes, effects and correction</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>17. Full Employment</h2>
+
+<div class="definition">
+
+Full employment refers to a situation in which all those who are willing and able to work at the prevailing wage rate are employed, subject to the existence of normal frictional and structural unemployment.
 
 </div>
 
 <div class="highlight">
 
-<strong>Basic Relationship:</strong><br><br>
-
-Y = C + S
-
-</div>
-
-<div class="example">
-
-If income = ₹10,000 and consumption = ₹8,000:
-
-<br><br>
-
-S = Y − C
-
-<br>
-
-S = ₹10,000 − ₹8,000
-
-<br><br>
-
-<strong>S = ₹2,000</strong>
+Full employment does <b>not</b> mean zero unemployment.
 
 </div>
 
 </div>
 
-
-<!-- SAVING FUNCTION -->
 
 <div class="card">
 
-<span class="topic">7. SAVING FUNCTION</span>
+<h2>18. Involuntary Unemployment</h2>
 
-<h2>📉 Saving Function</h2>
+<div class="definition">
 
-<p>
-Saving function shows the functional relationship between saving
-and income.
-</p>
-
-<div class="formula">
-
-If:
-
-<br>
-
-C = C̄ + cY
-
-<br><br>
-
-Then:
-
-<br>
-
-<strong>S = −C̄ + (1 − c)Y</strong>
-
-</div>
-
-<div class="highlight">
-
-<strong>Important Relationship:</strong><br><br>
-
-MPS = 1 − MPC
-
-<br><br>
-
-MPC + MPS = 1
-
-</div>
-
-<div class="important">
-
-<strong>PYQ / Board Point ⭐</strong><br><br>
-
-If MPC = 0.8:
-
-<br><br>
-
-MPS = 1 − 0.8
-
-<br>
-
-<strong>MPS = 0.2</strong>
+Involuntary unemployment occurs when people are willing and able to work at the prevailing wage rate but cannot find employment.
 
 </div>
 
 </div>
 
-
-<!-- INVESTMENT -->
 
 <div class="card">
 
-<span class="topic">8. INVESTMENT</span>
-
-<h2>🏭 Investment Expenditure</h2>
+<h2>19. Excess Demand</h2>
 
 <div class="definition">
 
-<strong>Definition:</strong><br><br>
-
-Investment refers to expenditure incurred on the creation or
-acquisition of capital goods that increase productive capacity.
-
-</div>
-
-<h3>Autonomous Investment</h3>
-
-<div class="definition">
-
-<strong>Definition:</strong><br><br>
-
-Autonomous investment is investment which is independent of
-the level of income.
-
-</div>
-
-<div class="example">
-
-<strong>Example:</strong><br><br>
-
-Government expenditure on infrastructure may be undertaken
-even when current income changes.
-
-</div>
-
-<div class="highlight">
-
-In the simple Keynesian model, investment is often assumed to
-be autonomous.
-
-<br><br>
-
-<strong>I = Ī</strong>
-
-</div>
-
-</div>
-
-
-<!-- MPC -->
-
-<div class="card">
-
-<span class="topic">9. MPC</span>
-
-<h2>📐 Marginal Propensity to Consume (MPC)</h2>
-
-<div class="definition">
-
-<strong>Definition:</strong><br><br>
-
-Marginal Propensity to Consume is the ratio of change in
-consumption expenditure to change in income.
+Excess demand occurs when aggregate demand is greater than the level of aggregate supply corresponding to full employment.
 
 </div>
 
 <div class="formula">
 
-<strong>MPC = ΔC ÷ ΔY</strong>
-
-</div>
-
-<div class="example">
-
-Income increases from ₹1,000 to ₹1,500.
-
-<br><br>
-
-Change in income = ₹500
-
-<br><br>
-
-Consumption increases from ₹800 to ₹1,200.
-
-<br><br>
-
-Change in consumption = ₹400
-
-<br><br>
-
-MPC = ₹400 ÷ ₹500
-
-<br><br>
-
-<strong>MPC = 0.8</strong>
-
-</div>
-
-<div class="important">
-
-<strong>Range of MPC:</strong><br><br>
-
-In the basic Keynesian framework:
-
-<br>
-
-<strong>0 < MPC < 1</strong>
-
-</div>
-
-</div>
-
-
-<!-- MPS -->
-
-<div class="card">
-
-<span class="topic">10. MPS</span>
-
-<h2>💹 Marginal Propensity to Save (MPS)</h2>
-
-<div class="definition">
-
-<strong>Definition:</strong><br><br>
-
-Marginal Propensity to Save is the ratio of change in saving
-to change in income.
-
-</div>
-
-<div class="formula">
-
-<strong>MPS = ΔS ÷ ΔY</strong>
+Excess Demand = AD − AS at Full Employment
 
 </div>
 
 <div class="highlight">
 
-<strong>Relationship:</strong><br><br>
+Excess demand creates an <b>inflationary gap</b>.
 
-MPC + MPS = 1
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>20. Causes of Excess Demand</h2>
+
+<div class="point">
+Increase in government expenditure.
+</div>
+
+<div class="point">
+Reduction in taxes.
+</div>
+
+<div class="point">
+Increase in money supply.
+</div>
+
+<div class="point">
+Increase in private investment.
+</div>
+
+<div class="point">
+Increase in consumption expenditure.
+</div>
+
+<div class="point">
+Increase in exports.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>21. Effects of Excess Demand</h2>
+
+<div class="point">
+Prices tend to rise.
+</div>
+
+<div class="point">
+Inflationary pressure increases.
+</div>
+
+<div class="point">
+Demand exceeds productive capacity at full employment.
+</div>
+
+<div class="point">
+There is an inflationary gap.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>22. Measures to Correct Excess Demand</h2>
+
+<h3>Monetary Measures</h3>
+
+<div class="point">
+Increase Bank Rate.
+</div>
+
+<div class="point">
+Increase Cash Reserve Ratio (CRR).
+</div>
+
+<div class="point">
+Increase Statutory Liquidity Ratio (SLR), where applicable.
+</div>
+
+<div class="point">
+Sell government securities through Open Market Operations.
+</div>
+
+<div class="point">
+These measures reduce credit availability and aggregate demand.
+</div>
+
+
+<h3>Fiscal Measures</h3>
+
+<div class="point">
+Decrease government expenditure.
+</div>
+
+<div class="point">
+Increase taxes.
+</div>
+
+<div class="point">
+These measures reduce aggregate demand.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>23. Easy Memory Trick</h2>
+
+<div class="booster">
+
+<b>Excess Demand → Demand is TOO HIGH</b>
 
 <br><br>
 
@@ -653,85 +1106,201 @@ Therefore:
 
 <br>
 
-MPS = 1 − MPC
-
-</div>
-
-<div class="important">
-
-<strong>Exam Trick ⭐</strong><br><br>
-
-If MPC = 0.75:
-
-<br><br>
-
-MPS = 1 − 0.75
+⬇ Government Expenditure
 
 <br>
 
-<strong>MPS = 0.25</strong>
+⬆ Taxes
+
+<br>
+
+⬆ Interest/credit restrictions
+
+<br><br>
+
+<b>Goal → Reduce Aggregate Demand</b>
 
 </div>
 
 </div>
 
 
-<!-- KEY RELATIONSHIPS -->
+<!-- ====================================================== -->
+<!-- SECTION 4 -->
+<!-- ====================================================== -->
+
+<div class="section-title">
+
+<h2>📉 SECTION 4 — Deficient Demand + Complete Exam Booster</h2>
+
+<p>Correction measures, formulas, MCQs and final revision</p>
+
+</div>
+
 
 <div class="card">
 
-<h2>⭐ Quick Concept Revision</h2>
+<h2>24. Deficient Demand</h2>
+
+<div class="definition">
+
+Deficient demand occurs when aggregate demand is less than the level of aggregate supply corresponding to full employment.
+
+</div>
+
+<div class="highlight">
+
+Deficient demand creates a <b>deflationary gap</b>.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>25. Causes of Deficient Demand</h2>
+
+<div class="point">
+Decrease in government expenditure.
+</div>
+
+<div class="point">
+Increase in taxes.
+</div>
+
+<div class="point">
+Decrease in money supply.
+</div>
+
+<div class="point">
+Decrease in private investment.
+</div>
+
+<div class="point">
+Decrease in consumption expenditure.
+</div>
+
+<div class="point">
+Decrease in exports.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>26. Effects of Deficient Demand</h2>
+
+<div class="point">
+Output and income may fall.
+</div>
+
+<div class="point">
+Employment may decline.
+</div>
+
+<div class="point">
+Unemployment may increase.
+</div>
+
+<div class="point">
+Deflationary pressure may arise.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>27. Measures to Correct Deficient Demand</h2>
+
+<h3>Fiscal Measures</h3>
+
+<div class="point">
+Increase government expenditure.
+</div>
+
+<div class="point">
+Reduce taxes.
+</div>
+
+<div class="point">
+These measures increase aggregate demand.
+</div>
+
+
+<h3>Monetary Measures</h3>
+
+<div class="point">
+Reduce Bank Rate.
+</div>
+
+<div class="point">
+Reduce CRR.
+</div>
+
+<div class="point">
+Reduce SLR, where applicable.
+</div>
+
+<div class="point">
+Purchase government securities through Open Market Operations.
+</div>
+
+<div class="point">
+These measures increase credit availability and aggregate demand.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>28. Excess Demand vs Deficient Demand</h2>
 
 <table>
 
 <tr>
-<th>Concept</th>
-<th>Formula / Meaning</th>
+<th>Basis</th>
+<th>Excess Demand</th>
+<th>Deficient Demand</th>
 </tr>
 
 <tr>
-<td>Aggregate Demand</td>
-<td>AD = C + I</td>
+<td>Meaning</td>
+<td>AD is above required level at full employment</td>
+<td>AD is below required level at full employment</td>
 </tr>
 
 <tr>
-<td>Aggregate Supply</td>
-<td>AS = Y</td>
+<td>Gap</td>
+<td>Inflationary gap</td>
+<td>Deflationary gap</td>
 </tr>
 
 <tr>
-<td>Saving</td>
-<td>S = Y − C</td>
+<td>Price effect</td>
+<td>Inflationary pressure</td>
+<td>Deflationary pressure</td>
 </tr>
 
 <tr>
-<td>Income</td>
-<td>Y = C + S</td>
+<td>Government expenditure</td>
+<td>Decrease</td>
+<td>Increase</td>
 </tr>
 
 <tr>
-<td>MPC</td>
-<td>ΔC ÷ ΔY</td>
+<td>Taxes</td>
+<td>Increase</td>
+<td>Decrease</td>
 </tr>
 
 <tr>
-<td>MPS</td>
-<td>ΔS ÷ ΔY</td>
-</tr>
-
-<tr>
-<td>MPC + MPS</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>Ex-Ante</td>
-<td>Planned / Intended</td>
-</tr>
-
-<tr>
-<td>Ex-Post</td>
-<td>Actual / Realised</td>
+<td>Money supply</td>
+<td>Decrease</td>
+<td>Increase</td>
 </tr>
 
 </table>
@@ -739,30 +1308,489 @@ MPS = 1 − 0.75
 </div>
 
 
-<!-- PYQ BOX -->
+<div class="card">
+
+<h2>29. COMPLETE FORMULA BOOSTER</h2>
+
+<div class="formula">
+AD = C + I
+</div>
+
+<div class="formula">
+Y = C + I
+</div>
+
+<div class="formula">
+S = Y − C
+</div>
+
+<div class="formula">
+APC = C/Y
+</div>
+
+<div class="formula">
+APS = S/Y
+</div>
+
+<div class="formula">
+MPC = ΔC/ΔY
+</div>
+
+<div class="formula">
+MPS = ΔS/ΔY
+</div>
+
+<div class="formula">
+APC + APS = 1
+</div>
+
+<div class="formula">
+MPC + MPS = 1
+</div>
+
+<div class="formula">
+K = ΔY/ΔI
+</div>
+
+<div class="formula">
+K = 1/(1−MPC)
+</div>
+
+<div class="formula">
+K = 1/MPS
+</div>
+
+</div>
+
 
 <div class="card">
 
-<div class="important">
+<h2>🚀 MCQ BOOSTER — SET 1</h2>
 
-<strong>📚 PYQ / BOARD EXAM FOCUS</strong><br><br>
 
-⭐ Define Aggregate Demand.<br><br>
+<div class="question">
 
-⭐ Distinguish between Ex-Ante and Ex-Post variables.<br><br>
+<h3>Q1. Aggregate Demand in a simple two-sector economy is:</h3>
 
-⭐ Explain planned and unplanned changes in inventory.<br><br>
+<label class="option"><input type="radio" name="q1"> A. C − I</label>
+<label class="option"><input type="radio" name="q1"> B. C + I</label>
+<label class="option"><input type="radio" name="q1"> C. S + I</label>
+<label class="option"><input type="radio" name="q1"> D. C + S</label>
 
-⭐ Define MPC and MPS with formula.<br><br>
+<button class="show-answer" onclick="showAnswer('a1')">Show Answer</button>
 
-⭐ Establish the relationship between MPC and MPS.<br><br>
+<div id="a1" class="answer">✅ <b>B. C + I</b></div>
 
-⭐ Explain autonomous consumption.<br><br>
+</div>
 
-⭐ Explain autonomous investment.<br><br>
 
-⭐ Calculate MPC / MPS from given data.
+<div class="question">
+
+<h3>Q2. MPC is equal to:</h3>
+
+<label class="option"><input type="radio" name="q2"> A. ΔY/ΔC</label>
+<label class="option"><input type="radio" name="q2"> B. ΔC/ΔY</label>
+<label class="option"><input type="radio" name="q2"> C. C/Y</label>
+<label class="option"><input type="radio" name="q2"> D. S/Y</label>
+
+<button class="show-answer" onclick="showAnswer('a2')">Show Answer</button>
+
+<div id="a2" class="answer">✅ <b>B. ΔC/ΔY</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q3. If MPC = 0.8, MPS is:</h3>
+
+<label class="option"><input type="radio" name="q3"> A. 0.1</label>
+<label class="option"><input type="radio" name="q3"> B. 0.2</label>
+<label class="option"><input type="radio" name="q3"> C. 0.8</label>
+<label class="option"><input type="radio" name="q3"> D. 1.8</label>
+
+<button class="show-answer" onclick="showAnswer('a3')">Show Answer</button>
+
+<div id="a3" class="answer">✅ <b>B. 0.2</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q4. Equilibrium income is determined where:</h3>
+
+<label class="option"><input type="radio" name="q4"> A. AD &gt; AS</label>
+<label class="option"><input type="radio" name="q4"> B. AD &lt; AS</label>
+<label class="option"><input type="radio" name="q4"> C. AD = AS</label>
+<label class="option"><input type="radio" name="q4"> D. C = 0</label>
+
+<button class="show-answer" onclick="showAnswer('a4')">Show Answer</button>
+
+<div id="a4" class="answer">✅ <b>C. AD = AS</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q5. If MPS = 0.25, multiplier is:</h3>
+
+<label class="option"><input type="radio" name="q5"> A. 2</label>
+<label class="option"><input type="radio" name="q5"> B. 3</label>
+<label class="option"><input type="radio" name="q5"> C. 4</label>
+<label class="option"><input type="radio" name="q5"> D. 5</label>
+
+<button class="show-answer" onclick="showAnswer('a5')">Show Answer</button>
+
+<div id="a5" class="answer">✅ <b>C. 4</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q6. Excess demand leads to:</h3>
+
+<label class="option"><input type="radio" name="q6"> A. Deflationary gap</label>
+<label class="option"><input type="radio" name="q6"> B. Inflationary gap</label>
+<label class="option"><input type="radio" name="q6"> C. Zero demand</label>
+<label class="option"><input type="radio" name="q6"> D. Zero investment</label>
+
+<button class="show-answer" onclick="showAnswer('a6')">Show Answer</button>
+
+<div id="a6" class="answer">✅ <b>B. Inflationary gap</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q7. Which measure helps correct excess demand?</h3>
+
+<label class="option"><input type="radio" name="q7"> A. Increase government expenditure</label>
+<label class="option"><input type="radio" name="q7"> B. Reduce taxes</label>
+<label class="option"><input type="radio" name="q7"> C. Increase taxes</label>
+<label class="option"><input type="radio" name="q7"> D. Increase money supply</label>
+
+<button class="show-answer" onclick="showAnswer('a7')">Show Answer</button>
+
+<div id="a7" class="answer">✅ <b>C. Increase taxes</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q8. Deficient demand creates:</h3>
+
+<label class="option"><input type="radio" name="q8"> A. Inflationary gap</label>
+<label class="option"><input type="radio" name="q8"> B. Deflationary gap</label>
+<label class="option"><input type="radio" name="q8"> C. Trade surplus</label>
+<label class="option"><input type="radio" name="q8"> D. Budget surplus</label>
+
+<button class="show-answer" onclick="showAnswer('a8')">Show Answer</button>
+
+<div id="a8" class="answer">✅ <b>B. Deflationary gap</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q9. To correct deficient demand, government should generally:</h3>
+
+<label class="option"><input type="radio" name="q9"> A. Decrease expenditure</label>
+<label class="option"><input type="radio" name="q9"> B. Increase taxes</label>
+<label class="option"><input type="radio" name="q9"> C. Increase expenditure</label>
+<label class="option"><input type="radio" name="q9"> D. Reduce money supply</label>
+
+<button class="show-answer" onclick="showAnswer('a9')">Show Answer</button>
+
+<div id="a9" class="answer">✅ <b>C. Increase expenditure</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q10. If MPC increases, multiplier:</h3>
+
+<label class="option"><input type="radio" name="q10"> A. Increases</label>
+<label class="option"><input type="radio" name="q10"> B. Decreases</label>
+<label class="option"><input type="radio" name="q10"> C. Becomes zero</label>
+<label class="option"><input type="radio" name="q10"> D. Remains necessarily unchanged</label>
+
+<button class="show-answer" onclick="showAnswer('a10')">Show Answer</button>
+
+<div id="a10" class="answer">✅ <b>A. Increases</b></div>
 
 </div>
 
 </div>
+
+
+<div class="card">
+
+<h2>🔥 MCQ BOOSTER — SET 2</h2>
+
+<div class="question">
+
+<h3>Q11. Saving is equal to:</h3>
+
+<label class="option"><input type="radio" name="q11"> A. C − Y</label>
+<label class="option"><input type="radio" name="q11"> B. Y − C</label>
+<label class="option"><input type="radio" name="q11"> C. Y + C</label>
+<label class="option"><input type="radio" name="q11"> D. I − C</label>
+
+<button class="show-answer" onclick="showAnswer('a11')">Show Answer</button>
+
+<div id="a11" class="answer">✅ <b>B. Y − C</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q12. If APC = 0.75, APS is:</h3>
+
+<label class="option"><input type="radio" name="q12"> A. 0.15</label>
+<label class="option"><input type="radio" name="q12"> B. 0.20</label>
+<label class="option"><input type="radio" name="q12"> C. 0.25</label>
+<label class="option"><input type="radio" name="q12"> D. 0.75</label>
+
+<button class="show-answer" onclick="showAnswer('a12')">Show Answer</button>
+
+<div id="a12" class="answer">✅ <b>C. 0.25</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q13. If MPC = 0.6, multiplier is:</h3>
+
+<label class="option"><input type="radio" name="q13"> A. 2</label>
+<label class="option"><input type="radio" name="q13"> B. 2.5</label>
+<label class="option"><input type="radio" name="q13"> C. 3</label>
+<label class="option"><input type="radio" name="q13"> D. 4</label>
+
+<button class="show-answer" onclick="showAnswer('a13')">Show Answer</button>
+
+<div id="a13" class="answer">✅ <b>B. 2.5</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q14. Which is a monetary measure to correct excess demand?</h3>
+
+<label class="option"><input type="radio" name="q14"> A. Increase government expenditure</label>
+<label class="option"><input type="radio" name="q14"> B. Increase taxes</label>
+<label class="option"><input type="radio" name="q14"> C. Increase Bank Rate</label>
+<label class="option"><input type="radio" name="q14"> D. Reduce taxes</label>
+
+<button class="show-answer" onclick="showAnswer('a14')">Show Answer</button>
+
+<div id="a14" class="answer">✅ <b>C. Increase Bank Rate</b></div>
+
+</div>
+
+
+<div class="question">
+
+<h3>Q15. Which situation is associated with deficient demand?</h3>
+
+<label class="option"><input type="radio" name="q15"> A. AD exceeds required level</label>
+<label class="option"><input type="radio" name="q15"> B. AD is insufficient</label>
+<label class="option"><input type="radio" name="q15"> C. Inflationary pressure only</label>
+<label class="option"><input type="radio" name="q15"> D. Excess investment only</label>
+
+<button class="show-answer" onclick="showAnswer('a15')">Show Answer</button>
+
+<div id="a15" class="answer">✅ <b>B. AD is insufficient</b></div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🧠 IMPORTANT BOARD-STYLE QUESTIONS</h2>
+
+<div class="exam">
+
+<p><b>1.</b> Define Aggregate Demand and explain its components in a two-sector economy.</p>
+
+<p><b>2.</b> Explain Consumption Function and distinguish between autonomous and induced consumption.</p>
+
+<p><b>3.</b> Explain APC and MPC with formulae.</p>
+
+<p><b>4.</b> Explain APS and MPS and establish their relationship with APC and MPC.</p>
+
+<p><b>5.</b> Explain the determination of equilibrium income using AD-AS approach.</p>
+
+<p><b>6.</b> Explain the determination of equilibrium income using saving-investment approach.</p>
+
+<p><b>7.</b> Explain the working of investment multiplier.</p>
+
+<p><b>8.</b> If MPC is given, calculate multiplier and change in income.</p>
+
+<p><b>9.</b> Explain excess demand and measures to correct it.</p>
+
+<p><b>10.</b> Explain deficient demand and measures to correct it.</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>⚡ ONE-MINUTE FINAL REVISION</h2>
+
+<div class="booster">
+
+<p>🔹 <b>AD = C + I</b></p>
+
+<p>🔹 <b>Equilibrium: AD = AS</b></p>
+
+<p>🔹 <b>Equilibrium through saving-investment: S = I</b></p>
+
+<p>🔹 <b>S = Y − C</b></p>
+
+<p>🔹 <b>APC = C/Y</b></p>
+
+<p>🔹 <b>APS = S/Y</b></p>
+
+<p>🔹 <b>MPC = ΔC/ΔY</b></p>
+
+<p>🔹 <b>MPS = ΔS/ΔY</b></p>
+
+<p>🔹 <b>APC + APS = 1</b></p>
+
+<p>🔹 <b>MPC + MPS = 1</b></p>
+
+<p>🔹 <b>K = 1/MPS</b></p>
+
+<p>🔹 <b>K = 1/(1−MPC)</b></p>
+
+<p>🔹 <b>Excess Demand → Inflationary Gap</b></p>
+
+<p>🔹 <b>Deficient Demand → Deflationary Gap</b></p>
+
+<p>🔹 <b>Excess Demand → Reduce AD</b></p>
+
+<p>🔹 <b>Deficient Demand → Increase AD</b></p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🎯 FINAL EXAM BOOSTER</h2>
+
+<div class="exam">
+
+<p><b>Remember these 10 things before the exam:</b></p>
+
+<p>1. AD = C + I</p>
+
+<p>2. Equilibrium occurs when AD = AS.</p>
+
+<p>3. S = Y − C.</p>
+
+<p>4. MPC + MPS = 1.</p>
+
+<p>5. APC + APS = 1.</p>
+
+<p>6. Multiplier = 1/MPS.</p>
+
+<p>7. Higher MPC means higher multiplier.</p>
+
+<p>8. Excess demand creates inflationary gap.</p>
+
+<p>9. Deficient demand creates deflationary gap.</p>
+
+<p>10. Correct the problem by changing fiscal and monetary conditions in the appropriate direction.</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📌 COMPLETE UNIT SUMMARY</h2>
+
+<p>
+The determination of income and employment explains how the equilibrium
+level of income is determined by aggregate demand and aggregate supply.
+In a simple two-sector economy, aggregate demand consists of consumption
+and investment expenditure.
+</p>
+
+<p>
+Consumption and saving are related to income through their respective
+functions. APC, MPC, APS and MPS help us understand how income is divided
+between consumption and saving.
+</p>
+
+<p>
+Equilibrium income is achieved when planned aggregate demand equals
+planned output. It can also be understood through the equality of planned
+saving and planned investment.
+</p>
+
+<p>
+The investment multiplier explains how a change in autonomous investment
+can cause a multiple change in income.
+</p>
+
+<p>
+When aggregate demand is higher than the required level at full employment,
+there is excess demand and an inflationary gap. When aggregate demand is
+lower, there is deficient demand and a deflationary gap. Fiscal and
+monetary measures are used to correct these situations.
+</p>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p><b>Edusphere with Satyam</b></p>
+
+<p>Class 12 Economics • Unit 3</p>
+
+<p>Determination of Income and Employment</p>
+
+</footer>
+
+
+<script>
+
+function showAnswer(id){
+
+    var answer=document.getElementById(id);
+
+    if(answer.style.display==="block"){
+        answer.style.display="none";
+    }
+    else{
+        answer.style.display="block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
