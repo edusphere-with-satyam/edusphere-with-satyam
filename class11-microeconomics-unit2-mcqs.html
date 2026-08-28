@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 11 Economics - Unit 2 MCQs | Edusphere with Satyam</title>
+<title>Class 11 Economics Unit 2 MCQ Test | Edusphere with Satyam</title>
 
 <style>
 *{
@@ -14,7 +14,7 @@
 body{
     font-family:Arial,sans-serif;
     margin:0;
-    background:linear-gradient(135deg,#eef2ff,#f0fdfa,#fff7ed);
+    background:linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
     color:#222;
     line-height:1.6;
 }
@@ -52,75 +52,119 @@ header p{
     font-weight:bold;
 }
 
-.card{
+.intro{
     background:white;
     padding:24px;
-    margin:20px 0;
     border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.09);
+    box-shadow:0 4px 15px rgba(0,0,0,.09);
+    margin-bottom:20px;
 }
 
-.card h2{
-    color:#172554;
-    border-bottom:3px solid #818cf8;
-    padding-bottom:10px;
-}
-
-.mcq{
-    background:linear-gradient(135deg,#ffffff,#f8fafc);
-    border-left:6px solid #4f46e5;
+.question{
+    background:white;
     padding:20px;
     margin:20px 0;
-    border-radius:10px;
-    box-shadow:0 2px 9px rgba(0,0,0,0.06);
+    border-radius:12px;
+    border-left:6px solid #4f46e5;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
-.mcq h3{
+.question h3{
     color:#312e81;
     margin-top:0;
 }
 
 .option{
+    display:block;
     background:#eef2ff;
-    padding:10px 13px;
-    margin:8px 0;
-    border-radius:7px;
+    padding:12px;
+    margin:9px 0;
+    border-radius:8px;
+    cursor:pointer;
+    border:2px solid transparent;
 }
 
-.answer{
-    background:#ecfdf5;
-    border-left:5px solid #10b981;
-    padding:14px;
+.option:hover{
+    background:#e0e7ff;
+}
+
+.option input{
+    margin-right:10px;
+}
+
+.result{
+    display:none;
+    background:linear-gradient(135deg,#ecfdf5,#eff6ff);
+    padding:25px;
+    margin:25px 0;
+    border-radius:15px;
+    text-align:center;
+    border:3px solid #10b981;
+}
+
+.result h2{
+    color:#047857;
+}
+
+.review{
+    display:none;
     margin-top:15px;
-    border-radius:7px;
+    text-align:left;
+    padding:15px;
+    border-radius:8px;
+}
+
+.correct{
+    background:#dcfce7;
+    border-left:5px solid #16a34a;
+}
+
+.wrong{
+    background:#fee2e2;
+    border-left:5px solid #dc2626;
+}
+
+.unanswered{
+    background:#fef3c7;
+    border-left:5px solid #d97706;
 }
 
 .explanation{
     background:#fff7ed;
-    border-left:5px solid #f97316;
-    padding:14px;
+    padding:12px;
     margin-top:10px;
     border-radius:7px;
 }
 
-.topic{
-    display:inline-block;
-    background:#dbeafe;
-    color:#1e40af;
-    padding:5px 11px;
-    border-radius:20px;
-    font-size:13px;
+.submit-btn,
+.reattempt-btn{
+    display:block;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
     font-weight:bold;
-    margin-bottom:10px;
+    cursor:pointer;
+    margin-top:20px;
 }
 
-.formula{
-    background:#fef3c7;
-    color:#92400e;
-    padding:15px;
-    text-align:center;
-    border-radius:8px;
-    font-weight:bold;
+.submit-btn{
+    background:#4f46e5;
+    color:white;
+}
+
+.reattempt-btn{
+    background:#0f766e;
+    color:white;
+}
+
+.submit-btn:hover{
+    background:#3730a3;
+}
+
+.reattempt-btn:hover{
+    background:#115e59;
 }
 
 footer{
@@ -140,12 +184,9 @@ footer{
         font-size:23px;
     }
 
-    .card{
+    .intro,
+    .question{
         padding:17px;
-    }
-
-    .mcq{
-        padding:16px;
     }
 }
 </style>
@@ -155,7 +196,7 @@ footer{
 
 <header>
     <h1>Class 11 Economics</h1>
-    <p>Unit 2 — Theory of Consumer Behaviour | MCQ Practice</p>
+    <p>Unit 2 — Theory of Consumer Behaviour | MCQ Test</p>
 </header>
 
 <div class="container">
@@ -164,835 +205,458 @@ footer{
 ← Back to Unit 2
 </a>
 
-<div class="card">
+<div class="intro">
 
-<h2>📝 Unit 2 — MCQ Practice</h2>
+<h2>📝 Online MCQ Test</h2>
 
 <p>
-Test your understanding of Theory of Consumer Behaviour through these
-practice questions. Read each question carefully and check the answer
-and explanation after attempting it.
+Select one option for each question. Your answers will remain hidden
+until you submit the complete test.
 </p>
 
-<div class="formula">
-30 Important MCQs | Utility • Consumer Equilibrium • Demand • Elasticity
-</div>
+<p>
+<strong>Total Questions:</strong> 30
+&nbsp; | &nbsp;
+<strong>Marks:</strong> 30
+</p>
+
+<p>
+<strong>Instruction:</strong> Attempt all questions and then click
+<strong>Submit Test</strong>.
+</p>
 
 </div>
 
 
-<!-- MCQ 1 -->
+<form id="quizForm">
 
-<div class="mcq">
 
-<span class="topic">Utility</span>
-
+<!-- Q1 -->
+<div class="question">
 <h3>Q1. What does utility mean in economics?</h3>
 
-<div class="option">A. Price of a commodity</div>
-<div class="option">B. Want-satisfying capacity of a commodity</div>
-<div class="option">C. Cost of production</div>
-<div class="option">D. Income of a consumer</div>
+<label class="option">
+<input type="radio" name="q1" value="A">
+A. Price of a commodity
+</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Want-satisfying capacity of a commodity</strong>
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. Want-satisfying capacity of a commodity
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C. Cost of production
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D. Income of a consumer
+</label>
+
+<div id="r1" class="review"></div>
 </div>
 
-<div class="explanation">
-<strong>Explanation:</strong>
-Utility refers to the capacity of a commodity or service to satisfy human wants.
-</div>
 
-</div>
-
-
-<!-- MCQ 2 -->
-
-<div class="mcq">
-
-<span class="topic">Utility</span>
-
+<!-- Q2 -->
+<div class="question">
 <h3>Q2. Utility is generally considered to be:</h3>
 
-<div class="option">A. Objective</div>
-<div class="option">B. Subjective</div>
-<div class="option">C. Constant</div>
-<div class="option">D. Equal for everyone</div>
+<label class="option"><input type="radio" name="q2" value="A">A. Objective</label>
+<label class="option"><input type="radio" name="q2" value="B">B. Subjective</label>
+<label class="option"><input type="radio" name="q2" value="C">C. Constant</label>
+<label class="option"><input type="radio" name="q2" value="D">D. Equal for everyone</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Subjective</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Utility differs from person to person because wants and preferences differ.
-</div>
-
+<div id="r2" class="review"></div>
 </div>
 
 
-<!-- MCQ 3 -->
-
-<div class="mcq">
-
-<span class="topic">Total Utility</span>
-
+<!-- Q3 -->
+<div class="question">
 <h3>Q3. Total Utility means:</h3>
 
-<div class="option">A. Utility from the last unit only</div>
-<div class="option">B. Price of all units</div>
-<div class="option">C. Total satisfaction from all units consumed</div>
-<div class="option">D. Income of the consumer</div>
+<label class="option"><input type="radio" name="q3" value="A">A. Utility from the last unit only</label>
+<label class="option"><input type="radio" name="q3" value="B">B. Price of all units</label>
+<label class="option"><input type="radio" name="q3" value="C">C. Total satisfaction from all units consumed</label>
+<label class="option"><input type="radio" name="q3" value="D">D. Income of the consumer</label>
 
-<div class="answer">
-<strong>✅ Answer: C. Total satisfaction from all units consumed</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Total Utility is the sum of utility obtained from all units consumed.
-</div>
-
+<div id="r3" class="review"></div>
 </div>
 
 
-<!-- MCQ 4 -->
-
-<div class="mcq">
-
-<span class="topic">Marginal Utility</span>
-
+<!-- Q4 -->
+<div class="question">
 <h3>Q4. Marginal Utility refers to:</h3>
 
-<div class="option">A. Total satisfaction</div>
-<div class="option">B. Additional satisfaction from one more unit</div>
-<div class="option">C. Price of a commodity</div>
-<div class="option">D. Total income</div>
+<label class="option"><input type="radio" name="q4" value="A">A. Total satisfaction</label>
+<label class="option"><input type="radio" name="q4" value="B">B. Additional satisfaction from one more unit</label>
+<label class="option"><input type="radio" name="q4" value="C">C. Price of a commodity</label>
+<label class="option"><input type="radio" name="q4" value="D">D. Total income</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Additional satisfaction from one more unit</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Marginal Utility is the additional utility obtained from consuming one
-additional unit of a commodity.
-</div>
-
+<div id="r4" class="review"></div>
 </div>
 
 
-<!-- MCQ 5 -->
-
-<div class="mcq">
-
-<span class="topic">Formula</span>
-
+<!-- Q5 -->
+<div class="question">
 <h3>Q5. Which formula represents Marginal Utility?</h3>
 
-<div class="option">A. MU = TU × Q</div>
-<div class="option">B. MU = ΔTU ÷ ΔQ</div>
-<div class="option">C. MU = Q ÷ TU</div>
-<div class="option">D. MU = TU + Q</div>
+<label class="option"><input type="radio" name="q5" value="A">A. MU = TU × Q</label>
+<label class="option"><input type="radio" name="q5" value="B">B. MU = ΔTU ÷ ΔQ</label>
+<label class="option"><input type="radio" name="q5" value="C">C. MU = Q ÷ TU</label>
+<label class="option"><input type="radio" name="q5" value="D">D. MU = TU + Q</label>
 
-<div class="answer">
-<strong>✅ Answer: B. MU = ΔTU ÷ ΔQ</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Marginal Utility is the change in Total Utility divided by the change
-in quantity consumed.
-</div>
-
+<div id="r5" class="review"></div>
 </div>
 
 
-<!-- MCQ 6 -->
-
-<div class="mcq">
-
-<span class="topic">TU and MU</span>
-
+<!-- Q6 -->
+<div class="question">
 <h3>Q6. When Marginal Utility is zero, Total Utility is:</h3>
 
-<div class="option">A. Minimum</div>
-<div class="option">B. Negative</div>
-<div class="option">C. Maximum</div>
-<div class="option">D. Constantly decreasing</div>
+<label class="option"><input type="radio" name="q6" value="A">A. Minimum</label>
+<label class="option"><input type="radio" name="q6" value="B">B. Negative</label>
+<label class="option"><input type="radio" name="q6" value="C">C. Maximum</label>
+<label class="option"><input type="radio" name="q6" value="D">D. Constantly decreasing</label>
 
-<div class="answer">
-<strong>✅ Answer: C. Maximum</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Total Utility reaches its maximum level when Marginal Utility becomes zero.
-</div>
-
+<div id="r6" class="review"></div>
 </div>
 
 
-<!-- MCQ 7 -->
-
-<div class="mcq">
-
-<span class="topic">Law of DMU</span>
-
+<!-- Q7 -->
+<div class="question">
 <h3>Q7. The Law of Diminishing Marginal Utility states that Marginal Utility:</h3>
 
-<div class="option">A. Always increases</div>
-<div class="option">B. Remains constant</div>
-<div class="option">C. Tends to decrease with successive consumption</div>
-<div class="option">D. Becomes infinite</div>
+<label class="option"><input type="radio" name="q7" value="A">A. Always increases</label>
+<label class="option"><input type="radio" name="q7" value="B">B. Remains constant</label>
+<label class="option"><input type="radio" name="q7" value="C">C. Tends to decrease with successive consumption</label>
+<label class="option"><input type="radio" name="q7" value="D">D. Becomes infinite</label>
 
-<div class="answer">
-<strong>✅ Answer: C. Tends to decrease with successive consumption</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-As successive units of a commodity are consumed continuously, the
-additional satisfaction generally decreases.
-</div>
-
+<div id="r7" class="review"></div>
 </div>
 
 
-<!-- MCQ 8 -->
+<!-- Q8 -->
+<div class="question">
+<h3>Q8. Which is an assumption of the Law of Diminishing Marginal Utility?</h3>
 
-<div class="mcq">
+<label class="option"><input type="radio" name="q8" value="A">A. Units should be identical</label>
+<label class="option"><input type="radio" name="q8" value="B">B. Price must continuously increase</label>
+<label class="option"><input type="radio" name="q8" value="C">C. Income must continuously decrease</label>
+<label class="option"><input type="radio" name="q8" value="D">D. Consumer must be irrational</label>
 
-<span class="topic">Law of DMU</span>
-
-<h3>Q8. Which of the following is an assumption of the Law of Diminishing Marginal Utility?</h3>
-
-<div class="option">A. Units should be identical</div>
-<div class="option">B. Price must continuously increase</div>
-<div class="option">C. Income must continuously decrease</div>
-<div class="option">D. Consumer must be irrational</div>
-
-<div class="answer">
-<strong>✅ Answer: A. Units should be identical</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-For the law to operate properly, successive units should be reasonably
-identical and consumption should be continuous.
-</div>
-
+<div id="r8" class="review"></div>
 </div>
 
 
-<!-- MCQ 9 -->
-
-<div class="mcq">
-
-<span class="topic">Consumer Equilibrium</span>
-
+<!-- Q9 -->
+<div class="question">
 <h3>Q9. Consumer equilibrium refers to a situation where the consumer:</h3>
 
-<div class="option">A. Minimises satisfaction</div>
-<div class="option">B. Maximises satisfaction subject to constraints</div>
-<div class="option">C. Has unlimited income</div>
-<div class="option">D. Buys nothing</div>
+<label class="option"><input type="radio" name="q9" value="A">A. Minimises satisfaction</label>
+<label class="option"><input type="radio" name="q9" value="B">B. Maximises satisfaction subject to constraints</label>
+<label class="option"><input type="radio" name="q9" value="C">C. Has unlimited income</label>
+<label class="option"><input type="radio" name="q9" value="D">D. Buys nothing</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Maximises satisfaction subject to constraints</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-A rational consumer tries to obtain maximum satisfaction from given income
-and prices.
-</div>
-
+<div id="r9" class="review"></div>
 </div>
 
 
-<!-- MCQ 10 -->
-
-<div class="mcq">
-
-<span class="topic">Consumer Equilibrium</span>
-
+<!-- Q10 -->
+<div class="question">
 <h3>Q10. In the single commodity approach, consumer equilibrium is achieved when:</h3>
 
-<div class="option">A. MU &gt; Price</div>
-<div class="option">B. MU &lt; Price</div>
-<div class="option">C. MU = Price</div>
-<div class="option">D. MU = 0 always</div>
+<label class="option"><input type="radio" name="q10" value="A">A. MU &gt; Price</label>
+<label class="option"><input type="radio" name="q10" value="B">B. MU &lt; Price</label>
+<label class="option"><input type="radio" name="q10" value="C">C. MU = Price</label>
+<label class="option"><input type="radio" name="q10" value="D">D. MU = 0 always</label>
 
-<div class="answer">
-<strong>✅ Answer: C. MU = Price</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-When marginal utility measured in monetary terms equals the price,
-the consumer reaches equilibrium for a single commodity.
-</div>
-
+<div id="r10" class="review"></div>
 </div>
 
 
-<!-- MCQ 11 -->
-
-<div class="mcq">
-
-<span class="topic">Demand</span>
-
+<!-- Q11 -->
+<div class="question">
 <h3>Q11. Which of the following is necessary for demand?</h3>
 
-<div class="option">A. Desire only</div>
-<div class="option">B. Willingness only</div>
-<div class="option">C. Ability to pay only</div>
-<div class="option">D. Desire, willingness and ability to pay</div>
+<label class="option"><input type="radio" name="q11" value="A">A. Desire only</label>
+<label class="option"><input type="radio" name="q11" value="B">B. Willingness only</label>
+<label class="option"><input type="radio" name="q11" value="C">C. Ability to pay only</label>
+<label class="option"><input type="radio" name="q11" value="D">D. Desire, willingness and ability to pay</label>
 
-<div class="answer">
-<strong>✅ Answer: D. Desire, willingness and ability to pay</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-A mere desire is not demand. It must be supported by willingness and
-ability to pay.
-</div>
-
+<div id="r11" class="review"></div>
 </div>
 
 
-<!-- MCQ 12 -->
-
-<div class="mcq">
-
-<span class="topic">Demand</span>
-
+<!-- Q12 -->
+<div class="question">
 <h3>Q12. Demand is related to:</h3>
 
-<div class="option">A. A particular price and time period</div>
-<div class="option">B. Any price without time</div>
-<div class="option">C. Income only</div>
-<div class="option">D. Production only</div>
+<label class="option"><input type="radio" name="q12" value="A">A. A particular price and time period</label>
+<label class="option"><input type="radio" name="q12" value="B">B. Any price without time</label>
+<label class="option"><input type="radio" name="q12" value="C">C. Income only</label>
+<label class="option"><input type="radio" name="q12" value="D">D. Production only</label>
 
-<div class="answer">
-<strong>✅ Answer: A. A particular price and time period</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Demand refers to the quantity a consumer is willing and able to buy
-at a particular price during a particular period.
-</div>
-
+<div id="r12" class="review"></div>
 </div>
 
 
-<!-- MCQ 13 -->
-
-<div class="mcq">
-
-<span class="topic">Demand Schedule</span>
-
+<!-- Q13 -->
+<div class="question">
 <h3>Q13. A demand schedule is a:</h3>
 
-<div class="option">A. Graphical presentation</div>
-<div class="option">B. Tabular presentation</div>
-<div class="option">C. Mathematical equation only</div>
-<div class="option">D. Written story</div>
+<label class="option"><input type="radio" name="q13" value="A">A. Graphical presentation</label>
+<label class="option"><input type="radio" name="q13" value="B">B. Tabular presentation</label>
+<label class="option"><input type="radio" name="q13" value="C">C. Mathematical equation only</label>
+<label class="option"><input type="radio" name="q13" value="D">D. Written story</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Tabular presentation</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-A demand schedule shows different quantities demanded at different
-prices in a table.
-</div>
-
+<div id="r13" class="review"></div>
 </div>
 
 
-<!-- MCQ 14 -->
-
-<div class="mcq">
-
-<span class="topic">Demand Curve</span>
-
+<!-- Q14 -->
+<div class="question">
 <h3>Q14. A normal demand curve generally slopes:</h3>
 
-<div class="option">A. Upward from left to right</div>
-<div class="option">B. Downward from left to right</div>
-<div class="option">C. Vertically upward only</div>
-<div class="option">D. Horizontally only</div>
+<label class="option"><input type="radio" name="q14" value="A">A. Upward from left to right</label>
+<label class="option"><input type="radio" name="q14" value="B">B. Downward from left to right</label>
+<label class="option"><input type="radio" name="q14" value="C">C. Vertically upward only</label>
+<label class="option"><input type="radio" name="q14" value="D">D. Horizontally only</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Downward from left to right</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-The demand curve generally slopes downward because price and quantity
-demanded have an inverse relationship, other things remaining constant.
-</div>
-
+<div id="r14" class="review"></div>
 </div>
 
 
-<!-- MCQ 15 -->
-
-<div class="mcq">
-
-<span class="topic">Law of Demand</span>
-
+<!-- Q15 -->
+<div class="question">
 <h3>Q15. According to the Law of Demand, when price rises, quantity demanded generally:</h3>
 
-<div class="option">A. Rises</div>
-<div class="option">B. Falls</div>
-<div class="option">C. Remains unchanged</div>
-<div class="option">D. Becomes zero always</div>
+<label class="option"><input type="radio" name="q15" value="A">A. Rises</label>
+<label class="option"><input type="radio" name="q15" value="B">B. Falls</label>
+<label class="option"><input type="radio" name="q15" value="C">C. Remains unchanged</label>
+<label class="option"><input type="radio" name="q15" value="D">D. Becomes zero always</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Falls</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Other things remaining constant, quantity demanded generally decreases
-when price increases.
-</div>
-
+<div id="r15" class="review"></div>
 </div>
 
 
-<!-- MCQ 16 -->
-
-<div class="mcq">
-
-<span class="topic">Law of Demand</span>
-
+<!-- Q16 -->
+<div class="question">
 <h3>Q16. The Law of Demand assumes:</h3>
 
-<div class="option">A. Other things remain constant</div>
-<div class="option">B. Income changes continuously</div>
-<div class="option">C. Tastes change continuously</div>
-<div class="option">D. Population changes every day</div>
+<label class="option"><input type="radio" name="q16" value="A">A. Other things remain constant</label>
+<label class="option"><input type="radio" name="q16" value="B">B. Income changes continuously</label>
+<label class="option"><input type="radio" name="q16" value="C">C. Tastes change continuously</label>
+<label class="option"><input type="radio" name="q16" value="D">D. Population changes every day</label>
 
-<div class="answer">
-<strong>✅ Answer: A. Other things remain constant</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-The phrase <strong>ceteris paribus</strong> means other relevant factors
-are held constant.
-</div>
-
+<div id="r16" class="review"></div>
 </div>
 
 
-<!-- MCQ 17 -->
+<!-- Q17 -->
+<div class="question">
+<h3>Q17. Which is commonly discussed as an exception to the Law of Demand?</h3>
 
-<div class="mcq">
+<label class="option"><input type="radio" name="q17" value="A">A. Giffen goods</label>
+<label class="option"><input type="radio" name="q17" value="B">B. Normal goods</label>
+<label class="option"><input type="radio" name="q17" value="C">C. Necessities only</label>
+<label class="option"><input type="radio" name="q17" value="D">D. All goods</label>
 
-<span class="topic">Exceptions</span>
-
-<h3>Q17. Which of the following is commonly discussed as an exception to the Law of Demand?</h3>
-
-<div class="option">A. Giffen goods</div>
-<div class="option">B. Normal goods</div>
-<div class="option">C. Necessities only</div>
-<div class="option">D. All goods</div>
-
-<div class="answer">
-<strong>✅ Answer: A. Giffen goods</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Giffen goods are traditionally discussed as a special case where the
-usual inverse price-demand relationship may not hold.
-</div>
-
+<div id="r17" class="review"></div>
 </div>
 
 
-<!-- MCQ 18 -->
-
-<div class="mcq">
-
-<span class="topic">Determinants</span>
-
+<!-- Q18 -->
+<div class="question">
 <h3>Q18. Which of the following can affect demand?</h3>
 
-<div class="option">A. Consumer income</div>
-<div class="option">B. Tastes and preferences</div>
-<div class="option">C. Prices of related goods</div>
-<div class="option">D. All of the above</div>
+<label class="option"><input type="radio" name="q18" value="A">A. Consumer income</label>
+<label class="option"><input type="radio" name="q18" value="B">B. Tastes and preferences</label>
+<label class="option"><input type="radio" name="q18" value="C">C. Prices of related goods</label>
+<label class="option"><input type="radio" name="q18" value="D">D. All of the above</label>
 
-<div class="answer">
-<strong>✅ Answer: D. All of the above</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Income, tastes, preferences and prices of related goods are important
-determinants of demand.
-</div>
-
+<div id="r18" class="review"></div>
 </div>
 
 
-<!-- MCQ 19 -->
-
-<div class="mcq">
-
-<span class="topic">Movement</span>
-
+<!-- Q19 -->
+<div class="question">
 <h3>Q19. A change in quantity demanded due to a change in the commodity's own price is called:</h3>
 
-<div class="option">A. Shift in demand</div>
-<div class="option">B. Movement along the demand curve</div>
-<div class="option">C. Change in supply</div>
-<div class="option">D. Change in income</div>
+<label class="option"><input type="radio" name="q19" value="A">A. Shift in demand</label>
+<label class="option"><input type="radio" name="q19" value="B">B. Movement along the demand curve</label>
+<label class="option"><input type="radio" name="q19" value="C">C. Change in supply</label>
+<label class="option"><input type="radio" name="q19" value="D">D. Change in income</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Movement along the demand curve</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-A change in the commodity's own price causes movement along the same
-demand curve.
-</div>
-
+<div id="r19" class="review"></div>
 </div>
 
 
-<!-- MCQ 20 -->
-
-<div class="mcq">
-
-<span class="topic">Movement</span>
-
+<!-- Q20 -->
+<div class="question">
 <h3>Q20. Expansion of demand occurs when:</h3>
 
-<div class="option">A. Price rises</div>
-<div class="option">B. Price falls</div>
-<div class="option">C. Income falls only</div>
-<div class="option">D. Tastes change</div>
+<label class="option"><input type="radio" name="q20" value="A">A. Price rises</label>
+<label class="option"><input type="radio" name="q20" value="B">B. Price falls</label>
+<label class="option"><input type="radio" name="q20" value="C">C. Income falls only</label>
+<label class="option"><input type="radio" name="q20" value="D">D. Tastes change</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Price falls</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Expansion of demand means an increase in quantity demanded caused by a
-fall in the commodity's own price.
-</div>
-
+<div id="r20" class="review"></div>
 </div>
 
 
-<!-- MCQ 21 -->
-
-<div class="mcq">
-
-<span class="topic">Shift</span>
-
+<!-- Q21 -->
+<div class="question">
 <h3>Q21. A shift in demand curve is caused by:</h3>
 
-<div class="option">A. Change in own price only</div>
-<div class="option">B. Change in factors other than own price</div>
-<div class="option">C. Change in quantity supplied</div>
-<div class="option">D. No change at all</div>
+<label class="option"><input type="radio" name="q21" value="A">A. Change in own price only</label>
+<label class="option"><input type="radio" name="q21" value="B">B. Change in factors other than own price</label>
+<label class="option"><input type="radio" name="q21" value="C">C. Change in quantity supplied</label>
+<label class="option"><input type="radio" name="q21" value="D">D. No change at all</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Change in factors other than own price</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Changes in income, tastes, prices of related goods and other non-price
-factors can shift the demand curve.
-</div>
-
+<div id="r21" class="review"></div>
 </div>
 
 
-<!-- MCQ 22 -->
-
-<div class="mcq">
-
-<span class="topic">Shift</span>
-
+<!-- Q22 -->
+<div class="question">
 <h3>Q22. An increase in demand generally shifts the demand curve:</h3>
 
-<div class="option">A. Leftward</div>
-<div class="option">B. Rightward</div>
-<div class="option">C. Vertically downward</div>
-<div class="option">D. Nowhere</div>
+<label class="option"><input type="radio" name="q22" value="A">A. Leftward</label>
+<label class="option"><input type="radio" name="q22" value="B">B. Rightward</label>
+<label class="option"><input type="radio" name="q22" value="C">C. Vertically downward</label>
+<label class="option"><input type="radio" name="q22" value="D">D. Nowhere</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Rightward</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-An increase in demand at every given price is represented by a rightward
-shift of the demand curve.
-</div>
-
+<div id="r22" class="review"></div>
 </div>
 
 
-<!-- MCQ 23 -->
-
-<div class="mcq">
-
-<span class="topic">Elasticity</span>
-
+<!-- Q23 -->
+<div class="question">
 <h3>Q23. Elasticity of demand measures:</h3>
 
-<div class="option">A. Total production</div>
-<div class="option">B. Responsiveness of demand to a change in its determinants</div>
-<div class="option">C. Total income</div>
-<div class="option">D. Total cost</div>
+<label class="option"><input type="radio" name="q23" value="A">A. Total production</label>
+<label class="option"><input type="radio" name="q23" value="B">B. Responsiveness of demand to a change in its determinants</label>
+<label class="option"><input type="radio" name="q23" value="C">C. Total income</label>
+<label class="option"><input type="radio" name="q23" value="D">D. Total cost</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Responsiveness of demand to a change in its determinants</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Elasticity measures how responsive quantity demanded is to changes in
-price, income or prices of related goods.
-</div>
-
+<div id="r23" class="review"></div>
 </div>
 
 
-<!-- MCQ 24 -->
-
-<div class="mcq">
-
-<span class="topic">Price Elasticity</span>
-
+<!-- Q24 -->
+<div class="question">
 <h3>Q24. Price elasticity of demand measures responsiveness of quantity demanded to:</h3>
 
-<div class="option">A. Change in income</div>
-<div class="option">B. Change in price</div>
-<div class="option">C. Change in population</div>
-<div class="option">D. Change in technology</div>
+<label class="option"><input type="radio" name="q24" value="A">A. Change in income</label>
+<label class="option"><input type="radio" name="q24" value="B">B. Change in price</label>
+<label class="option"><input type="radio" name="q24" value="C">C. Change in population</label>
+<label class="option"><input type="radio" name="q24" value="D">D. Change in technology</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Change in price</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Price elasticity measures the responsiveness of quantity demanded to a
-change in the price of the commodity.
-</div>
-
+<div id="r24" class="review"></div>
 </div>
 
 
-<!-- MCQ 25 -->
-
-<div class="mcq">
-
-<span class="topic">Formula</span>
-
+<!-- Q25 -->
+<div class="question">
 <h3>Q25. Which is the formula for price elasticity of demand?</h3>
 
-<div class="option">A. Ed = % change in price ÷ % change in quantity demanded</div>
-<div class="option">B. Ed = % change in quantity demanded ÷ % change in price</div>
-<div class="option">C. Ed = Price × Quantity</div>
-<div class="option">D. Ed = Income ÷ Price</div>
+<label class="option"><input type="radio" name="q25" value="A">A. % change in price ÷ % change in quantity demanded</label>
+<label class="option"><input type="radio" name="q25" value="B">B. % change in quantity demanded ÷ % change in price</label>
+<label class="option"><input type="radio" name="q25" value="C">C. Price × Quantity</label>
+<label class="option"><input type="radio" name="q25" value="D">D. Income ÷ Price</label>
 
-<div class="answer">
-<strong>✅ Answer: B. % change in quantity demanded ÷ % change in price</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Price elasticity is calculated as percentage change in quantity demanded
-divided by percentage change in price.
-</div>
-
+<div id="r25" class="review"></div>
 </div>
 
 
-<!-- MCQ 26 -->
-
-<div class="mcq">
-
-<span class="topic">Elasticity</span>
-
+<!-- Q26 -->
+<div class="question">
 <h3>Q26. If Ed = 0, demand is:</h3>
 
-<div class="option">A. Perfectly elastic</div>
-<div class="option">B. Unitary elastic</div>
-<div class="option">C. Perfectly inelastic</div>
-<div class="option">D. Relatively elastic</div>
+<label class="option"><input type="radio" name="q26" value="A">A. Perfectly elastic</label>
+<label class="option"><input type="radio" name="q26" value="B">B. Unitary elastic</label>
+<label class="option"><input type="radio" name="q26" value="C">C. Perfectly inelastic</label>
+<label class="option"><input type="radio" name="q26" value="D">D. Relatively elastic</label>
 
-<div class="answer">
-<strong>✅ Answer: C. Perfectly inelastic</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-When elasticity is zero, quantity demanded does not respond to a change
-in price.
-</div>
-
+<div id="r26" class="review"></div>
 </div>
 
 
-<!-- MCQ 27 -->
-
-<div class="mcq">
-
-<span class="topic">Elasticity</span>
-
+<!-- Q27 -->
+<div class="question">
 <h3>Q27. When Ed = 1, demand is:</h3>
 
-<div class="option">A. Perfectly inelastic</div>
-<div class="option">B. Unitary elastic</div>
-<div class="option">C. Perfectly elastic</div>
-<div class="option">D. Inelastic only</div>
+<label class="option"><input type="radio" name="q27" value="A">A. Perfectly inelastic</label>
+<label class="option"><input type="radio" name="q27" value="B">B. Unitary elastic</label>
+<label class="option"><input type="radio" name="q27" value="C">C. Perfectly elastic</label>
+<label class="option"><input type="radio" name="q27" value="D">D. Inelastic only</label>
 
-<div class="answer">
-<strong>✅ Answer: B. Unitary elastic</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-When percentage change in quantity demanded equals percentage change
-in price, elasticity is equal to one.
-</div>
-
+<div id="r27" class="review"></div>
 </div>
 
 
-<!-- MCQ 28 -->
-
-<div class="mcq">
-
-<span class="topic">Elasticity</span>
-
+<!-- Q28 -->
+<div class="question">
 <h3>Q28. If Ed &gt; 1, demand is:</h3>
 
-<div class="option">A. Relatively elastic</div>
-<div class="option">B. Relatively inelastic</div>
-<div class="option">C. Perfectly inelastic</div>
-<div class="option">D. Unitary elastic</div>
+<label class="option"><input type="radio" name="q28" value="A">A. Relatively elastic</label>
+<label class="option"><input type="radio" name="q28" value="B">B. Relatively inelastic</label>
+<label class="option"><input type="radio" name="q28" value="C">C. Perfectly inelastic</label>
+<label class="option"><input type="radio" name="q28" value="D">D. Unitary elastic</label>
 
-<div class="answer">
-<strong>✅ Answer: A. Relatively elastic</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-When percentage change in quantity demanded is greater than percentage
-change in price, demand is relatively elastic.
-</div>
-
+<div id="r28" class="review"></div>
 </div>
 
 
-<!-- MCQ 29 -->
-
-<div class="mcq">
-
-<span class="topic">Factors</span>
-
+<!-- Q29 -->
+<div class="question">
 <h3>Q29. Demand is generally more elastic when:</h3>
 
-<div class="option">A. There are many close substitutes</div>
-<div class="option">B. There are no substitutes</div>
-<div class="option">C. The good is extremely necessary</div>
-<div class="option">D. The consumer has no choice</div>
+<label class="option"><input type="radio" name="q29" value="A">A. There are many close substitutes</label>
+<label class="option"><input type="radio" name="q29" value="B">B. There are no substitutes</label>
+<label class="option"><input type="radio" name="q29" value="C">C. The good is extremely necessary</label>
+<label class="option"><input type="radio" name="q29" value="D">D. The consumer has no choice</label>
 
-<div class="answer">
-<strong>✅ Answer: A. There are many close substitutes</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-The availability of close substitutes makes it easier for consumers
-to switch when price changes, making demand more responsive.
-</div>
-
+<div id="r29" class="review"></div>
 </div>
 
 
-<!-- MCQ 30 -->
-
-<div class="mcq">
-
-<span class="topic">Factors</span>
-
+<!-- Q30 -->
+<div class="question">
 <h3>Q30. Which factor generally makes demand more elastic?</h3>
 
-<div class="option">A. Longer time period</div>
-<div class="option">B. No substitutes</div>
-<div class="option">C. Strong habit</div>
-<div class="option">D. Essential nature of the good</div>
+<label class="option"><input type="radio" name="q30" value="A">A. Longer time period</label>
+<label class="option"><input type="radio" name="q30" value="B">B. No substitutes</label>
+<label class="option"><input type="radio" name="q30" value="C">C. Strong habit</label>
+<label class="option"><input type="radio" name="q30" value="D">D. Essential nature of the good</label>
 
-<div class="answer">
-<strong>✅ Answer: A. Longer time period</strong>
-</div>
-
-<div class="explanation">
-<strong>Explanation:</strong>
-Consumers generally get more time to adjust their consumption and find
-alternatives over a longer period.
-</div>
-
+<div id="r30" class="review"></div>
 </div>
 
 
-<div class="card">
+<button type="button" class="submit-btn" onclick="submitTest()">
+✅ Submit Test
+</button>
 
-<h2>🎯 Quick Revision Before Exam</h2>
-
-<ul>
-<li>Utility → Want-satisfying capacity</li>
-<li>TU → Total satisfaction</li>
-<li>MU → Additional satisfaction</li>
-<li>MU = ΔTU ÷ ΔQ</li>
-<li>TU is maximum when MU = 0</li>
-<li>Demand requires desire + willingness + ability to pay</li>
-<li>Price ↑ → Quantity demanded generally ↓</li>
-<li>Movement → Change in own price</li>
-<li>Shift → Change in non-price factors</li>
-<li>Ed = % change in quantity demanded ÷ % change in price</li>
-<li>Ed = 0 → Perfectly inelastic</li>
-<li>Ed = 1 → Unitary elastic</li>
-<li>Ed &gt; 1 → Relatively elastic</li>
-</ul>
-
-</div>
+</form>
 
 
-<div class="card">
+<div id="result" class="result">
 
-<h2>📚 Continue Learning</h2>
+<h2>🎉 Test Completed!</h2>
 
-<a class="back" href="class11-microeconomics-unit2.html">
-← Back to Complete Unit 2
-</a>
+<h1 id="score"></h1>
 
-<a class="back" href="economics-class11.html">
-← Class 11 Economics
-</a>
+<p id="message"></p>
+
+<button class="reattempt-btn" onclick="reattempt()">
+🔄 Reattempt Test
+</button>
 
 </div>
+
 
 </div>
 
@@ -1000,9 +664,215 @@ alternatives over a longer period.
 <footer>
 
 <p><strong>Edusphere with Satyam</strong></p>
-<p>Class 11 Economics | Microeconomics | Unit 2 MCQs</p>
+<p>Class 11 Economics | Microeconomics | Unit 2 MCQ Test</p>
 
 </footer>
+
+
+<script>
+
+const answers = {
+    q1:"B",
+    q2:"B",
+    q3:"C",
+    q4:"B",
+    q5:"B",
+    q6:"C",
+    q7:"C",
+    q8:"A",
+    q9:"B",
+    q10:"C",
+    q11:"D",
+    q12:"A",
+    q13:"B",
+    q14:"B",
+    q15:"B",
+    q16:"A",
+    q17:"A",
+    q18:"D",
+    q19:"B",
+    q20:"B",
+    q21:"B",
+    q22:"B",
+    q23:"B",
+    q24:"B",
+    q25:"B",
+    q26:"C",
+    q27:"B",
+    q28:"A",
+    q29:"A",
+    q30:"A"
+};
+
+
+const explanations = {
+
+q1:"Utility is the want-satisfying capacity of a commodity.",
+
+q2:"Utility is subjective because it differs from person to person.",
+
+q3:"Total Utility is the total satisfaction obtained from all units consumed.",
+
+q4:"Marginal Utility is the additional satisfaction obtained from one more unit.",
+
+q5:"MU = ΔTU ÷ ΔQ.",
+
+q6:"Total Utility is maximum when Marginal Utility becomes zero.",
+
+q7:"The law states that marginal utility tends to decrease with successive consumption.",
+
+q8:"The units consumed should be reasonably identical for the law to operate.",
+
+q9:"Consumer equilibrium is the position where the consumer obtains maximum satisfaction subject to constraints.",
+
+q10:"For a single commodity, equilibrium is achieved when MU equals price, with MU measured in monetary terms.",
+
+q11:"Demand requires desire, willingness and ability to pay.",
+
+q12:"Demand is defined with reference to a particular price and period of time.",
+
+q13:"A demand schedule is a tabular presentation of price and quantity demanded.",
+
+q14:"The normal demand curve generally slopes downward from left to right.",
+
+q15:"According to the law of demand, price and quantity demanded generally have an inverse relationship.",
+
+q16:"The law of demand assumes other relevant factors remain constant.",
+
+q17:"Giffen goods are traditionally discussed as an exception to the normal law of demand.",
+
+q18:"Income, tastes and prices of related goods are all determinants of demand.",
+
+q19:"A change in own price causes movement along the same demand curve.",
+
+q20:"Expansion of demand occurs due to a fall in the commodity's own price.",
+
+q21:"A shift occurs because of changes in factors other than the commodity's own price.",
+
+q22:"An increase in demand is represented by a rightward shift.",
+
+q23:"Elasticity measures the responsiveness of demand to changes in its determinants.",
+
+q24:"Price elasticity measures responsiveness of quantity demanded to a change in price.",
+
+q25:"Ed = Percentage change in quantity demanded ÷ Percentage change in price.",
+
+q26:"Ed = 0 represents perfectly inelastic demand.",
+
+q27:"Ed = 1 represents unitary elastic demand.",
+
+q28:"Ed greater than 1 represents relatively elastic demand.",
+
+q29:"More close substitutes generally make demand more elastic.",
+
+q30:"Demand generally becomes more elastic over a longer time period."
+
+};
+
+
+function submitTest(){
+
+    let score = 0;
+
+    for(let i=1;i<=30;i++){
+
+        let question = "q" + i;
+
+        let selected =
+            document.querySelector('input[name="'+question+'"]:checked');
+
+        let review =
+            document.getElementById("r"+i);
+
+        review.style.display = "block";
+
+        if(selected){
+
+            if(selected.value === answers[question]){
+
+                score++;
+
+                review.className = "review correct";
+
+                review.innerHTML =
+                "✅ <strong>Correct!</strong><br>" +
+                "Correct Answer: <strong>" +
+                answers[question] +
+                "</strong>" +
+                '<div class="explanation"><strong>Explanation:</strong> ' +
+                explanations[question] +
+                "</div>";
+
+            }else{
+
+                review.className = "review wrong";
+
+                review.innerHTML =
+                "❌ <strong>Incorrect.</strong><br>" +
+                "Correct Answer: <strong>" +
+                answers[question] +
+                "</strong>" +
+                '<div class="explanation"><strong>Explanation:</strong> ' +
+                explanations[question] +
+                "</div>";
+            }
+
+        }else{
+
+            review.className = "review unanswered";
+
+            review.innerHTML =
+            "⚠️ <strong>Not Attempted.</strong><br>" +
+            "Correct Answer: <strong>" +
+            answers[question] +
+            "</strong>" +
+            '<div class="explanation"><strong>Explanation:</strong> ' +
+            explanations[question] +
+            "</div>";
+        }
+    }
+
+
+    let percentage = Math.round((score/30)*100);
+
+    document.getElementById("score").innerHTML =
+    score + " / 30";
+
+    document.getElementById("message").innerHTML =
+    "Your Score: <strong>" + percentage + "%</strong>";
+
+    document.getElementById("result").style.display = "block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+
+function reattempt(){
+
+    document.getElementById("quizForm").reset();
+
+    for(let i=1;i<=30;i++){
+
+        let review =
+        document.getElementById("r"+i);
+
+        review.style.display = "none";
+
+        review.innerHTML = "";
+    }
+
+    document.getElementById("result").style.display = "none";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+</script>
 
 </body>
 </html>
