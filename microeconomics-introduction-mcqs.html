@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>100 MCQs - Introduction to Microeconomics | Class 11 Economics</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:#172554;
+    color:white;
+    padding:28px 18px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:27px;
+}
+
+header p{
+    margin:8px 0 0;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:22px;
+    margin:20px 0;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.question{
+    background:#f8fafc;
+    padding:18px;
+    margin:18px 0;
+    border-left:5px solid #172554;
+    border-radius:8px;
+}
+
+.question h3{
+    color:#1e3a8a;
+    margin-top:0;
+}
+
+.option{
+    display:block;
+    padding:10px 12px;
+    margin:8px 0;
+    background:white;
+    border:1px solid #cbd5e1;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#eef2ff;
+}
+
+.option input{
+    margin-right:8px;
+}
+
+.correct{
+    background:#dcfce7 !important;
+    border-color:#15803d !important;
+}
+
+.wrong{
+    background:#fee2e2 !important;
+    border-color:#dc2626 !important;
+}
+
+.result{
+    display:none;
+    background:#eef2ff;
+    padding:20px;
+    margin:20px 0;
+    border-left:6px solid #172554;
+    border-radius:8px;
+    text-align:center;
+}
+
+button{
+    border:none;
+    padding:12px 20px;
+    margin:8px;
+    border-radius:7px;
+    background:#172554;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.back{
+    display:inline-block;
+    margin:10px 0 20px;
+    padding:10px 16px;
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#172554;
+    color:white;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+
+    .container{
+        padding:12px;
+    }
+
+    header h1{
+        font-size:22px;
+    }
+
+    .card{
+        padding:16px;
+    }
+
+    .question{
+        padding:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>100 MCQs — Introduction to Microeconomics</h1>
+<p>Class 11 Economics | Unit 1</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="class11-microeconomics-unit1.html">
+← Back to Unit 1
+</a>
+
+<div class="card">
+
+<h2>📝 Practice Test</h2>
+
+<p>
+Test your understanding of Introduction to Microeconomics.
+Each question carries <strong>1 mark</strong>.
+</p>
+
+<div class="result" id="result"></div>
+
+<form id="quizForm">
+
+<div id="questions"></div>
+
+<div style="text-align:center;">
+<button type="button" onclick="submitQuiz()">Submit Test</button>
+<button type="button" onclick="location.reload()">🔄 Reattempt</button>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+<p>Edusphere with Satyam</p>
+<p>Economics | Class 11 | Introduction to Microeconomics</p>
+</footer>
+
+
+<script>
+
+const questions = [
+
+["Economics mainly studies how people use:",["Unlimited resources","Scarce resources","Free resources","Only natural resources"],1],
+
+["Microeconomics studies:",["The whole economy","Individual economic units","National income only","International trade only"],1],
+
+["Macroeconomics studies:",["Individual consumer","Individual firm","Economy as a whole","Single market"],2],
+
+["The basic economic problem arises because:",["Wants are limited","Resources are unlimited","Resources are scarce and wants are unlimited","There is no choice"],2],
+
+["Human wants are generally:",["Limited","Unlimited","Fixed","Zero"],1],
+
+["Resources are scarce in relation to:",["Production","Human wants","Technology","Population only"],1],
+
+["Resources have:",["No alternative uses","Only one use","Alternative uses","Unlimited uses"],2],
+
+["Choice is necessary because:",["Resources are scarce","Resources are unlimited","Wants do not exist","Prices are always zero"],0],
+
+["Opportunity cost means:",["Total cost of production","Money price only","Value of the next best alternative foregone","Accounting profit"],2],
+
+["Microeconomics is also called:",["Price theory","Income theory","Growth theory","Population theory"],0],
+
+["Which is a microeconomic issue?",["National income","General price level","Price of a particular commodity","Unemployment rate"],2],
+
+["Which is a macroeconomic issue?",["Price of one product","Demand of one consumer","National income","Production of one firm"],2],
+
+["Positive economics deals mainly with:",["Facts and testable relationships","Moral judgements","Personal opinions","Political slogans"],0],
+
+["Normative economics deals with:",["What is","What was","What ought to be","Only statistics"],2],
+
+["Which is a positive statement?",["Government should reduce taxes","Prices should be lower","An increase in price may reduce quantity demanded","Everyone should receive free goods"],2],
+
+["Which is a normative statement?",["Unemployment increased last year","The price of petrol increased","Government should provide free education","Production increased"],2],
+
+["An economy is a system involving:",["Only consumers","Production and consumption of goods and services","Only government","Only firms"],1],
+
+["The three central problems are:",["What, how and for whom to produce","When, where and why to produce","What, when and where to sell","How, when and where to consume"],0],
+
+["What to produce refers to deciding:",["Production technique","Goods and quantities to produce","Who gets income","Who owns resources"],1],
+
+["How to produce refers to:",["Choice of production technique","Choice of consumers","Distribution of goods","Level of demand"],0],
+
+["For whom to produce refers mainly to:",["Choice of technology","Distribution of output","Choice of machinery","Amount of resources"],1],
+
+["A labour-intensive technique uses relatively more:",["Capital","Labour","Land","Technology"],1],
+
+["A capital-intensive technique uses relatively more:",["Labour","Capital","Natural resources","Consumers"],1],
+
+["PPF stands for:",["Production Price Function","Production Possibility Frontier","Productive Price Frontier","Production Planning Formula"],1],
+
+["PPF shows:",["Maximum possible combinations of two goods","Only prices","Only income","Only demand"],0],
+
+["A point on the PPF generally represents:",["Efficient use of resources","Wastage of resources","Unattainable production","Zero production"],0],
+
+["A point inside the PPF represents:",["Efficiency","Underutilisation of resources","Unattainability","Maximum production"],1],
+
+["A point outside the PPF is:",["Efficient","Inefficient","Currently unattainable with given resources and technology","Always desirable"],2],
+
+["Movement along a PPF illustrates:",["Opportunity cost","Inflation only","Unemployment only","Population growth"],0],
+
+["If more of one good is produced, generally:",["More of the other good can always be produced","Some of the other good may have to be sacrificed","Scarcity disappears","Wants become limited"],1],
+
+["The sacrifice involved in choosing one alternative is related to:",["Opportunity cost","Profit only","Revenue only","Taxation"],0],
+
+["Scarcity is:",["A temporary shortage only","A fundamental economic problem","A financial loss","A market failure only"],1],
+
+["Which is an example of scarcity?",["Unlimited time","Limited income","Unlimited land","Unlimited resources"],1],
+
+["A student choosing between study and entertainment faces:",["No economic problem","A choice problem","Only a production problem","Only a distribution problem"],1],
+
+["If a student chooses Economics over a movie, the movie may be the:",["Accounting cost","Opportunity cost","Fixed cost","Variable cost"],1],
+
+["Opportunity cost is the value of:",["All rejected alternatives","The next best alternative foregone","The cheapest alternative","The most expensive alternative"],1],
+
+["Opportunity cost can be:",["Only money","Only goods","Time or money or another alternative","Only wages"],2],
+
+["Which resource is scarce?",["Time","Air in every situation","Wants","Choices"],0],
+
+["The central economic problem is faced by:",["Only poor people","Only governments","Individuals, firms and economies","Only businesses"],2],
+
+["Which is NOT a central problem?",["What to produce","How to produce","For whom to produce","Where to consume"],3],
+
+["A market economy relies significantly on:",["Market forces","Central planning only","No prices","No consumers"],0],
+
+["A centrally planned economy relies mainly on:",["Individual consumers","Central authority","Foreign firms","Only households"],1],
+
+["A mixed economy combines:",["Only government control","Only market forces","Market mechanisms and government involvement","No economic decisions"],2],
+
+["India is generally described as a:",["Pure capitalist economy","Pure socialist economy","Mixed economy","Closed economy"],2],
+
+["Production means:",["Using goods only","Creating goods and services or adding utility","Destroying resources","Saving money"],1],
+
+["Consumption means:",["Producing goods","Using goods and services to satisfy wants","Exporting goods","Distributing income"],1],
+
+["Exchange involves:",["Transfer of goods and services between parties","Only production","Only saving","Only taxation"],0],
+
+["Distribution is related to:",["Sharing income generated from production among factors","Only consumption","Only imports","Only exports"],0],
+
+["Which is a factor of production?",["Land","Price","Demand","Utility"],0],
+
+["Scarcity exists because resources:",["Have alternative uses","Are always free","Are unlimited","Have no value"],0],
+
+["The word 'micro' generally means:",["Large","Small","National","International"],1],
+
+["The word 'macro' generally refers to:",["Small units","The economy as a whole","One consumer","One firm"],1],
+
+["Study of an individual consumer belongs to:",["Microeconomics","Macroeconomics","Public finance only","International economics only"],0],
+
+["Study of national unemployment belongs to:",["Microeconomics","Macroeconomics","Business studies","Accounting"],1],
+
+["Study of the price of wheat in a particular market is:",["Microeconomic","Macroeconomic","Only political","Non-economic"],0],
+
+["Study of overall inflation is generally:",["Microeconomic","Macroeconomic","Individual economics","Household economics"],1],
+
+["Limited resources require:",["Choices","No decisions","Unlimited consumption","No opportunity cost"],0],
+
+["Economic resources are also known as:",["Free goods","Scarce resources","Unlimited goods","Non-economic goods"],1],
+
+["A free good is generally a good that:",["Is scarce relative to wants","Is available without scarcity in the relevant context","Has a very high price","Cannot be consumed"],1],
+
+["The opportunity cost of using land for a school may be:",["The best alternative use of that land","Nothing always","The school building only","The wage of teachers"],0],
+
+["If resources are fully and efficiently used, a point is generally:",["On the PPF","Outside the PPF","Always inside the PPF","At zero"],0],
+
+["A point inside the PPF may indicate:",["Unemployment or inefficient use of resources","Maximum efficiency","Impossible production","Unlimited resources"],0],
+
+["Economic growth can cause a PPF to:",["Shift outward","Disappear","Always shift inward","Remain unchanged in every case"],0],
+
+["An improvement in technology can:",["Increase productive capacity","Eliminate all wants","Eliminate scarcity completely","Stop production"],0],
+
+["An increase in available resources may:",["Expand production possibilities","Reduce all choices","Eliminate opportunity cost","Make wants limited"],0],
+
+["The slope of a PPF is related to:",["Opportunity cost","Population only","Money supply only","Tax rate only"],0],
+
+["A bowed-out PPF may reflect:",["Increasing opportunity cost","Zero opportunity cost","No scarcity","Unlimited resources"],0],
+
+["The basic economic problem exists in:",["Every economy","Only developing economies","Only rich economies","Only market economies"],0],
+
+["Which is NOT an example of a scarce resource?",["Time","Income","Land","Unlimited wants"],3],
+
+["A consumer has limited income and must choose between goods. This illustrates:",["Scarcity and choice","No economic problem","Unlimited resources","No opportunity cost"],0],
+
+["Economic problem would disappear if:",["Resources were unlimited relative to wants","Wants increased","Resources became scarcer","Choices increased"],0],
+
+["The central problem 'What to produce?' is related to:",["Allocation of resources among goods","Production technique only","Distribution of income only","Consumption only"],0],
+
+["The central problem 'How to produce?' is related to:",["Choice of technique","Choice of consumers","Distribution of output","Demand only"],0],
+
+["The central problem 'For whom to produce?' is related to:",["Distribution of goods and services","Choice of machinery","Production technique","Resource discovery"],0],
+
+["Positive statements can generally be:",["Tested using evidence","Never tested","Based only on values","Always opinions"],0],
+
+["Normative statements are based on:",["Value judgements","Only physical facts","Only accounting data","Only historical data"],0],
+
+["'Inflation has increased' is generally:",["Positive","Normative","Neither","A moral judgement"],0],
+
+["'Inflation should be reduced' is generally:",["Positive","Normative","Only accounting","Neither"],1],
+
+["A firm deciding how many units to produce is a:",["Microeconomic decision","Macroeconomic decision","Population decision","Political decision only"],0],
+
+["A government deciding overall economic policy is commonly studied in:",["Macroeconomics","Microeconomics only","Accounting","Bookkeeping"],0],
+
+["The main reason for economic choice is:",["Scarcity","Unlimited resources","Zero wants","No alternatives"],0],
+
+["The next best alternative foregone is called:",["Opportunity cost","Total cost","Average cost","Fixed cost"],0],
+
+["If the next best alternative has no value, opportunity cost is:",["Zero","Infinite","Always positive","Unmeasurable"],0],
+
+["PPF assumes, among other things, that:",["Resources and technology are given","Resources are unlimited","Wants are zero","There is only one good"],0],
+
+["PPF normally considers production of:",["Two goods","No goods","Only services","Unlimited goods"],0],
+
+["Efficient production means:",["Resources are fully and efficiently used","Resources are wasted","Production is impossible","No choice is made"],0],
+
+["A combination beyond the current PPF is:",["Unattainable with current resources and technology","Always inefficient","Always efficient","Free"],0],
+
+["A combination below the PPF may be:",["Attainable but inefficient","Always unattainable","Always impossible","Outside the economy"],0],
+
+["Resource allocation means:",["Deciding how scarce resources are used","Creating unlimited resources","Removing all choices","Stopping production"],0],
+
+["The study of choices under scarcity is central to:",["Economics","Only mathematics","Only history","Only geography"],0],
+
+["Which best summarises the economic problem?",["Unlimited wants and scarce resources with alternative uses","Unlimited resources and limited wants","No resources and no wants","Unlimited production"],0],
+
+["Microeconomics focuses on:",["Individual units and particular markets","The whole world economy only","National income only","Economic growth only"],0],
+
+["Macroeconomics focuses on:",["Aggregate economic variables","One consumer only","One firm only","One commodity only"],0],
+
+["Which of the following is an example of a macroeconomic variable?",["National income","Price of one pen","Demand of one consumer","Output of one firm"],0],
+
+["Which of the following is an example of a microeconomic variable?",["Demand for a particular product","National income","Overall unemployment","General price level"],0],
+
+["The scarcity problem makes:",["Choice unavoidable","Choice unnecessary","Resources unlimited","Wants disappear"],0],
+
+["The best way to remember the three central problems is:",["What, How, For Whom","Who, When, Where","Why, When, How","What, Where, When"],0]
+
+];
+
+const container = document.getElementById("questions");
+
+questions.forEach((q,index)=>{
+
+    let html = `
+    <div class="question" id="question${index}">
+    <h3>Q${index+1}. ${q[0]}</h3>
+    `;
+
+    q[1].forEach((option,optionIndex)=>{
+
+        html += `
+        <label class="option" id="q${index}o${optionIndex}">
+        <input type="radio" name="q${index}" value="${optionIndex}">
+        ${option}
+        </label>
+        `;
+
+    });
+
+    html += `</div>`;
+
+    container.innerHTML += html;
+
+});
+
+
+function submitQuiz(){
+
+    let score = 0;
+
+    questions.forEach((q,index)=>{
+
+        const selected = document.querySelector(
+            `input[name="q${index}"]:checked`
+        );
+
+        const correct = q[2];
+
+        for(let i=0;i<q[1].length;i++){
+
+            document.getElementById(`q${index}o${i}`)
+            .classList.remove("correct","wrong");
+
+        }
+
+        document.getElementById(`q${index}o${correct}`)
+        .classList.add("correct");
+
+        if(selected){
+
+            if(Number(selected.value) === correct){
+
+                score++;
+
+            }else{
+
+                document.getElementById(
+                    `q${index}o${selected.value}`
+                ).classList.add("wrong");
+
+            }
+
+        }
+
+    });
+
+
+    let percentage = (score / questions.length) * 100;
+
+    let message = "";
+
+    if(percentage >= 80){
+        message = "Excellent work! 🎉";
+    }
+    else if(percentage >= 60){
+        message = "Good job! Keep practising. 👍";
+    }
+    else if(percentage >= 40){
+        message = "Keep learning and try again. 📚";
+    }
+    else{
+        message = "Don't worry. Revise the unit and reattempt. 💪";
+    }
+
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML = `
+    <h2>Your Result</h2>
+    <h1>${score} / ${questions.length}</h1>
+    <p><strong>Percentage: ${percentage.toFixed(1)}%</strong></p>
+    <p>${message}</p>
+    `;
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
