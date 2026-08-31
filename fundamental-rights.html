@@ -1,168 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamental Rights | Edusphere with Satyam</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f7fa;
-            color: #222;
-        }
+<title>Fundamental Rights | Edusphere with Satyam</title>
 
-        header {
-            background: #12355b;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+<style>
+*{
+    box-sizing:border-box;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
+    color:#1f2937;
+    line-height:1.7;
+}
 
-        header p {
-            margin-top: 10px;
-            font-size: 17px;
-        }
+header{
+    background:linear-gradient(135deg,#172554,#3730a3,#0f766e);
+    color:white;
+    text-align:center;
+    padding:35px 18px;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
+header h1{
+    margin:0;
+    font-size:30px;
+}
 
-        .intro {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+header p{
+    margin:8px 0 0;
+    font-size:17px;
+}
 
-        .articles {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-        }
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
 
-        .article-card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+.back{
+    display:inline-block;
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    margin:5px 0 20px;
+    font-weight:bold;
+}
 
-        .article-card h3 {
-            color: #12355b;
-            margin-top: 0;
-        }
+.card{
+    background:white;
+    padding:25px;
+    margin:22px 0;
+    border-radius:16px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
 
-        .article-card a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 9px 16px;
-            background: #12355b;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+.card h2{
+    color:#312e81;
+    border-bottom:3px solid #818cf8;
+    padding-bottom:8px;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-            background: #12355b;
-            color: white;
-        }
-    </style>
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:20px;
+}
+
+.topic-card{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:14px;
+    border-left:6px solid #4f46e5;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+    transition:.2s;
+}
+
+.topic-card:hover{
+    background:#eef2ff;
+    transform:translateY(-3px);
+}
+
+.topic-card h3{
+    color:#1e3a8a;
+    margin-top:8px;
+}
+
+.topic-card p{
+    margin-bottom:12px;
+}
+
+.topic-link{
+    display:inline-block;
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    padding:9px 14px;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.highlight{
+    background:#ecfdf5;
+    border-left:6px solid #10b981;
+    padding:16px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.info-box{
+    background:#fff7ed;
+    border-left:6px solid #f97316;
+    padding:16px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.badge{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1e40af;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.article-list{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.article-list p{
+    margin:10px 0;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:28px;
+    margin-top:30px;
+}
+
+@media(max-width:650px){
+
+    .container{
+        padding:12px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Fundamental Rights</h1>
-    <p>Part III of the Constitution of India — Articles 12 to 35</p>
+
+<h1>Fundamental Rights</h1>
+
+<p>Indian Polity | Indian Constitution | Edusphere with Satyam</p>
+
 </header>
+
 
 <div class="container">
 
-    <div class="intro">
-        <h2>Introduction</h2>
+<a class="back" href="constitution.html">
+← Back to Indian Constitution
+</a>
 
-        <p>
-            Fundamental Rights are basic rights guaranteed by the Constitution
-            of India. They protect individual liberty, equality and dignity and
-            provide protection against arbitrary action by the State.
-        </p>
 
-        <p>
-            Fundamental Rights are contained in Part III of the Constitution,
-            covering Articles 12 to 35.
-        </p>
-    </div>
+<!-- OVERVIEW -->
 
-    <h2>Articles 12 to 35</h2>
+<div class="card">
 
-    <div class="articles">
+<h2>🇮🇳 Fundamental Rights — Overview</h2>
 
-        <div class="article-card">
-            <h3>Article 12</h3>
-            <p>Definition of State</p>
-            <a href="article12.html">Study Article 12</a>
-        </div>
+<p>
+Fundamental Rights are basic rights guaranteed by the Constitution
+of India for the protection of individual liberty, equality and
+dignity. They are mainly contained in
+<strong>Part III of the Constitution, Articles 12 to 35.</strong>
+</p>
 
-        <div class="article-card">
-            <h3><a href="article13.html">Article 13</a></h3>
-            <p>Laws inconsistent with Fundamental Rights</p>
-        </div>
+<div class="highlight">
 
-        <div class="article-card">
-            <h3>Articles 14–18</h3>
-            <p>Right to Equality</p>
-        </div>
+<strong>Part III:</strong> Articles 12–35<br>
 
-        <div class="article-card">
-            <h3>Articles 19–22</h3>
-            <p>Right to Freedom</p>
-        </div>
+<strong>Purpose:</strong> Protection of individual rights and
+constitutional freedoms<br>
 
-        <div class="article-card">
-            <h3>Articles 23–24</h3>
-            <p>Right against Exploitation</p>
-        </div>
-
-        <div class="article-card">
-            <h3>Articles 25–28</h3>
-            <p>Right to Freedom of Religion</p>
-        </div>
-
-        <div class="article-card">
-            <h3>Articles 29–30</h3>
-            <p>Cultural and Educational Rights</p>
-        </div>
-
-        <div class="article-card">
-            <h3>Article 32</h3>
-            <p>Right to Constitutional Remedies</p>
-        </div>
-
-        <div class="article-card">
-            <h3>Articles 33–35</h3>
-            <p>Special Provisions</p>
-        </div>
-
-    </div>
+<strong>Enforcement:</strong> Courts can enforce Fundamental Rights
 
 </div>
 
+</div>
+
+
+<!-- BASIC FRAMEWORK -->
+
+<div class="card">
+
+<h2>📘 Basic Constitutional Framework</h2>
+
+<div class="topic-grid">
+
+
+<div class="topic-card">
+
+<span class="badge">Article 12</span>
+
+<h3>Definition of State</h3>
+
+<p>
+Article 12 defines the term "State" for the purpose of Fundamental
+Rights. It includes the Government and Parliament of India,
+Government and Legislature of States, local authorities and other
+authorities within the territory of India or under the control of
+the Government of India.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<span class="badge">Article 13</span>
+
+<h3>Laws Inconsistent with Fundamental Rights</h3>
+
+<p>
+Article 13 provides that laws inconsistent with or in derogation
+of Fundamental Rights are void to the extent of their
+inconsistency.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAIN RIGHTS -->
+
+<div class="card">
+
+<h2>⚖️ Fundamental Rights</h2>
+
+<div class="topic-grid">
+
+
+<!-- EQUALITY -->
+
+<div class="topic-card">
+
+<span class="badge">Articles 14–18</span>
+
+<h3>⚖️ Right to Equality</h3>
+
+<p>
+Equality before law, prohibition of discrimination, equality of
+opportunity, abolition of untouchability and abolition of titles.
+</p>
+
+<a class="topic-link"
+href="fundamental-rights-equality.html">
+Explore Topic →
+</a>
+
+</div>
+
+
+<!-- FREEDOM -->
+
+<div class="topic-card">
+
+<span class="badge">Articles 19–22</span>
+
+<h3>🕊️ Right to Freedom</h3>
+
+<p>
+Six freedoms under Article 19, reasonable restrictions, protection
+in criminal cases, life and personal liberty, right to education
+and protection against arrest and detention.
+</p>
+
+<a class="topic-link"
+href="fundamental-rights-freedom.html">
+Explore Topic →
+</a>
+
+</div>
+
+
+<!-- EXPLOITATION -->
+
+<div class="topic-card">
+
+<span class="badge">Articles 23–24</span>
+
+<h3>🚫 Right Against Exploitation</h3>
+
+<p>
+These Articles protect individuals against trafficking, forced
+labour and child labour in hazardous employment.
+</p>
+
+<div class="info-box">
+
+<strong>Article 23(1):</strong><br>
+Prohibits trafficking in human beings, begar and other similar
+forms of forced labour.
+
+<br><br>
+
+<strong>Article 23(2):</strong><br>
+The State may impose compulsory service for public purposes,
+but there shall be no discrimination only on the grounds of
+religion, race, caste or class.
+
+<br><br>
+
+<strong>Article 24:</strong><br>
+No child below the age of 14 years shall be employed in any
+factory, mine or other hazardous employment.
+
+</div>
+
+</div>
+
+
+<!-- RELIGION -->
+
+<div class="topic-card">
+
+<span class="badge">Articles 25–28</span>
+
+<h3>🛕 Right to Freedom of Religion</h3>
+
+<p>
+Protects freedom of conscience and the right to profess, practise
+and propagate religion, subject to constitutional restrictions.
+</p>
+
+<a class="topic-link"
+href="fundamental-rights-religion.html">
+Explore Topic →
+</a>
+
+</div>
+
+
+<!-- CULTURAL -->
+
+<div class="topic-card">
+
+<span class="badge">Articles 29–30</span>
+
+<h3>🎓 Cultural & Educational Rights</h3>
+
+<p>
+These Articles protect cultural interests and provide special
+rights to religious and linguistic minorities regarding
+educational institutions.
+</p>
+
+<div class="info-box">
+
+<strong>Article 29(1):</strong><br>
+Any section of citizens having a distinct language, script or
+culture has the right to conserve it.
+
+<br><br>
+
+<strong>Article 29(2):</strong><br>
+No citizen shall be denied admission to an educational institution
+maintained by or receiving aid from the State on grounds only of
+religion, race, caste or language.
+
+<br><br>
+
+<strong>Article 30(1):</strong><br>
+Religious and linguistic minorities have the right to establish
+and administer educational institutions of their choice.
+
+<br><br>
+
+<strong>Article 30(2):</strong><br>
+The State shall not discriminate in granting aid to an educational
+institution on the ground that it is under the management of a
+minority.
+</div>
+
+</div>
+
+
+<!-- REMEDIES -->
+
+<div class="topic-card">
+
+<span class="badge">Article 32</span>
+
+<h3>🏛️ Right to Constitutional Remedies</h3>
+
+<p>
+Article 32 provides the right to approach the Supreme Court for
+the enforcement of Fundamental Rights.
+</p>
+
+<a class="topic-link"
+href="fundamental-rights-constitutional-remedies.html">
+Explore Topic →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ARTICLES 31A 31B 31C -->
+
+<div class="card">
+
+<h2>📜 Articles 31A, 31B & 31C</h2>
+
+<div class="topic-grid">
+
+
+<div class="topic-card">
+
+<span class="badge">Article 31A</span>
+
+<h3>Saving of Certain Laws</h3>
+
+<p>
+Article 31A protects certain categories of laws, especially laws
+relating to acquisition of estates and similar matters, from
+challenge under specified Fundamental Rights.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<span class="badge">Article 31B</span>
+
+<h3>Ninth Schedule</h3>
+
+<p>
+Article 31B protects certain Acts and Regulations placed in the
+Ninth Schedule from being declared void on specified grounds.
+However, such laws are subject to the Basic Structure doctrine.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<span class="badge">Article 31C</span>
+
+<h3>Protection of Certain Laws</h3>
+
+<p>
+Article 31C provides protection to certain laws made to give effect
+to specified Directive Principles, subject to the interpretation
+of the Supreme Court.
+</p>
+
+</div>
+
+</div>
+
+<div class="highlight">
+
+<strong>Important:</strong><br>
+
+Article 31, which originally dealt with the Right to Property as
+a Fundamental Right, was omitted by the
+<strong>44th Constitutional Amendment Act, 1978.</strong>
+
+The Right to Property is now a constitutional right under
+<strong>Article 300A</strong>.
+
+</div>
+
+</div>
+
+
+<!-- ARTICLES 33-35 -->
+
+<div class="card">
+
+<h2>📌 Articles 33–35</h2>
+
+<div class="article-list">
+
+<p>
+<strong>Article 33:</strong>
+Parliament may modify the application of Fundamental Rights to
+members of the Armed Forces and certain other forces to ensure
+proper discharge of their duties and maintenance of discipline.
+</p>
+
+<p>
+<strong>Article 34:</strong>
+Deals with restrictions on Fundamental Rights while martial law
+is in force in any area.
+</p>
+
+<p>
+<strong>Article 35:</strong>
+Parliament has exclusive power to make laws on certain matters
+relating to Fundamental Rights, including matters specified in
+certain provisions of Part III.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- LANDMARK CASES -->
+
+<div class="card">
+
+<h2>⚖️ Landmark Supreme Court Cases</h2>
+
+<div class="topic-grid">
+
+
+<div class="topic-card">
+
+<span class="badge">Case Law</span>
+
+<h3>Kesavananda Bharati Case</h3>
+
+<p>
+Important for the Basic Structure doctrine and the relationship
+between constitutional amendments and Fundamental Rights.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<span class="badge">Case Law</span>
+
+<h3>Maneka Gandhi Case</h3>
+
+<p>
+Expanded the interpretation of Article 21 and strengthened the
+protection of life and personal liberty.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<span class="badge">Case Law</span>
+
+<h3>Golaknath Case</h3>
+
+<p>
+An important case concerning Parliament's power to amend
+Fundamental Rights.
+</p>
+
+</div>
+
+
+<div class="topic-card">
+
+<span class="badge">Case Law</span>
+
+<h3>Minerva Mills Case</h3>
+
+<p>
+Highlighted the balance between Fundamental Rights and Directive
+Principles and reinforced the Basic Structure doctrine.
+</p>
+
+</div>
+
+</div>
+
+<a class="topic-link"
+href="fundamental-rights-landmark-cases.html">
+Explore Landmark Cases →
+</a>
+
+</div>
+
+
+<!-- IMPORTANT AMENDMENTS -->
+
+<div class="card">
+
+<h2>📚 Important Amendments Related to Fundamental Rights</h2>
+
+<div class="article-list">
+
+<p>
+<strong>42nd Amendment, 1976:</strong>
+Made important changes affecting the relationship between
+Fundamental Rights and Directive Principles.
+</p>
+
+<p>
+<strong>44th Amendment, 1978:</strong>
+Removed the Right to Property from the list of Fundamental Rights.
+</p>
+
+<p>
+<strong>86th Amendment, 2002:</strong>
+Inserted Article 21A, providing the Fundamental Right to Education
+for children between 6 and 14 years.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- QUICK REVISION -->
+
+<div class="card">
+
+<h2>🎯 Quick Revision</h2>
+
+<div class="highlight">
+
+<strong>Part III:</strong> Articles 12–35
+
+</div>
+
+<div class="highlight">
+
+<strong>Right to Equality:</strong> Articles 14–18
+
+</div>
+
+<div class="highlight">
+
+<strong>Right to Freedom:</strong> Articles 19–22
+
+</div>
+
+<div class="highlight">
+
+<strong>Right Against Exploitation:</strong> Articles 23–24
+
+</div>
+
+<div class="highlight">
+
+<strong>Freedom of Religion:</strong> Articles 25–28
+
+</div>
+
+<div class="highlight">
+
+<strong>Cultural & Educational Rights:</strong> Articles 29–30
+
+</div>
+
+<div class="highlight">
+
+<strong>Constitutional Remedies:</strong> Article 32
+
+</div>
+
+<div class="highlight">
+
+<strong>Right to Property:</strong>
+Article 300A — Constitutional Right, not a Fundamental Right
+
+</div>
+
+</div>
+
+
+</div>
+
+
 <footer>
-    <p>© 2026 Edusphere with Satyam</p>
+
+<p><strong>Edusphere with Satyam</strong></p>
+
+<p>
+Indian Polity | Fundamental Rights | Articles & Landmark Cases
+</p>
+
 </footer>
 
 </body>
