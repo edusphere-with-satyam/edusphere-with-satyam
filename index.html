@@ -1,199 +1,1225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="google-site-verification" content="wzVVm1e-XckKq3QVcTLoPEL7tvRzW4N8FBrS6QSTLb0" />
+
+<head>
+  <meta name="google-site-verification"
+        content="wzVVm1e-XckKq3QVcTLoPEL7tvRzW4N8FBrS6QSTLb0">
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Edusphere with Satyam - Educational notes, PPTs, MCQs and learning resources.">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Edusphere with Satyam - Educational notes, PPTs, MCQs and learning resources.">
+
   <title>Edusphere with Satyam</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #101a3a;
+      background: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e5e9f5;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1380px;
+      margin: auto;
+      min-height: 78px;
+      padding: 0 35px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      font-size: 25px;
+      font-weight: 800;
+      color: #10245d;
+      line-height: 1.05;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #5570aa;
+      margin-top: 4px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .links a {
+      color: #17213f;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .links a:hover {
+      color: #2563eb;
+    }
+
+    .menu {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        radial-gradient(circle at 80% 35%, #dce8ff 0%, transparent 35%),
+        linear-gradient(135deg, #f5f8ff, #eef3ff);
+
+      min-height: 620px;
+      padding: 70px 6% 60px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-inner {
+      max-width: 1380px;
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      color: #3164dc;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(48px, 5vw, 76px);
+      line-height: 1.02;
+      margin: 0 0 25px;
+      color: #0b173c;
+    }
+
+    .hero-text h1 span {
+      color: #2860e8;
+    }
+
+    .lead {
+      color: #536078;
+      font-size: 19px;
+      line-height: 1.65;
+      max-width: 570px;
+      margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 52px;
+      padding: 0 25px;
+
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn.primary {
+      background: #2563eb;
+      color: white;
+      box-shadow: 0 8px 20px rgba(37,99,235,0.20);
+    }
+
+    .btn.primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #2455b8;
+      border: 1px solid #9bb5e9;
+    }
+
+    .btn.secondary:hover {
+      background: #f3f7ff;
+    }
+
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .hero-image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+
+      border-radius: 30px;
+
+      box-shadow:
+        0 25px 60px rgba(44, 76, 140, 0.18);
+
+      display: block;
+    }
+
+
+    /* =========================
+       FEATURE CARDS
+    ========================= */
+
+    .features {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 6% 65px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #e0e6f3;
+      border-radius: 15px;
+      padding: 22px;
+
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      box-shadow: 0 10px 30px rgba(30,60,120,0.08);
+    }
+
+    .feature-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 13px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #edf3ff;
+      font-size: 27px;
+    }
+
+    .feature h3 {
+      margin: 0 0 5px;
+      font-size: 17px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: #667085;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    .section {
+      max-width: 1380px;
+      margin: auto;
+      padding: 75px 6%;
+    }
+
+    .soft {
+      background: #f7f9ff;
+      max-width: none;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 12px;
+      font-size: 36px;
+      color: #0c183d;
+    }
+
+    .section-heading p {
+      color: #68738a;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       SUBJECT CARDS
+    ========================= */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .subject {
+      background: white;
+      border: 1px solid #e1e6f0;
+      border-radius: 15px;
+      padding: 25px;
+
+      min-height: 250px;
+
+      box-shadow: 0 10px 30px rgba(20,50,100,0.06);
+      transition: 0.2s;
+    }
+
+    .subject:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(20,50,100,0.10);
+    }
+
+    .subject > div:first-child {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .subject h3 {
+      font-size: 19px;
+      margin: 0 0 10px;
+      color: #101a3a;
+    }
+
+    .subject p {
+      color: #667085;
+      font-size: 14px;
+      line-height: 1.55;
+      min-height: 65px;
+    }
+
+    .subject-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .subject-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #111e52;
+      color: white;
+
+      min-height: 34px;
+      padding: 0 14px;
+
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .subject-btn:hover {
+      background: #2563eb;
+    }
+
+
+    /* =========================
+       RESOURCES
+    ========================= */
+
+    .resource-list {
+      max-width: 1000px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .resource {
+      background: white;
+      border: 1px solid #e1e6f0;
+      border-radius: 12px;
+      padding: 20px;
+
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .resource > span {
+      font-size: 28px;
+    }
+
+    .resource h3 {
+      margin: 0 0 5px;
+    }
+
+    .resource p {
+      margin: 0;
+      color: #68738a;
+    }
+
+    .resource > a {
+      margin-left: auto;
+      background: #172554;
+      color: white;
+      padding: 9px 17px;
+      border-radius: 7px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       QUIZ
+    ========================= */
+
+    .quiz-card {
+      max-width: 800px;
+      background: white;
+      border: 1px solid #e1e6f0;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(20,50,100,0.06);
+    }
+
+    .answers {
+      display: grid;
+      gap: 10px;
+    }
+
+    .answers button {
+      text-align: left;
+      background: #f6f8fc;
+      border: 1px solid #dce3ef;
+      border-radius: 8px;
+      padding: 13px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .answers button:hover {
+      background: #eaf1ff;
+    }
+
+    .result {
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       ARTICLES
+    ========================= */
+
+    .article {
+      background: white;
+      border: 1px solid #e1e6f0;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(20,50,100,0.05);
+    }
+
+    .article .tag {
+      color: #3164dc;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .article h3 {
+      font-size: 20px;
+    }
+
+    .article p {
+      color: #68738a;
+      line-height: 1.6;
+    }
+
+    .article a {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      max-width: 1380px;
+      margin: auto;
+      padding: 75px 6%;
+    }
+
+    .about > div {
+      max-width: 850px;
+    }
+
+    .about h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about h3 {
+      margin-top: 30px;
+    }
+
+    .about p,
+    .about li {
+      color: #5f6b82;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0e1838;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 7px;
+      opacity: 0.85;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        max-width: 800px;
+      }
+
+      .hero-image {
+        order: 2;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (max-width: 700px) {
+
+      .nav {
+        min-height: 65px;
+        padding: 0 20px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .brand span {
+        font-size: 12px;
+      }
+
+      .links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+
+        background: white;
+        padding: 20px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+
+        border-bottom: 1px solid #ddd;
+      }
+
+      .links.show {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero {
+        padding: 50px 20px 40px;
+      }
+
+      .hero-text h1 {
+        font-size: 45px;
+      }
+
+      .lead {
+        font-size: 17px;
+      }
+
+      .hero-image img {
+        border-radius: 20px;
+      }
+
+      .features {
+        padding: 0 20px 50px;
+      }
+
+      .section,
+      .about {
+        padding: 55px 20px;
+      }
+
+      .section-heading h2 {
+        font-size: 30px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .subject {
+        min-height: auto;
+      }
+
+      .resource {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .resource > a {
+        margin-left: 0;
+      }
+    }
+
+  </style>
 </head>
+
+
 <body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
   <nav class="nav">
-    <a class="brand" href="#home">Edusphere <span>with Satyam</span></a>
+
+    <a class="brand" href="#home">
+      Edusphere
+      <span>with Satyam</span>
+    </a>
+
     <button class="menu" onclick="toggleMenu()">☰</button>
+
     <div class="links" id="navLinks">
+
       <a href="#home">Home</a>
       <a href="#subjects">Subjects</a>
       <a href="#resources">Resources</a>
       <a href="#practice">MCQs</a>
       <a href="#articles">Articles</a>
       <a href="#about">About</a>
+
     </div>
+
   </nav>
+
 </header>
 
+
 <main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
-  <div class="hero-text">
-    <p class="eyebrow">LEARN • PRACTICE • GROW</p>
-    <h1>Welcome to <span>Edusphere with Satyam</span></h1>
-    <p class="lead">A simple learning space for notes, presentations, practice questions and useful educational content.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#resources">Explore Resources</a>
-      <a class="btn secondary" href="#about">About the Teacher</a>
+
+  <div class="hero-inner">
+
+    <div class="hero-text">
+
+      <p class="eyebrow">
+        LEARN • PRACTICE • GROW
+      </p>
+
+      <h1>
+        Welcome to
+        <span>Edusphere with Satyam</span>
+      </h1>
+
+      <p class="lead">
+        A simple learning space for notes, presentations,
+        practice questions and useful educational content.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn primary" href="#resources">
+          Explore Resources →
+        </a>
+
+        <a class="btn secondary" href="#about">
+          👨‍🏫 About the Teacher
+        </a>
+
+      </div>
+
     </div>
+
+
+    <!-- YOUR UPLOADED IMAGE -->
+
+    <div class="hero-image">
+
+      <img
+        src="1000128056.jpg"
+        alt="Students studying together">
+
+    </div>
+
+  </div>
 
 </section>
 
-<section class="section" id="subjects">
-  <div class="section-heading">
-    <p class="eyebrow">EXPLORE</p>
-    <h2>Subjects & Learning Areas</h2>
-    <p>Start with a subject and explore the available resources.</p>
+
+<!-- =========================
+     FEATURE CARDS
+========================= -->
+
+<div class="features">
+
+  <div class="feature">
+
+    <div class="feature-icon">🎓</div>
+
+    <div>
+      <h3>Students</h3>
+      <p>Learn & Grow</p>
+    </div>
+
   </div>
-  <div class="grid">
-<article class="subject">
-    <div>💻</div>
-    <h3>Information Technology</h3>
 
-<p>CBSE Information Technology — Subject Code 402</p>
 
-<div style="margin-top:15px;">
+  <div class="feature">
 
-    <a href="class9-it.html"
-       style="display:block;
-              width:fit-content;
-              padding:10px 14px;
-              margin:5px 0;
-              background:#172554;
-              color:white;
-              text-decoration:none;
-              border-radius:6px;
-              font-size:18px;
-              line-height:1.2;">
-       Class 9 IT
-    </a>
+    <div class="feature-icon">📄</div>
 
-    <a href="class10-it.html"
-       style="display:block;
-              width:fit-content;
-              padding:10px 14px;
-              margin:5px 0;
-              background:#172554;
-              color:white;
-              text-decoration:none;
-              border-radius:6px;
-              font-size:18px;
-              line-height:1.2;">
-       Class 10 IT
-    </a>
+    <div>
+      <h3>Notes</h3>
+      <p>Study Material</p>
+    </div>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div class="feature-icon">✓</div>
+
+    <div>
+      <h3>Practice</h3>
+      <p>Exam Preparation</p>
+    </div>
+
+  </div>
 
 </div>
 
-    <div>📈</div>
 
-    <h3>Economics</h3>
+<!-- =========================
+     SUBJECTS
+========================= -->
 
-    <p>
-        Class 11 and 12 concepts, explanations, examples and revision material.
-    </p>
+<section class="section" id="subjects">
 
-    <a href="economics-class11.html"
-       style="display:inline-block; padding:10px 14px; margin:5px; background:#172554; color:white; text-decoration:none; border-radius:6px;">
-       Class 11 Economics
-    </a>
+  <div class="section-heading">
 
-    <a href="economics-class12.html"
-       style="display:inline-block; padding:10px 14px; margin:5px; background:#172554; color:white; text-decoration:none; border-radius:6px;">
-       Class 12 Economics
-    </a>
+    <p class="eyebrow">EXPLORE</p>
 
-</article>
-<article class="subject">
-    <div>⚖️</div>
-    <h3>Indian Polity</h3>
+    <h2>Subjects & Learning Areas</h2>
 
     <p>
-        Constitutional provisions, Fundamental Rights, articles, cases and revision notes.
+      Start with a subject and explore the available resources.
     </p>
 
-    <a href="constitution.html"
-       style="display:inline-block; padding:10px 14px; margin:5px; background:#172554; color:white; text-decoration:none; border-radius:6px;">
-       🇮🇳 Constitution
-    </a>
-</article>
-    <article class="subject"><div>📝</div><h3>Competitive Exams</h3><p>Practice material, basic concepts, MCQs and exam-oriented revision.</p></article>
   </div>
+
+
+  <div class="grid">
+
+
+    <!-- INFORMATION TECHNOLOGY -->
+
+    <article class="subject">
+
+      <div>💻</div>
+
+      <h3>Information Technology</h3>
+
+      <p>
+        CBSE Information Technology —
+        Subject Code 402.
+      </p>
+
+      <div class="subject-buttons">
+
+        <a class="subject-btn" href="class9-it.html">
+          Class 9 IT
+        </a>
+
+        <a class="subject-btn" href="class10-it.html">
+          Class 10 IT
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- INDIAN POLITY -->
+
+    <article class="subject">
+
+      <div>⚖️</div>
+
+      <h3>Indian Polity</h3>
+
+      <p>
+        Constitutional provisions, Fundamental Rights,
+        articles, cases and revision notes.
+      </p>
+
+      <div class="subject-buttons">
+
+        <a class="subject-btn" href="constitution.html">
+          🇮🇳 Constitution
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ECONOMICS -->
+
+    <article class="subject">
+
+      <div>📈</div>
+
+      <h3>Economics</h3>
+
+      <p>
+        Class 11 and 12 concepts, explanations,
+        examples and revision material.
+      </p>
+
+      <div class="subject-buttons">
+
+        <a class="subject-btn" href="economics-class11.html">
+          Class 11 Economics
+        </a>
+
+        <a class="subject-btn" href="economics-class12.html">
+          Class 12 Economics
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- COMPETITIVE EXAMS -->
+
+    <article class="subject">
+
+      <div>📝</div>
+
+      <h3>Competitive Exams</h3>
+
+      <p>
+        Practice material, basic concepts,
+        MCQs and exam-oriented revision.
+      </p>
+
+      <div class="subject-buttons">
+
+        <a class="subject-btn" href="#practice">
+          Explore Now
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
 </section>
+
+
+<!-- =========================
+     RESOURCES
+========================= -->
 
 <section class="section soft" id="resources">
+
   <div class="section-heading">
+
     <p class="eyebrow">STUDY MATERIAL</p>
+
     <h2>Notes, PDFs & PPTs</h2>
-    <p>Replace the sample buttons below with links to your Google Drive files, PDFs or presentations.</p>
+
+    <p>
+      Study material, presentations and useful
+      educational resources for students.
+    </p>
+
   </div>
+
+
   <div class="resource-list">
-    <div class="resource"><span>📄</span><div><h3>Class Notes</h3><p>Topic-wise notes for students.</p></div><a href="#" onclick="demo(event)">Open</a></div>
-    <div class="resource"><span>📊</span><div><h3>Teaching PPTs</h3><p>Presentation-ready educational slides.</p></div><a href="#" onclick="demo(event)">Open</a></div>
-    <div class="resource"><span>📚</span><div><h3>PDF Library</h3><p>Downloadable revision and study material.</p></div><a href="#" onclick="demo(event)">Open</a></div>
-    <div class="resource"><span>📜</span><div><h3>Fundamental Rights – Articles 12 to 35</h3><p>Complete notes on Fundamental Rights of the Indian Constitution.</p></div><a href="Fundamental_Rights_Articles_12_35_Complete.pdf" target="_blank">Open PDF</a></div>
+
+
+    <div class="resource">
+
+      <span>📄</span>
+
+      <div>
+        <h3>Class Notes</h3>
+        <p>Topic-wise notes for students.</p>
+      </div>
+
+      <a href="#" onclick="demo(event)">
+        Open
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <span>📊</span>
+
+      <div>
+        <h3>Teaching PPTs</h3>
+        <p>Presentation-ready educational slides.</p>
+      </div>
+
+      <a href="#" onclick="demo(event)">
+        Open
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <span>📚</span>
+
+      <div>
+        <h3>PDF Library</h3>
+        <p>Downloadable revision and study material.</p>
+      </div>
+
+      <a href="#" onclick="demo(event)">
+        Open
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <span>📜</span>
+
+      <div>
+        <h3>Fundamental Rights – Articles 12 to 35</h3>
+        <p>
+          Complete notes on Fundamental Rights
+          of the Indian Constitution.
+        </p>
+      </div>
+
+      <a
+        href="Fundamental_Rights_Articles_12_35_Complete.pdf"
+        target="_blank">
+        Open PDF
+      </a>
+
+    </div>
+
   </div>
+
 </section>
+
+
+<!-- =========================
+     MCQs
+========================= -->
 
 <section class="section" id="practice">
+
   <div class="section-heading">
+
     <p class="eyebrow">PRACTICE</p>
+
     <h2>MCQs & Quick Revision</h2>
-    <p>Build your own question bank here as the website grows.</p>
+
+    <p>
+      Practice important questions and strengthen
+      your preparation.
+    </p>
+
   </div>
+
+
   <div class="quiz-card">
+
     <h3>Sample Question</h3>
-    <p>Which Article of the Constitution guarantees equality before law?</p>
+
+    <p>
+      Which Article of the Constitution guarantees
+      equality before law?
+    </p>
+
     <div class="answers">
-      <button onclick="checkAnswer(this, false)">Article 12</button>
-      <button onclick="checkAnswer(this, true)">Article 14</button>
-      <button onclick="checkAnswer(this, false)">Article 19</button>
-      <button onclick="checkAnswer(this, false)">Article 21</button>
+
+      <button onclick="checkAnswer(this, false)">
+        Article 12
+      </button>
+
+      <button onclick="checkAnswer(this, true)">
+        Article 14
+      </button>
+
+      <button onclick="checkAnswer(this, false)">
+        Article 19
+      </button>
+
+      <button onclick="checkAnswer(this, false)">
+        Article 21
+      </button>
+
     </div>
+
     <p id="result" class="result"></p>
+
   </div>
+
 </section>
+
+
+<!-- =========================
+     ARTICLES
+========================= -->
 
 <section class="section soft" id="articles">
+
   <div class="section-heading">
+
     <p class="eyebrow">BLOG</p>
+
     <h2>Educational Articles</h2>
-    <p>Publish explanations, exam tips and useful learning articles here.</p>
+
+    <p>
+      Explanations, exam tips and useful learning articles.
+    </p>
+
   </div>
+
+
   <div class="grid">
-    <article class="article"><p class="tag">POLITY</p><h3>Understanding Fundamental Rights</h3><p>Use this space for a short introduction to your article.</p><a href="#" onclick="demo(event)">Read article →</a></article>
-    <article class="article"><p class="tag">ECONOMICS</p><h3>Economics Concepts Made Simple</h3><p>Explain difficult concepts using simple examples and diagrams.</p><a href="#" onclick="demo(event)">Read article →</a></article>
-    <article class="article"><p class="tag">IT</p><h3>Computer Basics for Students</h3><p>Create beginner-friendly lessons and revision guides.</p><a href="#" onclick="demo(event)">Read article →</a></article>
+
+
+    <article class="article">
+
+      <p class="tag">POLITY</p>
+
+      <h3>Understanding Fundamental Rights</h3>
+
+      <p>
+        Learn the important Fundamental Rights
+        of the Indian Constitution in simple language.
+      </p>
+
+      <a href="fundamental-rights.html">
+        Read article →
+      </a>
+
+    </article>
+
+
+    <article class="article">
+
+      <p class="tag">ECONOMICS</p>
+
+      <h3>Economics Concepts Made Simple</h3>
+
+      <p>
+        Understand difficult Economics concepts
+        using simple examples and explanations.
+      </p>
+
+      <a href="#" onclick="demo(event)">
+        Read article →
+      </a>
+
+    </article>
+
+
+    <article class="article">
+
+      <p class="tag">IT</p>
+
+      <h3>Computer Basics for Students</h3>
+
+      <p>
+        Beginner-friendly lessons and
+        revision guides for students.
+      </p>
+
+      <a href="#" onclick="demo(event)">
+        Read article →
+      </a>
+
+    </article>
+
   </div>
+
 </section>
 
+
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section class="about" id="about">
+
   <div>
+
     <p class="eyebrow">ABOUT</p>
 
     <h2>About Satyam</h2>
 
     <p>
-      Welcome to <strong>Edusphere with Satyam</strong> — an educational
-      platform created to make learning resources organised, accessible
-      and easy to understand.
+      Welcome to <strong>Edusphere with Satyam</strong> —
+      an educational platform created to make learning
+      resources organised, accessible and easy to understand.
     </p>
 
     <p>
-      I am <strong>Satyam Pandey</strong>, an educator with an academic
-      background in Commerce and a strong interest in Information
-      Technology and Indian Polity.
+      I am <strong>Satyam Pandey</strong>, an educator with
+      an academic background in Commerce and a strong
+      interest in Information Technology and Indian Polity.
     </p>
+
 
     <h3>🎓 Academic Background</h3>
 
     <ul>
+
       <li>
-        <strong>Graduation:</strong> Bachelor of Commerce (B.Com.) —
-        Guru Ghasidas Vishwavidyalaya, Main Campus
+        <strong>Graduation:</strong>
+        Bachelor of Commerce (B.Com.) —
+        Guru Ghasidas Vishwavidyalaya
       </li>
 
       <li>
-        <strong>Post-Graduation:</strong> Master of Commerce (M.Com.) —
+        <strong>Post-Graduation:</strong>
+        Master of Commerce (M.Com.) —
         Dr. Ram Manohar Lohia Avadh University
       </li>
+
     </ul>
+
 
     <h3>👨‍🏫 Teaching</h3>
 
@@ -202,44 +1228,67 @@
       <strong>TPS Memorial Convent Public School</strong>.
     </p>
 
+
     <h3>📚 Subjects</h3>
 
     <ul>
+
       <li>Economics</li>
       <li>Information Technology</li>
       <li>Accountancy</li>
       <li>Indian Polity</li>
+
     </ul>
+
 
     <h3>🌐 About Edusphere with Satyam</h3>
 
     <p>
-      Edusphere with Satyam aims to provide students with clear and
-      well-organised study material, notes, presentations, practice
-      questions, MCQs and other useful learning resources.
+      Edusphere with Satyam aims to provide students
+      with clear and well-organised study material,
+      notes, presentations, practice questions,
+      MCQs and other useful learning resources.
     </p>
 
     <p>
       The goal is simple:
-      <strong>make learning easier, more organised and more accessible
-      for students.</strong>
+      <strong>
+        make learning easier, more organised and
+        more accessible for students.
+      </strong>
     </p>
 
     <p>
-      More educational content and learning resources will be added regularly.
+      More educational content and learning resources
+      will be added regularly.
     </p>
 
   </div>
+
 </section>
-  </div>
-</section>
+
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <p>© 2026 Edusphere with Satyam. All rights reserved.</p>
-  <p>Learn • Practice • Grow</p>
+
+  <p>
+    © 2026 Edusphere with Satyam.
+    All rights reserved.
+  </p>
+
+  <p>
+    Learn • Practice • Grow
+  </p>
+
 </footer>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>
