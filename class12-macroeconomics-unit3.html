@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 12 Macroeconomics - Unit 3</title>
+<title>Class 12 Economics - Unit 3 | Determination of Income and Employment</title>
 
 <style>
-
 *{
     box-sizing:border-box;
 }
@@ -21,10 +20,10 @@ body{
 }
 
 header{
-    background:linear-gradient(135deg,#172554,#4338ca,#0f766e);
+    background:linear-gradient(135deg,#172554,#3730a3,#0f766e);
     color:white;
     text-align:center;
-    padding:32px 18px;
+    padding:35px 18px;
 }
 
 header h1{
@@ -38,18 +37,18 @@ header p{
 }
 
 .container{
-    max-width:1050px;
+    max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
 .back{
     display:inline-block;
-    background:linear-gradient(135deg,#172554,#4338ca);
+    background:#172554;
     color:white;
     text-decoration:none;
     padding:11px 18px;
-    border-radius:10px;
+    border-radius:8px;
     margin:5px 0 20px;
     font-weight:bold;
 }
@@ -58,8 +57,8 @@ header p{
     background:white;
     padding:25px;
     margin:22px 0;
-    border-radius:18px;
-    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    border-radius:16px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
 .card h2{
@@ -68,141 +67,78 @@ header p{
     padding-bottom:8px;
 }
 
-.card h3{
-    color:#3730a3;
-    margin-top:25px;
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:20px;
 }
 
-.topic{
-    background:linear-gradient(135deg,#eff6ff,#ecfeff);
-    border-left:6px solid #4f46e5;
-    padding:18px;
-    margin:18px 0;
-    border-radius:12px;
-}
-
-.highlight{
-    background:#fef3c7;
-    border-left:6px solid #f59e0b;
-    padding:16px;
-    border-radius:10px;
-    margin:15px 0;
-}
-
-.board{
-    background:#ecfdf5;
-    border-left:6px solid #059669;
-    padding:16px;
-    border-radius:10px;
-    margin:15px 0;
-}
-
-.formula{
-    background:#eef2ff;
-    border:1px solid #c7d2fe;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
-    font-size:18px;
-    font-weight:bold;
-    color:#312e81;
-    margin:15px 0;
-}
-
-.example{
-    background:#fff7ed;
-    border-left:6px solid #ea580c;
-    padding:16px;
-    border-radius:10px;
-    margin:15px 0;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:18px 0;
-    background:white;
-}
-
-th,td{
-    border:1px solid #cbd5e1;
-    padding:11px;
-    text-align:left;
-    vertical-align:top;
-}
-
-th{
-    background:#e0e7ff;
-    color:#312e81;
-}
-
-tr:nth-child(even){
+.topic-card{
     background:#f8fafc;
-}
-
-ul,ol{
-    padding-left:25px;
-}
-
-li{
-    margin:7px 0;
-}
-
-.definition{
-    background:#f5f3ff;
-    border-left:5px solid #7c3aed;
-    padding:14px;
-    border-radius:9px;
-    margin:12px 0;
-}
-
-.warning{
-    background:#fff1f2;
-    border-left:6px solid #e11d48;
-    padding:15px;
-    border-radius:10px;
-    margin:15px 0;
-}
-
-.nav-card{
-    display:block;
-    background:linear-gradient(135deg,#eff6ff,#ecfeff);
-    border-left:6px solid #4f46e5;
     padding:20px;
-    margin:18px 0;
     border-radius:14px;
-    text-decoration:none;
-    color:#1e3a8a;
+    border-left:6px solid #4f46e5;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
     transition:.2s;
 }
 
-.nav-card:hover{
-    transform:translateX(3px);
-    background:linear-gradient(135deg,#eef2ff,#dbeafe);
+.topic-card:hover{
+    background:#eef2ff;
+    transform:translateY(-3px);
 }
 
-.nav-card h3{
-    margin:0 0 8px;
-    color:#312e81;
+.topic-card h3{
+    color:#1e3a8a;
+    margin-top:0;
 }
 
-.small{
-    color:#475569;
+.topic-card p{
+    margin-bottom:15px;
+}
+
+.topic-link{
+    display:inline-block;
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    padding:9px 14px;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.topic-link:hover{
+    background:#3730a3;
+}
+
+.highlight{
+    background:#ecfdf5;
+    border-left:6px solid #10b981;
+    padding:16px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.badge{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1e40af;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
 }
 
 footer{
     background:#172554;
     color:white;
     text-align:center;
-    padding:25px;
-    margin-top:35px;
+    padding:28px;
+    margin-top:30px;
 }
 
-@media(max-width:700px){
-
-    header h1{
-        font-size:25px;
-    }
+@media(max-width:650px){
 
     .container{
         padding:12px;
@@ -212,16 +148,14 @@ footer{
         padding:18px;
     }
 
-    table{
-        font-size:14px;
+    header h1{
+        font-size:24px;
     }
 
-    th,td{
-        padding:8px;
+    .topic-grid{
+        grid-template-columns:1fr;
     }
-
 }
-
 </style>
 </head>
 
@@ -229,1627 +163,223 @@ footer{
 
 <header>
 
-<h1>📘 Class 12 Macroeconomics</h1>
+<h1>Class 12 Economics</h1>
 
-<p>Unit 3 – Determination of Income and Employment</p>
-
-<p>Complete Study Material | Concepts | Formulae | Examples | Board Points</p>
+<p>Macroeconomics | Unit 3 — Determination of Income and Employment</p>
 
 </header>
 
 
 <div class="container">
 
-<a class="back" href="index.html">← Back to Home</a>
-
-
-<!-- ===================================================== -->
-<!-- SECTION 1 -->
-<!-- ===================================================== -->
-
-<div class="card">
-
-<h2>📚 Section 1 – Basic Concepts, Aggregate Demand & Aggregate Supply</h2>
-
-
-<div class="topic">
-
-<h3>1. Meaning of Income and Employment</h3>
-
-<div class="definition">
-
-<strong>National Income:</strong>
-It is the money value of all final goods and services produced by the normal residents of a country during a financial year.
-
-</div>
-
-<p>
-In macroeconomics, the level of income and employment is determined by the interaction between
-<strong>Aggregate Demand (AD)</strong> and <strong>Aggregate Supply (AS)</strong>.
-</p>
-
-<p>
-Keynes explained that the level of employment in an economy depends mainly on the level of
-<strong>effective demand</strong>.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>2. Aggregate Demand (AD)</h3>
-
-<div class="definition">
-
-<strong>Aggregate Demand</strong> refers to the total demand for goods and services in an economy
-during a given period.
-
-</div>
-
-<p>In a simple two-sector economy:</p>
-
-<div class="formula">
-AD = C + I
-</div>
-
-<p>Where:</p>
-
-<ul>
-<li><strong>C</strong> = Consumption expenditure</li>
-<li><strong>I</strong> = Investment expenditure</li>
-</ul>
-
-<p>In a three-sector economy:</p>
-
-<div class="formula">
-AD = C + I + G
-</div>
-
-<p>In an open economy:</p>
-
-<div class="formula">
-AD = C + I + G + (X − M)
-</div>
-
-<ul>
-<li><strong>G</strong> = Government expenditure</li>
-<li><strong>X</strong> = Exports</li>
-<li><strong>M</strong> = Imports</li>
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>3. Components of Aggregate Demand</h3>
-
-<table>
-
-<tr>
-<th>Component</th>
-<th>Meaning</th>
-</tr>
-
-<tr>
-<td>Consumption (C)</td>
-<td>Expenditure by households on goods and services.</td>
-</tr>
-
-<tr>
-<td>Investment (I)</td>
-<td>Expenditure on capital goods, inventories and productive assets.</td>
-</tr>
-
-<tr>
-<td>Government Expenditure (G)</td>
-<td>Government spending on public goods, services and development activities.</td>
-</tr>
-
-<tr>
-<td>Net Exports (X − M)</td>
-<td>Difference between exports and imports.</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="topic">
-
-<h3>4. Aggregate Supply (AS)</h3>
-
-<div class="definition">
-
-<strong>Aggregate Supply</strong> refers to the total quantity of goods and services produced
-in an economy during a given period.
-
-</div>
-
-<p>
-In the Keynesian short-run model, when prices are assumed to be given, the value of aggregate
-supply is represented by the level of income.
-</p>
-
-<div class="formula">
-AS = Y
-</div>
-
-<p>
-Here <strong>Y</strong> represents national income/output.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>5. Effective Demand</h3>
-
-<div class="definition">
-
-<strong>Effective Demand</strong> is the level of aggregate demand at which
-<strong>AD = AS</strong>.
-
-</div>
-
-<p>
-According to Keynes, the equilibrium level of employment is determined by effective demand.
-</p>
-
-<div class="formula">
-Effective Demand → AD = AS
-</div>
-
-<div class="board">
-
-<strong>📌 Board Point:</strong>
-
-<p>
-An increase in aggregate demand can increase the level of output and employment when the economy
-is operating below full employment.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>6. Ex-Ante and Ex-Post Concepts</h3>
-
-<table>
-
-<tr>
-<th>Ex-Ante</th>
-<th>Ex-Post</th>
-</tr>
-
-<tr>
-<td>Refers to planned or intended values.</td>
-<td>Refers to actual or realised values.</td>
-</tr>
-
-<tr>
-<td>Determined before the activity takes place.</td>
-<td>Determined after the activity takes place.</td>
-</tr>
-
-<tr>
-<td>Example: Planned investment.</td>
-<td>Example: Actual investment.</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="topic">
-
-<h3>7. Equilibrium Level of Income</h3>
-
-<p>
-An economy is in equilibrium when the planned aggregate demand is equal to the level of
-aggregate supply/output.
-</p>
-
-<div class="formula">
-AD = AS
-</div>
-
-<p>
-Since AS = Y:
-</p>
-
-<div class="formula">
-Y = AD
-</div>
-
-<p>
-For a two-sector economy:
-</p>
-
-<div class="formula">
-Y = C + I
-</div>
-
-</div>
-
-
-<div class="highlight">
-
-<strong>⭐ Quick Revision – Section 1</strong>
-
-<ul>
-<li>AD represents total planned expenditure.</li>
-<li>AS represents total output/income.</li>
-<li>In a two-sector economy, AD = C + I.</li>
-<li>Equilibrium occurs when AD = AS.</li>
-<li>Effective demand determines equilibrium employment.</li>
-<li>In the simple Keynesian model, AS = Y.</li>
-</ul>
-
-</div>
-
-</div>
-
-
-<!-- ===================================================== -->
-<!-- SECTION 2 -->
-<!-- ===================================================== -->
-
-<div class="card">
-
-<h2>💰 Section 2 – Consumption, Saving & Investment</h2>
-
-
-<div class="topic">
-
-<h3>1. Consumption Function</h3>
-
-<div class="definition">
-
-The <strong>Consumption Function</strong> shows the functional relationship between
-consumption expenditure and income.
-
-</div>
-
-<p>
-Consumption generally increases when income increases, but the increase in consumption is
-usually less than the increase in income.
-</p>
-
-<div class="formula">
-C = C̄ + bY
-</div>
-
-<ul>
-<li><strong>C</strong> = Consumption expenditure</li>
-<li><strong>C̄</strong> = Autonomous consumption</li>
-<li><strong>b</strong> = Marginal Propensity to Consume (MPC)</li>
-<li><strong>Y</strong> = Income</li>
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>2. Autonomous and Induced Consumption</h3>
-
-<table>
-
-<tr>
-<th>Autonomous Consumption</th>
-<th>Induced Consumption</th>
-</tr>
-
-<tr>
-<td>Does not depend on current income.</td>
-<td>Depends on the level of income.</td>
-</tr>
-
-<tr>
-<td>Exists even when income is zero.</td>
-<td>Changes with changes in income.</td>
-</tr>
-
-<tr>
-<td>Example: Basic consumption financed through past savings.</td>
-<td>Example: Higher spending due to higher income.</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="topic">
-
-<h3>3. Saving Function</h3>
-
-<div class="definition">
-
-<strong>Saving</strong> is the part of income that is not spent on consumption.
-
-</div>
-
-<div class="formula">
-S = Y − C
-</div>
-
-<p>
-Using the consumption function:
-</p>
-
-<div class="formula">
-S = −C̄ + (1 − b)Y
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>4. Average Propensity to Consume (APC)</h3>
-
-<div class="definition">
-
-APC measures the proportion of income spent on consumption.
-
-</div>
-
-<div class="formula">
-APC = C / Y
-</div>
-
-<p>
-Where C is consumption and Y is income.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>5. Average Propensity to Save (APS)</h3>
-
-<div class="definition">
-
-APS measures the proportion of income saved.
-
-</div>
-
-<div class="formula">
-APS = S / Y
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>6. Marginal Propensity to Consume (MPC)</h3>
-
-<div class="definition">
-
-MPC measures the change in consumption resulting from a change in income.
-
-</div>
-
-<div class="formula">
-MPC = ΔC / ΔY
-</div>
-
-<p>
-If income increases by ₹100 and consumption increases by ₹80:
-</p>
-
-<div class="example">
-
-<strong>Example:</strong>
-
-<br>
-ΔY = ₹100
-
-<br>
-ΔC = ₹80
-
-<br><br>
-
-MPC = 80 / 100 = <strong>0.8</strong>
-
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>7. Marginal Propensity to Save (MPS)</h3>
-
-<div class="definition">
-
-MPS measures the change in saving resulting from a change in income.
-
-</div>
-
-<div class="formula">
-MPS = ΔS / ΔY
-</div>
-
-<p>
-Important relationship:
-</p>
-
-<div class="formula">
-MPC + MPS = 1
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>8. Relationship between APC and APS</h3>
-
-<div class="formula">
-APC + APS = 1
-</div>
-
-<p>
-Because income is either consumed or saved:
-</p>
-
-<div class="formula">
-Y = C + S
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>9. Important Relationships</h3>
-
-<table>
-
-<tr>
-<th>Concept</th>
-<th>Formula</th>
-</tr>
-
-<tr>
-<td>Average Propensity to Consume</td>
-<td>APC = C/Y</td>
-</tr>
-
-<tr>
-<td>Average Propensity to Save</td>
-<td>APS = S/Y</td>
-</tr>
-
-<tr>
-<td>Marginal Propensity to Consume</td>
-<td>MPC = ΔC/ΔY</td>
-</tr>
-
-<tr>
-<td>Marginal Propensity to Save</td>
-<td>MPS = ΔS/ΔY</td>
-</tr>
-
-<tr>
-<td>Relationship</td>
-<td>MPC + MPS = 1</td>
-</tr>
-
-<tr>
-<td>Relationship</td>
-<td>APC + APS = 1</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="topic">
-
-<h3>10. Investment</h3>
-
-<div class="definition">
-
-<strong>Investment</strong> means expenditure on capital goods and inventories which helps
-to increase productive capacity.
-
-</div>
-
-<p>Investment may be classified as:</p>
-
-<ul>
-<li>Autonomous investment</li>
-<li>Induced investment</li>
-</ul>
-
-<div class="definition">
-
-<strong>Autonomous Investment:</strong>
-Investment which is independent of the level of income.
-
-</div>
-
-<div class="definition">
-
-<strong>Induced Investment:</strong>
-Investment which changes with changes in income or demand.
-
-</div>
-
-</div>
-
-
-<div class="board">
-
-<strong>📌 Board Points – Section 2</strong>
-
-<ul>
-<li>Consumption and saving are positively related to income.</li>
-<li>MPC lies between 0 and 1 in the standard Keynesian framework.</li>
-<li>MPC + MPS = 1.</li>
-<li>APC + APS = 1.</li>
-<li>APC may be greater than 1 when consumption exceeds income.</li>
-<li>APS can be negative when saving is negative.</li>
-<li>Autonomous consumption can exist even at zero income.</li>
-<li>Investment is an important component of aggregate demand.</li>
-</ul>
-
-</div>
-
-</div>
-
-
-<!-- ===================================================== -->
-<!-- SECTION 3 -->
-<!-- ===================================================== -->
-
-<div class="card">
-
-<h2>📈 Section 3 – Income Determination & Investment Multiplier</h2>
-
-
-<div class="topic">
-
-<h3>1. Two-Sector Model</h3>
-
-<p>
-A two-sector economy consists of:
-</p>
-
-<ul>
-<li>Households</li>
-<li>Firms</li>
-</ul>
-
-<p>
-There is no government sector and no foreign sector in this simple model.
-</p>
-
-<div class="formula">
-AD = C + I
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>2. Equilibrium through AD and AS</h3>
-
-<p>
-Equilibrium income is determined at the point where aggregate demand is equal to aggregate
-supply.
-</p>
-
-<div class="formula">
-AD = AS
-</div>
-
-<p>
-Since:
-</p>
-
-<div class="formula">
-AS = Y
-</div>
-
-<p>
-Therefore:
-</p>
-
-<div class="formula">
-Y = C + I
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>3. Saving-Investment Approach</h3>
-
-<p>
-In a two-sector economy, equilibrium can also be determined through equality between planned
-saving and planned investment.
-</p>
-
-<div class="formula">
-S = I
-</div>
-
-<p>
-Therefore, two important conditions of equilibrium are:
-</p>
-
-<div class="formula">
-AD = AS
-</div>
-
-<div class="formula">
-S = I
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>4. Numerical Example of Equilibrium Income</h3>
-
-<div class="example">
-
-Suppose:
-
-<br><br>
-
-C = 100 + 0.8Y
-
-<br>
-I = 200
-
-<br><br>
-
-At equilibrium:
-
-<br>
-Y = C + I
-
-<br><br>
-
-Therefore:
-
-<br>
-Y = 100 + 0.8Y + 200
-
-<br>
-Y = 300 + 0.8Y
-
-<br>
-Y − 0.8Y = 300
-
-<br>
-0.2Y = 300
-
-<br><br>
-
-<strong>Y = ₹1500</strong>
-
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>5. Investment Multiplier</h3>
-
-<div class="definition">
-
-The <strong>Investment Multiplier</strong> shows how many times the level of income increases
-as a result of an initial increase in investment.
-
-</div>
-
-<div class="formula">
-K = ΔY / ΔI
-</div>
-
-<p>
-In terms of MPC:
-</p>
-
-<div class="formula">
-K = 1 / (1 − MPC)
-</div>
-
-<p>
-Since:
-</p>
-
-<div class="formula">
-MPS = 1 − MPC
-</div>
-
-<p>
-Therefore:
-</p>
-
-<div class="formula">
-K = 1 / MPS
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>6. Working of the Multiplier</h3>
-
-<p>
-When investment increases, income increases. The increase in income leads to an increase in
-consumption. The increase in consumption creates further income for others, which again leads
-to further consumption.
-</p>
-
-<p>
-This process continues in successive rounds until the total increase in income becomes a
-multiple of the initial increase in investment.
-</p>
-
-<div class="example">
-
-<strong>Example:</strong>
-
-<br><br>
-
-If MPC = 0.8:
-
-<br>
-
-K = 1 / (1 − 0.8)
-
-<br>
-
-K = 1 / 0.2
-
-<br>
-
-<strong>K = 5</strong>
-
-<br><br>
-
-If investment increases by ₹100 crore:
-
-<br>
-
-ΔY = K × ΔI
-
-<br>
-
-ΔY = 5 × ₹100 crore
-
-<br>
-
-<strong>ΔY = ₹500 crore</strong>
-
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>7. Relationship between MPC and Multiplier</h3>
-
-<table>
-
-<tr>
-<th>MPC</th>
-<th>MPS</th>
-<th>Multiplier</th>
-</tr>
-
-<tr>
-<td>0.5</td>
-<td>0.5</td>
-<td>2</td>
-</tr>
-
-<tr>
-<td>0.6</td>
-<td>0.4</td>
-<td>2.5</td>
-</tr>
-
-<tr>
-<td>0.75</td>
-<td>0.25</td>
-<td>4</td>
-</tr>
-
-<tr>
-<td>0.8</td>
-<td>0.2</td>
-<td>5</td>
-</tr>
-
-<tr>
-<td>0.9</td>
-<td>0.1</td>
-<td>10</td>
-</tr>
-
-</table>
-
-<div class="highlight">
-
-<strong>Important:</strong>
-
-As MPC increases, MPS decreases and the value of the multiplier increases.
-
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>8. Multiplier Process – Step by Step</h3>
-
-<ol>
-
-<li>There is an initial increase in investment.</li>
-
-<li>The increase in investment increases income.</li>
-
-<li>People spend a part of their additional income.</li>
-
-<li>This additional consumption becomes income for other people.</li>
-
-<li>They again spend a part of their additional income.</li>
-
-<li>The process continues through successive rounds.</li>
-
-<li>The total increase in income becomes a multiple of the initial increase in investment.</li>
-
-</ol>
-
-</div>
-
-
-<div class="topic">
-
-<h3>9. Important Multiplier Formulae</h3>
-
-<div class="formula">
-K = ΔY / ΔI
-</div>
-
-<div class="formula">
-K = 1 / (1 − MPC)
-</div>
-
-<div class="formula">
-K = 1 / MPS
-</div>
-
-<div class="formula">
-ΔY = K × ΔI
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>10. Paradox of Thrift</h3>
-
-<div class="definition">
-
-The <strong>Paradox of Thrift</strong> refers to a situation where an attempt by all people
-to increase saving may lead to a decrease in aggregate demand and income, causing total
-saving in the economy to remain unchanged or even fall.
-
-</div>
-
-<p>
-If households reduce consumption in order to save more, aggregate demand may fall.
-Lower demand can reduce production and income.
-</p>
-
-<div class="board">
-
-<strong>📌 Board Point:</strong>
-
-Saving is beneficial for an individual, but if everyone simultaneously tries to save more
-during a recession, it may reduce aggregate demand and national income.
-
-</div>
-
-</div>
-
-
-<div class="board">
-
-<strong>⭐ Section 3 – Board Revision</strong>
-
-<ul>
-<li>Equilibrium condition: AD = AS.</li>
-<li>In a two-sector model: Y = C + I.</li>
-<li>Alternative equilibrium condition: S = I.</li>
-<li>Multiplier: K = 1/MPS.</li>
-<li>Multiplier also equals 1/(1 − MPC).</li>
-<li>Higher MPC means a higher multiplier.</li>
-<li>Investment creates a multiplied increase in income.</li>
-<li>Paradox of thrift is related to excessive saving and reduction in aggregate demand.</li>
-</ul>
-
-</div>
-
-</div>
-
-
-<!-- ===================================================== -->
-<!-- SECTION 4 -->
-<!-- ===================================================== -->
-
-<div class="card">
-
-<h2>🏛️ Section 4 – Full Employment, Excess Demand & Deficient Demand</h2>
-
-
-<div class="topic">
-
-<h3>1. Full Employment</h3>
-
-<div class="definition">
-
-<strong>Full Employment</strong> refers to a situation in which all those persons who are
-willing and able to work at the prevailing wage rate get employment, subject to the existence
-of normal frictional and structural unemployment.
-
-</div>
-
-<p>
-Full employment does not necessarily mean zero unemployment.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>2. Underemployment</h3>
-
-<div class="definition">
-
-<strong>Underemployment</strong> exists when people are willing and capable of working but
-cannot find sufficient employment opportunities.
-
-</div>
-
-<p>
-An economy can have resources such as labour and capital that are not fully utilised.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>3. Excess Demand</h3>
-
-<div class="definition">
-
-<strong>Excess Demand</strong> refers to a situation where aggregate demand is greater than
-the level of aggregate demand required to maintain full-employment equilibrium.
-
-</div>
-
-<div class="formula">
-Excess Demand → AD > AS at Full Employment
-</div>
-
-<p>
-Excess demand creates upward pressure on the general price level and may result in
-<strong>inflationary pressure</strong>.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>4. Inflationary Gap</h3>
-
-<div class="definition">
-
-<strong>Inflationary Gap</strong> is the excess of planned aggregate demand over the level of
-aggregate demand required to establish full employment.
-
-</div>
-
-<div class="formula">
-Inflationary Gap = Excess Aggregate Demand
-</div>
-
-<p>
-It indicates the amount by which aggregate demand needs to be reduced to eliminate excess
-demand at full employment.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>5. Causes of Excess Demand</h3>
-
-<ul>
-
-<li>Increase in government expenditure.</li>
-
-<li>Reduction in taxes.</li>
-
-<li>Increase in money supply.</li>
-
-<li>Increase in private investment.</li>
-
-<li>Increase in consumption expenditure.</li>
-
-<li>Increase in exports.</li>
-
-<li>Increase in consumer confidence.</li>
-
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>6. Effects of Excess Demand</h3>
-
-<ul>
-
-<li>Creates inflationary pressure.</li>
-
-<li>Raises the general price level.</li>
-
-<li>May increase demand for scarce resources.</li>
-
-<li>Can create pressure on wages and costs.</li>
-
-<li>May reduce the purchasing power of money.</li>
-
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>7. Measures to Correct Excess Demand</h3>
-
-<p>
-The government and central bank can adopt contractionary measures to reduce aggregate demand.
-</p>
-
-<h3>Fiscal Measures</h3>
-
-<ul>
-
-<li><strong>Decrease government expenditure:</strong> Reduces aggregate demand directly.</li>
-
-<li><strong>Increase taxes:</strong> Reduces disposable income and consumption expenditure.</li>
-
-<li><strong>Increase public borrowing:</strong> Can help reduce purchasing power from the economy.</li>
-
-</ul>
-
-
-<h3>Monetary Measures</h3>
-
-<ul>
-
-<li>Increase bank rate.</li>
-
-<li>Increase repo rate.</li>
-
-<li>Increase cash reserve requirements.</li>
-
-<li>Increase statutory liquidity requirements.</li>
-
-<li>Sell government securities through open market operations.</li>
-
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>8. Deficient Demand</h3>
-
-<div class="definition">
-
-<strong>Deficient Demand</strong> refers to a situation where aggregate demand is less than
-the level of aggregate demand required to maintain full-employment equilibrium.
-
-</div>
-
-<div class="formula">
-Deficient Demand → AD < Full Employment Level of AD
-</div>
-
-<p>
-Deficient demand may lead to unemployment and a fall in the level of output and income.
-</p>
-
-</div>
-
-
-<div class="topic">
-
-<h3>9. Deflationary Gap</h3>
-
-<div class="definition">
-
-<strong>Deflationary Gap</strong> is the amount by which aggregate demand falls short of the
-aggregate demand required to achieve full employment.
-
-</div>
-
-<p>
-It represents the deficiency in aggregate demand at the full-employment level.
-</p>
-
-<div class="formula">
-Deflationary Gap = Required AD − Actual AD
-</div>
-
-</div>
-
-
-<div class="topic">
-
-<h3>10. Causes of Deficient Demand</h3>
-
-<ul>
-
-<li>Decrease in government expenditure.</li>
-
-<li>Increase in taxes.</li>
-
-<li>Decrease in private investment.</li>
-
-<li>Decrease in money supply.</li>
-
-<li>Decrease in consumption expenditure.</li>
-
-<li>Decrease in exports.</li>
-
-<li>Fall in business confidence.</li>
-
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>11. Effects of Deficient Demand</h3>
-
-<ul>
-
-<li>Fall in output.</li>
-
-<li>Fall in employment.</li>
-
-<li>Increase in unemployment.</li>
-
-<li>Reduction in income.</li>
-
-<li>Low utilisation of productive resources.</li>
-
-<li>Reduction in investment due to weak demand.</li>
-
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>12. Measures to Correct Deficient Demand</h3>
-
-<h3>Fiscal Measures</h3>
-
-<ul>
-
-<li><strong>Increase government expenditure</strong> to raise aggregate demand.</li>
-
-<li><strong>Decrease taxes</strong> to increase disposable income and consumption.</li>
-
-<li><strong>Reduce public borrowing</strong> to increase purchasing power in the economy.</li>
-
-</ul>
-
-
-<h3>Monetary Measures</h3>
-
-<ul>
-
-<li>Decrease bank rate.</li>
-
-<li>Decrease repo rate.</li>
-
-<li>Decrease cash reserve requirements.</li>
-
-<li>Decrease statutory liquidity requirements.</li>
-
-<li>Purchase government securities through open market operations.</li>
-
-</ul>
-
-</div>
-
-
-<div class="topic">
-
-<h3>13. Excess Demand vs Deficient Demand</h3>
-
-<table>
-
-<tr>
-<th>Basis</th>
-<th>Excess Demand</th>
-<th>Deficient Demand</th>
-</tr>
-
-<tr>
-<td>Meaning</td>
-<td>AD is higher than the required level at full employment.</td>
-<td>AD is lower than the required level at full employment.</td>
-</tr>
-
-<tr>
-<td>Main problem</td>
-<td>Inflationary pressure</td>
-<td>Unemployment and recessionary pressure</td>
-</tr>
-
-<tr>
-<td>Output</td>
-<td>Demand may exceed available output at full employment.</td>
-<td>Output remains below the full-employment level.</td>
-</tr>
-
-<tr>
-<td>Fiscal policy</td>
-<td>Decrease government expenditure and/or increase taxes.</td>
-<td>Increase government expenditure and/or decrease taxes.</td>
-</tr>
-
-<tr>
-<td>Monetary policy</td>
-<td>Restrictive/contractionary monetary policy.</td>
-<td>Expansionary monetary policy.</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="topic">
-
-<h3>14. Quick Policy Comparison</h3>
-
-<table>
-
-<tr>
-<th>Situation</th>
-<th>Government Action</th>
-<th>Central Bank Action</th>
-</tr>
-
-<tr>
-<td>Excess Demand</td>
-<td>Reduce expenditure / Increase taxes</td>
-<td>Reduce money supply / Raise interest rates</td>
-</tr>
-
-<tr>
-<td>Deficient Demand</td>
-<td>Increase expenditure / Reduce taxes</td>
-<td>Increase money supply / Lower interest rates</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="topic">
-
-<h3>15. Important Monetary Policy Instruments</h3>
-
-<table>
-
-<tr>
-<th>Instrument</th>
-<th>When Excess Demand Exists</th>
-<th>When Deficient Demand Exists</th>
-</tr>
-
-<tr>
-<td>Bank Rate</td>
-<td>Increase</td>
-<td>Decrease</td>
-</tr>
-
-<tr>
-<td>Repo Rate</td>
-<td>Increase</td>
-<td>Decrease</td>
-</tr>
-
-<tr>
-<td>CRR</td>
-<td>Increase</td>
-<td>Decrease</td>
-</tr>
-
-<tr>
-<td>SLR</td>
-<td>Increase</td>
-<td>Decrease</td>
-</tr>
-
-<tr>
-<td>Open Market Operations</td>
-<td>Sell securities</td>
-<td>Buy securities</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="warning">
-
-<strong>⚠️ Remember the Direction:</strong>
-
-<br><br>
-
-<strong>Excess Demand → Reduce AD</strong>
-
-<br>
-
-<strong>Deficient Demand → Increase AD</strong>
-
-<br><br>
-
-This simple relationship helps in remembering most corrective measures.
-
-</div>
-
-
-<div class="board">
-
-<strong>⭐ Board Exam Points – Section 4</strong>
-
-<ul>
-
-<li>Excess demand creates inflationary pressure.</li>
-
-<li>Deficient demand creates unemployment and recessionary pressure.</li>
-
-<li>Inflationary gap is associated with excess demand.</li>
-
-<li>Deflationary gap is associated with deficient demand.</li>
-
-<li>To correct excess demand, contractionary fiscal and monetary policies are used.</li>
-
-<li>To correct deficient demand, expansionary fiscal and monetary policies are used.</li>
-
-<li>Increase in government expenditure increases aggregate demand.</li>
-
-<li>Increase in taxes reduces aggregate demand.</li>
-
-<li>Purchase of securities by the central bank increases liquidity.</li>
-
-<li>Sale of securities by the central bank reduces liquidity.</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<!-- ===================================================== -->
-<!-- BOARD EXAM IMPORTANT -->
-<!-- ===================================================== -->
-
-<div class="card">
-
-<a class="nav-card" href="class12-macroeconomics-unit3-board-important.html">
-
-<h3>📚 Board Exam Important – Unit 3</h3>
-
-<p>
-Important previous-year questions, statement-based questions, assertion-reason questions,
-important concepts and exam-focused revision material.
-</p>
-
-<p class="small">
-👉 Open complete Unit 3 Board Exam revision material
-</p>
-
+<a class="back" href="economics-class12.html">
+← Back to Class 12 Economics
 </a>
 
 
-<a class="nav-card" href="class12-macroeconomics-unit3-mcqs.html">
+<!-- OVERVIEW -->
 
-<h3>📝 Unit 3 MCQ Test</h3>
+<div class="card">
+
+<h2>📘 Determination of Income and Employment — Overview</h2>
 
 <p>
-Practice previous-paper-based MCQs with statement-based and assertion-reason questions.
+This unit explains how the level of income and employment is determined
+in an economy. It helps us understand the relationship between Aggregate
+Demand, Aggregate Supply, consumption, saving, investment and the
+equilibrium level of income.
 </p>
 
-<p class="small">
-👉 Go to the separate Unit 3 MCQ Test page
+<div class="highlight">
+
+<strong>Unit:</strong> Determination of Income and Employment<br>
+
+<strong>Important Focus:</strong>
+Aggregate Demand | Consumption & Saving | Investment |
+Income Determination | Multiplier | Full Employment |
+Excess Demand | Deficient Demand
+
+</div>
+
+<p>
+The unit also explains how an economy can face excess demand or deficient
+demand and how appropriate fiscal and monetary measures can be used to
+correct these situations.
 </p>
+
+</div>
+
+
+<!-- TOPICS -->
+
+<div class="card">
+
+<h2>📚 Explore Unit 3</h2>
+
+<div class="topic-grid">
+
+
+<!-- CARD 1 -->
+
+<div class="topic-card">
+
+<span class="badge">Topic 1</span>
+
+<h3>📊 Aggregate Demand and Its Components</h3>
+
+<p>
+Learn about Aggregate Demand, its components, consumption and saving
+functions, APC, APS, MPC, MPS and their important relationships.
+</p>
+
+<a class="topic-link"
+href="class12-macroeconomics-unit3-aggregate-demand.html">
+
+Explore Topic →
 
 </a>
 
 </div>
 
 
-<!-- ===================================================== -->
-<!-- FINAL REVISION -->
-<!-- ===================================================== -->
+<!-- CARD 2 -->
+
+<div class="topic-card">
+
+<span class="badge">Topic 2</span>
+
+<h3>📈 Income Determination and Multiplier</h3>
+
+<p>
+Understand equilibrium level of income, Aggregate Demand and Aggregate
+Supply, full employment, involuntary unemployment and the investment
+multiplier.
+</p>
+
+<a class="topic-link"
+href="class12-macroeconomics-unit3-income-determination.html">
+
+Explore Topic →
+
+</a>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="topic-card">
+
+<span class="badge">Topic 3</span>
+
+<h3>📉 Excess Demand and Deficient Demand</h3>
+
+<p>
+Study excess demand, deficient demand, inflationary and deflationary
+gaps, their causes and effects, and measures to correct them.
+</p>
+
+<a class="topic-link"
+href="class12-macroeconomics-unit3-excess-deficient-demand.html">
+
+Explore Topic →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- UNIT STRUCTURE -->
 
 <div class="card">
 
-<h2>🎯 Unit 3 – One Page Final Revision</h2>
-
-<table>
-
-<tr>
-<th>Topic</th>
-<th>Must Remember</th>
-</tr>
-
-<tr>
-<td>Aggregate Demand</td>
-<td>AD = C + I in a two-sector economy.</td>
-</tr>
-
-<tr>
-<td>Equilibrium</td>
-<td>AD = AS or Y = AD.</td>
-</tr>
-
-<tr>
-<td>Saving</td>
-<td>S = Y − C.</td>
-</tr>
-
-<tr>
-<td>APC</td>
-<td>APC = C/Y.</td>
-</tr>
-
-<tr>
-<td>APS</td>
-<td>APS = S/Y.</td>
-</tr>
-
-<tr>
-<td>MPC</td>
-<td>MPC = ΔC/ΔY.</td>
-</tr>
-
-<tr>
-<td>MPS</td>
-<td>MPS = ΔS/ΔY.</td>
-</tr>
-
-<tr>
-<td>Relationship</td>
-<td>MPC + MPS = 1.</td>
-</tr>
-
-<tr>
-<td>Multiplier</td>
-<td>K = 1/MPS = 1/(1−MPC).</td>
-</tr>
-
-<tr>
-<td>Full Employment</td>
-<td>Employment of willing and able workers at prevailing conditions, subject to normal unemployment.</td>
-</tr>
-
-<tr>
-<td>Excess Demand</td>
-<td>Creates inflationary pressure.</td>
-</tr>
-
-<tr>
-<td>Deficient Demand</td>
-<td>Creates unemployment and recessionary pressure.</td>
-</tr>
-
-<tr>
-<td>Inflationary Gap</td>
-<td>Gap caused by excess aggregate demand.</td>
-</tr>
-
-<tr>
-<td>Deflationary Gap</td>
-<td>Gap caused by deficient aggregate demand.</td>
-</tr>
-
-<tr>
-<td>Correct Excess Demand</td>
-<td>Reduce AD through contractionary fiscal/monetary measures.</td>
-</tr>
-
-<tr>
-<td>Correct Deficient Demand</td>
-<td>Increase AD through expansionary fiscal/monetary measures.</td>
-</tr>
-
-</table>
-
+<h2>🧩 How to Study This Unit</h2>
 
 <div class="highlight">
 
-<strong>🔥 Final Booster:</strong>
-
-<p>
-<strong>AD = AS</strong> → Equilibrium
-</p>
-
-<p>
-<strong>AD &gt; Required AD at Full Employment</strong> → Excess Demand → Inflationary Pressure
-</p>
-
-<p>
-<strong>AD &lt; Required AD at Full Employment</strong> → Deficient Demand → Unemployment
-</p>
-
-<p>
-<strong>MPC + MPS = 1</strong>
-</p>
-
-<p>
-<strong>APC + APS = 1</strong>
-</p>
-
-<p>
-<strong>K = 1/MPS</strong>
-</p>
+<strong>Step 1:</strong> First understand Aggregate Demand,
+consumption, saving and their relationships.
 
 </div>
+
+<div class="highlight">
+
+<strong>Step 2:</strong> Then learn how equilibrium income is determined
+and understand the mechanism of the investment multiplier.
+
+</div>
+
+<div class="highlight">
+
+<strong>Step 3:</strong> Finally study excess demand and deficient demand,
+their effects and corrective measures.
+
+</div>
+
+</div>
+
+
+<!-- BOARD EXAM BOOSTER -->
+
+<div class="card">
+
+<h2>🎯 Board Exam Booster</h2>
+
+<p>
+This section will contain important board-oriented questions, numerical
+questions, diagrams, application-based questions and important concepts
+from the complete Unit 3.
+</p>
+
+<div class="highlight">
+
+<strong>Important Areas:</strong><br><br>
+
+• Aggregate Demand and its components<br>
+• Consumption and Saving Functions<br>
+• APC, APS, MPC and MPS<br>
+• Equilibrium level of income<br>
+• Investment Multiplier<br>
+• Full Employment and Involuntary Unemployment<br>
+• Excess Demand and Deficient Demand<br>
+• Inflationary and Deflationary Gaps<br>
+• Fiscal and Monetary Measures
+
+</div>
+
+<a class="topic-link"
+href="class12-macroeconomics-unit3-board-exam-booster.html">
+
+🎯 Explore Board Exam Booster →
+
+</a>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>📝 Unit 3 MCQ Test</h2>
+
+<p>
+Test your understanding of Determination of Income and Employment with
+50 exam-oriented MCQs covering concepts, statements, numericals and
+application-based questions.
+</p>
+
+<a class="topic-link"
+href="class12-macroeconomics-unit3-mcqs.html">
+
+Start Unit 3 MCQs →
+
+</a>
 
 </div>
 
@@ -1859,14 +389,14 @@ Practice previous-paper-based MCQs with statement-based and assertion-reason que
 
 <footer>
 
-<p>© Edusphere with Satyam</p>
+<p><strong>Edusphere with Satyam</strong></p>
 
-<p>Class 12 Macroeconomics – Unit 3</p>
-
-<p>Learn • Revise • Practice • Achieve</p>
+<p>
+Class 12 Economics | Macroeconomics | Unit 3 —
+Determination of Income and Employment
+</p>
 
 </footer>
-
 
 </body>
 </html>
