@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 11 Economics - Unit 3 | Production and Costs</title>
+<title>Class 12 Economics - Unit 3 | Determination of Income and Employment</title>
 
 <style>
 *{
@@ -67,16 +67,49 @@ header p{
     padding-bottom:8px;
 }
 
-.card h3{
-    color:#0f766e;
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:20px;
 }
 
-.definition{
-    background:#eff6ff;
-    border-left:6px solid #2563eb;
-    padding:16px;
-    margin:14px 0;
-    border-radius:8px;
+.topic-card{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:14px;
+    border-left:6px solid #4f46e5;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+    transition:.2s;
+}
+
+.topic-card:hover{
+    background:#eef2ff;
+    transform:translateY(-3px);
+}
+
+.topic-card h3{
+    color:#1e3a8a;
+    margin-top:0;
+}
+
+.topic-card p{
+    margin-bottom:15px;
+}
+
+.topic-link{
+    display:inline-block;
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    padding:9px 14px;
+    border-radius:7px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.topic-link:hover{
+    background:#3730a3;
 }
 
 .highlight{
@@ -87,55 +120,7 @@ header p{
     border-radius:8px;
 }
 
-.example{
-    background:#fff7ed;
-    border-left:6px solid #f97316;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
-}
-
-.formula{
-    background:#fef3c7;
-    border-left:6px solid #d97706;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.important{
-    background:#fdf2f8;
-    border-left:6px solid #db2777;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:18px 0;
-    background:white;
-}
-
-th{
-    background:#312e81;
-    color:white;
-    padding:12px;
-}
-
-td{
-    border:1px solid #cbd5e1;
-    padding:11px;
-    text-align:center;
-}
-
-tr:nth-child(even){
-    background:#f8fafc;
-}
-
-.topic{
+.badge{
     display:inline-block;
     background:#dbeafe;
     color:#1e40af;
@@ -143,21 +128,6 @@ tr:nth-child(even){
     border-radius:20px;
     font-size:13px;
     font-weight:bold;
-}
-
-.mcq-btn{
-    display:inline-block;
-    background:#4f46e5;
-    color:white;
-    text-decoration:none;
-    padding:14px 22px;
-    border-radius:9px;
-    font-weight:bold;
-    margin-top:10px;
-}
-
-.mcq-btn:hover{
-    background:#3730a3;
 }
 
 footer{
@@ -169,6 +139,7 @@ footer{
 }
 
 @media(max-width:650px){
+
     .container{
         padding:12px;
     }
@@ -181,12 +152,8 @@ footer{
         font-size:24px;
     }
 
-    table{
-        font-size:14px;
-    }
-
-    th,td{
-        padding:8px;
+    .topic-grid{
+        grid-template-columns:1fr;
     }
 }
 </style>
@@ -195,1178 +162,223 @@ footer{
 <body>
 
 <header>
-    <h1>Class 11 Economics</h1>
-    <p>Microeconomics | Unit 3 — Production and Costs</p>
+
+<h1>Class 12 Economics</h1>
+
+<p>Macroeconomics | Unit 3 — Determination of Income and Employment</p>
+
 </header>
+
 
 <div class="container">
 
-<a class="back" href="economics-class11.html">
-← Back to Class 11 Economics
+<a class="back" href="economics-class12.html">
+← Back to Class 12 Economics
 </a>
 
 
-<!-- INTRODUCTION -->
+<!-- OVERVIEW -->
 
 <div class="card">
 
-<h2>📘 Unit 3 — Production and Costs</h2>
+<h2>📘 Determination of Income and Employment — Overview</h2>
+
+<p>
+This unit explains how the level of income and employment is determined
+in an economy. It helps us understand the relationship between Aggregate
+Demand, Aggregate Supply, consumption, saving, investment and the
+equilibrium level of income.
+</p>
 
 <div class="highlight">
-<strong>What you will learn:</strong><br>
-Production, factors of production, production function, short run and long run,
-Total Product, Average Product, Marginal Product, Law of Variable Proportions,
-returns to a factor, cost concepts, fixed cost, variable cost, total cost,
-average cost, marginal cost and relationships among different cost concepts.
+
+<strong>Unit:</strong> Determination of Income and Employment<br>
+
+<strong>Important Focus:</strong>
+Aggregate Demand | Consumption & Saving | Investment |
+Income Determination | Multiplier | Full Employment |
+Excess Demand | Deficient Demand
+
 </div>
 
 <p>
-Production is one of the most important activities of an economy.
-A producer combines different inputs such as land, labour, capital and
-entrepreneurship to produce goods and services.
+The unit also explains how an economy can face excess demand or deficient
+demand and how appropriate fiscal and monetary measures can be used to
+correct these situations.
 </p>
 
 </div>
 
 
-<!-- 1 PRODUCTION -->
+<!-- TOPICS -->
 
 <div class="card">
 
-<span class="topic">1. Production</span>
+<h2>📚 Explore Unit 3</h2>
 
-<h2>🏭 Meaning of Production</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Production is the process of transforming inputs into goods and services
-that satisfy human wants.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-Production refers to the creation or addition of utility to goods and
-services.
-</div>
-
-<div class="highlight">
-<strong>Simple meaning:</strong>
-Production means using resources to create goods and services or to
-increase their usefulness.
-</div>
-
-<div class="example">
-<strong>Example:</strong><br>
-A bakery uses flour, labour, electricity and machines to produce bread.
-The bread produced is the output, while the resources used are inputs.
-</div>
-
-</div>
+<div class="topic-grid">
 
 
-<!-- 2 FACTORS -->
+<!-- CARD 1 -->
 
-<div class="card">
+<div class="topic-card">
 
-<span class="topic">2. Factors of Production</span>
+<span class="badge">Topic 1</span>
 
-<h2>🌱 Factors of Production</h2>
+<h3>📊 Aggregate Demand and Its Components</h3>
 
 <p>
-Factors of production are the resources used in the production of goods
-and services.
+Learn about Aggregate Demand, its components, consumption and saving
+functions, APC, APS, MPC, MPS and their important relationships.
 </p>
 
-<table>
-<tr>
-<th>Factor</th>
-<th>Meaning</th>
-<th>Reward</th>
-</tr>
+<a class="topic-link"
+href="class12-macroeconomics-unit3-aggregate-demand.html">
 
-<tr>
-<td>Land</td>
-<td>Natural resources used in production</td>
-<td>Rent</td>
-</tr>
+Explore Topic →
 
-<tr>
-<td>Labour</td>
-<td>Human physical and mental effort</td>
-<td>Wages</td>
-</tr>
-
-<tr>
-<td>Capital</td>
-<td>Man-made resources used for production</td>
-<td>Interest</td>
-</tr>
-
-<tr>
-<td>Entrepreneur</td>
-<td>Organises production and bears risk</td>
-<td>Profit</td>
-</tr>
-</table>
-
-<div class="important">
-<strong>Remember:</strong><br>
-Land → Rent<br>
-Labour → Wages<br>
-Capital → Interest<br>
-Entrepreneur → Profit
-</div>
+</a>
 
 </div>
 
 
-<!-- 3 FIXED VARIABLE -->
+<!-- CARD 2 -->
 
-<div class="card">
+<div class="topic-card">
 
-<span class="topic">3. Fixed and Variable Factors</span>
+<span class="badge">Topic 2</span>
 
-<h2>⚙️ Fixed Factors and Variable Factors</h2>
-
-<div class="definition">
-<strong>Fixed Factor — Definition 1:</strong><br>
-A fixed factor is a factor whose quantity cannot be changed during a
-given short period.
-</div>
-
-<div class="definition">
-<strong>Fixed Factor — Definition 2:</strong><br>
-A factor whose quantity remains constant even when the level of output
-changes in the short run is called a fixed factor.
-</div>
-
-<div class="example">
-<strong>Examples:</strong>
-Factory building, heavy machinery and land may be treated as fixed
-factors in the short run.
-</div>
-
-<div class="definition">
-<strong>Variable Factor — Definition 1:</strong><br>
-A variable factor is a factor whose quantity can be changed according
-to the level of output.
-</div>
-
-<div class="definition">
-<strong>Variable Factor — Definition 2:</strong><br>
-A factor whose quantity changes with changes in output in the short run
-is called a variable factor.
-</div>
-
-<div class="example">
-<strong>Example:</strong>
-Labour and raw materials are commonly treated as variable factors in
-the short run.
-</div>
-
-</div>
-
-
-<!-- 4 PRODUCTION FUNCTION -->
-
-<div class="card">
-
-<span class="topic">4. Production Function</span>
-
-<h2>📊 Production Function</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-A production function shows the functional relationship between inputs
-and the maximum output that can be produced from them.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-Production function represents the technical relationship between
-physical inputs and physical output.
-</div>
-
-<div class="formula">
-Q = f(L, K)
-</div>
+<h3>📈 Income Determination and Multiplier</h3>
 
 <p>
-Here, <strong>Q</strong> = output,
-<strong>L</strong> = labour and
-<strong>K</strong> = capital.
+Understand equilibrium level of income, Aggregate Demand and Aggregate
+Supply, full employment, involuntary unemployment and the investment
+multiplier.
 </p>
 
-<div class="important">
-<strong>Important:</strong>
-A production function is a technical relationship. It does not directly
-show the prices of inputs or output.
-</div>
+<a class="topic-link"
+href="class12-macroeconomics-unit3-income-determination.html">
+
+Explore Topic →
+
+</a>
 
 </div>
 
 
-<!-- 5 SHORT LONG RUN -->
+<!-- CARD 3 -->
 
-<div class="card">
+<div class="topic-card">
 
-<span class="topic">5. Short Run and Long Run</span>
+<span class="badge">Topic 3</span>
 
-<h2>⏳ Short Run and Long Run</h2>
-
-<div class="definition">
-<strong>Short Run:</strong>
-A period in which at least one factor of production is fixed.
-</div>
-
-<div class="definition">
-<strong>Long Run:</strong>
-A period in which all factors of production can be varied.
-</div>
-
-<table>
-<tr>
-<th>Basis</th>
-<th>Short Run</th>
-<th>Long Run</th>
-</tr>
-
-<tr>
-<td>Factors</td>
-<td>At least one factor is fixed</td>
-<td>All factors can be varied</td>
-</tr>
-
-<tr>
-<td>Capacity</td>
-<td>Cannot be fully changed</td>
-<td>Can be changed</td>
-</tr>
-
-<tr>
-<td>Costs</td>
-<td>Fixed and variable costs exist</td>
-<td>All costs are variable</td>
-</tr>
-</table>
-
-</div>
-
-
-<!-- 6 TOTAL PRODUCT -->
-
-<div class="card">
-
-<span class="topic">6. Total Product</span>
-
-<h2>📈 Total Product (TP)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Total Product is the total quantity of output produced by a firm with
-given quantities of inputs.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-TP is the total output produced by all units of a variable factor
-working with given fixed factors.
-</div>
-
-<div class="example">
-<strong>Example:</strong><br>
-If 5 workers produce 100 units of output, Total Product = 100 units.
-</div>
-
-</div>
-
-
-<!-- 7 AP -->
-
-<div class="card">
-
-<span class="topic">7. Average Product</span>
-
-<h2>📊 Average Product (AP)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Average Product is output per unit of the variable factor.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-AP measures the average contribution of each unit of the variable factor
-to total output.
-</div>
-
-<div class="formula">
-AP = TP ÷ Units of Variable Factor
-</div>
-
-<div class="example">
-If 5 workers produce 100 units:
-<br><br>
-<strong>AP = 100 ÷ 5 = 20 units</strong>
-</div>
-
-</div>
-
-
-<!-- 8 MP -->
-
-<div class="card">
-
-<span class="topic">8. Marginal Product</span>
-
-<h2>➕ Marginal Product (MP)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Marginal Product is the change in Total Product resulting from the
-employment of one additional unit of the variable factor.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-MP is the additional output produced by using one more unit of the
-variable input, while other factors remain constant.
-</div>
-
-<div class="formula">
-MP = ΔTP ÷ ΔL
-</div>
+<h3>📉 Excess Demand and Deficient Demand</h3>
 
 <p>
-Where <strong>ΔTP</strong> means change in Total Product and
-<strong>ΔL</strong> means change in labour.
+Study excess demand, deficient demand, inflationary and deflationary
+gaps, their causes and effects, and measures to correct them.
 </p>
 
+<a class="topic-link"
+href="class12-macroeconomics-unit3-excess-deficient-demand.html">
+
+Explore Topic →
+
+</a>
+
 </div>
 
 
-<!-- 9 RELATIONSHIP -->
+</div>
+
+</div>
+
+
+<!-- UNIT STRUCTURE -->
 
 <div class="card">
 
-<span class="topic">9. TP, AP and MP</span>
-
-<h2>🔗 Relationship Between TP, AP and MP</h2>
+<h2>🧩 How to Study This Unit</h2>
 
 <div class="highlight">
-<strong>Relationship 1:</strong><br>
-When MP is positive, TP increases.
-</div>
 
-<div class="highlight">
-<strong>Relationship 2:</strong><br>
-When MP becomes zero, TP reaches its maximum.
+<strong>Step 1:</strong> First understand Aggregate Demand,
+consumption, saving and their relationships.
+
 </div>
 
 <div class="highlight">
-<strong>Relationship 3:</strong><br>
-When MP becomes negative, TP starts falling.
+
+<strong>Step 2:</strong> Then learn how equilibrium income is determined
+and understand the mechanism of the investment multiplier.
+
 </div>
 
 <div class="highlight">
-<strong>Relationship 4:</strong><br>
-When MP > AP, AP rises.
-</div>
 
-<div class="highlight">
-<strong>Relationship 5:</strong><br>
-When MP < AP, AP falls.
-</div>
+<strong>Step 3:</strong> Finally study excess demand and deficient demand,
+their effects and corrective measures.
 
-<div class="highlight">
-<strong>Relationship 6:</strong><br>
-When MP = AP, AP is maximum.
 </div>
 
 </div>
 
 
-<!-- 10 LAW -->
+<!-- BOARD EXAM BOOSTER -->
 
 <div class="card">
 
-<span class="topic">10. Law of Variable Proportions</span>
-
-<h2>⚖️ Law of Variable Proportions</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-The Law of Variable Proportions states that when more units of a
-variable factor are employed with fixed factors, Total Product
-initially increases at an increasing rate, then at a decreasing rate,
-and may eventually decrease.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-It studies the changes in output when one factor is varied while other
-factors remain fixed.
-</div>
-
-<div class="important">
-<strong>Key assumption:</strong><br>
-Technology remains unchanged and at least one factor remains fixed.
-</div>
-
-</div>
-
-
-<!-- 11 THREE STAGES -->
-
-<div class="card">
-
-<span class="topic">11. Three Stages</span>
-
-<h2>🔵 Three Stages of Production</h2>
-
-<table>
-<tr>
-<th>Stage</th>
-<th>TP</th>
-<th>MP</th>
-<th>AP</th>
-</tr>
-
-<tr>
-<td>Stage I</td>
-<td>Increases at increasing rate, then decreasing rate</td>
-<td>Positive</td>
-<td>Rises and reaches maximum</td>
-</tr>
-
-<tr>
-<td>Stage II</td>
-<td>Increases at decreasing rate</td>
-<td>Positive but falling</td>
-<td>Falls</td>
-</tr>
-
-<tr>
-<td>Stage III</td>
-<td>Falls</td>
-<td>Negative</td>
-<td>Falls</td>
-</tr>
-</table>
-
-<div class="highlight">
-<strong>Rational producer operates in Stage II.</strong>
-</div>
-
-<div class="important">
-Stage I ends when <strong>AP is maximum and MP = AP</strong>.<br><br>
-Stage II ends when <strong>MP = 0 and TP is maximum</strong>.
-</div>
-
-</div>
-
-
-<!-- 12 RETURNS -->
-
-<div class="card">
-
-<span class="topic">12. Returns to a Factor</span>
-
-<h2>📈 Returns to a Factor</h2>
+<h2>🎯 Board Exam Booster</h2>
 
 <p>
-Returns to a factor explain how output changes when additional units of
-a variable factor are combined with fixed factors.
+This section will contain important board-oriented questions, numerical
+questions, diagrams, application-based questions and important concepts
+from the complete Unit 3.
 </p>
 
-<div class="definition">
-<strong>Increasing Returns:</strong><br>
-Output increases at an increasing rate as additional units of the
-variable factor are employed.
-</div>
-
-<div class="definition">
-<strong>Diminishing Returns:</strong><br>
-Output continues to increase but at a decreasing rate.
-</div>
-
-<div class="definition">
-<strong>Negative Returns:</strong><br>
-Output decreases when additional units of the variable factor are added.
-</div>
-
-</div>
-
-
-<!-- COST INTRO -->
-
-<div class="card">
-
-<h2>💰 PART B — THEORY OF COST</h2>
-
 <div class="highlight">
-Cost refers to the expenditure incurred by a producer in using resources
-for producing goods and services.
-</div>
+
+<strong>Important Areas:</strong><br><br>
+
+• Aggregate Demand and its components<br>
+• Consumption and Saving Functions<br>
+• APC, APS, MPC and MPS<br>
+• Equilibrium level of income<br>
+• Investment Multiplier<br>
+• Full Employment and Involuntary Unemployment<br>
+• Excess Demand and Deficient Demand<br>
+• Inflationary and Deflationary Gaps<br>
+• Fiscal and Monetary Measures
 
 </div>
 
+<a class="topic-link"
+href="class12-macroeconomics-unit3-board-exam-booster.html">
 
-<!-- 13 COST -->
+🎯 Explore Board Exam Booster →
+
+</a>
+
+</div>
+
+
+<!-- MCQ -->
 
 <div class="card">
 
-<span class="topic">13. Cost</span>
-
-<h2>💰 Meaning of Cost</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Cost is the expenditure incurred by a producer in producing a good or service.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-Cost represents the value of resources used in the production process.
-</div>
-
-<div class="example">
-<strong>Example:</strong>
-Payments for raw materials, wages, electricity, rent and other resources
-used in production form part of production costs.
-</div>
-
-</div>
-
-
-<!-- 14 FIXED COST -->
-
-<div class="card">
-
-<span class="topic">14. Fixed Cost</span>
-
-<h2>🔒 Fixed Cost (FC)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Fixed cost is a cost that does not change with the level of output in
-the short run.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-Fixed cost is the cost incurred on fixed factors of production.
-</div>
-
-<div class="example">
-<strong>Examples:</strong>
-Rent of factory, insurance and certain fixed administrative expenses.
-</div>
-
-<div class="important">
-<strong>Important:</strong>
-Fixed cost exists even when output is zero.
-</div>
-
-</div>
-
-
-<!-- 15 VARIABLE COST -->
-
-<div class="card">
-
-<span class="topic">15. Variable Cost</span>
-
-<h2>🔄 Variable Cost (VC)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Variable cost changes with the level of output.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-Variable cost is the expenditure incurred on variable factors of production.
-</div>
-
-<div class="example">
-<strong>Examples:</strong>
-Raw materials, power used in production and wages of variable labour.
-</div>
-
-<div class="important">
-<strong>Important:</strong>
-Variable cost is generally zero when output is zero.
-</div>
-
-</div>
-
-
-<!-- 16 TOTAL COST -->
-
-<div class="card">
-
-<span class="topic">16. Total Cost</span>
-
-<h2>🧮 Total Cost (TC)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Total Cost is the sum of Total Fixed Cost and Total Variable Cost.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-Total Cost is the total expenditure incurred by a producer to produce
-a given level of output.
-</div>
-
-<div class="formula">
-TC = TFC + TVC
-</div>
-
-</div>
-
-
-<!-- 17 AFC -->
-
-<div class="card">
-
-<span class="topic">17. Average Fixed Cost</span>
-
-<h2>📉 Average Fixed Cost (AFC)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Average Fixed Cost is fixed cost per unit of output.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-AFC shows the average amount of fixed cost borne by each unit of output.
-</div>
-
-<div class="formula">
-AFC = TFC ÷ Q
-</div>
-
-<div class="important">
-<strong>Important:</strong>
-AFC continuously falls as output increases because the same fixed cost
-is spread over more units.
-</div>
-
-</div>
-
-
-<!-- 18 AVC -->
-
-<div class="card">
-
-<span class="topic">18. Average Variable Cost</span>
-
-<h2>📉 Average Variable Cost (AVC)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Average Variable Cost is variable cost per unit of output.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-AVC represents the variable cost incurred for producing each unit of output
-on average.
-</div>
-
-<div class="formula">
-AVC = TVC ÷ Q
-</div>
-
-</div>
-
-
-<!-- 19 AC -->
-
-<div class="card">
-
-<span class="topic">19. Average Cost</span>
-
-<h2>📊 Average Cost (AC)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Average Cost is total cost per unit of output.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-AC represents the average expenditure incurred in producing each unit
-of output.
-</div>
-
-<div class="formula">
-AC = TC ÷ Q
-</div>
-
-<div class="highlight">
-Since TC = TFC + TVC:
-<br><br>
-<strong>AC = AFC + AVC</strong>
-</div>
-
-</div>
-
-
-<!-- 20 MC -->
-
-<div class="card">
-
-<span class="topic">20. Marginal Cost</span>
-
-<h2>➕ Marginal Cost (MC)</h2>
-
-<div class="definition">
-<strong>Definition 1:</strong><br>
-Marginal Cost is the change in Total Cost resulting from producing
-one additional unit of output.
-</div>
-
-<div class="definition">
-<strong>Definition 2:</strong><br>
-MC is the additional cost incurred due to an additional unit of output.
-</div>
-
-<div class="formula">
-MC = ΔTC ÷ ΔQ
-</div>
-
-<div class="highlight">
-Since fixed cost does not change with output:
-<br><br>
-<strong>MC = ΔTVC ÷ ΔQ</strong>
-</div>
-
-</div>
-
-
-<!-- 21 RELATIONSHIP AC MC -->
-
-<div class="card">
-
-<span class="topic">21. AC and MC</span>
-
-<h2>🔗 Relationship Between AC and MC</h2>
-
-<div class="highlight">
-<strong>When MC < AC:</strong><br>
-AC falls.
-</div>
-
-<div class="highlight">
-<strong>When MC > AC:</strong><br>
-AC rises.
-</div>
-
-<div class="highlight">
-<strong>When MC = AC:</strong><br>
-AC is minimum.
-</div>
-
-<div class="important">
-<strong>Easy example:</strong><br>
-If your average marks are 70 and you score 80 in the next test,
-your average rises. If you score 60, your average falls.
-The same logic applies to MC and AC.
-</div>
-
-</div>
-
-
-<!-- 22 TC TFC TVC -->
-
-<div class="card">
-
-<span class="topic">22. Cost Relationships</span>
-
-<h2>🔗 Relationship Among TC, TFC and TVC</h2>
-
-<div class="formula">
-TC = TFC + TVC
-</div>
-
-<table>
-<tr>
-<th>Output</th>
-<th>TFC</th>
-<th>TVC</th>
-<th>TC</th>
-</tr>
-
-<tr>
-<td>0</td>
-<td>100</td>
-<td>0</td>
-<td>100</td>
-</tr>
-
-<tr>
-<td>1</td>
-<td>100</td>
-<td>50</td>
-<td>150</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>100</td>
-<td>90</td>
-<td>190</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>100</td>
-<td>120</td>
-<td>220</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>100</td>
-<td>160</td>
-<td>260</td>
-</tr>
-</table>
-
-<div class="important">
-Notice that TFC remains constant while TVC changes with output.
-Therefore TC changes because of changes in TVC.
-</div>
-
-</div>
-
-
-<!-- 23 COST TABLE -->
-
-<div class="card">
-
-<span class="topic">23. Important Cost Formulas</span>
-
-<h2>🧮 Cost Formula Sheet</h2>
-
-<table>
-<tr>
-<th>Concept</th>
-<th>Formula</th>
-</tr>
-
-<tr>
-<td>Total Cost</td>
-<td>TC = TFC + TVC</td>
-</tr>
-
-<tr>
-<td>Average Fixed Cost</td>
-<td>AFC = TFC ÷ Q</td>
-</tr>
-
-<tr>
-<td>Average Variable Cost</td>
-<td>AVC = TVC ÷ Q</td>
-</tr>
-
-<tr>
-<td>Average Cost</td>
-<td>AC = TC ÷ Q</td>
-</tr>
-
-<tr>
-<td>Average Cost</td>
-<td>AC = AFC + AVC</td>
-</tr>
-
-<tr>
-<td>Marginal Cost</td>
-<td>MC = ΔTC ÷ ΔQ</td>
-</tr>
-
-<tr>
-<td>Marginal Cost</td>
-<td>MC = ΔTVC ÷ ΔQ</td>
-</tr>
-</table>
-
-</div>
-
-
-<!-- 24 COST CURVES -->
-
-<div class="card">
-
-<span class="topic">24. Short-Run Cost Curves</span>
-
-<h2>📉 Short-Run Cost Curves</h2>
-
-<h3>Fixed Cost Curve</h3>
+<h2>📝 Unit 3 MCQ Test</h2>
 
 <p>
-TFC remains constant at all levels of output. Therefore, its curve is
-horizontal.
+Test your understanding of Determination of Income and Employment with
+50 exam-oriented MCQs covering concepts, statements, numericals and
+application-based questions.
 </p>
 
-<h3>Variable Cost Curve</h3>
+<a class="topic-link"
+href="class12-macroeconomics-unit3-mcqs.html">
 
-<p>
-TVC generally increases with output.
-</p>
-
-<h3>Total Cost Curve</h3>
-
-<p>
-TC increases as output increases because TVC increases.
-The vertical distance between TC and TVC remains equal to TFC.
-</p>
-
-<h3>AFC Curve</h3>
-
-<p>
-AFC continuously falls as output increases.
-</p>
-
-<h3>AVC and AC Curves</h3>
-
-<p>
-AVC and AC are generally U-shaped in the short run because of the
-operation of the Law of Variable Proportions.
-</p>
-
-<h3>MC Curve</h3>
-
-<p>
-MC is generally U-shaped and intersects AVC and AC at their respective
-minimum points.
-</p>
-
-</div>
-
-
-<!-- 25 NUMERICAL -->
-
-<div class="card">
-
-<span class="topic">25. Numerical Example</span>
-
-<h2>🧮 Simple Cost Calculation</h2>
-
-<div class="example">
-
-Suppose:
-
-<br><br>
-
-TFC = ₹100<br>
-TVC = ₹200<br>
-Output = 10 units
-
-<br><br>
-
-<strong>TC = TFC + TVC</strong><br>
-= ₹100 + ₹200<br>
-= <strong>₹300</strong>
-
-<br><br>
-
-<strong>AFC = TFC ÷ Q</strong><br>
-= ₹100 ÷ 10<br>
-= <strong>₹10</strong>
-
-<br><br>
-
-<strong>AVC = TVC ÷ Q</strong><br>
-= ₹200 ÷ 10<br>
-= <strong>₹20</strong>
-
-<br><br>
-
-<strong>AC = TC ÷ Q</strong><br>
-= ₹300 ÷ 10<br>
-= <strong>₹30</strong>
-
-</div>
-
-<div class="important">
-Check:
-<br>
-AC = AFC + AVC
-<br>
-₹30 = ₹10 + ₹20 ✔️
-</div>
-
-</div>
-
-
-<!-- 26 DIFFERENCES -->
-
-<div class="card">
-
-<h2>📋 Fixed Cost vs Variable Cost</h2>
-
-<table>
-<tr>
-<th>Basis</th>
-<th>Fixed Cost</th>
-<th>Variable Cost</th>
-</tr>
-
-<tr>
-<td>Relation with output</td>
-<td>Does not change with output in short run</td>
-<td>Changes with output</td>
-</tr>
-
-<tr>
-<td>At zero output</td>
-<td>Exists</td>
-<td>Generally zero</td>
-</tr>
-
-<tr>
-<td>Examples</td>
-<td>Factory rent</td>
-<td>Raw materials</td>
-</tr>
-</table>
-
-</div>
-
-
-<!-- 27 IMPORTANT RELATIONSHIPS -->
-
-<div class="card">
-
-<h2>⭐ Most Important Relationships</h2>
-
-<div class="highlight">
-<strong>1.</strong> TP increases when MP is positive.
-</div>
-
-<div class="highlight">
-<strong>2.</strong> TP is maximum when MP = 0.
-</div>
-
-<div class="highlight">
-<strong>3.</strong> TP falls when MP is negative.
-</div>
-
-<div class="highlight">
-<strong>4.</strong> AP rises when MP > AP.
-</div>
-
-<div class="highlight">
-<strong>5.</strong> AP falls when MP < AP.
-</div>
-
-<div class="highlight">
-<strong>6.</strong> AP is maximum when MP = AP.
-</div>
-
-<div class="highlight">
-<strong>7.</strong> TC = TFC + TVC.
-</div>
-
-<div class="highlight">
-<strong>8.</strong> AC = AFC + AVC.
-</div>
-
-<div class="highlight">
-<strong>9.</strong> MC = ΔTC ÷ ΔQ.
-</div>
-
-<div class="highlight">
-<strong>10.</strong> MC = ΔTVC ÷ ΔQ.
-</div>
-
-<div class="highlight">
-<strong>11.</strong> AFC continuously falls as output increases.
-</div>
-
-<div class="highlight">
-<strong>12.</strong> MC cuts AC and AVC at their minimum points.
-</div>
-
-</div>
-
-
-<!-- QUICK REVISION -->
-
-<div class="card">
-
-<h2>🚀 Quick Revision</h2>
-
-<ul>
-
-<li>Production = transformation of inputs into output.</li>
-
-<li>Factors of production = Land, Labour, Capital and Entrepreneur.</li>
-
-<li>Short run = at least one factor is fixed.</li>
-
-<li>Long run = all factors are variable.</li>
-
-<li>Production function = technical relationship between inputs and output.</li>
-
-<li>TP = Total Product.</li>
-
-<li>AP = TP ÷ Variable Factor.</li>
-
-<li>MP = ΔTP ÷ ΔVariable Factor.</li>
-
-<li>When MP = 0, TP is maximum.</li>
-
-<li>When MP is negative, TP falls.</li>
-
-<li>Stage II is the rational stage of production.</li>
-
-<li>TFC remains constant in the short run.</li>
-
-<li>TVC changes with output.</li>
-
-<li>TC = TFC + TVC.</li>
-
-<li>AFC = TFC ÷ Q.</li>
-
-<li>AVC = TVC ÷ Q.</li>
-
-<li>AC = TC ÷ Q.</li>
-
-<li>AC = AFC + AVC.</li>
-
-<li>MC = ΔTC ÷ ΔQ.</li>
-
-<li>MC = ΔTVC ÷ ΔQ.</li>
-
-<li>AFC continuously falls as output increases.</li>
-
-<li>MC intersects AC and AVC at their minimum points.</li>
-
-</ul>
-
-</div>
-
-
-<!-- MCQ BUTTON -->
-
-<div class="card">
-
-<h2>📝 Test Your Knowledge</h2>
-
-<p>
-After studying Unit 3, test your understanding with our interactive
-MCQ test.
-</p>
-
-<a class="mcq-btn" href="class11-microeconomics-unit3-mcqs.html">
 Start Unit 3 MCQs →
+
 </a>
 
 </div>
@@ -1380,7 +392,8 @@ Start Unit 3 MCQs →
 <p><strong>Edusphere with Satyam</strong></p>
 
 <p>
-Class 11 Economics | Microeconomics | Unit 3 — Production and Costs
+Class 12 Economics | Macroeconomics | Unit 3 —
+Determination of Income and Employment
 </p>
 
 </footer>
