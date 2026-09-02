@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aggregate Demand, Aggregate Supply & Related Concepts | Edusphere with Satyam</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#fdf2f8,#ecfeff);
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#db2777);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.15);
+}
+
+header h1{
+    font-size:clamp(25px,5vw,42px);
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:17px;
+    opacity:.95;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:30px auto;
+}
+
+.back{
+    display:inline-block;
+    text-decoration:none;
+    background:white;
+    color:#4f46e5;
+    padding:10px 18px;
+    border-radius:25px;
+    font-weight:bold;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+    margin-bottom:22px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 6px 20px rgba(0,0,0,.10);
+    border-left:6px solid #7c3aed;
+}
+
+.card h2{
+    color:#4f46e5;
+    margin-bottom:15px;
+    font-size:27px;
+}
+
+.card h3{
+    color:#7c3aed;
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size:21px;
+}
+
+.card h4{
+    color:#db2777;
+    margin-top:16px;
+    margin-bottom:8px;
+}
+
+.definition{
+    background:#eef2ff;
+    border-left:5px solid #4f46e5;
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+}
+
+.simple{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+}
+
+.exam{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:15px;
+    margin:15px 0;
+    border-radius:10px;
+}
+
+.note{
+    background:#fdf2f8;
+    border-left:5px solid #db2777;
+    padding:15px;
+    margin:15px 0;
+    border-radius:10px;
+}
+
+.additional{
+    background:#f0fdf4;
+    border-left:5px solid #16a34a;
+    padding:15px;
+    margin:15px 0;
+    border-radius:10px;
+}
+
+.formula{
+    background:#111827;
+    color:white;
+    padding:16px;
+    border-radius:12px;
+    margin:15px 0;
+    text-align:center;
+    font-size:19px;
+    font-weight:bold;
+    overflow-x:auto;
+}
+
+ul,ol{
+    margin:10px 0 10px 25px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+th{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    padding:12px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:11px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f8faff;
+}
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.topic-card{
+    background:linear-gradient(135deg,#f8fafc,#eef2ff);
+    border-radius:15px;
+    padding:20px;
+    border:1px solid #e0e7ff;
+}
+
+.badge{
+    display:inline-block;
+    background:#7c3aed;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.graph-box{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:15px;
+    padding:15px;
+    margin:20px 0;
+    overflow-x:auto;
+}
+
+.graph-title{
+    text-align:center;
+    color:#4f46e5;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+details{
+    background:#f8fafc;
+    border:1px solid #ddd;
+    border-radius:12px;
+    margin:12px 0;
+    overflow:hidden;
+}
+
+summary{
+    cursor:pointer;
+    padding:13px 17px;
+    font-weight:bold;
+    color:#4f46e5;
+    background:#eef2ff;
+}
+
+.answer{
+    padding:17px;
+    background:white;
+}
+
+.pill{
+    display:inline-block;
+    background:#ede9fe;
+    color:#5b21b6;
+    padding:4px 10px;
+    border-radius:15px;
+    margin:3px;
+    font-size:14px;
+}
+
+.highlight{
+    font-weight:bold;
+    color:#db2777;
+}
+
+.center{
+    text-align:center;
+}
+
+footer{
+    background:linear-gradient(135deg,#312e81,#4f46e5,#7c3aed);
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+@media(max-width:700px){
+    .container{
+        width:95%;
+    }
+
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:19px;
+    }
+
+    table{
+        font-size:13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Aggregate Demand, Aggregate Supply & Related Concepts</h1>
+    <p>Class 12 Macroeconomics • Unit 3 • Topic 1</p>
+    <p>Edusphere with Satyam</p>
+</header>
+
+<div class="container">
+
+<a href="class12-macroeconomics-unit3.html" class="back">
+    ← Back to Unit 3
+</a>
+
+<!-- OVERVIEW -->
+<div class="card">
+    <h2>📘 Chapter Overview</h2>
+
+    <p>
+        This topic explains Aggregate Demand, Aggregate Supply, Consumption,
+        Saving, Investment and the relationship among these concepts.
+        It also covers propensities to consume and save, ex-ante and ex-post
+        concepts, full employment, involuntary unemployment and important
+        numerical applications.
+    </p>
+
+    <div class="topic-grid" style="margin-top:20px;">
+
+        <div class="topic-card">
+            <span class="badge">7.1</span>
+            <h3>Aggregate Demand</h3>
+            <p>Meaning, components, two-sector economy, formula, schedule and observations.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.2</span>
+            <h3>Aggregate Supply</h3>
+            <p>Meaning, national income, AS = Y = C + S and 45° line.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.3</span>
+            <h3>Consumption Function</h3>
+            <p>Consumption function, Keynesian psychological law, autonomous consumption and break-even point.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.4</span>
+            <h3>Propensities to Consume</h3>
+            <p>APC, MPC, their formulas, interpretation and relationships.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.5</span>
+            <h3>Saving Function</h3>
+            <p>Saving function, dissaving, saving equation and saving curve.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.6</span>
+            <h3>Propensities to Save</h3>
+            <p>APS, MPS and their relationship with APC and MPC.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.7</span>
+            <h3>Investment Function</h3>
+            <p>Meaning, autonomous investment and induced investment.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.8</span>
+            <h3>Determinants of Investment</h3>
+            <p>Interest rate, expected return, demand, expectations and other factors.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.9</span>
+            <h3>Ex-Ante & Ex-Post</h3>
+            <p>Planned and actual saving and investment.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.10</span>
+            <h3>Employment</h3>
+            <p>Full employment and involuntary unemployment.</p>
+        </div>
+
+        <div class="topic-card">
+            <span class="badge">7.11</span>
+            <h3>Solved Practicals</h3>
+            <p>Important numerical patterns with step-by-step solutions.</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 7.1 -->
+<div class="card">
+<h2>7.1 Meaning and Components of Aggregate Demand</h2>
+
+<div class="definition">
+<strong>Definition 1 – Academic:</strong><br>
+Aggregate Demand (AD) refers to the total monetary value of all final goods
+and services that all sectors of an economy are planning to buy at a given
+level of income during a period of one accounting year.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+Aggregate Demand means the total amount that all sectors of an economy
+plan to spend on final goods and services during a given period.
+</div>
+
+<h3>Meaning of Aggregate Demand</h3>
+
+<p>
+In microeconomics, demand generally refers to the quantity of a particular
+commodity that an individual consumer is willing and able to buy at a given
+price. Macroeconomics, however, studies the economy as a whole.
+Therefore, Aggregate Demand represents total planned expenditure in the
+economy.
+</p>
+
+<h3>Key Characteristics of AD</h3>
+
+<ul>
+<li><strong>Flow Concept:</strong> AD is measured over a particular period, generally an accounting year.</li>
+<li><strong>Planned Expenditure:</strong> AD represents desired or planned expenditure rather than actual expenditure.</li>
+<li><strong>Monetary Valuation:</strong> AD is expressed in monetary terms.</li>
+<li><strong>Economy-wide Concept:</strong> It considers spending by different sectors of the economy.</li>
+</ul>
+
+<h3>Components of Aggregate Demand</h3>
+
+<p>
+In a four-sector open economy:
+</p>
+
+<div class="formula">
+AD = C + I + G + (X − M)
+</div>
+
+<table>
+<tr>
+<th>Component</th>
+<th>Meaning</th>
+<th>Examples</th>
+</tr>
+
+<tr>
+<td><strong>C</strong></td>
+<td>Private Final Consumption Expenditure</td>
+<td>Food, clothing, medical care, rent</td>
+</tr>
+
+<tr>
+<td><strong>I</strong></td>
+<td>Private Gross Investment Expenditure</td>
+<td>Machinery, buildings, inventories</td>
+</tr>
+
+<tr>
+<td><strong>G</strong></td>
+<td>Government Final Consumption & Investment Expenditure</td>
+<td>Education, defence, roads, railways</td>
+</tr>
+
+<tr>
+<td><strong>X − M</strong></td>
+<td>Net Exports</td>
+<td>Exports minus imports</td>
+</tr>
+</table>
+
+<h3>1. Private Final Consumption Expenditure (C)</h3>
+
+<p>
+It includes expenditure incurred by households and private non-profit
+institutions serving households on final goods and services to satisfy
+immediate wants.
+</p>
+
+<ul>
+<li>Food</li>
+<li>Clothing</li>
+<li>Medical care</li>
+<li>Rent</li>
+<li>Recreation</li>
+</ul>
+
+<p>
+A major determinant of consumption is disposable income. Generally,
+when disposable income increases, consumption expenditure also increases.
+</p>
+
+<h3>2. Private Gross Investment Expenditure (I)</h3>
+
+<p>
+Investment refers to planned expenditure by private firms on acquiring
+new capital assets, creating capital stock and adding to inventories.
+</p>
+
+<h4>Fixed Investment</h4>
+<p>
+Expenditure on plant, equipment, machinery, buildings and similar
+productive assets.
+</p>
+
+<h4>Inventory Investment</h4>
+<p>
+The net change in the stock of raw materials, semi-finished goods and
+finished goods during a period.
+</p>
+
+<h3>3. Government Final Consumption & Investment Expenditure (G)</h3>
+
+<p>
+It represents government expenditure undertaken to satisfy collective
+needs of society.
+</p>
+
+<ul>
+<li>Defence</li>
+<li>Law and order</li>
+<li>Public administration</li>
+<li>Education</li>
+<li>Healthcare</li>
+<li>Roads and highways</li>
+<li>Railways</li>
+<li>Dams and public utilities</li>
+</ul>
+
+<h3>4. Net Exports (X − M)</h3>
+
+<p>
+Net exports represent the difference between exports and imports.
+</p>
+
+<div class="formula">
+Net Exports = Exports − Imports
+</div>
+
+<p>
+<strong>Exports (X):</strong> Spending by foreigners on domestically
+produced goods and services.
+</p>
+
+<p>
+<strong>Imports (M):</strong> Domestic spending on foreign-produced goods
+and services.
+</p>
+
+<div class="additional">
+<strong>Additional Concept Builder:</strong><br>
+The four-sector formula is useful for understanding an open economy.
+However, the basic Keynesian income-determination model at this level
+often begins with a simple two-sector economy consisting of households
+and firms.
+</div>
+
+<h3>Two-Sector Economy</h3>
+
+<p>
+A simple two-sector economy consists of:
+</p>
+
+<span class="pill">Households</span>
+<span class="pill">Firms</span>
+
+<p>
+There is no government sector and no foreign trade in this simplified model.
+Therefore:
+</p>
+
+<div class="formula">
+AD = C + I
+</div>
+
+<p>
+Here, C represents household consumption expenditure and I represents
+private investment expenditure.
+</p>
+
+<h3>Two-Sector AD Schedule</h3>
+
+<p>
+Assume:
+</p>
+
+<ul>
+<li>Autonomous Consumption = 40</li>
+<li>MPC = 0.8</li>
+<li>Autonomous Investment = 20</li>
+</ul>
+
+<div class="formula">
+C = 40 + 0.8Y
+</div>
+
+<table>
+<tr>
+<th>Income (Y)</th>
+<th>Consumption (C)</th>
+<th>Investment (I)</th>
+<th>AD = C + I</th>
+</tr>
+
+<tr><td>0</td><td>40</td><td>20</td><td>60</td></tr>
+<tr><td>100</td><td>120</td><td>20</td><td>140</td></tr>
+<tr><td>200</td><td>200</td><td>20</td><td>220</td></tr>
+<tr><td>300</td><td>280</td><td>20</td><td>300</td></tr>
+<tr><td>400</td><td>360</td><td>20</td><td>380</td></tr>
+<tr><td>500</td><td>440</td><td>20</td><td>460</td></tr>
+</table>
+
+<h3>Important Observations from AD Schedule</h3>
+
+<ol>
+<li>
+<strong>Positive Y-intercept:</strong> When income is zero, AD is still
+60 because autonomous consumption and autonomous investment are positive.
+</li>
+
+<li>
+<strong>Positive Slope:</strong> AD rises as national income rises,
+showing a positive relationship between income and planned expenditure.
+</li>
+
+<li>
+<strong>Parallel Curves:</strong> When autonomous investment is constant,
+the vertical distance between the consumption curve and AD curve remains
+constant.
+</li>
+</ol>
+
+<!-- GRAPH -->
+<div class="graph-box">
+<div class="graph-title">📈 Illustrative Aggregate Demand Curve</div>
+
+<svg viewBox="0 0 700 400" width="100%" height="400">
+
+<line x1="80" y1="330" x2="650" y2="330" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="330" x2="80" y2="45" stroke="#333" stroke-width="2"/>
+
+<text x="650" y="355" font-size="16">National Income (Y)</text>
+<text x="15" y="55" font-size="16">AD</text>
+
+<line x1="100" y1="290" x2="600" y2="80"
+      stroke="#4f46e5" stroke-width="4"/>
+
+<text x="520" y="105" fill="#4f46e5" font-size="17">
+AD = C + I
+</text>
+
+<circle cx="100" cy="290" r="6" fill="#db2777"/>
+<text x="105" y="285" font-size="14">Positive intercept</text>
+
+</svg>
+</div>
+
+<h3>📚 Questions Related to Aggregate Demand</h3>
+
+<p><strong>Q1. Define Aggregate Demand.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Aggregate Demand is the total planned expenditure on final goods and
+services in an economy during a given period at a given level of income.
+In a two-sector economy, AD is represented as AD = C + I.
+</div>
+</details>
+
+<p><strong>Q2. State the components of Aggregate Demand in a four-sector economy.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+The four components are:
+<br>1. Private Final Consumption Expenditure (C)
+<br>2. Private Gross Investment Expenditure (I)
+<br>3. Government Final Consumption and Investment Expenditure (G)
+<br>4. Net Exports (X − M)
+<br><br>
+Therefore:
+<strong>AD = C + I + G + (X − M)</strong>
+</div>
+</details>
+
+<p><strong>Q3. Explain why Aggregate Demand is called planned expenditure.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Aggregate Demand represents the expenditure that economic agents plan or
+intend to make on final goods and services. Therefore, it is an ex-ante
+or planned concept rather than a measure of actual expenditure.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.2 -->
+<div class="card">
+<h2>7.2 Aggregate Supply</h2>
+
+<div class="definition">
+<strong>Definition 1 – Academic:</strong><br>
+Aggregate Supply refers to the total monetary value of all final goods
+and services that producers are willing and planned to supply in an economy
+during a given accounting year.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+Aggregate Supply means the total value of final goods and services supplied
+by producers in an economy during a given period.
+</div>
+
+<h3>Aggregate Supply and National Income</h3>
+
+<p>
+When goods and services are produced, income is generated for the factors
+of production in the form of wages, rent, interest and profit.
+That income is either consumed or saved.
+</p>
+
+<div class="formula">
+AS = Y = C + S
+</div>
+
+<p>
+Therefore:
+</p>
+
+<ul>
+<li>AS = Aggregate Supply</li>
+<li>Y = National Income</li>
+<li>C = Consumption</li>
+<li>S = Saving</li>
+</ul>
+
+<h3>The 45° Line / Line of Equality</h3>
+
+<p>
+The 45° line represents equality between Aggregate Supply and National
+Income/expenditure.
+</p>
+
+<div class="graph-box">
+<div class="graph-title">📈 45° Line: AS = Y</div>
+
+<svg viewBox="0 0 700 400" width="100%" height="400">
+
+<line x1="80" y1="330" x2="650" y2="330" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="330" x2="80" y2="45" stroke="#333" stroke-width="2"/>
+
+<line x1="90" y1="320" x2="620" y2="60"
+      stroke="#7c3aed" stroke-width="4"/>
+
+<text x="545" y="80" fill="#7c3aed" font-size="18">
+AS = Y
+</text>
+
+<text x="610" y="355" font-size="16">
+National Income (Y)
+</text>
+
+<text x="20" y="55" font-size="16">
+AS
+</text>
+
+<text x="335" y="205" font-size="18">
+45°
+</text>
+
+</svg>
+</div>
+
+<div class="exam">
+<strong>Exam Point:</strong><br>
+Every point on the 45° line shows equality between Aggregate Supply and
+National Income. Thus, AS = Y at every point on this line.
+</div>
+
+<h3>📚 Questions Related to Aggregate Supply</h3>
+
+<p><strong>Q1. What is Aggregate Supply?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Aggregate Supply is the total monetary value of final goods and services
+that producers plan to supply during a given period. In the simple
+Keynesian framework, AS is equal to national income:
+<strong>AS = Y = C + S.</strong>
+</div>
+</details>
+
+<p><strong>Q2. Why is AS represented by the 45° line?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+The 45° line represents equality between the horizontal-axis variable,
+national income, and the vertical-axis variable, aggregate supply or
+expenditure. Therefore, every point on this line represents AS = Y.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.3 -->
+<div class="card">
+<h2>7.3 Consumption Function (Propensity to Consume)</h2>
+
+<div class="definition">
+<strong>Definition 1 – Academic:</strong><br>
+The Consumption Function expresses the functional relationship between
+total household consumption expenditure and total national income.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+The consumption function shows how consumption expenditure changes when
+national income changes.
+</div>
+
+<div class="formula">
+C = f(Y)
+</div>
+
+<h3>Algebraic Form</h3>
+
+<div class="formula">
+C = C̄ + bY
+</div>
+
+<table>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>C̄</td>
+<td>Autonomous Consumption</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Marginal Propensity to Consume (MPC)</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>National Income</td>
+</tr>
+</table>
+
+<h3>Keynesian Psychological Law of Consumption</h3>
+
+<ol>
+<li>
+<strong>Income Drive:</strong> When aggregate income increases,
+aggregate consumption also increases.
+</li>
+
+<li>
+<strong>Less than Proportionate Increase:</strong>
+Consumption increases by less than the increase in income:
+<strong>ΔC &lt; ΔY</strong>.
+</li>
+
+<li>
+<strong>Savings Creation:</strong> The part of additional income that is
+not consumed is saved:
+<strong>ΔY = ΔC + ΔS</strong>.
+</li>
+
+<li>
+<strong>Autonomous Consumption:</strong> Some minimum consumption exists
+even when current income is zero.
+</li>
+</ol>
+
+<h3>Autonomous Consumption</h3>
+
+<p>
+Autonomous consumption is consumption that does not depend on current
+income. In the consumption equation, it is represented by C̄.
+</p>
+
+<h3>Induced Consumption</h3>
+
+<p>
+Induced consumption changes with income. When income rises, induced
+consumption generally rises.
+</p>
+
+<h3>Break-Even Point</h3>
+
+<div class="definition">
+<strong>Definition:</strong><br>
+The Break-Even Point is the level of income at which consumption expenditure
+is exactly equal to national income.
+</div>
+
+<div class="formula">
+C = Y
+<br>
+S = 0
+</div>
+
+<p>
+Using C = 40 + 0.8Y:
+</p>
+
+<table>
+<tr>
+<th>Income (Y)</th>
+<th>Consumption (C)</th>
+<th>Saving (S = Y − C)</th>
+<th>Economic State</th>
+</tr>
+<tr>
+<td>0</td>
+<td>40</td>
+<td>−40</td>
+<td>Dis-saving</td>
+</tr>
+<tr>
+<td>100</td>
+<td>120</td>
+<td>−20</td>
+<td>Dis-saving</td>
+</tr>
+<tr>
+<td>200</td>
+<td>200</td>
+<td>0</td>
+<td>Break-Even</td>
+</tr>
+<tr>
+<td>300</td>
+<td>280</td>
+<td>20</td>
+<td>Positive Saving</td>
+</tr>
+<tr>
+<td>400</td>
+<td>360</td>
+<td>40</td>
+<td>Positive Saving</td>
+</tr>
+</table>
+
+<div class="note">
+<strong>Remember:</strong><br>
+Before the break-even point, C &gt; Y and saving is negative.
+After the break-even point, C &lt; Y and saving is positive.
+</div>
+
+<div class="graph-box">
+<div class="graph-title">📈 Consumption Function & Break-Even Point</div>
+
+<svg viewBox="0 0 700 430" width="100%" height="430">
+
+<line x1="80" y1="350" x2="650" y2="350" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="350" x2="80" y2="40" stroke="#333" stroke-width="2"/>
+
+<!-- 45 degree -->
+<line x1="90" y1="340" x2="620" y2="60"
+      stroke="#9ca3af" stroke-width="3"/>
+
+<!-- Consumption -->
+<line x1="90" y1="300" x2="620" y2="90"
+      stroke="#4f46e5" stroke-width="4"/>
+
+<circle cx="360" cy="205" r="7" fill="#db2777"/>
+
+<text x="375" y="200" fill="#db2777" font-size="16">
+Break-Even (C = Y)
+</text>
+
+<text x="530" y="105" fill="#4f46e5" font-size="17">
+C = C̄ + bY
+</text>
+
+<text x="525" y="75" fill="#555" font-size="15">
+45° Line
+</text>
+
+<text x="620" y="375" font-size="16">
+Income (Y)
+</text>
+
+<text x="20" y="50" font-size="16">
+C
+</text>
+
+</svg>
+</div>
+
+<h3>📚 Questions Related to Consumption Function</h3>
+
+<p><strong>Q1. Explain the consumption function.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+The consumption function shows the functional relationship between
+consumption expenditure and national income. It is represented as
+<strong>C = f(Y)</strong>. Its linear form is
+<strong>C = C̄ + bY</strong>, where C̄ is autonomous consumption and b
+is MPC.
+</div>
+</details>
+
+<p><strong>Q2. What is the break-even point?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+The break-even point is the level of income where consumption is equal
+to income. At this point saving is zero.
+<br><br>
+<strong>C = Y and S = 0.</strong>
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.4 -->
+<div class="card">
+<h2>7.4 Types of Propensities to Consume</h2>
+
+<h3>1. Average Propensity to Consume (APC)</h3>
+
+<div class="definition">
+<strong>Definition 1:</strong><br>
+APC is the ratio of aggregate consumption expenditure to total national income.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+APC tells us what proportion of total income is being consumed.
+</div>
+
+<div class="formula">
+APC = C / Y
+</div>
+
+<h4>Important Properties of APC</h4>
+
+<ul>
+<li>APC can be greater than 1 when C &gt; Y.</li>
+<li>APC equals 1 at the break-even point.</li>
+<li>APC is less than 1 when C &lt; Y.</li>
+<li>APC generally falls as income rises when autonomous consumption is positive.</li>
+<li>APC cannot normally be zero when positive autonomous consumption exists.</li>
+</ul>
+
+<h3>2. Marginal Propensity to Consume (MPC)</h3>
+
+<div class="definition">
+<strong>Definition 1:</strong><br>
+MPC is the ratio of change in consumption expenditure to change in national income.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+MPC tells us how much additional consumption occurs when income increases by one unit.
+</div>
+
+<div class="formula">
+MPC = ΔC / ΔY
+</div>
+
+<p>
+In the standard Keynesian framework:
+</p>
+
+<div class="formula">
+0 ≤ MPC ≤ 1
+</div>
+
+<h3>APC vs MPC</h3>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>APC</th>
+<th>MPC</th>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Proportion of total income consumed</td>
+<td>Proportion of additional income consumed</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>C / Y</td>
+<td>ΔC / ΔY</td>
+</tr>
+<tr>
+<td>Related to</td>
+<td>Total values</td>
+<td>Changes in values</td>
+</tr>
+</table>
+
+<div class="exam">
+<strong>Exam Point:</strong><br>
+Poorer households generally tend to have a higher MPC because a larger
+share of additional income may be spent on basic necessities.
+</div>
+
+<h3>📚 Questions Related to APC & MPC</h3>
+
+<p><strong>Q1. Distinguish between APC and MPC.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+APC is the ratio of total consumption to total income:
+<strong>APC = C/Y</strong>.
+MPC is the ratio of change in consumption to change in income:
+<strong>MPC = ΔC/ΔY</strong>.
+Thus, APC deals with total values whereas MPC deals with changes.
+</div>
+</details>
+
+<p><strong>Q2. If income is ₹1,000 and consumption is ₹800, calculate APC.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Given:
+<br>Y = ₹1,000
+<br>C = ₹800
+<br><br>
+APC = C/Y
+<br>= 800/1000
+<br>= <strong>0.8</strong>
+<br><br>
+Therefore, APC = 0.8 or 80%.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.5 -->
+<div class="card">
+<h2>7.5 Saving Function (Propensity to Save)</h2>
+
+<div class="definition">
+<strong>Definition 1 – Academic:</strong><br>
+The saving function represents the functional relationship between aggregate
+saving and national income.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+The saving function shows how saving changes when national income changes.
+</div>
+
+<div class="formula">
+S = f(Y)
+<br>
+S = Y − C
+</div>
+
+<h3>Derivation of Saving Function</h3>
+
+<p>
+We know:
+</p>
+
+<div class="formula">
+S = Y − C
+</div>
+
+<p>
+and:
+</p>
+
+<div class="formula">
+C = C̄ + bY
+</div>
+
+<p>
+Therefore:
+</p>
+
+<div class="formula">
+S = Y − (C̄ + bY)
+<br>
+S = −C̄ + (1 − b)Y
+</div>
+
+<p>
+Here:
+</p>
+
+<ul>
+<li>−C̄ represents dissaving at zero income.</li>
+<li>(1 − b) represents MPS.</li>
+</ul>
+
+<h3>Dissaving</h3>
+
+<p>
+When consumption exceeds income, saving becomes negative.
+This negative saving is called <strong>dissaving</strong>.
+</p>
+
+<div class="formula">
+C > Y → S < 0 → Dissaving
+</div>
+
+<h3>Positive Saving</h3>
+
+<div class="formula">
+C < Y → S > 0 → Positive Saving
+</div>
+
+<div class="graph-box">
+<div class="graph-title">📈 Saving Function</div>
+
+<svg viewBox="0 0 700 430" width="100%" height="430">
+
+<line x1="80" y1="350" x2="650" y2="350" stroke="#333" stroke-width="2"/>
+<line x1="80" y1="350" x2="80" y2="40" stroke="#333" stroke-width="2"/>
+
+<line x1="90" y1="320" x2="620" y2="75"
+      stroke="#16a34a" stroke-width="4"/>
+
+<line x1="80" y1="260" x2="620" y2="260"
+      stroke="#9ca3af" stroke-dasharray="6,6"/>
+
+<circle cx="300" cy="260" r="7" fill="#db2777"/>
+
+<text x="315" y="255" fill="#db2777" font-size="16">
+Break-Even (S = 0)
+</text>
+
+<text x="430" y="105" fill="#16a34a" font-size="16">
+S = −C̄ + (1−b)Y
+</text>
+
+<text x="620" y="375" font-size="16">
+Income (Y)
+</text>
+
+<text x="25" y="50" font-size="16">
+S
+</text>
+
+</svg>
+</div>
+
+<h3>📚 Questions Related to Saving Function</h3>
+
+<p><strong>Q1. Derive the saving function from the consumption function.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Given:
+<br>C = C̄ + bY
+<br><br>
+We know:
+<br>S = Y − C
+<br><br>
+Therefore:
+<br>S = Y − (C̄ + bY)
+<br>S = −C̄ + (1 − b)Y
+<br><br>
+Hence, the saving function is:
+<strong>S = −C̄ + (1 − b)Y</strong>.
+</div>
+</details>
+
+<p><strong>Q2. What is dissaving?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Dissaving occurs when consumption expenditure exceeds income.
+Therefore saving becomes negative.
+<br><br>
+<strong>C &gt; Y → S &lt; 0</strong>
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.6 -->
+<div class="card">
+<h2>7.6 Types of Propensities to Save</h2>
+
+<h3>1. Average Propensity to Save (APS)</h3>
+
+<div class="definition">
+<strong>Definition 1:</strong><br>
+APS is the ratio of total saving to total national income.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+APS tells us what proportion of total income is being saved.
+</div>
+
+<div class="formula">
+APS = S / Y
+</div>
+
+<ul>
+<li>APS can be negative during dissaving.</li>
+<li>APS is zero at the break-even point.</li>
+<li>APS rises as income rises under the standard consumption function.</li>
+</ul>
+
+<h3>2. Marginal Propensity to Save (MPS)</h3>
+
+<div class="definition">
+<strong>Definition 1:</strong><br>
+MPS is the ratio of change in saving to change in national income.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+MPS tells us how much additional saving occurs when income increases by one unit.
+</div>
+
+<div class="formula">
+MPS = ΔS / ΔY
+</div>
+
+<div class="formula">
+MPC + MPS = 1
+</div>
+
+<h3>Fundamental Mathematical Relationships</h3>
+
+<table>
+<tr>
+<th>Relationship</th>
+<th>Formula</th>
+</tr>
+<tr>
+<td>Average Propensities</td>
+<td>APC + APS = 1</td>
+</tr>
+<tr>
+<td>Marginal Propensities</td>
+<td>MPC + MPS = 1</td>
+</tr>
+</table>
+
+<div class="exam">
+<strong>Break-Even Condition:</strong><br>
+At break-even:
+<br><br>
+C = Y
+<br>S = 0
+<br>APC = 1
+<br>APS = 0
+</div>
+
+<h3>📚 Questions Related to APS & MPS</h3>
+
+<p><strong>Q1. If MPC is 0.75, find MPS.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+We know:
+<br>MPC + MPS = 1
+<br><br>
+Therefore:
+<br>MPS = 1 − MPC
+<br>= 1 − 0.75
+<br>= <strong>0.25</strong>
+</div>
+</details>
+
+<p><strong>Q2. State the relationship between APC and APS.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Since income is either consumed or saved:
+<br>
+Y = C + S
+<br><br>
+Dividing by Y:
+<br>
+C/Y + S/Y = 1
+<br><br>
+Therefore:
+<strong>APC + APS = 1</strong>.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.7 -->
+<div class="card">
+<h2>7.7 Investment Function</h2>
+
+<div class="definition">
+<strong>Definition 1 – Academic:</strong><br>
+Investment refers to expenditure on the creation or acquisition of capital
+assets and addition to inventories.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+Investment means spending on productive assets such as machinery,
+buildings, equipment and inventories.
+</div>
+
+<h3>Investment Expenditure</h3>
+
+<p>
+Investment expenditure includes spending by firms on productive capital
+and additions to inventories.
+</p>
+
+<h3>Autonomous Investment</h3>
+
+<p>
+Autonomous investment is investment that is independent of the current
+level of income.
+</p>
+
+<div class="formula">
+Income changes → Autonomous Investment remains constant
+</div>
+
+<p>
+In a diagram, autonomous investment is represented by a horizontal
+straight line.
+</p>
+
+<h3>Induced Investment</h3>
+
+<p>
+Induced investment depends on factors such as income, demand and expected
+profitability. It generally increases when firms expect higher demand
+and profits.
+</p>
+
+<div class="formula">
+Income/Demand ↑ → Induced Investment ↑
+</div>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>Autonomous Investment</th>
+<th>Induced Investment</th>
+</tr>
+<tr>
+<td>Dependence on income</td>
+<td>Independent</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>Graph</td>
+<td>Horizontal</td>
+<td>Generally upward sloping</td>
+</tr>
+<tr>
+<td>Main idea</td>
+<td>Independent of current income</td>
+<td>Changes with income/demand and expectations</td>
+</tr>
+</table>
+
+<h3>📚 Questions Related to Investment</h3>
+
+<p><strong>Q1. Distinguish between autonomous and induced investment.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Autonomous investment is independent of the current level of income,
+whereas induced investment changes with income, demand and expected
+profitability.
+</div>
+</details>
+
+<p><strong>Q2. What is investment in macroeconomics?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Investment refers to expenditure on capital assets such as machinery,
+buildings and equipment and on changes in inventories. It contributes
+to the capital stock and productive capacity of the economy.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.8 -->
+<div class="card">
+<h2>7.8 Determinants of Investment</h2>
+
+<div class="definition">
+<strong>Definition 1:</strong><br>
+The determinants of investment are the economic factors that influence
+the decision of firms to undertake investment expenditure.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+These are the factors that influence whether firms decide to invest more
+or less.
+</div>
+
+<h3>Major Determinants</h3>
+
+<h4>1. Expected Rate of Return</h4>
+<p>
+Firms are more likely to invest when they expect a higher return from
+the investment.
+</p>
+
+<h4>2. Rate of Interest</h4>
+<p>
+The rate of interest is an important cost of borrowed funds.
+Generally:
+</p>
+
+<div class="formula">
+Rate of Interest ↑ → Investment ↓
+<br>
+Rate of Interest ↓ → Investment ↑
+</div>
+
+<h4>3. Expected Demand</h4>
+<p>
+If firms expect demand for their products to increase, they may expand
+their production capacity and investment.
+</p>
+
+<h4>4. Level of Income</h4>
+<p>
+Higher income can increase demand for goods and services, encouraging
+firms to expand production and investment.
+</p>
+
+<h4>5. Business Expectations</h4>
+<p>
+Optimistic expectations about future sales and profits encourage investment,
+while uncertainty may discourage it.
+</p>
+
+<h4>6. Availability of Credit</h4>
+<p>
+Easy availability of credit can make it easier for firms to finance
+investment projects.
+</p>
+
+<h4>7. Government Policy</h4>
+<p>
+Tax policies, infrastructure, regulatory conditions and other government
+measures can affect investment decisions.
+</p>
+
+<h4>8. Technology</h4>
+<p>
+Technological developments may create new opportunities for investment
+and increase the productivity of capital.
+</p>
+
+<h4>9. Cost of Capital Goods</h4>
+<p>
+Higher prices of machinery and capital goods may make investment projects
+more expensive, while lower costs may encourage investment.
+</p>
+
+<h3>📚 Questions Related to Determinants of Investment</h3>
+
+<p><strong>Q1. Explain any three determinants of investment.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Three important determinants are:
+<br><br>
+<strong>1. Rate of Interest:</strong> A lower interest rate generally reduces
+the cost of borrowing and may encourage investment.
+<br><br>
+<strong>2. Expected Rate of Return:</strong> Higher expected profitability
+makes investment more attractive.
+<br><br>
+<strong>3. Expected Demand:</strong> If firms expect demand to rise,
+they may increase investment to expand productive capacity.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.9 -->
+<div class="card">
+<h2>7.9 Ex-Ante and Ex-Post Saving and Investment</h2>
+
+<div class="definition">
+<strong>Ex-Ante:</strong> Refers to planned, intended or desired values
+before the economic activity takes place.
+</div>
+
+<div class="simple">
+<strong>Simple Meaning:</strong> Ex-ante means <strong>planned</strong>.
+</div>
+
+<div class="definition">
+<strong>Ex-Post:</strong> Refers to actual or realised values after the
+economic activity has taken place.
+</div>
+
+<div class="simple">
+<strong>Simple Meaning:</strong> Ex-post means <strong>actual</strong>.
+</div>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>Ex-Ante</th>
+<th>Ex-Post</th>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Planned or desired</td>
+<td>Actual or realised</td>
+</tr>
+<tr>
+<td>Nature</td>
+<td>Forward-looking</td>
+<td>Backward-looking</td>
+</tr>
+<tr>
+<td>Shows</td>
+<td>Intentions/plans</td>
+<td>Actual accounting results</td>
+</tr>
+<tr>
+<td>Saving & Investment</td>
+<td>May not be equal</td>
+<td>Are equal in accounting identity</td>
+</tr>
+</table>
+
+<div class="exam">
+<strong>Very Important:</strong><br>
+Ex-ante saving and ex-ante investment need not be equal because they are
+planned independently. Ex-post saving and ex-post investment are equal
+as an accounting identity.
+</div>
+
+<h3>📚 Questions Related to Ex-Ante & Ex-Post</h3>
+
+<p><strong>Q1. Distinguish between ex-ante and ex-post values.</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Ex-ante values are planned or intended values for a period, whereas
+ex-post values are actual or realised values recorded after the period.
+Thus, ex-ante is forward-looking while ex-post is backward-looking.
+</div>
+</details>
+
+<p><strong>Q2. Can ex-ante saving and investment be unequal?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Yes. Ex-ante saving and ex-ante investment may differ because saving
+and investment plans are made independently by different economic units.
+However, ex-post saving and ex-post investment are equal as an accounting
+identity.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.10 -->
+<div class="card">
+<h2>7.10 Full Employment and Involuntary Unemployment</h2>
+
+<h3>Full Employment</h3>
+
+<div class="definition">
+<strong>Definition 1 – Academic:</strong><br>
+Full employment refers to a situation in which all those who are willing
+and able to work at the prevailing wage rate can obtain employment,
+apart from normal forms of unemployment.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+Full employment does not mean that every person has a job. It means that
+people who are willing and able to work can generally obtain employment.
+</div>
+
+<div class="exam">
+<strong>Remember:</strong><br>
+Full Employment ≠ Zero Unemployment.
+<br><br>
+Some normal or voluntary unemployment may still exist.
+</div>
+
+<h3>Involuntary Unemployment</h3>
+
+<div class="definition">
+<strong>Definition 1:</strong><br>
+Involuntary unemployment exists when people are willing and able to work
+at the prevailing wage rate but cannot obtain employment.
+</div>
+
+<div class="simple">
+<strong>Definition 2 – Simple:</strong><br>
+A person wants to work and is ready to work at the prevailing wage,
+but no employment is available.
+</div>
+
+<h3>Full Employment vs Involuntary Unemployment</h3>
+
+<table>
+<tr>
+<th>Full Employment</th>
+<th>Involuntary Unemployment</th>
+</tr>
+<tr>
+<td>Willing workers can obtain employment.</td>
+<td>Willing workers cannot obtain employment.</td>
+</tr>
+<tr>
+<td>Involuntary unemployment is absent.</td>
+<td>Involuntary unemployment exists.</td>
+</tr>
+<tr>
+<td>Labour resources are utilised relatively fully.</td>
+<td>Some willing labour remains unemployed.</td>
+</tr>
+</table>
+
+<div class="additional">
+<strong>Additional Concept Builder:</strong><br>
+In Keynesian analysis, an economy may settle at an equilibrium level of
+output below the full-employment level. Such a situation can involve
+involuntary unemployment.
+</div>
+
+<h3>📚 Questions Related to Full Employment</h3>
+
+<p><strong>Q1. Does full employment mean zero unemployment?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+No. Full employment does not mean zero unemployment. Some normal,
+frictional or voluntary unemployment may exist. Full employment means
+that people who are willing and able to work at the prevailing wage can
+obtain employment.
+</div>
+</details>
+
+<p><strong>Q2. What is involuntary unemployment?</strong></p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+Involuntary unemployment is a situation in which people are willing and
+able to work at the prevailing wage rate but cannot find employment.
+</div>
+</details>
+
+</div>
+
+
+<!-- 7.11 -->
+<div class="card">
+<h2>7.11 Solved Practicals</h2>
+
+<h3>Practical 1 — Consumption and Saving Functions</h3>
+
+<div class="exam">
+<strong>Question:</strong><br>
+Autonomous Consumption (C̄) = ₹100 crore<br>
+MPC = 0.75<br>
+Investment (I) = ₹200 crore
+<br><br>
+Find:
+<br>1. Consumption and Saving functions
+<br>2. Break-even level of income
+<br>3. Aggregate Demand at Y = ₹1,500 crore
+</div>
+
+<details>
+<summary>View Complete Solution</summary>
+<div class="answer">
+
+<strong>Step 1: Consumption Function</strong>
+
+Formula:
+<br>
+C = C̄ + bY
+
+<br><br>
+C = 100 + 0.75Y
+
+<br><br>
+Therefore:
+<strong>C = 100 + 0.75Y</strong>
+
+<hr style="margin:15px 0;">
+
+<strong>Step 2: Saving Function</strong>
+
+Formula:
+<br>
+S = −C̄ + (1 − b)Y
+
+<br><br>
+S = −100 + (1 − 0.75)Y
+
+<br>
+S = −100 + 0.25Y
+
+<br><br>
+Therefore:
+<strong>S = −100 + 0.25Y</strong>
+
+<hr style="margin:15px 0;">
+
+<strong>Step 3: Break-Even Income</strong>
+
+At break-even:
+<br>
+C = Y
+
+<br><br>
+Y = 100 + 0.75Y
+
+<br>
+Y − 0.75Y = 100
+
+<br>
+0.25Y = 100
+
+<br>
+Y = <strong>₹400 crore</strong>
+
+<hr style="margin:15px 0;">
+
+<strong>Step 4: Aggregate Demand at Y = ₹1,500 crore</strong>
+
+C = 100 + 0.75(1500)
+
+<br>
+C = 100 + 1125
+
+<br>
+C = <strong>₹1,225 crore</strong>
+
+<br><br>
+
+AD = C + I
+
+<br>
+AD = 1225 + 200
+
+<br>
+AD = <strong>₹1,425 crore</strong>
+
+<br><br>
+
+<strong>Final Answers:</strong>
+<br>
+Consumption Function = C = 100 + 0.75Y
+<br>
+Saving Function = S = −100 + 0.25Y
+<br>
+Break-Even Income = ₹400 crore
+<br>
+AD at Y = ₹1,500 crore = ₹1,425 crore
+
+</div>
+</details>
+
+
+<h3>Practical 2 — Complete the Schedule</h3>
+
+<table>
+<tr>
+<th>Income (Y)</th>
+<th>Consumption (C)</th>
+<th>Saving (S)</th>
+<th>APC</th>
+<th>MPC</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>50</td>
+<td>−50</td>
+<td>—</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>100</td>
+<td>120</td>
+<td>−20</td>
+<td>1.20</td>
+<td>0.70</td>
+</tr>
+
+<tr>
+<td>200</td>
+<td>190</td>
+<td>10</td>
+<td>0.95</td>
+<td>0.70</td>
+</tr>
+
+<tr>
+<td>300</td>
+<td>260</td>
+<td>40</td>
+<td>0.867</td>
+<td>0.70</td>
+</tr>
+</table>
+
+<details>
+<summary>View Solution</summary>
+<div class="answer">
+
+<strong>Saving:</strong>
+
+S = Y − C
+
+<br><br>
+
+For Y = 100:
+<br>
+S = 100 − 120 = <strong>−20</strong>
+
+<br><br>
+
+For Y = 200:
+<br>
+S = 200 − 190 = <strong>10</strong>
+
+<br><br>
+
+For Y = 300:
+<br>
+S = 300 − 260 = <strong>40</strong>
+
+<hr style="margin:15px 0;">
+
+<strong>APC:</strong>
+
+APC = C/Y
+
+<br><br>
+
+At Y = 100:
+<br>
+APC = 120/100 = <strong>1.20</strong>
+
+<br><br>
+
+At Y = 200:
+<br>
+APC = 190/200 = <strong>0.95</strong>
+
+<br><br>
+
+At Y = 300:
+<br>
+APC = 260/300 ≈ <strong>0.867</strong>
+
+<hr style="margin:15px 0;">
+
+<strong>MPC:</strong>
+
+MPC = ΔC/ΔY
+
+<br><br>
+
+From Y = 0 to Y = 100:
+<br>
+MPC = (120 − 50)/(100 − 0)
+<br>
+= 70/100
+<br>
+= <strong>0.70</strong>
+
+Similarly, the MPC between successive income levels remains:
+<strong>0.70</strong>.
+
+</div>
+</details>
+
+
+<h3>Additional Numerical Practice</h3>
+
+<p><strong>Question 3:</strong> If MPC = 0.8, find MPS.</p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+MPC + MPS = 1
+<br><br>
+MPS = 1 − 0.8
+<br>
+= <strong>0.2</strong>
+</div>
+</details>
+
+<p><strong>Question 4:</strong> If APC = 0.75, find APS.</p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+APC + APS = 1
+<br><br>
+APS = 1 − 0.75
+<br>
+= <strong>0.25</strong>
+</div>
+</details>
+
+<p><strong>Question 5:</strong> If national income is ₹2,000 crore and saving is ₹400 crore, find APC and APS.</p>
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+
+Given:
+<br>
+Y = ₹2,000 crore
+<br>
+S = ₹400 crore
+
+<br><br>
+
+Since:
+<br>
+Y = C + S
+
+<br>
+C = Y − S
+<br>
+C = 2000 − 400
+<br>
+C = <strong>₹1,600 crore</strong>
+
+<br><br>
+
+APC = C/Y
+<br>
+= 1600/2000
+<br>
+= <strong>0.80</strong>
+
+<br><br>
+
+APS = S/Y
+<br>
+= 400/2000
+<br>
+= <strong>0.20</strong>
+
+<br><br>
+
+Check:
+<br>
+APC + APS = 0.80 + 0.20 = <strong>1</strong>
+
+</div>
+</details>
+
+</div>
+
+
+<!-- SAVING CURVE DERIVATION -->
+<div class="card">
+<h2>📊 Diagrammatic Derivation of Saving Curve from Consumption Curve</h2>
+
+<p>
+The saving curve can be derived from the consumption curve using the
+45° line and the break-even point.
+</p>
+
+<h3>Step 1 — Draw the 45° Line</h3>
+<p>
+Draw the AS = Y line originating from the origin at an angle of 45°.
+</p>
+
+<h3>Step 2 — Draw the Consumption Function</h3>
+<p>
+Draw the consumption function:
+</p>
+
+<div class="formula">
+C = C̄ + bY
+</div>
+
+<p>
+It begins from the autonomous consumption level C̄ on the vertical axis.
+</p>
+
+<h3>Step 3 — Identify Break-Even Point</h3>
+<p>
+The consumption curve intersects the 45° line at point E.
+At this point:
+</p>
+
+<div class="formula">
+C = Y
+<br>
+S = 0
+</div>
+
+<h3>Step 4 — Project the Break-Even Point</h3>
+<p>
+Project point E downward to the income axis of the saving graph.
+This gives point E′ where saving is zero.
+</p>
+
+<h3>Step 5 — Mark −C̄</h3>
+<p>
+On the saving graph, mark −C̄ on the negative vertical axis.
+</p>
+
+<h3>Step 6 — Draw the Saving Curve</h3>
+<p>
+Join −C̄ through E′ and extend the line upward.
+The resulting curve is the saving function:
+</p>
+
+<div class="formula">
+S = −C̄ + (1 − b)Y
+</div>
+
+<div class="exam">
+<strong>Board Exam Sequence:</strong><br>
+45° line → Consumption curve → Break-even point E →
+Projection to E′ → −C̄ → Saving curve.
+</div>
+
+</div>
+
+
+<!-- FORMULA CARD -->
+<div class="card">
+<h2>🧮 Important Formula Reference</h2>
+
+<table>
+<tr>
+<th>Concept</th>
+<th>Formula</th>
+</tr>
+
+<tr>
+<td>Two-Sector Aggregate Demand</td>
+<td>AD = C + I</td>
+</tr>
+
+<tr>
+<td>Four-Sector Aggregate Demand</td>
+<td>AD = C + I + G + (X − M)</td>
+</tr>
+
+<tr>
+<td>Aggregate Supply</td>
+<td>AS = Y = C + S</td>
+</tr>
+
+<tr>
+<td>Consumption Function</td>
+<td>C = C̄ + bY</td>
+</tr>
+
+<tr>
+<td>Saving Function</td>
+<td>S = −C̄ + (1 − b)Y</td>
+</tr>
+
+<tr>
+<td>APC</td>
+<td>APC = C/Y</td>
+</tr>
+
+<tr>
+<td>APS</td>
+<td>APS = S/Y</td>
+</tr>
+
+<tr>
+<td>MPC</td>
+<td>MPC = ΔC/ΔY</td>
+</tr>
+
+<tr>
+<td>MPS</td>
+<td>MPS = ΔS/ΔY</td>
+</tr>
+
+<tr>
+<td>Average Propensity Identity</td>
+<td>APC + APS = 1</td>
+</tr>
+
+<tr>
+<td>Marginal Propensity Identity</td>
+<td>MPC + MPS = 1</td>
+</tr>
+
+<tr>
+<td>Break-Even Condition</td>
+<td>C = Y, S = 0</td>
+</tr>
+
+</table>
+</div>
+
+
+<!-- CONCEPT TRAPS -->
+<div class="card">
+<h2>⚠️ Common Conceptual Traps</h2>
+
+<ul>
+<li><strong>AD is not actual expenditure:</strong> It represents planned expenditure.</li>
+<li><strong>Full employment does not mean zero unemployment.</strong></li>
+<li><strong>APC and MPC are different:</strong> APC uses total values; MPC uses changes.</li>
+<li><strong>APS can be negative:</strong> This happens during dissaving.</li>
+<li><strong>At break-even:</strong> C = Y and S = 0.</li>
+<li><strong>Ex-ante = planned; Ex-post = actual.</strong></li>
+<li><strong>Ex-ante saving and investment may differ.</strong></li>
+<li><strong>Ex-post saving and investment are equal as an accounting identity.</strong></li>
+<li><strong>Autonomous consumption can exist even when current income is zero.</strong></li>
+<li><strong>Two-sector AD:</strong> AD = C + I.</li>
+</ul>
+</div>
+
+
+<!-- CHAPTER END -->
+<div class="card center">
+<h2>🎓 Topic 1 Completed</h2>
+
+<p>
+You have covered Aggregate Demand, Aggregate Supply, Consumption,
+Saving, Investment, Propensities, Ex-Ante and Ex-Post concepts,
+Full Employment, Involuntary Unemployment and important numerical
+applications.
+</p>
+
+<br>
+
+<a href="class12-macroeconomics-unit3.html"
+style="
+display:inline-block;
+background:linear-gradient(135deg,#4f46e5,#7c3aed);
+color:white;
+text-decoration:none;
+padding:12px 22px;
+border-radius:25px;
+font-weight:bold;
+">
+← Back to Unit 3
+</a>
+
+</div>
+
+</div>
+
+<footer>
+<p><strong>Edusphere with Satyam</strong></p>
+<p>Class 12 Economics • Macroeconomics • Unit 3</p>
+<p>Learn • Understand • Practice</p>
+</footer>
+
+</body>
+</html>
