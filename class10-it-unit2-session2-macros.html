@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 2 – Using Macros in Spreadsheet | Class 10 IT 402 | Edusphere with Satyam</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.18);
+    border:1px solid rgba(255,255,255,0.35);
+    padding:7px 16px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:17px;
+    opacity:0.95;
+}
+
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:0 18px;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 15px rgba(15,23,42,0.07);
+}
+
+.card h2{
+    color:#3730a3;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card h3{
+    color:#0f766e;
+    margin:20px 0 10px;
+    font-size:20px;
+}
+
+.card h4{
+    color:#334155;
+    margin:15px 0 8px;
+}
+
+p{
+    margin-bottom:12px;
+}
+
+ul,ol{
+    margin:10px 0 15px 25px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+.definition{
+    background:#f0fdfa;
+    border-left:4px solid #14b8a6;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.simple{
+    background:#eef2ff;
+    border-left:4px solid #6366f1;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.example{
+    background:#f8fafc;
+    border-left:4px solid #64748b;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.tip{
+    background:#ecfeff;
+    border-left:4px solid #0891b2;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.warning{
+    background:#fff7ed;
+    border-left:4px solid #f97316;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.code{
+    background:#172554;
+    color:#e0f2fe;
+    padding:18px;
+    border-radius:10px;
+    overflow-x:auto;
+    margin:15px 0;
+    font-family:"Courier New",monospace;
+    line-height:1.6;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+th{
+    background:#e0e7ff;
+    color:#1e3a5f;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+details{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    border-radius:9px;
+    margin:12px 0;
+    overflow:hidden;
+}
+
+summary{
+    cursor:pointer;
+    padding:13px 16px;
+    font-weight:bold;
+    color:#1e3a5f;
+    background:#eef2ff;
+}
+
+details p,
+details ul,
+details ol{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+details > div{
+    padding:15px 20px;
+}
+
+.question{
+    padding:15px;
+    background:#f8fafc;
+    border-radius:9px;
+    margin:12px 0;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a,
+.button{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.nav a:hover,
+.button:hover{
+    background:#0f766e;
+}
+
+.center{
+    text-align:center;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+.small{
+    font-size:14px;
+    color:#64748b;
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:25px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card h2{
+        font-size:22px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,td{
+        padding:8px;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    .nav a{
+        text-align:center;
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="badge">CLASS 10 • INFORMATION TECHNOLOGY • SUBJECT CODE 402</div>
+    <h1>Session 2 – Using Macros in Spreadsheet</h1>
+    <p>Unit 2 – Electronic Spreadsheet (Advanced) using LibreOffice Calc</p>
+</header>
+
+<div class="container">
+
+<!-- INTRODUCTION -->
+
+<section class="card">
+<h2>1. Introduction to Macros</h2>
+
+<p>
+In a spreadsheet, some tasks have to be performed repeatedly. For example, a teacher may need to format the same type of table every week, calculate values in the same way, or sort a list again and again.
+</p>
+
+<p>
+Performing the same steps manually every time takes time and may also lead to mistakes. A <strong>macro</strong> helps automate a sequence of instructions so that a repeated task can be performed more easily.
+</p>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+A macro is a recorded or programmed sequence of instructions that can be executed to automate a task in a spreadsheet application.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+A macro is a set of instructions saved in the spreadsheet so that a repeated task can be performed automatically instead of doing every step manually.
+</div>
+
+<h3>Why Are Macros Used?</h3>
+
+<ul>
+<li>To automate repetitive tasks.</li>
+<li>To save time.</li>
+<li>To reduce repeated manual work.</li>
+<li>To perform a series of operations quickly.</li>
+<li>To make repeated spreadsheet work more convenient.</li>
+<li>To perform calculations or operations using programmed instructions.</li>
+</ul>
+
+<div class="example">
+<strong>Example:</strong><br>
+Suppose a teacher receives a student marks sheet every month. If the teacher always has to format the headings, apply borders, adjust the same cells and perform the same operations, a macro can automate these repeated actions.
+</div>
+
+<h3>Examples of Tasks That Can Be Automated</h3>
+
+<ul>
+<li>Applying repeated formatting.</li>
+<li>Performing repeated calculations.</li>
+<li>Changing cell values.</li>
+<li>Reading values from cells.</li>
+<li>Sorting data.</li>
+<li>Performing a sequence of spreadsheet operations.</li>
+</ul>
+
+<h3>Advantages of Macros</h3>
+
+<ul>
+<li>They save time.</li>
+<li>They reduce repetitive work.</li>
+<li>They can improve consistency in repeated tasks.</li>
+<li>They can perform several instructions in sequence.</li>
+<li>They can be useful for advanced spreadsheet work.</li>
+</ul>
+
+<h3>Limitations and Precautions</h3>
+
+<ul>
+<li>A wrongly created macro can produce incorrect results.</li>
+<li>A recorded macro may depend on the way the worksheet was prepared.</li>
+<li>Macros should be tested before being used on important data.</li>
+<li>Unknown macros should not be enabled blindly.</li>
+<li>Important spreadsheets should be saved or backed up before testing a new macro.</li>
+</ul>
+
+</section>
+
+
+<!-- UNDERSTANDING MACRO -->
+
+<section class="card">
+<h2>2. Understanding Macros in LibreOffice Calc</h2>
+
+<div class="definition">
+<strong>Macro:</strong> A macro is a collection of instructions that performs a particular task automatically when it is executed.
+</div>
+
+<p>
+In LibreOffice Calc, a macro can contain a series of actions or programming instructions. These instructions tell Calc what operations should be performed.
+</p>
+
+<h3>Macro as a Sequence of Instructions</h3>
+
+<p>
+Think of a macro as a small set of instructions. Instead of telling the computer every step again and again, we save the instructions and execute them whenever required.
+</p>
+
+<div class="example">
+<strong>Example sequence:</strong>
+<ol>
+<li>Select a particular range.</li>
+<li>Apply formatting.</li>
+<li>Change the font.</li>
+<li>Apply a border.</li>
+<li>Save the operation as a macro.</li>
+<li>Run the macro whenever the same type of operation is required.</li>
+</ol>
+</div>
+
+<h3>Macro and Automation</h3>
+
+<p>
+<strong>Automation</strong> means using a system or program to perform work with less manual intervention.
+</p>
+
+<p>
+A macro is one method of automation. Once the required instructions have been recorded or programmed, the user can execute them instead of repeating the entire sequence manually.
+</p>
+
+<h3>LibreOffice Basic</h3>
+
+<p>
+Macros in LibreOffice can be written using <strong>LibreOffice Basic</strong>, a programming language used for creating macros.
+</p>
+
+<div class="simple">
+<strong>Remember:</strong><br>
+A recorded macro is created by recording actions, while a manually created macro can be written using programming instructions.
+</div>
+
+<h3>Formula vs Macro</h3>
+
+<table>
+<tr>
+<th>Formula</th>
+<th>Macro</th>
+</tr>
+<tr>
+<td>Usually performs a calculation in a cell.</td>
+<td>Can perform a sequence of operations.</td>
+</tr>
+<tr>
+<td>Written directly in a cell.</td>
+<td>Can be recorded or programmed.</td>
+</tr>
+<tr>
+<td>Example: <strong>=SUM(A1:A5)</strong></td>
+<td>Can automate several spreadsheet actions.</td>
+</tr>
+<tr>
+<td>Primarily works with calculations.</td>
+<td>Can automate calculations, formatting and other operations.</td>
+</tr>
+</table>
+
+</section>
+
+
+<!-- RECORDING -->
+
+<section class="card">
+<h2>3. Recording a Macro</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+Recording a macro means capturing a sequence of actions performed by the user and saving those actions as a macro that can be executed later.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+Macro recording means asking Calc to remember the steps you perform so that you can repeat those steps automatically later.
+</div>
+
+<h3>Basic Process</h3>
+
+<ol>
+<li>Open the spreadsheet.</li>
+<li>Prepare the worksheet.</li>
+<li>Start the macro recorder.</li>
+<li>Give the macro a suitable name.</li>
+<li>Perform the required actions.</li>
+<li>Stop recording.</li>
+<li>Save the macro.</li>
+<li>Run it to test the result.</li>
+</ol>
+
+<div class="warning">
+<strong>Important:</strong> Keep the actions simple when learning macro recording. The recorder may not record every possible type of user action in the same way.
+</div>
+
+</section>
+
+
+<!-- RECORDING PRACTICAL -->
+
+<section class="card">
+<h2>4. Practical: Record a Macro</h2>
+
+<p>
+Let us create a simple macro that performs repeated formatting on a small table.
+</p>
+
+<h3>Step 1 – Open LibreOffice Calc</h3>
+
+<ol>
+<li>Start your computer.</li>
+<li>Open <strong>LibreOffice</strong>.</li>
+<li>Select <strong>Calc Spreadsheet</strong>.</li>
+<li>Wait for the spreadsheet window to open.</li>
+</ol>
+
+<h3>Step 2 – Prepare Sample Data</h3>
+
+<p>Enter a small table such as:</p>
+
+<table>
+<tr>
+<th>Name</th>
+<th>Marks</th>
+<th>Grade</th>
+</tr>
+<tr>
+<td>Rahul</td>
+<td>78</td>
+<td>B+</td>
+</tr>
+<tr>
+<td>Anita</td>
+<td>91</td>
+<td>A+</td>
+</tr>
+<tr>
+<td>Ravi</td>
+<td>84</td>
+<td>A</td>
+</tr>
+</table>
+
+<h3>Step 3 – Decide What the Macro Will Do</h3>
+
+<p>
+Before recording, decide the exact actions that you want the macro to remember.
+</p>
+
+<p>For example:</p>
+
+<ul>
+<li>Select the heading row.</li>
+<li>Make the heading bold.</li>
+<li>Apply a background colour.</li>
+<li>Align the heading.</li>
+</ul>
+
+<h3>Step 4 – Start Macro Recording</h3>
+
+<ol>
+<li>Open the <strong>Tools</strong> menu.</li>
+<li>Go to <strong>Macros</strong>.</li>
+<li>Select <strong>Record Macro</strong>.</li>
+<li>The macro recording process will begin.</li>
+</ol>
+
+<div class="tip">
+When recording is active, Calc records supported actions that you perform in the spreadsheet.
+</div>
+
+<h3>Step 5 – Give the Macro a Name</h3>
+
+<p>
+After stopping the recording, LibreOffice will ask you where to save the recorded macro.
+</p>
+
+<p>
+Choose a meaningful name, for example:
+</p>
+
+<div class="code">FormatHeading</div>
+
+<p>
+Avoid confusing names. A meaningful name helps you identify the macro later.
+</p>
+
+<h3>Step 6 – Select the Library and Module</h3>
+
+<p>
+LibreOffice stores macros inside a structure containing libraries and modules.
+</p>
+
+<ul>
+<li><strong>Library:</strong> A collection used to organise macros.</li>
+<li><strong>Module:</strong> A container inside a library where macro procedures and functions can be stored.</li>
+</ul>
+
+<p>
+Select an appropriate library and module when saving the macro.
+</p>
+
+<h3>Step 7 – Perform the Actions</h3>
+
+<ol>
+<li>Select the heading cells.</li>
+<li>Click the <strong>Bold</strong> button.</li>
+<li>Apply the required alignment.</li>
+<li>Apply the required formatting.</li>
+<li>Perform only the actions that you want the macro to remember.</li>
+</ol>
+
+<h3>Step 8 – Stop Recording</h3>
+
+<ol>
+<li>Open the <strong>Tools</strong> menu.</li>
+<li>Go to <strong>Macros</strong>.</li>
+<li>Select the option to stop recording.</li>
+</ol>
+
+<h3>Step 9 – Save the Macro</h3>
+
+<ol>
+<li>Choose the required library.</li>
+<li>Choose or create the required module.</li>
+<li>Enter a meaningful macro name.</li>
+<li>Save the macro.</li>
+</ol>
+
+<h3>Step 10 – Test the Macro</h3>
+
+<p>
+Run the macro on a suitable worksheet and check whether the recorded actions are performed correctly.
+</p>
+
+<div class="warning">
+Do not assume that a recorded macro is correct just because it was saved successfully. Always test it.
+</div>
+
+</section>
+
+
+<!-- RUNNING -->
+
+<section class="card">
+<h2>5. Running a Macro</h2>
+
+<div class="definition">
+<strong>Definition:</strong><br>
+Running a macro means executing the instructions stored inside the macro so that the required task is performed.
+</div>
+
+<h3>Steps to Run a Macro</h3>
+
+<ol>
+<li>Open the spreadsheet containing the macro.</li>
+<li>Open the <strong>Tools</strong> menu.</li>
+<li>Go to <strong>Macros</strong>.</li>
+<li>Open the macro management/run option.</li>
+<li>Select the appropriate library.</li>
+<li>Select the appropriate module.</li>
+<li>Select the required macro.</li>
+<li>Click <strong>Run</strong>.</li>
+<li>Observe the spreadsheet.</li>
+<li>Check whether the expected operation has been performed.</li>
+</ol>
+
+<h3>What Happens When a Macro Runs?</h3>
+
+<p>
+Calc executes the instructions stored in the macro in the sequence in which they are programmed or recorded.
+</p>
+
+<div class="example">
+If a macro was recorded to apply formatting to a selected range, running that macro executes the recorded formatting operations.
+</div>
+
+</section>
+
+
+<!-- RUNNING PRACTICAL -->
+
+<section class="card">
+<h2>6. Practical: Running a Recorded Macro</h2>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Open the spreadsheet containing your saved macro.</li>
+<li>Prepare the worksheet on which you want to test the macro.</li>
+<li>Open <strong>Tools</strong>.</li>
+<li>Select <strong>Macros</strong>.</li>
+<li>Open the option for running/managing macros.</li>
+<li>Locate the library containing your macro.</li>
+<li>Open the required module.</li>
+<li>Select the macro name.</li>
+<li>Click <strong>Run</strong>.</li>
+<li>Observe the worksheet.</li>
+<li>Check whether the expected changes appear.</li>
+</ol>
+
+<div class="tip">
+If the result is not correct, check the macro's recorded actions, the selected cells, the worksheet structure and whether the macro was saved correctly.
+</div>
+
+</section>
+
+
+<!-- CREATING SIMPLE MACRO -->
+
+<section class="card">
+<h2>7. Creating a Simple Macro</h2>
+
+<div class="definition">
+<strong>Definition:</strong><br>
+Creating a simple macro means writing a small set of instructions in LibreOffice Basic to perform a particular task.
+</div>
+
+<h3>Basic Structure of a Macro</h3>
+
+<div class="code">Sub MyMacro
+    'Instructions go here
+End Sub</div>
+
+<h3>Understanding the Structure</h3>
+
+<ul>
+<li><strong>Sub:</strong> Begins a procedure.</li>
+<li><strong>MyMacro:</strong> The name of the macro.</li>
+<li><strong>Instructions:</strong> Commands that tell the computer what to do.</li>
+<li><strong>End Sub:</strong> Indicates the end of the procedure.</li>
+</ul>
+
+<h3>Opening the Macro Editor</h3>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Open the <strong>Tools</strong> menu.</li>
+<li>Go to <strong>Macros</strong>.</li>
+<li>Open <strong>Organize Macros</strong>.</li>
+<li>Select <strong>Basic</strong>.</li>
+<li>Select the appropriate library.</li>
+<li>Select the required module.</li>
+<li>Open the macro editor.</li>
+</ol>
+
+<h3>Writing a Simple Macro</h3>
+
+<ol>
+<li>Create or select a module.</li>
+<li>Create a new macro procedure.</li>
+<li>Give the macro a meaningful name.</li>
+<li>Write the required instructions between <strong>Sub</strong> and <strong>End Sub</strong>.</li>
+<li>Save the macro.</li>
+<li>Run the macro to test it.</li>
+</ol>
+
+</section>
+
+
+<!-- UNDERSTANDING CODE -->
+
+<section class="card">
+<h2>8. Understanding Macro Code</h2>
+
+<p>Consider the following simple structure:</p>
+
+<div class="code">Sub MyMacro
+    'Instructions go here
+End Sub</div>
+
+<h3>Line 1 – Sub MyMacro</h3>
+
+<p>
+This starts a procedure named <strong>MyMacro</strong>.
+</p>
+
+<h3>Line 2 – Comment</h3>
+
+<p>
+The apostrophe (<strong>'</strong>) is used to write a comment. Comments explain the code to the programmer and are not treated as normal instructions.
+</p>
+
+<h3>Line 3 – End Sub</h3>
+
+<p>
+This indicates the end of the procedure.
+</p>
+
+<div class="simple">
+<strong>Remember:</strong><br>
+A macro procedure generally begins with <strong>Sub</strong> and ends with <strong>End Sub</strong>.
+</div>
+
+</section>
+
+
+<!-- ORGANISING -->
+
+<section class="card">
+<h2>9. Creating and Organising a Simple Macro</h2>
+
+<h3>Macro Library</h3>
+
+<div class="definition">
+A <strong>library</strong> is a collection used to organise macros and related Basic code.
+</div>
+
+<h3>Module</h3>
+
+<div class="definition">
+A <strong>module</strong> is a container inside a library where macro procedures and functions can be stored.
+</div>
+
+<h3>Macro</h3>
+
+<div class="definition">
+A <strong>macro</strong> is an individual procedure or function that performs a particular task.
+</div>
+
+<h3>Organisation Structure</h3>
+
+<div class="example">
+<strong>Library → Module → Macro/Function</strong>
+</div>
+
+<h3>Steps for Organising Macros</h3>
+
+<ol>
+<li>Open the macro management window.</li>
+<li>Select the appropriate library.</li>
+<li>Open the module containing the macro.</li>
+<li>Create a new module when a separate group of macros is required.</li>
+<li>Give macros meaningful names.</li>
+<li>Keep related macros together.</li>
+<li>Save the changes.</li>
+<li>Delete or modify unnecessary macros carefully.</li>
+</ol>
+
+<div class="tip">
+Meaningful names such as <strong>FormatHeading</strong>, <strong>CalculateTotal</strong> or <strong>SortMarks</strong> are easier to understand than unclear names.
+</div>
+
+</section>
+
+
+<!-- MACRO AS FUNCTION -->
+
+<section class="card">
+<h2>10. Macro as a Function</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+A function is a programmed block that performs a particular operation and can return a value as its result.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+A function is a piece of code that receives values, performs an operation and gives back a result.
+</div>
+
+<h3>Procedure vs Function</h3>
+
+<table>
+<tr>
+<th>Procedure (Sub)</th>
+<th>Function</th>
+</tr>
+<tr>
+<td>Performs a sequence of instructions.</td>
+<td>Performs an operation and returns a value.</td>
+</tr>
+<tr>
+<td>Begins with <strong>Sub</strong>.</td>
+<td>Begins with <strong>Function</strong>.</td>
+</tr>
+<tr>
+<td>Ends with <strong>End Sub</strong>.</td>
+<td>Ends with <strong>End Function</strong>.</td>
+</tr>
+</table>
+
+<h3>Simple Function Example</h3>
+
+<div class="code">Function AddTwoNumbers(a As Double, b As Double) As Double
+    AddTwoNumbers = a + b
+End Function</div>
+
+<h3>Understanding the Example</h3>
+
+<ul>
+<li><strong>AddTwoNumbers</strong> is the function name.</li>
+<li><strong>a</strong> and <strong>b</strong> are parameters.</li>
+<li>The function adds the two values.</li>
+<li>The result is returned through the function name.</li>
+</ul>
+
+<div class="example">
+If the function receives 10 and 20, the returned result will be 30.
+</div>
+
+</section>
+
+
+<!-- ARGUMENTS -->
+
+<section class="card">
+<h2>11. Passing Arguments to a Macro or Function</h2>
+
+<div class="definition">
+<strong>Argument:</strong> A value supplied to a procedure or function when it is called.
+</div>
+
+<div class="definition">
+<strong>Parameter:</strong> A variable in the procedure or function definition that receives the supplied value.
+</div>
+
+<h3>Why Are Arguments Used?</h3>
+
+<p>
+Arguments make a macro or function more flexible. Instead of writing a separate macro for every value, the same macro or function can receive different values.
+</p>
+
+<h3>Example</h3>
+
+<div class="code">Sub WriteDouble(n As Double)
+    Dim sheet As Object
+
+    sheet = ThisComponent.Sheets.getByIndex(0)
+
+    sheet.getCellRangeByName("B3").Value = n * 2
+End Sub</div>
+
+<p>
+Here, <strong>n</strong> is a parameter. A value can be supplied to the procedure when it is called from another piece of Basic code.
+</p>
+
+<h3>Using an Argument</h3>
+
+<div class="code">Sub UseArgument
+    WriteDouble 25
+End Sub</div>
+
+<p>
+In this example, <strong>25</strong> is supplied as an argument to the <strong>WriteDouble</strong> procedure.
+</p>
+
+<div class="simple">
+<strong>Remember:</strong><br>
+Parameter = variable receiving the value.<br>
+Argument = actual value supplied to it.
+</div>
+
+</section>
+
+
+<!-- VALUES -->
+
+<section class="card">
+<h2>12. Working with Values</h2>
+
+<p>
+Macros and functions can work with values obtained from calculations, variables or spreadsheet cells.
+</p>
+
+<h3>Common Operations with Values</h3>
+
+<ul>
+<li>Reading a value.</li>
+<li>Storing a value in a variable.</li>
+<li>Performing calculations.</li>
+<li>Changing a value.</li>
+<li>Writing a value into a cell.</li>
+<li>Returning a value from a function.</li>
+</ul>
+
+<h3>Example of Calculation</h3>
+
+<div class="code">Dim total As Double
+
+total = 50 + 25</div>
+
+<p>
+The variable <strong>total</strong> stores the result of the calculation.
+</p>
+
+<h3>Using Built-in Functions</h3>
+
+<p>
+LibreOffice Basic provides built-in functions that can be used for different operations.
+</p>
+
+<div class="example">
+<strong>Example:</strong>
+
+<div class="code">result = Sqr(81)</div>
+
+<p>
+The <strong>Sqr()</strong> function calculates the square root. In this example, the result is 9.
+</p>
+</div>
+
+<p>
+Built-in functions reduce the need to manually program common operations.
+</p>
+
+</section>
+
+
+<!-- DIRECT CELL ACCESS -->
+
+<section class="card">
+<h2>13. Direct Cell Access</h2>
+
+<div class="definition">
+<strong>Direct Cell Access:</strong><br>
+Direct cell access means referring to a particular spreadsheet cell through macro instructions so that the macro can read or change its contents.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+It means using a macro to directly read information from a cell or write information into a cell.
+</div>
+
+<h3>Cell Reference</h3>
+
+<p>
+A cell reference identifies the location of a cell. For example:
+</p>
+
+<ul>
+<li>A1</li>
+<li>B2</li>
+<li>C5</li>
+<li>D10</li>
+</ul>
+
+<h3>Accessing a Sheet</h3>
+
+<p>
+A macro can access a worksheet and then access a particular cell or cell range.
+</p>
+
+<h3>Reading a Cell Value</h3>
+
+<div class="code">Dim sheet As Object
+Dim value As Double
+
+sheet = ThisComponent.Sheets.getByIndex(0)
+
+value = sheet.getCellRangeByName("B2").Value</div>
+
+<p>
+The value stored in cell <strong>B2</strong> is read and stored in the variable <strong>value</strong>.
+</p>
+
+<h3>Writing a Value into a Cell</h3>
+
+<div class="code">sheet.getCellRangeByName("B3").Value = 100</div>
+
+<p>
+This places the numerical value <strong>100</strong> into cell B3.
+</p>
+
+<div class="tip">
+For numerical data, <strong>.Value</strong> is commonly used. Text can be handled using the cell's string content.
+</div>
+
+</section>
+
+
+<!-- CELL ACCESS PRACTICAL -->
+
+<section class="card">
+<h2>14. Practical: Macro for Cell Access and Calculation</h2>
+
+<p>
+We will create a simple macro that reads a number from one cell, multiplies it by 2 and places the result in another cell.
+</p>
+
+<h3>Step 1 – Open Calc</h3>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Create a new spreadsheet.</li>
+</ol>
+
+<h3>Step 2 – Enter the Input</h3>
+
+<ol>
+<li>Click cell <strong>B2</strong>.</li>
+<li>Enter a number, for example <strong>25</strong>.</li>
+<li>Press <strong>Enter</strong>.</li>
+</ol>
+
+<h3>Step 3 – Open Basic Macro Editor</h3>
+
+<ol>
+<li>Open <strong>Tools</strong>.</li>
+<li>Select <strong>Macros</strong>.</li>
+<li>Select <strong>Organize Macros</strong>.</li>
+<li>Select <strong>Basic</strong>.</li>
+<li>Select the required library.</li>
+<li>Select a module.</li>
+<li>Open the editor.</li>
+</ol>
+
+<h3>Step 4 – Create the Macro</h3>
+
+<p>Enter:</p>
+
+<div class="code">Sub ReadAndCalculate
+
+    Dim sheet As Object
+    Dim value As Double
+
+    sheet = ThisComponent.Sheets.getByIndex(0)
+
+    value = sheet.getCellRangeByName("B2").Value
+
+    sheet.getCellRangeByName("B3").Value = value * 2
+
+End Sub</div>
+
+<h3>Step 5 – Understand the Code</h3>
+
+<ul>
+<li><strong>sheet</strong> represents the worksheet.</li>
+<li><strong>value</strong> stores the value read from B2.</li>
+<li><strong>B2</strong> is the input cell.</li>
+<li><strong>B3</strong> is the output cell.</li>
+<li><strong>value * 2</strong> performs the calculation.</li>
+<li>The result is written into B3.</li>
+</ul>
+
+<h3>Step 6 – Save the Macro</h3>
+
+<ol>
+<li>Save the macro in the appropriate library and module.</li>
+<li>Give it a meaningful name.</li>
+<li>Save your work.</li>
+</ol>
+
+<h3>Step 7 – Run the Macro</h3>
+
+<ol>
+<li>Return to the spreadsheet.</li>
+<li>Open the macro run option.</li>
+<li>Select <strong>ReadAndCalculate</strong>.</li>
+<li>Click <strong>Run</strong>.</li>
+</ol>
+
+<h3>Step 8 – Verify the Result</h3>
+
+<p>
+If B2 contains 25, the macro should place 50 in B3.
+</p>
+
+<div class="warning">
+If the result does not appear, check the sheet index, cell references, macro name, saved location and whether the macro was executed successfully.
+</div>
+
+</section>
+
+
+<!-- SORTING -->
+
+<section class="card">
+<h2>15. Sorting Columns Using a Macro</h2>
+
+<div class="definition">
+<strong>Definition:</strong><br>
+Sorting means arranging data according to a selected field or column in a particular order, such as ascending or descending order.
+</div>
+
+<p>
+A sorting operation can be recorded as a macro so that the same sorting procedure can be repeated.
+</p>
+
+<h3>Example</h3>
+
+<table>
+<tr>
+<th>Name</th>
+<th>Marks</th>
+</tr>
+<tr>
+<td>Ravi</td>
+<td>65</td>
+</tr>
+<tr>
+<td>Anita</td>
+<td>92</td>
+</tr>
+<tr>
+<td>Rahul</td>
+<td>78</td>
+</tr>
+</table>
+
+<p>
+The data can be sorted according to the <strong>Marks</strong> column.
+</p>
+
+<h3>Practical Steps</h3>
+
+<ol>
+<li>Open the spreadsheet.</li>
+<li>Enter the data.</li>
+<li>Include the column headings.</li>
+<li>Select the complete data range.</li>
+<li>Open the <strong>Data</strong> menu.</li>
+<li>Select <strong>Sort</strong>.</li>
+<li>Choose the column by which the data should be sorted.</li>
+<li>Choose ascending or descending order.</li>
+<li>Check that the correct range and heading settings are selected.</li>
+<li>Click <strong>OK</strong>.</li>
+<li>Check whether the data has been sorted correctly.</li>
+<li>If you are recording the operation, start macro recording before performing the sorting actions.</li>
+<li>Perform the sorting operation.</li>
+<li>Stop recording after completing the required actions.</li>
+<li>Save the macro with a meaningful name such as <strong>SortMarks</strong>.</li>
+<li>Run the macro on suitable test data.</li>
+<li>Verify the result.</li>
+</ol>
+
+<div class="warning">
+A recorded sorting macro may depend on the worksheet structure or recorded range. Test it carefully before using it on different datasets.
+</div>
+
+</section>
+
+
+<!-- ADVANTAGES -->
+
+<section class="card">
+<h2>16. Advantages of Using Macros</h2>
+
+<ul>
+<li><strong>Saves time:</strong> Repeated operations can be performed quickly.</li>
+<li><strong>Reduces repetitive work:</strong> The user does not need to perform the same sequence manually each time.</li>
+<li><strong>Consistency:</strong> The same instructions can be repeated.</li>
+<li><strong>Automation:</strong> Several operations can be performed through one macro.</li>
+<li><strong>Useful for large tasks:</strong> Repeated operations on spreadsheet data can become easier.</li>
+<li><strong>Customisation:</strong> Programmed macros can be designed for particular tasks.</li>
+</ul>
+
+</section>
+
+
+<!-- LIMITATIONS -->
+
+<section class="card">
+<h2>17. Limitations and Precautions</h2>
+
+<ul>
+<li>A macro may contain incorrect instructions.</li>
+<li>A mistake in a macro can produce incorrect results.</li>
+<li>Recorded macros may depend on the worksheet structure.</li>
+<li>Macros should be tested before use on important data.</li>
+<li>Keep a backup of important spreadsheets.</li>
+<li>Use meaningful macro names.</li>
+<li>Do not make unnecessary changes while recording.</li>
+<li>Do not blindly enable macros from unknown or untrusted sources.</li>
+<li>Save your work before testing a newly created macro.</li>
+</ul>
+
+<div class="tip">
+<strong>Best Practice:</strong> First test a new macro on sample data. After confirming that it works correctly, use it on important data.
+</div>
+
+</section>
+
+
+<!-- IMPORTANT TERMS -->
+
+<section class="card">
+<h2>18. Important Terms</h2>
+
+<table>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td><strong>Macro</strong></td>
+<td>A recorded or programmed sequence of instructions used to automate a task.</td>
+</tr>
+
+<tr>
+<td><strong>Automation</strong></td>
+<td>Using a system to perform tasks with less manual intervention.</td>
+</tr>
+
+<tr>
+<td><strong>Macro Recorder</strong></td>
+<td>A facility that records supported user actions and saves them as a macro.</td>
+</tr>
+
+<tr>
+<td><strong>LibreOffice Basic</strong></td>
+<td>The programming language used to create LibreOffice macros.</td>
+</tr>
+
+<tr>
+<td><strong>Library</strong></td>
+<td>A collection used to organise macros and related code.</td>
+</tr>
+
+<tr>
+<td><strong>Module</strong></td>
+<td>A container in which macro procedures and functions are stored.</td>
+</tr>
+
+<tr>
+<td><strong>Procedure</strong></td>
+<td>A block of instructions that performs a task.</td>
+</tr>
+
+<tr>
+<td><strong>Function</strong></td>
+<td>A programmed block that performs an operation and returns a value.</td>
+</tr>
+
+<tr>
+<td><strong>Argument</strong></td>
+<td>The actual value supplied to a procedure or function.</td>
+</tr>
+
+<tr>
+<td><strong>Parameter</strong></td>
+<td>A variable that receives a supplied value.</td>
+</tr>
+
+<tr>
+<td><strong>Cell Reference</strong></td>
+<td>The address used to identify a cell, such as A1 or B2.</td>
+</tr>
+
+<tr>
+<td><strong>Direct Cell Access</strong></td>
+<td>Accessing a particular spreadsheet cell through macro instructions.</td>
+</tr>
+
+<tr>
+<td><strong>Sorting</strong></td>
+<td>Arranging data according to a selected field and order.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="card">
+<h2>19. Macro vs Formula</h2>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>Formula</th>
+<th>Macro</th>
+</tr>
+
+<tr>
+<td>Purpose</td>
+<td>Usually performs calculations.</td>
+<td>Automates a sequence of operations.</td>
+</tr>
+
+<tr>
+<td>Location</td>
+<td>Usually entered in a cell.</td>
+<td>Stored as macro code.</td>
+</tr>
+
+<tr>
+<td>Programming</td>
+<td>Uses spreadsheet formula syntax.</td>
+<td>Can use LibreOffice Basic.</td>
+</tr>
+
+<tr>
+<td>Operations</td>
+<td>Mainly calculations and logical operations.</td>
+<td>Can automate multiple spreadsheet actions.</td>
+</tr>
+
+<tr>
+<td>Example</td>
+<td>=SUM(A1:A5)</td>
+<td>A macro that formats and sorts data.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- RECORDED VS CREATED -->
+
+<section class="card">
+<h2>20. Recorded Macro vs Manually Created Macro</h2>
+
+<table>
+<tr>
+<th>Recorded Macro</th>
+<th>Manually Created Macro</th>
+</tr>
+
+<tr>
+<td>Created by recording supported user actions.</td>
+<td>Created by writing Basic instructions.</td>
+</tr>
+
+<tr>
+<td>Useful for repetitive actions.</td>
+<td>Useful for customised or advanced operations.</td>
+</tr>
+
+<tr>
+<td>Does not require writing every instruction manually.</td>
+<td>Requires understanding of programming instructions.</td>
+</tr>
+
+<tr>
+<td>Can be quick to create.</td>
+<td>Can provide greater control over the operation.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- COMMON MISTAKES -->
+
+<section class="card">
+<h2>21. Common Practical Mistakes</h2>
+
+<ol>
+<li><strong>Macro not saved:</strong> Always save the macro after creating or recording it.</li>
+
+<li><strong>Wrong library or module:</strong> Remember where the macro is stored.</li>
+
+<li><strong>Unclear macro name:</strong> Use meaningful names.</li>
+
+<li><strong>Stopping recording too early:</strong> Make sure all required actions have been completed before stopping.</li>
+
+<li><strong>Performing unnecessary actions:</strong> Only perform the actions that should be part of the macro.</li>
+
+<li><strong>Wrong cell reference:</strong> Check the input and output cell references carefully.</li>
+
+<li><strong>Wrong data:</strong> Test the macro using suitable sample data.</li>
+
+<li><strong>Not checking the result:</strong> Always verify the output.</li>
+
+<li><strong>Not saving the spreadsheet:</strong> Save your work before and after important changes.</li>
+
+<li><strong>Using an untested macro:</strong> Test it before applying it to important data.</li>
+</ol>
+
+</section>
+
+
+<!-- COMPLETE PRACTICAL -->
+
+<section class="card">
+<h2>22. Complete Practical Activity</h2>
+
+<p>
+Perform the following activity to practise the major concepts of this session.
+</p>
+
+<h3>Part A – Record a Macro</h3>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Create a small student marks table.</li>
+<li>Start macro recording.</li>
+<li>Format the heading.</li>
+<li>Perform the required formatting operations.</li>
+<li>Stop recording.</li>
+<li>Save the macro with a meaningful name.</li>
+</ol>
+
+<h3>Part B – Run the Macro</h3>
+
+<ol>
+<li>Open the macro management/run option.</li>
+<li>Locate the saved macro.</li>
+<li>Select it.</li>
+<li>Run it.</li>
+<li>Check the result.</li>
+</ol>
+
+<h3>Part C – Create a Simple Macro</h3>
+
+<ol>
+<li>Open the Basic editor.</li>
+<li>Create a module if required.</li>
+<li>Create a new procedure.</li>
+<li>Write the required instructions.</li>
+<li>Save the macro.</li>
+<li>Run it.</li>
+</ol>
+
+<h3>Part D – Direct Cell Access</h3>
+
+<ol>
+<li>Enter a number in B2.</li>
+<li>Create a macro.</li>
+<li>Read the value from B2.</li>
+<li>Perform a calculation.</li>
+<li>Write the result into B3.</li>
+<li>Run the macro.</li>
+<li>Verify B3.</li>
+</ol>
+
+<h3>Part E – Function</h3>
+
+<ol>
+<li>Create a simple function.</li>
+<li>Define its parameters.</li>
+<li>Perform a calculation.</li>
+<li>Return the result.</li>
+<li>Test the function with different values.</li>
+</ol>
+
+<h3>Part F – Sorting</h3>
+
+<ol>
+<li>Create a table of student marks.</li>
+<li>Select the complete table.</li>
+<li>Sort the data using a selected column.</li>
+<li>Record the sorting operation as a macro.</li>
+<li>Save the macro.</li>
+<li>Run and test the macro.</li>
+</ol>
+
+</section>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<section class="card">
+<h2>23. Important Questions</h2>
+
+<details>
+<summary>1. What is a macro?</summary>
+<div>
+<p>A macro is a recorded or programmed sequence of instructions used to automate a task.</p>
+</div>
+</details>
+
+<details>
+<summary>2. Why are macros useful in spreadsheets?</summary>
+<div>
+<p>Macros are useful because they automate repetitive operations, save time and reduce repeated manual work.</p>
+</div>
+</details>
+
+<details>
+<summary>3. What is macro recording?</summary>
+<div>
+<p>Macro recording is the process of recording supported actions performed by the user and saving them as a macro for later execution.</p>
+</div>
+</details>
+
+<details>
+<summary>4. What is LibreOffice Basic?</summary>
+<div>
+<p>LibreOffice Basic is a programming language that can be used to create macros in LibreOffice applications.</p>
+</div>
+</details>
+
+<details>
+<summary>5. What is a library?</summary>
+<div>
+<p>A library is a collection used to organise macros and related code.</p>
+</div>
+</details>
+
+<details>
+<summary>6. What is a module?</summary>
+<div>
+<p>A module is a container inside a library where procedures and functions can be stored.</p>
+</div>
+</details>
+
+<details>
+<summary>7. Differentiate between a procedure and a function.</summary>
+<div>
+<p>A procedure performs a sequence of instructions, while a function performs an operation and returns a value.</p>
+</div>
+</details>
+
+<details>
+<summary>8. What is an argument?</summary>
+<div>
+<p>An argument is the actual value supplied to a procedure or function when it is called.</p>
+</div>
+</details>
+
+<details>
+<summary>9. What is a parameter?</summary>
+<div>
+<p>A parameter is a variable in a procedure or function definition that receives a supplied value.</p>
+</div>
+</details>
+
+<details>
+<summary>10. What is direct cell access?</summary>
+<div>
+<p>Direct cell access means using macro instructions to read or change the contents of a particular spreadsheet cell.</p>
+</div>
+</details>
+
+<details>
+<summary>11. What precautions should be taken while using macros?</summary>
+<div>
+<ul>
+<li>Test macros before using them on important data.</li>
+<li>Keep backups of important files.</li>
+<li>Use meaningful names.</li>
+<li>Do not blindly enable unknown macros.</li>
+<li>Check the output carefully.</li>
+</ul>
+</div>
+</details>
+
+</section>
+
+
+<!-- APPLICATION BASED -->
+
+<section class="card">
+<h2>24. Application-Based Questions</h2>
+
+<details>
+<summary>Case 1 – Repeated Formatting</summary>
+<div>
+
+<p>
+A teacher prepares a marks table every week. The heading must always be made bold, aligned and formatted in the same way.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A macro can be recorded to automate the repeated formatting operations. The teacher can run the macro whenever the same formatting is required.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Case 2 – Reading and Calculating Cell Values</summary>
+<div>
+
+<p>
+A student wants a macro to read a number from B2, multiply it by 2 and place the result in B3.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+The macro should directly access B2, store its value in a variable, multiply the value by 2 and write the result into B3.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Case 3 – Sorting Student Marks</summary>
+<div>
+
+<p>
+A teacher repeatedly sorts student marks according to the Marks column.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+The sorting operation can be recorded as a macro. After testing, the macro can be run to repeat the sorting operation.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Case 4 – Function with Arguments</summary>
+<div>
+
+<p>
+A programmer wants one function that can add different pairs of numbers instead of creating a separate function for every pair.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+The function can use parameters to receive the two numbers as arguments and return their sum.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+</section>
+
+
+<!-- PYQ -->
+
+<section class="card">
+<h2>25. CBSE PYQ-Based Practice</h2>
+
+<p class="small">
+The questions below are provided in the same practice format as the other sessions. They should be treated as <strong>CBSE PYQ-Based Practice Questions</strong> unless a specific CBSE year has been verified.
+</p>
+
+<details>
+<summary>Question 1. What is a macro in a spreadsheet?</summary>
+<div>
+
+<p>
+Explain the meaning and purpose of a macro in LibreOffice Calc.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A macro is a recorded or programmed sequence of instructions used to automate a task. It is useful for performing repetitive spreadsheet operations quickly and consistently.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 2. What is the difference between a macro and a formula?</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A formula generally performs calculations in a cell, whereas a macro can automate a sequence of spreadsheet operations.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 3. What is macro recording?</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+Macro recording captures supported actions performed by the user and saves them as a macro so that they can be executed again later.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 4. Differentiate between an argument and a parameter.</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A parameter is a variable defined in a procedure or function to receive a value, while an argument is the actual value supplied when the procedure or function is called.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 5. What is direct cell access?</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+Direct cell access means using macro instructions to read or modify a particular spreadsheet cell.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+</section>
+
+<!-- MCQ LINK -->
+
+<section class="card center">
+<h2>27. Practice MCQs</h2>
+
+<p>
+Test your understanding of this session with the separate MCQ practice page.
+</p>
+
+<br>
+
+<a class="button" href="class10-it-unit2-session2-mcqs.html">
+Open Session 2 – 50 MCQs
+</a>
+
+</section>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="class10-it-unit2-session1-scenarios-goal-seek.html">
+← Analyse Data Using Scenarios and Goal Seek
+</a>
+
+<a href="class10-it-unit2-electronic-spreadsheet.html">
+Unit 2 Home
+</a>
+
+<a href="class10-it-unit2-session3-linking-data.html">
+Linking Data and Using Multiple Sheets →
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+<p><strong>Edusphere with Satyam</strong></p>
+<p>Class 10 Information Technology • Subject Code 402</p>
+<p>Unit 2 – Electronic Spreadsheet (Advanced)</p>
+</footer>
+
+</body>
+</html>
