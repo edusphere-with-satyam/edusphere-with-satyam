@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 1 – Create and Apply Styles | Class 10 IT 402</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.7;
+        background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+        color: #222;
+    }
+
+    header {
+        background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777);
+        color: white;
+        text-align: center;
+        padding: 35px 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        font-size: 1rem;
+        opacity: 0.95;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 18px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        border-left: 6px solid #6366f1;
+    }
+
+    .card h2 {
+        color: #4f46e5;
+        margin-bottom: 15px;
+        font-size: 1.45rem;
+    }
+
+    .card h3 {
+        color: #7c3aed;
+        margin: 18px 0 8px;
+    }
+
+    .definition {
+        background: #eef2ff;
+        border-left: 5px solid #4f46e5;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    .simple {
+        background: #ecfdf5;
+        border-left: 5px solid #10b981;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    .important {
+        background: #fff7ed;
+        border-left: 5px solid #f97316;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    .tip {
+        background: #fefce8;
+        border-left: 5px solid #eab308;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    ul, ol {
+        padding-left: 25px;
+        margin: 10px 0;
+    }
+
+    li {
+        margin-bottom: 7px;
+    }
+
+    .step {
+        background: #f8fafc;
+        padding: 12px 15px;
+        border-radius: 10px;
+        margin: 8px 0;
+        border: 1px solid #e2e8f0;
+    }
+
+    .step strong {
+        color: #4f46e5;
+    }
+
+    details {
+        margin: 12px 0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    details > summary {
+        cursor: pointer;
+        padding: 13px 16px;
+        background: #eef2ff;
+        color: #3730a3;
+        font-weight: bold;
+        border-radius: 10px;
+        list-style-position: inside;
+    }
+
+    details > summary:hover {
+        background: #e0e7ff;
+    }
+
+    details.answer > summary {
+        background: #ecfdf5;
+        color: #047857;
+        font-weight: normal;
+    }
+
+    details.answer > summary:hover {
+        background: #d1fae5;
+    }
+
+    .answer-box {
+        background: #f0fdf4;
+        padding: 15px;
+        border-left: 4px solid #10b981;
+        margin: 0;
+    }
+
+    .mcq-link {
+        display: inline-block;
+        background: linear-gradient(135deg, #4f46e5, #7c3aed);
+        color: white;
+        text-decoration: none;
+        padding: 13px 22px;
+        border-radius: 12px;
+        font-weight: bold;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .mcq-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(79,70,229,0.3);
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+    }
+
+    .navigation a {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        padding: 14px 18px;
+        border-radius: 12px;
+        font-weight: bold;
+        background: linear-gradient(135deg, #4f46e5, #7c3aed);
+        transition: 0.3s;
+    }
+
+    .navigation a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(79,70,229,0.25);
+    }
+
+    footer {
+        background: #111827;
+        color: white;
+        text-align: center;
+        padding: 25px 15px;
+        margin-top: 40px;
+    }
+
+    .badge {
+        display: inline-block;
+        background: #ede9fe;
+        color: #5b21b6;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin: 4px;
+    }
+
+    @media (max-width: 700px) {
+        header h1 {
+            font-size: 1.55rem;
+        }
+
+        .card {
+            padding: 18px;
+        }
+
+        .navigation {
+            flex-direction: column;
+        }
+
+        .navigation a {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SESSION 1: CREATE AND APPLY STYLES IN THE DOCUMENT</h1>
+    <p>Class 10 Information Technology – Code 402 | Unit 1: Digital Documentation (Advanced)</p>
+
+    <div style="margin-top:15px;">
+        <span class="badge">LibreOffice Writer</span>
+        <span class="badge">Digital Documentation</span>
+        <span class="badge">Class 10 IT 402</span>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- INTRODUCTION -->
+    <section class="card">
+        <h2>📘 Session Introduction</h2>
+
+        <p>
+            Styles are one of the most useful features of LibreOffice Writer.
+            They help us apply the same formatting to different parts of a document
+            quickly and consistently.
+        </p>
+
+        <p>
+            Instead of manually changing font, size, colour, alignment and spacing
+            again and again, we can create or apply a style. When the style is
+            changed, all the text using that style can be updated accordingly.
+        </p>
+
+        <div class="important">
+            <strong>Exam Point:</strong>
+            Styles help in maintaining consistency, saving time and creating
+            professional-looking documents.
+        </div>
+    </section>
+
+
+    <!-- LEARNING OBJECTIVES -->
+    <section class="card">
+        <h2>🎯 Learning Objectives</h2>
+
+        <p>After completing this session, students should be able to:</p>
+
+        <ul>
+            <li>Understand the meaning and importance of styles.</li>
+            <li>Identify different categories of styles.</li>
+            <li>Open and use the Styles and Formatting window.</li>
+            <li>Apply styles to text and paragraphs.</li>
+            <li>Use Fill Format to apply styles quickly.</li>
+            <li>Create a new style from a selection.</li>
+            <li>Update an existing style from a selection.</li>
+            <li>Load styles from another document or template.</li>
+            <li>Create a style using drag-and-drop.</li>
+        </ul>
+    </section>
+
+
+    <!-- WHAT IS STYLE -->
+    <section class="card">
+        <h2>1️⃣ What is a Style?</h2>
+
+        <div class="definition">
+            <strong>Formal Definition:</strong><br>
+            A style is a predefined or user-defined collection of formatting
+            properties that can be applied to text, paragraphs, pages, lists,
+            tables or other elements of a document.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Definition:</strong><br>
+            A style is a ready-made set of formatting instructions that allows us
+            to format a document quickly and consistently.
+        </div>
+
+        <h3>Example</h3>
+
+        <p>
+            Suppose all main headings in a document should be blue, bold and
+            18-point in size. Instead of applying these settings manually to every
+            heading, we can create and apply one heading style.
+        </p>
+
+        <details>
+            <summary>❓ Question: What is a style in LibreOffice Writer?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A style is a collection of formatting properties that can be
+                    applied to document elements such as paragraphs, characters,
+                    pages, lists and tables.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- WHY STYLES -->
+    <section class="card">
+        <h2>2️⃣ Why are Styles Useful?</h2>
+
+        <p>Styles are useful because they:</p>
+
+        <ul>
+            <li>Save time while formatting a document.</li>
+            <li>Maintain consistency throughout the document.</li>
+            <li>Make documents look professional.</li>
+            <li>Allow multiple formatting properties to be applied together.</li>
+            <li>Make it easier to modify formatting later.</li>
+            <li>Help create structured documents.</li>
+            <li>Are useful when creating a Table of Contents.</li>
+        </ul>
+
+        <div class="tip">
+            <strong>Remember:</strong>
+            If the same formatting has to be used repeatedly, using a style is
+            generally better than formatting each item manually.
+        </div>
+
+        <details>
+            <summary>❓ Question: Mention any three advantages of using styles.</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Three advantages are:
+                    <ol>
+                        <li>They save formatting time.</li>
+                        <li>They maintain consistency in the document.</li>
+                        <li>They make future formatting changes easier.</li>
+                    </ol>
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="card">
+        <h2>3️⃣ Categories of Styles</h2>
+
+        <p>
+            LibreOffice Writer provides different categories of styles for
+            different purposes.
+        </p>
+
+        <ul>
+            <li><strong>Paragraph Styles</strong></li>
+            <li><strong>Character Styles</strong></li>
+            <li><strong>Frame Styles</strong></li>
+            <li><strong>Page Styles</strong></li>
+            <li><strong>List Styles</strong></li>
+            <li><strong>Table Styles</strong></li>
+        </ul>
+
+        <div class="important">
+            <strong>Exam Point:</strong>
+            Remember the six major categories:
+            Paragraph, Character, Frame, Page, List and Table.
+        </div>
+
+        <details>
+            <summary>❓ Question: Name the different categories of styles in LibreOffice Writer.</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    The major categories are Paragraph, Character, Frame, Page,
+                    List and Table styles.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- PARAGRAPH STYLE -->
+    <section class="card">
+        <h2>4️⃣ Paragraph Style</h2>
+
+        <div class="definition">
+            <strong>Formal Definition:</strong><br>
+            A paragraph style is a collection of formatting properties that can
+            be applied to an entire paragraph.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Definition:</strong><br>
+            It controls the appearance and layout of a complete paragraph.
+        </div>
+
+        <p>It may control properties such as:</p>
+
+        <ul>
+            <li>Font and font size</li>
+            <li>Alignment</li>
+            <li>Indentation</li>
+            <li>Line spacing</li>
+            <li>Spacing above and below paragraphs</li>
+            <li>Borders and background</li>
+        </ul>
+
+        <details>
+            <summary>❓ Question: What is a paragraph style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A paragraph style is a collection of formatting properties
+                    that can be applied to an entire paragraph.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- CHARACTER STYLE -->
+    <section class="card">
+        <h2>5️⃣ Character Style</h2>
+
+        <div class="definition">
+            <strong>Formal Definition:</strong><br>
+            A character style is a collection of formatting properties applied
+            to selected characters or words within a paragraph.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Definition:</strong><br>
+            It changes the appearance of selected letters, words or characters
+            without changing the entire paragraph.
+        </div>
+
+        <p>Character styles may control:</p>
+
+        <ul>
+            <li>Font</li>
+            <li>Font size</li>
+            <li>Font colour</li>
+            <li>Bold or italic appearance</li>
+            <li>Character effects</li>
+        </ul>
+
+        <details>
+            <summary>❓ Question: What is a character style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A character style is used to apply formatting to selected
+                    characters or words within a paragraph.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- FRAME STYLE -->
+    <section class="card">
+        <h2>6️⃣ Frame Style</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            Frame styles are used to control the formatting and positioning of
+            frames and objects in a document.
+        </div>
+
+        <p>
+            Frames can be used for objects such as images, text boxes and other
+            document elements.
+        </p>
+
+        <details>
+            <summary>❓ Question: What is the purpose of a frame style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Frame styles are used to control the formatting,
+                    positioning and appearance of frames and objects in a
+                    document.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- PAGE STYLE -->
+    <section class="card">
+        <h2>7️⃣ Page Style</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            A page style is a collection of formatting settings that controls
+            the layout and appearance of a page.
+        </div>
+
+        <p>It can include settings such as:</p>
+
+        <ul>
+            <li>Page size</li>
+            <li>Margins</li>
+            <li>Orientation</li>
+            <li>Headers and footers</li>
+            <li>Columns</li>
+        </ul>
+
+        <details>
+            <summary>❓ Question: What is a page style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A page style is a collection of settings used to control
+                    the layout and appearance of a page, such as margins,
+                    orientation, page size and headers or footers.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- LIST STYLE -->
+    <section class="card">
+        <h2>8️⃣ List Style</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            A list style is used to control the appearance and formatting of
+            numbered or bulleted lists.
+        </div>
+
+        <p>
+            It helps maintain a consistent appearance for lists throughout a
+            document.
+        </p>
+
+        <details>
+            <summary>❓ Question: What is a list style used for?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A list style is used to control the formatting and appearance
+                    of numbered and bulleted lists.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- TABLE STYLE -->
+    <section class="card">
+        <h2>9️⃣ Table Style</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            A table style is used to apply a consistent set of formatting
+            properties to tables.
+        </div>
+
+        <p>
+            It can help maintain consistent borders, backgrounds, alignment and
+            other table formatting.
+        </p>
+
+        <details>
+            <summary>❓ Question: What is a table style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A table style is a set of formatting properties used to give
+                    tables a consistent appearance.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- STYLES WINDOW -->
+    <section class="card">
+        <h2>🔟 Styles and Formatting Window</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            The Styles and Formatting window is a tool in LibreOffice Writer
+            that allows users to view, manage, create, modify and apply styles.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Explanation:</strong><br>
+            It acts like a central place from where we can manage the styles
+            used in our document.
+        </div>
+
+        <h3>Opening the Styles Panel</h3>
+
+        <p>
+            In LibreOffice Writer, the Styles panel can generally be opened
+            through the <strong>Styles</strong> menu or the corresponding
+            keyboard shortcut/interface control, depending on the LibreOffice
+            version.
+        </p>
+
+        <div class="tip">
+            The exact appearance or menu location may vary slightly between
+            LibreOffice versions.
+        </div>
+
+        <details>
+            <summary>❓ Question: What is the purpose of the Styles and Formatting window?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    It is used to view, manage, create, modify and apply styles
+                    in a document.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- APPLY STYLE -->
+    <section class="card">
+        <h2>1️⃣1️⃣ Applying a Style</h2>
+
+        <p>
+            Applying a style means selecting a suitable style and assigning it
+            to the required text, paragraph or other document element.
+        </p>
+
+        <h3>Practical Steps</h3>
+
+        <div class="step"><strong>Step 1:</strong> Open the document in LibreOffice Writer.</div>
+        <div class="step"><strong>Step 2:</strong> Select the text or place the cursor in the required paragraph.</div>
+        <div class="step"><strong>Step 3:</strong> Open the Styles panel.</div>
+        <div class="step"><strong>Step 4:</strong> Select the appropriate style category.</div>
+        <div class="step"><strong>Step 5:</strong> Select the required style.</div>
+        <div class="step"><strong>Step 6:</strong> The selected content will receive the formatting defined by the style.</div>
+
+        <details>
+            <summary>❓ Question: What is meant by applying a style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Applying a style means assigning a predefined or user-created
+                    set of formatting properties to the required document element.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- FILL FORMAT -->
+    <section class="card">
+        <h2>1️⃣2️⃣ Fill Format</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            Fill Format is a feature that allows a selected style to be applied
+            repeatedly to different parts of a document.
+        </div>
+
+        <h3>Practical Steps</h3>
+
+        <div class="step"><strong>Step 1:</strong> Open the Styles panel.</div>
+        <div class="step"><strong>Step 2:</strong> Select the required style.</div>
+        <div class="step"><strong>Step 3:</strong> Activate the Fill Format mode.</div>
+        <div class="step"><strong>Step 4:</strong> Click the paragraphs or document elements where the style should be applied.</div>
+        <div class="step"><strong>Step 5:</strong> Exit Fill Format mode after completing the task.</div>
+
+        <div class="tip">
+            <strong>Use:</strong>
+            Fill Format is useful when the same style needs to be applied to
+            several different places quickly.
+        </div>
+
+        <details>
+            <summary>❓ Question: What is Fill Format used for?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Fill Format is used to apply the selected style repeatedly
+                    to different parts of a document quickly.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- CREATE STYLE FROM SELECTION -->
+    <section class="card">
+        <h2>1️⃣3️⃣ Creating a New Style from a Selection</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            A new style can be created from a formatted selection so that the
+            same formatting can be reused elsewhere in the document.
+        </div>
+
+        <h3>Practical Steps</h3>
+
+        <div class="step"><strong>Step 1:</strong> Format a piece of text or paragraph according to your requirement.</div>
+        <div class="step"><strong>Step 2:</strong> Select the formatted content.</div>
+        <div class="step"><strong>Step 3:</strong> Open the Styles panel.</div>
+        <div class="step"><strong>Step 4:</strong> Use the option for creating a new style from the current selection.</div>
+        <div class="step"><strong>Step 5:</strong> Give the new style a meaningful name.</div>
+        <div class="step"><strong>Step 6:</strong> Save/create the style.</div>
+
+        <details>
+            <summary>❓ Question: Why can a style be created from a selection?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    It allows the formatting of an existing selection to be
+                    converted into a reusable style.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- UPDATE STYLE -->
+    <section class="card">
+        <h2>1️⃣4️⃣ Updating a Style from a Selection</h2>
+
+        <p>
+            An existing style can be modified by changing the formatting of
+            selected content and then updating the style.
+        </p>
+
+        <h3>Practical Steps</h3>
+
+        <div class="step"><strong>Step 1:</strong> Apply the existing style to some content.</div>
+        <div class="step"><strong>Step 2:</strong> Modify the formatting of the selected content.</div>
+        <div class="step"><strong>Step 3:</strong> Open the Styles panel.</div>
+        <div class="step"><strong>Step 4:</strong> Select the option to update the style from the current selection.</div>
+        <div class="step"><strong>Step 5:</strong> The style is updated with the new formatting.</div>
+
+        <details>
+            <summary>❓ Question: What happens when a style is updated from a selection?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    The formatting of the selected content is used to update the
+                    existing style, so the style contains the new formatting.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- LOAD STYLES -->
+    <section class="card">
+        <h2>1️⃣5️⃣ Loading Styles from Another Document or Template</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            Loading styles means importing styles from another document or
+            template so that they can be used in the current document.
+        </div>
+
+        <h3>Practical Steps</h3>
+
+        <div class="step"><strong>Step 1:</strong> Open the document in which the styles are required.</div>
+        <div class="step"><strong>Step 2:</strong> Open the Styles panel.</div>
+        <div class="step"><strong>Step 3:</strong> Choose the option for loading/importing styles.</div>
+        <div class="step"><strong>Step 4:</strong> Select the source document or template.</div>
+        <div class="step"><strong>Step 5:</strong> Select the required style categories/options.</div>
+        <div class="step"><strong>Step 6:</strong> Import the styles.</div>
+
+        <details>
+            <summary>❓ Question: What is meant by loading styles?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Loading styles means importing styles from another document
+                    or template so that they can be used in the current document.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- DRAG AND DROP -->
+    <section class="card">
+        <h2>1️⃣6️⃣ Creating a New Style Using Drag-and-Drop</h2>
+
+        <p>
+            LibreOffice Writer can also provide a convenient way to create a
+            new style by dragging formatted content into the Styles panel.
+        </p>
+
+        <h3>General Practical Procedure</h3>
+
+        <div class="step"><strong>Step 1:</strong> Format the text or paragraph as required.</div>
+        <div class="step"><strong>Step 2:</strong> Select the formatted content.</div>
+        <div class="step"><strong>Step 3:</strong> Open the appropriate Styles category.</div>
+        <div class="step"><strong>Step 4:</strong> Drag the selected content to the Styles panel as supported by the LibreOffice interface.</div>
+        <div class="step"><strong>Step 5:</strong> Provide a suitable name for the new style.</div>
+        <div class="step"><strong>Step 6:</strong> Save the style.</div>
+
+        <details>
+            <summary>❓ Question: How can a new style be created using drag-and-drop?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A new style can be created by selecting suitably formatted
+                    content and dragging it to the appropriate Styles area,
+                    followed by naming and saving the new style.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- FULL PRACTICAL -->
+    <section class="card">
+        <h2>💻 Full Practical Activity: Create and Apply Styles</h2>
+
+        <p>
+            Perform the following activity in LibreOffice Writer.
+        </p>
+
+        <h3>Task</h3>
+
+        <p>
+            Create a document on the topic
+            <strong>“Importance of Information Technology”</strong>.
+            Create and apply different styles to the title, headings and body
+            paragraphs.
+        </p>
+
+        <h3>Suggested Procedure</h3>
+
+        <div class="step"><strong>Step 1:</strong> Open LibreOffice Writer.</div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Type a title:
+            <strong>Importance of Information Technology</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Apply a suitable heading/title style to the title.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Type two or three paragraphs about Information Technology.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Apply a suitable paragraph style to the body paragraphs.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Create a new style from a formatted selection.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Apply the newly created style to another part of the document.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            Modify the formatting and update the style from the selection.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Save the document.
+        </div>
+
+        <div class="important">
+            <strong>Learning Outcome:</strong>
+            You should be able to create, apply and modify styles instead of
+            formatting every part of the document manually.
+        </div>
+    </section>
+
+
+    <!-- ADVANTAGES -->
+    <section class="card">
+        <h2>⭐ Advantages of Using Styles</h2>
+
+        <ol>
+            <li>Styles save time.</li>
+            <li>They provide consistency.</li>
+            <li>They make documents professional.</li>
+            <li>They make formatting easier to modify.</li>
+            <li>They help organise long documents.</li>
+            <li>They are useful for creating structured documents.</li>
+            <li>They reduce repetitive manual formatting.</li>
+        </ol>
+
+        <details>
+            <summary>❓ Question: Why are styles preferred over repeated manual formatting?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Styles are preferred because they save time, maintain
+                    consistency and allow formatting to be changed easily
+                    across multiple parts of a document.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- APPLICATION BASED -->
+    <section class="card">
+        <h2>🧠 Application-Based Questions</h2>
+
+        <details>
+            <summary>Q1. A student has a 20-page document with 15 headings. All headings need the same formatting. What should the student use?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    The student should use a heading style so that the same
+                    formatting can be applied consistently to all headings.
+                </div>
+            </details>
+        </details>
+
+        <details>
+            <summary>Q2. A student manually formats every heading separately. What problem can this create?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Manual formatting can take more time and may result in
+                    inconsistent formatting throughout the document.
+                </div>
+            </details>
+        </details>
+
+        <details>
+            <summary>Q3. A student wants to change the formatting of all content using the same style. What is the benefit of using a style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    The student can modify the style, allowing the formatting
+                    associated with that style to be changed consistently.
+                </div>
+            </details>
+        </details>
+
+        <details>
+            <summary>Q4. A particular paragraph has been formatted exactly as required. The student wants to reuse the same formatting. What can be done?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    The student can create a new style from the formatted
+                    selection and apply that style elsewhere.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- QUESTIONS -->
+    <section class="card">
+        <h2>📚 Important Questions – Styles</h2>
+
+        <details>
+            <summary>Q1. Define a style.</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A style is a collection of formatting properties that can
+                    be applied to document elements such as paragraphs,
+                    characters, pages, lists and tables.
+                </div>
+            </details>
+        </details>
+
+        <details>
+            <summary>Q2. What is the difference between paragraph style and character style?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    A paragraph style applies formatting to an entire paragraph,
+                    whereas a character style applies formatting to selected
+                    characters or words within a paragraph.
+                </div>
+            </details>
+        </details>
+
+        <details>
+            <summary>Q3. Name the six major categories of styles.</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Paragraph, Character, Frame, Page, List and Table styles.
+                </div>
+            </details>
+        </details>
+
+        <details>
+            <summary>Q4. What is Fill Format?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Fill Format is a feature used to apply the selected style
+                    repeatedly to different parts of a document.
+                </div>
+            </details>
+        </details>
+
+        <details>
+            <summary>Q5. What is meant by loading styles?</summary>
+
+            <details class="answer">
+                <summary>🔹 View Answer</summary>
+                <div class="answer-box">
+                    Loading styles means importing styles from another document
+                    or template into the current document.
+                </div>
+            </details>
+        </details>
+    </section>
+
+
+    <!-- MCQ LINK -->
+    <section class="card">
+        <h2>📝 Class 10 IT – Unit 1 MCQs</h2>
+
+        <p>
+            Practice <strong>50 MCQs</strong> based on Digital Documentation
+            and Session 1 concepts.
+        </p>
+
+        <p>
+            The complete MCQ set will be provided as a separate file.
+        </p>
+
+        <!-- Change the filename below when the 50-question file is uploaded -->
+        <a href="class10-it-unit1-session1-mcqs.html" class="mcq-link">
+            👉 Open 50 MCQs
+        </a>
+
+        <div class="tip">
+            <strong>Note:</strong>
+            Upload the separate 50-question MCQ file in the same website folder
+            and keep the filename the same as used in the link above.
+        </div>
+    </section>
+
+
+    <!-- NAVIGATION -->
+    <div class="navigation">
+
+        <a href="class10-it-unit1-digital-documentation.html">
+            📘 Digital Documentation
+        </a>
+
+        <a href="class10-it-unit1-session2-images.html">
+            🖼️ Insert and Use Images
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p><strong>Edusphere with Satyam</strong></p>
+    <p>Class 10 Information Technology – Code 402</p>
+    <p>Unit 1: Digital Documentation (Advanced)</p>
+</footer>
+
+</body>
+</html>
