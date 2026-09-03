@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Session 3 – Create and Use Templates | Class 10 IT 402</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .card {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+            border-left: 6px solid #6366f1;
+        }
+
+        .card h2 {
+            color: #4f46e5;
+            margin-top: 0;
+        }
+
+        .card h3 {
+            color: #7c3aed;
+        }
+
+        .intro {
+            border-left-color: #ec4899;
+        }
+
+        .definition {
+            background: #eef2ff;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .simple {
+            background: #ecfdf5;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .note {
+            background: #fff7ed;
+            padding: 16px;
+            border-left: 5px solid #f97316;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .warning {
+            background: #fef2f2;
+            padding: 16px;
+            border-left: 5px solid #ef4444;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tip {
+            background: #f0fdf4;
+            padding: 16px;
+            border-left: 5px solid #22c55e;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .step {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 12px 0;
+        }
+
+        .step strong {
+            color: #4f46e5;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 7px;
+            border-radius: 5px;
+            color: #be123c;
+        }
+
+        /* Two-layer questions */
+
+        details.question {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            margin: 12px 0;
+            padding: 0;
+        }
+
+        details.question > summary {
+            cursor: pointer;
+            padding: 14px 17px;
+            font-weight: bold;
+            color: #4338ca;
+            list-style-position: inside;
+        }
+
+        details.question > summary:hover {
+            background: #eef2ff;
+            border-radius: 12px;
+        }
+
+        .answer-box {
+            padding: 5px 17px 17px 17px;
+        }
+
+        details.answer {
+            background: white;
+            border: 1px solid #d8dee9;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        details.answer summary {
+            cursor: pointer;
+            padding: 10px 13px;
+            color: #059669;
+            font-weight: bold;
+        }
+
+        .answer {
+            padding: 10px 13px 14px;
+            background: #ecfdf5;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .mcq-link {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .navigation a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            padding: 13px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SESSION 3: CREATE AND USE TEMPLATE</h1>
+    <p>Class 10 Information Technology (402) | Unit 1 – Digital Documentation (Advanced)</p>
+</header>
+
+<div class="container">
+
+    <!-- INTRODUCTION -->
+
+    <section class="card intro">
+        <h2>📘 Session Introduction</h2>
+
+        <p>
+            A document often contains a fixed structure, design, formatting and
+            other elements that need to be used repeatedly. Creating the same
+            structure again and again can waste time and may also result in
+            inconsistent formatting.
+        </p>
+
+        <p>
+            LibreOffice Writer provides <strong>Templates</strong> to solve this
+            problem. A template stores a predefined document structure and
+            formatting that can be reused to create new documents.
+        </p>
+
+        <div class="simple">
+            <strong>In simple words:</strong>
+            A template is a ready-made document design that can be reused
+            whenever a similar type of document is required.
+        </div>
+    </section>
+
+
+    <!-- WHAT IS TEMPLATE -->
+
+    <section class="card">
+        <h2>📄 What is a Template?</h2>
+
+        <div class="definition">
+            <strong>Formal Definition:</strong><br>
+            A template is a pre-designed document that contains predefined
+            formatting, styles, layout, text, images and other document
+            elements that can be reused to create new documents.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Definition:</strong><br>
+            A template is a ready-made pattern or model of a document that
+            can be used again and again.
+        </div>
+
+        <h3>Examples of Templates</h3>
+
+        <ul>
+            <li>School notice template</li>
+            <li>Letter template</li>
+            <li>Resume template</li>
+            <li>Report template</li>
+            <li>Certificate template</li>
+            <li>Business letter template</li>
+            <li>Meeting agenda template</li>
+            <li>Invoice template</li>
+        </ul>
+
+        <div class="note">
+            <strong>Important:</strong>
+            A template is not simply an ordinary document. It is designed
+            especially for repeated use.
+        </div>
+    </section>
+
+
+    <!-- TEMPLATE VS DOCUMENT -->
+
+    <section class="card">
+        <h2>🔄 Template vs. Normal Document</h2>
+
+        <div class="step">
+            <strong>Normal Document:</strong>
+            A normal document is generally created for a particular purpose
+            and contains the actual information that will be used or shared.
+        </div>
+
+        <div class="step">
+            <strong>Template:</strong>
+            A template contains a predefined structure and design that can be
+            reused to create multiple similar documents.
+        </div>
+
+        <div class="step">
+            <strong>Example:</strong>
+            Suppose a school regularly creates notices. Instead of designing
+            the heading, school name, logo, font and layout every time, a
+            notice template can be created once and reused.
+        </div>
+
+        <div class="tip">
+            <strong>Remember:</strong>
+            Template = Reusable design/structure<br>
+            Document = Actual document containing specific information
+        </div>
+    </section>
+
+
+    <!-- ELEMENTS -->
+
+    <section class="card">
+        <h2>🧩 Elements That Can Be Included in a Template</h2>
+
+        <p>A template may contain many predefined elements, such as:</p>
+
+        <ul>
+            <li>Page size and page orientation</li>
+            <li>Margins</li>
+            <li>Fonts and font sizes</li>
+            <li>Paragraph formatting</li>
+            <li>Heading styles</li>
+            <li>Page styles</li>
+            <li>Headers and footers</li>
+            <li>Tables</li>
+            <li>Images and logos</li>
+            <li>Bulleted and numbered lists</li>
+            <li>Predefined text</li>
+            <li>Colours and other formatting</li>
+            <li>Page numbering</li>
+        </ul>
+
+        <div class="simple">
+            The purpose of these elements is to make future documents
+            consistent and faster to prepare.
+        </div>
+    </section>
+
+
+    <!-- ADVANTAGES -->
+
+    <section class="card">
+        <h2>⭐ Advantages of Using Templates</h2>
+
+        <ol>
+            <li><strong>Saves Time:</strong> Repeated formatting does not have to be done again.</li>
+
+            <li><strong>Consistency:</strong> Similar documents can have the same design and formatting.</li>
+
+            <li><strong>Reduces Repetitive Work:</strong> Common elements only need to be created once.</li>
+
+            <li><strong>Improves Appearance:</strong> Documents can have a professional and organized appearance.</li>
+
+            <li><strong>Easy Reuse:</strong> The same structure can be used whenever required.</li>
+
+            <li><strong>Reduces Formatting Errors:</strong> Predefined formatting reduces the possibility of inconsistent formatting.</li>
+
+            <li><strong>Improves Productivity:</strong> More documents can be created in less time.</li>
+        </ol>
+    </section>
+
+
+    <!-- CREATE TEMPLATE -->
+
+    <section class="card">
+        <h2>🛠️ Creating a Template from an Existing Document</h2>
+
+        <p>
+            If you have already prepared a document and want to reuse its
+            design and formatting, you can save it as a template.
+        </p>
+
+        <h3>Step-by-Step Procedure</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open <strong>LibreOffice Writer</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Open the document that you want to use as the basis for your
+            template.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Check the document carefully.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Make sure that the required formatting, headings, logo,
+            tables, page layout and other elements are correctly arranged.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Click the <strong>File</strong> menu from the menu bar.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Select <strong>Templates</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Select <strong>Save as Template</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            A dialog box for saving the template will appear.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Enter a suitable name for the template.
+            <br>
+            Example: <code>School Notice Template</code>
+        </div>
+
+        <div class="step">
+            <strong>Step 10:</strong>
+            Select an appropriate template category.
+        </div>
+
+        <div class="step">
+            <strong>Step 11:</strong>
+            If required, select the option to make the template the default
+            template for the relevant document type.
+        </div>
+
+        <div class="step">
+            <strong>Step 12:</strong>
+            Click <strong>Save</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 13:</strong>
+            The document is now stored as a reusable template.
+        </div>
+
+        <div class="tip">
+            <strong>Practical Tip:</strong>
+            Give templates meaningful names so that they can easily be
+            identified later.
+        </div>
+    </section>
+
+
+    <!-- CREATE NEW DOCUMENT FROM TEMPLATE -->
+
+    <section class="card">
+        <h2>📑 Creating a New Document from a Template</h2>
+
+        <p>
+            After creating a template, you can use it whenever you need to
+            create a new document with the same structure and formatting.
+        </p>
+
+        <h3>Step-by-Step Procedure</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open <strong>LibreOffice Writer</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Click <strong>File</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select <strong>New</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Select <strong>Templates</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            The Template dialog will open.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Select the category containing your template.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Locate the required template.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            Click the template to select it.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Click <strong>Open</strong> or double-click the template,
+            depending on the LibreOffice version.
+        </div>
+
+        <div class="step">
+            <strong>Step 10:</strong>
+            A new document will be created using the template.
+        </div>
+
+        <div class="step">
+            <strong>Step 11:</strong>
+            Enter the new or required information.
+        </div>
+
+        <div class="step">
+            <strong>Step 12:</strong>
+            Check the document.
+        </div>
+
+        <div class="step">
+            <strong>Step 13:</strong>
+            Save the new document using an appropriate file name.
+        </div>
+
+        <div class="warning">
+            <strong>Important:</strong>
+            When you create a new document from a template, you normally work
+            on the new document rather than directly changing the template.
+        </div>
+    </section>
+
+
+    <!-- MANAGING TEMPLATES -->
+
+    <section class="card">
+        <h2>🗂️ Managing Templates</h2>
+
+        <p>
+            LibreOffice allows users to manage stored templates. Templates
+            can be opened, edited, deleted, moved, exported and organized.
+        </p>
+
+        <h3>Opening the Template Manager</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open LibreOffice Writer.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Open the <strong>File</strong> menu.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select <strong>Templates</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Select <strong>Manage Templates</strong> if it is shown in your
+            LibreOffice version.
+        </div>
+
+        <h3>Common Template Management Operations</h3>
+
+        <div class="step">
+            <strong>Use:</strong>
+            Open a template and create a new document from it.
+        </div>
+
+        <div class="step">
+            <strong>Edit:</strong>
+            Modify the template when its design or structure needs to be
+            changed.
+        </div>
+
+        <div class="step">
+            <strong>Delete:</strong>
+            Remove an unnecessary template.
+        </div>
+
+        <div class="step">
+            <strong>Move:</strong>
+            Organize a template into another suitable category or location.
+        </div>
+
+        <div class="step">
+            <strong>Export:</strong>
+            Save a template so that it can be transferred or shared.
+        </div>
+    </section>
+
+
+    <!-- MODIFY TEMPLATE -->
+
+    <section class="card">
+        <h2>✏️ Modifying or Editing a Template</h2>
+
+        <p>
+            A template may need to be modified when the school name, logo,
+            design, formatting or other standard information changes.
+        </p>
+
+        <h3>Step-by-Step Procedure</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the Template Manager.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Locate the template that you want to modify.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select the required template.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Use the available edit option for the selected template.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            The template will open for editing.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Make the required changes.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Check fonts, headings, spacing, images, tables, page layout and
+            other elements.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            Save the changes.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Close the template.
+        </div>
+
+        <div class="tip">
+            The changes made to the template can be used when new documents
+            are created from the updated template.
+        </div>
+    </section>
+
+
+    <!-- DEFAULT TEMPLATE -->
+
+    <section class="card">
+        <h2>⚙️ Setting a Default Template</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong>
+            A default template is a template that LibreOffice automatically
+            uses as the starting point when creating a new document of the
+            corresponding type.
+        </div>
+
+        <h3>Step-by-Step Procedure</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the Template Manager.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Locate the template that you want to make the default.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select the template.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Open the template's context menu or available options.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Select <strong>Set as Default</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            The selected template becomes the default template.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Create a new Writer document to check whether the default
+            template is being used.
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong>
+            The exact wording or location of a command may vary slightly
+            between LibreOffice versions.
+        </div>
+    </section>
+
+
+    <!-- RESET DEFAULT -->
+
+    <section class="card">
+        <h2>🔄 Resetting the Default Template</h2>
+
+        <p>
+            If you no longer want a custom template to be the default,
+            LibreOffice provides an option to restore the standard default
+            template.
+        </p>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the Template Manager.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Open the options/context menu for the current default template.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select the option to reset or restore the default template.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Confirm the operation if LibreOffice asks for confirmation.
+        </div>
+    </section>
+
+
+    <!-- PRACTICAL ACTIVITY -->
+
+    <section class="card">
+        <h2>🧪 Practical Activity: Create a School Notice Template</h2>
+
+        <p>
+            In this activity, you will create a reusable template for
+            preparing school notices.
+        </p>
+
+        <h3>Part A – Prepare the Document</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open LibreOffice Writer.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Create a new blank Writer document.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Type the school name at the top.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Select the school name.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Apply suitable formatting such as bold, larger font size and
+            centre alignment.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Type <strong>NOTICE</strong> below the school name.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Format the word NOTICE appropriately.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            Add placeholders or suitable spaces for:
+            <ul>
+                <li>Date</li>
+                <li>Notice subject/title</li>
+                <li>Main notice content</li>
+                <li>Name of issuing authority</li>
+                <li>Designation</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Arrange the content properly.
+        </div>
+
+        <div class="step">
+            <strong>Step 10:</strong>
+            Check alignment, spacing and font formatting.
+        </div>
+
+
+        <h3>Part B – Save as Template</h3>
+
+        <div class="step">
+            <strong>Step 11:</strong>
+            Click <strong>File</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 12:</strong>
+            Select <strong>Templates</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 13:</strong>
+            Select <strong>Save as Template</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 14:</strong>
+            Enter the template name:
+            <code>School Notice Template</code>
+        </div>
+
+        <div class="step">
+            <strong>Step 15:</strong>
+            Select an appropriate category.
+        </div>
+
+        <div class="step">
+            <strong>Step 16:</strong>
+            Click <strong>Save</strong>.
+        </div>
+
+
+        <h3>Part C – Use the Template</h3>
+
+        <div class="step">
+            <strong>Step 17:</strong>
+            Open the Template Manager.
+        </div>
+
+        <div class="step">
+            <strong>Step 18:</strong>
+            Find <code>School Notice Template</code>.
+        </div>
+
+        <div class="step">
+            <strong>Step 19:</strong>
+            Select the template.
+        </div>
+
+        <div class="step">
+            <strong>Step 20:</strong>
+            Open the template to create a new document.
+        </div>
+
+        <div class="step">
+            <strong>Step 21:</strong>
+            Enter actual notice information.
+        </div>
+
+        <div class="step">
+            <strong>Step 22:</strong>
+            Check the completed notice.
+        </div>
+
+        <div class="step">
+            <strong>Step 23:</strong>
+            Save the notice with a different file name.
+        </div>
+
+        <div class="tip">
+            <strong>Result:</strong>
+            You have created a reusable school notice template and used it
+            to prepare a new notice.
+        </div>
+    </section>
+
+
+    <!-- APPLICATION BASED QUESTIONS -->
+
+    <section class="card">
+        <h2>🧠 Application-Based Questions</h2>
+
+        <details class="question">
+            <summary>1. A school prepares 20 notices every month. Each notice has the same school name, logo, heading and basic layout. What should the school use?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        The school should create and use a
+                        <strong>template</strong>. It will save time and
+                        maintain the same formatting in all notices.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>2. Ravi created a notice template. He now wants to prepare a new notice without changing the original template. What should he do?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Ravi should create a <strong>new document from the
+                        template</strong>. He should enter the new information
+                        in the newly created document.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>3. A school changes its logo and wants the new logo to appear in future notices created from its template. What should be done?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        The school should <strong>modify/edit the template</strong>
+                        and replace the old logo with the new logo. The updated
+                        template can then be used for new notices.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>4. Why is using a template better than designing every similar document from the beginning?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        A template saves time, reduces repetitive formatting
+                        work, improves consistency and helps maintain a
+                        professional document structure.
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- IMPORTANT QUESTIONS -->
+
+    <section class="card">
+        <h2>🎯 Important Questions</h2>
+
+        <details class="question">
+            <summary>1. Define a template.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        A template is a pre-designed document containing
+                        predefined formatting, layout, styles and other
+                        elements that can be reused to create new documents.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>2. Write any four advantages of using templates.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Four advantages are:
+                        <ol>
+                            <li>It saves time.</li>
+                            <li>It maintains consistency.</li>
+                            <li>It reduces repetitive formatting work.</li>
+                            <li>It improves the appearance of documents.</li>
+                        </ol>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>3. How can an existing document be saved as a template?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Open the required document, select
+                        <strong>File → Templates → Save as Template</strong>,
+                        enter a template name, choose a suitable category and
+                        save the template.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>4. How can a new document be created from a template?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Open LibreOffice Writer, go to
+                        <strong>File → New → Templates</strong>, select the
+                        required template and open it. A new document will be
+                        created using the template's structure and formatting.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>5. What is a default template?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        A default template is the template automatically used
+                        by LibreOffice as the starting point when a new
+                        document of the corresponding type is created.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>6. Why is template management important?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Template management helps users organize, use, edit,
+                        delete, move and maintain their templates efficiently.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>7. Differentiate between a template and a normal document.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        A normal document is generally created for a specific
+                        purpose and contains actual information. A template is
+                        a reusable document structure containing predefined
+                        formatting and other elements for creating similar
+                        documents.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>8. Give two examples where templates can be useful.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Templates can be useful for creating repeated
+                        documents such as <strong>school notices</strong>,
+                        <strong>resumes</strong>, letters, reports and
+                        certificates.
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- CBSE PYQ BASED -->
+
+    <section class="card">
+        <h2>📚 CBSE PYQ-Based Practice Questions</h2>
+
+        <div class="note">
+            These questions are provided as <strong>CBSE PYQ-Based Practice
+            Questions</strong>. They are intended for examination practice and
+            are not assigned a specific year unless independently verified.
+        </div>
+
+
+        <details class="question">
+            <summary>1. What is the purpose of using a template in a word processor?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        A template provides a predefined document structure and
+                        formatting that can be reused to create similar
+                        documents quickly and consistently.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>2. Explain any two benefits of using templates.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        <strong>Time saving:</strong> Repeated formatting does
+                        not need to be performed every time.
+                        <br><br>
+                        <strong>Consistency:</strong> Similar documents can
+                        maintain the same structure and appearance.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+
+        <details class="question">
+            <summary>3. Write the basic steps for creating a template from an existing document.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Open the existing document → select
+                        <strong>File → Templates → Save as Template</strong>
+                        → enter a name → select a category → save the
+                        template.
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- MCQ -->
+
+    <section class="card">
+        <h2>📝 Practice MCQs</h2>
+
+        <p>
+            Practice more questions from Session 3 using the separate MCQ
+            page.
+        </p>
+
+        <a class="mcq-link" href="class10-it-unit1-session3-mcqs.html">
+            🚀 Open Session 3 – 50 MCQs
+        </a>
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="navigation">
+        <a href="class10-it-unit1-session2-images.html">
+            ← Session 2: Insert and Use Images
+        </a>
+
+        <a href="class10-it-unit1-digital-documentation.html">
+            🏠 Unit 1 Home
+        </a>
+
+        <a href="class10-it-unit1-session4-toc.html">
+            Session 4: Table of Contents →
+        </a>
+    </div>
+
+</div>
+
+
+<footer>
+    <p>© 2026 Edusphere with Satyam</p>
+    <p>Class 10 Information Technology (402) | Unit 1 – Digital Documentation</p>
+</footer>
+
+</body>
+</html>
