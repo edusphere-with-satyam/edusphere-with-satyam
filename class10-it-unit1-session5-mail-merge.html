@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 5 - Implement Mail Merge | Class 10 IT 402</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#fdf2f8,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#db2777);
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin:8px 0 0;
+    font-size:17px;
+}
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:25px auto;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.10);
+    border-left:6px solid #6366f1;
+}
+
+.card h2{
+    color:#4f46e5;
+    margin-top:0;
+}
+
+.card h3{
+    color:#7c3aed;
+}
+
+.intro{
+    background:#fdf2f8;
+    border-left:6px solid #ec4899;
+}
+
+.definition{
+    background:#eef2ff;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.simple{
+    background:#ecfdf5;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.note{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.warning{
+    background:#fef2f2;
+    border-left:5px solid #ef4444;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.tip{
+    background:#f0fdf4;
+    border-left:5px solid #22c55e;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.step{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    padding:14px 18px;
+    margin:10px 0;
+    border-radius:10px;
+}
+
+.step strong{
+    color:#4f46e5;
+}
+
+details.question{
+    background:#f8fafc;
+    border:1px solid #cbd5e1;
+    border-radius:12px;
+    margin:12px 0;
+    padding:12px 16px;
+}
+
+details.question summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#3730a3;
+}
+
+details.answer{
+    background:#ecfdf5;
+    border-left:4px solid #22c55e;
+    border-radius:8px;
+    margin-top:12px;
+    padding:10px 14px;
+}
+
+details.answer summary{
+    color:#166534;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.mcq-link{
+    display:inline-block;
+    background:linear-gradient(135deg,#7c3aed,#db2777);
+    color:white;
+    text-decoration:none;
+    padding:13px 22px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.navigation{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.navigation a{
+    flex:1;
+    min-width:200px;
+    text-align:center;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+footer{
+    background:#1e1b4b;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+ul,ol{
+    padding-left:25px;
+}
+
+code{
+    background:#f1f5f9;
+    padding:3px 7px;
+    border-radius:5px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .card{
+        padding:19px;
+    }
+
+    .navigation{
+        flex-direction:column;
+    }
+
+    .navigation a{
+        min-width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>SESSION 5: IMPLEMENT MAIL MERGE</h1>
+
+<p>Class 10 Information Technology (402) | Unit 1 – Digital Documentation (Advanced)</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="card intro">
+
+<h2>📧 Introduction to Mail Merge</h2>
+
+<p>
+Mail Merge is an important feature of LibreOffice Writer that allows us to create
+multiple personalized documents from one main document and a data source.
+</p>
+
+<p>
+For example, a school may need to send the same notice to 100 students.
+Instead of typing the notice 100 times, we can create one main notice and use
+Mail Merge to automatically insert each student's name, class, roll number,
+address, or other information.
+</p>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong>
+
+<p>
+Mail Merge is a feature of a word processor that combines a main document
+with a data source containing records and fields to create multiple
+personalized documents.
+</p>
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong>
+
+<p>
+Mail Merge means creating many similar documents at once by combining one
+common document with a list of different people's information.
+</p>
+
+</div>
+
+<div class="note">
+
+<strong>Example:</strong>
+A school wants to prepare certificates for 50 students. The certificate design
+can remain the same, while the student's name and other details change
+automatically using Mail Merge.
+
+</div>
+
+</div>
+
+
+<!-- WHY MAIL MERGE -->
+
+<div class="card">
+
+<h2>📌 Why is Mail Merge Used?</h2>
+
+<p>
+Mail Merge is useful when the same type of document has to be prepared for
+many people, but some information in each document is different.
+</p>
+
+<ul>
+
+<li>Sending personalized letters to many people.</li>
+
+<li>Preparing student notices.</li>
+
+<li>Creating certificates with different student names.</li>
+
+<li>Preparing invitations.</li>
+
+<li>Creating address labels.</li>
+
+<li>Preparing envelopes.</li>
+
+<li>Generating personalized office documents.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Remember:</strong>
+The main content generally remains the same, while selected information
+such as name, address or roll number changes for each record.
+
+</div>
+
+</div>
+
+
+<!-- IMPORTANT TERMS -->
+
+<div class="card">
+
+<h2>📚 Important Terms Used in Mail Merge</h2>
+
+<h3>1. Main Document</h3>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong>
+The document containing the common text, formatting and placeholders that
+will be combined with the data source.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Meaning:</strong>
+It is the common document that will be sent to everyone.
+
+</div>
+
+
+<h3>2. Data Source</h3>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong>
+A data source is a collection of records containing the information that is
+inserted into the main document during Mail Merge.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Meaning:</strong>
+It is the list containing information such as names, addresses, roll numbers,
+etc.
+
+</div>
+
+
+<h3>3. Field</h3>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong>
+A field represents a particular category of information in the data source,
+such as Name, Address or Roll Number.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Meaning:</strong>
+A field is a column or type of information.
+
+</div>
+
+
+<h3>4. Record</h3>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong>
+A record is a complete set of related information belonging to one person
+or one entry in the data source.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Meaning:</strong>
+One complete row of information is called a record.
+
+</div>
+
+
+<h3>5. Merge Field</h3>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong>
+A merge field is a placeholder in the main document that is replaced by
+corresponding information from the data source.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Meaning:</strong>
+It is a place in the document where information from the data list will appear.
+
+</div>
+
+</div>
+
+
+<!-- COMPONENTS -->
+
+<div class="card">
+
+<h2>🧩 Components of Mail Merge</h2>
+
+<p>A Mail Merge process mainly involves:</p>
+
+<ol>
+
+<li><strong>Main Document</strong> – contains common content.</li>
+
+<li><strong>Data Source</strong> – contains information about recipients.</li>
+
+<li><strong>Fields</strong> – identify different types of information.</li>
+
+<li><strong>Records</strong> – contain complete information for each recipient.</li>
+
+<li><strong>Merge Fields</strong> – connect the main document with the data source.</li>
+
+<li><strong>Final Merged Documents</strong> – personalized documents produced after merging.</li>
+
+</ol>
+
+</div>
+
+
+<!-- EXAMPLE -->
+
+<div class="card">
+
+<h2>🏫 School Example of Mail Merge</h2>
+
+<p>Suppose a school has the following data:</p>
+
+<div class="step">
+
+<strong>Fields:</strong>
+
+Name | Roll No. | Class | Section
+
+</div>
+
+<div class="step">
+
+<strong>Record 1:</strong>
+
+Rahul | 12 | 10 | A
+
+</div>
+
+<div class="step">
+
+<strong>Record 2:</strong>
+
+Priya | 18 | 10 | A
+
+</div>
+
+<div class="step">
+
+<strong>Record 3:</strong>
+
+Aman | 25 | 10 | B
+
+</div>
+
+<p>
+The main notice can contain merge fields such as
+<code>Name</code>, <code>Roll No.</code>, and <code>Class</code>.
+</p>
+
+<p>
+When Mail Merge is performed, Writer creates a personalized version of the
+notice for each record.
+</p>
+
+</div>
+
+
+<!-- CREATE MAIN DOCUMENT -->
+
+<div class="card">
+
+<h2>📝 Creating the Main Document</h2>
+
+<p>
+The first important part of Mail Merge is preparing the main document.
+It contains the common information that will appear in all merged documents.
+</p>
+
+<h3>Practical Steps</h3>
+
+<div class="step"><strong>Step 1:</strong> Open LibreOffice Writer.</div>
+
+<div class="step"><strong>Step 2:</strong> Create a new Writer document.</div>
+
+<div class="step"><strong>Step 3:</strong> Type the common content of your letter, notice or document.</div>
+
+<div class="step"><strong>Step 4:</strong> Apply suitable formatting.</div>
+
+<div class="step"><strong>Step 5:</strong> Leave appropriate positions for information that will change for different recipients.</div>
+
+<div class="step"><strong>Step 6:</strong> Save the document with a suitable name.</div>
+
+<div class="note">
+
+<strong>Example:</strong>
+For a student notice, the common text may include the school name,
+notice heading and general instructions. The student's name and other
+individual details can be inserted as fields.
+
+</div>
+
+</div>
+
+
+<!-- DATA SOURCE -->
+
+<div class="card">
+
+<h2>🗂️ Creating the Data Source</h2>
+
+<p>
+The data source contains the information that will be inserted into the
+main document.
+</p>
+
+<p>
+A data source can contain fields such as:</p>
+
+<ul>
+
+<li>Name</li>
+<li>Roll Number</li>
+<li>Class</li>
+<li>Section</li>
+<li>Address</li>
+<li>Phone Number</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Important:</strong>
+The fields should be named clearly because these names are used while
+selecting information for the Mail Merge document.
+
+</div>
+
+</div>
+
+
+<!-- MAIL MERGE WIZARD -->
+
+<div class="card">
+
+<h2>🧙 Using the Mail Merge Wizard</h2>
+
+<p>
+LibreOffice provides a Mail Merge Wizard to guide the user through the
+Mail Merge process. It can be opened from:
+</p>
+
+<div class="step">
+
+<strong>Tools → Mail Merge Wizard</strong>
+
+</div>
+
+<p>
+The wizard guides the user through different stages such as selecting the
+starting document, choosing the document type, specifying recipients,
+creating salutations, adjusting the layout and completing the merge.
+</p>
+
+</div>
+
+
+<!-- DETAILED PROCEDURE -->
+
+<div class="card">
+
+<h2>⚙️ Complete Mail Merge Procedure</h2>
+
+<h3>Part A – Start Mail Merge Wizard</h3>
+
+<div class="step"><strong>Step 1:</strong> Open the main document in LibreOffice Writer.</div>
+
+<div class="step"><strong>Step 2:</strong> Click the <strong>Tools</strong> menu.</div>
+
+<div class="step"><strong>Step 3:</strong> Select <strong>Mail Merge Wizard</strong>.</div>
+
+<div class="step"><strong>Step 4:</strong> The Mail Merge Wizard opens.</div>
+
+
+<h3>Part B – Select Starting Document</h3>
+
+<div class="step"><strong>Step 5:</strong> Choose the document that will be used as the starting document.</div>
+
+<div class="step"><strong>Step 6:</strong> You can use the current document, create a new document, use an existing document, use a template, or use a recently saved starting document.</div>
+
+<div class="step"><strong>Step 7:</strong> Click <strong>Next</strong>.</div>
+
+
+<h3>Part C – Select Document Type</h3>
+
+<div class="step"><strong>Step 8:</strong> Select the appropriate document type.</div>
+
+<div class="step"><strong>Step 9:</strong> For a normal personalized letter, choose the appropriate letter option.</div>
+
+<div class="step"><strong>Step 10:</strong> Click <strong>Next</strong>.</div>
+
+
+<h3>Part D – Select Recipients / Data Source</h3>
+
+<div class="step"><strong>Step 11:</strong> Select the address list or data source.</div>
+
+<div class="step"><strong>Step 12:</strong> If required, create a new address list.</div>
+
+<div class="step"><strong>Step 13:</strong> Enter the required information into the fields.</div>
+
+<div class="step"><strong>Step 14:</strong> Add records for different recipients.</div>
+
+<div class="step"><strong>Step 15:</strong> Save the address list/data source.</div>
+
+<div class="step"><strong>Step 16:</strong> Select the required data source.</div>
+
+<div class="step"><strong>Step 17:</strong> Click <strong>Next</strong>.</div>
+
+
+<h3>Part E – Address Block / Merge Information</h3>
+
+<div class="step"><strong>Step 18:</strong> Select the required fields for the recipient information.</div>
+
+<div class="step"><strong>Step 19:</strong> Arrange the fields according to the required format.</div>
+
+<div class="step"><strong>Step 20:</strong> Check the preview of the information.</div>
+
+<div class="step"><strong>Step 21:</strong> Make corrections if the information is not arranged properly.</div>
+
+<div class="step"><strong>Step 22:</strong> Click <strong>Next</strong>.</div>
+
+
+<h3>Part F – Create Salutation</h3>
+
+<div class="step"><strong>Step 23:</strong> Select whether a salutation is required.</div>
+
+<div class="step"><strong>Step 24:</strong> Select an appropriate greeting if required.</div>
+
+<div class="step"><strong>Step 25:</strong> Check the preview.</div>
+
+<div class="step"><strong>Step 26:</strong> Click <strong>Next</strong>.</div>
+
+
+<h3>Part G – Adjust Layout</h3>
+
+<div class="step"><strong>Step 27:</strong> Check the position of address information and other elements.</div>
+
+<div class="step"><strong>Step 28:</strong> Adjust the layout if necessary.</div>
+
+<div class="step"><strong>Step 29:</strong> Click <strong>Next</strong>.</div>
+
+
+<h3>Part H – Preview</h3>
+
+<div class="step"><strong>Step 30:</strong> Preview the merged information.</div>
+
+<div class="step"><strong>Step 31:</strong> Move through the records to check different recipients.</div>
+
+<div class="step"><strong>Step 32:</strong> Check spelling, names, addresses and other information carefully.</div>
+
+<div class="step"><strong>Step 33:</strong> Correct the main document or data source if required.</div>
+
+
+<h3>Part I – Complete the Merge</h3>
+
+<div class="step"><strong>Step 34:</strong> Proceed to the final step of the Mail Merge Wizard.</div>
+
+<div class="step"><strong>Step 35:</strong> Choose the required output option.</div>
+
+<div class="step"><strong>Step 36:</strong> Select the records that should be processed.</div>
+
+<div class="step"><strong>Step 37:</strong> Choose whether the merged documents should be printed or saved.</div>
+
+<div class="step"><strong>Step 38:</strong> If saving to a file, select the required saving option.</div>
+
+<div class="step"><strong>Step 39:</strong> Select the required location and file format where applicable.</div>
+
+<div class="step"><strong>Step 40:</strong> Complete the Mail Merge operation.</div>
+
+<div class="tip">
+
+<strong>Exam Point:</strong>
+Mail Merge can produce one merged document containing all records or,
+depending on the output options, individual documents for each record.
+
+</div>
+
+</div>
+
+
+<!-- INSERTING FIELDS -->
+
+<div class="card">
+
+<h2>🔗 Inserting and Using Merge Fields</h2>
+
+<p>
+Merge fields act as placeholders in the main document. During the merge,
+they are replaced by corresponding information from the data source.
+</p>
+
+<h3>Example</h3>
+
+<div class="step">
+
+<strong>Main Document:</strong><br><br>
+
+Dear <code>Name</code>,<br><br>
+
+You are requested to attend the meeting of Class <code>Class</code>
+on the scheduled date.
+
+</div>
+
+<div class="step">
+
+<strong>After merging:</strong><br><br>
+
+Dear Rahul,<br><br>
+
+You are requested to attend the meeting of Class 10 on the scheduled date.
+
+</div>
+
+<div class="note">
+
+The same main document can therefore be used for many recipients.
+
+</div>
+
+</div>
+
+
+<!-- PREVIEW -->
+
+<div class="card">
+
+<h2>👀 Previewing the Merged Documents</h2>
+
+<p>
+Previewing is important because it allows the user to check how information
+from different records will appear in the final documents.
+</p>
+
+<ul>
+
+<li>Check recipient names.</li>
+
+<li>Check addresses.</li>
+
+<li>Check spelling.</li>
+
+<li>Check field placement.</li>
+
+<li>Check formatting.</li>
+
+<li>Check that no field is missing.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Do not skip preview:</strong>
+An incorrect field, missing record or wrongly arranged address can affect
+many merged documents.
+
+</div>
+
+</div>
+
+
+<!-- EDIT INDIVIDUAL DOCUMENT -->
+
+<div class="card">
+
+<h2>✏️ Editing Individual Merged Documents</h2>
+
+<p>
+After creating the merged output, it may sometimes be necessary to make
+changes to an individual document.
+</p>
+
+<div class="step"><strong>Step 1:</strong> Complete the merge or create the merged output.</div>
+
+<div class="step"><strong>Step 2:</strong> Open the merged document.</div>
+
+<div class="step"><strong>Step 3:</strong> Locate the particular recipient's document.</div>
+
+<div class="step"><strong>Step 4:</strong> Make the required individual correction.</div>
+
+<div class="step"><strong>Step 5:</strong> Save the corrected document.</div>
+
+<div class="note">
+
+Individual editing is useful when one recipient's document needs a special
+correction that should not be applied to every record.
+
+</div>
+
+</div>
+
+
+<!-- PRINTING -->
+
+<div class="card">
+
+<h2>🖨️ Printing the Merged Letters</h2>
+
+<p>
+Mail Merge can be used to print personalized letters for multiple records.
+LibreOffice provides options for selecting the records that should be
+processed.
+</p>
+
+<div class="step"><strong>Step 1:</strong> Complete the Mail Merge.</div>
+
+<div class="step"><strong>Step 2:</strong> Select the required records.</div>
+
+<div class="step"><strong>Step 3:</strong> Choose the printer/output option.</div>
+
+<div class="step"><strong>Step 4:</strong> Check the printing settings.</div>
+
+<div class="step"><strong>Step 5:</strong> Start printing.</div>
+
+</div>
+
+
+<!-- SAVING -->
+
+<div class="card">
+
+<h2>💾 Saving the Merged Output</h2>
+
+<p>
+The merged result can also be saved instead of being directly printed.
+LibreOffice provides options for saving the output as a file.
+</p>
+
+<div class="step">
+
+<strong>Save as Single Document:</strong>
+Creates one document containing the merged data from all processed records.
+
+</div>
+
+<div class="step">
+
+<strong>Save as Individual Documents:</strong>
+Creates a separate document for each processed record.
+
+</div>
+
+<div class="tip">
+
+<strong>Remember:</strong>
+The choice depends on the purpose of the work. A single document may be
+useful for keeping all merged letters together, while individual documents
+may be useful when each recipient needs a separate file.
+
+</div>
+
+</div>
+
+
+<!-- LABELS AND ENVELOPES -->
+
+<div class="card">
+
+<h2>🏷️ Mail Merge for Labels and Envelopes</h2>
+
+<p>
+Mail Merge is not limited to ordinary letters. It can also be useful for
+creating personalized labels and envelopes.
+</p>
+
+<h3>Labels</h3>
+
+<p>
+Labels can contain recipient information such as name and address.
+The same label format can be used for many recipients.
+</p>
+
+<h3>Envelopes</h3>
+
+<p>
+Recipient information can be combined with an envelope layout so that
+different envelopes can be prepared using records from the data source.
+</p>
+
+</div>
+
+
+<!-- COMMON MISTAKES -->
+
+<div class="card">
+
+<h2>⚠️ Common Mistakes in Mail Merge</h2>
+
+<details class="question">
+
+<summary>1. What happens if the data source is not selected correctly?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+The required recipient information may not appear correctly in the merged
+document. The correct data source should be selected before completing
+the merge.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>2. What happens if the wrong field is inserted?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Incorrect information may appear in the final document. The field should
+match the required information in the data source.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>3. Why should the merged documents be previewed?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Previewing helps identify incorrect names, missing information, wrong
+field placement and formatting problems before printing or saving.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>4. What is a common problem with the data source?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Incomplete or incorrectly entered records can result in incorrect
+information in the merged documents.
+</p>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL ACTIVITY -->
+
+<div class="card">
+
+<h2>🧪 Practical Activity</h2>
+
+<h3>Prepare Personalized Student Notices Using Mail Merge</h3>
+
+<p>
+Create a notice for three students using Mail Merge. The notice should
+contain the student's name, roll number and class.
+</p>
+
+<h3>Procedure</h3>
+
+<div class="step"><strong>Step 1:</strong> Open LibreOffice Writer.</div>
+
+<div class="step"><strong>Step 2:</strong> Create a new document.</div>
+
+<div class="step"><strong>Step 3:</strong> Type the school name.</div>
+
+<div class="step"><strong>Step 4:</strong> Type the heading of the notice.</div>
+
+<div class="step"><strong>Step 5:</strong> Type the common notice text.</div>
+
+<div class="step"><strong>Step 6:</strong> Decide where the student's information will appear.</div>
+
+<div class="step"><strong>Step 7:</strong> Start the Mail Merge Wizard.</div>
+
+<div class="step"><strong>Step 8:</strong> Select the current document as the starting document.</div>
+
+<div class="step"><strong>Step 9:</strong> Select the appropriate document type.</div>
+
+<div class="step"><strong>Step 10:</strong> Create/select the required data source.</div>
+
+<div class="step"><strong>Step 11:</strong> Create fields such as Name, Roll Number and Class.</div>
+
+<div class="step"><strong>Step 12:</strong> Enter the first student's information.</div>
+
+<div class="step"><strong>Step 13:</strong> Enter the second student's information.</div>
+
+<div class="step"><strong>Step 14:</strong> Enter the third student's information.</div>
+
+<div class="step"><strong>Step 15:</strong> Save the data source.</div>
+
+<div class="step"><strong>Step 16:</strong> Insert the required merge fields into the notice.</div>
+
+<div class="step"><strong>Step 17:</strong> Preview the records.</div>
+
+<div class="step"><strong>Step 18:</strong> Check all three students' information.</div>
+
+<div class="step"><strong>Step 19:</strong> Correct any error if found.</div>
+
+<div class="step"><strong>Step 20:</strong> Complete the merge.</div>
+
+<div class="step"><strong>Step 21:</strong> Save the merged output.</div>
+
+<div class="step"><strong>Step 22:</strong> Open the output and verify the personalized notices.</div>
+
+<div class="tip">
+
+<strong>Expected Result:</strong>
+Three personalized notices should be produced from one main notice and
+three student records.
+
+</div>
+
+</div>
+
+
+<!-- APPLICATION QUESTIONS -->
+
+<div class="card">
+
+<h2>💡 Application-Based Questions</h2>
+
+<details class="question">
+
+<summary>Question 1: A school wants to send the same invitation to 200 parents, but each invitation must contain a different parent's name. Which feature should be used?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+The school should use <strong>Mail Merge</strong>. One main invitation can
+be combined with a data source containing the parents' names.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>Question 2: A teacher has a list of 50 students containing their names and roll numbers. She wants to create individual certificates using one certificate design. What should she use?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+She should use Mail Merge. The certificate design can be the main document
+and student information can be stored in the data source.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>Question 3: Why is a data source necessary in Mail Merge?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+The data source stores the changing information for different recipients.
+Mail Merge uses this information to personalize the main document.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>Question 4: A student created a main document but all merged documents contain the same person's name. What should the student check?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+The student should check the data source, records and merge field selection,
+and ensure that the correct records are being processed during the merge.
+</p>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<div class="card">
+
+<h2>⭐ Important Questions</h2>
+
+<details class="question">
+
+<summary>1. What is Mail Merge?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Mail Merge is a word-processing feature used to create multiple personalized
+documents by combining a main document with a data source.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>2. What is a main document?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+A main document contains the common text and formatting that will be used
+for all merged documents.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>3. What is a data source?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+A data source contains records and fields that provide the variable
+information required for the Mail Merge.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>4. What is a record?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+A record is a complete set of related information belonging to one
+recipient or entry.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>5. What is a merge field?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+A merge field is a placeholder in the main document that is replaced by
+corresponding information from the data source.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>6. Mention any four uses of Mail Merge.</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Mail Merge can be used for personalized letters, certificates, invitations,
+labels and envelopes.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>7. What is the purpose of the Mail Merge Wizard?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+The Mail Merge Wizard guides the user through the different stages of
+creating and completing a Mail Merge.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>8. Why is previewing important before completing Mail Merge?</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Previewing helps the user identify errors in names, addresses, fields,
+formatting and other recipient information before producing the final output.
+</p>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- PYQ BASED -->
+
+<div class="card">
+
+<h2>📖 CBSE PYQ-Based Practice Questions</h2>
+
+<div class="note">
+
+<strong>Note:</strong>
+These are CBSE PYQ-based/practice-style questions for preparation.
+A specific examination year is not assigned unless independently verified.
+
+</div>
+
+
+<details class="question">
+
+<summary>Question 1: Define Mail Merge and mention its main components.</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Mail Merge is a feature used to create multiple personalized documents
+by combining a main document with a data source.
+Its main components include the main document, data source, fields,
+records and merge fields.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>Question 2: Differentiate between a field and a record.</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+A <strong>field</strong> represents one category of information, such as
+Name or Roll Number. A <strong>record</strong> is a complete collection
+of related fields belonging to one person or entry.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>Question 3: Explain the role of a data source in Mail Merge.</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+The data source stores the changing information of recipients. During
+Mail Merge, this information is combined with the main document to create
+personalized documents.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>Question 4: Write the main steps involved in performing Mail Merge.</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+The main steps include creating the main document, creating/selecting the
+data source, entering records, inserting merge fields, previewing the
+records, completing the merge and finally printing or saving the output.
+</p>
+
+</details>
+
+</details>
+
+
+<details class="question">
+
+<summary>Question 5: State two advantages of using Mail Merge.</summary>
+
+<details class="answer">
+
+<summary>View Answer</summary>
+
+<p>
+Mail Merge saves time and effort when preparing many similar documents.
+It also allows individual information to be inserted automatically into
+each document.
+</p>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>📝 Practice 50 MCQs</h2>
+
+<p>
+Test your understanding of Mail Merge with a separate set of 50 MCQs.
+</p>
+
+<a class="mcq-link"
+href="class10-it-unit1-session5-mcqs.html">
+📚 Open Session 5 – 50 MCQs
+</a>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="navigation">
+
+<a href="class10-it-unit1-session4-toc.html">
+← Session 4: Create and Customize Table of Contents
+</a>
+
+<a href="class10-it-unit1-digital-documentation.html">
+🏠 Unit 1 Home
+</a>
+
+<a href="class10-it-unit2-electronic-spreadsheet.html">
+Session 6 / Unit 2 →
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 Edusphere with Satyam | Class 10 Information Technology (402)
+</p>
+
+<p>
+Unit 1 – Digital Documentation (Advanced)
+</p>
+
+</footer>
+
+</body>
+</html>
