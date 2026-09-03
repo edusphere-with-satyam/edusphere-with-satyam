@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 2 – Insert and Use Images | Class 10 IT 402</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+    color: #222;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 17px;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.card {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    border-left: 6px solid #6366f1;
+}
+
+.card h2 {
+    color: #4f46e5;
+    margin-top: 0;
+}
+
+.card h3 {
+    color: #7c3aed;
+}
+
+.intro {
+    border-left-color: #ec4899;
+}
+
+.objectives {
+    border-left-color: #10b981;
+}
+
+.definition {
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.simple {
+    background: #ecfdf5;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.note {
+    background: #fff7ed;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #f97316;
+    margin: 15px 0;
+}
+
+.warning {
+    background: #fef2f2;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #ef4444;
+    margin: 15px 0;
+}
+
+.tip {
+    background: #f0fdf4;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #22c55e;
+    margin: 15px 0;
+}
+
+.step {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 12px 0;
+}
+
+.step strong {
+    color: #4f46e5;
+}
+
+.question {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+details {
+    margin-top: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #4f46e5;
+    padding: 8px;
+}
+
+.answer {
+    background: #ecfdf5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.mcq-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.mcq-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79,70,229,0.3);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.navigation a {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    background: #1e1b4b;
+    color: white;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+ul, ol {
+    padding-left: 25px;
+}
+
+.highlight {
+    color: #db2777;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation a {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🖼️ SESSION 2: INSERT AND USE IMAGES</h1>
+    <p>Class 10 Information Technology (402) | Digital Documentation – Advanced</p>
+</header>
+
+<div class="container">
+
+<!-- SESSION INTRODUCTION -->
+
+<section class="card intro">
+
+    <h2>📘 Session Introduction</h2>
+
+    <p>
+        A digital document can contain not only text but also graphical elements
+        such as images. Images are useful for making a document more attractive,
+        informative and easier to understand.
+    </p>
+
+    <p>
+        LibreOffice Writer provides several options for inserting and working
+        with images. After inserting an image, we can change its size, position,
+        alignment, wrapping and other properties according to the requirements
+        of the document.
+    </p>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        An image is a graphical object inserted into a digital document to
+        visually represent, explain or support the information presented in it.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        An image is a picture added to a document to make its content clearer
+        and more attractive.
+    </div>
+
+</section>
+
+
+<!-- LEARNING OBJECTIVES -->
+
+<section class="card objectives">
+
+    <h2>🎯 Learning Objectives</h2>
+
+    <p>After completing this session, students will be able to:</p>
+
+    <ul>
+        <li>Understand the importance of images in digital documents.</li>
+        <li>Insert an image into a Writer document.</li>
+        <li>Resize an image while maintaining its proper appearance.</li>
+        <li>Position and align an image.</li>
+        <li>Understand and apply text wrapping.</li>
+        <li>Understand anchoring of images.</li>
+        <li>Arrange images and other objects.</li>
+        <li>Crop an image.</li>
+        <li>Modify basic image properties.</li>
+        <li>Remove an unwanted image from a document.</li>
+    </ul>
+
+</section>
+
+
+<!-- IMPORTANCE -->
+
+<section class="card">
+
+    <h2>🌟 Importance of Images in a Document</h2>
+
+    <p>
+        Images can communicate information visually and can support the text
+        written in a document. A suitable image can make a document easier to
+        read and understand.
+    </p>
+
+    <h3>Uses of Images</h3>
+
+    <ul>
+        <li>Making documents visually attractive.</li>
+        <li>Explaining information with visual examples.</li>
+        <li>Supporting written content.</li>
+        <li>Presenting project work effectively.</li>
+        <li>Creating reports, brochures and posters.</li>
+        <li>Helping readers understand information quickly.</li>
+    </ul>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        Why are images used in digital documents?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Images are used to make documents attractive, support written
+                information and help readers understand the content more easily.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- INSERT IMAGE -->
+
+<section class="card">
+
+    <h2>📥 Inserting an Image</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Inserting an image is the process of adding a graphical file to a
+        document at a required location.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Inserting an image means adding a picture to your document.
+    </div>
+
+    <h3>Steps to Insert an Image</h3>
+
+    <div class="step">
+        <strong>Step 1:</strong>
+        Open the required document in LibreOffice Writer.
+    </div>
+
+    <div class="step">
+        <strong>Step 2:</strong>
+        Place the cursor at the location where you want to insert the image.
+    </div>
+
+    <div class="step">
+        <strong>Step 3:</strong>
+        Open the <strong>Insert</strong> menu.
+    </div>
+
+    <div class="step">
+        <strong>Step 4:</strong>
+        Select the option for inserting an image.
+    </div>
+
+    <div class="step">
+        <strong>Step 5:</strong>
+        Browse to the location where the image is stored.
+    </div>
+
+    <div class="step">
+        <strong>Step 6:</strong>
+        Select the required image.
+    </div>
+
+    <div class="step">
+        <strong>Step 7:</strong>
+        Click <strong>Open</strong>.
+    </div>
+
+    <div class="tip">
+        <strong>Tip:</strong>
+        Use an image that is relevant to the subject of the document.
+    </div>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        Where should the cursor be placed before inserting an image?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                The cursor should be placed at the location where the image
+                needs to be inserted.
+            </div>
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- RESIZING -->
+
+<section class="card">
+
+    <h2>📐 Resizing an Image</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Resizing is the process of changing the width and height of an image
+        according to the requirements of a document.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Resizing means making an image larger or smaller.
+    </div>
+
+    <h3>Steps to Resize an Image</h3>
+
+    <ol>
+        <li>Select the image by clicking on it.</li>
+        <li>Selection handles will appear around the image.</li>
+        <li>Drag an appropriate handle to change the size.</li>
+        <li>Release the mouse button when the desired size is achieved.</li>
+    </ol>
+
+    <div class="note">
+        <strong>Important:</strong>
+        The image should be resized carefully so that its appearance does not
+        become distorted.
+    </div>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        What is resizing an image?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Resizing is the process of changing the width and height of an
+                image according to the requirements of the document.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- POSITIONING -->
+
+<section class="card">
+
+    <h2>📍 Positioning an Image</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Positioning an image means placing it at a specific location in the
+        document according to the required layout.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Positioning means deciding where an image should appear on the page.
+    </div>
+
+    <h3>Common Positions</h3>
+
+    <ul>
+        <li>Left side</li>
+        <li>Centre</li>
+        <li>Right side</li>
+        <li>Above the text</li>
+        <li>Below the text</li>
+        <li>Alongside the text</li>
+    </ul>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        What is meant by positioning an image?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Positioning an image means placing it at the required location
+                in a document.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- ALIGNMENT -->
+
+<section class="card">
+
+    <h2>↔️ Aligning an Image</h2>
+
+    <p>
+        Alignment determines how an image is positioned horizontally in relation
+        to the available space or surrounding content.
+    </p>
+
+    <h3>Common Alignment Options</h3>
+
+    <ul>
+        <li><strong>Left:</strong> Places the image towards the left side.</li>
+        <li><strong>Centre:</strong> Places the image in the centre.</li>
+        <li><strong>Right:</strong> Places the image towards the right side.</li>
+    </ul>
+
+    <div class="tip">
+        <strong>Tip:</strong>
+        Select an alignment that makes the document look organised and balanced.
+    </div>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        Why is proper alignment important for an image?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Proper alignment helps maintain a neat, organised and
+                professional appearance of the document.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- TEXT WRAPPING -->
+
+<section class="card">
+
+    <h2>📝 Text Wrapping</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Text wrapping is the arrangement of text around an image or other
+        object inserted into a document.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Text wrapping decides how text will appear around a picture.
+    </div>
+
+    <h3>Common Text Wrapping Options</h3>
+
+    <ul>
+
+        <li>
+            <strong>None:</strong>
+            Text does not flow around the image.
+        </li>
+
+        <li>
+            <strong>Before:</strong>
+            Text is positioned before the image according to the selected
+            arrangement.
+        </li>
+
+        <li>
+            <strong>After:</strong>
+            Text is positioned after the image according to the selected
+            arrangement.
+        </li>
+
+        <li>
+            <strong>Parallel:</strong>
+            Text flows around the image.
+        </li>
+
+        <li>
+            <strong>Through:</strong>
+            Text can flow through the area occupied by the image depending
+            on the settings.
+        </li>
+
+        <li>
+            <strong>Optimal:</strong>
+            Writer automatically attempts to place the text appropriately
+            around the image.
+        </li>
+
+        <li>
+            <strong>As Character:</strong>
+            The image behaves like a character within the text.
+        </li>
+
+    </ul>
+
+    <h3>Changing Text Wrapping</h3>
+
+    <ol>
+        <li>Select the image.</li>
+        <li>Open the image wrapping options.</li>
+        <li>Select the required wrapping style.</li>
+        <li>Observe the change in the surrounding text.</li>
+    </ol>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        What is text wrapping?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Text wrapping determines how text is arranged around an image
+                or other object in a document.
+            </div>
+
+        </details>
+
+    </div>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        Which wrapping option makes an image behave like a character?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                The <strong>As Character</strong> wrapping option makes the
+                image behave like a character within the text.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- ANCHORING -->
+
+<section class="card">
+
+    <h2>⚓ Anchoring an Image</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Anchoring defines the reference point to which an image or other object
+        is attached within a document.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Anchoring tells Writer what part of the document an image is connected to.
+    </div>
+
+    <h3>Common Anchor Options</h3>
+
+    <ul>
+
+        <li>
+            <strong>To Page:</strong>
+            The image is associated with a page.
+        </li>
+
+        <li>
+            <strong>To Paragraph:</strong>
+            The image is associated with a paragraph.
+        </li>
+
+        <li>
+            <strong>To Character:</strong>
+            The image is associated with a character.
+        </li>
+
+        <li>
+            <strong>As Character:</strong>
+            The image behaves like a character in the text.
+        </li>
+
+    </ul>
+
+    <div class="note">
+
+        <strong>Remember:</strong><br>
+
+        <strong>Anchoring</strong> determines what the image is attached to,
+        while <strong>text wrapping</strong> determines how text behaves
+        around the image.
+
+    </div>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        What is anchoring?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Anchoring defines the reference point to which an image is
+                attached within a document.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- ARRANGING -->
+
+<section class="card">
+
+    <h2>🔄 Arranging Images</h2>
+
+    <p>
+        When two or more images or objects overlap, their order can be changed.
+        Arrange options are used to control which object appears in front of
+        or behind another object.
+    </p>
+
+    <h3>Important Arrangement Options</h3>
+
+    <ul>
+
+        <li>
+            <strong>Bring to Front:</strong>
+            Moves the selected object to the front.
+        </li>
+
+        <li>
+            <strong>Send to Back:</strong>
+            Moves the selected object behind other objects.
+        </li>
+
+        <li>
+            <strong>Bring Forward:</strong>
+            Moves the object one level forward.
+        </li>
+
+        <li>
+            <strong>Send Backward:</strong>
+            Moves the object one level backward.
+        </li>
+
+    </ul>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        Which option is used to move an object to the front of other
+        overlapping objects?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                The <strong>Bring to Front</strong> option is used to move the
+                selected object to the front.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- CROPPING -->
+
+<section class="card">
+
+    <h2>✂️ Cropping an Image</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Cropping is the process of removing unwanted portions of an image while
+        retaining the required part.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Cropping means cutting away unwanted parts of a picture.
+    </div>
+
+    <h3>Uses of Cropping</h3>
+
+    <ul>
+        <li>Removing unwanted portions of an image.</li>
+        <li>Focusing on an important part of the image.</li>
+        <li>Making the image fit better into the document.</li>
+        <li>Improving the overall presentation.</li>
+    </ul>
+
+    <h3>Basic Steps</h3>
+
+    <ol>
+        <li>Select the image.</li>
+        <li>Choose the cropping option.</li>
+        <li>Adjust the crop handles.</li>
+        <li>Keep the required portion of the image.</li>
+        <li>Apply the crop.</li>
+    </ol>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        What is cropping?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Cropping is the process of removing unwanted portions of an
+                image while retaining the required part.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- IMAGE PROPERTIES -->
+
+<section class="card">
+
+    <h2>⚙️ Image Properties</h2>
+
+    <p>
+        Image properties allow us to control different aspects of an inserted
+        image. These settings help us create a well-organised document.
+    </p>
+
+    <h3>Important Image Properties</h3>
+
+    <ul>
+        <li>Size</li>
+        <li>Position</li>
+        <li>Wrapping</li>
+        <li>Anchoring</li>
+        <li>Alignment</li>
+        <li>Border</li>
+        <li>Spacing around the image</li>
+        <li>Cropping</li>
+    </ul>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        Name any four properties that can be modified for an image.
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Any four are:
+                <strong>size, position, wrapping, anchoring, alignment,
+                border and cropping.</strong>
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- MOVING IMAGE -->
+
+<section class="card">
+
+    <h2>↔️ Moving an Image</h2>
+
+    <p>
+        An inserted image can be moved to another location in the document.
+        Its movement can depend on its anchoring and positioning settings.
+    </p>
+
+    <h3>Basic Steps</h3>
+
+    <ol>
+        <li>Select the image.</li>
+        <li>Click and hold the image.</li>
+        <li>Drag it towards the required location.</li>
+        <li>Release the mouse button.</li>
+    </ol>
+
+    <div class="warning">
+        <strong>Important:</strong>
+        If an image does not move as expected, check its anchoring,
+        positioning and wrapping settings.
+    </div>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        Which settings can affect the movement of an image?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                The anchoring, positioning and wrapping settings can affect
+                the movement of an image.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- DELETING -->
+
+<section class="card">
+
+    <h2>🗑️ Deleting an Image</h2>
+
+    <p>
+        If an inserted image is no longer required, it can be removed from
+        the document.
+    </p>
+
+    <h3>Steps to Delete an Image</h3>
+
+    <ol>
+        <li>Select the image.</li>
+        <li>Press the <strong>Delete</strong> key.</li>
+    </ol>
+
+    <div class="question">
+
+        <strong>Question:</strong>
+        How can an unwanted image be removed from a Writer document?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Select the unwanted image and press the
+                <strong>Delete</strong> key.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- PRACTICAL ACTIVITY -->
+
+<section class="card">
+
+    <h2>💻 Practical Activity</h2>
+
+    <h3>Create an Illustrated Document</h3>
+
+    <p>
+        Create a one-page document on the topic:
+        <strong>“Importance of Computers in Education”</strong>.
+    </p>
+
+    <h3>Instructions</h3>
+
+    <ol>
+
+        <li>
+            Open LibreOffice Writer.
+        </li>
+
+        <li>
+            Type the heading:
+            <strong>Importance of Computers in Education</strong>.
+        </li>
+
+        <li>
+            Write a short paragraph explaining the importance of computers
+            in education.
+        </li>
+
+        <li>
+            Insert a suitable image related to computers or education.
+        </li>
+
+        <li>
+            Resize the image appropriately.
+        </li>
+
+        <li>
+            Position the image properly on the page.
+        </li>
+
+        <li>
+            Apply a suitable text-wrapping option.
+        </li>
+
+        <li>
+            Experiment with the anchoring option.
+        </li>
+
+        <li>
+            Apply a suitable border to the image.
+        </li>
+
+        <li>
+            Crop the image if unnecessary portions are present.
+        </li>
+
+        <li>
+            Save the document with an appropriate file name.
+        </li>
+
+    </ol>
+
+    <div class="tip">
+        <strong>Learning Tip:</strong>
+        Do not focus only on inserting the image. Practise its size, position,
+        alignment, wrapping, anchoring and other properties.
+    </div>
+
+</section>
+
+
+<!-- APPLICATION BASED QUESTIONS -->
+
+<section class="card">
+
+    <h2>🧠 Application-Based Questions</h2>
+
+    <div class="question">
+
+        <strong>Q1.</strong>
+        Aman inserted a very large image into his project and it occupies
+        almost the entire page. What should he do?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                He should <strong>resize</strong> the image so that it fits
+                properly within the available space.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q2.</strong>
+        A student wants text to appear around an image instead of leaving
+        unnecessary blank space. Which feature should be used?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                The student should use an appropriate
+                <strong>text-wrapping</strong> option.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q3.</strong>
+        Two images are overlapping and one image needs to appear above the
+        other. Which feature should be used?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                The <strong>Arrange</strong> options, such as
+                <strong>Bring to Front</strong> or
+                <strong>Bring Forward</strong>, can be used.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q4.</strong>
+        A photograph contains unnecessary portions around its edges. Which
+        feature should be used?
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                The <strong>Crop</strong> feature should be used to remove
+                unwanted portions.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<section class="card">
+
+    <h2>📚 Important Questions</h2>
+
+
+    <div class="question">
+
+        <strong>Q1. What is an image in a digital document?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                An image is a graphical object inserted into a document to
+                visually represent, explain or support the information
+                presented in it.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q2. What is text wrapping?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Text wrapping is the arrangement of text around an image or
+                other object inserted into a document.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q3. What is anchoring?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Anchoring defines the reference point to which an image or
+                other object is attached within a document.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q4. Differentiate between resizing and cropping.</strong>
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                <strong>Resizing</strong> changes the overall width and height
+                of an image, whereas <strong>cropping</strong> removes
+                unwanted portions of an image.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q5. What is the purpose of Bring to Front?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Bring to Front moves the selected object in front of other
+                overlapping objects.
+            </div>
+
+        </details>
+
+    </div>
+
+
+    <div class="question">
+
+        <strong>Q6. What is the difference between anchoring and wrapping?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+
+            <div class="answer">
+                Anchoring determines what the image is attached to, whereas
+                wrapping determines how text is arranged around the image.
+            </div>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- MCQ LINK -->
+
+<section class="card">
+
+    <h2>📝 Session 2 MCQs</h2>
+
+    <p>
+        Practice 50 MCQs based on
+        <strong>Insert and Use Images</strong>.
+    </p>
+
+    <a class="mcq-link" href="class10-it-unit1-session2-mcqs.html">
+        🎯 Open 50 MCQs
+    </a>
+
+</section>
+
+
+<!-- NAVIGATION -->
+
+<div class="navigation">
+
+    <a href="class10-it-unit1-session1-styles.html">
+        ← Session 1: Create and Apply Styles in the Document
+    </a>
+
+    <a href="class10-it-unit1-digital-documentation.html">
+        🏠 Unit 1 Home
+    </a>
+
+    <a href="class10-it-unit1-session3-templates.html">
+        Session 3: Create and Use Template →
+    </a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+    <p><strong>Edusphere with Satyam</strong></p>
+
+    <p>
+        Class 10 Information Technology (402) |
+        Digital Documentation – Advanced
+    </p>
+
+</footer>
+
+</body>
+</html>
