@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 12 Economics – Excess Demand and Deficient Demand</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#fdf2f8,#ecfeff);
+    color:#1f2937;
+    line-height:1.7;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+    padding:25px 0 40px;
+}
+
+/* HEADER */
+
+.header{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#db2777);
+    color:white;
+    padding:35px 25px;
+    border-radius:22px;
+    text-align:center;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(79,70,229,0.25);
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.header p{
+    font-size:16px;
+    opacity:0.95;
+}
+
+/* BACK */
+
+.back{
+    display:inline-block;
+    text-decoration:none;
+    color:#4338ca;
+    background:white;
+    padding:10px 18px;
+    border-radius:12px;
+    font-weight:bold;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.back:hover{
+    transform:translateY(-2px);
+    background:#eef2ff;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:22px;
+    box-shadow:0 7px 22px rgba(0,0,0,0.08);
+    border:1px solid #e5e7eb;
+}
+
+.card h2{
+    color:#4338ca;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card h3{
+    color:#7c3aed;
+    margin:20px 0 10px;
+    font-size:21px;
+}
+
+.card h4{
+    color:#db2777;
+    margin:15px 0 8px;
+}
+
+.card p{
+    margin-bottom:12px;
+}
+
+.card ul,
+.card ol{
+    margin:10px 0 15px 25px;
+}
+
+.card li{
+    margin-bottom:7px;
+}
+
+/* BADGE */
+
+.badge{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:20px;
+    background:#ede9fe;
+    color:#5b21b6;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* DEFINITION */
+
+.definition{
+    background:#eef2ff;
+    border-left:5px solid #4f46e5;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.definition strong{
+    color:#3730a3;
+}
+
+/* SIMPLE */
+
+.simple{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.simple strong{
+    color:#047857;
+}
+
+/* EXAM */
+
+.exam{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.exam strong{
+    color:#c2410c;
+}
+
+/* NOTE */
+
+.note{
+    background:#fefce8;
+    border-left:5px solid #eab308;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+/* FORMULA */
+
+.formula{
+    background:linear-gradient(135deg,#f5f3ff,#ede9fe);
+    border:2px solid #8b5cf6;
+    padding:18px;
+    border-radius:14px;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:#4c1d95;
+    margin:18px 0;
+}
+
+/* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+    margin:18px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:650px;
+}
+
+th{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    padding:12px;
+    text-align:center;
+}
+
+td{
+    padding:11px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f9fafb;
+}
+
+/* GRAPH */
+
+.graph-box{
+    background:#fafafa;
+    border:1px solid #e5e7eb;
+    border-radius:15px;
+    padding:15px;
+    margin:20px 0;
+    text-align:center;
+    overflow-x:auto;
+}
+
+.graph-title{
+    font-weight:bold;
+    color:#4338ca;
+    margin-bottom:12px;
+}
+
+/* TOPIC GRID */
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.topic-card{
+    background:linear-gradient(135deg,#ffffff,#f8fafc);
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+}
+
+.topic-card h3{
+    margin-top:0;
+}
+
+/* QUESTION */
+
+.question{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:18px;
+    margin:15px 0;
+}
+
+.question strong{
+    color:#312e81;
+}
+
+/* DETAILS */
+
+details{
+    margin-top:12px;
+}
+
+summary{
+    cursor:pointer;
+    display:inline-block;
+    background:#4f46e5;
+    color:white;
+    padding:8px 15px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+.answer{
+    margin-top:12px;
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:16px;
+    border-radius:10px;
+}
+
+/* PILL */
+
+.pill{
+    display:inline-block;
+    background:#fce7f3;
+    color:#9d174d;
+    padding:5px 11px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin:3px;
+}
+
+/* CENTER */
+
+.center{
+    text-align:center;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:25px 10px;
+    color:#667085;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header h1{
+        font-size:25px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card h2{
+        font-size:22px;
+    }
+
+    .card h3{
+        font-size:19px;
+    }
+
+    .formula{
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="class12-macroeconomics-unit3.html" class="back">
+← Back to Unit 3
+</a>
+
+<div class="header">
+
+<h1>📕 Excess Demand and Deficient Demand</h1>
+
+<p>Class 12 Economics | Unit 3 – Determination of Income and Employment</p>
+
+<p>Detailed Notes • Concepts • Causes • Effects • Corrective Measures • Graphs • Questions</p>
+
+</div>
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<span class="badge">TOPIC 3</span>
+
+<h2>Excess Demand and Deficient Demand</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+Excess demand and deficient demand refer to situations in which Aggregate Demand differs from the level of Aggregate Demand required to maintain equilibrium at the full-employment level of output.
+</div>
+
+<div class="simple">
+
+<strong>In Simple Words:</strong><br>
+
+When people, firms and the government together want to spend more than what is required to purchase the full-employment level of output, there is <strong>excess demand</strong>. When they want to spend less, there is <strong>deficient demand</strong>.
+</div>
+
+<p>
+Both concepts are studied in relation to the <strong>full-employment level of output</strong>. They are important because changes in Aggregate Demand can create inflationary or deflationary pressure in an economy.
+</p>
+
+<div class="exam">
+
+<strong>Core Idea:</strong><br>
+
+Excess Demand → Inflationary Pressure
+
+<br><br>
+
+Deficient Demand → Deflationary / Recessionary Pressure
+
+</div>
+
+</div>
+
+
+<!-- 9.1 EXCESS DEMAND -->
+
+<div class="card">
+
+<span class="badge">9.1</span>
+
+<h2>Meaning of Excess Demand</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+Excess demand is the situation in which Aggregate Demand is greater than the Aggregate Demand required to purchase the full-employment level of output.
+</div>
+
+<div class="simple">
+
+<strong>Simple Explanation:</strong><br>
+
+Suppose the economy is already producing at the full-employment level. If total planned expenditure increases beyond the level required to purchase that output, the economy experiences excess demand.
+</div>
+
+<h3>Why does excess demand occur?</h3>
+
+<p>
+At full employment, productive resources are already being used to a very high degree. Therefore, if Aggregate Demand continues to rise beyond the level consistent with full-employment output, firms cannot increase real output proportionately in the short run.
+</p>
+
+<p>
+The additional demand therefore puts upward pressure on the general price level.
+</p>
+
+<div class="formula">
+
+Excess Demand = Actual AD − AD required at Full Employment
+
+</div>
+
+<div class="note">
+
+<strong>Important:</strong> Excess demand is measured with reference to the <strong>full-employment level</strong>, not merely by saying that demand is “high”.
+</div>
+
+</div>
+
+
+<!-- 9.2 DEFICIENT DEMAND -->
+
+<div class="card">
+
+<span class="badge">9.2</span>
+
+<h2>Meaning of Deficient Demand</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+Deficient demand is the situation in which Aggregate Demand is less than the Aggregate Demand required to purchase the full-employment level of output.
+</div>
+
+<div class="simple">
+
+<strong>Simple Explanation:</strong><br>
+
+If the economy has the capacity to produce at full employment but total planned expenditure is too low to purchase that output, the economy experiences deficient demand.
+</div>
+
+<p>
+When demand is insufficient, firms may find that they cannot sell the level of output they could potentially produce at full employment. As a result, production and employment may fall.
+</p>
+
+<div class="formula">
+
+Deficient Demand = AD required at Full Employment − Actual AD
+
+</div>
+
+<div class="note">
+
+<strong>Key Point:</strong> Deficient demand is associated with a shortfall in Aggregate Demand relative to the level required for full-employment output.
+</div>
+
+</div>
+
+
+<!-- 9.3 INFLATIONARY GAP -->
+
+<div class="card">
+
+<span class="badge">9.3</span>
+
+<h2>Inflationary Gap</h2>
+
+<div class="definition">
+
+<strong>Meaning:</strong><br>
+
+Inflationary gap refers to the excess of Aggregate Demand over the level of Aggregate Demand required to maintain full-employment equilibrium.
+</div>
+
+<div class="simple">
+
+<strong>Simple Explanation:</strong><br>
+
+The inflationary gap shows how much additional demand exists beyond the demand needed to purchase the full-employment level of output.
+</div>
+
+<div class="formula">
+
+Inflationary Gap = Actual AD − AD at Full Employment
+
+</div>
+
+<h3>How does an inflationary gap arise?</h3>
+
+<ol>
+
+<li>The economy reaches the full-employment level.</li>
+
+<li>Aggregate Demand increases further.</li>
+
+<li>Real output cannot increase proportionately because resources are already fully employed.</li>
+
+<li>The additional demand creates upward pressure on prices.</li>
+
+<li>This situation is called an inflationary gap.</li>
+
+</ol>
+
+<div class="graph-box">
+
+<div class="graph-title">
+Inflationary Gap
+</div>
+
+<svg width="700" height="430" viewBox="0 0 700 430">
+
+<!-- Axes -->
+
+<line x1="90" y1="360" x2="640" y2="360"
+stroke="#333" stroke-width="2"/>
+
+<line x1="90" y1="360" x2="90" y2="40"
+stroke="#333" stroke-width="2"/>
+
+<!-- 45 degree -->
+
+<line x1="90" y1="360" x2="600" y2="70"
+stroke="#4f46e5" stroke-width="4"/>
+
+<!-- AD at full employment -->
+
+<line x1="90" y1="300" x2="570" y2="150"
+stroke="#10b981" stroke-width="4"/>
+
+<!-- Higher AD -->
+
+<line x1="90" y1="270" x2="590" y2="110"
+stroke="#db2777" stroke-width="4"/>
+
+<!-- Full employment -->
+
+<line x1="470" y1="150" x2="470" y2="360"
+stroke="#777" stroke-dasharray="7,6"/>
+
+<text x="475" y="350" font-size="15">
+Yf
+</text>
+
+<text x="500" y="125" font-size="15">
+AD₂
+</text>
+
+<text x="500" y="165" font-size="15">
+AD₁
+</text>
+
+<text x="560" y="85" font-size="15">
+AS = Y
+</text>
+
+<text x="270" y="405" font-size="15">
+National Income / Output
+</text>
+
+<text x="20" y="220" font-size="15"
+transform="rotate(-90 20 220)">
+AD / AS
+</text>
+
+<text x="475" y="250" font-size="14">
+Inflationary
+</text>
+
+<text x="475" y="270" font-size="14">
+Pressure
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- 9.4 DEFLATIONARY GAP -->
+
+<div class="card">
+
+<span class="badge">9.4</span>
+
+<h2>Deflationary Gap</h2>
+
+<div class="definition">
+
+<strong>Meaning:</strong><br>
+
+Deflationary gap refers to the shortfall of Aggregate Demand from the level of Aggregate Demand required to maintain full-employment equilibrium.
+</div>
+
+<div class="simple">
+
+<strong>Simple Explanation:</strong><br>
+
+When total spending in the economy is not sufficient to purchase the full-employment level of output, there is a deficiency in demand. This shortfall is called the deflationary gap.
+</div>
+
+<div class="formula">
+
+Deflationary Gap = AD at Full Employment − Actual AD
+
+</div>
+
+<h3>Effects</h3>
+
+<ul>
+
+<li>Fall in Aggregate Demand</li>
+
+<li>Unsold inventories may increase</li>
+
+<li>Firms may reduce production</li>
+
+<li>Employment may fall</li>
+
+<li>Income may decline</li>
+
+<li>There may be downward pressure on prices</li>
+
+</ul>
+
+<div class="graph-box">
+
+<div class="graph-title">
+Deflationary Gap
+</div>
+
+<svg width="700" height="430" viewBox="0 0 700 430">
+
+<!-- Axes -->
+
+<line x1="90" y1="360" x2="640" y2="360"
+stroke="#333" stroke-width="2"/>
+
+<line x1="90" y1="360" x2="90" y2="40"
+stroke="#333" stroke-width="2"/>
+
+<!-- 45 degree -->
+
+<line x1="90" y1="360" x2="600" y2="70"
+stroke="#4f46e5" stroke-width="4"/>
+
+<!-- AD full employment -->
+
+<line x1="90" y1="300" x2="570" y2="150"
+stroke="#10b981" stroke-width="4"/>
+
+<!-- Lower AD -->
+
+<line x1="90" y1="330" x2="520" y2="200"
+stroke="#db2777" stroke-width="4"/>
+
+<!-- Full employment -->
+
+<line x1="470" y1="150" x2="470" y2="360"
+stroke="#777" stroke-dasharray="7,6"/>
+
+<text x="475" y="350" font-size="15">
+Yf
+</text>
+
+<text x="505" y="135" font-size="15">
+AD₁
+</text>
+
+<text x="455" y="215" font-size="15">
+AD₂
+</text>
+
+<text x="555" y="85" font-size="15">
+AS = Y
+</text>
+
+<text x="270" y="405" font-size="15">
+National Income / Output
+</text>
+
+<text x="20" y="220" font-size="15"
+transform="rotate(-90 20 220)">
+AD / AS
+</text>
+
+<text x="365" y="315" font-size="14">
+Deflationary
+</text>
+
+<text x="365" y="335" font-size="14">
+Gap
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- CAUSES EXCESS -->
+
+<div class="card">
+
+<span class="badge">9.5</span>
+
+<h2>Causes of Excess Demand</h2>
+
+<p>
+Excess demand can arise when different components of Aggregate Demand increase beyond the level required for full-employment equilibrium.
+</p>
+
+<h3>1. Increase in Consumption Expenditure</h3>
+
+<p>
+If households increase consumption expenditure substantially, Aggregate Demand increases. If this increase occurs when the economy is already at full employment, it may generate excess demand.
+</p>
+
+<h3>2. Increase in Investment Expenditure</h3>
+
+<p>
+An increase in investment expenditure directly increases Aggregate Demand. Through the multiplier mechanism, the increase in income and consumption can further strengthen Aggregate Demand.
+</p>
+
+<h3>3. Increase in Government Expenditure</h3>
+
+<p>
+When government expenditure increases, it directly increases Aggregate Demand. If the economy is already operating at full employment, excessive government spending can contribute to excess demand.
+</p>
+
+<h3>4. Reduction in Taxes</h3>
+
+<p>
+A reduction in taxes increases disposable income. Households may spend part of this additional income, increasing consumption and Aggregate Demand.
+</p>
+
+<h3>5. Increase in Exports</h3>
+
+<p>
+Higher exports increase demand for domestically produced goods and services. This raises Aggregate Demand.
+</p>
+
+<h3>6. Reduction in Imports</h3>
+
+<p>
+A fall in imports can increase net exports, other things remaining constant, and therefore increase Aggregate Demand.
+</p>
+
+<h3>7. Increase in Money Supply</h3>
+
+<p>
+An expansion in money supply and availability of credit can encourage consumption and investment expenditure, increasing Aggregate Demand.
+</p>
+
+<div class="formula">
+
+AD = C + I + G + (X − M)
+
+</div>
+
+</div>
+
+
+<!-- CAUSES DEFICIENT -->
+
+<div class="card">
+
+<span class="badge">9.6</span>
+
+<h2>Causes of Deficient Demand</h2>
+
+<p>
+Deficient demand arises when Aggregate Demand is insufficient to support the full-employment level of output.
+</p>
+
+<h3>1. Fall in Consumption Expenditure</h3>
+
+<p>
+If households reduce consumption, firms face lower demand for their goods and services. This reduces Aggregate Demand.
+</p>
+
+<h3>2. Fall in Investment Expenditure</h3>
+
+<p>
+Lower investment reduces Aggregate Demand directly and can also produce a multiplied reduction in income.
+</p>
+
+<h3>3. Fall in Government Expenditure</h3>
+
+<p>
+A reduction in government expenditure directly reduces Aggregate Demand.
+</p>
+
+<h3>4. Increase in Taxes</h3>
+
+<p>
+Higher taxes reduce disposable income. This can reduce consumption expenditure and therefore reduce Aggregate Demand.
+</p>
+
+<h3>5. Fall in Exports</h3>
+
+<p>
+Lower exports reduce foreign demand for domestic goods and services and therefore reduce Aggregate Demand.
+</p>
+
+<h3>6. Increase in Imports</h3>
+
+<p>
+Higher imports, other things remaining constant, reduce net exports and therefore reduce Aggregate Demand.
+</p>
+
+<h3>7. Reduction in Money Supply</h3>
+
+<p>
+A contraction in money supply and credit availability can reduce consumption and investment expenditure, causing Aggregate Demand to decline.
+</p>
+
+</div>
+
+
+<!-- FISCAL EXCESS -->
+
+<div class="card">
+
+<span class="badge">9.7</span>
+
+<h2>Measures to Correct Excess Demand – Fiscal Measures</h2>
+
+<p>
+Fiscal policy refers to the policy of the government relating to taxation and government expenditure.
+</p>
+
+<h3>A. Reduction in Government Expenditure</h3>
+
+<div class="definition">
+
+When the government reduces its expenditure on goods and services, Aggregate Demand decreases directly.
+</div>
+
+<p>
+If excess demand exists, a reduction in government expenditure can reduce the pressure of demand in the economy.
+</p>
+
+<div class="formula">
+
+Government Expenditure ↓ → AD ↓
+
+</div>
+
+<h3>B. Increase in Taxes</h3>
+
+<p>
+An increase in taxes reduces the disposable income available to households. Lower disposable income tends to reduce consumption expenditure.
+</p>
+
+<div class="formula">
+
+Taxes ↑ → Disposable Income ↓ → Consumption ↓ → AD ↓
+
+</div>
+
+<div class="exam">
+
+<strong>Objective:</strong> Fiscal measures for excess demand are generally contractionary—they aim to reduce Aggregate Demand.
+</div>
+
+</div>
+
+
+<!-- MONETARY EXCESS -->
+
+<div class="card">
+
+<span class="badge">9.8</span>
+
+<h2>Measures to Correct Excess Demand – Monetary Measures</h2>
+
+<p>
+Monetary policy refers to the policy through which the monetary authority influences money supply, credit conditions and interest rates in the economy.
+</p>
+
+<h3>A. Reduction in Money Supply</h3>
+
+<p>
+A reduction in money supply can reduce the availability of funds for consumption and investment, thereby reducing Aggregate Demand.
+</p>
+
+<div class="formula">
+
+Money Supply ↓ → Spending ↓ → AD ↓
+
+</div>
+
+<h3>B. Increase in Rate of Interest</h3>
+
+<p>
+A higher rate of interest can discourage borrowing and interest-sensitive investment expenditure. It can therefore help reduce Aggregate Demand.
+</p>
+
+<div class="formula">
+
+Interest Rate ↑ → Borrowing / Investment ↓ → AD ↓
+
+</div>
+
+<h3>C. Restriction of Credit</h3>
+
+<p>
+When credit conditions become tighter, borrowing becomes more difficult or expensive. This can reduce consumption and investment expenditure and therefore reduce Aggregate Demand.
+</p>
+
+<div class="exam">
+
+<strong>Conclusion:</strong><br>
+
+To correct excess demand, monetary policy generally aims to reduce money and credit availability and/or raise borrowing costs.
+</div>
+
+</div>
+
+
+<!-- FISCAL DEFICIENT -->
+
+<div class="card">
+
+<span class="badge">9.9</span>
+
+<h2>Measures to Correct Deficient Demand – Fiscal Measures</h2>
+
+<h3>A. Increase in Government Expenditure</h3>
+
+<p>
+An increase in government expenditure directly increases Aggregate Demand.
+</p>
+
+<div class="formula">
+
+Government Expenditure ↑ → AD ↑
+
+</div>
+
+<p>
+The initial increase in expenditure may also create additional income, leading to further consumption through the multiplier mechanism.
+</p>
+
+<h3>B. Reduction in Taxes</h3>
+
+<p>
+A reduction in taxes increases disposable income. Households may spend part of this additional income, increasing consumption and Aggregate Demand.
+</p>
+
+<div class="formula">
+
+Taxes ↓ → Disposable Income ↑ → Consumption ↑ → AD ↑
+
+</div>
+
+<div class="exam">
+
+<strong>Objective:</strong> Fiscal measures for deficient demand are generally expansionary—they aim to increase Aggregate Demand.
+</div>
+
+</div>
+
+
+<!-- MONETARY DEFICIENT -->
+
+<div class="card">
+
+<span class="badge">9.10</span>
+
+<h2>Measures to Correct Deficient Demand – Monetary Measures</h2>
+
+<h3>A. Increase in Money Supply</h3>
+
+<p>
+An increase in money supply can increase the availability of funds and support higher consumption and investment expenditure.
+</p>
+
+<div class="formula">
+
+Money Supply ↑ → Spending ↑ → AD ↑
+
+</div>
+
+<h3>B. Reduction in Rate of Interest</h3>
+
+<p>
+A lower rate of interest can encourage borrowing and investment expenditure.
+</p>
+
+<div class="formula">
+
+Interest Rate ↓ → Borrowing / Investment ↑ → AD ↑
+
+</div>
+
+<h3>C. Expansion of Credit</h3>
+
+<p>
+Easier availability of credit can encourage households and firms to increase expenditure, thereby raising Aggregate Demand.
+</p>
+
+<div class="exam">
+
+<strong>Conclusion:</strong><br>
+
+To correct deficient demand, monetary policy generally aims to increase money and credit availability and/or reduce borrowing costs.
+</div>
+
+</div>
+
+
+<!-- GRAPHICAL CORRECTION -->
+
+<div class="card">
+
+<span class="badge">9.11</span>
+
+<h2>Graphical Analysis of Corrective Measures</h2>
+
+<h3>Correction of Excess Demand</h3>
+
+<p>
+When excess demand exists, the objective of policy is to reduce Aggregate Demand toward the level consistent with full-employment output.
+</p>
+
+<div class="formula">
+
+Excess Demand → Contractionary Policy → AD ↓ → Inflationary Pressure ↓
+
+</div>
+
+<h3>Correction of Deficient Demand</h3>
+
+<p>
+When deficient demand exists, the objective is to increase Aggregate Demand toward the level required to support full-employment output.
+</p>
+
+<div class="formula">
+
+Deficient Demand → Expansionary Policy → AD ↑ → Output & Employment ↑
+
+</div>
+
+<div class="topic-grid">
+
+<div class="topic-card">
+
+<h3>🔴 Excess Demand</h3>
+
+<p>
+Use contractionary fiscal and monetary measures.
+</p>
+
+<p>
+<span class="pill">G ↓</span>
+<span class="pill">Taxes ↑</span>
+<span class="pill">Money Supply ↓</span>
+<span class="pill">Interest Rate ↑</span>
+</p>
+
+</div>
+
+<div class="topic-card">
+
+<h3>🟢 Deficient Demand</h3>
+
+<p>
+Use expansionary fiscal and monetary measures.
+</p>
+
+<p>
+<span class="pill">G ↑</span>
+<span class="pill">Taxes ↓</span>
+<span class="pill">Money Supply ↑</span>
+<span class="pill">Interest Rate ↓</span>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DIFFERENCE -->
+
+<div class="card">
+
+<span class="badge">9.12</span>
+
+<h2>Excess Demand vs Deficient Demand</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>Basis</th>
+<th>Excess Demand</th>
+<th>Deficient Demand</th>
+
+</tr>
+
+<tr>
+
+<td>Meaning</td>
+
+<td>
+AD is greater than the level required at full employment.
+</td>
+
+<td>
+AD is less than the level required at full employment.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Gap</td>
+
+<td>
+Inflationary gap
+</td>
+
+<td>
+Deflationary gap
+</td>
+
+</tr>
+
+<tr>
+
+<td>Price Pressure</td>
+
+<td>
+Upward pressure on prices
+</td>
+
+<td>
+Downward pressure on prices
+</td>
+
+</tr>
+
+<tr>
+
+<td>Output</td>
+
+<td>
+Real output cannot increase proportionately beyond full-employment capacity in the short run.
+</td>
+
+<td>
+Output may remain below full-employment level.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Employment</td>
+
+<td>
+Economy is already at or around full employment.
+</td>
+
+<td>
+Unemployment may increase because of insufficient demand.
+</td>
+
+</tr>
+
+<tr>
+
+<td>Fiscal Policy</td>
+
+<td>
+Contractionary
+</td>
+
+<td>
+Expansionary
+</td>
+
+</tr>
+
+<tr>
+
+<td>Government Expenditure</td>
+
+<td>
+Decrease
+</td>
+
+<td>
+Increase
+</td>
+
+</tr>
+
+<tr>
+
+<td>Taxes</td>
+
+<td>
+Increase
+</td>
+
+<td>
+Decrease
+</td>
+
+</tr>
+
+<tr>
+
+<td>Money Supply</td>
+
+<td>
+Decrease
+</td>
+
+<td>
+Increase
+</td>
+
+</tr>
+
+<tr>
+
+<td>Interest Rate</td>
+
+<td>
+Increase
+</td>
+
+<td>
+Decrease
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- POLICY TABLE -->
+
+<div class="card">
+
+<h2>Quick Policy Understanding</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>Situation</th>
+<th>Government Expenditure</th>
+<th>Taxes</th>
+<th>Money Supply</th>
+<th>Interest Rate</th>
+
+</tr>
+
+<tr>
+
+<td><strong>Excess Demand</strong></td>
+
+<td>↓</td>
+<td>↑</td>
+<td>↓</td>
+<td>↑</td>
+
+</tr>
+
+<tr>
+
+<td><strong>Deficient Demand</strong></td>
+
+<td>↑</td>
+<td>↓</td>
+<td>↑</td>
+<td>↓</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="note">
+
+<strong>Memory Trick:</strong><br><br>
+
+<strong>Excess Demand:</strong> Cool the economy → reduce spending.
+
+<br><br>
+
+<strong>Deficient Demand:</strong> Support the economy → increase spending.
+
+</div>
+
+</div>
+
+
+<!-- SOLVED PRACTICALS -->
+
+<div class="card">
+
+<span class="badge">9.13</span>
+
+<h2>Solved Practicals</h2>
+
+
+<div class="question">
+
+<strong>Question 1.</strong>
+
+At full employment, Aggregate Demand is ₹1,000 crore while actual Aggregate Demand is ₹1,150 crore. Calculate the inflationary gap.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Formula:</strong>
+
+<br><br>
+
+Inflationary Gap = Actual AD − AD at Full Employment
+
+<br><br>
+
+= ₹1,150 crore − ₹1,000 crore
+
+<br><br>
+
+<strong>= ₹150 crore</strong>
+
+<br><br>
+
+Therefore, the inflationary gap is <strong>₹150 crore</strong>.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 2.</strong>
+
+At full employment, the required Aggregate Demand is ₹2,000 crore, while actual Aggregate Demand is ₹1,700 crore. Find the deflationary gap.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Formula:</strong>
+
+<br><br>
+
+Deflationary Gap = AD at Full Employment − Actual AD
+
+<br><br>
+
+= ₹2,000 crore − ₹1,700 crore
+
+<br><br>
+
+<strong>= ₹300 crore</strong>
+
+<br><br>
+
+Therefore, the deflationary gap is <strong>₹300 crore</strong>.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 3.</strong>
+
+If government expenditure is increased during deficient demand, what will happen to Aggregate Demand?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+An increase in government expenditure directly increases Aggregate Demand.
+
+<br><br>
+
+Therefore:
+
+<br><br>
+
+<strong>G ↑ → AD ↑</strong>
+
+<br><br>
+
+The increase in expenditure can also create additional income and consumption through the multiplier mechanism.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 4.</strong>
+
+What fiscal measures can be used to correct excess demand?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+The government can use contractionary fiscal measures to reduce excess demand.
+
+<br><br>
+
+<strong>1. Reduction in government expenditure:</strong> It directly reduces Aggregate Demand.
+
+<br><br>
+
+<strong>2. Increase in taxes:</strong> It reduces disposable income and consumption expenditure, thereby reducing Aggregate Demand.
+
+<br><br>
+
+Thus, the government can reduce government expenditure and/or increase taxes to control excess demand.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 5.</strong>
+
+What fiscal measures can be used to correct deficient demand?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+The government can use expansionary fiscal measures.
+
+<br><br>
+
+<strong>1. Increase in government expenditure:</strong> It directly increases Aggregate Demand.
+
+<br><br>
+
+<strong>2. Reduction in taxes:</strong> It increases disposable income, which can increase consumption and Aggregate Demand.
+
+<br><br>
+
+Therefore, increased government expenditure and reduced taxes can help correct deficient demand.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 6.</strong>
+
+What happens to Aggregate Demand when the rate of interest is increased to correct excess demand?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+An increase in the rate of interest tends to make borrowing more expensive. This can discourage investment and some interest-sensitive expenditure.
+
+<br><br>
+
+Therefore:
+
+<br><br>
+
+<strong>Interest Rate ↑ → Investment / Borrowing ↓ → AD ↓</strong>
+
+<br><br>
+
+Hence, an increase in the rate of interest can help reduce excess demand.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 7.</strong>
+
+How can a reduction in the rate of interest help correct deficient demand?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+A reduction in the rate of interest can make borrowing less expensive. This may encourage firms to increase investment and can support expenditure.
+
+<br><br>
+
+Therefore:
+
+<br><br>
+
+<strong>Interest Rate ↓ → Investment ↑ → AD ↑</strong>
+
+<br><br>
+
+Thus, a reduction in the rate of interest can help increase Aggregate Demand during deficient demand.
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+
+<!-- BOARD QUESTIONS -->
+
+<div class="card">
+
+<span class="badge">9.14</span>
+
+<h2>Topic-wise Board Questions</h2>
+
+
+<div class="question">
+
+<strong>Question 1.</strong>
+
+What is meant by excess demand?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Excess demand refers to a situation in which Aggregate Demand is greater than the Aggregate Demand required to maintain full-employment equilibrium.
+
+It occurs when total planned expenditure exceeds the level necessary to purchase the full-employment level of output.
+
+Since the economy is already operating at or near full employment, real output cannot increase proportionately in the short run. Therefore, excess demand creates upward pressure on the general price level.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 2.</strong>
+
+What is meant by deficient demand?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Deficient demand refers to a situation in which Aggregate Demand is less than the Aggregate Demand required to maintain full-employment equilibrium.
+
+When demand is insufficient, firms may be unable to sell the output that could be produced at full employment. They may therefore reduce production and employment.
+
+Thus, deficient demand creates a demand deficiency and can lead to deflationary or recessionary pressure.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 3.</strong>
+
+Explain the meaning of inflationary gap.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Inflationary gap is the excess of Aggregate Demand over the level of Aggregate Demand required to maintain full-employment equilibrium.
+
+It occurs when the economy is already at full employment but Aggregate Demand continues to rise.
+
+Since productive resources are already highly employed, output cannot increase sufficiently in the short run. The excess demand therefore puts upward pressure on prices.
+
+<br><br>
+
+<strong>Inflationary Gap = Actual AD − AD at Full Employment</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 4.</strong>
+
+Explain the meaning of deflationary gap.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Deflationary gap is the shortfall of Aggregate Demand from the level of Aggregate Demand required to maintain full-employment equilibrium.
+
+When Aggregate Demand is insufficient, firms may face difficulty selling their output. They may reduce production and employment, resulting in unemployment and downward pressure on prices.
+
+<br><br>
+
+<strong>Deflationary Gap = AD at Full Employment − Actual AD</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 5.</strong>
+
+State two fiscal measures to correct excess demand.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Two fiscal measures to correct excess demand are:
+
+<br><br>
+
+<strong>1. Reduction in government expenditure:</strong> It directly reduces Aggregate Demand.
+
+<br><br>
+
+<strong>2. Increase in taxes:</strong> It reduces disposable income and consumption expenditure, thereby reducing Aggregate Demand.
+
+<br><br>
+
+These are contractionary fiscal measures because their objective is to reduce excessive demand.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 6.</strong>
+
+State two fiscal measures to correct deficient demand.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Two fiscal measures to correct deficient demand are:
+
+<br><br>
+
+<strong>1. Increase in government expenditure:</strong> It directly increases Aggregate Demand.
+
+<br><br>
+
+<strong>2. Reduction in taxes:</strong> It increases disposable income and can increase consumption expenditure.
+
+<br><br>
+
+These are expansionary fiscal measures because their objective is to increase Aggregate Demand.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 7.</strong>
+
+Explain how monetary policy can be used to correct excess demand.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Monetary policy can reduce excess demand through contractionary measures.
+
+<br><br>
+
+The monetary authority can reduce money supply and restrict credit availability. It can also increase the rate of interest.
+
+<br><br>
+
+Higher interest rates can discourage borrowing and investment, while tighter monetary conditions can reduce expenditure.
+
+<br><br>
+
+Therefore:
+
+<br>
+
+<strong>Money Supply ↓ / Interest Rate ↑ → Expenditure ↓ → AD ↓</strong>
+
+<br><br>
+
+This helps reduce excess demand and inflationary pressure.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 8.</strong>
+
+Explain how monetary policy can be used to correct deficient demand.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Monetary policy can increase Aggregate Demand through expansionary measures.
+
+<br><br>
+
+The monetary authority can increase money supply, make credit more easily available and reduce the rate of interest.
+
+<br><br>
+
+Lower interest rates can encourage borrowing and investment, increasing expenditure and Aggregate Demand.
+
+<br><br>
+
+Therefore:
+
+<br>
+
+<strong>Money Supply ↑ / Interest Rate ↓ → Expenditure ↑ → AD ↑</strong>
+
+<br><br>
+
+This can help reduce deficient demand.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 9.</strong>
+
+Distinguish between excess demand and deficient demand.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Excess demand</strong> occurs when Aggregate Demand is greater than the level required at full employment. It creates inflationary pressure.
+
+<br><br>
+
+<strong>Deficient demand</strong> occurs when Aggregate Demand is less than the level required at full employment. It can lead to lower output, employment and deflationary pressure.
+
+<br><br>
+
+Thus, excess demand requires measures to reduce Aggregate Demand, while deficient demand requires measures to increase Aggregate Demand.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 10.</strong>
+
+Why does excess demand create inflationary pressure?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Excess demand occurs when Aggregate Demand exceeds the level required to maintain full-employment output.
+
+At full employment, productive resources are already being used to a high degree. Therefore, firms cannot increase real output proportionately in the short run.
+
+The additional demand consequently puts upward pressure on the general price level.
+
+Hence, excess demand creates inflationary pressure.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 11.</strong>
+
+Why does deficient demand lead to unemployment?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Deficient demand means that Aggregate Demand is insufficient to purchase the output corresponding to full employment.
+
+When firms cannot sell the desired level of output, they may reduce production. Lower production reduces the demand for labour and other productive resources.
+
+Consequently, employment may fall and unemployment may increase.
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+
+<!-- CASE BASED -->
+
+<div class="card">
+
+<span class="badge">9.15</span>
+
+<h2>Case-Based Questions</h2>
+
+
+<div class="question">
+
+<strong>Case 1:</strong>
+
+An economy is operating at the full-employment level. Due to a substantial increase in government expenditure and private investment, Aggregate Demand rises considerably beyond the level required to purchase full-employment output.
+
+<br><br>
+
+<strong>(a)</strong> Identify the situation.
+
+<br>
+<strong>(b)</strong> What type of gap is created?
+
+<br>
+<strong>(c)</strong> State one fiscal measure to correct it.
+
+<br>
+<strong>(d)</strong> State one monetary measure to correct it.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>(a)</strong> The situation is <strong>excess demand</strong>.
+
+<br><br>
+
+<strong>(b)</strong> It creates an <strong>inflationary gap</strong>.
+
+<br><br>
+
+<strong>(c)</strong> The government can reduce government expenditure or increase taxes.
+
+<br><br>
+
+<strong>(d)</strong> The monetary authority can reduce money supply or increase the rate of interest.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Case 2:</strong>
+
+An economy is operating below its full-employment level. Household consumption and private investment have fallen. Firms are reducing production because of insufficient demand.
+
+<br><br>
+
+<strong>(a)</strong> Identify the situation.
+
+<br>
+<strong>(b)</strong> What type of gap is associated with it?
+
+<br>
+<strong>(c)</strong> State one fiscal measure.
+
+<br>
+<strong>(d)</strong> State one monetary measure.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>(a)</strong> The economy is experiencing <strong>deficient demand</strong>.
+
+<br><br>
+
+<strong>(b)</strong> It is associated with a <strong>deflationary gap</strong>.
+
+<br><br>
+
+<strong>(c)</strong> The government can increase government expenditure or reduce taxes.
+
+<br><br>
+
+<strong>(d)</strong> The monetary authority can increase money supply or reduce the rate of interest.
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+
+<!-- CONCEPT BUILDER -->
+
+<div class="card">
+
+<span class="badge">CONCEPT BUILDER</span>
+
+<h2>Important Concept Connections</h2>
+
+<p>
+
+<span class="pill">Excess Demand</span>
+
+<span class="pill">Inflationary Gap</span>
+
+<span class="pill">Deficient Demand</span>
+
+<span class="pill">Deflationary Gap</span>
+
+</p>
+
+<h3>Excess Demand</h3>
+
+<div class="formula">
+
+AD ↑ beyond Full-Employment Requirement
+<br><br>
+→ Inflationary Pressure
+
+</div>
+
+<h3>Deficient Demand</h3>
+
+<div class="formula">
+
+AD ↓ below Full-Employment Requirement
+<br><br>
+→ Deflationary / Recessionary Pressure
+
+</div>
+
+<h3>Correcting Excess Demand</h3>
+
+<div class="formula">
+
+AD ↓
+
+<br><br>
+
+G ↓ + Taxes ↑ + Money Supply ↓ + Interest Rate ↑
+
+</div>
+
+<h3>Correcting Deficient Demand</h3>
+
+<div class="formula">
+
+AD ↑
+
+<br><br>
+
+G ↑ + Taxes ↓ + Money Supply ↑ + Interest Rate ↓
+
+</div>
+
+</div>
+
+
+<!-- COMMON MISTAKES -->
+
+<div class="card">
+
+<span class="badge">EXAM ALERT</span>
+
+<h2>Common Mistakes Students Make</h2>
+
+<ul>
+
+<li>
+Do not define excess demand simply as “demand is greater than supply.” It is defined with reference to the Aggregate Demand required at full employment.
+</li>
+
+<li>
+Do not confuse excess demand with inflation itself. Excess demand creates inflationary pressure.
+</li>
+
+<li>
+Do not confuse deficient demand with zero demand. It means demand is insufficient relative to the full-employment requirement.
+</li>
+
+<li>
+Remember that excess demand is associated with an <strong>inflationary gap</strong>.
+</li>
+
+<li>
+Deficient demand is associated with a <strong>deflationary gap</strong>.
+</li>
+
+<li>
+For excess demand, use <strong>contractionary</strong> policies.
+</li>
+
+<li>
+For deficient demand, use <strong>expansionary</strong> policies.
+</li>
+
+<li>
+Excess demand → Government expenditure should generally be reduced, not increased.
+</li>
+
+<li>
+Deficient demand → Government expenditure should generally be increased, not reduced.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- POLICY FORMULA -->
+
+<div class="card">
+
+<span class="badge">IMPORTANT RELATIONSHIPS</span>
+
+<h2>Policy Relationships to Remember</h2>
+
+<div class="formula">
+
+<strong>EXCESS DEMAND</strong>
+
+<br><br>
+
+G ↓ → AD ↓
+
+<br>
+
+Taxes ↑ → AD ↓
+
+<br>
+
+Money Supply ↓ → AD ↓
+
+<br>
+
+Interest Rate ↑ → Investment ↓ → AD ↓
+
+</div>
+
+<div class="formula">
+
+<strong>DEFICIENT DEMAND</strong>
+
+<br><br>
+
+G ↑ → AD ↑
+
+<br>
+
+Taxes ↓ → AD ↑
+
+<br>
+
+Money Supply ↑ → AD ↑
+
+<br>
+
+Interest Rate ↓ → Investment ↑ → AD ↑
+
+</div>
+
+</div>
+
+
+<!-- FINAL QUESTIONS -->
+
+<div class="card">
+
+<span class="badge">PRACTICE</span>
+
+<h2>More Practice Questions</h2>
+
+
+<div class="question">
+
+<strong>1.</strong> Define inflationary gap.
+
+<details>
+<summary>▶ View Answer</summary>
+<div class="answer">
+Inflationary gap is the excess of Aggregate Demand over the level required to maintain full-employment equilibrium.
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>2.</strong> Define deflationary gap.
+
+<details>
+<summary>▶ View Answer</summary>
+<div class="answer">
+Deflationary gap is the shortfall of Aggregate Demand from the level required to maintain full-employment equilibrium.
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>3.</strong> What happens to Aggregate Demand when taxes are increased?
+
+<details>
+<summary>▶ View Answer</summary>
+<div class="answer">
+An increase in taxes reduces disposable income and can reduce consumption expenditure. Therefore, Aggregate Demand tends to decrease.
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>4.</strong> What happens to Aggregate Demand when government expenditure increases?
+
+<details>
+<summary>▶ View Answer</summary>
+<div class="answer">
+An increase in government expenditure directly increases Aggregate Demand.
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>5.</strong> Which type of policy is suitable for deficient demand?
+
+<details>
+<summary>▶ View Answer</summary>
+<div class="answer">
+Expansionary fiscal and monetary policies are generally used to increase Aggregate Demand and correct deficient demand.
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>6.</strong> Which type of policy is suitable for excess demand?
+
+<details>
+<summary>▶ View Answer</summary>
+<div class="answer">
+Contractionary fiscal and monetary policies are generally used to reduce Aggregate Demand and correct excess demand.
+</div>
+</details>
+
+</div>
+
+</div>
+
+
+<!-- END -->
+
+<div class="card center">
+
+<h2>📚 Topic Completed</h2>
+
+<p>
+You have covered the major concepts of
+<strong>Excess Demand and Deficient Demand</strong>, including their causes, gaps, effects, corrective measures, graphs and numerical/conceptual questions.
+</p>
+
+<div class="formula">
+
+Unit 3 Complete Topic Sequence
+
+<br><br>
+
+Aggregate Demand ✓
+
+<br>
+
+Income Determination & Multiplier ✓
+
+<br>
+
+Excess Demand & Deficient Demand ✓
+
+</div>
+
+<a href="class12-macroeconomics-unit3.html"
+style="display:inline-block;
+background:#4f46e5;
+color:white;
+text-decoration:none;
+padding:10px 18px;
+border-radius:10px;
+font-weight:bold;">
+
+← Back to Unit 3
+
+</a>
+
+</div>
+
+
+<div class="footer">
+
+<p>
+© Edusphere with Satyam | Class 12 Economics
+</p>
+
+<p>
+Unit 3 – Determination of Income and Employment
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
