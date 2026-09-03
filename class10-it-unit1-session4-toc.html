@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Session 4 – Create and Customize Table of Contents | Class 10 IT 402</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .card {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+            border-left: 6px solid #6366f1;
+        }
+
+        .card h2 {
+            color: #4f46e5;
+            margin-top: 0;
+        }
+
+        .card h3 {
+            color: #7c3aed;
+        }
+
+        .intro {
+            border-left-color: #ec4899;
+        }
+
+        .definition {
+            background: #eef2ff;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .simple {
+            background: #ecfdf5;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .note {
+            background: #fff7ed;
+            padding: 16px;
+            border-left: 5px solid #f97316;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .warning {
+            background: #fef2f2;
+            padding: 16px;
+            border-left: 5px solid #ef4444;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tip {
+            background: #f0fdf4;
+            padding: 16px;
+            border-left: 5px solid #22c55e;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .step {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 12px 0;
+        }
+
+        .step strong {
+            color: #4f46e5;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 3px 7px;
+            border-radius: 5px;
+            color: #be123c;
+        }
+
+        /* Two-layer expandable questions */
+
+        details.question {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            margin: 12px 0;
+            padding: 0;
+        }
+
+        details.question > summary {
+            cursor: pointer;
+            padding: 14px 17px;
+            font-weight: bold;
+            color: #4338ca;
+            list-style-position: inside;
+        }
+
+        details.question > summary:hover {
+            background: #eef2ff;
+            border-radius: 12px;
+        }
+
+        .answer-box {
+            padding: 5px 17px 17px 17px;
+        }
+
+        details.answer {
+            background: white;
+            border: 1px solid #d8dee9;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        details.answer summary {
+            cursor: pointer;
+            padding: 10px 13px;
+            color: #059669;
+            font-weight: bold;
+        }
+
+        .answer {
+            padding: 10px 13px 14px;
+            background: #ecfdf5;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .mcq-link {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #7c3aed, #db2777);
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .navigation a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            padding: 13px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SESSION 4: CREATE AND CUSTOMIZE TABLE OF CONTENTS</h1>
+    <p>Class 10 Information Technology (402) | Unit 1 – Digital Documentation (Advanced)</p>
+</header>
+
+<div class="container">
+
+    <!-- INTRODUCTION -->
+
+    <section class="card intro">
+        <h2>📘 Introduction</h2>
+
+        <p>
+            A long document may contain many chapters, topics and subtopics.
+            Finding a particular topic manually can take time. A
+            <strong>Table of Contents (TOC)</strong> provides a list of the
+            main headings and subheadings of a document along with their
+            page numbers.
+        </p>
+
+        <p>
+            LibreOffice Writer can automatically create a Table of Contents
+            from the headings used in a document. This means that the user
+            does not have to type every heading and page number manually.
+        </p>
+
+        <div class="simple">
+            <strong>In simple words:</strong>
+            A Table of Contents is a list of topics and subtopics in a
+            document that helps the reader quickly find a particular section.
+        </div>
+    </section>
+
+
+    <!-- WHAT IS TOC -->
+
+    <section class="card">
+        <h2>📑 What is a Table of Contents?</h2>
+
+        <div class="definition">
+            <strong>Formal Definition:</strong><br>
+            A Table of Contents is an automatically generated list of the
+            headings and subheadings of a document, usually displayed with
+            their corresponding page numbers.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Definition:</strong><br>
+            A Table of Contents is like a map of a document. It tells the
+            reader what topics are present and where they can be found.
+        </div>
+
+        <h3>Example</h3>
+
+        <div class="step">
+            <strong>1. Introduction ............... 1</strong><br>
+            <strong>2. Digital Documentation ....... 3</strong><br>
+            <strong>3. Styles ...................... 7</strong><br>
+            <strong>4. Images ...................... 12</strong>
+        </div>
+
+        <p>
+            The actual entries and page numbers are generated according to
+            the headings and document structure.
+        </p>
+    </section>
+
+
+    <!-- IMPORTANCE -->
+
+    <section class="card">
+        <h2>⭐ Why is a Table of Contents Used?</h2>
+
+        <ul>
+            <li>It gives an overview of a long document.</li>
+            <li>It helps readers locate topics quickly.</li>
+            <li>It saves time when searching for a particular section.</li>
+            <li>It gives the document a professional appearance.</li>
+            <li>It automatically displays page numbers.</li>
+            <li>It can be updated when the document changes.</li>
+            <li>It reduces the need to prepare the contents list manually.</li>
+        </ul>
+    </section>
+
+
+    <!-- HEADING STYLES -->
+
+    <section class="card">
+        <h2>🏷️ Heading Styles and Table of Contents</h2>
+
+        <p>
+            Before creating a Table of Contents, headings should be properly
+            identified using heading paragraph styles.
+        </p>
+
+        <div class="definition">
+            <strong>Heading Style:</strong><br>
+            A heading style is a predefined paragraph style used to identify
+            and format headings at different levels in a document.
+        </div>
+
+        <h3>Common Heading Levels</h3>
+
+        <div class="step">
+            <strong>Heading 1:</strong>
+            Usually used for major chapters or main sections.
+        </div>
+
+        <div class="step">
+            <strong>Heading 2:</strong>
+            Usually used for subsections inside a Heading 1 section.
+        </div>
+
+        <div class="step">
+            <strong>Heading 3:</strong>
+            Usually used for smaller subsections inside a Heading 2 section.
+        </div>
+
+        <div class="simple">
+            <strong>Example:</strong><br><br>
+
+            Heading 1 → Digital Documentation<br>
+            Heading 2 → Working with Images<br>
+            Heading 3 → Resizing Images
+        </div>
+
+        <div class="note">
+            <strong>Important:</strong>
+            The predefined heading styles such as Heading 1, Heading 2 and
+            Heading 3 provide the structure from which LibreOffice can
+            generate the Table of Contents. 
+        </div>
+    </section>
+
+
+    <!-- APPLY HEADING STYLES -->
+
+    <section class="card">
+        <h2>🛠️ Applying a Heading Style</h2>
+
+        <p>
+            The following steps can be used to apply a heading style before
+            creating the Table of Contents.
+        </p>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the required document in LibreOffice Writer.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Locate the heading that you want to include in the Table of
+            Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Click anywhere inside that heading paragraph.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Open the paragraph style list or Styles interface.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Select the appropriate heading style.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            For a main section, select <strong>Heading 1</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            For a subsection, select <strong>Heading 2</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            For a smaller subsection, select <strong>Heading 3</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Repeat these steps for the other headings in the document.
+        </div>
+
+        <div class="tip">
+            <strong>Tip:</strong>
+            Do not create a TOC by manually typing the headings and page
+            numbers. Proper heading styles allow Writer to generate the TOC
+            automatically.
+        </div>
+    </section>
+
+
+    <!-- CREATE TOC -->
+
+    <section class="card">
+        <h2>🛠️ Creating a Table of Contents</h2>
+
+        <p>
+            Once the headings have been properly formatted, the Table of
+            Contents can be inserted into the document.
+        </p>
+
+        <h3>Step-by-Step Procedure</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the document in LibreOffice Writer.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Make sure that the required headings have appropriate heading
+            styles.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Decide where the Table of Contents should appear.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Click at the location where you want to insert the TOC.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Open the <strong>Insert</strong> menu.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Select <strong>Table of Contents and Index</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Select <strong>Table of Contents, Index or Bibliography</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            The Table of Contents dialog box will appear.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Make sure that the type is set to
+            <strong>Table of Contents</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 10:</strong>
+            Check the available options according to your requirement.
+        </div>
+
+        <div class="step">
+            <strong>Step 11:</strong>
+            Check the heading levels that should be included.
+        </div>
+
+        <div class="step">
+            <strong>Step 12:</strong>
+            Click <strong>OK</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 13:</strong>
+            LibreOffice generates the Table of Contents at the selected
+            location.
+        </div>
+
+        <div class="step">
+            <strong>Step 14:</strong>
+            Check the headings displayed in the TOC.
+        </div>
+
+        <div class="step">
+            <strong>Step 15:</strong>
+            Check the page numbers.
+        </div>
+
+        <div class="tip">
+            LibreOffice creates TOC entries from the outline level of the
+            paragraph style and the heading text. 
+        </div>
+    </section>
+
+
+    <!-- INCLUDE UP TO LEVEL -->
+
+    <section class="card">
+        <h2>🔢 Include Up to Level</h2>
+
+        <div class="definition">
+            <strong>Meaning:</strong><br>
+            The <strong>Include up to level</strong> option determines how
+            many heading levels are included in the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Level 1:</strong>
+            Includes major headings.
+        </div>
+
+        <div class="step">
+            <strong>Level 2:</strong>
+            Includes Level 1 and Level 2 headings.
+        </div>
+
+        <div class="step">
+            <strong>Level 3:</strong>
+            Includes Level 1, Level 2 and Level 3 headings.
+        </div>
+
+        <div class="simple">
+            <strong>Example:</strong><br>
+            If you want only chapters, use a lower level. If you want chapters,
+            sections and subsections, include more heading levels.
+        </div>
+    </section>
+
+
+    <!-- CUSTOMIZE TOC -->
+
+    <section class="card">
+        <h2>🎨 Customizing the Table of Contents</h2>
+
+        <p>
+            LibreOffice provides options for changing the way the Table of
+            Contents appears.
+        </p>
+
+        <h3>Changing the Title</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Place the cursor inside the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Open the Table of Contents editing options.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Open the <strong>Type</strong> tab if necessary.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Locate the <strong>Title</strong> field.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Enter the required title.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Apply the change.
+        </div>
+
+        <h3>Changing the Number of Heading Levels</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the Table of Contents editing dialog.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Locate <strong>Include up to level</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select the required level.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Apply the changes.
+        </div>
+
+        <h3>Changing Entry Structure</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the Table of Contents editing dialog.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Select the <strong>Entries</strong> tab.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select the heading level that you want to customize.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Use the structure and formatting controls to adjust how the entry
+            is displayed.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Add, remove or replace available structure elements where required.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Apply the changes.
+        </div>
+
+        <div class="note">
+            The Entries tab allows the structure of TOC entries to be
+            customized. LibreOffice provides codes and controls for changing
+            the structure and formatting of entries. 
+        </div>
+    </section>
+
+
+    <!-- ADDITIONAL STYLES -->
+
+    <section class="card">
+        <h2>➕ Using Additional Styles in a Table of Contents</h2>
+
+        <p>
+            LibreOffice normally creates TOC entries from heading levels.
+            However, other paragraph styles can also be assigned to TOC
+            levels when required.
+        </p>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the Table of Contents dialog.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Go to the <strong>Type</strong> tab.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Locate the <strong>Create from</strong> area.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Select <strong>Additional Styles</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Click <strong>Assign Styles</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Select the paragraph style that you want to include.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Assign an appropriate TOC level.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            Confirm the style assignment.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Apply the changes to the Table of Contents.
+        </div>
+
+        <div class="note">
+            This is an advanced option. For normal Class 10 work, using
+            Heading 1, Heading 2 and Heading 3 is generally sufficient.
+            
+        </div>
+    </section>
+
+
+    <!-- UPDATE TOC -->
+
+    <section class="card">
+        <h2>🔄 Updating the Table of Contents</h2>
+
+        <p>
+            A document may change after the Table of Contents has been
+            created. New headings may be added, headings may be removed, or
+            page numbers may change. The TOC should therefore be updated.
+        </p>
+
+        <h3>Method 1 – Right-Click Method</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Locate the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Right-click inside the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select <strong>Update Index or Table of Contents</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            LibreOffice updates the TOC.
+        </div>
+
+        <h3>Method 2 – Tools Menu</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open the <strong>Tools</strong> menu.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Select <strong>Update</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select <strong>All Indexes and Tables</strong> when required.
+        </div>
+
+        <div class="tip">
+            <strong>Remember:</strong>
+            Whenever headings or page positions change, update the TOC so
+            that its entries and page numbers remain current.
+            
+        </div>
+    </section>
+
+
+    <!-- EDIT TOC -->
+
+    <section class="card">
+        <h2>✏️ Editing the Table of Contents</h2>
+
+        <p>
+            The properties and structure of an existing Table of Contents
+            can be changed.
+        </p>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Click inside the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Right-click inside the TOC.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select <strong>Edit Index or Table of Contents</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Make the required changes in the dialog box.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Change the required title, levels, entries or other available
+            options.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Apply the changes.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Check the updated Table of Contents.
+        </div>
+
+        <div class="note">
+            If the TOC is protected against manual changes, its generated
+            contents should be changed through the appropriate TOC settings
+            rather than by manually editing generated entries.
+            
+        </div>
+    </section>
+
+
+    <!-- DELETE TOC -->
+
+    <section class="card">
+        <h2>🗑️ Deleting the Table of Contents</h2>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Click inside the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Right-click the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Select the option to delete or remove the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Confirm the operation if LibreOffice asks for confirmation.
+        </div>
+
+        <div class="warning">
+            <strong>Important:</strong>
+            Removing the TOC removes the generated Table of Contents, not
+            the actual headings and main content of your document.
+        </div>
+    </section>
+
+
+    <!-- COMMON MISTAKES -->
+
+    <section class="card">
+        <h2>⚠️ Common Mistakes</h2>
+
+        <details class="question">
+            <summary>1. Why is my heading not appearing in the Table of Contents?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Explanation</summary>
+                    <div class="answer">
+                        Check whether the heading has been given an
+                        appropriate heading style or outline level. Also check
+                        whether the TOC has been updated after making changes.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>2. Why are old page numbers showing in the TOC?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Explanation</summary>
+                    <div class="answer">
+                        The document may have changed after the TOC was
+                        created. Right-click the TOC and choose
+                        <strong>Update Index or Table of Contents</strong>.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>3. Why are too many subheadings appearing in the TOC?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Explanation</summary>
+                    <div class="answer">
+                        The selected heading level may be too high. Reduce the
+                        <strong>Include up to level</strong> setting according
+                        to the required document structure.
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- PRACTICAL ACTIVITY -->
+
+    <section class="card">
+        <h2>🧪 Practical Activity: Create and Customize a Table of Contents</h2>
+
+        <p>
+            Create a small project document containing headings and
+            subheadings and generate a Table of Contents from them.
+        </p>
+
+        <h3>Part A – Prepare the Document</h3>
+
+        <div class="step">
+            <strong>Step 1:</strong>
+            Open LibreOffice Writer.
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong>
+            Create a new blank document.
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong>
+            Type a suitable title for the project.
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong>
+            Create a few main sections.
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong>
+            Create a few subtopics under the main sections.
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong>
+            Click inside the first main heading.
+        </div>
+
+        <div class="step">
+            <strong>Step 7:</strong>
+            Apply <strong>Heading 1</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 8:</strong>
+            Repeat this for the other main headings.
+        </div>
+
+        <div class="step">
+            <strong>Step 9:</strong>
+            Click inside each subheading.
+        </div>
+
+        <div class="step">
+            <strong>Step 10:</strong>
+            Apply <strong>Heading 2</strong> to the subheadings.
+        </div>
+
+
+        <h3>Part B – Insert the Table of Contents</h3>
+
+        <div class="step">
+            <strong>Step 11:</strong>
+            Place the cursor where the Table of Contents should appear.
+        </div>
+
+        <div class="step">
+            <strong>Step 12:</strong>
+            Open the <strong>Insert</strong> menu.
+        </div>
+
+        <div class="step">
+            <strong>Step 13:</strong>
+            Select <strong>Table of Contents and Index</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 14:</strong>
+            Select <strong>Table of Contents, Index or Bibliography</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 15:</strong>
+            Make sure the type is <strong>Table of Contents</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 16:</strong>
+            Select the required heading level.
+        </div>
+
+        <div class="step">
+            <strong>Step 17:</strong>
+            Click <strong>OK</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 18:</strong>
+            Check whether all required headings appear.
+        </div>
+
+        <div class="step">
+            <strong>Step 19:</strong>
+            Check the page numbers.
+        </div>
+
+
+        <h3>Part C – Make a Change and Update</h3>
+
+        <div class="step">
+            <strong>Step 20:</strong>
+            Add a new heading to the document.
+        </div>
+
+        <div class="step">
+            <strong>Step 21:</strong>
+            Apply the appropriate heading style to the new heading.
+        </div>
+
+        <div class="step">
+            <strong>Step 22:</strong>
+            Change the document so that page positions may change.
+        </div>
+
+        <div class="step">
+            <strong>Step 23:</strong>
+            Right-click inside the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 24:</strong>
+            Select <strong>Update Index or Table of Contents</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 25:</strong>
+            Check whether the new heading and updated page number appear.
+        </div>
+
+
+        <h3>Part D – Customize</h3>
+
+        <div class="step">
+            <strong>Step 26:</strong>
+            Right-click inside the Table of Contents.
+        </div>
+
+        <div class="step">
+            <strong>Step 27:</strong>
+            Select <strong>Edit Index or Table of Contents</strong>.
+        </div>
+
+        <div class="step">
+            <strong>Step 28:</strong>
+            Change the required TOC option.
+        </div>
+
+        <div class="step">
+            <strong>Step 29:</strong>
+            Apply the changes.
+        </div>
+
+        <div class="step">
+            <strong>Step 30:</strong>
+            Check the final appearance of the Table of Contents.
+        </div>
+
+        <div class="tip">
+            <strong>Result:</strong>
+            You have created, updated and customized a Table of Contents in
+            LibreOffice Writer.
+        </div>
+    </section>
+
+
+    <!-- APPLICATION QUESTIONS -->
+
+    <section class="card">
+        <h2>🧠 Application-Based Questions</h2>
+
+        <details class="question">
+            <summary>1. A student has prepared a 20-page project and wants readers to quickly find each chapter. What should the student create?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        The student should create a
+                        <strong>Table of Contents</strong> containing the
+                        document's main headings and subheadings with their
+                        page numbers.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>2. A heading is present in the document but does not appear in the Table of Contents. What should be checked?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        The student should check whether the heading has been
+                        assigned an appropriate heading style or outline level.
+                        The Table of Contents should also be updated.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>3. A project has chapters, sections and subsections. Which heading styles can be used?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        <strong>Heading 1</strong> can be used for chapters,
+                        <strong>Heading 2</strong> for sections and
+                        <strong>Heading 3</strong> for subsections.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>4. A student added a new chapter after creating the TOC. The new chapter is not shown. What should be done?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Apply the appropriate heading style to the new chapter
+                        and then update the Table of Contents.
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- IMPORTANT QUESTIONS -->
+
+    <section class="card">
+        <h2>🎯 Important Questions</h2>
+
+        <details class="question">
+            <summary>1. Define Table of Contents.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        A Table of Contents is a list of headings and
+                        subheadings in a document, generally displayed with
+                        their corresponding page numbers.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>2. Why are heading styles important while creating a Table of Contents?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Heading styles identify the structure and hierarchy of
+                        the document. LibreOffice uses these heading levels to
+                        generate the Table of Contents automatically.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>3. Write the steps to create a Table of Contents.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Place the cursor at the required location →
+                        <strong>Insert → Table of Contents and Index →
+                        Table of Contents, Index or Bibliography</strong> →
+                        select the required options → click
+                        <strong>OK</strong>.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>4. How can a Table of Contents be updated?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Right-click inside the Table of Contents and select
+                        <strong>Update Index or Table of Contents</strong>.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>5. What is the purpose of the “Include up to level” option?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        It determines the maximum heading level that will be
+                        included in the Table of Contents.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>6. How can an existing Table of Contents be edited?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Click or right-click inside the Table of Contents and
+                        select <strong>Edit Index or Table of Contents</strong>.
+                        The required settings can then be changed.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>7. Differentiate between Heading 1 and Heading 2.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        <strong>Heading 1</strong> is generally used for major
+                        sections or chapters, while <strong>Heading 2</strong>
+                        is generally used for subsections under a Heading 1.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>8. What happens to a Table of Contents when page positions change?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        The Table of Contents should be updated so that the
+                        displayed page numbers reflect the current document
+                        structure.
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- CBSE PYQ BASED -->
+
+    <section class="card">
+        <h2>📚 CBSE PYQ-Based Practice Questions</h2>
+
+        <div class="note">
+            These are provided as <strong>CBSE PYQ-Based Practice
+            Questions</strong>. A specific year is not assigned unless the
+            question has been independently verified from an official paper.
+        </div>
+
+        <details class="question">
+            <summary>1. What is the use of a Table of Contents in a document?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        It provides a structured list of headings and
+                        subheadings and helps the reader locate different
+                        sections of a document quickly.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>2. Which paragraph styles are commonly used to generate a Table of Contents?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Predefined heading paragraph styles such as
+                        <strong>Heading 1, Heading 2 and Heading 3</strong>
+                        are commonly used.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>3. Write the procedure to update a Table of Contents after making changes to a document.</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        Right-click inside the Table of Contents and select
+                        <strong>Update Index or Table of Contents</strong>.
+                        LibreOffice then updates the entries and page numbers.
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details class="question">
+            <summary>4. What is the purpose of the Entries tab while customizing a Table of Contents?</summary>
+
+            <div class="answer-box">
+                <details class="answer">
+                    <summary>▶ View Answer</summary>
+                    <div class="answer">
+                        The Entries tab is used to customize the structure and
+                        formatting of Table of Contents entries.
+                    </div>
+                </details>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- MCQ -->
+
+    <section class="card">
+        <h2>📝 Practice MCQs</h2>
+
+        <p>
+            Practice more questions from Session 4 using the separate MCQ
+            page.
+        </p>
+
+        <a class="mcq-link" href="class10-it-unit1-session4-mcqs.html">
+            🚀 Open Session 4 – 50 MCQs
+        </a>
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="navigation">
+
+        <a href="class10-it-unit1-session3-templates.html">
+            ← Session 3: Create and Use Template
+        </a>
+
+        <a href="class10-it-unit1-digital-documentation.html">
+            🏠 Unit 1 Home
+        </a>
+
+        <a href="class10-it-unit1-session5-mail-merge.html">
+            Session 5: Implement Mail Merge →
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p>© 2026 Edusphere with Satyam</p>
+    <p>Class 10 Information Technology (402) | Unit 1 – Digital Documentation</p>
+</footer>
+
+</body>
+</html>
