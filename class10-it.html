@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 10 Information Technology (402) | Edusphere with Satyam</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#fdf2f8,#ecfeff);
+    color:#1f2937;
+    line-height:1.6;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+    padding:25px 0 40px;
+}
+
+/* BACK BUTTON */
+
+.back{
+    display:inline-block;
+    text-decoration:none;
+    color:#4338ca;
+    background:white;
+    padding:9px 17px;
+    border-radius:12px;
+    font-weight:bold;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.back:hover{
+    transform:translateY(-2px);
+    background:#eef2ff;
+}
+
+/* HEADER */
+
+.header{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#db2777);
+    color:white;
+    padding:32px 20px;
+    border-radius:22px;
+    text-align:center;
+    margin-bottom:22px;
+    box-shadow:0 10px 30px rgba(79,70,229,0.25);
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.header p{
+    font-size:16px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:23px;
+    margin-bottom:20px;
+    box-shadow:0 7px 22px rgba(0,0,0,0.08);
+    border:1px solid #e5e7eb;
+}
+
+.card h2{
+    color:#4338ca;
+    margin-bottom:13px;
+}
+
+.card h3{
+    color:#7c3aed;
+    margin-bottom:8px;
+}
+
+/* INTRO */
+
+.intro{
+    background:#eef2ff;
+    border-left:5px solid #4f46e5;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* BADGE */
+
+.badge{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:20px;
+    background:#ede9fe;
+    color:#5b21b6;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* UNIT GRID */
+
+.unit-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.unit-card{
+    background:linear-gradient(135deg,#ffffff,#f8fafc);
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+.unit-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 9px 20px rgba(0,0,0,0.10);
+}
+
+.unit-number{
+    color:#db2777;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.unit-card h3{
+    margin-top:6px;
+}
+
+/* LINK */
+
+.topic-link{
+    display:inline-block;
+    margin-top:10px;
+    text-decoration:none;
+    background:#4f46e5;
+    color:white;
+    padding:8px 14px;
+    border-radius:9px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.topic-link:hover{
+    background:#3730a3;
+}
+
+/* DETAILS */
+
+details{
+    margin-top:10px;
+}
+
+summary{
+    cursor:pointer;
+    display:inline-block;
+    background:#4f46e5;
+    color:white;
+    padding:8px 14px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+details p,
+details ul{
+    margin-top:12px;
+}
+
+details ul{
+    margin-left:22px;
+}
+
+/* EMPLOYABILITY GRID */
+
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.skill-card{
+    background:linear-gradient(135deg,#ffffff,#f8fafc);
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+}
+
+.skill-card h3{
+    margin-top:0;
+}
+
+/* NOTE */
+
+.note{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:25px 10px;
+    color:#667085;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header h1{
+        font-size:25px;
+    }
+
+    .unit-grid,
+    .skill-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- BACK -->
+
+<a href="index.html" class="back">
+← Back to Home
+</a>
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>💻 Class 10 Information Technology</h1>
+
+<p>
+Subject Code: <strong>402</strong>
+</p>
+
+<p>
+Complete Notes • Practical Learning • Exam Preparation
+</p>
+
+</div>
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<span class="badge">CLASS 10 • IT (402)</span>
+
+<h2>📘 Information Technology</h2>
+
+<div class="intro">
+
+<p>
+Welcome to the Class 10 Information Technology section of
+<strong>Edusphere with Satyam</strong>.
+</p>
+
+<p>
+This section provides topic-wise learning material, practical
+guidance and examination-oriented preparation in a simple and
+student-friendly manner.
+</p>
+
+</div>
+
+<details>
+
+<summary>▶ What will you find here?</summary>
+
+<ul>
+
+<li>Complete unit-wise learning material</li>
+
+<li>Topic-wise explanations</li>
+
+<li>Practical activities and guidance</li>
+
+<li>Important examination questions</li>
+
+<li>MCQs and case-based questions</li>
+
+<li>Board examination preparation</li>
+
+</ul>
+
+</details>
+
+</div>
+
+
+<!-- SUBJECT CONTENT -->
+
+<div class="card">
+
+<span class="badge">SUBJECT CONTENT</span>
+
+<h2>📚 Course Structure</h2>
+
+<div class="unit-grid">
+
+
+<!-- UNIT 1 -->
+
+<div class="unit-card">
+
+<span class="unit-number">UNIT 1</span>
+
+<h3>📄 Digital Documentation (Advanced)</h3>
+
+<p>
+Advanced concepts and practical applications of digital documentation.
+</p>
+
+<details>
+
+<summary>▶ Explore Unit</summary>
+
+<p>
+Topic-wise notes, practical activities, important questions,
+MCQs and board examination material will be provided within
+this unit.
+</p>
+
+<a href="class10-it-unit1-digital-documentation.html"
+class="topic-link">
+
+Open Unit →
+
+</a>
+
+</details>
+
+</div>
+
+
+<!-- UNIT 2 -->
+
+<div class="unit-card">
+
+<span class="unit-number">UNIT 2</span>
+
+<h3>📊 Electronic Spreadsheet (Advanced)</h3>
+
+<p>
+Advanced spreadsheet concepts, functions and practical applications.
+</p>
+
+<details>
+
+<summary>▶ Explore Unit</summary>
+
+<p>
+Complete topic-wise notes, practical work, important questions,
+MCQs and examination preparation will be provided within this unit.
+</p>
+
+<a href="class10-it-unit2-electronic-spreadsheet.html"
+class="topic-link">
+
+Open Unit →
+
+</a>
+
+</details>
+
+</div>
+
+
+<!-- UNIT 3 -->
+
+<div class="unit-card">
+
+<span class="unit-number">UNIT 3</span>
+
+<h3>🗄️ Database Management System</h3>
+
+<p>
+Learn database concepts and their practical applications.
+</p>
+
+<details>
+
+<summary>▶ Explore Unit</summary>
+
+<p>
+Topic-wise concepts, database practical activities, important
+questions, MCQs and board-oriented preparation will be provided
+within this unit.
+</p>
+
+<a href="class10-it-unit3-database-management.html"
+class="topic-link">
+
+Open Unit →
+
+</a>
+
+</details>
+
+</div>
+
+
+<!-- UNIT 4 -->
+
+<div class="unit-card">
+
+<span class="unit-number">UNIT 4</span>
+
+<h3>🛡️ Maintain Healthy, Safe and Secure Working Environment</h3>
+
+<p>
+Learn about health, safety, security and responsible use of technology.
+</p>
+
+<details>
+
+<summary>▶ Explore Unit</summary>
+
+<p>
+Complete concepts, safety practices, important questions,
+MCQs and examination preparation will be provided within
+this unit.
+</p>
+
+<a href="class10-it-unit4-health-safety-security.html"
+class="topic-link">
+
+Open Unit →
+
+</a>
+
+</details>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- EMPLOYABILITY SKILLS -->
+
+<div class="card">
+
+<span class="badge">EMPLOYABILITY SKILLS</span>
+
+<h2>🌟 Employability Skills</h2>
+
+<p>
+Develop the essential skills required for effective communication,
+self-management, workplace readiness and responsible participation
+in the professional world.
+</p>
+
+<div class="skill-grid">
+
+
+<!-- COMMUNICATION -->
+
+<div class="skill-card">
+
+<h3>💬 Communication Skills-II</h3>
+
+<details>
+
+<summary>▶ Explore</summary>
+
+<p>
+Learn effective communication, verbal and non-verbal communication,
+active listening and other important communication skills.
+</p>
+
+<a href="class10-it-employability-communication-skills.html"
+class="topic-link">
+
+Open Topic →
+
+</a>
+
+</details>
+
+</div>
+
+
+<!-- SELF MANAGEMENT -->
+
+<div class="skill-card">
+
+<h3>🧠 Self-Management Skills-II</h3>
+
+<details>
+
+<summary>▶ Explore</summary>
+
+<p>
+Learn about self-awareness, stress management, self-motivation,
+goal setting and other self-management skills.
+</p>
+
+<a href="class10-it-employability-self-management.html"
+class="topic-link">
+
+Open Topic →
+
+</a>
+
+</details>
+
+</div>
+
+
+<!-- ICT -->
+
+<div class="skill-card">
+
+<h3>💻 Information and Communication Technology Skills-II</h3>
+
+<details>
+
+<summary>▶ Explore</summary>
+
+<p>
+Learn how ICT tools can be used effectively and responsibly
+for learning and professional activities.
+</p>
+
+<a href="class10-it-employability-ict-skills.html"
+class="topic-link">
+
+Open Topic →
+
+</a>
+
+</details>
+
+</div>
+
+
+<!-- ENTREPRENEURIAL -->
+
+<div class="skill-card">
+
+<h3>🚀 Entrepreneurial Skills-II</h3>
+
+<details>
+
+<summary>▶ Explore</summary>
+
+<p>
+Understand entrepreneurship, entrepreneurial qualities,
+opportunities and the importance of entrepreneurship.
+</p>
+
+<a href="class10-it-employability-entrepreneurial-skills.html"
+class="topic-link">
+
+Open Topic →
+
+</a>
+
+</details>
+
+</div>
+
+
+<!-- GREEN SKILLS -->
+
+<div class="skill-card">
+
+<h3>🌱 Green Skills-II</h3>
+
+<details>
+
+<summary>▶ Explore</summary>
+
+<p>
+Learn about sustainable development, environmental responsibility,
+green practices and the importance of protecting natural resources.
+</p>
+
+<a href="class10-it-employability-green-skills.html"
+class="topic-link">
+
+Open Topic →
+
+</a>
+
+</details>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- NOTE -->
+
+<div class="card">
+
+<div class="note">
+
+<strong>📌 How this section is organised:</strong>
+
+<p>
+The homepage is intentionally kept short and simple.
+Detailed theory, practical work, important questions, MCQs,
+case-based questions and board examination material will be
+placed inside the respective units and topics.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<p>
+© Edusphere with Satyam
+</p>
+
+<p>
+Class 10 Information Technology | Subject Code 402
+</p>
+
+</div>
+
+
+</div>
+
+</body>
+
+</html>
