@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 4 – Share and Review Spreadsheet | Class 10 IT 402</title>
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+    margin:0;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:17px;
+}
+
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:0 18px;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 15px rgba(15,23,42,0.07);
+}
+
+.card h2{
+    color:#3730a3;
+    margin-top:0;
+}
+
+.card h3{
+    color:#0f766e;
+}
+
+.definition{
+    background:#f0fdfa;
+    border-left:4px solid #14b8a6;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.simple{
+    background:#eef2ff;
+    border-left:4px solid #6366f1;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.example{
+    background:#f8fafc;
+    border-left:4px solid #64748b;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.tip{
+    background:#ecfeff;
+    border-left:4px solid #0891b2;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.warning{
+    background:#fff7ed;
+    border-left:4px solid #f97316;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.code{
+    background:#172554;
+    color:#e0f2fe;
+    padding:15px;
+    border-radius:8px;
+    overflow-x:auto;
+    font-family:Consolas,monospace;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#eef2ff;
+    color:#3730a3;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+ul,ol{
+    padding-left:25px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+details{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    border-radius:9px;
+    margin:12px 0;
+    overflow:hidden;
+}
+
+summary{
+    background:#eef2ff;
+    color:#1e3a5f;
+    padding:13px 16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.answer{
+    padding:16px;
+    background:white;
+    border-top:1px solid #dbeafe;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a{
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.nav a:hover{
+    background:#0f766e;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ccfbf1;
+    color:#115e59;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.button{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,td{
+        padding:8px;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    .nav a{
+        width:auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="badge">Class 10 Information Technology – 402</div>
+
+    <h1>Session 4 – Share and Review Spreadsheet</h1>
+
+    <p>Electronic Spreadsheet (Advanced) – LibreOffice Calc</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<h2>1. Introduction to Sharing and Reviewing a Spreadsheet</h2>
+
+<p>
+A spreadsheet is often prepared and maintained by more than one person.
+For example, teachers, office staff, accountants, or members of a project
+team may need to work with the same spreadsheet.
+</p>
+
+<p>
+LibreOffice Calc provides features that help users share spreadsheet
+information, record changes, add comments, review modifications, merge
+changes, and compare different versions of a spreadsheet.
+</p>
+
+<div class="definition">
+
+<strong>Definition – Spreadsheet Sharing:</strong><br>
+
+Spreadsheet sharing is the process of allowing multiple users to work
+with the same spreadsheet document so that information can be maintained
+and updated collaboratively.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+Sharing a spreadsheet means allowing different people to work on the
+same spreadsheet and manage their changes properly.
+
+</div>
+
+<div class="example">
+
+<strong>Example:</strong><br>
+
+Suppose a school maintains a spreadsheet containing student attendance.
+The class teacher may enter attendance while another staff member checks
+or updates related information.
+
+</div>
+
+</div>
+
+
+<!-- SHARING -->
+
+<div class="card">
+
+<h2>2. Sharing a Spreadsheet</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong><br>
+
+Sharing a spreadsheet is a feature that allows a spreadsheet document
+to be used by multiple users for collaborative work.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+It allows more than one person to work with a spreadsheet document.
+
+</div>
+
+<h3>Why is Spreadsheet Sharing Useful?</h3>
+
+<ul>
+<li>It supports collaborative work.</li>
+<li>Multiple users can work with the same spreadsheet.</li>
+<li>It reduces the need to maintain many separate copies.</li>
+<li>It helps teams manage common data.</li>
+<li>It can make office and school work more organised.</li>
+</ul>
+
+<h3>Enabling Spreadsheet Sharing</h3>
+
+<p>
+In LibreOffice Calc, spreadsheet sharing can be enabled through the
+<strong>Tools</strong> menu.
+</p>
+
+<ol>
+<li>Open the spreadsheet in LibreOffice Calc.</li>
+<li>Click the <strong>Tools</strong> menu.</li>
+<li>Look for the spreadsheet sharing option.</li>
+<li>Enable the sharing feature.</li>
+<li>Save the spreadsheet.</li>
+</ol>
+
+<div class="tip">
+
+<strong>Tip:</strong><br>
+
+Before sharing a spreadsheet, make sure that the file is saved properly
+and that the users understand which data they are expected to modify.
+
+</div>
+
+<div class="warning">
+
+<strong>Precaution:</strong><br>
+
+When multiple users work with the same spreadsheet, changes should be
+managed carefully to avoid confusion or conflicting versions.
+
+</div>
+
+</div>
+
+
+<!-- OPENING SHARED -->
+
+<div class="card">
+
+<h2>3. Opening a Shared Spreadsheet</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong><br>
+
+Opening a shared spreadsheet means accessing a spreadsheet document that
+has been configured for collaborative use.
+
+</div>
+
+<h3>Steps to Open a Shared Spreadsheet</h3>
+
+<ol>
+<li>Start LibreOffice Calc.</li>
+<li>Open the shared spreadsheet file.</li>
+<li>Check whether the document is configured for sharing.</li>
+<li>Review the existing spreadsheet data.</li>
+<li>Make only the required changes.</li>
+<li>Save the document after completing the work.</li>
+</ol>
+
+<div class="tip">
+
+<strong>Good Practice:</strong><br>
+
+Always check the current data before making changes. This reduces the
+chance of accidentally changing information entered by another user.
+
+</div>
+
+</div>
+
+
+<!-- SAVING -->
+
+<div class="card">
+
+<h2>4. Saving a Shared Spreadsheet</h2>
+
+<p>
+Saving is particularly important when a spreadsheet is being used by
+multiple people. Users should save their changes carefully so that the
+latest information is maintained.
+</p>
+
+<h3>Steps</h3>
+
+<ol>
+<li>Complete the required changes.</li>
+<li>Check the modified cells.</li>
+<li>Click <strong>File → Save</strong>.</li>
+<li>Wait for the document to finish saving.</li>
+<li>Check the spreadsheet again if required.</li>
+</ol>
+
+<div class="warning">
+
+<strong>Important:</strong><br>
+
+When several users modify a shared spreadsheet, conflicts or differences
+may occur. Therefore, users should communicate with one another and
+review changes carefully.
+
+</div>
+
+</div>
+
+
+<!-- RECORDING CHANGES -->
+
+<div class="card">
+
+<h2>5. Recording Changes</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong><br>
+
+Recording changes is the process of keeping track of modifications made
+to a spreadsheet so that the changes can later be reviewed.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+It keeps a record of what has been changed in the spreadsheet.
+
+</div>
+
+<h3>Why Record Changes?</h3>
+
+<ul>
+<li>It helps identify modifications.</li>
+<li>It helps review the work of different users.</li>
+<li>It makes checking changes easier.</li>
+<li>It can help identify unwanted modifications.</li>
+<li>It supports collaborative spreadsheet work.</li>
+</ul>
+
+<h3>General Steps for Recording Changes</h3>
+
+<ol>
+<li>Open the spreadsheet in LibreOffice Calc.</li>
+<li>Open the menu related to tracking or recording changes.</li>
+<li>Enable the option for recording changes.</li>
+<li>Modify the required cells.</li>
+<li>Save the spreadsheet.</li>
+<li>Review the recorded changes later.</li>
+</ol>
+
+<div class="example">
+
+<strong>Example:</strong><br>
+
+If the original sales value is ₹50,000 and a user changes it to
+₹55,000, recording changes helps identify that the value was modified.
+
+</div>
+
+</div>
+
+
+<!-- COMMENTS -->
+
+<div class="card">
+
+<h2>6. Comments in a Spreadsheet</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong><br>
+
+A comment is an explanatory note attached to a cell to provide additional
+information, clarification, or instructions about the cell's content.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+A comment is a small note added to a cell to explain something about it.
+
+</div>
+
+<h3>Purpose of Comments</h3>
+
+<ul>
+<li>To explain a value.</li>
+<li>To provide instructions.</li>
+<li>To ask another user to check something.</li>
+<li>To provide additional information.</li>
+<li>To clarify unusual or important data.</li>
+</ul>
+
+<h3>Adding a Comment</h3>
+
+<ol>
+<li>Select the required cell.</li>
+<li>Use the appropriate comment option from the menu or context menu.</li>
+<li>Enter the required text.</li>
+<li>Save the document.</li>
+</ol>
+
+<div class="example">
+
+<strong>Example:</strong><br>
+
+A teacher may add a comment to a marks cell saying that the marks need
+to be verified from the original record.
+
+</div>
+
+<h3>Editing a Comment</h3>
+
+<ol>
+<li>Select the cell containing the comment.</li>
+<li>Open the comment.</li>
+<li>Edit the required text.</li>
+<li>Save the spreadsheet.</li>
+</ol>
+
+<h3>Deleting a Comment</h3>
+
+<ol>
+<li>Select the cell containing the comment.</li>
+<li>Open the comment options.</li>
+<li>Choose the option to delete the comment.</li>
+</ol>
+
+<div class="tip">
+
+<strong>Remember:</strong><br>
+
+A comment explains information. It is different from a recorded change,
+which identifies a modification made to the spreadsheet.
+
+</div>
+
+</div>
+
+
+<!-- REVIEWING CHANGES -->
+
+<div class="card">
+
+<h2>7. Reviewing Changes</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong><br>
+
+Reviewing changes is the process of examining modifications made to a
+spreadsheet and deciding whether those changes should be accepted or
+rejected.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+Reviewing changes means checking what someone changed and deciding
+whether to keep the change or remove it.
+
+</div>
+
+<h3>Accepting and Rejecting Changes</h3>
+
+<p>
+After changes have been recorded, they can be reviewed. A user may
+accept a suitable change or reject a change that is incorrect or
+unwanted.
+</p>
+
+<h3>General Steps</h3>
+
+<ol>
+<li>Open the spreadsheet containing recorded changes.</li>
+<li>Open the change-review facility.</li>
+<li>Examine the listed changes.</li>
+<li>Select a change to review.</li>
+<li>Check whether the modification is correct.</li>
+<li>Accept the change if it is required.</li>
+<li>Reject the change if it is not required.</li>
+<li>Continue reviewing the remaining changes.</li>
+<li>Save the spreadsheet.</li>
+</ol>
+
+<div class="warning">
+
+<strong>Precaution:</strong><br>
+
+Do not accept or reject changes without checking the original information
+and the purpose of the modification.
+
+</div>
+
+</div>
+
+
+<!-- MERGING -->
+
+<div class="card">
+
+<h2>8. Merging Changes</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong><br>
+
+Merging changes is the process of combining changes from different
+spreadsheet versions into a single spreadsheet document.
+
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+Merging means bringing changes from different copies together into one
+spreadsheet.
+
+</div>
+
+<h3>Why is Merging Required?</h3>
+
+<ul>
+<li>Different users may work on separate copies.</li>
+<li>Each copy may contain useful changes.</li>
+<li>The changes may need to be combined.</li>
+<li>It helps create a consolidated version of the document.</li>
+</ul>
+
+<h3>General Process</h3>
+
+<ol>
+<li>Keep the original spreadsheet and modified copies available.</li>
+<li>Open the spreadsheet that will contain the merged information.</li>
+<li>Use the appropriate merge-changes feature.</li>
+<li>Select the spreadsheet containing the other changes.</li>
+<li>Allow Calc to process the changes.</li>
+<li>Review any conflicts or differences.</li>
+<li>Save the final spreadsheet.</li>
+</ol>
+
+<div class="warning">
+
+<strong>Important:</strong><br>
+
+Always review merged information. Automatically combining changes does
+not mean that every change is necessarily correct.
+
+</div>
+
+</div>
+
+
+<!-- COMPARING -->
+
+<div class="card">
+
+<h2>9. Comparing Spreadsheets</h2>
+
+<div class="definition">
+
+<strong>Definition:</strong><br>
+
+Comparing spreadsheets is the process of examining two spreadsheet
+documents or versions to identify differences between them.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+Comparison helps us find out what is different between two spreadsheet
+versions.
+
+</div>
+
+<h3>Why Compare Spreadsheets?</h3>
+
+<ul>
+<li>To identify changed values.</li>
+<li>To find differences between versions.</li>
+<li>To check whether information was modified.</li>
+<li>To verify updated records.</li>
+<li>To help review documents.</li>
+</ul>
+
+<h3>General Steps</h3>
+
+<ol>
+<li>Open the spreadsheet that you want to use for comparison.</li>
+<li>Use the spreadsheet comparison feature.</li>
+<li>Select the other spreadsheet version.</li>
+<li>Allow Calc to compare the documents.</li>
+<li>Examine the identified differences.</li>
+<li>Verify the differences with the original information.</li>
+</ol>
+
+<div class="example">
+
+<strong>Example:</strong><br>
+
+A school has an attendance spreadsheet from Monday and another version
+updated on Tuesday. Comparing the two versions can help identify which
+attendance entries were modified.
+
+</div>
+
+</div>
+
+
+<!-- PRACTICAL COMMENTS -->
+
+<div class="card">
+
+<h2>10. Practical: Add and Manage Comments</h2>
+
+<h3>Activity</h3>
+
+<p>
+Create a small student-marks spreadsheet and add comments to selected
+cells.
+</p>
+
+<h3>Step-by-Step Procedure</h3>
+
+<ol>
+
+<li>Open LibreOffice Calc.</li>
+
+<li>Create a new spreadsheet.</li>
+
+<li>Enter headings such as:
+    <strong>Name, English, Mathematics, Science</strong>.
+</li>
+
+<li>Enter marks for a few students.</li>
+
+<li>Select the cell that requires an explanation.</li>
+
+<li>Open the comment option.</li>
+
+<li>Enter a suitable comment.</li>
+
+<li>Save the spreadsheet.</li>
+
+<li>Select another cell and add another comment if required.</li>
+
+<li>Edit a comment to practise modification.</li>
+
+<li>Delete a comment that is no longer required.</li>
+
+<li>Save the final spreadsheet.</li>
+
+</ol>
+
+<div class="tip">
+
+<strong>Practice Example:</strong><br>
+
+Add a comment to a student's Mathematics marks explaining:
+"The marks should be verified from the original record."
+
+</div>
+
+</div>
+
+
+<!-- PRACTICAL RECORD CHANGES -->
+
+<div class="card">
+
+<h2>11. Practical: Record and Review Changes</h2>
+
+<h3>Activity</h3>
+
+<p>
+Create a spreadsheet, enable change recording, modify some data, and
+then review the modifications.
+</p>
+
+<h3>Step-by-Step Procedure</h3>
+
+<ol>
+
+<li>Open LibreOffice Calc.</li>
+
+<li>Create a small table containing student names and marks.</li>
+
+<li>Save the spreadsheet.</li>
+
+<li>Enable the option for recording changes.</li>
+
+<li>Change one or more values.</li>
+
+<li>Add another entry if required.</li>
+
+<li>Save the spreadsheet.</li>
+
+<li>Open the facility for reviewing recorded changes.</li>
+
+<li>Examine the changes one by one.</li>
+
+<li>Accept a correct change.</li>
+
+<li>Reject an incorrect or unwanted change.</li>
+
+<li>Save the spreadsheet after reviewing the changes.</li>
+
+</ol>
+
+</div>
+
+
+<!-- PRACTICAL COMPARE -->
+
+<div class="card">
+
+<h2>12. Practical: Compare Spreadsheet Versions</h2>
+
+<h3>Activity</h3>
+
+<p>
+Create two versions of a spreadsheet and compare them to identify
+differences.
+</p>
+
+<h3>Step-by-Step Procedure</h3>
+
+<ol>
+
+<li>Create a spreadsheet containing some sample data.</li>
+
+<li>Save the first version of the spreadsheet.</li>
+
+<li>Make a copy or create another version of the file.</li>
+
+<li>Modify some values in the second version.</li>
+
+<li>Save the modified version separately.</li>
+
+<li>Open the spreadsheet that you want to use for comparison.</li>
+
+<li>Use the spreadsheet comparison feature.</li>
+
+<li>Select the other spreadsheet version.</li>
+
+<li>Examine the differences identified by Calc.</li>
+
+<li>Verify whether the differences are correct.</li>
+
+</ol>
+
+</div>
+
+
+<!-- COMPARISON TABLE -->
+
+<div class="card">
+
+<h2>13. Share vs Record Changes vs Compare</h2>
+
+<table>
+
+<tr>
+<th>Feature</th>
+<th>Purpose</th>
+<th>Simple Meaning</th>
+</tr>
+
+<tr>
+<td>Share Spreadsheet</td>
+<td>Allows collaborative use of a spreadsheet.</td>
+<td>More than one user can work with the spreadsheet.</td>
+</tr>
+
+<tr>
+<td>Record Changes</td>
+<td>Keeps track of modifications.</td>
+<td>Shows what was changed.</td>
+</tr>
+
+<tr>
+<td>Comments</td>
+<td>Adds explanatory information to cells.</td>
+<td>Adds a note to a cell.</td>
+</tr>
+
+<tr>
+<td>Review Changes</td>
+<td>Checks recorded modifications.</td>
+<td>Decides whether changes should be kept.</td>
+</tr>
+
+<tr>
+<td>Merge Changes</td>
+<td>Combines changes from different versions.</td>
+<td>Brings changes together.</td>
+</tr>
+
+<tr>
+<td>Compare Spreadsheets</td>
+<td>Identifies differences between versions.</td>
+<td>Finds what is different.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- COMMON MISTAKES -->
+
+<div class="card">
+
+<h2>14. Common Practical Mistakes</h2>
+
+<ul>
+
+<li>
+<strong>Not enabling sharing:</strong>
+Users may assume that a spreadsheet is shared when it is not.
+</li>
+
+<li>
+<strong>Not recording changes:</strong>
+Modifications may become difficult to identify later.
+</li>
+
+<li>
+<strong>Using the wrong file:</strong>
+Always verify the spreadsheet version before editing.
+</li>
+
+<li>
+<strong>Confusing comments with tracked changes:</strong>
+A comment is an explanatory note, while a recorded change represents
+a modification to spreadsheet content.
+</li>
+
+<li>
+<strong>Accepting changes without checking:</strong>
+Every important change should be reviewed before acceptance.
+</li>
+
+<li>
+<strong>Rejecting changes without verification:</strong>
+A useful modification may be lost if it is rejected without checking.
+</li>
+
+<li>
+<strong>Not reviewing merged data:</strong>
+Merged information should always be checked.
+</li>
+
+<li>
+<strong>Not saving the final document:</strong>
+Always save after completing important changes.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<div class="card">
+
+<h2>15. Important Questions</h2>
+
+<details>
+
+<summary>1. What is spreadsheet sharing?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Spreadsheet sharing is the process of allowing multiple users to work
+with the same spreadsheet document for collaborative work.
+
+</div>
+</details>
+
+</details>
+
+
+<details>
+
+<summary>2. What is the purpose of recording changes?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Recording changes helps keep track of modifications made to a spreadsheet
+so that those changes can later be reviewed, accepted, or rejected.
+
+</div>
+</details>
+
+</details>
+
+
+<details>
+
+<summary>3. What is a comment in a spreadsheet?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A comment is an explanatory note attached to a cell to provide additional
+information, clarification, or instructions.
+
+</div>
+</details>
+
+</details>
+
+
+<details>
+
+<summary>4. What is the difference between a comment and a recorded change?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A comment is an explanatory note added to a cell, whereas a recorded
+change represents a modification made to the spreadsheet data.
+
+</div>
+</details>
+
+</details>
+
+
+<details>
+
+<summary>5. What is meant by reviewing changes?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Reviewing changes means examining recorded modifications and deciding
+whether to accept or reject them.
+
+</div>
+</details>
+
+</details>
+
+
+<details>
+
+<summary>6. What is merging of changes?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Merging changes means combining changes from different spreadsheet
+versions into one spreadsheet.
+
+</div>
+</details>
+
+</details>
+
+
+<details>
+
+<summary>7. What is spreadsheet comparison?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Spreadsheet comparison is the process of examining two spreadsheet
+versions to identify differences between them.
+
+</div>
+</details>
+
+</details>
+
+
+<details>
+
+<summary>8. Why should changes be reviewed before accepting them?</summary>
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Changes should be reviewed to verify that the modifications are correct
+and useful and that unwanted changes are not included in the final
+spreadsheet.
+
+</div>
+</details>
+
+</details>
+
+</div>
+
+
+<!-- APPLICATION BASED -->
+
+<div class="card">
+
+<h2>16. Application-Based Questions</h2>
+
+
+<details>
+
+<summary>Case 1: A school office uses a common spreadsheet for student records. Several staff members need to work with the same file. Which feature can help them work collaboratively?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The spreadsheet sharing feature can help users work collaboratively with
+the same spreadsheet document.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case 2: A staff member changes the marks entered by another teacher. The school wants to know what was modified. Which feature should be used?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The recording changes feature should be used so that modifications can
+be tracked and reviewed later.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case 3: A teacher wants to add a note explaining why a particular student's marks need verification. Which feature should be used?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A comment should be added to the relevant cell.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case 4: Two versions of the same spreadsheet contain different values. The teacher wants to identify the differences. What should be used?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The spreadsheet comparison feature should be used to identify differences
+between the two versions.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case 5: Two users have made useful changes in separate spreadsheet copies. The changes need to be brought together. Which feature is appropriate?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The merge changes feature can be used to combine changes from different
+spreadsheet versions.
+
+</div>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- PYQ -->
+
+<div class="card">
+
+<h2>17. CBSE PYQ-Based Practice</h2>
+
+<p>
+The following questions are provided in the same practice pattern for
+exam preparation. Where a specific CBSE examination year has not been
+verified, the question is labelled as <strong>CBSE PYQ-Based Practice
+Question</strong>.
+</p>
+
+
+<details>
+
+<summary>Question 1. What is the purpose of recording changes in a spreadsheet?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Recording changes helps identify modifications made to the spreadsheet
+so that they can be reviewed and accepted or rejected.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Question 2. What is a comment in LibreOffice Calc?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A comment is an explanatory note attached to a cell to provide additional
+information or clarification.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Question 3. What is the difference between merging and comparing spreadsheets?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Merging combines changes from different spreadsheet versions, whereas
+comparison identifies differences between spreadsheet versions.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Question 4. CBSE PYQ-Based Practice Question: Why is reviewing changes important in a shared spreadsheet?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Reviewing changes helps verify modifications and allows the user to
+accept correct changes and reject unwanted or incorrect changes.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Question 5. CBSE PYQ-Based Practice Question: State one use of spreadsheet comparison.</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Spreadsheet comparison can be used to identify differences between two
+versions of a spreadsheet.
+
+</div>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- MCQ LINK -->
+
+<div class="card">
+
+<h2>18. Practice MCQs</h2>
+
+<p>
+Test your understanding of Session 4 with objective-type questions
+covering spreadsheet sharing, recording changes, comments, reviewing,
+merging, and comparing spreadsheets.
+</p>
+
+<a class="button" href="class10-it-unit2-session4-mcqs.html">
+Open 50 Practice MCQs
+</a>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="class10-it-unit2-session3-linking-data.html">
+← Linking Data and Using Multiple Sheets
+</a>
+
+<a href="class10-it-unit2-electronic-spreadsheet.html">
+Unit 2 Home
+</a>
+
+<a href="class10-it-unit3-database-management-system.html">
+Database Management System →
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>
+<strong>Edusphere with Satyam</strong>
+</p>
+
+<p>
+Class 10 Information Technology (402) |
+Electronic Spreadsheet (Advanced)
+</p>
+
+<p>
+Learn • Practise • Understand
+</p>
+
+</footer>
+
+</body>
+</html>
