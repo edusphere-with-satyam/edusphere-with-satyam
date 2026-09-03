@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 3 – Linking Data and Using Multiple Sheets | Class 10 IT 402 | Edusphere with Satyam</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,0.18);
+    border:1px solid rgba(255,255,255,0.35);
+    padding:7px 16px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:17px;
+    opacity:0.95;
+}
+
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:0 18px;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 15px rgba(15,23,42,0.07);
+}
+
+.card h2{
+    color:#3730a3;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card h3{
+    color:#0f766e;
+    margin:20px 0 10px;
+    font-size:20px;
+}
+
+.card h4{
+    color:#334155;
+    margin:15px 0 8px;
+}
+
+p{
+    margin-bottom:12px;
+}
+
+ul,ol{
+    margin:10px 0 15px 25px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+.definition{
+    background:#f0fdfa;
+    border-left:4px solid #14b8a6;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.simple{
+    background:#eef2ff;
+    border-left:4px solid #6366f1;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.example{
+    background:#f8fafc;
+    border-left:4px solid #64748b;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.tip{
+    background:#ecfeff;
+    border-left:4px solid #0891b2;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.warning{
+    background:#fff7ed;
+    border-left:4px solid #f97316;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.code{
+    background:#172554;
+    color:#e0f2fe;
+    padding:18px;
+    border-radius:10px;
+    overflow-x:auto;
+    margin:15px 0;
+    font-family:"Courier New",monospace;
+    line-height:1.6;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+th{
+    background:#e0e7ff;
+    color:#1e3a5f;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+details{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    border-radius:9px;
+    margin:12px 0;
+    overflow:hidden;
+}
+
+summary{
+    cursor:pointer;
+    padding:13px 16px;
+    font-weight:bold;
+    color:#1e3a5f;
+    background:#eef2ff;
+}
+
+details p,
+details ul,
+details ol{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+details > div{
+    padding:15px 20px;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a,
+.button{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.nav a:hover,
+.button:hover{
+    background:#0f766e;
+}
+
+.center{
+    text-align:center;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+.small{
+    font-size:14px;
+    color:#64748b;
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:25px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card h2{
+        font-size:22px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,td{
+        padding:8px;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    .nav a{
+        text-align:center;
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="badge">CLASS 10 • INFORMATION TECHNOLOGY • SUBJECT CODE 402</div>
+    <h1>Session 3 – Linking Data and Using Multiple Sheets</h1>
+    <p>Unit 2 – Electronic Spreadsheet (Advanced) using LibreOffice Calc</p>
+</header>
+
+<div class="container">
+
+<!-- INTRODUCTION -->
+
+<section class="card">
+<h2>1. Introduction to Multiple Sheets</h2>
+
+<p>
+A spreadsheet workbook can contain more than one worksheet. When the amount of information becomes large, it is often better to divide the information into different sheets instead of keeping everything on one sheet.
+</p>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+A multiple-sheet spreadsheet is a workbook containing two or more worksheets that can store, organise and work with related data separately or together.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+Multiple sheets mean keeping different sets of related information on different sheets inside the same spreadsheet file.
+</div>
+
+<h3>Why Use Multiple Sheets?</h3>
+
+<ul>
+<li>To organise large amounts of information.</li>
+<li>To keep related information separately.</li>
+<li>To make a workbook easier to understand.</li>
+<li>To avoid putting too much information on one worksheet.</li>
+<li>To perform calculations using information stored on different sheets.</li>
+<li>To create a structured workbook.</li>
+</ul>
+
+<div class="example">
+<strong>Example:</strong><br>
+A teacher may create separate sheets named <strong>January</strong>, <strong>February</strong>, <strong>March</strong> and <strong>April</strong> to maintain monthly records.
+</div>
+
+<h3>Other Examples</h3>
+
+<ul>
+<li>Marks – Attendance – Fees</li>
+<li>Sales – Expenses – Profit</li>
+<li>January – February – March</li>
+<li>Class 9 – Class 10 – Class 11</li>
+<li>Product List – Customer List – Sales Report</li>
+</ul>
+
+</section>
+
+
+<!-- SINGLE VS MULTIPLE -->
+
+<section class="card">
+<h2>2. Single Sheet vs Multiple Sheets</h2>
+
+<table>
+<tr>
+<th>Single Sheet</th>
+<th>Multiple Sheets</th>
+</tr>
+
+<tr>
+<td>All information is stored on one worksheet.</td>
+<td>Information can be divided among several worksheets.</td>
+</tr>
+
+<tr>
+<td>May become difficult to manage when data is large.</td>
+<td>Large information can be organised into separate sheets.</td>
+</tr>
+
+<tr>
+<td>Suitable for small datasets.</td>
+<td>Useful for larger or logically divided datasets.</td>
+</tr>
+
+<tr>
+<td>Less sheet navigation is required.</td>
+<td>Users can move between different sheets.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- SETTING UP MULTIPLE SHEETS -->
+
+<section class="card">
+<h2>3. Setting Up Multiple Sheets</h2>
+
+<p>
+LibreOffice Calc allows users to create and manage several sheets inside the same workbook.
+</p>
+
+<h3>Creating a New Sheet</h3>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Open an existing workbook or create a new spreadsheet.</li>
+<li>Look at the sheet tabs at the bottom of the window.</li>
+<li>Use the option for inserting a new sheet.</li>
+<li>A new worksheet will be added.</li>
+</ol>
+
+<h3>Renaming a Sheet</h3>
+
+<ol>
+<li>Locate the sheet tab.</li>
+<li>Right-click the sheet tab.</li>
+<li>Select the option to rename the sheet.</li>
+<li>Enter a meaningful name.</li>
+<li>Confirm the new name.</li>
+</ol>
+
+<div class="tip">
+Use meaningful sheet names such as <strong>January Sales</strong>, <strong>Marks</strong>, <strong>Attendance</strong> or <strong>Expenses</strong>.
+</div>
+
+<h3>Moving a Sheet</h3>
+
+<ol>
+<li>Locate the sheet tab.</li>
+<li>Select the sheet.</li>
+<li>Use the sheet management option to move it.</li>
+<li>Choose its new position.</li>
+<li>Confirm the change.</li>
+</ol>
+
+<h3>Copying a Sheet</h3>
+
+<ol>
+<li>Select the sheet tab.</li>
+<li>Open the sheet management options.</li>
+<li>Choose the option for moving or copying the sheet.</li>
+<li>Select the destination.</li>
+<li>Choose the copy option if a separate copy is required.</li>
+<li>Confirm the operation.</li>
+</ol>
+
+<h3>Deleting a Sheet</h3>
+
+<ol>
+<li>Select the sheet that you want to remove.</li>
+<li>Right-click the sheet tab.</li>
+<li>Select the delete sheet option.</li>
+<li>Confirm deletion if prompted.</li>
+</ol>
+
+<div class="warning">
+Deleting a sheet can remove the data stored on that sheet. Always check the sheet name before deleting it.
+</div>
+
+<h3>Changing the Order of Sheets</h3>
+
+<p>
+Sheets can be rearranged so that related sheets appear together.
+</p>
+
+<ol>
+<li>Select the required sheet tab.</li>
+<li>Use the sheet move option or drag the sheet tab when supported.</li>
+<li>Place the sheet at the desired position.</li>
+<li>Check the new order.</li>
+</ol>
+
+<h3>Selecting Multiple Sheets</h3>
+
+<p>
+More than one sheet can be selected when the same operation needs to be performed on multiple sheets.
+</p>
+
+<div class="warning">
+When multiple sheets are selected, changes made to one selected sheet may also affect the other selected sheets. Always check which sheets are selected before entering or modifying data.
+</div>
+
+</section>
+
+
+<!-- PRACTICAL MULTIPLE SHEETS -->
+
+<section class="card">
+<h2>4. Practical: Create and Organise Multiple Sheets</h2>
+
+<p>
+Create a workbook for maintaining monthly sales records.
+</p>
+
+<h3>Step 1 – Create the Workbook</h3>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Create a new spreadsheet.</li>
+</ol>
+
+<h3>Step 2 – Create the Required Sheets</h3>
+
+<ol>
+<li>Keep the first sheet.</li>
+<li>Insert additional sheets.</li>
+<li>Create a total of three sheets.</li>
+</ol>
+
+<h3>Step 3 – Rename the Sheets</h3>
+
+<ol>
+<li>Rename the first sheet <strong>January</strong>.</li>
+<li>Rename the second sheet <strong>February</strong>.</li>
+<li>Rename the third sheet <strong>March</strong>.</li>
+</ol>
+
+<h3>Step 4 – Enter Sample Data</h3>
+
+<p>Enter sales data in each monthly sheet.</p>
+
+<table>
+<tr>
+<th>Product</th>
+<th>Sales</th>
+</tr>
+<tr>
+<td>Notebook</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>Pen</td>
+<td>2500</td>
+</tr>
+<tr>
+<td>Bag</td>
+<td>4000</td>
+</tr>
+</table>
+
+<h3>Step 5 – Arrange the Sheets</h3>
+
+<p>
+Keep the sheets in chronological order:
+</p>
+
+<div class="example">
+January → February → March
+</div>
+
+<h3>Step 6 – Save the Workbook</h3>
+
+<ol>
+<li>Open the File menu.</li>
+<li>Select Save or Save As as appropriate.</li>
+<li>Give the workbook a meaningful name.</li>
+<li>Save the file.</li>
+</ol>
+
+</section>
+
+
+<!-- REFERENCES OTHER SHEETS -->
+
+<section class="card">
+<h2>5. References to Other Sheets</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+A reference to another sheet is a cell or range reference that uses data stored on a different worksheet of the same workbook.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+It means using information from one sheet while working on another sheet.
+</div>
+
+<h3>Why Use References Between Sheets?</h3>
+
+<ul>
+<li>To combine information from different sheets.</li>
+<li>To perform calculations using data stored elsewhere.</li>
+<li>To avoid entering the same information repeatedly.</li>
+<li>To keep data organised.</li>
+<li>To create summary reports.</li>
+</ul>
+
+<h3>Basic Idea</h3>
+
+<p>
+Suppose a workbook contains:
+</p>
+
+<ul>
+<li>January</li>
+<li>February</li>
+<li>March</li>
+<li>Summary</li>
+</ul>
+
+<p>
+The <strong>Summary</strong> sheet can use information from January, February and March.
+</p>
+
+<h3>Example of a Sheet Reference</h3>
+
+<div class="code">=January.B2</div>
+
+<p>
+This represents a reference to cell B2 of the January sheet in Calc's sheet-reference notation.
+</p>
+
+<div class="tip">
+The exact reference displayed by Calc can depend on how the reference is entered. The safest method for beginners is to create the reference by clicking the required sheet and cell while entering the formula.
+</div>
+
+</section>
+
+
+<!-- PRACTICAL SHEET REFERENCE -->
+
+<section class="card">
+<h2>6. Practical: Referencing a Cell from Another Sheet</h2>
+
+<p>
+Suppose the January sheet contains a sales value in B2 and we want to display it on the Summary sheet.
+</p>
+
+<h3>Step 1 – Prepare the Sheets</h3>
+
+<ol>
+<li>Create two sheets.</li>
+<li>Rename them <strong>January</strong> and <strong>Summary</strong>.</li>
+</ol>
+
+<h3>Step 2 – Enter the Source Value</h3>
+
+<ol>
+<li>Open the <strong>January</strong> sheet.</li>
+<li>Click cell B2.</li>
+<li>Enter <strong>5000</strong>.</li>
+<li>Press Enter.</li>
+</ol>
+
+<h3>Step 3 – Go to the Summary Sheet</h3>
+
+<ol>
+<li>Click the <strong>Summary</strong> sheet tab.</li>
+<li>Select the cell where you want the value to appear.</li>
+</ol>
+
+<h3>Step 4 – Start the Formula</h3>
+
+<ol>
+<li>Type <strong>=</strong>.</li>
+<li>Click the <strong>January</strong> sheet tab.</li>
+<li>Click cell <strong>B2</strong>.</li>
+<li>Complete the formula.</li>
+<li>Press <strong>Enter</strong>.</li>
+</ol>
+
+<p>
+The Summary sheet now displays the value from January B2.
+</p>
+
+<h3>Step 5 – Test the Link</h3>
+
+<ol>
+<li>Return to the January sheet.</li>
+<li>Change the value in B2.</li>
+<li>Return to Summary.</li>
+<li>Check whether the referenced value changes accordingly.</li>
+</ol>
+
+<div class="tip">
+This demonstrates an important benefit of linking: the summary can obtain the updated value from the source cell instead of requiring the user to enter it again manually.
+</div>
+
+</section>
+
+
+<!-- RANGE REFERENCE -->
+
+<section class="card">
+<h2>7. Referencing a Range from Another Sheet</h2>
+
+<p>
+A reference does not have to contain only one cell. A range of cells can also be used in calculations.
+</p>
+
+<div class="example">
+Suppose the January sheet contains sales values in B2:B6. A Summary sheet can use that range to calculate a total.
+</div>
+
+<h3>Practical Steps</h3>
+
+<ol>
+<li>Open the Summary sheet.</li>
+<li>Select the cell where the result is required.</li>
+<li>Type a suitable formula, such as a SUM formula.</li>
+<li>Move to the January sheet when selecting the range.</li>
+<li>Select the required range.</li>
+<li>Complete the formula.</li>
+<li>Press Enter.</li>
+<li>Check the result.</li>
+</ol>
+
+<div class="example">
+A formula may use the equivalent of:
+<div class="code">=SUM(January.B2:B6)</div>
+</div>
+
+</section>
+
+
+<!-- OTHER DOCUMENTS -->
+
+<section class="card">
+<h2>8. References to Other Documents</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+An external reference is a reference that obtains data from another spreadsheet document or external file.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+It means using data from a different spreadsheet file in the current spreadsheet.
+</div>
+
+<h3>Why Use External References?</h3>
+
+<ul>
+<li>To use information stored in another workbook.</li>
+<li>To avoid repeatedly copying the same data.</li>
+<li>To create reports based on data maintained in another file.</li>
+<li>To connect related spreadsheet documents.</li>
+</ul>
+
+<h3>Example</h3>
+
+<p>
+A school may maintain:
+</p>
+
+<ul>
+<li><strong>Student_Marks.ods</strong></li>
+<li><strong>Student_Attendance.ods</strong></li>
+<li><strong>Final_Report.ods</strong></li>
+</ul>
+
+<p>
+The final report may use information from the other files.
+</p>
+
+<div class="warning">
+External references create a relationship between documents. If the source file is moved, renamed or deleted, the reference may need attention or may no longer work as expected.
+</div>
+
+</section>
+
+
+<!-- EXTERNAL REFERENCE PRACTICAL -->
+
+<section class="card">
+<h2>9. Practical: Using Data from Another Spreadsheet Document</h2>
+
+<h3>Step 1 – Create the Source File</h3>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Enter sample data.</li>
+<li>Save the file with a meaningful name.</li>
+</ol>
+
+<h3>Step 2 – Create the Destination File</h3>
+
+<ol>
+<li>Create another spreadsheet.</li>
+<li>Save it separately.</li>
+</ol>
+
+<h3>Step 3 – Create the External Reference</h3>
+
+<ol>
+<li>Select the cell in the destination document.</li>
+<li>Begin entering the required formula/reference.</li>
+<li>Open or select the source spreadsheet when required.</li>
+<li>Select the required sheet.</li>
+<li>Select the required cell or range.</li>
+<li>Complete the reference.</li>
+<li>Confirm the formula.</li>
+</ol>
+
+<h3>Step 4 – Test the Reference</h3>
+
+<ol>
+<li>Change the source value.</li>
+<li>Save the source document.</li>
+<li>Check the destination document.</li>
+<li>Verify whether the linked information is updated according to the link settings and document state.</li>
+</ol>
+
+<div class="warning">
+Do not move or rename the source document while learning external references. Keep the source and destination files in known locations.
+</div>
+
+</section>
+
+
+<!-- HYPERLINK -->
+
+<section class="card">
+<h2>10. Hyperlinks to a Sheet</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+A hyperlink is a clickable reference that takes the user to another location, such as another sheet, document, webpage or file.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+A hyperlink is a clickable link that helps you quickly move from one location to another.
+</div>
+
+<h3>Why Use Hyperlinks in a Spreadsheet?</h3>
+
+<ul>
+<li>To create quick navigation.</li>
+<li>To connect related sheets.</li>
+<li>To create a menu or index sheet.</li>
+<li>To make large workbooks easier to navigate.</li>
+</ul>
+
+<div class="example">
+A workbook may have a <strong>Home</strong> sheet containing links to:
+<ul>
+<li>January</li>
+<li>February</li>
+<li>March</li>
+<li>Summary</li>
+</ul>
+</div>
+
+</section>
+
+
+<!-- HYPERLINK PRACTICAL -->
+
+<section class="card">
+<h2>11. Practical: Create a Hyperlink to Another Sheet</h2>
+
+<h3>Step 1 – Prepare the Workbook</h3>
+
+<ol>
+<li>Create at least two sheets.</li>
+<li>Rename them <strong>Home</strong> and <strong>Marks</strong>.</li>
+</ol>
+
+<h3>Step 2 – Select the Cell</h3>
+
+<ol>
+<li>Open the Home sheet.</li>
+<li>Select the cell where the hyperlink should appear.</li>
+<li>Enter text such as <strong>Open Marks Sheet</strong>.</li>
+</ol>
+
+<h3>Step 3 – Open Hyperlink Options</h3>
+
+<ol>
+<li>Select the cell containing the text.</li>
+<li>Open the hyperlink command in LibreOffice.</li>
+<li>The hyperlink dialogue will appear.</li>
+</ol>
+
+<h3>Step 4 – Choose the Destination</h3>
+
+<ol>
+<li>Select the appropriate document/sheet destination option.</li>
+<li>Select the current workbook if the target is inside the same workbook.</li>
+<li>Choose the required sheet.</li>
+<li>Specify the required target cell if needed.</li>
+</ol>
+
+<h3>Step 5 – Apply the Hyperlink</h3>
+
+<ol>
+<li>Check the displayed target.</li>
+<li>Confirm the hyperlink.</li>
+<li>Close the hyperlink dialogue.</li>
+</ol>
+
+<h3>Step 6 – Test the Hyperlink</h3>
+
+<ol>
+<li>Use the hyperlink according to LibreOffice's current hyperlink activation behaviour.</li>
+<li>Check whether the Marks sheet opens.</li>
+<li>Verify that the correct destination is reached.</li>
+</ol>
+
+</section>
+
+
+<!-- EDIT REMOVE HYPERLINK -->
+
+<section class="card">
+<h2>12. Editing and Removing Hyperlinks</h2>
+
+<h3>Editing a Hyperlink</h3>
+
+<ol>
+<li>Select the cell containing the hyperlink.</li>
+<li>Open the hyperlink editing option.</li>
+<li>Change the displayed text or target as required.</li>
+<li>Save/apply the changes.</li>
+<li>Test the hyperlink again.</li>
+</ol>
+
+<h3>Removing a Hyperlink</h3>
+
+<ol>
+<li>Select the cell containing the hyperlink.</li>
+<li>Use the option for removing the hyperlink or formatting as appropriate.</li>
+<li>Check that the hyperlink is no longer active.</li>
+</ol>
+
+<div class="tip">
+Editing changes the destination or hyperlink properties. Removing a hyperlink removes the clickable connection.
+</div>
+
+</section>
+
+
+<!-- RELATIVE ABSOLUTE -->
+
+<section class="card">
+<h2>13. Relative and Absolute Hyperlinks</h2>
+
+<div class="definition">
+<strong>Relative Hyperlink:</strong><br>
+A relative hyperlink identifies a destination in relation to the location of the current document.
+</div>
+
+<div class="definition">
+<strong>Absolute Hyperlink:</strong><br>
+An absolute hyperlink specifies the complete location of the destination.
+</div>
+
+<h3>Simple Understanding</h3>
+
+<p>
+Suppose a file is stored inside a folder and the linked file is also stored in a known location relative to that folder. A relative path can describe the destination based on that relationship.
+</p>
+
+<p>
+An absolute path specifies the complete location of the destination.
+</p>
+
+<h3>Comparison</h3>
+
+<table>
+<tr>
+<th>Relative Hyperlink</th>
+<th>Absolute Hyperlink</th>
+</tr>
+
+<tr>
+<td>Uses a location relative to the current document.</td>
+<td>Uses the complete destination location.</td>
+</tr>
+
+<tr>
+<td>Can be useful when related files are kept together.</td>
+<td>Clearly specifies the complete location.</td>
+</tr>
+
+<tr>
+<td>Can be affected if the relative folder structure changes.</td>
+<td>Can be affected if the complete destination location changes.</td>
+</tr>
+
+</table>
+
+<div class="warning">
+When files are moved between computers or folders, hyperlink behaviour may change depending on whether relative or absolute paths were used.
+</div>
+
+</section>
+
+
+<!-- CREATING RELATIVE ABSOLUTE -->
+
+<section class="card">
+<h2>14. Practical: Understanding Relative and Absolute Hyperlinks</h2>
+
+<h3>Relative Hyperlink – Practical Idea</h3>
+
+<ol>
+<li>Create a folder for your spreadsheet project.</li>
+<li>Keep the main spreadsheet inside it.</li>
+<li>Keep the linked file in the same project folder or a related subfolder.</li>
+<li>Create the hyperlink.</li>
+<li>Move the complete project folder as a unit when testing portability.</li>
+<li>Check whether the hyperlink continues to work.</li>
+</ol>
+
+<h3>Absolute Hyperlink – Practical Idea</h3>
+
+<ol>
+<li>Create a hyperlink to a file with its complete location.</li>
+<li>Save the spreadsheet.</li>
+<li>Move or rename the destination file.</li>
+<li>Test the hyperlink.</li>
+<li>Observe why a changed complete path can cause the link to fail.</li>
+</ol>
+
+<div class="simple">
+<strong>Remember:</strong><br>
+Relative = location in relation to the current file.<br>
+Absolute = complete specified location.
+</div>
+
+</section>
+
+
+<!-- LINKING EXTERNAL DATA -->
+
+<section class="card">
+<h2>15. Linking External Data</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+Linking external data means establishing a connection between a spreadsheet and information stored outside the current worksheet or document.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+Instead of making a separate copy of information, the spreadsheet can maintain a connection to the original data source.
+</div>
+
+<h3>Copying vs Linking</h3>
+
+<table>
+<tr>
+<th>Copying Data</th>
+<th>Linking Data</th>
+</tr>
+
+<tr>
+<td>A separate copy of the information is created.</td>
+<td>A relationship with the source is maintained.</td>
+</tr>
+
+<tr>
+<td>Changes in the original may not automatically appear in the copied data.</td>
+<td>The linked data can be updated from the source according to the link mechanism.</td>
+</tr>
+
+<tr>
+<td>Does not necessarily depend on the original source after copying.</td>
+<td>May depend on the source location or source document.</td>
+</tr>
+
+</table>
+
+<h3>Why Link External Data?</h3>
+
+<ul>
+<li>To use information maintained in another source.</li>
+<li>To reduce repeated data entry.</li>
+<li>To prepare reports using existing data.</li>
+<li>To maintain a connection between related information.</li>
+</ul>
+
+</section>
+
+
+<!-- LINK EXTERNAL PRACTICAL -->
+
+<section class="card">
+<h2>16. Practical: Linking External Data</h2>
+
+<ol>
+<li>Open LibreOffice Calc.</li>
+<li>Create or open the destination spreadsheet.</li>
+<li>Identify the external data source.</li>
+<li>Select the appropriate method for inserting or linking external data.</li>
+<li>Specify the source location when required.</li>
+<li>Select the required data.</li>
+<li>Confirm the link/import settings.</li>
+<li>Insert the linked data.</li>
+<li>Check the displayed information.</li>
+<li>Save the destination spreadsheet.</li>
+<li>Test whether the linked data can be updated when the source changes.</li>
+</ol>
+
+<div class="warning">
+The exact options available can depend on the type of external data source. Always check the source location and connection settings carefully.
+</div>
+
+</section>
+
+
+<!-- REGISTERED DATA SOURCES -->
+
+<section class="card">
+<h2>17. Linking Registered Data Sources</h2>
+
+<div class="definition">
+<strong>Data Source:</strong><br>
+A data source is a location or system from which information can be obtained for use in an application.
+</div>
+
+<div class="definition">
+<strong>Registered Data Source:</strong><br>
+A registered data source is a data source that has been registered with LibreOffice so that LibreOffice applications can identify and use it.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+A registered data source is a data source that LibreOffice has been told about and can access through its data-source features.
+</div>
+
+<h3>Why Register a Data Source?</h3>
+
+<ul>
+<li>To make the data source available to LibreOffice.</li>
+<li>To organise access to external data.</li>
+<li>To allow LibreOffice applications to work with registered data sources.</li>
+<li>To use structured external information when required.</li>
+</ul>
+
+<h3>Examples of Data Sources</h3>
+
+<ul>
+<li>Database information.</li>
+<li>Structured records.</li>
+<li>Other supported external sources.</li>
+</ul>
+
+</section>
+
+
+<!-- REGISTERED DATA PRACTICAL -->
+
+<section class="card">
+<h2>18. Practical Understanding: Registered Data Source</h2>
+
+<ol>
+<li>Identify the data source that you want LibreOffice to use.</li>
+<li>Register the data source using LibreOffice's data-source management facilities when required.</li>
+<li>Provide the necessary source information.</li>
+<li>Save the registration.</li>
+<li>Open the LibreOffice application that will use the source.</li>
+<li>Access the registered data source.</li>
+<li>Select the required data.</li>
+<li>Use the data for the required spreadsheet task.</li>
+<li>Check that the correct source and records are being used.</li>
+</ol>
+
+<div class="warning">
+Different types of data sources may require different connection and registration settings. Do not change database or connection settings without understanding the source.
+</div>
+
+</section>
+
+
+<!-- LINKING VS COPYING -->
+
+<section class="card">
+<h2>19. Linking Data vs Copying Data</h2>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>Copying</th>
+<th>Linking</th>
+</tr>
+
+<tr>
+<td>Relationship</td>
+<td>Creates a separate copy.</td>
+<td>Maintains a connection with the source.</td>
+</tr>
+
+<tr>
+<td>Updates</td>
+<td>Usually requires manual updating.</td>
+<td>Can obtain updated information from the source according to the link.</td>
+</tr>
+
+<tr>
+<td>Dependency</td>
+<td>Less dependent on the original source after copying.</td>
+<td>May depend on the source location.</td>
+</tr>
+
+<tr>
+<td>Use</td>
+<td>Useful when an independent copy is required.</td>
+<td>Useful when the source data may change and the relationship should be maintained.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- HYPERLINK VS DATA LINK -->
+
+<section class="card">
+<h2>20. Hyperlink vs Data Link</h2>
+
+<table>
+<tr>
+<th>Hyperlink</th>
+<th>Data Link</th>
+</tr>
+
+<tr>
+<td>Primarily used for navigation.</td>
+<td>Primarily used to obtain or reference data.</td>
+</tr>
+
+<tr>
+<td>Takes the user to another location.</td>
+<td>Connects information between sources or sheets.</td>
+</tr>
+
+<tr>
+<td>Example: Click a cell to open the Summary sheet.</td>
+<td>Example: Use a value from another sheet in a calculation.</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- COMMON MISTAKES -->
+
+<section class="card">
+<h2>21. Common Practical Mistakes</h2>
+
+<ol>
+
+<li>
+<strong>Wrong sheet selected:</strong>
+Always check the sheet tab before entering or referencing data.
+</li>
+
+<li>
+<strong>Incorrect cell reference:</strong>
+Check the row and column carefully.
+</li>
+
+<li>
+<strong>Incorrect sheet name:</strong>
+Use the exact sheet name when creating references.
+</li>
+
+<li>
+<strong>Renaming a sheet without checking references:</strong>
+Always verify formulas and links after major sheet changes.
+</li>
+
+<li>
+<strong>Broken external link:</strong>
+Check whether the source file was moved, renamed or deleted.
+</li>
+
+<li>
+<strong>Wrong hyperlink target:</strong>
+Test every hyperlink after creating it.
+</li>
+
+<li>
+<strong>Relative/absolute path confusion:</strong>
+Understand which type of path is being used.
+</li>
+
+<li>
+<strong>Deleting a source:</strong>
+Do not delete a source file that is required by an external reference.
+</li>
+
+<li>
+<strong>Not updating linked information:</strong>
+Check the source and link settings when the expected data does not appear.
+</li>
+
+<li>
+<strong>Accidentally selecting multiple sheets:</strong>
+Check the sheet tabs before making changes.
+</li>
+
+</ol>
+
+</section>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<section class="card">
+<h2>22. Important Questions</h2>
+
+<details>
+<summary>1. What is a multiple-sheet workbook?</summary>
+<div>
+<p>
+A multiple-sheet workbook is a spreadsheet file containing two or more worksheets that can store and organise related information.
+</p>
+</div>
+</details>
+
+<details>
+<summary>2. Why are multiple sheets useful?</summary>
+<div>
+<p>
+Multiple sheets help organise large amounts of information into separate but related worksheets and make a workbook easier to manage.
+</p>
+</div>
+</details>
+
+<details>
+<summary>3. What is a reference to another sheet?</summary>
+<div>
+<p>
+It is a reference that uses information stored in a different worksheet of the same workbook.
+</p>
+</div>
+</details>
+
+<details>
+<summary>4. What is an external reference?</summary>
+<div>
+<p>
+An external reference obtains data from another spreadsheet document or external file.
+</p>
+</div>
+</details>
+
+<details>
+<summary>5. What is a hyperlink?</summary>
+<div>
+<p>
+A hyperlink is a clickable reference that takes the user to another location such as another sheet, document, file or webpage.
+</p>
+</div>
+</details>
+
+<details>
+<summary>6. What is a relative hyperlink?</summary>
+<div>
+<p>
+A relative hyperlink identifies a destination in relation to the location of the current document.
+</p>
+</div>
+</details>
+
+<details>
+<summary>7. What is an absolute hyperlink?</summary>
+<div>
+<p>
+An absolute hyperlink specifies the complete location of the destination.
+</p>
+</div>
+</details>
+
+<details>
+<summary>8. Differentiate between relative and absolute hyperlinks.</summary>
+<div>
+<p>
+A relative hyperlink uses a destination relative to the current document, whereas an absolute hyperlink specifies the complete destination location.
+</p>
+</div>
+</details>
+
+<details>
+<summary>9. What is external data?</summary>
+<div>
+<p>
+External data is information obtained from outside the current worksheet or spreadsheet document.
+</p>
+</div>
+</details>
+
+<details>
+<summary>10. What is a registered data source?</summary>
+<div>
+<p>
+A registered data source is a data source that has been registered with LibreOffice so that it can be identified and used by LibreOffice applications.
+</p>
+</div>
+</details>
+
+<details>
+<summary>11. Differentiate between copying and linking data.</summary>
+<div>
+<p>
+Copying creates a separate copy of information, while linking maintains a connection with the original source so that source information can be obtained or updated through the link.
+</p>
+</div>
+</details>
+
+</section>
+
+
+<!-- APPLICATION BASED -->
+
+<section class="card">
+<h2>23. Application-Based Questions</h2>
+
+<details>
+<summary>Case 1 – Monthly Sales Workbook</summary>
+<div>
+
+<p>
+A shop owner wants to maintain separate records for January, February and March but also wants a summary of all three months.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+The owner can create separate sheets for January, February and March and use a Summary sheet to reference or calculate information from those sheets.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Case 2 – School Marks Report</summary>
+<div>
+
+<p>
+A teacher stores student marks on a sheet named Marks and wants the value of a particular cell to appear automatically on a Summary sheet.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A reference to the required cell on the Marks sheet can be created in the Summary sheet. If the source value changes, the referenced result can reflect the updated source value.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Case 3 – Navigation Sheet</summary>
+<div>
+
+<p>
+A workbook contains ten different sheets. The user wants one Home sheet from which other sheets can be opened quickly.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+Hyperlinks can be created on the Home sheet to provide quick navigation to the different worksheets.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Case 4 – Source File Moved</summary>
+<div>
+
+<p>
+A spreadsheet contains a reference to another spreadsheet file. The source file is later moved to another folder and the linked information is no longer available as expected.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+The external reference may depend on the source file's location. The source path or link should be checked and corrected if necessary.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Case 5 – Relative vs Absolute</summary>
+<div>
+
+<p>
+A student is preparing a project folder containing several related spreadsheet files and wants to move the complete folder to another computer.
+</p>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+Relative hyperlinks can be useful when related files maintain the same folder relationship. The complete project structure should be kept together and tested after moving it.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+</section>
+
+
+<!-- PYQ -->
+
+<section class="card">
+<h2>24. CBSE PYQ-Based Practice</h2>
+
+<p class="small">
+The following questions are provided in the same practice format as the previous sessions. They should be treated as <strong>CBSE PYQ-Based Practice Questions</strong> unless a specific CBSE year has been verified.
+</p>
+
+<details>
+<summary>Question 1. What is the advantage of using multiple sheets in a spreadsheet?</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+Multiple sheets help organise related information separately and make large workbooks easier to manage.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 2. What is a hyperlink?</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A hyperlink is a clickable reference that takes the user to another location such as a sheet, document, file or webpage.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 3. Differentiate between relative and absolute hyperlinks.</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A relative hyperlink identifies a destination relative to the current document, while an absolute hyperlink specifies the complete destination location.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 4. What is an external reference?</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+An external reference is a reference that obtains information from another spreadsheet document or external file.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 5. What is a registered data source?</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+A registered data source is a data source registered with LibreOffice so that LibreOffice applications can identify and use it.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+
+<details>
+<summary>Question 6. Differentiate between copying and linking data.</summary>
+<div>
+
+<details>
+<summary>View Answer</summary>
+<div>
+<p>
+Copying creates an independent copy of data, whereas linking maintains a connection with the original source.
+</p>
+</div>
+</details>
+
+</div>
+</details>
+
+</section>
+
+
+<!-- MCQ -->
+
+<section class="card center">
+<h2>25. Practice MCQs</h2>
+
+<p>
+Test your understanding of this session with the separate 50-MCQ practice page.
+</p>
+
+<br>
+
+<a class="button" href="class10-it-unit2-session3-mcqs.html">
+Open Session 3 – 50 MCQs
+</a>
+
+</section>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="class10-it-unit2-session2-macros.html">
+← Using Macros in Spreadsheet
+</a>
+
+<a href="class10-it-unit2-electronic-spreadsheet.html">
+Unit 2 Home
+</a>
+
+<a href="class10-it-unit2-session4-share-review.html">
+Share and Review Spreadsheet →
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+<p><strong>Edusphere with Satyam</strong></p>
+<p>Class 10 Information Technology • Subject Code 402</p>
+<p>Unit 2 – Electronic Spreadsheet (Advanced)</p>
+</footer>
+
+</body>
+</html>
