@@ -1,0 +1,2541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 1 - Analyse Data Using Scenarios and Goal Seek | Class 10 IT 402</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.7;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+        color: #243447;
+        padding-bottom: 40px;
+    }
+
+    header {
+        background: linear-gradient(135deg, #3730a3, #4f46e5, #0f766e);
+        color: white;
+        padding: 45px 20px;
+        text-align: center;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.15);
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.05rem;
+        opacity: 0.95;
+    }
+
+    .badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.18);
+        border: 1px solid rgba(255,255,255,0.3);
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 1150px;
+        margin: 30px auto;
+    }
+
+    .card {
+        background: white;
+        border-radius: 16px;
+        padding: 28px;
+        margin-bottom: 25px;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+        border-left: 5px solid #14b8a6;
+    }
+
+    .intro-card {
+        border-left-color: #4f46e5;
+    }
+
+    h2 {
+        color: #1e3a5f;
+        margin-bottom: 15px;
+        font-size: 1.65rem;
+    }
+
+    h3 {
+        color: #0f766e;
+        margin: 20px 0 10px;
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        color: #3730a3;
+        margin: 15px 0 8px;
+    }
+
+    p {
+        margin-bottom: 12px;
+    }
+
+    ul, ol {
+        margin: 10px 0 15px 25px;
+    }
+
+    li {
+        margin-bottom: 7px;
+    }
+
+    strong {
+        color: #1e3a5f;
+    }
+
+    .definition {
+        background: #eef2ff;
+        border-left: 4px solid #4f46e5;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .simple {
+        background: #ecfeff;
+        border-left: 4px solid #0f766e;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .example {
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+        padding: 18px;
+        border-radius: 12px;
+        margin: 15px 0;
+    }
+
+    .important {
+        background: #fff7ed;
+        border-left: 4px solid #f59e0b;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .warning {
+        background: #fef2f2;
+        border-left: 4px solid #ef4444;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .tip {
+        background: #f0fdf4;
+        border-left: 4px solid #16a34a;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .step-box {
+        background: #f8fafc;
+        border: 1px solid #dbeafe;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 18px 0;
+    }
+
+    .step-number {
+        display: inline-block;
+        background: #1e3a5f;
+        color: white;
+        min-width: 32px;
+        text-align: center;
+        padding: 3px 8px;
+        border-radius: 16px;
+        margin-right: 7px;
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 18px 0;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    th {
+        background: #1e3a5f;
+        color: white;
+        padding: 12px;
+        text-align: left;
+    }
+
+    td {
+        padding: 11px;
+        border: 1px solid #dbe3ea;
+        vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+        background: #f8fafc;
+    }
+
+    .formula {
+        background: #172554;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: "Courier New", monospace;
+        margin: 15px 0;
+        overflow-x: auto;
+    }
+
+    .menu {
+        background: #e0f2fe;
+        border: 1px solid #bae6fd;
+        padding: 13px 16px;
+        border-radius: 9px;
+        margin: 12px 0;
+        font-weight: bold;
+    }
+
+    details {
+        margin: 12px 0;
+        border: 1px solid #dbe3ea;
+        border-radius: 10px;
+        overflow: hidden;
+        background: white;
+    }
+
+    summary {
+        cursor: pointer;
+        padding: 14px 16px;
+        background: #f1f5f9;
+        color: #1e3a5f;
+        font-weight: bold;
+    }
+
+    details .answer {
+        padding: 16px;
+        border-top: 1px solid #dbe3ea;
+    }
+
+    .mcq-link {
+        display: inline-block;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .mcq-link:hover {
+        background: #0f766e;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .nav-btn {
+        flex: 1;
+        min-width: 220px;
+        text-align: center;
+        text-decoration: none;
+        background: #1e3a5f;
+        color: white;
+        padding: 13px 18px;
+        border-radius: 9px;
+        font-weight: bold;
+    }
+
+    .nav-btn:hover {
+        background: #0f766e;
+    }
+
+    footer {
+        text-align: center;
+        background: #172554;
+        color: white;
+        padding: 25px 15px;
+        margin-top: 35px;
+    }
+
+    .mini-tag {
+        display: inline-block;
+        padding: 4px 9px;
+        border-radius: 15px;
+        background: #dbeafe;
+        color: #1e3a5f;
+        font-size: 0.82rem;
+        margin: 3px;
+    }
+
+    @media (max-width: 700px) {
+        header h1 {
+            font-size: 1.7rem;
+        }
+
+        .container {
+            width: 95%;
+        }
+
+        .card {
+            padding: 20px;
+        }
+
+        table {
+            display: block;
+            overflow-x: auto;
+        }
+
+        .navigation {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="badge">Class 10 • Information Technology • Subject Code 402</div>
+    <h1>Session 1: Analyse Data Using Scenarios and Goal Seek</h1>
+    <p>Unit 2 – Electronic Spreadsheet (Advanced) using LibreOffice Calc</p>
+</header>
+
+<div class="container">
+
+<!-- INTRODUCTION -->
+
+<section class="card intro-card">
+
+    <h2>1. Introduction to Data Analysis</h2>
+
+    <p>
+        A spreadsheet is not only used for entering and storing data. It can also
+        help us analyse data, compare different possibilities, calculate summaries,
+        and make better decisions.
+    </p>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Data analysis in a spreadsheet is the process of examining, organizing,
+        summarizing, comparing, and interpreting data with the help of formulas,
+        functions, and spreadsheet tools.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Data analysis means studying the data in a spreadsheet so that we can
+        understand it and make useful decisions from it.
+    </div>
+
+    <h3>Why Do We Need Data Analysis?</h3>
+
+    <ul>
+        <li>To understand large amounts of data.</li>
+        <li>To calculate totals and averages.</li>
+        <li>To compare different sets of data.</li>
+        <li>To find patterns and useful information.</li>
+        <li>To study different possible situations.</li>
+        <li>To find the input required to achieve a particular result.</li>
+        <li>To support decision-making.</li>
+    </ul>
+
+    <div class="example">
+        <strong>Example:</strong>
+        <p>
+            Suppose a shopkeeper has sales data for January, February and March.
+            Instead of checking every entry separately, the shopkeeper can
+            consolidate the data, calculate subtotals, create different sales
+            scenarios and use Goal Seek to find the sales required to achieve a
+            particular profit.
+        </p>
+    </div>
+
+    <h3>Main Topics in This Session</h3>
+
+    <span class="mini-tag">Consolidating Data</span>
+    <span class="mini-tag">Groups and Subtotals</span>
+    <span class="mini-tag">What-if Analysis</span>
+    <span class="mini-tag">What-if Scenarios</span>
+    <span class="mini-tag">What-if Tools</span>
+    <span class="mini-tag">Goal Seek</span>
+    <span class="mini-tag">Solver</span>
+
+</section>
+
+
+<!-- CONSOLIDATING DATA -->
+
+<section class="card">
+
+    <h2>2. Consolidating Data</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Consolidating data means combining data from multiple cell ranges or
+        worksheets into one summary range and applying a selected function such
+        as Sum, Average, Count, Maximum or Minimum.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Consolidation means collecting information from different places and
+        bringing it together into one summary.
+    </div>
+
+    <h3>Why Is Data Consolidation Used?</h3>
+
+    <ul>
+        <li>To combine information from different worksheets.</li>
+        <li>To prepare a summary from several data ranges.</li>
+        <li>To calculate totals from different sources.</li>
+        <li>To compare information from different departments or periods.</li>
+        <li>To reduce the need for repeated manual calculations.</li>
+    </ul>
+
+    <h3>Example of Consolidation</h3>
+
+    <div class="example">
+
+        <p>Suppose a school maintains separate sheets for three months:</p>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>January</th>
+                <th>February</th>
+                <th>March</th>
+            </tr>
+            <tr>
+                <td>Books</td>
+                <td>500</td>
+                <td>600</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>Copies</td>
+                <td>400</td>
+                <td>450</td>
+                <td>500</td>
+            </tr>
+        </table>
+
+        <p>
+            Consolidation can be used to prepare a single summary of these
+            different monthly data ranges.
+        </p>
+
+    </div>
+
+    <h3>Important Terms in Consolidation</h3>
+
+    <table>
+        <tr>
+            <th>Term</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr>
+            <td>Source Data Range</td>
+            <td>
+                The cell range from which data is taken for consolidation.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Consolidation Range</td>
+            <td>
+                The list of source ranges that will be combined.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Target Range</td>
+            <td>
+                The location where the consolidated result will be displayed.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Function</td>
+            <td>
+                The calculation applied to the selected data, such as Sum,
+                Average, Count, Maximum or Minimum.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Link to Source Data</td>
+            <td>
+                An option that keeps the result connected to the source data
+                so that changes in the source can update the result.
+            </td>
+        </tr>
+    </table>
+
+    <h3>Common Functions Used for Consolidation</h3>
+
+    <ul>
+        <li><strong>Sum:</strong> Adds the values.</li>
+        <li><strong>Average:</strong> Calculates the arithmetic average.</li>
+        <li><strong>Count:</strong> Counts numerical entries.</li>
+        <li><strong>Max:</strong> Finds the highest value.</li>
+        <li><strong>Min:</strong> Finds the lowest value.</li>
+        <li><strong>Product:</strong> Multiplies values.</li>
+        <li><strong>Count Numbers:</strong> Counts numeric values.</li>
+    </ul>
+
+    <h3>Ways of Consolidating Data</h3>
+
+    <p>
+        LibreOffice Calc can consolidate data according to the position of the
+        data or according to matching labels.
+    </p>
+
+    <h4>1. Consolidation by Position</h4>
+
+    <p>
+        Data is combined according to the same cell positions in the selected
+        ranges.
+    </p>
+
+    <h4>2. Consolidation by Row Labels</h4>
+
+    <p>
+        Calc matches identical row labels and combines the corresponding data.
+    </p>
+
+    <h4>3. Consolidation by Column Labels</h4>
+
+    <p>
+        Calc matches identical column labels and combines the corresponding data.
+    </p>
+
+    <div class="important">
+        <strong>Important:</strong>
+        When consolidating by row or column labels, the labels should match
+        correctly. If labels are written differently, Calc may treat them as
+        different labels.
+    </div>
+
+</section>
+
+
+<!-- CONSOLIDATION PRACTICAL -->
+
+<section class="card">
+
+    <h2>3. Practical: How to Consolidate Data in LibreOffice Calc</h2>
+
+    <p>
+        The following practical demonstrates how to combine data from different
+        ranges into one summary.
+    </p>
+
+    <div class="step-box">
+
+        <h3>Step 1: Open LibreOffice Calc</h3>
+
+        <ol>
+            <li>Start your computer.</li>
+            <li>Open LibreOffice.</li>
+            <li>Select <strong>Calc Spreadsheet</strong>.</li>
+            <li>Wait for the spreadsheet window to open.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 2: Prepare the Source Data</h3>
+
+        <ol>
+            <li>Create or open a spreadsheet containing the first data range.</li>
+            <li>Enter proper headings.</li>
+            <li>Enter the required numerical values.</li>
+            <li>Create another data range if the information is stored separately.</li>
+            <li>Make sure the data is organized clearly.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 3: Select the Destination</h3>
+
+        <ol>
+            <li>Move to the worksheet where you want the final summary.</li>
+            <li>Click the cell where the consolidated result should begin.</li>
+            <li>For example, select cell <strong>A1</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 4: Open the Consolidate Dialog Box</h3>
+
+        <ol>
+            <li>Go to the <strong>Data</strong> menu.</li>
+            <li>Click <strong>Consolidate</strong>.</li>
+            <li>The <strong>Consolidate</strong> dialog box will open.</li>
+        </ol>
+
+        <div class="menu">
+            Menu Path: Data → Consolidate
+        </div>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 5: Select the Function</h3>
+
+        <ol>
+            <li>Find the <strong>Function</strong> drop-down list.</li>
+            <li>Choose the required function.</li>
+            <li>For a total, select <strong>Sum</strong>.</li>
+            <li>For an average, select <strong>Average</strong>.</li>
+            <li>Select another function if required.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 6: Select the First Source Range</h3>
+
+        <ol>
+            <li>Click inside the <strong>Source data range</strong> box.</li>
+            <li>Type the range manually if you know the cell references.</li>
+            <li>Alternatively, select the required range using the mouse.</li>
+            <li>Check that the correct range is selected.</li>
+            <li>Click <strong>Add</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 7: Add More Source Ranges</h3>
+
+        <ol>
+            <li>Select the second source range.</li>
+            <li>Click <strong>Add</strong>.</li>
+            <li>Repeat the process for additional ranges.</li>
+            <li>Check the <strong>Consolidation ranges</strong> list.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 8: Select the Target Range</h3>
+
+        <ol>
+            <li>Find <strong>Copy results to</strong>.</li>
+            <li>Click inside the field.</li>
+            <li>Enter the destination cell reference.</li>
+            <li>Alternatively, click the destination cell in the sheet.</li>
+            <li>Make sure the destination does not contain important data that
+                you do not want to overwrite.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 9: Use Additional Options</h3>
+
+        <ol>
+            <li>Click <strong>More</strong> if additional options are required.</li>
+            <li>Select <strong>Link to source data</strong> if the result should
+                remain connected to the source ranges.</li>
+            <li>Select <strong>Row labels</strong> if consolidation should be
+                based on matching row labels.</li>
+            <li>Select <strong>Column labels</strong> if consolidation should be
+                based on matching column labels.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 10: Complete the Consolidation</h3>
+
+        <ol>
+            <li>Review the function.</li>
+            <li>Review the source ranges.</li>
+            <li>Review the destination.</li>
+            <li>Review the selected options.</li>
+            <li>Click <strong>OK</strong>.</li>
+            <li>Calc will create the consolidated result.</li>
+        </ol>
+
+    </div>
+
+    <div class="tip">
+        <strong>Practical Tip:</strong>
+        Always verify the source ranges before clicking OK. Selecting the wrong
+        range is one of the most common mistakes in data consolidation.
+    </div>
+
+</section>
+
+
+<!-- GROUPS AND SUBTOTALS -->
+
+<section class="card">
+
+    <h2>4. Groups and Subtotals</h2>
+
+    <div class="definition">
+        <strong>Formal Definition – Group:</strong><br>
+        A group is a collection of related records that have a common value in
+        a particular field or column.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Meaning:</strong><br>
+        Grouping means putting similar records together.
+    </div>
+
+    <div class="definition">
+        <strong>Formal Definition – Subtotal:</strong><br>
+        A subtotal is an intermediate calculation made for a particular group of
+        records before the final grand total is calculated.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Meaning:</strong><br>
+        A subtotal tells us the total for each group separately.
+    </div>
+
+    <h3>Example</h3>
+
+    <table>
+        <tr>
+            <th>Region</th>
+            <th>Product</th>
+            <th>Sales</th>
+        </tr>
+        <tr>
+            <td>North</td>
+            <td>Books</td>
+            <td>5000</td>
+        </tr>
+        <tr>
+            <td>North</td>
+            <td>Copies</td>
+            <td>3000</td>
+        </tr>
+        <tr>
+            <td>South</td>
+            <td>Books</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>South</td>
+            <td>Copies</td>
+            <td>2500</td>
+        </tr>
+    </table>
+
+    <p>
+        A subtotal can calculate the total sales for North separately and South
+        separately, followed by a grand total.
+    </p>
+
+    <h3>Why Are Subtotals Useful?</h3>
+
+    <ul>
+        <li>They summarize large tables.</li>
+        <li>They make group-wise analysis easier.</li>
+        <li>They show intermediate totals.</li>
+        <li>They provide a grand total.</li>
+        <li>They help in comparing different groups.</li>
+        <li>They can organize large datasets automatically.</li>
+    </ul>
+
+    <h3>Important Subtotal Functions</h3>
+
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>SUM</td>
+            <td>Adds values in a group.</td>
+        </tr>
+        <tr>
+            <td>AVERAGE</td>
+            <td>Calculates the average of values.</td>
+        </tr>
+        <tr>
+            <td>COUNT</td>
+            <td>Counts numerical entries.</td>
+        </tr>
+        <tr>
+            <td>MAX</td>
+            <td>Finds the highest value.</td>
+        </tr>
+        <tr>
+            <td>MIN</td>
+            <td>Finds the lowest value.</td>
+        </tr>
+        <tr>
+            <td>PRODUCT</td>
+            <td>Multiplies values.</td>
+        </tr>
+    </table>
+
+</section>
+
+
+<!-- SUBTOTAL PRACTICAL -->
+
+<section class="card">
+
+    <h2>5. Practical: Creating Subtotals in LibreOffice Calc</h2>
+
+    <div class="step-box">
+
+        <h3>Step 1: Prepare the Data</h3>
+
+        <ol>
+            <li>Open LibreOffice Calc.</li>
+            <li>Open the spreadsheet containing the data.</li>
+            <li>Make sure the first row contains proper column headings.</li>
+            <li>Make sure the data is arranged in rows and columns.</li>
+            <li>Check that there are no unnecessary blank rows inside the dataset.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 2: Select the Data Range</h3>
+
+        <ol>
+            <li>Select the complete data range.</li>
+            <li>Include the column headings.</li>
+            <li>Alternatively, click inside the data area if Calc can identify
+                the complete database range automatically.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 3: Open Subtotals</h3>
+
+        <ol>
+            <li>Go to the <strong>Data</strong> menu.</li>
+            <li>Choose <strong>Subtotals</strong>.</li>
+            <li>The Subtotals dialog box will open.</li>
+        </ol>
+
+        <div class="menu">
+            Menu Path: Data → Subtotals
+        </div>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 4: Select the Grouping Column</h3>
+
+        <ol>
+            <li>Open the <strong>1st Group</strong> tab.</li>
+            <li>Find the <strong>Group by</strong> list.</li>
+            <li>Select the column by which you want to create groups.</li>
+            <li>For example, select <strong>Region</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 5: Select the Column for Calculation</h3>
+
+        <ol>
+            <li>Find <strong>Calculate subtotals for</strong>.</li>
+            <li>Select the numerical column.</li>
+            <li>For example, select <strong>Sales</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 6: Select the Function</h3>
+
+        <ol>
+            <li>Find the <strong>Use function</strong> list.</li>
+            <li>Select <strong>Sum</strong> for total sales.</li>
+            <li>Select another function if required.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 7: Add More Calculations</h3>
+
+        <ol>
+            <li>You can select more than one numerical column.</li>
+            <li>Choose the required function for each selected column.</li>
+            <li>Review the selections carefully.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 8: Use Second and Third Groups</h3>
+
+        <ol>
+            <li>Open the <strong>2nd Group</strong> tab if another level of
+                grouping is required.</li>
+            <li>Select another grouping column.</li>
+            <li>Select the columns to calculate.</li>
+            <li>Select the required function.</li>
+            <li>The same process can be repeated using the <strong>3rd Group</strong>
+                tab when needed.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 9: Check Options</h3>
+
+        <ol>
+            <li>Open the <strong>Options</strong> tab.</li>
+            <li>Check the available sorting and presentation options.</li>
+            <li>You may use pre-sorting according to the selected group.</li>
+            <li>You may choose whether the summary should appear above or below
+                the data.</li>
+            <li>Use the required options according to the practical question.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 10: Apply the Subtotals</h3>
+
+        <ol>
+            <li>Review all settings.</li>
+            <li>Click <strong>OK</strong>.</li>
+            <li>Calc will create subtotal rows.</li>
+            <li>A grand total will also be calculated.</li>
+            <li>An outline may appear at the left side of the sheet.</li>
+        </ol>
+
+    </div>
+
+    <h3>Working with the Subtotal Outline</h3>
+
+    <p>
+        The outline on the left can be used to show or hide different levels
+        of detail.
+    </p>
+
+    <ul>
+        <li>Detailed level shows individual records.</li>
+        <li>Higher-level views can show only summaries.</li>
+        <li>Plus (+) and minus (-) controls can expand or collapse groups.</li>
+    </ul>
+
+    <h3>Deleting Subtotals</h3>
+
+    <ol>
+        <li>Select the area containing the subtotals.</li>
+        <li>Go to <strong>Data → Subtotals</strong>.</li>
+        <li>Open the Subtotals dialog.</li>
+        <li>Click <strong>Delete</strong>.</li>
+        <li>The subtotal rows will be removed.</li>
+    </ol>
+
+</section>
+
+
+<!-- WHAT IF ANALYSIS -->
+
+<section class="card">
+
+    <h2>6. What-if Analysis</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        What-if analysis is a method of examining how changing one or more input
+        values affects the result of a calculation.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        What-if analysis means asking, “What will happen if I change this value?”
+    </div>
+
+    <h3>Example</h3>
+
+    <p>
+        Suppose a business calculates profit using sales and expenses.
+    </p>
+
+    <div class="formula">
+        Profit = Sales - Expenses
+    </div>
+
+    <p>
+        We can ask:
+    </p>
+
+    <ul>
+        <li>What if sales increase?</li>
+        <li>What if expenses increase?</li>
+        <li>What if sales decrease?</li>
+        <li>What if both sales and expenses change?</li>
+    </ul>
+
+    <h3>Basic Elements of What-if Analysis</h3>
+
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Input / Variable Cell</td>
+            <td>The value that may be changed.</td>
+        </tr>
+        <tr>
+            <td>Formula Cell</td>
+            <td>The cell containing the formula that calculates the result.</td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td>The value produced after calculation.</td>
+        </tr>
+        <tr>
+            <td>Scenario</td>
+            <td>A named set of possible input values.</td>
+        </tr>
+    </table>
+
+</section>
+
+
+<!-- SCENARIOS -->
+
+<section class="card">
+
+    <h2>7. What-if Scenarios</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        A scenario in LibreOffice Calc is a named set of cell values that can be
+        used in calculations and switched between different sets to observe
+        different results.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        A scenario is a saved set of possible values that allows us to compare
+        different situations quickly.
+    </div>
+
+    <h3>Why Use Scenarios?</h3>
+
+    <ul>
+        <li>To compare different possibilities.</li>
+        <li>To avoid entering values repeatedly.</li>
+        <li>To study best-case and worst-case situations.</li>
+        <li>To examine the effect of changing assumptions.</li>
+        <li>To support planning and decision-making.</li>
+    </ul>
+
+    <h3>Example: Sales Planning</h3>
+
+    <table>
+        <tr>
+            <th>Situation</th>
+            <th>Units Sold</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Low Sales</td>
+            <td>500</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Normal Sales</td>
+            <td>800</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>High Sales</td>
+            <td>1200</td>
+            <td>100</td>
+        </tr>
+    </table>
+
+    <p>
+        Instead of manually changing the units every time, different scenarios
+        can be created and switched between.
+    </p>
+
+    <h3>Important Scenario Terms</h3>
+
+    <ul>
+        <li><strong>Scenario Name:</strong> The name used to identify a scenario.</li>
+        <li><strong>Changing Cells:</strong> The cells whose values differ between scenarios.</li>
+        <li><strong>Scenario Values:</strong> The values stored for the selected changing cells.</li>
+        <li><strong>Scenario Result:</strong> The output produced after applying a scenario.</li>
+    </ul>
+
+</section>
+
+
+<!-- SCENARIO PRACTICAL -->
+
+<section class="card">
+
+    <h2>8. Practical: Creating a What-if Scenario</h2>
+
+    <div class="step-box">
+
+        <h3>Step 1: Create the Spreadsheet</h3>
+
+        <ol>
+            <li>Open LibreOffice Calc.</li>
+            <li>Enter the required labels and values.</li>
+            <li>Create a formula that uses the values which may change.</li>
+            <li>Check that the formula produces the expected result.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 2: Identify the Changing Cells</h3>
+
+        <ol>
+            <li>Look at the formula and identify which input values may change.</li>
+            <li>Select the cells containing those values.</li>
+            <li>If multiple cells are required, select all of them.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 3: Open Scenario Creation</h3>
+
+        <ol>
+            <li>Keep the required changing cells selected.</li>
+            <li>Go to the <strong>Tools</strong> menu.</li>
+            <li>Choose <strong>Scenarios</strong>.</li>
+            <li>The Create Scenario dialog will appear.</li>
+        </ol>
+
+        <div class="menu">
+            Menu Path: Tools → Scenarios
+        </div>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 4: Enter the Scenario Name</h3>
+
+        <ol>
+            <li>Enter a meaningful scenario name.</li>
+            <li>For example, type <strong>Low Sales</strong>.</li>
+            <li>Use a name that clearly describes the situation.</li>
+            <li>Review the other available settings.</li>
+            <li>Click <strong>OK</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 5: Create Another Scenario</h3>
+
+        <ol>
+            <li>Select the same changing cells.</li>
+            <li>Choose <strong>Tools → Scenarios</strong> again.</li>
+            <li>Enter another name, such as <strong>Normal Sales</strong>.</li>
+            <li>Enter or use the required values for that scenario.</li>
+            <li>Click <strong>OK</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 6: Create a Third Scenario</h3>
+
+        <ol>
+            <li>Select the changing cells again.</li>
+            <li>Open <strong>Tools → Scenarios</strong>.</li>
+            <li>Enter <strong>High Sales</strong>.</li>
+            <li>Enter the required values.</li>
+            <li>Click <strong>OK</strong>.</li>
+        </ol>
+
+    </div>
+
+    <h3>Using a Scenario</h3>
+
+    <ol>
+        <li>Open the <strong>Navigator</strong>.</li>
+        <li>Locate the <strong>Scenarios</strong> section.</li>
+        <li>Find the scenario names.</li>
+        <li>Double-click a scenario name.</li>
+        <li>The corresponding values will be applied to the selected cells.</li>
+        <li>Observe the changed result.</li>
+    </ol>
+
+    <h3>Editing a Scenario</h3>
+
+    <ol>
+        <li>Open the Navigator.</li>
+        <li>Open the Scenarios section.</li>
+        <li>Right-click the scenario.</li>
+        <li>Select <strong>Properties</strong>.</li>
+        <li>Make the required changes.</li>
+        <li>Save the changes.</li>
+    </ol>
+
+    <h3>Deleting a Scenario</h3>
+
+    <ol>
+        <li>Open the Navigator.</li>
+        <li>Locate the scenario.</li>
+        <li>Right-click the scenario name.</li>
+        <li>Select <strong>Delete</strong>.</li>
+        <li>Confirm the deletion if prompted.</li>
+    </ol>
+
+    <div class="important">
+        <strong>Important:</strong>
+        A scenario is useful when you want to store and switch between several
+        possible sets of values. It is different from manually changing a value
+        and forgetting the previous value.
+    </div>
+
+</section>
+
+
+<!-- WHAT IF ANALYSIS TOOL -->
+
+<section class="card">
+
+    <h2>9. What-if Analysis Tool</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        What-if analysis tools are spreadsheet features used to examine the
+        effect of changing input values on calculated results.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        These tools help us test different possible situations without repeatedly
+        performing calculations manually.
+    </div>
+
+    <h3>Scenario-Based What-if Analysis</h3>
+
+    <p>
+        In LibreOffice Calc, scenarios provide a practical way to perform
+        what-if analysis. Different sets of input values can be stored under
+        different names and applied when required.
+    </p>
+
+    <h3>Typical Questions Solved by What-if Analysis</h3>
+
+    <ul>
+        <li>What will happen if sales increase by 10%?</li>
+        <li>What will happen if expenses increase?</li>
+        <li>What will happen if the price decreases?</li>
+        <li>What will happen if production increases?</li>
+        <li>Which situation produces the highest profit?</li>
+        <li>Which situation produces the lowest cost?</li>
+    </ul>
+
+    <h3>Advantages</h3>
+
+    <ul>
+        <li>Saves time.</li>
+        <li>Reduces repeated calculations.</li>
+        <li>Makes comparison easier.</li>
+        <li>Helps in planning.</li>
+        <li>Supports decision-making.</li>
+    </ul>
+
+</section>
+
+
+<!-- GOAL SEEK -->
+
+<section class="card">
+
+    <h2>10. Goal Seek</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Goal Seek is a spreadsheet analysis tool used to find the value of one
+        variable input that produces a specified result in a formula.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Goal Seek works backwards. Instead of asking what result a particular
+        input will produce, we tell Calc the result we want and ask it to find
+        the input required to achieve that result.
+    </div>
+
+    <h3>Simple Example</h3>
+
+    <p>Suppose:</p>
+
+    <div class="formula">
+        Profit = Sales - Expenses
+    </div>
+
+    <p>
+        If we want a profit of ₹50,000 and the expense is fixed, Goal Seek can
+        calculate the sales value required to achieve ₹50,000 profit.
+    </p>
+
+    <h3>Three Important Parts of Goal Seek</h3>
+
+    <table>
+        <tr>
+            <th>Part</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr>
+            <td>Formula Cell</td>
+            <td>
+                The cell containing the formula whose result we want to control.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Target Value</td>
+            <td>
+                The result that we want the formula cell to achieve.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Variable Cell</td>
+            <td>
+                The input cell whose value Calc is allowed to change to achieve
+                the target.
+            </td>
+        </tr>
+    </table>
+
+    <h3>Goal Seek Works Like This</h3>
+
+    <div class="example">
+
+        <p><strong>Normal calculation:</strong></p>
+
+        <div class="formula">
+            Input → Formula → Result
+        </div>
+
+        <p><strong>Goal Seek:</strong></p>
+
+        <div class="formula">
+            Desired Result → Formula → Required Input
+        </div>
+
+    </div>
+
+    <h3>When Should We Use Goal Seek?</h3>
+
+    <ul>
+        <li>When there is one important variable input.</li>
+        <li>When the desired result is already known.</li>
+        <li>When we need to calculate the input required for a target.</li>
+        <li>When manual trial-and-error would take too much time.</li>
+    </ul>
+
+    <h3>Examples of Goal Seek</h3>
+
+    <ul>
+        <li>Find the sales required for a target profit.</li>
+        <li>Find the marks required to achieve a target percentage.</li>
+        <li>Find the price required to achieve a target revenue.</li>
+        <li>Find the number of units required to reach a target income.</li>
+        <li>Find the interest rate required to reach a target amount.</li>
+    </ul>
+
+</section>
+
+
+<!-- GOAL SEEK PRACTICAL -->
+
+<section class="card">
+
+    <h2>11. Practical: Using Goal Seek in LibreOffice Calc</h2>
+
+    <p>
+        This is one of the most important practical procedures of this session.
+        Follow each step carefully.
+    </p>
+
+    <h3>Practical Example: Finding Required Sales</h3>
+
+    <p>
+        Suppose a business has:
+    </p>
+
+    <table>
+        <tr>
+            <th>Cell</th>
+            <th>Content</th>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td>Sales</td>
+        </tr>
+        <tr>
+            <td>B1</td>
+            <td>100000</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>Expenses</td>
+        </tr>
+        <tr>
+            <td>B2</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>Profit</td>
+        </tr>
+        <tr>
+            <td>B3</td>
+            <td>=B1-B2</td>
+        </tr>
+    </table>
+
+    <p>
+        The current profit is ₹40,000. Suppose we want the profit to become
+        ₹50,000. We can use Goal Seek to find the required sales.
+    </p>
+
+    <div class="step-box">
+
+        <h3>Step 1: Open LibreOffice Calc</h3>
+
+        <ol>
+            <li>Open LibreOffice.</li>
+            <li>Select <strong>Calc Spreadsheet</strong>.</li>
+            <li>Wait for the spreadsheet to open.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 2: Enter the Data</h3>
+
+        <ol>
+            <li>Click cell A1.</li>
+            <li>Type <strong>Sales</strong>.</li>
+            <li>Press Enter.</li>
+            <li>Click B1.</li>
+            <li>Enter the current sales value.</li>
+            <li>Enter the expense value in B2.</li>
+            <li>Enter the appropriate labels in column A.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 3: Create the Formula</h3>
+
+        <ol>
+            <li>Click the cell where the profit should appear.</li>
+            <li>Type the formula using cell references.</li>
+            <li>For example, type:</li>
+        </ol>
+
+        <div class="formula">
+            =B1-B2
+        </div>
+
+        <ol start="4">
+            <li>Press Enter.</li>
+            <li>Check that the profit is calculated correctly.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 4: Identify the Formula Cell</h3>
+
+        <ol>
+            <li>Look at the profit cell.</li>
+            <li>This cell contains the formula.</li>
+            <li>Remember its cell reference.</li>
+            <li>In our example, it is <strong>B3</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 5: Identify the Variable Cell</h3>
+
+        <ol>
+            <li>Decide which value Calc should change.</li>
+            <li>In our example, we want Calc to change Sales.</li>
+            <li>The sales value is stored in <strong>B1</strong>.</li>
+            <li>Therefore, B1 is the variable cell.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 6: Open Goal Seek</h3>
+
+        <ol>
+            <li>Go to the <strong>Tools</strong> menu.</li>
+            <li>Select <strong>Goal Seek</strong>.</li>
+            <li>The Goal Seek dialog box will open.</li>
+        </ol>
+
+        <div class="menu">
+            Menu Path: Tools → Goal Seek
+        </div>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 7: Enter the Formula Cell</h3>
+
+        <ol>
+            <li>Find the <strong>Formula Cell</strong> field.</li>
+            <li>Enter the reference of the cell containing the formula.</li>
+            <li>In this example, enter <strong>B3</strong>.</li>
+            <li>You can also select the cell directly from the worksheet.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 8: Enter the Target Value</h3>
+
+        <ol>
+            <li>Find the <strong>Target Value</strong> field.</li>
+            <li>Enter the result you want.</li>
+            <li>For example, enter <strong>50000</strong>.</li>
+            <li>This means we want the formula cell to produce 50,000.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 9: Enter the Variable Cell</h3>
+
+        <ol>
+            <li>Find the <strong>Variable Cell</strong> field.</li>
+            <li>Enter the cell whose value should change.</li>
+            <li>In our example, enter <strong>B1</strong>.</li>
+            <li>Check that the variable cell is the correct input cell.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 10: Start Goal Seek</h3>
+
+        <ol>
+            <li>Check all three fields.</li>
+            <li>Formula Cell must contain the formula cell.</li>
+            <li>Target Value must contain the desired result.</li>
+            <li>Variable Cell must contain the input cell that can change.</li>
+            <li>Click <strong>OK</strong>.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 11: Examine the Result</h3>
+
+        <ol>
+            <li>Calc performs the Goal Seek calculation.</li>
+            <li>A result dialog will appear.</li>
+            <li>Check the proposed value for the variable cell.</li>
+            <li>Check whether the target value has been reached.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 12: Accept the Result</h3>
+
+        <ol>
+            <li>If the result is correct, choose the option to apply the result.</li>
+            <li>Calc will place the calculated value in the variable cell.</li>
+            <li>The formula cell will recalculate automatically.</li>
+            <li>Check the final result.</li>
+        </ol>
+
+    </div>
+
+    <div class="step-box">
+
+        <h3>Step 13: Verify the Calculation</h3>
+
+        <ol>
+            <li>Look at the changed variable cell.</li>
+            <li>Look at the formula cell.</li>
+            <li>Confirm that the formula now produces the target value.</li>
+            <li>If necessary, manually check the calculation.</li>
+        </ol>
+
+    </div>
+
+    <div class="warning">
+        <strong>Important:</strong>
+        Goal Seek changes the value of the selected variable cell. Therefore,
+        save the original value separately if you need to preserve the original
+        data for comparison.
+    </div>
+
+</section>
+
+
+<!-- GOAL SEEK IMPORTANT CONCEPTS -->
+
+<section class="card">
+
+    <h2>12. Important Goal Seek Concepts</h2>
+
+    <table>
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+
+        <tr>
+            <td>What is the Formula Cell?</td>
+            <td>
+                The cell containing the formula whose result must reach the target.
+            </td>
+        </tr>
+
+        <tr>
+            <td>What is the Target Value?</td>
+            <td>
+                The desired result that we want the formula to produce.
+            </td>
+        </tr>
+
+        <tr>
+            <td>What is the Variable Cell?</td>
+            <td>
+                The input cell whose value can be changed to achieve the target.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Can Goal Seek change several variable cells at the same time?</td>
+            <td>
+                Goal Seek is designed around one variable cell. Problems involving
+                multiple changing variables and constraints are better suited to
+                Solver.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Does Goal Seek work without a formula?</td>
+            <td>
+                No. There must be a formula cell whose result can respond to the
+                variable cell.
+            </td>
+        </tr>
+
+        <tr>
+            <td>What does Goal Seek calculate?</td>
+            <td>
+                It calculates the input value required to achieve a specified
+                formula result.
+            </td>
+        </tr>
+    </table>
+
+</section>
+
+
+<!-- SOLVER -->
+
+<section class="card">
+
+    <h2>13. Solver</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Solver is an advanced spreadsheet optimization tool used to find values
+        for variable cells that satisfy a target condition while considering
+        constraints.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Solver is used when a problem is more complicated than a simple
+        one-variable Goal Seek problem.
+    </div>
+
+    <h3>Goal Seek vs Solver</h3>
+
+    <table>
+        <tr>
+            <th>Goal Seek</th>
+            <th>Solver</th>
+        </tr>
+
+        <tr>
+            <td>Normally works with one variable cell.</td>
+            <td>Can work with multiple variable cells.</td>
+        </tr>
+
+        <tr>
+            <td>Used to reach a specified formula result.</td>
+            <td>Can optimize a result while considering constraints.</td>
+        </tr>
+
+        <tr>
+            <td>Simple target-based analysis.</td>
+            <td>More advanced optimization.</td>
+        </tr>
+
+        <tr>
+            <td>Easy for basic problems.</td>
+            <td>Useful for complex decision-making problems.</td>
+        </tr>
+    </table>
+
+    <div class="important">
+        <strong>CBSE Note:</strong>
+        The current 2026–27 CBSE curriculum lists Goal Seek in the theory topics
+        for this chapter, while the practical outcome also refers to using Goal
+        Seek and Solver. Therefore, students should understand Solver as the
+        related advanced practical tool, while Goal Seek remains a central
+        theory concept.
+    </div>
+
+    <h3>When Is Solver Useful?</h3>
+
+    <ul>
+        <li>When more than one variable needs to change.</li>
+        <li>When there are restrictions or constraints.</li>
+        <li>When the objective is to maximize or minimize a result.</li>
+        <li>For more complex optimization problems.</li>
+    </ul>
+
+    <h3>Opening Solver</h3>
+
+    <div class="menu">
+        Menu Path: Tools → Solver
+    </div>
+
+    <p>
+        Solver opens a dialog in which an optimization problem can be defined
+        using an objective cell, variable cells and constraints.
+    </p>
+
+    <div class="warning">
+        <strong>Do not confuse:</strong>
+        Goal Seek and Solver are related but not identical. Goal Seek is mainly
+        used to find one input required for a desired formula result, while
+        Solver is intended for more complex optimization involving variables
+        and constraints.
+    </div>
+
+</section>
+
+
+<!-- COMPLETE PRACTICAL -->
+
+<section class="card">
+
+    <h2>14. Complete Practical Activity</h2>
+
+    <h3>Activity: Analyse Monthly Sales Data</h3>
+
+    <p>
+        Perform the following activities in one LibreOffice Calc workbook.
+    </p>
+
+    <h3>Part A – Consolidating Data</h3>
+
+    <ol>
+        <li>Create separate data ranges for three months.</li>
+        <li>Enter product names and sales values.</li>
+        <li>Open Data → Consolidate.</li>
+        <li>Select Sum as the function.</li>
+        <li>Add the three source ranges.</li>
+        <li>Select the destination cell.</li>
+        <li>Use matching labels if required.</li>
+        <li>Click OK.</li>
+        <li>Check the consolidated result.</li>
+    </ol>
+
+    <h3>Part B – Creating Subtotals</h3>
+
+    <ol>
+        <li>Create a sales table containing different regions.</li>
+        <li>Select the complete table.</li>
+        <li>Open Data → Subtotals.</li>
+        <li>Select Region in Group by.</li>
+        <li>Select Sales in Calculate subtotals for.</li>
+        <li>Select Sum.</li>
+        <li>Check the options.</li>
+        <li>Click OK.</li>
+        <li>Observe group-wise subtotals and grand total.</li>
+    </ol>
+
+    <h3>Part C – Creating Scenarios</h3>
+
+    <ol>
+        <li>Create a sales calculation.</li>
+        <li>Identify the cells whose values may change.</li>
+        <li>Select the changing cells.</li>
+        <li>Choose Tools → Scenarios.</li>
+        <li>Create a Low Sales scenario.</li>
+        <li>Create a Normal Sales scenario.</li>
+        <li>Create a High Sales scenario.</li>
+        <li>Open Navigator.</li>
+        <li>Open the Scenarios section.</li>
+        <li>Double-click each scenario.</li>
+        <li>Observe the changes in the calculated result.</li>
+    </ol>
+
+    <h3>Part D – Goal Seek</h3>
+
+    <ol>
+        <li>Create a formula for profit.</li>
+        <li>Identify the formula cell.</li>
+        <li>Identify the variable cell.</li>
+        <li>Open Tools → Goal Seek.</li>
+        <li>Enter the formula cell.</li>
+        <li>Enter the target value.</li>
+        <li>Enter the variable cell.</li>
+        <li>Click OK.</li>
+        <li>Examine the result.</li>
+        <li>Apply the result if it is correct.</li>
+        <li>Verify the final formula result.</li>
+    </ol>
+
+</section>
+
+
+<!-- COMMON MISTAKES -->
+
+<section class="card">
+
+    <h2>15. Common Mistakes and How to Avoid Them</h2>
+
+    <table>
+        <tr>
+            <th>Mistake</th>
+            <th>How to Avoid It</th>
+        </tr>
+
+        <tr>
+            <td>Selecting the wrong source range</td>
+            <td>Check the cell references before adding the range.</td>
+        </tr>
+
+        <tr>
+            <td>Choosing the wrong consolidation function</td>
+            <td>Select Sum, Average, Count, Max, Min etc. according to the question.</td>
+        </tr>
+
+        <tr>
+            <td>Using different labels during consolidation</td>
+            <td>Use consistent labels when consolidating by labels.</td>
+        </tr>
+
+        <tr>
+            <td>Putting the result in the wrong location</td>
+            <td>Check the Copy results to field.</td>
+        </tr>
+
+        <tr>
+            <td>Wrong Group by column</td>
+            <td>Select the column that actually identifies the groups.</td>
+        </tr>
+
+        <tr>
+            <td>Wrong subtotal column</td>
+            <td>Select the numerical column that needs calculation.</td>
+        </tr>
+
+        <tr>
+            <td>Forgetting to select changing cells for a scenario</td>
+            <td>Select all cells whose values should differ between scenarios.</td>
+        </tr>
+
+        <tr>
+            <td>Wrong Goal Seek Formula Cell</td>
+            <td>Select the cell that actually contains the formula.</td>
+        </tr>
+
+        <tr>
+            <td>Wrong Target Value</td>
+            <td>Enter the result that you actually want to achieve.</td>
+        </tr>
+
+        <tr>
+            <td>Wrong Variable Cell</td>
+            <td>Select the input cell that Calc should change.</td>
+        </tr>
+
+        <tr>
+            <td>Trying Goal Seek without a formula</td>
+            <td>Create a proper formula first.</td>
+        </tr>
+    </table>
+
+</section>
+
+
+<!-- COMPARISON -->
+
+<section class="card">
+
+    <h2>16. Goal Seek vs What-if Scenarios</h2>
+
+    <table>
+        <tr>
+            <th>Basis</th>
+            <th>What-if Scenario</th>
+            <th>Goal Seek</th>
+        </tr>
+
+        <tr>
+            <td>Purpose</td>
+            <td>Compare different possible situations.</td>
+            <td>Find an input required for a desired result.</td>
+        </tr>
+
+        <tr>
+            <td>Direction</td>
+            <td>Input values → observe results.</td>
+            <td>Desired result → find input.</td>
+        </tr>
+
+        <tr>
+            <td>Values</td>
+            <td>Stores different sets of values.</td>
+            <td>Calculates a required value.</td>
+        </tr>
+
+        <tr>
+            <td>Example</td>
+            <td>Low, Normal and High Sales.</td>
+            <td>Sales required for ₹50,000 profit.</td>
+        </tr>
+
+        <tr>
+            <td>Main Use</td>
+            <td>Comparison and planning.</td>
+            <td>Target-based calculation.</td>
+        </tr>
+    </table>
+
+</section>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<section class="card">
+
+    <h2>17. Important Questions</h2>
+
+    <details>
+        <summary>Question 1: What is data analysis?</summary>
+        <div class="answer">
+            Data analysis is the process of examining, organizing, calculating,
+            comparing and interpreting data to obtain useful information and
+            support decision-making.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 2: What is data consolidation?</summary>
+        <div class="answer">
+            Data consolidation is the process of combining data from multiple
+            ranges or worksheets into one summary using a selected function.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 3: What is a source data range?</summary>
+        <div class="answer">
+            A source data range is the range of cells from which data is taken
+            for consolidation.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 4: What is the purpose of the Consolidate command?</summary>
+        <div class="answer">
+            It combines data from one or more cell ranges and calculates a
+            summary using a selected function.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 5: What is a subtotal?</summary>
+        <div class="answer">
+            A subtotal is an intermediate total calculated for a particular
+            group of records.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 6: What is the difference between subtotal and grand total?</summary>
+        <div class="answer">
+            A subtotal represents the total of a particular group, while a grand
+            total represents the overall total of all groups.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 7: What is What-if analysis?</summary>
+        <div class="answer">
+            What-if analysis examines how changing input values affects the
+            result of a formula.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 8: What is a scenario?</summary>
+        <div class="answer">
+            A scenario is a named set of cell values that can be applied to a
+            spreadsheet to study a particular situation.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 9: What is Goal Seek?</summary>
+        <div class="answer">
+            Goal Seek is a tool that finds the value of one variable input
+            required to produce a specified result in a formula.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 10: What are the three important fields in Goal Seek?</summary>
+        <div class="answer">
+            The three important fields are Formula Cell, Target Value and
+            Variable Cell.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 11: What is the Formula Cell?</summary>
+        <div class="answer">
+            It is the cell containing the formula whose result must reach the
+            target value.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 12: What is the Target Value?</summary>
+        <div class="answer">
+            It is the desired result that the formula cell should produce.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 13: What is the Variable Cell?</summary>
+        <div class="answer">
+            It is the input cell whose value can be changed by Goal Seek to
+            achieve the target.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 14: What is Solver?</summary>
+        <div class="answer">
+            Solver is an advanced optimization tool used for problems involving
+            variables and constraints.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 15: Give one difference between Goal Seek and Solver.</summary>
+        <div class="answer">
+            Goal Seek is generally used to find one variable required for a
+            target result, while Solver can handle more complex optimization
+            problems involving multiple variables and constraints.
+        </div>
+    </details>
+
+</section>
+
+
+<!-- APPLICATION BASED -->
+
+<section class="card">
+
+    <h2>18. Application-Based Questions</h2>
+
+    <details>
+        <summary>Case 1: Monthly Sales</summary>
+
+        <div class="answer">
+
+            <p>
+                A shop has sales records on three separate worksheets:
+                January, February and March. The owner wants one summary sheet.
+            </p>
+
+            <p><strong>Question:</strong> Which Calc feature should be used?</p>
+
+            <details>
+                <summary>View Answer</summary>
+                <div class="answer">
+                    The Consolidate feature should be used to combine the data
+                    from different ranges into one summary.
+                </div>
+            </details>
+
+        </div>
+    </details>
+
+
+    <details>
+        <summary>Case 2: Regional Sales</summary>
+
+        <div class="answer">
+
+            <p>
+                A company has sales data for North, South, East and West regions.
+                The manager wants separate totals for each region.
+            </p>
+
+            <p><strong>Question:</strong> Which feature should be used?</p>
+
+            <details>
+                <summary>View Answer</summary>
+                <div class="answer">
+                    The Subtotals feature should be used by grouping the data
+                    according to the Region column.
+                </div>
+            </details>
+
+        </div>
+    </details>
+
+
+    <details>
+        <summary>Case 3: Different Sales Situations</summary>
+
+        <div class="answer">
+
+            <p>
+                A business wants to compare low-sales, normal-sales and
+                high-sales situations.
+            </p>
+
+            <p><strong>Question:</strong> Which feature is appropriate?</p>
+
+            <details>
+                <summary>View Answer</summary>
+                <div class="answer">
+                    What-if Scenarios can be created for Low Sales, Normal Sales
+                    and High Sales.
+                </div>
+            </details>
+
+        </div>
+    </details>
+
+
+    <details>
+        <summary>Case 4: Target Profit</summary>
+
+        <div class="answer">
+
+            <p>
+                A business knows that it wants a profit of ₹75,000 but does not
+                know what sales value is required.
+            </p>
+
+            <p><strong>Question:</strong> Which tool should be used?</p>
+
+            <details>
+                <summary>View Answer</summary>
+                <div class="answer">
+                    Goal Seek should be used because the desired result is known
+                    and the required input value needs to be calculated.
+                </div>
+            </details>
+
+        </div>
+    </details>
+
+
+    <details>
+        <summary>Case 5: Multiple Variables and Restrictions</summary>
+
+        <div class="answer">
+
+            <p>
+                A company wants to optimize production by changing multiple
+                variables while following certain restrictions.
+            </p>
+
+            <p><strong>Question:</strong> Which advanced tool is more suitable?</p>
+
+            <details>
+                <summary>View Answer</summary>
+                <div class="answer">
+                    Solver is more suitable because it can handle more complex
+                    optimization problems involving variables and constraints.
+                </div>
+            </details>
+
+        </div>
+    </details>
+
+</section>
+
+
+<!-- PYQ BASED -->
+
+<section class="card">
+
+    <h2>19. CBSE PYQ-Based Practice Questions</h2>
+
+    <div class="important">
+        These questions are provided as <strong>CBSE PYQ-Based Practice</strong>
+        unless a specific examination year has been independently verified.
+        They are designed around the concepts prescribed for this topic.
+    </div>
+
+    <details>
+        <summary>Question 1: What is the purpose of the Goal Seek tool?</summary>
+        <div class="answer">
+            Goal Seek is used to determine the input value required to achieve
+            a specified result in a formula.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 2: Name the three fields used in Goal Seek.</summary>
+        <div class="answer">
+            Formula Cell, Target Value and Variable Cell.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 3: What is meant by What-if analysis?</summary>
+        <div class="answer">
+            It is the process of changing input values and observing their
+            effect on the calculated result.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 4: What is a scenario in Calc?</summary>
+        <div class="answer">
+            A scenario is a named set of values that can be applied to selected
+            cells to examine a particular situation.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 5: What is data consolidation?</summary>
+        <div class="answer">
+            Data consolidation combines data from multiple ranges into a single
+            summary using a selected function.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 6: What is the use of Subtotals?</summary>
+        <div class="answer">
+            Subtotals are used to calculate summaries for different groups of
+            records and provide a grand total.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 7: Differentiate between Goal Seek and What-if Scenario.</summary>
+        <div class="answer">
+            A scenario stores different sets of input values so that different
+            situations can be compared. Goal Seek works backward from a desired
+            result to calculate a required input value.
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 8: Write the menu path for Goal Seek.</summary>
+        <div class="answer">
+            Tools → Goal Seek
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 9: Write the menu path for Consolidate.</summary>
+        <div class="answer">
+            Data → Consolidate
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 10: Write the menu path for Subtotals.</summary>
+        <div class="answer">
+            Data → Subtotals
+        </div>
+    </details>
+
+    <details>
+        <summary>Question 11: Write the menu path for creating a Scenario.</summary>
+        <div class="answer">
+            Tools → Scenarios
+        </div>
+    </details>
+
+</section>
+
+
+<!-- PRACTICAL CHECKLIST -->
+
+<section class="card">
+
+    <h2>20. Practical Examination Checklist</h2>
+
+    <p>Before completing the practical, check the following:</p>
+
+    <ul>
+        <li>☐ I can open LibreOffice Calc.</li>
+        <li>☐ I can prepare a data range correctly.</li>
+        <li>☐ I can use Data → Consolidate.</li>
+        <li>☐ I can add multiple source ranges.</li>
+        <li>☐ I can select a consolidation function.</li>
+        <li>☐ I can select the destination range.</li>
+        <li>☐ I understand row-label and column-label consolidation.</li>
+        <li>☐ I can create subtotals.</li>
+        <li>☐ I can select the Group by field.</li>
+        <li>☐ I can select the calculation column.</li>
+        <li>☐ I can select a subtotal function.</li>
+        <li>☐ I can use multiple subtotal groups.</li>
+        <li>☐ I can remove subtotals.</li>
+        <li>☐ I understand What-if analysis.</li>
+        <li>☐ I can create scenarios.</li>
+        <li>☐ I can switch between scenarios.</li>
+        <li>☐ I can edit and delete scenarios.</li>
+        <li>☐ I understand Formula Cell.</li>
+        <li>☐ I understand Target Value.</li>
+        <li>☐ I understand Variable Cell.</li>
+        <li>☐ I can use Tools → Goal Seek.</li>
+        <li>☐ I can verify the Goal Seek result.</li>
+        <li>☐ I understand the basic purpose of Solver.</li>
+    </ul>
+
+</section>
+
+
+<!-- QUICK CONCEPT TABLE -->
+
+<section class="card">
+
+    <h2>21. Important Terms at a Glance</h2>
+
+    <table>
+        <tr>
+            <th>Term</th>
+            <th>Meaning</th>
+        </tr>
+
+        <tr>
+            <td>Data Analysis</td>
+            <td>Studying data to obtain useful information and support decisions.</td>
+        </tr>
+
+        <tr>
+            <td>Consolidation</td>
+            <td>Combining data from different ranges into one summary.</td>
+        </tr>
+
+        <tr>
+            <td>Source Range</td>
+            <td>Range from which data is taken.</td>
+        </tr>
+
+        <tr>
+            <td>Target Range</td>
+            <td>Location where the result is placed.</td>
+        </tr>
+
+        <tr>
+            <td>Group</td>
+            <td>Collection of records having a common characteristic.</td>
+        </tr>
+
+        <tr>
+            <td>Subtotal</td>
+            <td>Total calculated for a particular group.</td>
+        </tr>
+
+        <tr>
+            <td>Grand Total</td>
+            <td>Overall total of all groups.</td>
+        </tr>
+
+        <tr>
+            <td>What-if Analysis</td>
+            <td>Studying how changes in inputs affect results.</td>
+        </tr>
+
+        <tr>
+            <td>Scenario</td>
+            <td>A named set of possible input values.</td>
+        </tr>
+
+        <tr>
+            <td>Formula Cell</td>
+            <td>Cell containing the formula whose result is targeted.</td>
+        </tr>
+
+        <tr>
+            <td>Target Value</td>
+            <td>Desired result of the formula.</td>
+        </tr>
+
+        <tr>
+            <td>Variable Cell</td>
+            <td>Input cell whose value is changed to reach the target.</td>
+        </tr>
+
+        <tr>
+            <td>Goal Seek</td>
+            <td>Finds the input required for a specified formula result.</td>
+        </tr>
+
+        <tr>
+            <td>Solver</td>
+            <td>Advanced optimization tool using variables and constraints.</td>
+        </tr>
+    </table>
+
+</section>
+
+
+<!-- MCQ -->
+
+<section class="card">
+
+    <h2>22. Multiple Choice Questions</h2>
+
+    <p>
+        A separate MCQ page is provided for extensive practice of this session.
+        It contains topic-wise objective questions covering:
+    </p>
+
+    <ul>
+        <li>Consolidating Data</li>
+        <li>Consolidation functions</li>
+        <li>Source and target ranges</li>
+        <li>Groups</li>
+        <li>Subtotals</li>
+        <li>What-if Analysis</li>
+        <li>Scenarios</li>
+        <li>Goal Seek</li>
+        <li>Formula Cell</li>
+        <li>Target Value</li>
+        <li>Variable Cell</li>
+        <li>Solver</li>
+        <li>Practical menu paths</li>
+    </ul>
+
+    <a class="mcq-link" href="class10-it-unit2-session1-mcqs.html">
+        Practice Session 1 MCQs
+    </a>
+
+</section>
+
+
+<!-- NAVIGATION -->
+
+<div class="navigation">
+
+    <a class="nav-btn"
+       href="class10-it-unit2-electronic-spreadsheet.html">
+        ← Unit 2: Electronic Spreadsheet
+    </a>
+
+    <a class="nav-btn"
+       href="class10-it-unit2-session2-macros.html">
+        Session 2: Using Macros →
+    </a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+    <p><strong>Edusphere with Satyam</strong></p>
+    <p>Class 10 Information Technology • Subject Code 402</p>
+    <p>Unit 2 – Electronic Spreadsheet (Advanced)</p>
+
+</footer>
+
+</body>
+</html>
