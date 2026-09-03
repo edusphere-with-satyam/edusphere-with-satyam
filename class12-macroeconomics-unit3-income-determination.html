@@ -1,0 +1,2898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 12 Economics – Income Determination and Multiplier</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#fdf2f8,#ecfeff);
+    color:#1f2937;
+    line-height:1.7;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+    padding:25px 0 40px;
+}
+
+/* HEADER */
+
+.header{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#db2777);
+    color:white;
+    padding:35px 25px;
+    border-radius:22px;
+    text-align:center;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(79,70,229,0.25);
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.header p{
+    font-size:16px;
+    opacity:0.95;
+}
+
+/* BACK BUTTON */
+
+.back{
+    display:inline-block;
+    text-decoration:none;
+    color:#4338ca;
+    background:white;
+    padding:10px 18px;
+    border-radius:12px;
+    font-weight:bold;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.back:hover{
+    transform:translateY(-2px);
+    background:#eef2ff;
+}
+
+/* CARDS */
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:22px;
+    box-shadow:0 7px 22px rgba(0,0,0,0.08);
+    border:1px solid #e5e7eb;
+}
+
+.card h2{
+    color:#4338ca;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card h3{
+    color:#7c3aed;
+    margin:20px 0 10px;
+    font-size:21px;
+}
+
+.card h4{
+    color:#db2777;
+    margin:15px 0 8px;
+}
+
+.card p{
+    margin-bottom:12px;
+}
+
+.card ul,
+.card ol{
+    margin:10px 0 15px 25px;
+}
+
+.card li{
+    margin-bottom:7px;
+}
+
+/* BADGES */
+
+.badge{
+    display:inline-block;
+    padding:5px 12px;
+    border-radius:20px;
+    background:#ede9fe;
+    color:#5b21b6;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+/* DEFINITION */
+
+.definition{
+    background:#eef2ff;
+    border-left:5px solid #4f46e5;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.definition strong{
+    color:#3730a3;
+}
+
+/* SIMPLE EXPLANATION */
+
+.simple{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.simple strong{
+    color:#047857;
+}
+
+/* EXAM BOX */
+
+.exam{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.exam strong{
+    color:#c2410c;
+}
+
+/* NOTE */
+
+.note{
+    background:#fefce8;
+    border-left:5px solid #eab308;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+/* FORMULA */
+
+.formula{
+    background:linear-gradient(135deg,#f5f3ff,#ede9fe);
+    border:2px solid #8b5cf6;
+    padding:18px;
+    border-radius:14px;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:#4c1d95;
+    margin:18px 0;
+}
+
+/* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+    margin:18px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:650px;
+}
+
+th{
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    color:white;
+    padding:12px;
+    text-align:center;
+}
+
+td{
+    padding:11px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f9fafb;
+}
+
+/* GRAPH */
+
+.graph-box{
+    background:#fafafa;
+    border:1px solid #e5e7eb;
+    border-radius:15px;
+    padding:15px;
+    margin:20px 0;
+    text-align:center;
+    overflow-x:auto;
+}
+
+.graph-title{
+    font-weight:bold;
+    color:#4338ca;
+    margin-bottom:12px;
+}
+
+/* TOPIC GRID */
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.topic-card{
+    background:linear-gradient(135deg,#ffffff,#f8fafc);
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+}
+
+.topic-card h3{
+    margin-top:0;
+}
+
+.topic-link{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 14px;
+    background:#4f46e5;
+    color:white;
+    text-decoration:none;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+/* QUESTION */
+
+.question{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:18px;
+    margin:15px 0;
+}
+
+.question strong{
+    color:#312e81;
+}
+
+/* DETAILS */
+
+details{
+    margin-top:12px;
+}
+
+summary{
+    cursor:pointer;
+    display:inline-block;
+    background:#4f46e5;
+    color:white;
+    padding:8px 15px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+.answer{
+    margin-top:12px;
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:16px;
+    border-radius:10px;
+}
+
+/* PILL */
+
+.pill{
+    display:inline-block;
+    background:#fce7f3;
+    color:#9d174d;
+    padding:5px 11px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin:3px;
+}
+
+/* CENTER */
+
+.center{
+    text-align:center;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:25px 10px;
+    color:#667085;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header h1{
+        font-size:25px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card h2{
+        font-size:22px;
+    }
+
+    .card h3{
+        font-size:19px;
+    }
+
+    .formula{
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="class12-macroeconomics-unit3.html" class="back">
+← Back to Unit 3
+</a>
+
+<div class="header">
+
+<h1>📘 Income Determination and Multiplier</h1>
+
+<p>Class 12 Economics | Unit 3 – Determination of Income and Employment</p>
+
+<p>Detailed Notes • Concepts • Graphs • Numericals • Board Questions</p>
+
+</div>
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<span class="badge">TOPIC 2</span>
+
+<h2>Income Determination and Multiplier</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+Income determination refers to the process through which the equilibrium level of national income and output is determined by the interaction between Aggregate Demand and Aggregate Supply in an economy.
+</div>
+
+<div class="simple">
+
+<strong>In Simple Words:</strong><br>
+
+An economy produces goods and services and generates income. People and firms spend this income on consumption and investment. The level of income at which planned expenditure becomes equal to the value of output supplied is called the equilibrium level of income.
+</div>
+
+<p>
+The central idea of this topic is that the economy does not automatically operate at full employment. The equilibrium level of income depends mainly on the level of Aggregate Demand.
+</p>
+
+<div class="exam">
+
+<strong>Core Idea for Exams:</strong><br>
+
+In a simple two-sector economy, equilibrium income is determined where:
+
+<strong>Aggregate Demand = Aggregate Supply</strong>
+
+or equivalently,
+
+<strong>Saving = Investment</strong>
+</div>
+
+</div>
+
+
+<!-- SECTION 8.1 -->
+
+<div class="card">
+
+<span class="badge">8.1</span>
+
+<h2>Meaning of Equilibrium Level of Income</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+The equilibrium level of income is the level of national income at which planned Aggregate Demand is equal to Aggregate Supply, so that producers have no tendency to increase or decrease the level of output.
+</div>
+
+<div class="simple">
+
+<strong>Simple Explanation:</strong><br>
+
+Think of equilibrium as a point of balance. Firms produce a certain amount of goods and services, while households and firms together plan to spend a certain amount. When planned spending exactly equals planned output, the economy is in equilibrium.
+</div>
+
+<h3>Why is it called equilibrium?</h3>
+
+<p>
+At equilibrium, producers are satisfied with their current level of production because the goods they plan to sell are equal to the goods demanded through planned expenditure.
+</p>
+
+<p>
+Therefore, there is no reason for firms collectively to change their level of production merely because of an unintended accumulation or depletion of inventories.
+</p>
+
+<div class="formula">
+
+Equilibrium Condition: AD = AS
+
+</div>
+
+<h3>Alternative Equilibrium Condition</h3>
+
+<p>
+In a two-sector economy, Aggregate Demand is:
+</p>
+
+<div class="formula">
+
+AD = C + I
+
+</div>
+
+<p>
+Aggregate Supply is:
+</p>
+
+<div class="formula">
+
+AS = Y = C + S
+
+</div>
+
+<p>
+Therefore, at equilibrium:
+</p>
+
+<div class="formula">
+
+C + I = C + S
+
+<br><br>
+
+I = S
+
+</div>
+
+<div class="note">
+
+<strong>Important:</strong> The equality between saving and investment is an equilibrium condition in the simple two-sector model when we are considering planned/ex-ante saving and investment.
+</div>
+
+</div>
+
+
+<!-- SECTION 8.2 -->
+
+<div class="card">
+
+<span class="badge">8.2</span>
+
+<h2>Determination of Equilibrium Income</h2>
+
+<p>
+In a simple two-sector economy, there are two major sectors:
+</p>
+
+<div class="topic-grid">
+
+<div class="topic-card">
+
+<h3>🏠 Households</h3>
+
+<p>
+Households earn income by supplying factors of production. They use their income for consumption and saving.
+</p>
+
+<div class="formula">
+Y = C + S
+</div>
+
+</div>
+
+<div class="topic-card">
+
+<h3>🏭 Firms</h3>
+
+<p>
+Firms produce goods and services and undertake investment expenditure on capital goods and inventories.
+</p>
+
+<div class="formula">
+AD = C + I
+</div>
+
+</div>
+
+</div>
+
+<h3>Two Approaches to Determine Equilibrium Income</h3>
+
+<ol>
+
+<li>
+<strong>Aggregate Demand – Aggregate Supply Approach</strong>
+</li>
+
+<li>
+<strong>Saving – Investment Approach</strong>
+</li>
+
+</ol>
+
+<p>
+Both approaches lead to the same equilibrium level of income.
+</p>
+
+</div>
+
+
+<!-- AD AS APPROACH -->
+
+<div class="card">
+
+<span class="badge">8.3</span>
+
+<h2>Equilibrium Income through AD–AS Approach</h2>
+
+<div class="definition">
+
+<strong>Meaning:</strong><br>
+
+According to the AD–AS approach, equilibrium income is determined at the level where Aggregate Demand is equal to Aggregate Supply.
+</div>
+
+<div class="formula">
+
+AD = AS
+
+</div>
+
+<h3>Step-by-Step Understanding</h3>
+
+<ol>
+
+<li>
+Households receive income from production.
+</li>
+
+<li>
+A part of this income is spent on consumption.
+</li>
+
+<li>
+The remaining part is saved.
+</li>
+
+<li>
+Firms undertake investment expenditure.
+</li>
+
+<li>
+Consumption plus investment determines Aggregate Demand.
+</li>
+
+<li>
+Firms compare planned expenditure with the level of output.
+</li>
+
+<li>
+When AD becomes equal to AS, equilibrium income is established.
+</li>
+
+</ol>
+
+<h3>Example</h3>
+
+<p>
+Suppose an economy has the following Aggregate Demand schedule:
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Income (Y)</th>
+<th>Consumption (C)</th>
+<th>Investment (I)</th>
+<th>AD = C + I</th>
+<th>AS = Y</th>
+</tr>
+
+<tr>
+<td>100</td>
+<td>120</td>
+<td>40</td>
+<td>160</td>
+<td>100</td>
+</tr>
+
+<tr>
+<td>200</td>
+<td>180</td>
+<td>40</td>
+<td>220</td>
+<td>200</td>
+</tr>
+
+<tr>
+<td>300</td>
+<td>240</td>
+<td>40</td>
+<td>280</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>400</td>
+<td>300</td>
+<td>40</td>
+<td>340</td>
+<td>400</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+The exact equilibrium level depends on the complete schedules and the point at which AD becomes equal to AS. The table above illustrates the comparison between planned expenditure and output.
+</p>
+
+<div class="note">
+
+<strong>Remember:</strong> If AD > AS, planned expenditure is greater than output. If AD < AS, planned expenditure is less than output. At AD = AS, the economy is in equilibrium.
+</div>
+
+<h3>Graphical Representation</h3>
+
+<div class="graph-box">
+
+<div class="graph-title">
+Equilibrium through AD–AS Approach
+</div>
+
+<svg width="650" height="400" viewBox="0 0 650 400">
+
+<line x1="80" y1="340" x2="600" y2="340" stroke="#333" stroke-width="2"/>
+
+<line x1="80" y1="340" x2="80" y2="40" stroke="#333" stroke-width="2"/>
+
+<line x1="80" y1="340" x2="580" y2="60"
+stroke="#4f46e5" stroke-width="4"/>
+
+<line x1="80" y1="340" x2="580" y2="340"
+stroke="#aaa" stroke-width="2"/>
+
+<line x1="80" y1="340" x2="560" y2="120"
+stroke="#db2777" stroke-width="4"/>
+
+<circle cx="360" cy="200" r="7" fill="#111"/>
+
+<text x="365" y="195" font-size="16">E</text>
+
+<text x="560" y="80" font-size="16">AS = Y</text>
+
+<text x="520" y="115" font-size="16">AD</text>
+
+<text x="275" y="375" font-size="16">National Income (Y)</text>
+
+<text x="20" y="200" font-size="16"
+transform="rotate(-90 20 200)">
+AD / AS
+</text>
+
+<text x="340" y="225" font-size="15">
+Equilibrium
+</text>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<!-- SAVING INVESTMENT -->
+
+<div class="card">
+
+<span class="badge">8.4</span>
+
+<h2>Equilibrium Income through Saving–Investment Approach</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+Under the saving–investment approach, equilibrium level of income is determined at the level where planned saving is equal to planned investment.
+</div>
+
+<div class="formula">
+
+S = I
+
+</div>
+
+<h3>Why does S = I determine equilibrium?</h3>
+
+<p>
+In a two-sector economy, households divide their income between consumption and saving. Firms undertake investment expenditure.
+</p>
+
+<p>
+If planned saving is greater than planned investment, aggregate demand tends to be insufficient relative to output. If planned investment is greater than planned saving, aggregate demand tends to exceed output.
+</p>
+
+<p>
+Therefore, the point where planned saving equals planned investment represents equilibrium.
+</p>
+
+<h3>Example</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Income</th>
+<th>Saving (S)</th>
+<th>Investment (I)</th>
+<th>Situation</th>
+</tr>
+
+<tr>
+<td>100</td>
+<td>10</td>
+<td>40</td>
+<td>I > S</td>
+</tr>
+
+<tr>
+<td>200</td>
+<td>20</td>
+<td>40</td>
+<td>I > S</td>
+</tr>
+
+<tr>
+<td>300</td>
+<td>40</td>
+<td>40</td>
+<td>S = I</td>
+</tr>
+
+<tr>
+<td>400</td>
+<td>60</td>
+<td>40</td>
+<td>S > I</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+At an income level of ₹300 crore, planned saving equals planned investment. Hence, ₹300 crore is the equilibrium level of income in this illustration.
+</p>
+
+<div class="exam">
+
+<strong>Exam Point:</strong><br>
+
+The saving–investment approach and AD–AS approach are two different ways of explaining the same equilibrium condition in a simple two-sector model.
+</div>
+
+</div>
+
+
+<!-- UNDER EMPLOYMENT -->
+
+<div class="card">
+
+<span class="badge">8.5</span>
+
+<h2>Under-employment Equilibrium</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+Under-employment equilibrium is a situation in which an economy reaches equilibrium at a level of output and employment lower than the full-employment level.
+</div>
+
+<div class="simple">
+
+<strong>Simple Explanation:</strong><br>
+
+An economy may be in balance even when some workers and productive resources are not fully employed. This means equilibrium does not necessarily mean full employment.
+</div>
+
+<h3>Key Idea</h3>
+
+<p>
+According to Keynesian analysis, Aggregate Demand may be insufficient to purchase the output that could be produced at full employment.
+</p>
+
+<p>
+Firms therefore may not find it profitable to employ all available workers and resources. They reduce or maintain production at a lower level, and the economy may settle at an under-employment equilibrium.
+</p>
+
+<div class="formula">
+
+Equilibrium ≠ Always Full Employment
+
+</div>
+
+<h3>Graphical Explanation</h3>
+
+<div class="graph-box">
+
+<div class="graph-title">
+Under-employment Equilibrium
+</div>
+
+<svg width="650" height="400" viewBox="0 0 650 400">
+
+<line x1="80" y1="340" x2="600" y2="340"
+stroke="#333" stroke-width="2"/>
+
+<line x1="80" y1="340" x2="80" y2="40"
+stroke="#333" stroke-width="2"/>
+
+<!-- 45 degree AS -->
+
+<line x1="80" y1="340" x2="580" y2="60"
+stroke="#4f46e5" stroke-width="4"/>
+
+<!-- AD -->
+
+<line x1="80" y1="280" x2="570" y2="120"
+stroke="#db2777" stroke-width="4"/>
+
+<circle cx="290" cy="223" r="7" fill="#111"/>
+
+<line x1="290" y1="223" x2="290" y2="340"
+stroke="#777" stroke-dasharray="6,6"/>
+
+<text x="295" y="215" font-size="16">E</text>
+
+<text x="510" y="90" font-size="16">AS = Y</text>
+
+<text x="500" y="145" font-size="16">AD</text>
+
+<text x="250" y="370" font-size="15">
+Yₑ (Equilibrium Income)
+</text>
+
+<text x="300" y="395" font-size="14">
+Income / Output
+</text>
+
+<text x="20" y="210" font-size="14"
+transform="rotate(-90 20 210)">
+AD / AS
+</text>
+
+</svg>
+
+</div>
+
+<div class="note">
+
+<strong>Important:</strong> The existence of equilibrium only means that planned expenditure equals output. It does not by itself guarantee that all available labour and resources are employed.
+</div>
+
+</div>
+
+
+<!-- FULL EMPLOYMENT -->
+
+<div class="card">
+
+<span class="badge">8.6</span>
+
+<h2>Full Employment Equilibrium</h2>
+
+<div class="definition">
+
+<strong>Meaning:</strong><br>
+
+Full employment refers to a situation in which all those who are willing and able to work at the prevailing conditions can find employment, apart from normal frictional or structural changes associated with a dynamic economy.
+</div>
+
+<p>
+When Aggregate Demand is sufficient to support output corresponding to full employment, the economy can reach equilibrium at the full-employment level.
+</p>
+
+<h3>Under-employment vs Full-employment Equilibrium</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Basis</th>
+<th>Under-employment Equilibrium</th>
+<th>Full-employment Equilibrium</th>
+</tr>
+
+<tr>
+<td>Output</td>
+<td>Below potential/full-employment output</td>
+<td>At full-employment output</td>
+</tr>
+
+<tr>
+<td>Employment</td>
+<td>Some resources remain unemployed</td>
+<td>Available labour is employed subject to normal unemployment</td>
+</tr>
+
+<tr>
+<td>Aggregate Demand</td>
+<td>Insufficient to support full-employment output</td>
+<td>Sufficient to support full-employment output</td>
+</tr>
+
+<tr>
+<td>Key Idea</td>
+<td>Equilibrium with unemployment</td>
+<td>Equilibrium at full employment</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- MULTIPLIER INTRO -->
+
+<div class="card">
+
+<span class="badge">8.7</span>
+
+<h2>Investment Multiplier</h2>
+
+<div class="definition">
+
+<strong>Academic Definition:</strong><br>
+
+The investment multiplier measures the ratio of the change in equilibrium income to the change in investment that causes it.
+</div>
+
+<div class="simple">
+
+<strong>Simple Explanation:</strong><br>
+
+A small increase in investment can cause a much larger increase in national income because one person's expenditure becomes another person's income, a part of which is again spent on consumption.
+</div>
+
+<div class="formula">
+
+K = ΔY / ΔI
+
+</div>
+
+<p>
+Where:
+</p>
+
+<ul>
+
+<li><strong>K</strong> = Investment Multiplier</li>
+
+<li><strong>ΔY</strong> = Change in income</li>
+
+<li><strong>ΔI</strong> = Change in investment</li>
+
+</ul>
+
+<h3>Multiplier in Terms of MPC</h3>
+
+<p>
+In a simple two-sector model:
+</p>
+
+<div class="formula">
+
+K = 1 / (1 − MPC)
+
+</div>
+
+<p>
+Since:
+</p>
+
+<div class="formula">
+
+MPS = 1 − MPC
+
+</div>
+
+<p>
+Therefore:
+</p>
+
+<div class="formula">
+
+K = 1 / MPS
+
+</div>
+
+<div class="exam">
+
+<strong>Three important multiplier formulas:</strong>
+
+<br><br>
+
+K = ΔY / ΔI
+
+<br><br>
+
+K = 1 / (1 − MPC)
+
+<br><br>
+
+K = 1 / MPS
+
+</div>
+
+</div>
+
+
+<!-- MECHANISM -->
+
+<div class="card">
+
+<span class="badge">8.8</span>
+
+<h2>Working or Mechanism of the Multiplier</h2>
+
+<p>
+The multiplier operates because an initial increase in investment creates income for others. Those people spend a part of their additional income on consumption, creating income for another group. This process continues through successive rounds.
+</p>
+
+<h3>Step-by-Step Mechanism</h3>
+
+<ol>
+
+<li>
+An increase in investment creates additional expenditure.
+</li>
+
+<li>
+The expenditure becomes income for producers and workers.
+</li>
+
+<li>
+Recipients spend a part of their additional income on consumption.
+</li>
+
+<li>
+This consumption expenditure becomes income for other producers and workers.
+</li>
+
+<li>
+The new recipients again spend a part of their additional income.
+</li>
+
+<li>
+The process continues, but each successive round becomes smaller because part of every additional income is saved.
+</li>
+
+<li>
+The total increase in income becomes a multiple of the initial increase in investment.
+</li>
+
+</ol>
+
+<div class="formula">
+
+Initial Investment ↑ → Income ↑ → Consumption ↑ → Income ↑ → Further Consumption ↑
+
+</div>
+
+<h3>Numerical Illustration</h3>
+
+<p>
+Suppose the initial investment increases by ₹100 crore and MPC is 0.8.
+</p>
+
+<div class="formula">
+
+K = 1 / (1 − 0.8)
+
+<br><br>
+
+K = 1 / 0.2
+
+<br><br>
+
+K = 5
+
+</div>
+
+<p>
+Therefore:
+</p>
+
+<div class="formula">
+
+ΔY = K × ΔI
+
+<br><br>
+
+ΔY = 5 × ₹100 crore
+
+<br><br>
+
+<strong>ΔY = ₹500 crore</strong>
+
+</div>
+
+<p>
+Thus, an initial investment increase of ₹100 crore generates a total increase in equilibrium income of ₹500 crore, under the assumptions of the simple multiplier model.
+</p>
+
+</div>
+
+
+<!-- MULTIPLIER ROUNDS -->
+
+<div class="card">
+
+<h2>Multiplier Process: Round-by-Round Explanation</h2>
+
+<p>
+Let the initial investment be ₹100 crore and MPC = 0.8.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Round</th>
+<th>Income Created</th>
+<th>Consumption (80%)</th>
+<th>Saving (20%)</th>
+</tr>
+
+<tr>
+<td>Initial investment</td>
+<td>₹100</td>
+<td>₹80</td>
+<td>₹20</td>
+</tr>
+
+<tr>
+<td>Second round</td>
+<td>₹80</td>
+<td>₹64</td>
+<td>₹16</td>
+</tr>
+
+<tr>
+<td>Third round</td>
+<td>₹64</td>
+<td>₹51.2</td>
+<td>₹12.8</td>
+</tr>
+
+<tr>
+<td>Fourth round</td>
+<td>₹51.2</td>
+<td>₹40.96</td>
+<td>₹10.24</td>
+</tr>
+
+<tr>
+<td>Further rounds</td>
+<td>Continue</td>
+<td>Continue</td>
+<td>Continue</td>
+</tr>
+
+</table>
+
+</div>
+
+<p>
+The successive rounds become smaller because each recipient saves a portion of additional income.
+</p>
+
+<p>
+The sum of all these successive increases in income approaches the final multiplier effect.
+</p>
+
+<div class="note">
+
+<strong>Concept:</strong> The multiplier does not mean that every round creates the same amount of income. The rounds become progressively smaller.
+</div>
+
+</div>
+
+
+<!-- MPC MPS RELATIONSHIP -->
+
+<div class="card">
+
+<span class="badge">8.9</span>
+
+<h2>Relationship Between Multiplier, MPC and MPS</h2>
+
+<div class="formula">
+
+K = 1 / (1 − MPC)
+
+</div>
+
+<p>
+This shows that the multiplier has a direct relationship with MPC.
+</p>
+
+<h3>When MPC increases</h3>
+
+<p>
+A larger MPC means people spend a larger proportion of every additional unit of income. Therefore, more consumption expenditure is generated in every round, causing a larger multiplier.
+</p>
+
+<h3>When MPS increases</h3>
+
+<p>
+A larger MPS means people save a larger proportion of additional income. Therefore, less money is passed on to the next round of consumption, reducing the multiplier.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>MPC</th>
+<th>MPS</th>
+<th>Multiplier</th>
+</tr>
+
+<tr>
+<td>0.5</td>
+<td>0.5</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>0.6</td>
+<td>0.4</td>
+<td>2.5</td>
+</tr>
+
+<tr>
+<td>0.75</td>
+<td>0.25</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>0.8</td>
+<td>0.2</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>0.9</td>
+<td>0.1</td>
+<td>10</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="exam">
+
+<strong>Conclusion:</strong><br>
+
+Higher MPC → Higher Multiplier
+
+<br>
+
+Higher MPS → Lower Multiplier
+
+</div>
+
+</div>
+
+
+<!-- CHANGE IN INVESTMENT -->
+
+<div class="card">
+
+<span class="badge">8.10</span>
+
+<h2>Multiplier and Change in Equilibrium Income</h2>
+
+<p>
+The multiplier establishes a relationship between the change in investment and the resulting change in equilibrium income.
+</p>
+
+<div class="formula">
+
+ΔY = K × ΔI
+
+</div>
+
+<h3>Example 1</h3>
+
+<p>
+If the investment increases by ₹50 crore and the multiplier is 4:
+</p>
+
+<div class="formula">
+
+ΔY = 4 × ₹50 crore
+
+<br><br>
+
+<strong>ΔY = ₹200 crore</strong>
+
+</div>
+
+<p>
+Therefore, equilibrium income increases by ₹200 crore.
+</p>
+
+<h3>Example 2</h3>
+
+<p>
+If MPC = 0.75 and investment increases by ₹100 crore:
+</p>
+
+<div class="formula">
+
+K = 1 / (1 − 0.75)
+
+<br><br>
+
+K = 1 / 0.25
+
+<br><br>
+
+K = 4
+
+</div>
+
+<p>
+Therefore:
+</p>
+
+<div class="formula">
+
+ΔY = 4 × ₹100 crore
+
+<br><br>
+
+<strong>ΔY = ₹400 crore</strong>
+
+</div>
+
+</div>
+
+
+<!-- FIND MPC -->
+
+<div class="card">
+
+<h2>Finding MPC from Multiplier</h2>
+
+<p>
+Starting with:
+</p>
+
+<div class="formula">
+
+K = 1 / (1 − MPC)
+
+</div>
+
+<p>
+We can rearrange the equation:
+</p>
+
+<div class="formula">
+
+1 − MPC = 1 / K
+
+<br><br>
+
+MPC = 1 − 1/K
+
+</div>
+
+<h3>Example</h3>
+
+<p>
+If K = 5:
+</p>
+
+<div class="formula">
+
+MPC = 1 − 1/5
+
+<br><br>
+
+MPC = 1 − 0.2
+
+<br><br>
+
+<strong>MPC = 0.8</strong>
+
+</div>
+
+</div>
+
+
+<!-- FIND MPS -->
+
+<div class="card">
+
+<h2>Finding MPS from Multiplier</h2>
+
+<p>
+Since:
+</p>
+
+<div class="formula">
+
+K = 1 / MPS
+
+</div>
+
+<p>
+Therefore:
+</p>
+
+<div class="formula">
+
+MPS = 1 / K
+
+</div>
+
+<h3>Example</h3>
+
+<p>
+If the multiplier is 4:
+</p>
+
+<div class="formula">
+
+MPS = 1 / 4 = 0.25
+
+</div>
+
+<p>
+Therefore:
+</p>
+
+<div class="formula">
+
+<strong>MPS = 0.25 or 25%</strong>
+
+</div>
+
+</div>
+
+
+<!-- INVESTMENT AND EQUILIBRIUM -->
+
+<div class="card">
+
+<span class="badge">8.11</span>
+
+<h2>Investment and Equilibrium Income</h2>
+
+<p>
+Autonomous investment is independent of the current level of national income in the simplified model. A change in autonomous investment shifts Aggregate Demand and changes the equilibrium level of income.
+</p>
+
+<h3>Increase in Investment</h3>
+
+<ol>
+
+<li>Investment increases.</li>
+
+<li>Aggregate Demand increases.</li>
+
+<li>Firms receive higher demand for their output.</li>
+
+<li>Production and income increase.</li>
+
+<li>Higher income causes higher consumption.</li>
+
+<li>Higher consumption generates further income.</li>
+
+<li>The final increase in equilibrium income is greater than the initial increase in investment when the multiplier is greater than one.</li>
+
+</ol>
+
+<div class="formula">
+
+Investment ↑ → AD ↑ → Income ↑ → Consumption ↑ → AD ↑ → Income ↑
+
+</div>
+
+<h3>Decrease in Investment</h3>
+
+<p>
+The multiplier process also works in the opposite direction. A fall in investment can lead to a multiplied decrease in equilibrium income.
+</p>
+
+</div>
+
+
+<!-- EQUILIBRIUM CONDITIONS -->
+
+<div class="card">
+
+<h2>Equilibrium: Important Situations</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Situation</th>
+<th>Meaning</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>AD &gt; AS</td>
+<td>Planned expenditure exceeds output</td>
+<td>Firms tend to increase production</td>
+</tr>
+
+<tr>
+<td>AD &lt; AS</td>
+<td>Planned expenditure is less than output</td>
+<td>Firms tend to reduce production</td>
+</tr>
+
+<tr>
+<td>AD = AS</td>
+<td>Planned expenditure equals output</td>
+<td>Equilibrium</td>
+</tr>
+
+<tr>
+<td>S &gt; I</td>
+<td>Planned saving exceeds planned investment</td>
+<td>Aggregate demand tends to be insufficient</td>
+</tr>
+
+<tr>
+<td>S &lt; I</td>
+<td>Planned investment exceeds planned saving</td>
+<td>Aggregate demand tends to be greater than output</td>
+</tr>
+
+<tr>
+<td>S = I</td>
+<td>Planned saving equals planned investment</td>
+<td>Equilibrium</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- SOLVED PRACTICALS -->
+
+<div class="card">
+
+<span class="badge">SOLVED PRACTICALS</span>
+
+<h2>Numerical Problems with Complete Solutions</h2>
+
+<!-- PRACTICAL 1 -->
+
+<div class="question">
+
+<strong>Question 1.</strong>
+
+If MPC is 0.8, calculate the value of the investment multiplier.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Formula:</strong>
+
+<br>
+
+K = 1 / (1 − MPC)
+
+<br><br>
+
+<strong>Substitution:</strong>
+
+<br>
+
+K = 1 / (1 − 0.8)
+
+<br><br>
+
+K = 1 / 0.2
+
+<br><br>
+
+<strong>Answer: K = 5</strong>
+
+<br><br>
+
+Therefore, the investment multiplier is 5.
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL 2 -->
+
+<div class="question">
+
+<strong>Question 2.</strong>
+
+If MPS is 0.25, calculate the value of the multiplier.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Formula:</strong>
+
+<br>
+
+K = 1 / MPS
+
+<br><br>
+
+K = 1 / 0.25
+
+<br><br>
+
+<strong>K = 4</strong>
+
+<br><br>
+
+Therefore, the investment multiplier is 4.
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL 3 -->
+
+<div class="question">
+
+<strong>Question 3.</strong>
+
+An increase in investment of ₹100 crore leads to an increase in equilibrium income of ₹500 crore. Calculate the multiplier.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Formula:</strong>
+
+<br>
+
+K = ΔY / ΔI
+
+<br><br>
+
+K = ₹500 crore / ₹100 crore
+
+<br><br>
+
+<strong>K = 5</strong>
+
+<br><br>
+
+Therefore, the investment multiplier is 5.
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL 4 -->
+
+<div class="question">
+
+<strong>Question 4.</strong>
+
+If the multiplier is 4 and the increase in investment is ₹75 crore, calculate the increase in equilibrium income.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Formula:</strong>
+
+<br>
+
+ΔY = K × ΔI
+
+<br><br>
+
+<strong>Substitution:</strong>
+
+<br>
+
+ΔY = 4 × ₹75 crore
+
+<br><br>
+
+<strong>ΔY = ₹300 crore</strong>
+
+<br><br>
+
+Therefore, equilibrium income increases by ₹300 crore.
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL 5 -->
+
+<div class="question">
+
+<strong>Question 5.</strong>
+
+If MPC is 0.75 and investment increases by ₹200 crore, calculate the change in equilibrium income.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Step 1: Find multiplier</strong>
+
+<br><br>
+
+K = 1 / (1 − MPC)
+
+<br>
+
+K = 1 / (1 − 0.75)
+
+<br>
+
+K = 1 / 0.25
+
+<br>
+
+K = 4
+
+<br><br>
+
+<strong>Step 2: Find change in income</strong>
+
+<br><br>
+
+ΔY = K × ΔI
+
+<br>
+
+ΔY = 4 × ₹200 crore
+
+<br><br>
+
+<strong>ΔY = ₹800 crore</strong>
+
+<br><br>
+
+Therefore, equilibrium income increases by ₹800 crore.
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL 6 -->
+
+<div class="question">
+
+<strong>Question 6.</strong>
+
+If the multiplier is 5, find MPC and MPS.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Finding MPS:</strong>
+
+<br><br>
+
+K = 1 / MPS
+
+<br>
+
+5 = 1 / MPS
+
+<br>
+
+MPS = 1/5
+
+<br>
+
+<strong>MPS = 0.2</strong>
+
+<br><br>
+
+<strong>Finding MPC:</strong>
+
+<br>
+
+MPC + MPS = 1
+
+<br>
+
+MPC + 0.2 = 1
+
+<br>
+
+<strong>MPC = 0.8</strong>
+
+<br><br>
+
+Therefore:
+
+<br>
+
+<strong>MPC = 0.8 and MPS = 0.2</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL 7 -->
+
+<div class="question">
+
+<strong>Question 7.</strong>
+
+If MPC = 0.6, calculate the change in equilibrium income resulting from an increase in investment of ₹150 crore.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Step 1:</strong>
+
+<br>
+
+K = 1 / (1 − MPC)
+
+<br>
+
+K = 1 / (1 − 0.6)
+
+<br>
+
+K = 1 / 0.4
+
+<br>
+
+K = 2.5
+
+<br><br>
+
+<strong>Step 2:</strong>
+
+<br>
+
+ΔY = K × ΔI
+
+<br>
+
+ΔY = 2.5 × ₹150 crore
+
+<br><br>
+
+<strong>ΔY = ₹375 crore</strong>
+
+<br><br>
+
+Therefore, equilibrium income increases by ₹375 crore.
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- PRACTICAL 8 -->
+
+<div class="question">
+
+<strong>Question 8.</strong>
+
+If MPS is 0.20 and investment increases by ₹80 crore, calculate the change in equilibrium income.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Step 1:</strong>
+
+<br>
+
+K = 1 / MPS
+
+<br>
+
+K = 1 / 0.20
+
+<br>
+
+K = 5
+
+<br><br>
+
+<strong>Step 2:</strong>
+
+<br>
+
+ΔY = K × ΔI
+
+<br>
+
+ΔY = 5 × ₹80 crore
+
+<br><br>
+
+<strong>ΔY = ₹400 crore</strong>
+
+<br><br>
+
+Therefore, equilibrium income increases by ₹400 crore.
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+
+<!-- CONCEPTUAL QUESTIONS -->
+
+<div class="card">
+
+<span class="badge">BOARD QUESTIONS</span>
+
+<h2>Topic-wise Important Questions</h2>
+
+
+<div class="question">
+
+<strong>Question 1.</strong>
+
+What is meant by equilibrium level of income?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+The equilibrium level of income is the level of national income at which planned Aggregate Demand is equal to Aggregate Supply.
+
+In a simple two-sector economy:
+
+<br><br>
+
+<strong>AD = AS</strong>
+
+<br><br>
+
+At this level, producers have no tendency to change the level of output because planned expenditure is equal to the value of output supplied.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 2.</strong>
+
+Explain the condition of equilibrium income using the AD–AS approach.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+In a simple two-sector economy:
+
+<br><br>
+
+AD = C + I
+
+<br><br>
+
+and:
+
+<br>
+
+AS = Y = C + S
+
+<br><br>
+
+At equilibrium:
+
+<br>
+
+<strong>AD = AS</strong>
+
+<br><br>
+
+Therefore:
+
+<br>
+
+C + I = C + S
+
+<br>
+
+I = S
+
+<br><br>
+
+Thus, equilibrium income is determined at the level where planned Aggregate Demand is equal to Aggregate Supply. The same equilibrium can also be expressed through the equality of planned saving and planned investment.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 3.</strong>
+
+Explain the saving-investment approach to determination of equilibrium income.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+According to the saving-investment approach, equilibrium income is determined at the level where planned saving is equal to planned investment.
+
+<br><br>
+
+<strong>S = I</strong>
+
+<br><br>
+
+If planned investment is greater than planned saving, Aggregate Demand tends to exceed output and firms have an incentive to increase production.
+
+If planned saving is greater than planned investment, Aggregate Demand tends to be insufficient relative to output and firms have an incentive to reduce production.
+
+At the point where planned saving equals planned investment, the economy is in equilibrium.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 4.</strong>
+
+What is under-employment equilibrium? Explain.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+Under-employment equilibrium is a situation in which the economy reaches equilibrium at a level of output below the full-employment level.
+
+According to Keynesian analysis, Aggregate Demand may be insufficient to purchase the level of output that could be produced at full employment.
+
+As a result, firms may not employ all available productive resources. Nevertheless, the economy can settle at an equilibrium level because planned Aggregate Demand becomes equal to Aggregate Supply at that lower level of output.
+
+Thus, equilibrium does not necessarily imply full employment.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 5.</strong>
+
+What is investment multiplier? State its formula.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+The investment multiplier measures the ratio of the change in equilibrium income to the change in investment that causes it.
+
+<br><br>
+
+<strong>K = ΔY / ΔI</strong>
+
+<br><br>
+
+In a simple two-sector economy:
+
+<br>
+
+<strong>K = 1 / (1 − MPC)</strong>
+
+<br><br>
+
+Since MPS = 1 − MPC:
+
+<br>
+
+<strong>K = 1 / MPS</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 6.</strong>
+
+Explain the working of investment multiplier.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+The multiplier works through successive rounds of income and consumption.
+
+First, an increase in investment creates additional expenditure and income.
+
+The recipients of this additional income spend a part of it on consumption. This consumption expenditure becomes income for other producers and workers.
+
+The new recipients again spend a part of their additional income, creating further income.
+
+This process continues in successive rounds. Since a part of every additional income is saved, each successive round is smaller than the previous one.
+
+As a result, the total increase in income is several times the initial increase in investment.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 7.</strong>
+
+Explain the relationship between MPC and investment multiplier.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+There is a direct relationship between MPC and the investment multiplier.
+
+<br><br>
+
+<strong>K = 1 / (1 − MPC)</strong>
+
+<br><br>
+
+When MPC increases, people spend a larger proportion of additional income on consumption. Therefore, more income is generated in successive rounds and the multiplier becomes larger.
+
+When MPC decreases, people spend a smaller proportion of additional income and save a larger proportion. Therefore, the multiplier becomes smaller.
+
+Hence:
+
+<br><br>
+
+<strong>Higher MPC → Higher Multiplier</strong>
+
+<br>
+
+<strong>Lower MPC → Lower Multiplier</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 8.</strong>
+
+Explain the relationship between MPS and investment multiplier.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+There is an inverse relationship between MPS and the investment multiplier.
+
+<br><br>
+
+<strong>K = 1 / MPS</strong>
+
+<br><br>
+
+When MPS increases, a larger part of additional income is saved. Consequently, less income is spent in subsequent rounds and the multiplier decreases.
+
+When MPS decreases, a smaller part is saved and a larger part is spent on consumption. This causes a larger multiplier.
+
+Therefore:
+
+<br><br>
+
+<strong>Higher MPS → Lower Multiplier</strong>
+
+<br>
+
+<strong>Lower MPS → Higher Multiplier</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 9.</strong>
+
+Why is the multiplier greater than one?
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+The multiplier is generally greater than one in the simple Keynesian model because an initial increase in investment creates additional income, and a part of this additional income is repeatedly spent on consumption.
+
+Therefore, the final increase in income is greater than the initial increase in investment.
+
+For example, if MPC = 0.8:
+
+<br><br>
+
+K = 1 / (1 − 0.8) = 5
+
+<br><br>
+
+Thus, an initial increase in investment of ₹100 crore can generate a total increase in equilibrium income of ₹500 crore, subject to the assumptions of the model.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 10.</strong>
+
+Distinguish between under-employment equilibrium and full-employment equilibrium.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>Under-employment equilibrium:</strong> The economy is in equilibrium at an output level below the full-employment level. Some productive resources may remain unemployed.
+
+<br><br>
+
+<strong>Full-employment equilibrium:</strong> The economy is in equilibrium at a level of output consistent with full employment.
+
+<br><br>
+
+The important point is that equilibrium itself does not automatically mean full employment.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 11.</strong>
+
+If MPC is 0.8, calculate the investment multiplier.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+K = 1 / (1 − MPC)
+
+<br>
+
+K = 1 / (1 − 0.8)
+
+<br>
+
+K = 1 / 0.2
+
+<br>
+
+<strong>K = 5</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 12.</strong>
+
+If the investment multiplier is 5, calculate MPC and MPS.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+K = 1 / MPS
+
+<br><br>
+
+5 = 1 / MPS
+
+<br>
+
+MPS = 0.2
+
+<br><br>
+
+Since:
+
+<br>
+
+MPC + MPS = 1
+
+<br>
+
+MPC + 0.2 = 1
+
+<br>
+
+<strong>MPC = 0.8</strong>
+
+<br><br>
+
+Therefore:
+
+<br>
+
+<strong>MPC = 0.8 and MPS = 0.2</strong>
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+
+<!-- CASE BASED -->
+
+<div class="card">
+
+<span class="badge">CASE-BASED PRACTICE</span>
+
+<h2>Case-Based Questions</h2>
+
+<div class="question">
+
+<strong>Case:</strong>
+
+Suppose an economy is initially in equilibrium. The government or private sector increases investment expenditure. This creates additional income for producers and workers. The recipients spend a part of their additional income on consumption, generating income for others.
+
+<br><br>
+
+<strong>(a)</strong> What concept is illustrated by this process?
+
+<br>
+
+<strong>(b)</strong> What happens to equilibrium income?
+
+<br>
+
+<strong>(c)</strong> What happens if MPC is high?
+
+<br>
+
+<strong>(d)</strong> State the formula for multiplier in terms of MPC.
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>(a)</strong> The process illustrates the <strong>investment multiplier</strong>.
+
+<br><br>
+
+<strong>(b)</strong> Equilibrium income increases by a multiple of the initial increase in investment.
+
+<br><br>
+
+<strong>(c)</strong> A higher MPC leads to a higher multiplier because a larger part of additional income is spent on consumption.
+
+<br><br>
+
+<strong>(d)</strong>
+
+<br>
+
+K = 1 / (1 − MPC)
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Case:</strong>
+
+An economy has MPC = 0.75. Investment increases by ₹400 crore.
+
+<br><br>
+
+Find:
+
+<br>
+(i) Multiplier
+<br>
+(ii) Change in equilibrium income
+
+<details>
+
+<summary>▶ View Answer</summary>
+
+<div class="answer">
+
+<strong>(i) Multiplier:</strong>
+
+<br><br>
+
+K = 1 / (1 − 0.75)
+
+<br>
+
+K = 1 / 0.25
+
+<br>
+
+<strong>K = 4</strong>
+
+<br><br>
+
+<strong>(ii) Change in equilibrium income:</strong>
+
+<br><br>
+
+ΔY = K × ΔI
+
+<br>
+
+ΔY = 4 × ₹400 crore
+
+<br>
+
+<strong>ΔY = ₹1,600 crore</strong>
+
+<br><br>
+
+Therefore, equilibrium income increases by ₹1,600 crore.
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+
+<!-- IMPORTANT CONCEPTS -->
+
+<div class="card">
+
+<span class="badge">CONCEPT BUILDER</span>
+
+<h2>Important Concept Connections</h2>
+
+<p>
+
+<span class="pill">AD = AS</span>
+
+<span class="pill">S = I</span>
+
+<span class="pill">K = ΔY / ΔI</span>
+
+<span class="pill">K = 1 / MPS</span>
+
+<span class="pill">K = 1 / (1 − MPC)</span>
+
+</p>
+
+<h3>Connection 1: AD and Equilibrium</h3>
+
+<p>
+Equilibrium occurs when planned Aggregate Demand equals Aggregate Supply.
+</p>
+
+<div class="formula">
+AD = AS
+</div>
+
+<h3>Connection 2: Saving and Investment</h3>
+
+<p>
+Since AS = C + S and AD = C + I:
+</p>
+
+<div class="formula">
+C + S = C + I
+<br><br>
+S = I
+</div>
+
+<h3>Connection 3: MPC and MPS</h3>
+
+<div class="formula">
+MPC + MPS = 1
+</div>
+
+<h3>Connection 4: Multiplier</h3>
+
+<div class="formula">
+K = 1 / MPS
+<br><br>
+K = 1 / (1 − MPC)
+</div>
+
+</div>
+
+
+<!-- COMMON MISTAKES -->
+
+<div class="card">
+
+<span class="badge">EXAM ALERT</span>
+
+<h2>Common Mistakes Students Make</h2>
+
+<ul>
+
+<li>
+Do not confuse <strong>equilibrium income</strong> with <strong>full-employment income</strong>.
+</li>
+
+<li>
+Remember that equilibrium condition in the AD–AS approach is <strong>AD = AS</strong>.
+</li>
+
+<li>
+In the saving-investment approach, the equilibrium condition is <strong>S = I</strong>.
+</li>
+
+<li>
+Do not write <strong>K = MPC</strong>. The multiplier is related to MPC through:
+<strong>K = 1 / (1 − MPC)</strong>.
+</li>
+
+<li>
+Do not confuse <strong>MPC</strong> with <strong>MPS</strong>.
+</li>
+
+<li>
+Remember:
+<strong>MPC + MPS = 1</strong>.
+</li>
+
+<li>
+A high MPC produces a high multiplier.
+</li>
+
+<li>
+A high MPS produces a low multiplier.
+</li>
+
+<li>
+The successive rounds of the multiplier become smaller because a part of additional income is saved.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- FORMULA SHEET -->
+
+<div class="card">
+
+<span class="badge">FORMULA BOX</span>
+
+<h2>Important Formulas of the Topic</h2>
+
+<div class="formula">
+
+Equilibrium Condition:
+
+<br>
+
+AD = AS
+
+</div>
+
+<div class="formula">
+
+Two-Sector Aggregate Demand:
+
+<br>
+
+AD = C + I
+
+</div>
+
+<div class="formula">
+
+Aggregate Supply:
+
+<br>
+
+AS = Y = C + S
+
+</div>
+
+<div class="formula">
+
+Equilibrium through Saving-Investment:
+
+<br>
+
+S = I
+
+</div>
+
+<div class="formula">
+
+Investment Multiplier:
+
+<br>
+
+K = ΔY / ΔI
+
+</div>
+
+<div class="formula">
+
+Multiplier in terms of MPC:
+
+<br>
+
+K = 1 / (1 − MPC)
+
+</div>
+
+<div class="formula">
+
+Multiplier in terms of MPS:
+
+<br>
+
+K = 1 / MPS
+
+</div>
+
+<div class="formula">
+
+Change in Income:
+
+<br>
+
+ΔY = K × ΔI
+
+</div>
+
+<div class="formula">
+
+MPC + MPS = 1
+
+</div>
+
+</div>
+
+
+<!-- END -->
+
+<div class="card center">
+
+<h2>📚 Topic Completed</h2>
+
+<p>
+You have now covered the complete conceptual foundation of
+<strong>Income Determination and Multiplier</strong>.
+</p>
+
+<p>
+The next major topic in Unit 3 is:
+</p>
+
+<div class="formula">
+
+Excess Demand and Deficient Demand
+
+</div>
+
+<a href="class12-macroeconomics-unit3.html" class="topic-link">
+← Back to Unit 3
+</a>
+
+</div>
+
+
+<div class="footer">
+
+<p>
+© Edusphere with Satyam | Class 12 Economics
+</p>
+
+<p>
+Unit 3 – Determination of Income and Employment
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
