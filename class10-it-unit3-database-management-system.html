@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unit 3 – Database Management System | Class 10 IT 402</title>
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+    margin:0;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:17px;
+}
+
+.top-nav{
+    max-width:1000px;
+    margin:20px auto 0;
+    padding:0 18px;
+}
+
+.back-button{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.back-button:hover{
+    background:#0f766e;
+}
+
+.container{
+    max-width:1000px;
+    margin:25px auto;
+    padding:0 18px;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 15px rgba(15,23,42,0.07);
+}
+
+.card h2{
+    color:#3730a3;
+    margin-top:0;
+}
+
+.card h3{
+    color:#0f766e;
+}
+
+.definition{
+    background:#f0fdfa;
+    border-left:4px solid #14b8a6;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.simple{
+    background:#eef2ff;
+    border-left:4px solid #6366f1;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.example{
+    background:#f8fafc;
+    border-left:4px solid #64748b;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.tip{
+    background:#ecfeff;
+    border-left:4px solid #0891b2;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.session{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    border-radius:12px;
+    padding:20px;
+    margin:18px 0;
+}
+
+.session h3{
+    margin-top:0;
+    color:#3730a3;
+}
+
+.session a{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.session a:hover{
+    background:#0f766e;
+}
+
+ul{
+    padding-left:25px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.topic{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    padding:14px;
+    border-radius:9px;
+}
+
+.practice-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.button{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    padding:11px 17px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.button:hover{
+    background:#0f766e;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a{
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.nav a:hover{
+    background:#0f766e;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ccfbf1;
+    color:#115e59;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    .nav a{
+        width:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="badge">Class 10 Information Technology – 402</div>
+
+    <h1>Unit 3 – Database Management System</h1>
+
+    <p>Database Management System using LibreOffice Base</p>
+
+</header>
+
+
+<!-- TOP BACK BUTTON -->
+
+<div class="top-nav">
+
+    <a class="back-button"
+       href="class10-it-unit2-electronic-spreadsheet.html">
+       ← Back to Unit 2 – Electronic Spreadsheet
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<h2>Introduction to Database Management System</h2>
+
+<p>
+A database is an organised collection of related information that can be
+stored, managed, searched, and updated efficiently. Databases are used
+in schools, banks, hospitals, offices, shops, libraries, and many other
+organisations.
+</p>
+
+<div class="definition">
+
+<strong>Definition – Database:</strong><br>
+
+A database is an organised collection of related data that can be
+stored and managed so that information can be easily accessed,
+updated, and retrieved.
+
+</div>
+
+<div class="definition">
+
+<strong>Definition – Database Management System (DBMS):</strong><br>
+
+A Database Management System is software that allows users to create,
+store, organise, manage, retrieve, and modify data in a database.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A DBMS is software that helps us store and manage large amounts of
+related information in an organised way.
+
+</div>
+
+<div class="example">
+
+<strong>Example:</strong><br>
+
+A school database may contain information about students such as their
+name, roll number, class, contact details, and marks.
+
+</div>
+
+<h3>LibreOffice Base</h3>
+
+<p>
+<strong>LibreOffice Base</strong> is the database component of the
+LibreOffice suite. It can be used to create and manage databases and
+work with database objects such as tables, queries, forms, and reports.
+</p>
+
+</div>
+
+
+<!-- WHY DATABASE -->
+
+<div class="card">
+
+<h2>Why Do We Need a Database?</h2>
+
+<p>
+When a large amount of information is stored in an unorganised manner,
+finding and updating information can become difficult. A database
+provides a systematic way of managing such information.
+</p>
+
+<ul>
+
+<li>Stores related information in an organised form.</li>
+
+<li>Makes searching for information easier.</li>
+
+<li>Allows information to be updated.</li>
+
+<li>Helps retrieve required information quickly.</li>
+
+<li>Reduces unnecessary duplication of information.</li>
+
+<li>Helps maintain large amounts of data efficiently.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Real-life examples:</strong>
+
+<ul>
+<li>Student records in schools</li>
+<li>Customer records in banks</li>
+<li>Patient records in hospitals</li>
+<li>Books in libraries</li>
+<li>Product and sales records in shops</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- DATABASE OBJECTS -->
+
+<div class="card">
+
+<h2>Database Objects</h2>
+
+<p>
+A database can contain different objects that perform different tasks.
+The major database objects studied in this unit include:
+</p>
+
+<div class="topic-grid">
+
+<div class="topic">
+<strong>Table</strong><br>
+Stores data in rows and columns.
+</div>
+
+<div class="topic">
+<strong>Query</strong><br>
+Used to retrieve specific information from a database.
+</div>
+
+<div class="topic">
+<strong>Form</strong><br>
+Provides a user-friendly way to enter and view data.
+</div>
+
+<div class="topic">
+<strong>Report</strong><br>
+Presents database information in an organised format.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SESSIONS -->
+
+<div class="card">
+
+<h2>Unit 3 Sessions</h2>
+
+<p>
+Study the unit session by session. Each session contains detailed
+concepts, practical procedures, examples, important questions,
+application-based questions, CBSE PYQ-based practice, and MCQs where
+applicable.
+</p>
+
+
+<!-- SESSION 1 -->
+
+<div class="session">
+
+<h3>Session 1 – Introduction to Database and Tables</h3>
+
+<p>
+Learn the fundamentals of databases and DBMS, database objects, tables,
+fields, records, data types, primary keys, and creating and managing
+tables in LibreOffice Base.
+</p>
+
+<ul>
+<li>Database and DBMS</li>
+<li>LibreOffice Base</li>
+<li>Tables, fields, and records</li>
+<li>Data types</li>
+<li>Primary key</li>
+<li>Creating a database</li>
+<li>Creating and modifying tables</li>
+<li>Entering and editing records</li>
+</ul>
+
+<a href="class10-it-unit3-session1-database-tables.html">
+Open Session 1 →
+</a>
+
+</div>
+
+
+<!-- SESSION 2 -->
+
+<div class="session">
+
+<h3>Session 2 – Queries and Data Retrieval</h3>
+
+<p>
+Learn how queries are used to retrieve required information from a
+database and how to create and manage queries in LibreOffice Base.
+</p>
+
+<ul>
+<li>Meaning and purpose of queries</li>
+<li>Creating queries</li>
+<li>Query Wizard</li>
+<li>Query Design</li>
+<li>Selecting fields</li>
+<li>Setting criteria</li>
+<li>Sorting query results</li>
+<li>Running and saving queries</li>
+</ul>
+
+<a href="class10-it-unit3-session2-queries.html">
+Open Session 2 →
+</a>
+
+</div>
+
+
+<!-- SESSION 3 -->
+
+<div class="session">
+
+<h3>Session 3 – Forms and Data Entry</h3>
+
+<p>
+Learn how forms make database operations easier and provide a
+user-friendly method for entering, viewing, and modifying records.
+</p>
+
+<ul>
+<li>Meaning and purpose of forms</li>
+<li>Forms vs tables</li>
+<li>Creating forms</li>
+<li>Form Wizard</li>
+<li>Entering records using forms</li>
+<li>Editing records</li>
+<li>Form controls</li>
+<li>Saving and modifying forms</li>
+</ul>
+
+<a href="class10-it-unit3-session3-forms.html">
+Open Session 3 →
+</a>
+
+</div>
+
+
+<!-- SESSION 4 -->
+
+<div class="session">
+
+<h3>Session 4 – Reports and Database Management</h3>
+
+<p>
+Learn how reports present database information in an organised and
+readable format and understand important database management concepts.
+</p>
+
+<ul>
+<li>Meaning and purpose of reports</li>
+<li>Creating reports</li>
+<li>Report Wizard</li>
+<li>Selecting fields</li>
+<li>Grouping and sorting</li>
+<li>Formatting reports</li>
+<li>Viewing and printing reports</li>
+<li>Basic database management</li>
+</ul>
+
+<a href="class10-it-unit3-session4-reports-management.html">
+Open Session 4 →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- IMPORTANT TOPICS -->
+
+<div class="card">
+
+<h2>Important Topics in This Unit</h2>
+
+<div class="topic-grid">
+
+<div class="topic">Database</div>
+
+<div class="topic">Database Management System</div>
+
+<div class="topic">LibreOffice Base</div>
+
+<div class="topic">Table</div>
+
+<div class="topic">Field</div>
+
+<div class="topic">Record</div>
+
+<div class="topic">Data Types</div>
+
+<div class="topic">Primary Key</div>
+
+<div class="topic">Query</div>
+
+<div class="topic">Form</div>
+
+<div class="topic">Report</div>
+
+<div class="topic">Database Management</div>
+
+</div>
+
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+
+<div class="nav">
+
+<a href="class10-it-unit2-electronic-spreadsheet.html">
+← Unit 2 – Electronic Spreadsheet
+</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="class10-it-unit4-healthy-safe-secure.html">
+Unit 4 →
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>
+<strong>Edusphere with Satyam</strong>
+</p>
+
+<p>
+Class 10 Information Technology (402) |
+Database Management System
+</p>
+
+<p>
+Learn • Practise • Understand
+</p>
+
+</footer>
+
+
+</body>
+</html>
