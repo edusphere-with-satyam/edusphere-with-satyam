@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 4 – Reports and Database Management | Class 10 IT 402</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+        color: #1e293b;
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #3730a3, #4f46e5, #0f766e);
+        color: white;
+        padding: 35px 20px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.1rem;
+    }
+
+    header p {
+        margin: 8px 0 0;
+        font-size: 1rem;
+        opacity: 0.95;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .top-back {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 18px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .top-back:hover {
+        opacity: 0.9;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.96);
+        margin: 20px 0;
+        padding: 24px;
+        border-radius: 14px;
+        border-left: 5px solid #14b8a6;
+        box-shadow: 0 5px 18px rgba(15,23,42,0.08);
+    }
+
+    .card h2 {
+        color: #1e3a5f;
+        margin-top: 0;
+    }
+
+    .card h3 {
+        color: #0f766e;
+        margin-top: 22px;
+    }
+
+    .definition {
+        background: #f0fdfa;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+        border-left: 4px solid #14b8a6;
+    }
+
+    .simple {
+        background: #eff6ff;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+        border-left: 4px solid #3b82f6;
+    }
+
+    .example {
+        background: #f8fafc;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+        border-left: 4px solid #64748b;
+    }
+
+    details {
+        margin: 15px 0;
+        border-radius: 10px;
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+        overflow: hidden;
+    }
+
+    summary {
+        cursor: pointer;
+        padding: 14px 16px;
+        font-weight: bold;
+        color: #1e3a5f;
+        background: #f1f5f9;
+    }
+
+    summary:hover {
+        background: #e2e8f0;
+    }
+
+    .steps {
+        padding: 18px;
+    }
+
+    .steps ol,
+    .steps ul {
+        padding-left: 25px;
+    }
+
+    .steps li {
+        margin-bottom: 9px;
+    }
+
+    .tip {
+        background: #fffbeb;
+        border-left: 4px solid #f59e0b;
+        padding: 14px;
+        border-radius: 8px;
+        margin: 15px 0;
+    }
+
+    .warning {
+        background: #fff7ed;
+        border-left: 4px solid #f97316;
+        padding: 14px;
+        border-radius: 8px;
+        margin: 15px 0;
+    }
+
+    .table-wrap {
+        overflow-x: auto;
+        margin: 15px 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+    }
+
+    th,
+    td {
+        border: 1px solid #cbd5e1;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background: #e0f2fe;
+        color: #1e3a5f;
+    }
+
+    tr:nth-child(even) {
+        background: #f8fafc;
+    }
+
+    .mcq-link {
+        display: inline-block;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .mcq-link:hover {
+        opacity: 0.9;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 30px 0;
+    }
+
+    .nav a {
+        flex: 1;
+        min-width: 180px;
+        text-align: center;
+        padding: 12px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .nav a:hover {
+        opacity: 0.9;
+    }
+
+    footer {
+        background: #172554;
+        color: white;
+        text-align: center;
+        padding: 22px;
+        margin-top: 35px;
+    }
+
+    code {
+        background: #e2e8f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: Consolas, monospace;
+    }
+
+    @media (max-width: 700px) {
+        header h1 {
+            font-size: 1.6rem;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .card {
+            padding: 18px;
+        }
+
+        .nav {
+            flex-direction: column;
+        }
+
+        .nav a {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Session 4 – Reports and Database Management</h1>
+    <p>Class 10 Information Technology (402) | LibreOffice Base</p>
+</header>
+
+<div class="container">
+
+    <a href="class10-it-unit3-database-management-system.html" class="top-back">
+        ← Back to Unit 3
+    </a>
+
+
+    <!-- INTRODUCTION -->
+    <section class="card">
+        <h2>Introduction to Reports and Database Management</h2>
+
+        <p>
+            A database stores information in an organised manner. However, storing
+            information is not enough. We often need to present the stored information
+            in a clear, organised and printable format.
+        </p>
+
+        <p>
+            In LibreOffice Base, a <strong>Report</strong> is used to present information
+            from a database in a properly arranged format. Reports are especially useful
+            when information has to be viewed, shared, printed or presented to others.
+        </p>
+
+        <div class="definition">
+            <strong>Academic Definition:</strong><br>
+            A report is a database object that presents selected information from one
+            or more database sources in a structured and formatted layout suitable
+            for viewing or printing.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Definition:</strong><br>
+            A report is a well-organised presentation of database information that
+            makes the data easy to read, understand and print.
+        </div>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            Suppose the <code>Students</code> table contains the names, classes,
+            sections and marks of students. A report can present this information
+            as a properly formatted student marks report.
+        </div>
+    </section>
+
+
+    <!-- PURPOSE -->
+    <section class="card">
+        <h2>Purpose and Importance of Reports</h2>
+
+        <p>
+            A report converts database information into a meaningful and organised
+            presentation. It can arrange information using headings, grouping,
+            sorting and suitable formatting.
+        </p>
+
+        <h3>Why Are Reports Needed?</h3>
+
+        <ul>
+            <li>To present database information clearly.</li>
+            <li>To organise information in a readable format.</li>
+            <li>To group related records.</li>
+            <li>To sort information according to requirements.</li>
+            <li>To prepare information for printing.</li>
+            <li>To create professional-looking documents from database data.</li>
+            <li>To make large amounts of information easier to understand.</li>
+            <li>To provide a formatted view of database information.</li>
+        </ul>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            A school can create a report containing student names, classes,
+            sections and marks. The report can be sorted by student name or
+            grouped according to class.
+        </div>
+    </section>
+
+
+    <!-- REPORT COMPONENTS -->
+    <section class="card">
+        <h2>Important Parts of a Report</h2>
+
+        <p>
+            A report may contain different elements depending on the purpose for
+            which it is created.
+        </p>
+
+        <h3>Title</h3>
+        <p>
+            The title identifies what the report is about.
+        </p>
+
+        <div class="example">
+            Example: <strong>Student Marks Report</strong>
+        </div>
+
+        <h3>Field Names</h3>
+        <p>
+            Field names identify the type of information displayed in the report.
+        </p>
+
+        <div class="example">
+            Example: Student ID, Name, Class, Section and Marks.
+        </div>
+
+        <h3>Records</h3>
+        <p>
+            Records contain the actual information displayed in the report.
+        </p>
+
+        <h3>Grouping</h3>
+        <p>
+            Grouping arranges records according to a common field or category.
+        </p>
+
+        <div class="example">
+            Example: Students can be grouped according to Class.
+        </div>
+
+        <h3>Sorting</h3>
+        <p>
+            Sorting arranges records in a particular order, such as ascending
+            or descending order.
+        </p>
+
+        <div class="example">
+            Example: Student names can be arranged alphabetically.
+        </div>
+
+        <h3>Report Layout</h3>
+        <p>
+            Layout controls how information is positioned and displayed in the report.
+        </p>
+    </section>
+
+
+    <!-- REPORT WIZARD -->
+    <section class="card">
+        <h2>Report Wizard</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            Report Wizard is a guided tool in LibreOffice Base that helps users
+            create a report by selecting fields, grouping and sorting data,
+            choosing a layout and completing the report creation process.
+        </div>
+
+        <div class="simple">
+            <strong>In simple words:</strong><br>
+            Report Wizard guides the user step by step while creating a report.
+        </div>
+
+        <p>
+            It is useful for beginners because the user does not have to design
+            the complete report manually from the beginning.
+        </p>
+
+        <h3>What Can Be Selected Using the Report Wizard?</h3>
+
+        <ul>
+            <li>Database table or query as the data source.</li>
+            <li>Fields to be displayed.</li>
+            <li>Field labels.</li>
+            <li>Grouping options.</li>
+            <li>Sorting options.</li>
+            <li>Report layout.</li>
+            <li>Orientation.</li>
+            <li>Report title.</li>
+        </ul>
+
+        <details>
+            <summary>🛠️ Practical Steps – Opening the Report Wizard</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open <strong>LibreOffice Base</strong>.</li>
+                    <li>Open your database file.</li>
+                    <li>Wait for the main Base window to appear.</li>
+                    <li>Look at the database objects listed on the left side.</li>
+                    <li>Click <strong>Reports</strong>.</li>
+                    <li>Look for the option to create a report using the wizard.</li>
+                    <li>Click <strong>Use Wizard to Create Report</strong>.</li>
+                    <li>The Report Wizard window will open.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- DATABASE USED -->
+    <section class="card">
+        <h2>Database Used for Practical Work</h2>
+
+        <p>
+            To understand the practical work, we will continue using the same
+            database structure used in the previous sessions.
+        </p>
+
+        <div class="example">
+            <strong>Database:</strong> SchoolDatabase<br><br>
+            <strong>Table:</strong> Students
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Student_ID</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Section</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>Aman</td>
+                    <td>10</td>
+                    <td>A</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Riya</td>
+                    <td>10</td>
+                    <td>A</td>
+                    <td>91</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Rahul</td>
+                    <td>10</td>
+                    <td>B</td>
+                    <td>76</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>Neha</td>
+                    <td>10</td>
+                    <td>B</td>
+                    <td>88</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <!-- CREATING REPORT -->
+    <section class="card">
+        <h2>Creating a Report</h2>
+
+        <p>
+            A report can be created from a table or query. For our practical,
+            we will create a report using the <strong>Students</strong> table.
+        </p>
+
+        <div class="example">
+            <strong>Example Report:</strong> Student Marks Report
+        </div>
+
+        <details>
+            <summary>🛠️ Practical Steps – Creating a Basic Student Report</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open <strong>LibreOffice Base</strong>.</li>
+                    <li>Open <strong>SchoolDatabase</strong>.</li>
+                    <li>Click <strong>Reports</strong> in the database window.</li>
+                    <li>Select <strong>Use Wizard to Create Report</strong>.</li>
+                    <li>Wait for the Report Wizard to open.</li>
+                    <li>Locate the option for selecting the table or query.</li>
+                    <li>Select the <strong>Students</strong> table.</li>
+                    <li>Look at the available fields.</li>
+                    <li>Select the fields that you want to include in the report.</li>
+                    <li>For example, select <strong>Student_ID</strong>.</li>
+                    <li>Select <strong>Name</strong>.</li>
+                    <li>Select <strong>Class</strong>.</li>
+                    <li>Select <strong>Section</strong>.</li>
+                    <li>Select <strong>Marks</strong>.</li>
+                    <li>Move the selected fields to the fields included in the report.</li>
+                    <li>Check that all required fields have been selected.</li>
+                    <li>Proceed to the next step of the wizard.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- SELECTING FIELDS -->
+    <section class="card">
+        <h2>Selecting Fields for a Report</h2>
+
+        <p>
+            A database table may contain many fields, but every report does not
+            require every field. The user should select only the fields that
+            are relevant to the purpose of the report.
+        </p>
+
+        <div class="definition">
+            <strong>Field Selection:</strong><br>
+            Field selection means choosing the required fields from a table or
+            query to be displayed in a report.
+        </div>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            For a student marks report, Student_ID, Name, Class, Section and
+            Marks may be selected.
+        </div>
+
+        <details>
+            <summary>🛠️ Practical Steps – Selecting and Arranging Fields</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open the Report Wizard.</li>
+                    <li>Select the required table or query.</li>
+                    <li>Look at the available fields.</li>
+                    <li>Identify the fields required in the report.</li>
+                    <li>Select the first required field.</li>
+                    <li>Add or move the field into the selected-fields area.</li>
+                    <li>Repeat the process for every required field.</li>
+                    <li>Check the selected fields carefully.</li>
+                    <li>Remove any field that is not required.</li>
+                    <li>Arrange the fields in a logical order if the wizard provides the option.</li>
+                    <li>Continue to the next stage of the wizard.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- GROUPING -->
+    <section class="card">
+        <h2>Grouping Data in a Report</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            Grouping is the process of arranging records together according to
+            the value of a selected field.
+        </div>
+
+        <div class="simple">
+            <strong>Simple Meaning:</strong><br>
+            Grouping puts similar records together.
+        </div>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            If the report is grouped by <strong>Class</strong>, students belonging
+            to the same class can appear together.
+        </div>
+
+        <h3>Why Is Grouping Useful?</h3>
+
+        <ul>
+            <li>It organises related records.</li>
+            <li>It makes large reports easier to read.</li>
+            <li>It separates different categories.</li>
+            <li>It helps users understand relationships among records.</li>
+        </ul>
+
+        <details>
+            <summary>🛠️ Practical Steps – Grouping Students by Class</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Continue from the Report Wizard after selecting the fields.</li>
+                    <li>Move to the grouping stage.</li>
+                    <li>Look for the available fields for grouping.</li>
+                    <li>Select the <strong>Class</strong> field.</li>
+                    <li>Add <strong>Class</strong> as a grouping field.</li>
+                    <li>Check the grouping order.</li>
+                    <li>Make sure the grouping field is correct.</li>
+                    <li>Continue to the next stage of the wizard.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- SORTING -->
+    <section class="card">
+        <h2>Sorting Report Data</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            Sorting is the process of arranging records according to a selected
+            field in ascending or descending order.
+        </div>
+
+        <h3>Ascending Order</h3>
+
+        <p>
+            Ascending order generally arranges text alphabetically from A to Z
+            and numbers from smaller to larger values.
+        </p>
+
+        <h3>Descending Order</h3>
+
+        <p>
+            Descending order generally arranges text alphabetically from Z to A
+            and numbers from larger to smaller values.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            If students are sorted by Name in ascending order, Aman may appear
+            before Neha and Riya.
+        </div>
+
+        <details>
+            <summary>🛠️ Practical Steps – Sorting the Report by Student Name</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Continue in the Report Wizard.</li>
+                    <li>Move to the sorting stage.</li>
+                    <li>Look for the available fields.</li>
+                    <li>Select the <strong>Name</strong> field.</li>
+                    <li>Set the sorting order to <strong>Ascending</strong>.</li>
+                    <li>Check that Name is selected as the sorting field.</li>
+                    <li>Review the sorting settings.</li>
+                    <li>Continue to the next stage.</li>
+                </ol>
+            </div>
+        </details>
+
+        <details>
+            <summary>🛠️ Practical Steps – Sorting Marks from Highest to Lowest</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open the Report Wizard.</li>
+                    <li>Reach the sorting stage.</li>
+                    <li>Select the <strong>Marks</strong> field.</li>
+                    <li>Select <strong>Descending</strong> order.</li>
+                    <li>Check that the sorting field is Marks.</li>
+                    <li>Check that descending order has been selected.</li>
+                    <li>Continue with the report creation process.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- REPORT LAYOUT -->
+    <section class="card">
+        <h2>Report Layout and Formatting</h2>
+
+        <p>
+            Report layout determines how information is arranged on the page.
+            A suitable layout makes the report easier to read.
+        </p>
+
+        <h3>Important Layout Considerations</h3>
+
+        <ul>
+            <li>Page orientation.</li>
+            <li>Arrangement of fields.</li>
+            <li>Report title.</li>
+            <li>Field labels.</li>
+            <li>Spacing between information.</li>
+            <li>Page size.</li>
+            <li>Alignment of information.</li>
+            <li>Overall readability.</li>
+        </ul>
+
+        <h3>Portrait Orientation</h3>
+
+        <p>
+            Portrait orientation displays the page vertically. It is useful when
+            the report contains fewer columns.
+        </p>
+
+        <h3>Landscape Orientation</h3>
+
+        <p>
+            Landscape orientation displays the page horizontally. It can be useful
+            when the report contains many columns.
+        </p>
+
+        <details>
+            <summary>🛠️ Practical Steps – Selecting Report Layout</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Continue in the Report Wizard.</li>
+                    <li>Move to the layout selection stage.</li>
+                    <li>Look at the available layout options.</li>
+                    <li>Select a layout suitable for the number of fields.</li>
+                    <li>Check whether the information is displayed clearly.</li>
+                    <li>Select the appropriate page orientation if available.</li>
+                    <li>Use portrait orientation for a narrow report when suitable.</li>
+                    <li>Use landscape orientation when many columns need to be displayed.</li>
+                    <li>Continue to the next stage of the wizard.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- REPORT TITLE -->
+    <section class="card">
+        <h2>Report Title</h2>
+
+        <p>
+            A report title tells the reader what information is being presented.
+            A meaningful title improves the clarity of the report.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            <strong>Student Marks Report</strong>
+        </div>
+
+        <details>
+            <summary>🛠️ Practical Steps – Giving a Title to the Report</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Continue to the final stage of the Report Wizard.</li>
+                    <li>Locate the field for the report name or title.</li>
+                    <li>Enter a meaningful title.</li>
+                    <li>For this activity, enter <strong>Student Marks Report</strong>.</li>
+                    <li>Check the spelling of the title.</li>
+                    <li>Check that the title correctly describes the report.</li>
+                    <li>Select the appropriate option to create or finish the report.</li>
+                    <li>Wait for LibreOffice Base to create the report.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- VIEWING REPORT -->
+    <section class="card">
+        <h2>Viewing a Report</h2>
+
+        <p>
+            After creating a report, it can be opened from the Reports section
+            of the database.
+        </p>
+
+        <details>
+            <summary>🛠️ Practical Steps – Opening and Viewing a Report</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open the database.</li>
+                    <li>Go to the <strong>Reports</strong> section.</li>
+                    <li>Locate the report that you created.</li>
+                    <li>Identify the correct report by its name.</li>
+                    <li>Open the report.</li>
+                    <li>Wait for the report to load.</li>
+                    <li>Check the report title.</li>
+                    <li>Check the field headings.</li>
+                    <li>Check the displayed records.</li>
+                    <li>Check the grouping, if grouping was applied.</li>
+                    <li>Check the sorting order.</li>
+                    <li>Check whether the report is readable.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- PRINTING -->
+    <section class="card">
+        <h2>Printing a Report</h2>
+
+        <p>
+            Reports are often created for printing. Before printing, the user
+            should check the report carefully.
+        </p>
+
+        <details>
+            <summary>🛠️ Practical Steps – Printing a Report</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open the required report.</li>
+                    <li>Check that the correct report is open.</li>
+                    <li>Review the report before printing.</li>
+                    <li>Check that all required records are present.</li>
+                    <li>Check the report layout.</li>
+                    <li>Check the page orientation.</li>
+                    <li>Check that important information is not cut off.</li>
+                    <li>Open the print command.</li>
+                    <li>Select the required printer.</li>
+                    <li>Specify the required pages if necessary.</li>
+                    <li>Specify the number of copies if required.</li>
+                    <li>Review the print settings.</li>
+                    <li>Start printing.</li>
+                </ol>
+            </div>
+        </details>
+
+        <div class="tip">
+            <strong>Tip:</strong> Always preview or carefully inspect a report
+            before printing it, especially when it contains many columns.
+        </div>
+    </section>
+
+
+    <!-- EDITING REPORT -->
+    <section class="card">
+        <h2>Editing and Updating a Report</h2>
+
+        <p>
+            A report may need to be modified after it has been created. For example,
+            the layout may need to be changed, a field may need to be added or
+            removed, or the title may need to be changed.
+        </p>
+
+        <h3>Possible Changes</h3>
+
+        <ul>
+            <li>Changing the report title.</li>
+            <li>Changing field arrangement.</li>
+            <li>Changing field labels.</li>
+            <li>Changing the layout.</li>
+            <li>Changing formatting.</li>
+            <li>Changing sorting or grouping settings.</li>
+            <li>Adding or removing fields.</li>
+        </ul>
+
+        <details>
+            <summary>🛠️ Practical Steps – Opening a Report for Editing</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open the database.</li>
+                    <li>Go to the <strong>Reports</strong> section.</li>
+                    <li>Locate the report you want to modify.</li>
+                    <li>Select the report.</li>
+                    <li>Choose the available edit/design option.</li>
+                    <li>Open the report in the appropriate editing or design mode.</li>
+                    <li>Identify the part of the report that needs modification.</li>
+                    <li>Make the required change.</li>
+                    <li>Review the changed report.</li>
+                    <li>Save the changes.</li>
+                    <li>Close the editing view.</li>
+                    <li>Open the report again if necessary to verify the result.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- DATA SOURCE -->
+    <section class="card">
+        <h2>Report Data Source</h2>
+
+        <div class="definition">
+            <strong>Definition:</strong><br>
+            A data source is the table or query from which a report obtains the
+            information that it displays.
+        </div>
+
+        <p>
+            A report does not normally store a completely separate copy of the
+            database information simply for presentation. It uses a database
+            source to obtain the information that it presents.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            The <code>Students</code> table can act as the data source for a
+            Student Marks Report.
+        </div>
+
+        <h3>Table as a Data Source</h3>
+
+        <p>
+            A table can be used when the report requires information directly
+            from stored records.
+        </p>
+
+        <h3>Query as a Data Source</h3>
+
+        <p>
+            A query can be used when only selected records or selected fields
+            are required in the report.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            A query can select students whose marks are greater than 80.
+            A report can then present only those selected students.
+        </div>
+    </section>
+
+
+    <!-- REPORT FROM QUERY -->
+    <section class="card">
+        <h2>Creating a Report from a Query</h2>
+
+        <p>
+            A query can filter or select the information required for a report.
+            This is useful when the report should not display every record in
+            the table.
+        </p>
+
+        <div class="example">
+            <strong>Example:</strong><br>
+            Suppose we want a report containing only students who scored more
+            than 80 marks. A query can first select those students, and the
+            report can use the query as its data source.
+        </div>
+
+        <details>
+            <summary>🛠️ Practical Steps – Using a Query as Report Source</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Open the database.</li>
+                    <li>Make sure the required query already exists.</li>
+                    <li>Open the <strong>Reports</strong> section.</li>
+                    <li>Select <strong>Use Wizard to Create Report</strong>.</li>
+                    <li>Open the source selection option.</li>
+                    <li>Choose the required query instead of the table.</li>
+                    <li>Check the fields available from the query.</li>
+                    <li>Select the fields required for the report.</li>
+                    <li>Continue with grouping if required.</li>
+                    <li>Continue with sorting if required.</li>
+                    <li>Select the required layout.</li>
+                    <li>Enter a suitable report title.</li>
+                    <li>Finish the report creation process.</li>
+                    <li>Open the report.</li>
+                    <li>Check that only the records selected by the query are displayed.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- REPORT VS OTHER OBJECTS -->
+    <section class="card">
+        <h2>Tables, Queries, Forms and Reports</h2>
+
+        <p>
+            The four major database objects work together. Understanding their
+            different purposes is essential for working with a database.
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <tr>
+                    <th>Database Object</th>
+                    <th>Main Purpose</th>
+                    <th>Example</th>
+                </tr>
+
+                <tr>
+                    <td><strong>Table</strong></td>
+                    <td>Stores data in fields and records.</td>
+                    <td>Students table</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Query</strong></td>
+                    <td>Searches, filters or retrieves required data.</td>
+                    <td>Students with Marks &gt; 80</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Form</strong></td>
+                    <td>Provides a user-friendly interface for entering and viewing data.</td>
+                    <td>Student Data Entry Form</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Report</strong></td>
+                    <td>Presents database information in a formatted and organised manner.</td>
+                    <td>Student Marks Report</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="example">
+            <strong>Remember the relationship:</strong><br><br>
+            <strong>Table → stores data</strong><br>
+            <strong>Query → retrieves selected data</strong><br>
+            <strong>Form → enters and views data conveniently</strong><br>
+            <strong>Report → presents data in a formatted way</strong>
+        </div>
+    </section>
+
+
+    <!-- COMPLETE DATABASE WORKFLOW -->
+    <section class="card">
+        <h2>Complete Database Workflow</h2>
+
+        <p>
+            The complete database workflow helps us understand how the objects
+            work together.
+        </p>
+
+        <div class="example">
+            <strong>Example: Student Database</strong><br><br>
+
+            <strong>Step 1 – Table:</strong>
+            Student information is stored in the Students table.<br><br>
+
+            <strong>Step 2 – Query:</strong>
+            A query selects students according to a condition, such as Marks &gt; 80.<br><br>
+
+            <strong>Step 3 – Form:</strong>
+            A form can be used to enter or edit student information easily.<br><br>
+
+            <strong>Step 4 – Report:</strong>
+            A report presents the selected information in an organised format.
+        </div>
+
+        <p>
+            Therefore, tables, queries, forms and reports are not completely
+            separate concepts. They perform different functions within the
+            same database system.
+        </p>
+    </section>
+
+
+    <!-- COMPLETE PRACTICAL -->
+    <section class="card">
+        <h2>Complete Practical Activity – Student Marks Report</h2>
+
+        <p>
+            In this activity, you will create a formatted report using the
+            <code>Students</code> table.
+        </p>
+
+        <div class="example">
+            <strong>Database:</strong> SchoolDatabase<br>
+            <strong>Table:</strong> Students<br>
+            <strong>Report Name:</strong> Student Marks Report<br>
+            <strong>Fields:</strong> Student_ID, Name, Class, Section, Marks<br>
+            <strong>Grouping:</strong> Class<br>
+            <strong>Sorting:</strong> Name – Ascending
+        </div>
+
+        <details>
+            <summary>🛠️ Complete Practical Steps – Creating Student Marks Report</summary>
+
+            <div class="steps">
+                <ol>
+                    <li>Start the computer.</li>
+                    <li>Open LibreOffice.</li>
+                    <li>Open LibreOffice Base.</li>
+                    <li>Open the <strong>SchoolDatabase</strong> database.</li>
+                    <li>Wait for the database window to open.</li>
+                    <li>Locate the database objects.</li>
+                    <li>Click <strong>Reports</strong>.</li>
+                    <li>Select <strong>Use Wizard to Create Report</strong>.</li>
+                    <li>Wait for the Report Wizard to open.</li>
+                    <li>Select the <strong>Students</strong> table as the data source.</li>
+                    <li>Check the available fields.</li>
+                    <li>Select <strong>Student_ID</strong>.</li>
+                    <li>Add Student_ID to the selected fields.</li>
+                    <li>Select <strong>Name</strong>.</li>
+                    <li>Add Name to the selected fields.</li>
+                    <li>Select <strong>Class</strong>.</li>
+                    <li>Add Class to the selected fields.</li>
+                    <li>Select <strong>Section</strong>.</li>
+                    <li>Add Section to the selected fields.</li>
+                    <li>Select <strong>Marks</strong>.</li>
+                    <li>Add Marks to the selected fields.</li>
+                    <li>Check that all five required fields are selected.</li>
+                    <li>Proceed to the grouping section.</li>
+                    <li>Select <strong>Class</strong> as the grouping field.</li>
+                    <li>Check the grouping selection.</li>
+                    <li>Proceed to the sorting section.</li>
+                    <li>Select <strong>Name</strong> as the sorting field.</li>
+                    <li>Select <strong>Ascending</strong> order.</li>
+                    <li>Check the sorting selection.</li>
+                    <li>Proceed to the layout section.</li>
+                    <li>Select a suitable report layout.</li>
+                    <li>Select a suitable orientation.</li>
+                    <li>Check that the selected layout can display all required fields.</li>
+                    <li>Proceed to the final stage.</li>
+                    <li>Enter the report title as <strong>Student Marks Report</strong>.</li>
+                    <li>Check the report title.</li>
+                    <li>Check the selected data source.</li>
+                    <li>Check the selected fields.</li>
+                    <li>Check the grouping.</li>
+                    <li>Check the sorting.</li>
+                    <li>Check the layout.</li>
+                    <li>Finish the Report Wizard.</li>
+                    <li>Wait for LibreOffice Base to create the report.</li>
+                    <li>Open the newly created report.</li>
+                    <li>Check the title.</li>
+                    <li>Check the field headings.</li>
+                    <li>Check the student records.</li>
+                    <li>Check the grouping.</li>
+                    <li>Check the sorting order.</li>
+                    <li>Check the overall appearance.</li>
+                    <li>Save the database if required.</li>
+                </ol>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- COMMON MISTAKES -->
+    <section class="card">
+        <h2>Common Practical Mistakes</h2>
+
+        <ul>
+            <li>Selecting the wrong table or query as the data source.</li>
+            <li>Forgetting to select an important field.</li>
+            <li>Selecting unnecessary fields.</li>
+            <li>Choosing the wrong grouping field.</li>
+            <li>Using the wrong sorting order.</li>
+            <li>Not checking the report layout.</li>
+            <li>Using portrait orientation when too many columns are required.</li>
+            <li>Giving the report an unclear name.</li>
+            <li>Not checking the final report after creation.</li>
+            <li>Printing without checking the layout.</li>
+            <li>Editing a report without saving the changes.</li>
+            <li>Confusing a report with a table or form.</li>
+        </ul>
+
+        <div class="warning">
+            <strong>Important:</strong>
+            A report is mainly used for presenting database information.
+            It should not be confused with a form, whose main purpose is
+            convenient data entry and viewing.
+        </div>
+    </section>
+
+
+    <!-- IMPORTANT QUESTIONS -->
+    <section class="card">
+        <h2>Important Questions</h2>
+
+        <details>
+            <summary>Q1. What is a report?</summary>
+            <div class="steps">
+                <p>
+                    A report is a database object used to present selected
+                    database information in a structured and formatted manner
+                    suitable for viewing or printing.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q2. What is the purpose of a report?</summary>
+            <div class="steps">
+                <p>
+                    The purpose of a report is to present database information
+                    clearly, organise records, and provide a formatted view
+                    suitable for reading, sharing or printing.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q3. What is Report Wizard?</summary>
+            <div class="steps">
+                <p>
+                    Report Wizard is a guided tool in LibreOffice Base that
+                    helps users create reports by selecting fields, grouping,
+                    sorting, layout and other report settings step by step.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q4. What is grouping in a report?</summary>
+            <div class="steps">
+                <p>
+                    Grouping is the process of arranging records together
+                    according to a common field or category.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q5. What is sorting?</summary>
+            <div class="steps">
+                <p>
+                    Sorting is the process of arranging records according to
+                    a selected field in ascending or descending order.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q6. What is the difference between ascending and descending order?</summary>
+            <div class="steps">
+                <p>
+                    Ascending order generally arranges text from A to Z and
+                    numbers from smaller to larger values. Descending order
+                    generally arranges text from Z to A and numbers from
+                    larger to smaller values.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q7. Can a query be used as a data source for a report?</summary>
+            <div class="steps">
+                <p>
+                    Yes. A query can be used as a data source when the report
+                    needs selected records or selected fields instead of all
+                    information from a table.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q8. Differentiate between a form and a report.</summary>
+            <div class="steps">
+                <p>
+                    A form provides a user-friendly interface for entering,
+                    viewing and editing database records, whereas a report
+                    presents database information in an organised and formatted
+                    layout mainly for viewing and printing.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q9. What is the importance of report layout?</summary>
+            <div class="steps">
+                <p>
+                    Report layout determines how information is arranged on
+                    the page. A suitable layout improves readability and
+                    presentation.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q10. Why should a report be checked before printing?</summary>
+            <div class="steps">
+                <p>
+                    A report should be checked before printing to ensure that
+                    all required information is present, properly arranged,
+                    readable and not cut off due to unsuitable layout or
+                    page settings.
+                </p>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- APPLICATION BASED -->
+    <section class="card">
+        <h2>Application-Based Questions</h2>
+
+        <details>
+            <summary>Q1. A school has a Students table containing thousands of records. The principal wants a printed list of students grouped according to class. Which database object should be used?</summary>
+            <div class="steps">
+                <p>
+                    A <strong>Report</strong> should be used because it can present
+                    database information in a formatted layout and group records
+                    according to Class.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q2. A teacher wants a list containing only students who scored more than 80 marks and wants to present it in a formatted document. What can be used?</summary>
+            <div class="steps">
+                <p>
+                    A <strong>query</strong> can first select students whose marks
+                    are greater than 80, and a <strong>report</strong> can then
+                    present the selected information.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q3. A report contains many columns and the information is being cut off on the page. What should the user consider changing?</summary>
+            <div class="steps">
+                <p>
+                    The user should review the report layout and consider using
+                    a suitable orientation such as landscape, if appropriate,
+                    so that the columns can fit more effectively.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q4. A student has created a report but the names are not arranged alphabetically. What setting should be checked?</summary>
+            <div class="steps">
+                <p>
+                    The <strong>sorting</strong> setting should be checked.
+                    The Name field should be selected with ascending order
+                    if alphabetical A-to-Z arrangement is required.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q5. A database administrator wants users to enter student data easily. Should a report be used for this purpose?</summary>
+            <div class="steps">
+                <p>
+                    No. A <strong>form</strong> is more suitable because forms
+                    provide a user-friendly interface for entering and editing
+                    database information.
+                </p>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- PYQ -->
+    <section class="card">
+        <h2>CBSE PYQ-Based Practice</h2>
+
+        <p>
+            The following questions are provided as <strong>CBSE PYQ-Based
+            Practice Questions</strong> for examination preparation.
+        </p>
+
+        <details>
+            <summary>Q1. What is a report in a database?</summary>
+            <div class="steps">
+                <p>
+                    A report is a database object used to present database
+                    information in a structured and formatted manner.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q2. What is the use of Report Wizard?</summary>
+            <div class="steps">
+                <p>
+                    Report Wizard provides a step-by-step method for creating
+                    a report by selecting fields, grouping, sorting and layout
+                    options.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q3. Differentiate between a form and a report.</summary>
+            <div class="steps">
+                <p>
+                    A form is mainly used for convenient data entry, viewing
+                    and editing, while a report is mainly used for presenting
+                    database information in a formatted form.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q4. What is grouping in a report?</summary>
+            <div class="steps">
+                <p>
+                    Grouping arranges records together according to a common
+                    field or category.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q5. Why is sorting useful in a report?</summary>
+            <div class="steps">
+                <p>
+                    Sorting arranges records in a desired order, making the
+                    report easier to read and understand.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Q6. Explain the role of table, query, form and report in a database.</summary>
+            <div class="steps">
+                <p>
+                    A table stores data, a query retrieves selected data,
+                    a form provides an interface for entering and viewing
+                    data, and a report presents data in a formatted manner.
+                </p>
+            </div>
+        </details>
+    </section>
+
+
+    <!-- MCQ LINK ONLY -->
+    <section class="card">
+        <h2>Practice MCQs</h2>
+
+        <p>
+            Test your understanding of this session with the separate
+            MCQ practice page.
+        </p>
+
+        <a href="class10-it-unit3-session4-mcqs.html" class="mcq-link">
+            📝 Open Session 4 MCQs
+        </a>
+    </section>
+
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+
+        <a href="class10-it-unit3-session3-forms.html">
+            ← Session 3 – Forms and Data Entry
+        </a>
+
+        <a href="class10-it-unit3-database-management-system.html">
+            🏠 Unit 3 – Database Management System
+        </a>
+
+        <a href="index.html">
+            🏡 Class 10 IT Home
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p><strong>Edusphere with Satyam</strong></p>
+    <p>Class 10 Information Technology (402)</p>
+    <p>Learn • Practise • Understand • Grow</p>
+</footer>
+
+</body>
+</html>
