@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 2 – Workplace Safety Hazards | Class 10 IT 402</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+        color: #1e293b;
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #3730a3, #4f46e5, #0f766e);
+        color: white;
+        padding: 38px 20px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.15rem;
+    }
+
+    header p {
+        margin: 10px 0 0;
+        font-size: 1rem;
+        opacity: 0.95;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .top-back {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 18px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .top-back:hover {
+        opacity: 0.9;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.96);
+        margin: 20px 0;
+        padding: 25px;
+        border-radius: 14px;
+        border-left: 5px solid #14b8a6;
+        box-shadow: 0 5px 18px rgba(15,23,42,0.08);
+    }
+
+    .card h2 {
+        margin-top: 0;
+        color: #1e3a5f;
+    }
+
+    .card h3 {
+        color: #0f766e;
+    }
+
+    .definition {
+        background: #f0fdfa;
+        border-left: 4px solid #14b8a6;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .simple {
+        background: #eff6ff;
+        border-left: 4px solid #3b82f6;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    details {
+        background: #f8fafc;
+        border: 1px solid #dbeafe;
+        border-radius: 10px;
+        padding: 12px 16px;
+        margin: 15px 0;
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: #1e3a5f;
+    }
+
+    details p,
+    details ul {
+        margin-bottom: 8px;
+    }
+
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        border: 1px solid #cbd5e1;
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .comparison-table th {
+        background: #e2e8f0;
+        color: #1e3a5f;
+    }
+
+    .hazard-box {
+        background: #fff7ed;
+        border-left: 4px solid #f59e0b;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .question {
+        background: #ffffff;
+        border: 1px solid #dbeafe;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .question strong {
+        color: #1e3a5f;
+    }
+
+    .mcq-box {
+        background: #f8fafc;
+        border-left: 4px solid #64748b;
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 17px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 8px;
+    }
+
+    .button:hover {
+        opacity: 0.9;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 30px 0;
+    }
+
+    .nav a {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        padding: 12px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .nav a:hover {
+        opacity: 0.9;
+    }
+
+    footer {
+        background: #172554;
+        color: white;
+        text-align: center;
+        padding: 24px;
+        margin-top: 35px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    @media (max-width: 700px) {
+
+        header h1 {
+            font-size: 1.65rem;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .card {
+            padding: 18px;
+        }
+
+        .comparison-table {
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 8px;
+        }
+
+        .nav {
+            flex-direction: column;
+        }
+
+        .nav a {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Session 2 – Workplace Safety Hazards</h1>
+    <p>Class 10 Information Technology (402)</p>
+</header>
+
+
+<div class="container">
+
+    <!-- TOP BACK BUTTON -->
+    <a href="class10-it-unit4-healthy-safe-secure.html" class="top-back">
+        ← Back to Unit 4
+    </a>
+
+
+    <!-- INTRODUCTION -->
+    <section class="card">
+
+        <h2>Introduction to Workplace Hazards</h2>
+
+        <p>
+            A workplace should be organised in such a way that people can
+            perform their duties without being unnecessarily exposed to unsafe
+            conditions. However, different workplaces may contain situations
+            that can cause accidents, injuries, damage or health problems.
+        </p>
+
+        <p>
+            Such potentially harmful conditions or sources are known as
+            workplace hazards. Identifying hazards is an important part of
+            maintaining a safe working environment.
+        </p>
+
+        <div class="definition">
+
+            <strong>Formal Definition:</strong>
+
+            <p>
+                A workplace hazard is a condition, activity, object or source
+                that has the potential to cause injury, illness, damage or loss
+                in a workplace.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                A hazard is something at the workplace that can potentially
+                cause harm or create an unsafe situation.
+            </p>
+
+        </div>
+
+        <details>
+
+            <summary>📌 Example – Workplace Hazard</summary>
+
+            <p>
+                Suppose a workplace has a damaged electrical cable lying in an
+                area where people work.
+            </p>
+
+            <p>
+                The damaged cable is a potential hazard because it can create
+                an unsafe electrical condition. It should be reported and
+                dealt with according to the workplace's safety procedures.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- HAZARD VS RISK -->
+    <section class="card">
+
+        <h2>Hazard and Risk</h2>
+
+        <p>
+            The terms <strong>hazard</strong> and <strong>risk</strong> are
+            related but they are not exactly the same.
+        </p>
+
+        <div class="definition">
+
+            <strong>Hazard:</strong>
+
+            <p>
+                A source or condition that has the potential to cause harm.
+            </p>
+
+        </div>
+
+        <div class="definition">
+
+            <strong>Risk:</strong>
+
+            <p>
+                The possibility that a hazard may cause harm under particular
+                circumstances.
+            </p>
+
+        </div>
+
+        <table class="comparison-table">
+
+            <tr>
+                <th>Hazard</th>
+                <th>Risk</th>
+            </tr>
+
+            <tr>
+                <td>
+                    A source or condition that can potentially cause harm.
+                </td>
+
+                <td>
+                    The possibility of harm occurring because of that hazard.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Example: A wet floor.
+                </td>
+
+                <td>
+                    Example: A person may slip and fall because of the wet floor.
+                </td>
+            </tr>
+
+        </table>
+
+        <details>
+
+            <summary>📌 Example – Understanding Hazard and Risk</summary>
+
+            <p>
+                A wet floor is the <strong>hazard</strong>.
+            </p>
+
+            <p>
+                The possibility that someone may slip and fall because of the
+                wet floor represents the associated <strong>risk</strong>.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- WORKPLACE SAFETY HAZARDS -->
+    <section class="card">
+
+        <h2>Workplace Safety Hazards</h2>
+
+        <p>
+            Workplace safety hazards can arise from the physical environment,
+            equipment, electrical systems, workplace activities, fire-related
+            conditions and other sources.
+        </p>
+
+        <p>
+            Recognising these hazards helps employees and organisations take
+            appropriate preventive measures.
+        </p>
+
+        <h3>Common Categories Covered in This Unit</h3>
+
+        <ul>
+            <li>Physical Hazards</li>
+            <li>Falling from Heights</li>
+            <li>Slipping and Tripping</li>
+            <li>Electrical Hazards</li>
+            <li>Fire Hazards</li>
+            <li>Health Hazards</li>
+        </ul>
+
+        <div class="hazard-box">
+
+            <strong>Important:</strong>
+
+            <p>
+                Different workplaces may have different hazards. For example,
+                an office, factory, laboratory and construction site may not
+                have the same safety risks.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHYSICAL HAZARDS -->
+    <section class="card">
+
+        <h2>Physical Hazards</h2>
+
+        <p>
+            Physical hazards arise from aspects of the physical work environment
+            that may cause injury or harm. These may include floors, stairs,
+            work areas, equipment, machinery and other physical conditions.
+        </p>
+
+        <div class="definition">
+
+            <strong>Formal Definition:</strong>
+
+            <p>
+                Physical hazards are hazards arising from physical conditions,
+                objects, equipment or activities in the workplace that may
+                cause injury or harm.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                Physical hazards are unsafe physical conditions or objects in
+                the workplace that can cause accidents or injuries.
+            </p>
+
+        </div>
+
+        <h3>Examples of Physical Hazards</h3>
+
+        <ul>
+            <li>Uneven floors</li>
+            <li>Damaged stairs</li>
+            <li>Objects placed in walking areas</li>
+            <li>Unsafe workplace arrangements</li>
+            <li>Improperly maintained equipment</li>
+            <li>Objects that may fall from an unsafe position</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Physical Hazard</summary>
+
+            <p>
+                If boxes are placed in a narrow passage where people regularly
+                walk, they may create an obstruction.
+            </p>
+
+            <p>
+                The obstruction is a physical hazard because it can interfere
+                with safe movement through the workplace.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- FALLING FROM HEIGHTS -->
+    <section class="card">
+
+        <h2>Falling from Heights</h2>
+
+        <p>
+            Working at a height can create a serious workplace hazard when
+            appropriate precautions are not followed. Falls may occur because
+            of unsafe ladders, faulty structures, poor working conditions or
+            loss of balance.
+        </p>
+
+        <div class="definition">
+
+            <strong>Definition:</strong>
+
+            <p>
+                A fall-from-height hazard occurs when a person may fall from
+                an elevated position such as a ladder, platform or other
+                raised work area.
+            </p>
+
+        </div>
+
+        <h3>Possible Causes</h3>
+
+        <ul>
+            <li>Unsafe or damaged ladders</li>
+            <li>Unsafe elevated work areas</li>
+            <li>Loss of balance</li>
+            <li>Poor visibility or lighting</li>
+            <li>Unsafe working practices</li>
+            <li>Failure to follow applicable safety procedures</li>
+        </ul>
+
+        <h3>Basic Prevention</h3>
+
+        <ul>
+            <li>Use appropriate equipment correctly.</li>
+            <li>Follow workplace safety procedures.</li>
+            <li>Keep working areas properly maintained.</li>
+            <li>Ensure suitable lighting where required.</li>
+            <li>Report damaged equipment or unsafe conditions.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Fall Hazard</summary>
+
+            <p>
+                A damaged ladder is being used in a workplace even though
+                employees know that it is not in proper condition.
+            </p>
+
+            <p>
+                The damaged ladder represents a potential fall hazard.
+                Employees should not ignore the problem; it should be reported
+                and handled according to the workplace safety procedure.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- SLIPPING AND TRIPPING -->
+    <section class="card">
+
+        <h2>Slipping and Tripping</h2>
+
+        <p>
+            Slips and trips are common types of workplace hazards. They can
+            occur when a person loses balance because of the condition of the
+            floor, an obstruction or another unsafe situation.
+        </p>
+
+        <div class="definition">
+
+            <strong>Slip:</strong>
+
+            <p>
+                A slip occurs when a person's foot loses proper contact or grip
+                with a walking surface, causing loss of balance.
+            </p>
+
+        </div>
+
+        <div class="definition">
+
+            <strong>Trip:</strong>
+
+            <p>
+                A trip occurs when a person's foot or movement is obstructed,
+                causing loss of balance.
+            </p>
+
+        </div>
+
+        <h3>Common Causes</h3>
+
+        <ul>
+            <li>Wet or slippery floors</li>
+            <li>Spilled liquids</li>
+            <li>Objects left in walking areas</li>
+            <li>Uneven surfaces</li>
+            <li>Poor lighting</li>
+            <li>Untidy work areas</li>
+        </ul>
+
+        <h3>Prevention</h3>
+
+        <ul>
+            <li>Keep walking areas clear.</li>
+            <li>Clean spills promptly according to workplace procedures.</li>
+            <li>Maintain suitable lighting.</li>
+            <li>Repair damaged surfaces when required.</li>
+            <li>Keep workplace materials properly arranged.</li>
+            <li>Report unsafe conditions.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Slip Hazard</summary>
+
+            <p>
+                Water has been spilled on a workplace floor and people are
+                walking through the same area.
+            </p>
+
+            <p>
+                The wet surface can create a slipping hazard. The situation
+                should be addressed according to workplace safety procedures
+                and appropriate warning measures should be used where required.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>📌 Example – Trip Hazard</summary>
+
+            <p>
+                A cable has been left across a walking path.
+            </p>
+
+            <p>
+                The cable can obstruct movement and create a tripping hazard.
+                It should be arranged safely according to workplace procedures.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- ELECTRICAL HAZARDS -->
+    <section class="card">
+
+        <h2>Electrical Hazards</h2>
+
+        <p>
+            Electricity is widely used in modern workplaces. Electrical
+            equipment and systems can become hazardous when they are damaged,
+            improperly maintained or used incorrectly.
+        </p>
+
+        <div class="definition">
+
+            <strong>Formal Definition:</strong>
+
+            <p>
+                Electrical hazards are unsafe conditions involving electrical
+                equipment, wiring, power sources or electrical systems that may
+                cause injury, fire, equipment damage or other harm.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                An electrical hazard is an unsafe electrical condition that
+                can potentially cause harm.
+            </p>
+
+        </div>
+
+        <h3>Common Causes</h3>
+
+        <ul>
+            <li>Damaged wires or cables</li>
+            <li>Faulty electrical equipment</li>
+            <li>Improper use of electrical devices</li>
+            <li>Overloaded electrical connections</li>
+            <li>Improper maintenance</li>
+            <li>Ignoring electrical safety instructions</li>
+        </ul>
+
+        <h3>Basic Prevention</h3>
+
+        <ul>
+            <li>Use electrical equipment according to instructions.</li>
+            <li>Report damaged cables or equipment.</li>
+            <li>Do not ignore electrical warning signs.</li>
+            <li>Ensure equipment is maintained appropriately.</li>
+            <li>Follow authorised workplace procedures.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Electrical Hazard</summary>
+
+            <p>
+                An employee notices that the outer covering of an electrical
+                cable is damaged.
+            </p>
+
+            <p>
+                The damaged cable represents a potential electrical hazard.
+                The employee should report it and follow the organisation's
+                electrical safety procedure rather than ignoring the problem.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- FIRE HAZARDS -->
+    <section class="card">
+
+        <h2>Fire Hazards</h2>
+
+        <p>
+            A fire hazard is any condition or source in a workplace that may
+            contribute to the occurrence or spread of fire. Fire hazards may
+            arise from electrical equipment, combustible materials, unsafe
+            practices or other workplace conditions.
+        </p>
+
+        <div class="definition">
+
+            <strong>Formal Definition:</strong>
+
+            <p>
+                A fire hazard is a condition, material, equipment or activity
+                that has the potential to cause or contribute to a workplace
+                fire.
+            </p>
+
+        </div>
+
+        <h3>Common Sources of Fire Hazards</h3>
+
+        <ul>
+            <li>Faulty electrical equipment</li>
+            <li>Improperly maintained electrical systems</li>
+            <li>Unsafe storage of combustible materials</li>
+            <li>Careless workplace practices</li>
+            <li>Blocked or poorly maintained emergency arrangements</li>
+        </ul>
+
+        <h3>Basic Prevention</h3>
+
+        <ul>
+            <li>Follow workplace fire-safety procedures.</li>
+            <li>Keep work areas organised.</li>
+            <li>Report faulty equipment.</li>
+            <li>Store materials appropriately.</li>
+            <li>Keep emergency routes accessible.</li>
+            <li>Follow instructions during emergencies.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Fire Hazard</summary>
+
+            <p>
+                A workplace has faulty electrical equipment that is known to
+                have a problem but continues to be used without following the
+                appropriate safety procedure.
+            </p>
+
+            <p>
+                Faulty electrical equipment can contribute to a fire hazard.
+                The problem should be reported and dealt with according to
+                workplace procedures.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- HEALTH HAZARDS -->
+    <section class="card">
+
+        <h2>Health Hazards</h2>
+
+        <p>
+            Some workplace conditions may affect a person's health over time
+            rather than causing an immediate accident. Such conditions are
+            considered health hazards.
+        </p>
+
+        <div class="definition">
+
+            <strong>Formal Definition:</strong>
+
+            <p>
+                Health hazards are workplace conditions, substances, activities
+                or environmental factors that may adversely affect the health
+                or well-being of workers.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                A health hazard is something at work that may negatively affect
+                a person's health.
+            </p>
+
+        </div>
+
+        <h3>Examples of Workplace Health Hazards</h3>
+
+        <ul>
+            <li>Poor workplace cleanliness</li>
+            <li>Inadequate ventilation</li>
+            <li>Unsuitable working conditions</li>
+            <li>Exposure to harmful workplace conditions</li>
+            <li>Poorly maintained work environments</li>
+        </ul>
+
+        <h3>Basic Prevention</h3>
+
+        <ul>
+            <li>Maintain workplace cleanliness.</li>
+            <li>Follow health and safety procedures.</li>
+            <li>Report unhealthy workplace conditions.</li>
+            <li>Maintain suitable workplace conditions.</li>
+            <li>Follow appropriate instructions and precautions.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Health Hazard</summary>
+
+            <p>
+                A workplace has poor ventilation and the air does not circulate
+                properly.
+            </p>
+
+            <p>
+                Poor ventilation may contribute to an unhealthy working
+                environment. The condition should be reported and addressed
+                according to appropriate workplace procedures.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- HAZARD IDENTIFICATION -->
+    <section class="card">
+
+        <h2>Identifying Workplace Hazards</h2>
+
+        <p>
+            Hazard identification means recognising conditions, objects,
+            activities or situations that may cause harm in a workplace.
+            Identifying hazards is an important step in maintaining workplace
+            safety.
+        </p>
+
+        <h3>Basic Steps for Hazard Identification</h3>
+
+        <ol>
+            <li>Observe the workplace carefully.</li>
+            <li>Look for unsafe conditions.</li>
+            <li>Identify objects or activities that may cause harm.</li>
+            <li>Consider who may be affected.</li>
+            <li>Report the identified hazard.</li>
+            <li>Follow the appropriate workplace procedure.</li>
+        </ol>
+
+        <details>
+
+            <summary>📌 Example – Hazard Identification</summary>
+
+            <p>
+                Imagine that a workplace inspection shows that a walking
+                passage contains several boxes.
+            </p>
+
+            <p>
+                <strong>Hazard:</strong> Obstructed walking passage.
+            </p>
+
+            <p>
+                <strong>Possible risk:</strong> A person may trip or have
+                difficulty moving safely through the passage.
+            </p>
+
+            <p>
+                <strong>Action:</strong> Report the condition and arrange the
+                area safely according to workplace procedures.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- CASE STUDY -->
+    <section class="card">
+
+        <h2>Case Study – Identifying Hazards</h2>
+
+        <p>
+            Read the following situation and identify the different hazards.
+        </p>
+
+        <div class="hazard-box">
+
+            <p>
+                A small office has a wet floor near the entrance. A damaged
+                electrical cable is lying near a workstation, and several
+                boxes have been placed in a passage. The lighting in one area
+                is also inadequate.
+            </p>
+
+        </div>
+
+        <details>
+
+            <summary>🔍 View Analysis</summary>
+
+            <p>
+                <strong>Hazard 1:</strong> Wet floor – possible slipping hazard.
+            </p>
+
+            <p>
+                <strong>Hazard 2:</strong> Damaged electrical cable – potential
+                electrical hazard.
+            </p>
+
+            <p>
+                <strong>Hazard 3:</strong> Boxes in the passage – physical/trip
+                hazard.
+            </p>
+
+            <p>
+                <strong>Hazard 4:</strong> Inadequate lighting – may contribute
+                to unsafe working or movement conditions.
+            </p>
+
+            <p>
+                These conditions should be reported and addressed through the
+                appropriate workplace safety procedures.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- IMPORTANT QUESTIONS -->
+    <section class="card">
+
+        <h2>Important Questions</h2>
+
+        <div class="question">
+
+            <strong>1. What is a workplace hazard?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    A workplace hazard is a condition, activity, object or
+                    source that has the potential to cause injury, illness,
+                    damage or loss in a workplace.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>2. Differentiate between a hazard and a risk.</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    A hazard is a source or condition that has the potential
+                    to cause harm, whereas risk refers to the possibility that
+                    the hazard may actually cause harm under particular
+                    circumstances.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>3. What are physical hazards?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Physical hazards are hazards arising from physical
+                    conditions, objects, equipment or activities in the
+                    workplace that may cause injury or harm.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>4. What causes slips and trips at the workplace?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Slips and trips may be caused by wet or slippery floors,
+                    spilled liquids, objects left in walking areas, uneven
+                    surfaces, poor lighting and untidy work areas.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>5. What is an electrical hazard?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    An electrical hazard is an unsafe condition involving
+                    electrical equipment, wiring, power sources or electrical
+                    systems that may cause injury, fire, equipment damage or
+                    other harm.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>6. What is a fire hazard?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    A fire hazard is a condition, material, equipment or
+                    activity that has the potential to cause or contribute to
+                    a workplace fire.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>7. What are health hazards?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Health hazards are workplace conditions, substances,
+                    activities or environmental factors that may adversely
+                    affect the health or well-being of workers.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>8. Why is hazard identification important?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Hazard identification helps recognise unsafe conditions
+                    before they cause harm and allows appropriate preventive
+                    or corrective action to be taken.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPLICATION BASED -->
+    <section class="card">
+
+        <h2>Application-Based Questions</h2>
+
+        <div class="question">
+
+            <strong>
+                1. A student notices water spilled on a workplace floor.
+                What type of hazard may this create?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    It may create a slipping hazard because a person could
+                    lose balance on the wet surface.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                2. Boxes are placed in a passage used by employees. What
+                hazard may this create?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    The boxes may create a physical or tripping hazard because
+                    they obstruct the walking area.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                3. An employee notices a damaged electrical cable. What should
+                the employee do?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    The employee should report the damaged cable to the
+                    appropriate responsible person and follow the workplace's
+                    electrical safety procedure.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                4. Why can poor workplace lighting become a safety concern?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Poor lighting can make it more difficult to see obstacles,
+                    equipment or unsafe conditions and may therefore contribute
+                    to accidents or unsafe working conditions.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                5. A workplace has poor ventilation. Which type of hazard may
+                this represent?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Poor ventilation may represent a health hazard because it
+                    can contribute to an unhealthy working environment.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+
+    <!-- CBSE PYQ BASED -->
+    <section class="card">
+
+        <h2>CBSE PYQ-Based Practice</h2>
+
+        <p>
+            The following questions are provided as CBSE-style/PYQ-based
+            practice. Specific examination years are not assigned unless the
+            question has been verified as an actual CBSE question.
+        </p>
+
+        <div class="question">
+
+            <strong>
+                1. Explain any four types of workplace hazards.
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Four types of workplace hazards are:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Physical hazards:</strong> Unsafe physical
+                        conditions, objects or equipment that may cause injury.
+                    </li>
+
+                    <li>
+                        <strong>Electrical hazards:</strong> Unsafe conditions
+                        involving electrical equipment, wiring or power sources.
+                    </li>
+
+                    <li>
+                        <strong>Fire hazards:</strong> Conditions or materials
+                        that may cause or contribute to a fire.
+                    </li>
+
+                    <li>
+                        <strong>Health hazards:</strong> Workplace conditions
+                        that may adversely affect health or well-being.
+                    </li>
+                </ul>
+
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                2. What precautions can help prevent slips and trips at the workplace?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Walking areas should be kept clear, spills should be dealt
+                    with promptly according to workplace procedures, lighting
+                    should be suitable, damaged surfaces should be reported or
+                    repaired as appropriate, and workplace materials should be
+                    properly arranged.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                3. Why should workplace hazards be identified?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Identifying hazards helps recognise unsafe conditions before
+                    they cause harm and supports appropriate preventive or
+                    corrective action.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+
+    <!-- MCQ LINK -->
+    <section class="card">
+
+        <div class="mcq-box">
+
+            <h2>Practice MCQs</h2>
+
+            <p>
+                Practice objective questions based on the complete Session 2
+                content on a separate MCQ page.
+            </p>
+
+            <a href="class10-it-unit4-session2-mcqs.html" class="button">
+                📝 Open Session 2 MCQs →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+
+        <a href="class10-it-unit4-session1-workplace-safety.html">
+            ← Session 1 – Workplace Health, Safety and Security
+        </a>
+
+        <a href="class10-it-unit4-healthy-safe-secure.html">
+            Unit 4 Home
+        </a>
+
+        <a href="index.html">
+            🏠 Class 10 IT Home
+        </a>
+
+        <a href="class10-it-unit4-session3-fire-electrical-physical-safety.html">
+            Session 3 – Fire, Electrical and Physical Safety →
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p><strong>Edusphere with Satyam</strong></p>
+
+    <p>Class 10 Information Technology (402)</p>
+
+    <p>Learn • Practise • Understand • Grow</p>
+
+</footer>
+
+</body>
+</html>
