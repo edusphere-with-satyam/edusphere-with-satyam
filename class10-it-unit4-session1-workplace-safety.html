@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Session 1 – Workplace Health, Safety and Security | Class 10 IT 402</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+        color: #1e293b;
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #3730a3, #4f46e5, #0f766e);
+        color: white;
+        padding: 38px 20px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.15rem;
+    }
+
+    header p {
+        margin: 10px 0 0;
+        font-size: 1rem;
+        opacity: 0.95;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .top-back {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 18px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .top-back:hover {
+        opacity: 0.9;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.96);
+        margin: 20px 0;
+        padding: 25px;
+        border-radius: 14px;
+        border-left: 5px solid #14b8a6;
+        box-shadow: 0 5px 18px rgba(15,23,42,0.08);
+    }
+
+    .card h2 {
+        margin-top: 0;
+        color: #1e3a5f;
+    }
+
+    .card h3 {
+        color: #0f766e;
+    }
+
+    .definition {
+        background: #f0fdfa;
+        border-left: 4px solid #14b8a6;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .simple {
+        background: #eff6ff;
+        border-left: 4px solid #3b82f6;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .example {
+        background: #f8fafc;
+        border-left: 4px solid #64748b;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    details {
+        background: #f8fafc;
+        border: 1px solid #dbeafe;
+        border-radius: 10px;
+        padding: 12px 16px;
+        margin: 15px 0;
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: #1e3a5f;
+    }
+
+    details p,
+    details ul {
+        margin-bottom: 8px;
+    }
+
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        border: 1px solid #cbd5e1;
+        padding: 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .comparison-table th {
+        background: #e2e8f0;
+        color: #1e3a5f;
+    }
+
+    .question {
+        background: #ffffff;
+        border: 1px solid #dbeafe;
+        padding: 16px;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    .question strong {
+        color: #1e3a5f;
+    }
+
+    .mcq-box {
+        background: #f8fafc;
+        border-left: 4px solid #64748b;
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 17px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 8px;
+    }
+
+    .button:hover {
+        opacity: 0.9;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 30px 0;
+    }
+
+    .nav a {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+        padding: 12px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .nav a:hover {
+        opacity: 0.9;
+    }
+
+    footer {
+        background: #172554;
+        color: white;
+        text-align: center;
+        padding: 24px;
+        margin-top: 35px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    @media (max-width: 700px) {
+
+        header h1 {
+            font-size: 1.65rem;
+        }
+
+        .container {
+            padding: 12px;
+        }
+
+        .card {
+            padding: 18px;
+        }
+
+        .comparison-table {
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 8px;
+        }
+
+        .nav {
+            flex-direction: column;
+        }
+
+        .nav a {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Session 1 – Workplace Health, Safety and Security</h1>
+    <p>Class 10 Information Technology (402)</p>
+</header>
+
+
+<div class="container">
+
+    <!-- TOP BACK BUTTON -->
+    <a href="class10-it-unit4-healthy-safe-secure.html" class="top-back">
+        ← Back to Unit 4
+    </a>
+
+
+    <!-- INTRODUCTION -->
+    <section class="card">
+
+        <h2>Introduction to Workplace Health, Safety and Security</h2>
+
+        <p>
+            Every workplace should provide an environment in which people can
+            work safely, remain healthy and protect themselves, other people,
+            equipment and important resources. A workplace may be an office,
+            school, factory, shop, hospital, laboratory or any other place where
+            people perform work-related activities.
+        </p>
+
+        <p>
+            Workplace health, safety and security are closely related concepts,
+            but they do not mean exactly the same thing. Health mainly concerns
+            the well-being of people, safety focuses on preventing accidents and
+            unsafe situations, while security focuses on protecting people,
+            property, information and resources from threats.
+        </p>
+
+        <div class="definition">
+
+            <strong>Workplace Health – Formal Definition:</strong>
+
+            <p>
+                Workplace health refers to the physical and general well-being
+                of people at the workplace and the conditions that help protect
+                them from work-related health problems.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                Workplace health means keeping people healthy and providing
+                working conditions that do not unnecessarily harm their health.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORKPLACE HEALTH -->
+    <section class="card">
+
+        <h2>Workplace Health</h2>
+
+        <p>
+            Workplace health is concerned with maintaining conditions that
+            support the well-being of employees and other people at the
+            workplace. A healthy workplace should be clean, hygienic and
+            reasonably comfortable for the work being performed.
+        </p>
+
+        <div class="definition">
+
+            <strong>Definition:</strong>
+
+            <p>
+                Workplace health is the practice of maintaining working
+                conditions that promote the physical and general well-being
+                of workers and reduce work-related health risks.
+            </p>
+
+        </div>
+
+        <h3>Important Elements of Workplace Health</h3>
+
+        <ul>
+            <li>Clean and hygienic working conditions</li>
+            <li>Proper ventilation</li>
+            <li>Adequate lighting</li>
+            <li>Suitable working conditions</li>
+            <li>Clean drinking water where required</li>
+            <li>Proper workplace cleanliness</li>
+            <li>Awareness of health-related risks</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Healthy Workplace</summary>
+
+            <p>
+                Imagine an office where the rooms are clean, the work area is
+                properly ventilated, lighting is suitable and employees are
+                encouraged to maintain cleanliness.
+            </p>
+
+            <p>
+                Such conditions contribute to a healthier working environment
+                because they help reduce unnecessary health-related risks and
+                make the workplace more suitable for work.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- WORKPLACE SAFETY -->
+    <section class="card">
+
+        <h2>Workplace Safety</h2>
+
+        <p>
+            Workplace safety is concerned with preventing accidents, injuries
+            and other unsafe situations. Employees should understand the safety
+            rules applicable to their workplace and follow them while performing
+            their duties.
+        </p>
+
+        <div class="definition">
+
+            <strong>Formal Definition:</strong>
+
+            <p>
+                Workplace safety refers to the practices, rules and measures
+                used to prevent accidents, injuries and unsafe conditions
+                during work.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                Workplace safety means doing work in a way that reduces the
+                possibility of accidents and keeps people and the workplace safe.
+            </p>
+
+        </div>
+
+        <h3>Important Safety Practices</h3>
+
+        <ul>
+            <li>Follow workplace safety rules.</li>
+            <li>Use equipment according to instructions.</li>
+            <li>Keep the work area organised.</li>
+            <li>Report unsafe conditions.</li>
+            <li>Follow warning signs and instructions.</li>
+            <li>Follow emergency procedures.</li>
+            <li>Do not misuse workplace equipment.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Reporting an Unsafe Condition</summary>
+
+            <p>
+                Suppose an employee notices that a piece of workplace equipment
+                is damaged. Instead of continuing to use it, the employee reports
+                the problem to the responsible person.
+            </p>
+
+            <p>
+                Reporting the problem helps prevent the unsafe condition from
+                causing an accident and is therefore an important safety practice.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- WORKPLACE SECURITY -->
+    <section class="card">
+
+        <h2>Workplace Security</h2>
+
+        <p>
+            Security protects people, property, information and other important
+            resources from unauthorised access, misuse, theft, damage or other
+            threats.
+        </p>
+
+        <div class="definition">
+
+            <strong>Formal Definition:</strong>
+
+            <p>
+                Workplace security refers to the measures and procedures used
+                to protect people, property, information and resources from
+                unauthorised access, misuse, loss or other security threats.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                Workplace security means protecting the workplace and its
+                resources from people or situations that may cause loss, misuse
+                or harm.
+            </p>
+
+        </div>
+
+        <h3>Examples of Security Measures</h3>
+
+        <ul>
+            <li>Controlling access to restricted areas</li>
+            <li>Protecting important documents</li>
+            <li>Using authorised access systems</li>
+            <li>Protecting workplace equipment</li>
+            <li>Following information-security rules</li>
+            <li>Reporting suspicious or unauthorised activities</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Restricted Area</summary>
+
+            <p>
+                A company may have a room containing important equipment or
+                confidential information. Only authorised employees may be
+                allowed to enter that room.
+            </p>
+
+            <p>
+                Controlling access helps protect the equipment and information
+                and is therefore a security measure.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- DIFFERENCE -->
+    <section class="card">
+
+        <h2>Health, Safety and Security – Difference</h2>
+
+        <p>
+            Health, safety and security are connected, but each has a different
+            primary purpose.
+        </p>
+
+        <table class="comparison-table">
+
+            <tr>
+                <th>Basis</th>
+                <th>Health</th>
+                <th>Safety</th>
+                <th>Security</th>
+            </tr>
+
+            <tr>
+                <td><strong>Main Concern</strong></td>
+                <td>Well-being and health of people</td>
+                <td>Prevention of accidents and unsafe situations</td>
+                <td>Protection from threats, unauthorised access or misuse</td>
+            </tr>
+
+            <tr>
+                <td><strong>Focus</strong></td>
+                <td>Healthy working conditions</td>
+                <td>Safe working conditions</td>
+                <td>Protection of people, property and resources</td>
+            </tr>
+
+            <tr>
+                <td><strong>Example</strong></td>
+                <td>Clean and properly ventilated workplace</td>
+                <td>Following equipment safety instructions</td>
+                <td>Restricting access to a confidential area</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- IMPORTANCE -->
+    <section class="card">
+
+        <h2>Importance of a Healthy, Safe and Secure Workplace</h2>
+
+        <p>
+            A healthy, safe and secure workplace benefits both employees and
+            organisations. Safety should not be treated only as a set of rules;
+            it should become part of normal workplace behaviour.
+        </p>
+
+        <h3>Prevents Accidents</h3>
+
+        <p>
+            Following safety rules and identifying unsafe conditions can help
+            reduce the possibility of workplace accidents.
+        </p>
+
+        <h3>Protects Employees</h3>
+
+        <p>
+            Proper workplace practices help protect employees from avoidable
+            risks and unsafe conditions.
+        </p>
+
+        <h3>Improves Working Conditions</h3>
+
+        <p>
+            A clean, organised and safe workplace provides better conditions
+            for employees to perform their duties.
+        </p>
+
+        <h3>Protects Equipment and Property</h3>
+
+        <p>
+            Proper safety and security practices can help reduce damage,
+            misuse and loss of workplace resources.
+        </p>
+
+        <h3>Improves Productivity</h3>
+
+        <p>
+            When employees can work in an organised and safe environment,
+            unnecessary interruptions caused by accidents and unsafe conditions
+            can be reduced.
+        </p>
+
+        <h3>Creates a Responsible Workplace Culture</h3>
+
+        <p>
+            When everyone follows safety procedures and reports hazards,
+            safety becomes a shared responsibility rather than the responsibility
+            of only one person.
+        </p>
+
+        <details>
+
+            <summary>📌 Example – Why Workplace Safety Matters</summary>
+
+            <p>
+                Consider a workplace where employees regularly leave work areas
+                untidy and ignore safety instructions. Such behaviour may create
+                unnecessary risks.
+            </p>
+
+            <p>
+                If employees instead keep the workplace organised, follow
+                instructions and report unsafe conditions, the workplace becomes
+                more orderly and safer.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- POLICIES -->
+    <section class="card">
+
+        <h2>Health, Safety and Security Policies</h2>
+
+        <p>
+            Organisations establish policies to provide clear guidance about
+            how employees should behave and what standards should be followed
+            at the workplace.
+        </p>
+
+        <div class="definition">
+
+            <strong>Definition of Policy:</strong>
+
+            <p>
+                A workplace policy is a formal set of principles, rules or
+                guidelines established by an organisation to guide behaviour
+                and decision-making in a particular area.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                A policy tells people what rules or standards they are expected
+                to follow.
+            </p>
+
+        </div>
+
+        <h3>Purpose of Workplace Safety Policies</h3>
+
+        <ul>
+            <li>Provide clear safety guidelines</li>
+            <li>Define expected workplace behaviour</li>
+            <li>Help prevent unsafe practices</li>
+            <li>Promote awareness of workplace risks</li>
+            <li>Support consistent safety practices</li>
+            <li>Help employees understand their responsibilities</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Safety Policy</summary>
+
+            <p>
+                An organisation may establish a policy stating that employees
+                must follow safety instructions while using workplace equipment.
+            </p>
+
+            <p>
+                The policy establishes the expected standard of behaviour.
+                The detailed steps for following that policy can be provided
+                through procedures.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- PROCEDURES -->
+    <section class="card">
+
+        <h2>Health, Safety and Security Procedures</h2>
+
+        <p>
+            A policy provides general direction, while a procedure explains
+            the steps or method that should be followed to carry out a task
+            safely and correctly.
+        </p>
+
+        <div class="definition">
+
+            <strong>Definition of Procedure:</strong>
+
+            <p>
+                A workplace procedure is a defined sequence of steps or actions
+                used to perform a task or respond to a situation in accordance
+                with organisational rules and requirements.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                A procedure explains how a rule or policy should be followed
+                in practice.
+            </p>
+
+        </div>
+
+        <h3>Why Procedures Are Important</h3>
+
+        <ul>
+            <li>Provide clear instructions</li>
+            <li>Reduce confusion</li>
+            <li>Promote consistent behaviour</li>
+            <li>Help employees perform tasks safely</li>
+            <li>Provide guidance during emergencies</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Policy and Procedure</summary>
+
+            <p>
+                <strong>Policy:</strong> Workplace equipment must be used safely.
+            </p>
+
+            <p>
+                <strong>Procedure:</strong> Before using the equipment, the
+                employee should follow the provided instructions, check for
+                obvious problems and report any unsafe condition according to
+                workplace rules.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- POLICY VS PROCEDURE -->
+    <section class="card">
+
+        <h2>Policy vs Procedure</h2>
+
+        <table class="comparison-table">
+
+            <tr>
+                <th>Basis</th>
+                <th>Policy</th>
+                <th>Procedure</th>
+            </tr>
+
+            <tr>
+                <td><strong>Meaning</strong></td>
+                <td>A rule or general guideline</td>
+                <td>A sequence of steps for carrying out a task</td>
+            </tr>
+
+            <tr>
+                <td><strong>Purpose</strong></td>
+                <td>Provides direction and establishes standards</td>
+                <td>Explains how the standard should be implemented</td>
+            </tr>
+
+            <tr>
+                <td><strong>Nature</strong></td>
+                <td>Generally broad</td>
+                <td>Generally more specific</td>
+            </tr>
+
+            <tr>
+                <td><strong>Example</strong></td>
+                <td>Employees must follow workplace safety rules.</td>
+                <td>Employees follow the specified steps for safely performing a task.</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- SAFETY PROGRAMS -->
+    <section class="card">
+
+        <h2>Why Health, Safety and Security Programs Are Needed</h2>
+
+        <p>
+            A workplace safety program is a planned approach used by an
+            organisation to promote safe working practices, identify risks,
+            communicate responsibilities and support the prevention of accidents.
+        </p>
+
+        <h3>Prevention of Accidents</h3>
+
+        <p>
+            Safety programs help organisations identify unsafe practices and
+            encourage employees to follow appropriate safety measures.
+        </p>
+
+        <h3>Protection of Employees</h3>
+
+        <p>
+            A major purpose of safety programs is to protect workers from
+            unnecessary workplace risks.
+        </p>
+
+        <h3>Identification of Risks</h3>
+
+        <p>
+            Organisations need to recognise situations that may cause harm or
+            loss so that appropriate preventive measures can be taken.
+        </p>
+
+        <h3>Emergency Preparedness</h3>
+
+        <p>
+            Employees should know how to respond appropriately when an emergency
+            occurs. Safety programs can provide guidance and establish
+            responsibilities.
+        </p>
+
+        <h3>Protection of Workplace Resources</h3>
+
+        <p>
+            Proper safety and security practices can also help protect equipment,
+            property, documents and other resources.
+        </p>
+
+        <h3>Development of Safety Awareness</h3>
+
+        <p>
+            Regular communication and training can help employees understand
+            the importance of safe behaviour.
+        </p>
+
+        <details>
+
+            <summary>📌 Example – Safety Program</summary>
+
+            <p>
+                An organisation may have a program that includes safety
+                instructions, employee training, reporting of unsafe conditions,
+                emergency procedures and regular checks of the workplace.
+            </p>
+
+            <p>
+                Such a program helps make safety an organised and continuous
+                activity rather than something considered only after an accident.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- EMPLOYEE RESPONSIBILITIES -->
+    <section class="card">
+
+        <h2>Responsibilities of Employees</h2>
+
+        <p>
+            Employees play an important role in maintaining a healthy, safe and
+            secure workplace. Safety cannot be maintained only through rules;
+            employees must also follow those rules responsibly.
+        </p>
+
+        <ul>
+            <li>Follow workplace health and safety rules.</li>
+            <li>Use workplace equipment correctly.</li>
+            <li>Follow instructions provided by authorised persons.</li>
+            <li>Keep the work area clean and organised.</li>
+            <li>Report unsafe conditions.</li>
+            <li>Report accidents or incidents according to workplace procedures.</li>
+            <li>Follow emergency instructions.</li>
+            <li>Protect workplace property and resources.</li>
+            <li>Do not misuse workplace equipment.</li>
+            <li>Cooperate with workplace safety programs.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Employee Responsibility</summary>
+
+            <p>
+                If an employee notices an unsafe condition, simply ignoring it
+                may allow the problem to continue. Reporting it to the
+                appropriate person allows corrective action to be considered.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- EMPLOYER RESPONSIBILITIES -->
+    <section class="card">
+
+        <h2>Responsibilities of Employers</h2>
+
+        <p>
+            Employers and organisations are responsible for establishing and
+            maintaining appropriate workplace systems that support health,
+            safety and security.
+        </p>
+
+        <ul>
+            <li>Provide a safe working environment.</li>
+            <li>Identify workplace hazards and risks.</li>
+            <li>Establish appropriate safety policies and procedures.</li>
+            <li>Provide safety instructions and awareness.</li>
+            <li>Maintain workplace equipment properly.</li>
+            <li>Provide appropriate safety resources where required.</li>
+            <li>Establish emergency arrangements.</li>
+            <li>Take appropriate action when hazards are reported.</li>
+            <li>Promote responsible safety behaviour.</li>
+            <li>Review and improve workplace safety practices.</li>
+        </ul>
+
+        <details>
+
+            <summary>📌 Example – Employer Responsibility</summary>
+
+            <p>
+                If an organisation identifies an unsafe condition in the
+                workplace, it should take appropriate steps to address the
+                problem rather than simply expecting employees to ignore it.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- SAFETY CULTURE -->
+    <section class="card">
+
+        <h2>Safety Culture at the Workplace</h2>
+
+        <p>
+            Safety should not be treated as a responsibility of only the safety
+            officer or manager. A good workplace safety culture develops when
+            everyone understands the importance of safe behaviour and takes
+            appropriate responsibility.
+        </p>
+
+        <div class="definition">
+
+            <strong>Definition:</strong>
+
+            <p>
+                Safety culture refers to the shared attitudes, values,
+                behaviours and practices through which an organisation
+                demonstrates its commitment to workplace safety.
+            </p>
+
+        </div>
+
+        <div class="simple">
+
+            <strong>In Simple Words:</strong>
+
+            <p>
+                A safety culture means that people at the workplace regularly
+                think about safety, follow safety rules and take responsibility
+                for preventing unsafe situations.
+            </p>
+
+        </div>
+
+        <h3>Features of a Good Safety Culture</h3>
+
+        <ul>
+            <li>Employees take safety seriously.</li>
+            <li>Safety rules are clearly communicated.</li>
+            <li>Unsafe conditions are reported.</li>
+            <li>Employees cooperate with one another.</li>
+            <li>Management supports safe practices.</li>
+            <li>Safety awareness is maintained regularly.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- PRACTICAL ACTIVITY -->
+    <section class="card">
+
+        <h2>Practical Activity – Identify Safe and Unsafe Practices</h2>
+
+        <p>
+            Read each situation and decide whether it represents a safe or
+            unsafe workplace practice. Then identify the reason and suggest
+            the appropriate action.
+        </p>
+
+        <details>
+
+            <summary>🛠️ Situation 1 – Wet Floor</summary>
+
+            <p>
+                A workplace floor is wet, but there is no warning sign and
+                people continue walking through the area.
+            </p>
+
+            <p>
+                <strong>Answer:</strong> Unsafe practice.
+            </p>
+
+            <p>
+                The wet floor may create a risk of slipping. The area should
+                be dealt with according to workplace safety procedures and
+                an appropriate warning should be provided where necessary.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>🛠️ Situation 2 – Reporting a Problem</summary>
+
+            <p>
+                An employee notices a damaged piece of workplace equipment
+                and reports it to the responsible person instead of using it.
+            </p>
+
+            <p>
+                <strong>Answer:</strong> Safe and responsible practice.
+            </p>
+
+            <p>
+                Reporting an unsafe condition helps the organisation take
+                appropriate action.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>🛠️ Situation 3 – Blocked Emergency Exit</summary>
+
+            <p>
+                Boxes have been placed in front of an emergency exit.
+            </p>
+
+            <p>
+                <strong>Answer:</strong> Unsafe practice.
+            </p>
+
+            <p>
+                An emergency exit should remain accessible according to
+                workplace safety procedures.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>🛠️ Situation 4 – Following Instructions</summary>
+
+            <p>
+                An employee follows the instructions provided for using
+                workplace equipment.
+            </p>
+
+            <p>
+                <strong>Answer:</strong> Safe practice.
+            </p>
+
+            <p>
+                Following appropriate instructions reduces the possibility
+                of misuse and unsafe operation.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>🛠️ Situation 5 – Ignoring a Safety Rule</summary>
+
+            <p>
+                An employee knows a workplace safety rule but deliberately
+                ignores it to complete a task more quickly.
+            </p>
+
+            <p>
+                <strong>Answer:</strong> Unsafe practice.
+            </p>
+
+            <p>
+                Completing work quickly should not be treated as a reason
+                to ignore applicable safety rules.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- IMPORTANT QUESTIONS -->
+    <section class="card">
+
+        <h2>Important Questions</h2>
+
+        <div class="question">
+
+            <strong>1. What is workplace health?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Workplace health refers to maintaining working conditions
+                    that support the physical and general well-being of workers
+                    and reduce work-related health risks.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>2. Define workplace safety.</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Workplace safety refers to the practices, rules and measures
+                    used to prevent accidents, injuries and unsafe conditions
+                    during work.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>3. What is workplace security?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Workplace security refers to measures and procedures used
+                    to protect people, property, information and resources from
+                    unauthorised access, misuse, loss or other threats.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>4. Differentiate between workplace safety and workplace security.</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Workplace safety mainly focuses on preventing accidents,
+                    injuries and unsafe conditions, whereas workplace security
+                    focuses on protecting people, property, information and
+                    resources from threats, unauthorised access or misuse.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>5. What is a workplace policy?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    A workplace policy is a formal set of principles, rules or
+                    guidelines established by an organisation to guide behaviour
+                    and decision-making in a particular area.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>6. What is a workplace procedure?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    A workplace procedure is a defined sequence of steps or
+                    actions used to perform a task or respond to a situation
+                    according to organisational rules and requirements.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>7. Why are health, safety and security programs needed?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    They are needed to help prevent accidents, protect employees,
+                    identify risks, improve safety awareness, support emergency
+                    preparedness and protect workplace resources.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>8. State any five responsibilities of an employee regarding workplace safety.</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    An employee should follow safety rules, use equipment
+                    correctly, keep the workplace organised, report unsafe
+                    conditions and follow emergency instructions.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>9. State any five responsibilities of an employer regarding workplace safety.</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    An employer should provide a safe workplace, identify
+                    hazards, establish safety procedures, provide appropriate
+                    safety instructions and take action when unsafe conditions
+                    are reported.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>10. What is safety culture?</strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Safety culture refers to the shared attitudes, values,
+                    behaviours and practices through which an organisation
+                    demonstrates its commitment to workplace safety.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPLICATION BASED -->
+    <section class="card">
+
+        <h2>Application-Based Questions</h2>
+
+        <div class="question">
+
+            <strong>
+                1. An employee notices an unsafe condition but does not report it.
+                What safety responsibility is being ignored?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    The employee is failing to report an unsafe condition.
+                    Reporting hazards is an important employee responsibility
+                    because it allows appropriate action to be considered.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                2. An organisation has safety rules but does not explain how
+                employees should follow them. What additional element is needed?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Appropriate procedures are needed. A policy generally
+                    establishes the rule or standard, while a procedure explains
+                    the steps or method for implementing it.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                3. A company restricts access to a room containing confidential
+                information. Is this mainly a health, safety or security measure?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    It is mainly a security measure because it protects
+                    information and resources from unauthorised access.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                4. A workplace is clean and well organised, employees follow
+                safety instructions, and hazards are reported. What does this
+                indicate?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    These practices indicate a positive workplace safety culture
+                    because safety is being treated as a shared responsibility
+                    and employees are following responsible practices.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+
+    <!-- CBSE PYQ BASED -->
+    <section class="card">
+
+        <h2>CBSE PYQ-Based Practice</h2>
+
+        <p>
+            The following questions are provided as CBSE-style/PYQ-based
+            practice for this topic. A specific examination year is not assigned
+            unless the question has been verified as an actual CBSE question.
+        </p>
+
+        <div class="question">
+
+            <strong>
+                1. Explain the importance of maintaining a healthy and safe
+                working environment.
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    A healthy and safe working environment helps protect
+                    employees, reduce workplace risks, prevent accidents,
+                    improve working conditions and support efficient work.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                2. Differentiate between a workplace policy and a workplace procedure.
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    A workplace policy provides general rules, principles or
+                    standards, whereas a workplace procedure provides the
+                    sequence of steps used to implement a rule or perform a
+                    task correctly.
+                </p>
+            </details>
+
+        </div>
+
+
+        <div class="question">
+
+            <strong>
+                3. Why should employees report unsafe conditions at the workplace?
+            </strong>
+
+            <details>
+                <summary>View Answer</summary>
+
+                <p>
+                    Reporting unsafe conditions helps the responsible persons
+                    identify the problem and take appropriate corrective action,
+                    thereby helping reduce workplace risks.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+
+    <!-- MCQ LINK -->
+    <section class="card">
+
+        <div class="mcq-box">
+
+            <h2>Practice MCQs</h2>
+
+            <p>
+                Practice objective questions based on the complete Session 1
+                content on a separate MCQ page.
+            </p>
+
+            <a href="class10-it-unit4-session1-mcqs.html" class="button">
+                📝 Open Session 1 MCQs →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+
+        <a href="class10-it-unit4-healthy-safe-secure.html">
+            ← Unit 4 Home
+        </a>
+
+        <a href="index.html">
+            🏠 Class 10 IT Home
+        </a>
+
+        <a href="class10-it-unit4-session2-workplace-hazards.html">
+            Session 2 – Workplace Safety Hazards →
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p><strong>Edusphere with Satyam</strong></p>
+
+    <p>Class 10 Information Technology (402)</p>
+
+    <p>Learn • Practise • Understand • Grow</p>
+
+</footer>
+
+</body>
+</html>
