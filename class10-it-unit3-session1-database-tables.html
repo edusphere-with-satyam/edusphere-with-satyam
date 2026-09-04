@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Introduction to Database and Tables | Class 10 IT 402</title>
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+    margin:0;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:17px;
+}
+
+.top-nav{
+    max-width:1000px;
+    margin:20px auto 0;
+    padding:0 18px;
+}
+
+.back-button{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.back-button:hover{
+    background:#0f766e;
+}
+
+.container{
+    max-width:1000px;
+    margin:25px auto;
+    padding:0 18px;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 15px rgba(15,23,42,0.07);
+}
+
+.card h2{
+    color:#3730a3;
+    margin-top:0;
+}
+
+.card h3{
+    color:#0f766e;
+}
+
+.definition{
+    background:#f0fdfa;
+    border-left:4px solid #14b8a6;
+    padding:16px;
+    margin:18px 0;
+    border-radius:8px;
+}
+
+.simple{
+    background:#eef2ff;
+    border-left:4px solid #6366f1;
+    padding:16px;
+    margin:18px 0;
+    border-radius:8px;
+}
+
+.example{
+    background:#f8fafc;
+    border-left:4px solid #64748b;
+    padding:16px;
+    margin:18px 0;
+    border-radius:8px;
+}
+
+.tip{
+    background:#ecfeff;
+    border-left:4px solid #0891b2;
+    padding:16px;
+    margin:18px 0;
+    border-radius:8px;
+}
+
+.warning{
+    background:#fff7ed;
+    border-left:4px solid #f97316;
+    padding:16px;
+    margin:18px 0;
+    border-radius:8px;
+}
+
+.highlight{
+    background:#f5f3ff;
+    border-left:4px solid #8b5cf6;
+    padding:16px;
+    margin:18px 0;
+    border-radius:8px;
+}
+
+.code{
+    background:#172554;
+    color:#e0f2fe;
+    padding:16px;
+    border-radius:8px;
+    overflow-x:auto;
+    font-family:Consolas,monospace;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#eef2ff;
+    color:#3730a3;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+ul,ol{
+    padding-left:25px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+details{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    border-radius:9px;
+    margin:14px 0;
+    overflow:hidden;
+}
+
+summary{
+    background:#eef2ff;
+    color:#1e3a5f;
+    padding:13px 16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.answer{
+    padding:17px;
+    background:white;
+    border-top:1px solid #dbeafe;
+}
+
+.session-link{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:10px 17px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a{
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.nav a:hover,
+.session-link:hover{
+    background:#0f766e;
+}
+
+.badge{
+    display:inline-block;
+    background:#ccfbf1;
+    color:#115e59;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:25px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,td{
+        padding:8px;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    .nav a{
+        width:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="badge">Class 10 Information Technology – 402</div>
+
+    <h1>Introduction to Database and Tables</h1>
+
+    <p>Unit 3 – Database Management System | LibreOffice Base</p>
+
+</header>
+
+
+<!-- TOP BACK BUTTON -->
+
+<div class="top-nav">
+
+    <a class="back-button"
+       href="class10-it-unit3-database-management-system.html">
+       ← Back to Unit 3
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<h2>Introduction to Database</h2>
+
+<p>
+In our daily life, we deal with a large amount of data. A school has
+information about students, teachers, classes, attendance and marks.
+A bank has information about customers, accounts and transactions.
+A hospital has information about patients, doctors, medicines and
+appointments.
+</p>
+
+<p>
+If all this information is kept without proper organisation, it becomes
+difficult to search, update and manage it. A database provides an
+organised way to store related data so that it can be accessed and
+managed efficiently.
+</p>
+
+<div class="definition">
+
+<strong>Formal Definition – Data:</strong><br>
+
+Data refers to raw facts and figures that can be recorded, stored and
+processed. Data by itself may not provide complete meaning until it is
+organised or processed.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+Data means basic facts such as a person's name, age, roll number,
+marks, phone number or address.
+
+</div>
+
+<div class="definition">
+
+<strong>Formal Definition – Information:</strong><br>
+
+Information is meaningful and useful data obtained after data has been
+organised, processed or interpreted.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+When raw data is arranged or processed in a meaningful way, it becomes
+information.
+
+</div>
+
+<details>
+
+<summary>Example: Data and Information</summary>
+
+<div class="answer">
+
+<p>
+Suppose we have the following marks:
+</p>
+
+<p>
+<strong>75, 82, 91, 68, 84</strong>
+</p>
+
+<p>
+These numbers are data. If we organise them as the marks of particular
+students and calculate the average marks, highest marks and lowest
+marks, the result becomes useful information.
+</p>
+
+</div>
+
+</details>
+
+
+<div class="definition">
+
+<strong>Formal Definition – Database:</strong><br>
+
+A database is an organised collection of related data that is stored in
+a structured manner so that the data can be easily accessed, managed,
+updated and retrieved.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A database is an organised place where related information is stored so
+that we can easily find and manage it.
+
+</div>
+
+<div class="example">
+
+<strong>Example:</strong><br>
+
+A school database may store Student ID, Student Name, Class, Section,
+Date of Birth, Contact Number and Marks of students.
+
+</div>
+
+</div>
+
+
+<!-- WHY DATABASE -->
+
+<div class="card">
+
+<h2>Why Do We Need a Database?</h2>
+
+<p>
+Imagine that a school has information about 2,000 students written in
+different notebooks and separate files. If a teacher wants to find the
+details of one particular student, it may take a lot of time.
+</p>
+
+<p>
+A database solves this problem by storing related information in an
+organised structure. It allows users to find, add, modify and manage
+information more efficiently.
+</p>
+
+<h3>Major Uses of a Database</h3>
+
+<ul>
+
+<li>Storing large amounts of related data.</li>
+
+<li>Finding required information quickly.</li>
+
+<li>Adding new information.</li>
+
+<li>Updating existing information.</li>
+
+<li>Deleting information that is no longer required.</li>
+
+<li>Organising data systematically.</li>
+
+<li>Preparing useful information from stored data.</li>
+
+</ul>
+
+<details>
+
+<summary>Example: School Database</summary>
+
+<div class="answer">
+
+<p>
+A school can maintain a database containing student information.
+For example:
+</p>
+
+<table>
+
+<tr>
+<th>Student ID</th>
+<th>Name</th>
+<th>Class</th>
+<th>Section</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>10</td>
+<td>A</td>
+<td>78</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Priya</td>
+<td>10</td>
+<td>A</td>
+<td>86</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Aman</td>
+<td>10</td>
+<td>B</td>
+<td>91</td>
+</tr>
+
+</table>
+
+<p>
+From this database, the school can search for a particular student,
+update marks, add new students and retrieve required information.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- DBMS -->
+
+<div class="card">
+
+<h2>Database Management System (DBMS)</h2>
+
+<p>
+Simply storing data is not enough when the amount of information becomes
+large. We also need software that can create databases, store data,
+retrieve information, modify records and manage the database.
+</p>
+
+<p>
+This is where a Database Management System is used.
+</p>
+
+<div class="definition">
+
+<strong>Formal Definition – DBMS:</strong><br>
+
+A Database Management System (DBMS) is software that enables users to
+create, store, organise, retrieve, update and manage data in databases.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A DBMS is software that helps us create and manage databases and the
+data stored inside them.
+
+</div>
+
+<h3>What Can a DBMS Do?</h3>
+
+<ul>
+
+<li>Create a database.</li>
+
+<li>Store data in an organised manner.</li>
+
+<li>Retrieve required data.</li>
+
+<li>Insert new records.</li>
+
+<li>Update existing records.</li>
+
+<li>Delete unwanted records.</li>
+
+<li>Search for specific information.</li>
+
+<li>Help users manage database objects.</li>
+
+</ul>
+
+<details>
+
+<summary>Example: How a DBMS Helps a School</summary>
+
+<div class="answer">
+
+<p>
+Suppose a school wants to maintain student records.
+</p>
+
+<p>
+Using a DBMS, the school can create a database, create a student table,
+enter student records, search for a particular student, update a
+student's information and generate useful reports.
+</p>
+
+<p>
+Without proper database software, managing thousands of records would
+be much more difficult.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- DATABASE VS DBMS -->
+
+<div class="card">
+
+<h2>Database and DBMS – Difference</h2>
+
+<table>
+
+<tr>
+<th>Database</th>
+<th>DBMS</th>
+</tr>
+
+<tr>
+<td>An organised collection of related data.</td>
+<td>Software used to manage the database.</td>
+</tr>
+
+<tr>
+<td>Contains the stored data.</td>
+<td>Provides tools to create, access and manage data.</td>
+</tr>
+
+<tr>
+<td>Example: Student records stored in a database.</td>
+<td>Example: LibreOffice Base used to manage the database.</td>
+</tr>
+
+</table>
+
+<div class="highlight">
+
+<strong>Remember:</strong><br>
+
+Database = organised data  
+<br>
+DBMS = software used to manage that data
+
+</div>
+
+</div>
+
+
+<!-- LIBREOFFICE BASE -->
+
+<div class="card">
+
+<h2>LibreOffice Base</h2>
+
+<p>
+LibreOffice is a free and open-source office productivity suite. It
+contains different applications for different types of work.
+LibreOffice Base is the database component of the suite.
+</p>
+
+<div class="definition">
+
+<strong>Definition – LibreOffice Base:</strong><br>
+
+LibreOffice Base is a database application used to create, manage and
+work with databases and their database objects.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+LibreOffice Base is the LibreOffice program used for working with
+databases.
+
+</div>
+
+<h3>Why Do We Use Base?</h3>
+
+<ul>
+
+<li>To create databases.</li>
+
+<li>To create and manage tables.</li>
+
+<li>To store records.</li>
+
+<li>To create queries.</li>
+
+<li>To create forms.</li>
+
+<li>To create reports.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Important:</strong><br>
+
+In this unit, students will mainly use <strong>LibreOffice Base</strong>
+to learn how databases, tables, queries, forms and reports work.
+
+</div>
+
+</div>
+
+
+<!-- DATABASE OBJECTS -->
+
+<div class="card">
+
+<h2>Database Objects</h2>
+
+<p>
+A database is not simply a single collection of random data. It contains
+different objects that help us store, retrieve, enter and present data.
+</p>
+
+<table>
+
+<tr>
+<th>Database Object</th>
+<th>Main Purpose</th>
+</tr>
+
+<tr>
+<td><strong>Table</strong></td>
+<td>Stores data in rows and columns.</td>
+</tr>
+
+<tr>
+<td><strong>Query</strong></td>
+<td>Retrieves specific information from one or more tables.</td>
+</tr>
+
+<tr>
+<td><strong>Form</strong></td>
+<td>Provides a convenient interface for entering and viewing data.</td>
+</tr>
+
+<tr>
+<td><strong>Report</strong></td>
+<td>Presents database information in an organised and readable format.</td>
+</tr>
+
+</table>
+
+<details>
+
+<summary>Example: How Database Objects Work Together</summary>
+
+<div class="answer">
+
+<p>
+Suppose a school has a database containing student records.
+</p>
+
+<ul>
+
+<li>
+<strong>Table:</strong> Stores student information such as ID, name,
+class and marks.
+</li>
+
+<li>
+<strong>Query:</strong> Finds students who scored more than 80 marks.
+</li>
+
+<li>
+<strong>Form:</strong> Provides an easier screen for entering student
+information.
+</li>
+
+<li>
+<strong>Report:</strong> Presents the student information in a properly
+organised format for viewing or printing.
+</li>
+
+</ul>
+
+<p>
+Therefore, these objects perform different tasks but work with the same
+database information.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- TABLE -->
+
+<div class="card">
+
+<h2>Understanding a Table</h2>
+
+<p>
+A table is one of the most important objects in a database. It is used
+to store related data in a structured form.
+</p>
+
+<div class="definition">
+
+<strong>Formal Definition – Table:</strong><br>
+
+A table is a database object that stores related data in rows and
+columns.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A table is like an organised grid in which related information is stored
+using columns and rows.
+
+</div>
+
+<h3>Example of a Student Table</h3>
+
+<table>
+
+<tr>
+<th>Student_ID</th>
+<th>Name</th>
+<th>Class</th>
+<th>Section</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>10</td>
+<td>A</td>
+<td>78</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Priya</td>
+<td>10</td>
+<td>A</td>
+<td>86</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Aman</td>
+<td>10</td>
+<td>B</td>
+<td>91</td>
+</tr>
+
+</table>
+
+<p>
+In this table, each column represents a particular type of information,
+while each row represents the complete information of one student.
+</p>
+
+</div>
+
+
+<!-- FIELD -->
+
+<div class="card">
+
+<h2>Field</h2>
+
+<div class="definition">
+
+<strong>Formal Definition – Field:</strong><br>
+
+A field is a named column in a database table that represents a
+particular type or category of information about the records.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A field tells us what type of information is stored in a column.
+
+</div>
+
+<p>
+For example, in a student table, <strong>Student_ID</strong>,
+<strong>Name</strong>, <strong>Class</strong>, <strong>Section</strong>
+and <strong>Marks</strong> can be fields.
+</p>
+
+<table>
+
+<tr>
+<th>Field Name</th>
+<th>What It Stores</th>
+</tr>
+
+<tr>
+<td>Student_ID</td>
+<td>Unique identification number</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td>Student's name</td>
+</tr>
+
+<tr>
+<td>Class</td>
+<td>Class of the student</td>
+</tr>
+
+<tr>
+<td>Section</td>
+<td>Section of the student</td>
+</tr>
+
+<tr>
+<td>Marks</td>
+<td>Marks obtained</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RECORD -->
+
+<div class="card">
+
+<h2>Record</h2>
+
+<div class="definition">
+
+<strong>Formal Definition – Record:</strong><br>
+
+A record is a complete set of related field values representing one
+particular item or entity in a database table.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A record is one complete row of information in a table.
+
+</div>
+
+<p>
+In the student table, the information of Rahul forms one record.
+The information of Priya forms another record.
+</p>
+
+<details>
+
+<summary>Example: Understanding a Record</summary>
+
+<div class="answer">
+
+<p>
+Consider this row:
+</p>
+
+<table>
+
+<tr>
+<th>Student_ID</th>
+<th>Name</th>
+<th>Class</th>
+<th>Section</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>10</td>
+<td>A</td>
+<td>78</td>
+</tr>
+
+</table>
+
+<p>
+The complete row represents one student's information. Therefore, it is
+one <strong>record</strong>.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- FIELD VS RECORD -->
+
+<div class="card">
+
+<h2>Field vs Record</h2>
+
+<table>
+
+<tr>
+<th>Field</th>
+<th>Record</th>
+</tr>
+
+<tr>
+<td>A field represents one category of information.</td>
+<td>A record represents complete information about one item.</td>
+</tr>
+
+<tr>
+<td>Usually represented by a column.</td>
+<td>Usually represented by a row.</td>
+</tr>
+
+<tr>
+<td>Example: Name</td>
+<td>Example: 101, Rahul, 10, A, 78</td>
+</tr>
+
+</table>
+
+<div class="highlight">
+
+<strong>Easy way to remember:</strong><br>
+
+<strong>Column → Field</strong><br>
+<strong>Row → Record</strong>
+
+</div>
+
+</div>
+
+
+<!-- DATA TYPES -->
+
+<div class="card">
+
+<h2>Data Types</h2>
+
+<p>
+A database contains different kinds of information. A person's name is
+different from their age, a date is different from a number, and a
+Yes/No value is different from ordinary text.
+</p>
+
+<p>
+Therefore, while creating a table, we need to specify the type of data
+that a field will store. This is called the <strong>data type</strong>
+of the field.
+</p>
+
+<div class="definition">
+
+<strong>Formal Definition – Data Type:</strong><br>
+
+A data type specifies the kind of value that can be stored in a
+particular database field.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A data type tells the database what kind of data a field is expected to
+contain.
+
+</div>
+
+<h3>Common Data Types</h3>
+
+<table>
+
+<tr>
+<th>Data Type</th>
+<th>Example</th>
+<th>Suitable Use</th>
+</tr>
+
+<tr>
+<td>Text</td>
+<td>Satyam</td>
+<td>Names, addresses and other text</td>
+</tr>
+
+<tr>
+<td>Integer</td>
+<td>25</td>
+<td>Whole numbers</td>
+</tr>
+
+<tr>
+<td>Decimal</td>
+<td>85.50</td>
+<td>Numbers containing decimal values</td>
+</tr>
+
+<tr>
+<td>Date</td>
+<td>04/09/2026</td>
+<td>Dates</td>
+</tr>
+
+<tr>
+<td>Time</td>
+<td>10:30 AM</td>
+<td>Time values</td>
+</tr>
+
+<tr>
+<td>Date & Time</td>
+<td>04/09/2026 10:30 AM</td>
+<td>Date and time together</td>
+</tr>
+
+<tr>
+<td>Boolean / Yes-No</td>
+<td>Yes / No</td>
+<td>Values with two logical choices</td>
+</tr>
+
+</table>
+
+<div class="warning">
+
+<strong>Why is choosing the correct data type important?</strong><br>
+
+Selecting an appropriate data type helps the database understand how the
+data should be stored and handled. An unsuitable data type can create
+problems while entering, searching, sorting or calculating data.
+
+</div>
+
+</div>
+
+
+<!-- PRIMARY KEY -->
+
+<div class="card">
+
+<h2>Primary Key</h2>
+
+<p>
+When a table contains many records, we need a reliable way to identify
+each record uniquely. This is where a primary key becomes important.
+</p>
+
+<div class="definition">
+
+<strong>Formal Definition – Primary Key:</strong><br>
+
+A primary key is a field, or combination of fields, that uniquely
+identifies each record in a database table.
+
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+A primary key is a field whose value is different for every record and
+helps identify each record uniquely.
+
+</div>
+
+<h3>Why is a Primary Key Important?</h3>
+
+<ul>
+
+<li>It uniquely identifies records.</li>
+
+<li>It prevents duplicate identification values.</li>
+
+<li>It helps distinguish one record from another.</li>
+
+<li>It provides a reliable way to identify a particular record.</li>
+
+</ul>
+
+<details>
+
+<summary>Example: Student ID as Primary Key</summary>
+
+<div class="answer">
+
+<table>
+
+<tr>
+<th>Student_ID</th>
+<th>Name</th>
+<th>Class</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Priya</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Aman</td>
+<td>10</td>
+</tr>
+
+</table>
+
+<p>
+Here, <strong>Student_ID</strong> can be used as a primary key because
+each student has a different ID.
+</p>
+
+<p>
+Even if two students have the same name, their Student_ID can still
+uniquely identify them.
+</p>
+
+</div>
+
+</details>
+
+<h3>Characteristics of a Good Primary Key</h3>
+
+<ul>
+
+<li>It should uniquely identify each record.</li>
+
+<li>It should not contain duplicate values.</li>
+
+<li>It should provide a reliable identification of the record.</li>
+
+<li>It should be chosen carefully according to the purpose of the table.</li>
+
+</ul>
+
+<div class="highlight">
+
+<strong>Important:</strong><br>
+
+A primary key is not simply any field. Its main purpose is to uniquely
+identify records in a table.
+
+</div>
+
+</div>
+
+
+<!-- CREATING DATABASE -->
+
+<div class="card">
+
+<h2>Practical: Creating a New Database</h2>
+
+<p>
+Now we will create a simple database using LibreOffice Base.
+</p>
+
+<h3>Steps</h3>
+
+<ol>
+
+<li>Open <strong>LibreOffice</strong> on the computer.</li>
+
+<li>Open <strong>LibreOffice Base</strong>.</li>
+
+<li>Choose the option to create a new database.</li>
+
+<li>Proceed through the database creation process.</li>
+
+<li>Choose the location where the database should be saved.</li>
+
+<li>Enter a suitable database name.</li>
+
+<li>Save the database.</li>
+
+<li>Open the database if required.</li>
+
+<li>Observe the main database window.</li>
+
+</ol>
+
+<div class="tip">
+
+<strong>Suggested Database Name:</strong><br>
+
+SchoolDatabase
+
+</div>
+
+</div>
+
+
+<!-- CREATING TABLE -->
+
+<div class="card">
+
+<h2>Practical: Creating a Student Table</h2>
+
+<p>
+After creating the database, we can create a table to store student
+information.
+</p>
+
+<h3>Suggested Table Structure</h3>
+
+<table>
+
+<tr>
+<th>Field Name</th>
+<th>Suggested Data Type</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Student_ID</td>
+<td>Integer</td>
+<td>Identifies the student</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td>Text</td>
+<td>Stores student's name</td>
+</tr>
+
+<tr>
+<td>Class</td>
+<td>Integer</td>
+<td>Stores class number</td>
+</tr>
+
+<tr>
+<td>Section</td>
+<td>Text</td>
+<td>Stores section</td>
+</tr>
+
+<tr>
+<td>Marks</td>
+<td>Decimal</td>
+<td>Stores marks</td>
+</tr>
+
+</table>
+
+<h3>Steps to Create the Table</h3>
+
+<ol>
+
+<li>Open the <strong>Tables</strong> section of the database.</li>
+
+<li>Choose the option for creating a table.</li>
+
+<li>Enter <strong>Student_ID</strong> as the first field name.</li>
+
+<li>Select a suitable numeric data type.</li>
+
+<li>Enter <strong>Name</strong> as another field.</li>
+
+<li>Select a suitable text data type.</li>
+
+<li>Add the <strong>Class</strong> field.</li>
+
+<li>Add the <strong>Section</strong> field.</li>
+
+<li>Add the <strong>Marks</strong> field.</li>
+
+<li>Set <strong>Student_ID</strong> as the primary key.</li>
+
+<li>Save the table.</li>
+
+<li>Give the table a meaningful name such as
+<strong>Students</strong>.</li>
+
+</ol>
+
+<div class="warning">
+
+<strong>Precaution:</strong><br>
+
+Choose field names and data types carefully before entering a large
+amount of data. Changing the structure later may affect existing data.
+
+</div>
+
+</div>
+
+
+<!-- ENTERING RECORDS -->
+
+<div class="card">
+
+<h2>Practical: Entering Records</h2>
+
+<p>
+After creating the table, we can enter actual records into it.
+</p>
+
+<h3>Sample Records</h3>
+
+<table>
+
+<tr>
+<th>Student_ID</th>
+<th>Name</th>
+<th>Class</th>
+<th>Section</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>10</td>
+<td>A</td>
+<td>78</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Priya</td>
+<td>10</td>
+<td>A</td>
+<td>86</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Aman</td>
+<td>10</td>
+<td>B</td>
+<td>91</td>
+</tr>
+
+<tr>
+<td>104</td>
+<td>Neha</td>
+<td>10</td>
+<td>B</td>
+<td>74</td>
+</tr>
+
+<tr>
+<td>105</td>
+<td>Rohit</td>
+<td>10</td>
+<td>A</td>
+<td>88</td>
+</tr>
+
+</table>
+
+<h3>Steps</h3>
+
+<ol>
+
+<li>Open the <strong>Students</strong> table.</li>
+
+<li>Place the cursor in the first available record.</li>
+
+<li>Enter the Student ID.</li>
+
+<li>Move to the Name field.</li>
+
+<li>Enter the student's name.</li>
+
+<li>Enter the class.</li>
+
+<li>Enter the section.</li>
+
+<li>Enter the marks.</li>
+
+<li>Move to the next record.</li>
+
+<li>Repeat the process for other students.</li>
+
+<li>Save the entered data.</li>
+
+</ol>
+
+</div>
+
+
+<!-- EDITING RECORDS -->
+
+<div class="card">
+
+<h2>Editing and Deleting Records</h2>
+
+<p>
+Database information may need to be corrected or removed. For example,
+a student's marks may have been entered incorrectly or a student may
+have been removed from a particular list.
+</p>
+
+<h3>Editing a Record</h3>
+
+<ol>
+
+<li>Open the required table.</li>
+
+<li>Locate the record that needs modification.</li>
+
+<li>Select the required field value.</li>
+
+<li>Replace the incorrect value with the correct value.</li>
+
+<li>Save the changes.</li>
+
+</ol>
+
+<h3>Deleting a Record</h3>
+
+<ol>
+
+<li>Locate the record that is no longer required.</li>
+
+<li>Select the complete record.</li>
+
+<li>Choose the delete-record option.</li>
+
+<li>Confirm the deletion if prompted.</li>
+
+<li>Save the database.</li>
+
+</ol>
+
+<div class="warning">
+
+<strong>Be Careful:</strong><br>
+
+Deleting a record removes the complete record. Always verify the
+record before deleting it.
+
+</div>
+
+</div>
+
+
+<!-- EDITING TABLE STRUCTURE -->
+
+<div class="card">
+
+<h2>Editing the Structure of a Table</h2>
+
+<p>
+Sometimes we may need to modify the structure of an existing table.
+For example, we may need to add a new field such as
+<strong>Date_of_Birth</strong>.
+</p>
+
+<h3>Possible Structural Changes</h3>
+
+<ul>
+
+<li>Add a new field.</li>
+
+<li>Change a field name.</li>
+
+<li>Change a field's data type.</li>
+
+<li>Remove a field when appropriate.</li>
+
+<li>Modify field properties.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Important:</strong><br>
+
+Structural changes should be made carefully. Changing or removing a
+field can affect the information already stored in the table.
+
+</div>
+
+</div>
+
+
+<!-- COMPLETE PRACTICAL -->
+
+<div class="card">
+
+<h2>Complete Practical Activity – Student Database</h2>
+
+<p>
+Create a complete student database by following the activity below.
+</p>
+
+<div class="example">
+
+<strong>Database Name:</strong> SchoolDatabase<br><br>
+
+<strong>Table Name:</strong> Students
+
+</div>
+
+<h3>Fields</h3>
+
+<table>
+
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+</tr>
+
+<tr>
+<td>Student_ID</td>
+<td>Integer</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td>Text</td>
+</tr>
+
+<tr>
+<td>Class</td>
+<td>Integer</td>
+</tr>
+
+<tr>
+<td>Section</td>
+<td>Text</td>
+</tr>
+
+<tr>
+<td>Marks</td>
+<td>Decimal</td>
+</tr>
+
+</table>
+
+<h3>Activity</h3>
+
+<ol>
+
+<li>Create the database.</li>
+
+<li>Create the Students table.</li>
+
+<li>Set Student_ID as the primary key.</li>
+
+<li>Enter at least five student records.</li>
+
+<li>Edit one student's marks.</li>
+
+<li>Add one new student record.</li>
+
+<li>Delete one unwanted record.</li>
+
+<li>Save the database.</li>
+
+</ol>
+
+<div class="tip">
+
+<strong>Learning Focus:</strong><br>
+
+While completing this activity, pay special attention to the difference
+between a <strong>field</strong>, a <strong>record</strong>, a
+<strong>table</strong>, and a <strong>primary key</strong>. These
+concepts form the foundation of the entire DBMS unit.
+
+</div>
+
+</div>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<div class="card">
+
+<h2>Important Questions</h2>
+
+
+<details>
+
+<summary>What is data?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Data refers to raw facts and figures that can be recorded, stored and
+processed. Examples include names, numbers, marks and dates.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is information?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Information is meaningful and useful data obtained after data has been
+organised, processed or interpreted.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is a database?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A database is an organised collection of related data that can be
+accessed, managed, updated and retrieved efficiently.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is DBMS?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+DBMS stands for Database Management System. It is software that allows
+users to create, store, organise, retrieve, update and manage data in a
+database.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is LibreOffice Base?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+LibreOffice Base is the database application included in the
+LibreOffice suite. It is used to create and manage databases and
+database objects.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is a table?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A table is a database object that stores related data in rows and
+columns.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is a field?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A field is a named column in a database table that represents a
+particular type or category of information.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is a record?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A record is a complete set of related field values representing one
+particular item or entity in a database table. It is generally
+represented by a row.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Differentiate between a field and a record.</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A field represents one category of information and is generally
+represented by a column. A record represents complete information about
+one item and is generally represented by a row.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is a data type?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A data type specifies the kind of value that can be stored in a
+particular database field.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>What is a primary key?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A primary key is a field, or combination of fields, that uniquely
+identifies each record in a database table.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Why is a primary key important?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A primary key is important because it uniquely identifies each record
+and helps distinguish one record from another.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Name the major database objects.</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The major database objects are tables, queries, forms and reports.
+
+</div>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- APPLICATION BASED -->
+
+<div class="card">
+
+<h2>Application-Based Questions</h2>
+
+
+<details>
+
+<summary>Case: A school wants to store the ID, name, class, section and marks of every student. Which database object should be used to store this information?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A <strong>table</strong> should be used to store the student information
+in rows and columns.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case: A school has two students with the same name. Which field can help identify them uniquely if each student has a different ID?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The <strong>Student_ID</strong> field can be used as the primary key if
+each student has a unique ID.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case: A database contains Student_ID, Name, Class and Marks as columns. What are these columns called?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+These columns are called <strong>fields</strong>.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case: The complete information of one student is stored in one row. What is that row called?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The complete row is called a <strong>record</strong>.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Case: A teacher wants to store a student's date of birth. Which type of data would be appropriate?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A <strong>Date</strong> data type would be appropriate for storing a
+student's date of birth.
+
+</div>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- PYQ -->
+
+<div class="card">
+
+<h2>CBSE PYQ-Based Practice</h2>
+
+<p>
+These questions follow the CBSE-style examination pattern. Questions
+without a verified examination year are labelled as
+<strong>CBSE PYQ-Based Practice Question</strong>.
+</p>
+
+
+<details>
+
+<summary>What is the role of a primary key in a database table?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A primary key uniquely identifies each record in a database table and
+helps distinguish one record from another.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>Differentiate between a field and a record.</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A field represents a particular category of information and is generally
+represented by a column, whereas a record represents complete
+information about one item and is generally represented by a row.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>CBSE PYQ-Based Practice Question: What is a database?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+A database is an organised collection of related data that can be
+accessed, managed, updated and retrieved efficiently.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>CBSE PYQ-Based Practice Question: What is DBMS?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+DBMS stands for Database Management System. It is software used to
+create, store, organise, retrieve and manage data in a database.
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>CBSE PYQ-Based Practice Question: What is the purpose of a primary key?</summary>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+The purpose of a primary key is to uniquely identify each record in a
+database table.
+
+</div>
+
+</details>
+
+</details>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>Practice MCQs</h2>
+
+<p>
+Test your understanding of the basic concepts of Database Management
+System, tables, fields, records, data types and primary keys.
+</p>
+
+<a class="session-link"
+   href="class10-it-unit3-session1-mcqs.html">
+Open 50 Practice MCQs
+</a>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="class10-it-unit3-database-management-system.html">
+← Unit 3 Home
+</a>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="class10-it-unit3-session2-queries.html">
+Queries and Data Retrieval →
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>
+<strong>Edusphere with Satyam</strong>
+</p>
+
+<p>
+Class 10 Information Technology (402) |
+Database Management System
+</p>
+
+<p>
+Learn • Practise • Understand
+</p>
+
+</footer>
+
+
+</body>
+</html>
