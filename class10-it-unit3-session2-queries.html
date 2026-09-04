@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Queries and Data Retrieval | Class 10 IT 402</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+        color: #1e293b;
+        line-height: 1.7;
+    }
+
+    header {
+        background: linear-gradient(135deg, #3730a3, #4f46e5, #0f766e);
+        color: white;
+        text-align: center;
+        padding: 35px 20px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        font-size: 16px;
+        opacity: 0.95;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .back-btn {
+        display: inline-block;
+        margin: 5px 0 20px;
+        padding: 10px 18px;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .back-btn:hover {
+        opacity: 0.9;
+    }
+
+    section {
+        background: white;
+        margin: 20px 0;
+        padding: 24px;
+        border-radius: 15px;
+        border-left: 5px solid #14b8a6;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+    }
+
+    h2 {
+        color: #1e3a5f;
+        margin-bottom: 12px;
+        font-size: 23px;
+    }
+
+    h3 {
+        color: #0f766e;
+        margin: 18px 0 8px;
+        font-size: 18px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    ul, ol {
+        margin: 10px 0 10px 25px;
+    }
+
+    li {
+        margin-bottom: 6px;
+    }
+
+    .definition {
+        background: #f0fdfa;
+        padding: 14px;
+        border-radius: 10px;
+        margin: 12px 0;
+        border-left: 4px solid #14b8a6;
+    }
+
+    .simple {
+        background: #eff6ff;
+        padding: 14px;
+        border-radius: 10px;
+        margin: 12px 0;
+        border-left: 4px solid #3b82f6;
+    }
+
+    .example {
+        background: #f8fafc;
+        padding: 14px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    .tip {
+        background: #fffbeb;
+        border-left: 4px solid #f59e0b;
+        padding: 14px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    .warning {
+        background: #fff7ed;
+        border-left: 4px solid #f97316;
+        padding: 14px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    details {
+        background: #f8fafc;
+        margin: 12px 0;
+        border-radius: 10px;
+        border: 1px solid #dbeafe;
+        overflow: hidden;
+    }
+
+    summary {
+        cursor: pointer;
+        padding: 13px 16px;
+        font-weight: bold;
+        color: #1e3a5f;
+        background: #eef6ff;
+    }
+
+    details div {
+        padding: 15px 18px;
+    }
+
+    code {
+        background: #e2e8f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: Consolas, monospace;
+    }
+
+    .question {
+        background: #f8fafc;
+        padding: 14px;
+        border-radius: 10px;
+        margin: 12px 0;
+        border-left: 4px solid #6366f1;
+    }
+
+    .mcq {
+        background: #f8fafc;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 12px 0;
+        border: 1px solid #e2e8f0;
+    }
+
+    .option {
+        display: block;
+        padding: 8px 12px;
+        margin: 6px 0;
+        border-radius: 7px;
+        background: #eef2ff;
+    }
+
+    .answer {
+        background: #ecfdf5;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 8px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        flex: 1;
+        min-width: 180px;
+        text-align: center;
+        background: #1e3a5f;
+        color: white;
+        text-decoration: none;
+        padding: 12px;
+        border-radius: 9px;
+        font-weight: bold;
+    }
+
+    footer {
+        background: #172554;
+        color: white;
+        text-align: center;
+        padding: 22px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 24px;
+        }
+
+        section {
+            padding: 18px;
+        }
+
+        .container {
+            padding: 14px;
+        }
+
+        .nav {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Session 2 – Queries and Data Retrieval</h1>
+    <p>Class 10 Information Technology (402)</p>
+</header>
+
+<div class="container">
+
+<a href="class10-it-unit3-database-management-system.html" class="back-btn">
+    ← Back to Unit 3
+</a>
+
+<section>
+    <h2>Understanding Queries</h2>
+
+    <p>
+        A database may contain hundreds or thousands of records. Sometimes,
+        we do not need to see all the records. We may need only specific
+        information, such as students who scored more than 80 marks or
+        students belonging to Class 10.
+    </p>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        A query is a request made to a database to retrieve specific
+        information from one or more tables according to given conditions.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        A query is a question or request that we give to a database to get
+        the information we need.
+    </div>
+
+    <p>
+        In LibreOffice Base, queries help us search, filter, sort and retrieve
+        required information without changing the original data stored in a table.
+    </p>
+
+    <details>
+        <summary>📌 Example – Understanding a Query</summary>
+        <div>
+            <p>Suppose the <strong>Students</strong> table contains:</p>
+
+            <ul>
+                <li>Student_ID</li>
+                <li>Name</li>
+                <li>Class</li>
+                <li>Section</li>
+                <li>Marks</li>
+            </ul>
+
+            <p>
+                If we want to find only students who scored more than 80 marks,
+                we can create a query using the condition:
+            </p>
+
+            <p><code>Marks &gt; 80</code></p>
+
+            <p>
+                The query will display only the records that satisfy this
+                condition.
+            </p>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>How a Query Works</h2>
+
+    <p>
+        A query generally works with the data stored in a table. We select
+        the table and fields that contain the required information and then
+        specify conditions if necessary.
+    </p>
+
+    <div class="example">
+        <strong>Basic process:</strong>
+        <p>
+            Table → Select Fields → Apply Criteria → Run Query → Required Results
+        </p>
+    </div>
+
+    <p>
+        A query does not normally create a separate copy of the original
+        records. It displays information from the existing database according
+        to the instructions given in the query.
+    </p>
+
+    <details>
+        <summary>📌 Example – Query Process</summary>
+        <div>
+            <p>
+                Suppose the Students table contains 50 students.
+            </p>
+
+            <p>
+                You want to display only the names and marks of students
+                scoring above 80.
+            </p>
+
+            <p>
+                You can select <strong>Name</strong> and <strong>Marks</strong>
+                as fields and use <code>Marks &gt; 80</code> as the criterion.
+            </p>
+
+            <p>
+                When the query is executed, only matching information is
+                displayed.
+            </p>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Uses of Queries</h2>
+
+    <p>Queries are useful for several database operations, such as:</p>
+
+    <ul>
+        <li>Finding specific records.</li>
+        <li>Filtering unwanted records from the displayed results.</li>
+        <li>Displaying selected fields from a table.</li>
+        <li>Finding records according to conditions.</li>
+        <li>Sorting the retrieved information.</li>
+        <li>Preparing specific information for reports.</li>
+        <li>Working efficiently with large amounts of data.</li>
+    </ul>
+
+    <details>
+        <summary>📌 Real-Life Example</summary>
+        <div>
+            <p>
+                A school database may contain information about 1,000 students.
+                The school may want to find:
+            </p>
+
+            <ul>
+                <li>Students of Class 10.</li>
+                <li>Students who scored more than 80 marks.</li>
+                <li>Students belonging to Section A.</li>
+                <li>Students whose marks are below 50.</li>
+            </ul>
+
+            <p>
+                Instead of manually searching through all records, suitable
+                queries can retrieve the required information quickly.
+            </p>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Query Criteria</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        A criterion is a condition specified in a query that determines which
+        records should be included in the query result.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        A criterion tells the database which records we want to see.
+    </div>
+
+    <p>
+        Criteria are particularly useful when a table contains many records.
+        Instead of displaying everything, the query displays only records
+        satisfying the specified condition.
+    </p>
+
+    <h3>Common Criteria</h3>
+
+    <ul>
+        <li><code>Marks &gt; 80</code> – marks greater than 80</li>
+        <li><code>Marks &lt; 50</code> – marks less than 50</li>
+        <li><code>Marks = 75</code> – marks equal to 75</li>
+        <li><code>Class = 10</code> – students of Class 10</li>
+        <li><code>Section = "A"</code> – students of Section A</li>
+    </ul>
+
+    <details>
+        <summary>🔎 Comparison Operators</summary>
+        <div>
+            <ul>
+                <li><code>=</code> Equal to</li>
+                <li><code>&gt;</code> Greater than</li>
+                <li><code>&lt;</code> Less than</li>
+                <li><code>&gt;=</code> Greater than or equal to</li>
+                <li><code>&lt;=</code> Less than or equal to</li>
+                <li><code>&lt;&gt;</code> Not equal to</li>
+            </ul>
+        </div>
+    </details>
+
+    <details>
+        <summary>🛠️ Practical Steps – Using Criteria in a Query</summary>
+        <div>
+            <ol>
+                <li>Open the required database in LibreOffice Base.</li>
+                <li>Select <strong>Queries</strong>.</li>
+                <li>Open the query in Design View or use the Query Wizard.</li>
+                <li>Select the required table.</li>
+                <li>Select the field on which you want to apply a condition.</li>
+                <li>Enter the required criterion.</li>
+                <li>Run the query.</li>
+                <li>Check whether the displayed records satisfy the condition.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Query Wizard</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Query Wizard is a guided tool in LibreOffice Base that helps users
+        create a query by selecting tables, fields, sorting options and
+        criteria step by step.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Query Wizard helps beginners create a query without having to
+        manually design every part of it.
+    </div>
+
+    <p>
+        It is especially useful for beginners because it provides a sequence
+        of steps for creating a query.
+    </p>
+
+    <h3>Basic Functions of Query Wizard</h3>
+
+    <ul>
+        <li>Select the table or data source.</li>
+        <li>Select the fields to display.</li>
+        <li>Set sorting options.</li>
+        <li>Set search conditions or criteria.</li>
+        <li>Review the query.</li>
+        <li>Save the query with a suitable name.</li>
+    </ul>
+
+    <details>
+        <summary>🛠️ Practical Steps – Creating a Query Using Query Wizard</summary>
+        <div>
+            <ol>
+                <li>Open your database in LibreOffice Base.</li>
+                <li>Select <strong>Queries</strong>.</li>
+                <li>Choose <strong>Use Wizard to Create Query</strong>.</li>
+                <li>Select the required table.</li>
+                <li>Select the fields you want to display.</li>
+                <li>Choose sorting options if required.</li>
+                <li>Enter criteria if required.</li>
+                <li>Review the selected options.</li>
+                <li>Give the query a meaningful name.</li>
+                <li>Finish the wizard and run the query.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Query Design</h2>
+
+    <p>
+        Query Design provides more control over the creation of a query.
+        Instead of following only a fixed sequence, the user can select
+        fields, arrange them and specify conditions according to the
+        requirement.
+    </p>
+
+    <div class="definition">
+        <strong>Query Design:</strong>
+        A method of creating and modifying a query by specifying its
+        tables, fields, sorting and criteria.
+    </div>
+
+    <details>
+        <summary>🛠️ Practical Steps – Creating a Query in Design View</summary>
+        <div>
+            <ol>
+                <li>Open the database.</li>
+                <li>Select <strong>Queries</strong>.</li>
+                <li>Choose <strong>Create Query in Design View</strong>.</li>
+                <li>Select the required table.</li>
+                <li>Add the required fields to the query.</li>
+                <li>Specify sorting if needed.</li>
+                <li>Enter criteria in the appropriate field.</li>
+                <li>Run the query to see the result.</li>
+                <li>Save the query with a meaningful name.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Practical – Creating a Simple Query</h2>
+
+    <p>
+        We will use the <strong>Students</strong> table created in Session 1.
+        Suppose the table contains Student_ID, Name, Class, Section and Marks.
+    </p>
+
+    <p>
+        Our requirement is to display the <strong>Name, Class and Marks</strong>
+        of students who scored more than 80.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Students Scoring More Than 80</summary>
+        <div>
+            <ol>
+                <li>Open <strong>SchoolDatabase</strong>.</li>
+                <li>Select <strong>Queries</strong>.</li>
+                <li>Choose <strong>Create Query in Design View</strong>.</li>
+                <li>Select the <strong>Students</strong> table.</li>
+                <li>Add the fields <strong>Name, Class and Marks</strong>.</li>
+                <li>In the criteria row under Marks, enter <code>&gt;80</code>.</li>
+                <li>Run the query.</li>
+                <li>Only students having marks greater than 80 should appear.</li>
+                <li>Save the query, for example, as <strong>HighScorers</strong>.</li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>📌 Expected Result</summary>
+        <div>
+            <p>
+                If the table contains students with marks 92, 85, 76 and 64,
+                the query will display only the records having 92 and 85.
+            </p>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Practical – Using Different Criteria</h2>
+
+    <p>
+        Different criteria can be applied depending on the information that
+        we want to retrieve.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Find Class 10 Students</summary>
+        <div>
+            <ol>
+                <li>Create or open a query using the Students table.</li>
+                <li>Select the required fields.</li>
+                <li>In the Class field, enter <code>10</code> as the criterion.</li>
+                <li>Run the query.</li>
+                <li>The result will show records belonging to Class 10.</li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>🛠️ Practical Steps – Find Section A Students</summary>
+        <div>
+            <ol>
+                <li>Select the Section field in the query.</li>
+                <li>Enter <code>"A"</code> as the criterion.</li>
+                <li>Run the query.</li>
+                <li>Only students belonging to Section A should be displayed.</li>
+            </ol>
+        </div>
+    </details>
+
+    <details>
+        <summary>🛠️ Practical Steps – Find Students Scoring Below 50</summary>
+        <div>
+            <ol>
+                <li>Select the Marks field.</li>
+                <li>Enter <code>&lt;50</code> as the criterion.</li>
+                <li>Run the query.</li>
+                <li>The result will display students whose marks are below 50.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Sorting Query Results</h2>
+
+    <p>
+        Sorting means arranging the query results in a particular order.
+        Data can generally be arranged in ascending or descending order.
+    </p>
+
+    <div class="definition">
+        <strong>Ascending Order:</strong>
+        Data is arranged from smaller to larger values or alphabetically
+        from A to Z.
+    </div>
+
+    <div class="definition">
+        <strong>Descending Order:</strong>
+        Data is arranged from larger to smaller values or alphabetically
+        from Z to A.
+    </div>
+
+    <details>
+        <summary>📌 Example – Sorting Marks</summary>
+        <div>
+            <p>
+                If marks are:
+                <code>65, 90, 45, 78</code>
+            </p>
+
+            <p>
+                Ascending order:
+                <code>45, 65, 78, 90</code>
+            </p>
+
+            <p>
+                Descending order:
+                <code>90, 78, 65, 45</code>
+            </p>
+        </div>
+    </details>
+
+    <details>
+        <summary>🛠️ Practical Steps – Sorting Query Results</summary>
+        <div>
+            <ol>
+                <li>Open the query in Design View.</li>
+                <li>Select the field according to which you want to sort.</li>
+                <li>Choose <strong>Ascending</strong> or <strong>Descending</strong>.</li>
+                <li>Run the query.</li>
+                <li>Check the order of the displayed results.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Running and Saving a Query</h2>
+
+    <p>
+        After designing a query, it must be executed to display the required
+        results. If the query may be used again, it should be saved with a
+        meaningful name.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Run and Save a Query</summary>
+        <div>
+            <ol>
+                <li>Open or create the query.</li>
+                <li>Check the selected fields and criteria.</li>
+                <li>Run the query.</li>
+                <li>Verify the result.</li>
+                <li>Save the query.</li>
+                <li>Give it a meaningful name such as <code>HighScorers</code>.</li>
+            </ol>
+        </div>
+    </details>
+
+    <div class="tip">
+        <strong>Tip:</strong>
+        Use meaningful query names. A name such as
+        <code>StudentsAbove80</code> makes the purpose of the query easy to
+        understand.
+    </div>
+</section>
+
+
+<section>
+    <h2>Query vs Table</h2>
+
+    <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+        <tr>
+            <th style="padding:10px; border:1px solid #cbd5e1; background:#eef2ff;">Table</th>
+            <th style="padding:10px; border:1px solid #cbd5e1; background:#eef2ff;">Query</th>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Stores the actual data.
+            </td>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Retrieves or displays required data.
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Contains fields and records.
+            </td>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Uses fields, conditions and sorting to obtain results.
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Main storage object.
+            </td>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Information retrieval object.
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Can contain all records.
+            </td>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Can display only selected records.
+            </td>
+        </tr>
+    </table>
+</section>
+
+
+<section>
+    <h2>Common Practical Mistakes</h2>
+
+    <ul>
+        <li>Selecting the wrong table.</li>
+        <li>Selecting an incorrect field.</li>
+        <li>Entering an incorrect criterion.</li>
+        <li>Using text and number criteria incorrectly.</li>
+        <li>Forgetting to run the query.</li>
+        <li>Saving a query with an unclear name.</li>
+        <li>Changing the table when the intention is only to retrieve data.</li>
+    </ul>
+
+    <div class="warning">
+        <strong>Important:</strong>
+        A query is used to retrieve information according to requirements.
+        Be careful not to accidentally modify the original table while
+        working with database objects.
+    </div>
+</section>
+
+
+<section>
+    <h2>Complete Practical Activity – Student Query</h2>
+
+    <p>
+        Create a query using the <strong>Students</strong> table of
+        <strong>SchoolDatabase</strong>.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Complete Activity</summary>
+        <div>
+            <ol>
+                <li>Open <strong>SchoolDatabase</strong>.</li>
+                <li>Open the <strong>Queries</strong> section.</li>
+                <li>Create a new query using the <strong>Students</strong> table.</li>
+                <li>Select <strong>Name, Class, Section and Marks</strong>.</li>
+                <li>Set the criterion <code>Marks &gt; 80</code>.</li>
+                <li>Set Marks to ascending or descending order as required.</li>
+                <li>Run the query.</li>
+                <li>Check the displayed records.</li>
+                <li>Save the query as <strong>StudentsAbove80</strong>.</li>
+                <li>Close the query.</li>
+                <li>Open it again to verify that the saved query works correctly.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Important Questions</h2>
+
+    <div class="question">
+        <strong>What is a query?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A query is a request made to a database to retrieve specific
+                information from one or more tables according to given
+                conditions.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>What is a criterion in a query?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A criterion is a condition used in a query to determine which
+                records should be included in the result.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>What is the purpose of Query Wizard?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                Query Wizard provides a step-by-step method for creating a
+                query by selecting tables, fields, sorting options and
+                criteria.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>Differentiate between a table and a query.</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A table stores the actual data in fields and records, whereas
+                a query retrieves and displays required information from the
+                database according to specified conditions.
+            </div>
+        </details>
+    </div>
+</section>
+
+
+<section>
+    <h2>Application-Based Questions</h2>
+
+    <div class="question">
+        <strong>
+            A school has a Students table containing 500 records. The teacher
+            wants to display only students who scored more than 90 marks.
+            What should the teacher use?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                The teacher should create a query and apply the criterion
+                <code>Marks &gt; 90</code>.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            A database contains students from Classes 9 and 10. How can you
+            display only Class 10 students?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                Create a query using the Students table and apply the criterion
+                <code>Class = 10</code>.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            A teacher wants to see students of Section A arranged from highest
+            marks to lowest marks. How can this be done?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                Create a query, apply the criterion
+                <code>Section = "A"</code> and sort the Marks field in
+                descending order.
+            </div>
+        </details>
+    </div>
+</section>
+
+
+<section>
+    <h2>CBSE PYQ-Based Practice</h2>
+
+    <p>
+        The following questions are provided as <strong>CBSE PYQ-Based
+        Practice Questions</strong> for exam preparation. They are not
+        assigned a specific year unless the year has been verified.
+    </p>
+
+    <div class="question">
+        <strong>What is the main purpose of a query in a database?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                To retrieve required information from the database according
+                to specified conditions.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>What is meant by query criteria?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                Query criteria are conditions used to select only those
+                records that satisfy the specified requirements.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            Write the criterion for displaying students having marks greater
+            than 75.
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                <code>Marks &gt; 75</code>
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            Name the LibreOffice Base tool that helps create queries through
+            a step-by-step process.
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                <strong>Query Wizard</strong>.
+            </div>
+        </details>
+    </div>
+</section>
+
+
+    <p style="margin-top:15px;">
+        <strong>More practice:</strong>
+        <a href="class10-it-unit3-session2-mcqs.html"
+           style="color:#0f766e; font-weight:bold;">
+            Open Session 2 MCQs
+        </a>
+    </p>
+</section>
+
+
+<div class="nav">
+
+    <a href="class10-it-unit3-session1-database-tables.html">
+        ← Session 1: Database and Tables
+    </a>
+
+    <a href="class10-it-unit3-database-management-system.html">
+        Unit 3 Home
+    </a>
+
+    <a href="class10-it-unit3-session3-forms.html">
+        Session 3: Forms and Data Entry →
+    </a>
+
+</div>
+
+</div>
+
+
+<footer>
+    <p><strong>Edusphere with Satyam</strong></p>
+    <p>Class 10 Information Technology (402)</p>
+</footer>
+
+</body>
+</html>
