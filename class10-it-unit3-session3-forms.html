@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forms and Data Entry | Class 10 IT 402</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc, #ecfeff);
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #3730a3, #4f46e5, #0f766e);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 0 0 25px 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin: 5px 0 20px;
+    padding: 10px 18px;
+    background: #1e3a5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 24px;
+    border-radius: 15px;
+    border-left: 5px solid #14b8a6;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+}
+
+h2 {
+    color: #1e3a5f;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+h3 {
+    color: #0f766e;
+    margin: 18px 0 8px;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul, ol {
+    margin: 10px 0 10px 25px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.definition {
+    background: #f0fdfa;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border-left: 4px solid #14b8a6;
+}
+
+.simple {
+    background: #eff6ff;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border-left: 4px solid #3b82f6;
+}
+
+.example {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.tip {
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.warning {
+    background: #fff7ed;
+    border-left: 4px solid #f97316;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+details {
+    background: #f8fafc;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #dbeafe;
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+    padding: 13px 16px;
+    font-weight: bold;
+    color: #1e3a5f;
+    background: #eef6ff;
+}
+
+details div {
+    padding: 15px 18px;
+}
+
+.question {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border-left: 4px solid #6366f1;
+}
+
+.mcq {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border: 1px solid #e2e8f0;
+}
+
+.option {
+    display: block;
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 7px;
+    background: #eef2ff;
+}
+
+.answer {
+    background: #ecfdf5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    background: #1e3a5f;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .container {
+        padding: 14px;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Session 3 – Forms and Data Entry</h1>
+    <p>Class 10 Information Technology (402)</p>
+</header>
+
+<div class="container">
+
+<a href="class10-it-unit3-database-management-system.html" class="back-btn">
+    ← Back to Unit 3
+</a>
+
+
+<section>
+    <h2>Introduction to Forms</h2>
+
+    <p>
+        A database table stores information in rows and columns. However,
+        entering and viewing data directly in a table may not always be
+        convenient, especially when the database contains many fields or
+        records.
+    </p>
+
+    <p>
+        A form provides a user-friendly way to enter, view and manage
+        information stored in a database.
+    </p>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        A form is a database object that provides a user interface for
+        entering, viewing and modifying data stored in database tables.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        A form is a user-friendly screen through which we can enter and
+        manage database information without working directly with the table.
+    </div>
+
+    <details>
+        <summary>📌 Example – Student Registration Form</summary>
+        <div>
+            <p>
+                A school may have a Students table containing Student_ID,
+                Name, Class, Section and Marks.
+            </p>
+
+            <p>
+                Instead of entering information directly into rows of the
+                table, a form can provide separate boxes for:
+            </p>
+
+            <ul>
+                <li>Student ID</li>
+                <li>Student Name</li>
+                <li>Class</li>
+                <li>Section</li>
+                <li>Marks</li>
+            </ul>
+
+            <p>
+                The user can enter the student's information through these
+                fields and the data can be stored in the underlying table.
+            </p>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Understanding a Database Form</h2>
+
+    <p>
+        A form acts as an interface between the user and the database.
+        It presents database fields in an organised and easier-to-use format.
+    </p>
+
+    <div class="example">
+        <strong>Basic flow:</strong>
+        <p>
+            User → Form → Database Table
+        </p>
+    </div>
+
+    <p>
+        When a user enters information through a form, the information can
+        be stored in the related table. Similarly, existing records can be
+        displayed through the form.
+    </p>
+
+    <h3>Important Parts of a Form</h3>
+
+    <ul>
+        <li>
+            <strong>Label:</strong> Displays information such as "Name" or
+            "Marks" to identify a field.
+        </li>
+
+        <li>
+            <strong>Control:</strong> An element through which the user
+            interacts with the form.
+        </li>
+
+        <li>
+            <strong>Field:</strong> Represents a particular type of data
+            stored in the database.
+        </li>
+    </ul>
+
+    <details>
+        <summary>📌 Example – How a Form Works</summary>
+        <div>
+            <p>
+                Suppose the form contains a text box labelled
+                <strong>Name</strong>.
+            </p>
+
+            <p>
+                When the user enters <strong>Rahul</strong> in that box,
+                the value is associated with the Name field of the related
+                database record.
+            </p>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Uses of Forms</h2>
+
+    <p>
+        Forms make interaction with a database easier and more organised.
+        Some important uses are:
+    </p>
+
+    <ul>
+        <li>Entering new records.</li>
+        <li>Viewing existing records.</li>
+        <li>Editing existing information.</li>
+        <li>Moving between database records.</li>
+        <li>Providing a simple interface for users.</li>
+        <li>Reducing the need to work directly with database tables.</li>
+        <li>Making data entry more organised.</li>
+    </ul>
+
+    <details>
+        <summary>📌 Example – School Database</summary>
+        <div>
+            <p>
+                A school clerk may use a student form to enter student
+                information instead of opening the table every time.
+            </p>
+
+            <p>
+                The form can provide clearly labelled fields, making the
+                data-entry process easier and reducing confusion.
+            </p>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Form Controls</h2>
+
+    <p>
+        Form controls are elements placed on a form that display information
+        or allow the user to enter and select data.
+    </p>
+
+    <h3>Text Box</h3>
+    <p>
+        A text box allows the user to enter or display text or other values.
+    </p>
+
+    <h3>Label</h3>
+    <p>
+        A label identifies a field or provides information to the user.
+        For example, <strong>Name</strong> can be used as a label for a
+        student's name field.
+    </p>
+
+    <h3>Check Box</h3>
+    <p>
+        A check box is generally used when an option can be selected or
+        cleared independently.
+    </p>
+
+    <h3>Option Button</h3>
+    <p>
+        An option button is generally used when the user needs to choose
+        one option from a group of mutually exclusive options.
+    </p>
+
+    <h3>List Box</h3>
+    <p>
+        A list box displays a list of available choices from which the user
+        can select.
+    </p>
+
+    <h3>Combo Box</h3>
+    <p>
+        A combo box combines a text-entry area with a list of available
+        choices, depending on how it is configured.
+    </p>
+
+    <details>
+        <summary>📌 Example – Controls in a Student Form</summary>
+        <div>
+            <ul>
+                <li><strong>Name:</strong> Text box</li>
+                <li><strong>Class:</strong> List or combo box</li>
+                <li><strong>Section:</strong> List or combo box</li>
+                <li><strong>Gender/Category choice:</strong> Option buttons, where appropriate</li>
+                <li><strong>Activity participation:</strong> Check box, where appropriate</li>
+            </ul>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Form Wizard</h2>
+
+    <div class="definition">
+        <strong>Formal Definition:</strong><br>
+        Form Wizard is a guided tool in LibreOffice Base that helps users
+        create a form by selecting a table or query, fields and layout
+        options through a sequence of steps.
+    </div>
+
+    <div class="simple">
+        <strong>Simple Definition:</strong><br>
+        Form Wizard helps us create a form step by step without designing
+        every part manually.
+    </div>
+
+    <p>
+        It is especially useful for beginners because the wizard provides
+        a structured process for selecting fields and arranging the form.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Creating a Form Using Form Wizard</summary>
+        <div>
+            <ol>
+                <li>Open <strong>SchoolDatabase</strong> in LibreOffice Base.</li>
+                <li>Select the <strong>Forms</strong> section.</li>
+                <li>Choose <strong>Use Wizard to Create Form</strong>.</li>
+                <li>Select the required table or query.</li>
+                <li>Select the fields that you want to include in the form.</li>
+                <li>Move to the next step of the wizard.</li>
+                <li>Select an appropriate layout for the form.</li>
+                <li>Choose the required data-entry options.</li>
+                <li>Select a suitable style if available.</li>
+                <li>Give the form a meaningful name.</li>
+                <li>Finish the wizard.</li>
+                <li>Open the form and check whether it works correctly.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Creating a Form for the Students Table</h2>
+
+    <p>
+        We can create a form using the <strong>Students</strong> table
+        created in Session 1.
+    </p>
+
+    <p>
+        The table contains fields such as:
+        <strong>Student_ID, Name, Class, Section and Marks.</strong>
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Create a Student Form</summary>
+        <div>
+            <ol>
+                <li>Open <strong>SchoolDatabase</strong>.</li>
+                <li>Open the <strong>Forms</strong> section.</li>
+                <li>Start the Form Wizard.</li>
+                <li>Select the <strong>Students</strong> table.</li>
+                <li>Select Student_ID, Name, Class, Section and Marks.</li>
+                <li>Choose a suitable form layout.</li>
+                <li>Complete the remaining wizard options.</li>
+                <li>Give the form a meaningful name such as <strong>StudentForm</strong>.</li>
+                <li>Finish the wizard.</li>
+                <li>Open the form and check the displayed fields.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Entering Data Through a Form</h2>
+
+    <p>
+        One of the main purposes of a form is to make data entry easier.
+        Instead of entering values directly into a table, the user can
+        enter information through clearly labelled controls.
+    </p>
+
+    <p>
+        When a new record is entered correctly and saved, the information
+        becomes part of the related database table.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Enter a New Student Record</summary>
+        <div>
+            <ol>
+                <li>Open the <strong>StudentForm</strong>.</li>
+                <li>Move to the position for entering a new record.</li>
+                <li>Enter the Student_ID.</li>
+                <li>Enter the student's Name.</li>
+                <li>Enter the Class.</li>
+                <li>Enter or select the Section.</li>
+                <li>Enter the Marks.</li>
+                <li>Check the entered information.</li>
+                <li>Save or move to another record so that the new record is stored.</li>
+            </ol>
+        </div>
+    </details>
+
+    <div class="tip">
+        <strong>Tip:</strong>
+        Always check important values such as Student_ID and Marks before
+        saving a record.
+    </div>
+</section>
+
+
+<section>
+    <h2>Viewing and Navigating Records</h2>
+
+    <p>
+        A form can be used to move through records stored in the database.
+        Record navigation allows the user to view different records without
+        manually searching through the entire table.
+    </p>
+
+    <p>
+        Navigation controls commonly allow movement to the first, previous,
+        next and last record.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Navigate Through Records</summary>
+        <div>
+            <ol>
+                <li>Open the StudentForm.</li>
+                <li>Locate the record navigation controls.</li>
+                <li>Use the <strong>First Record</strong> control to go to the first record.</li>
+                <li>Use <strong>Next Record</strong> to move forward.</li>
+                <li>Use <strong>Previous Record</strong> to move backward.</li>
+                <li>Use <strong>Last Record</strong> to move to the final record.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Editing Records Through a Form</h2>
+
+    <p>
+        Existing information may sometimes need to be corrected or updated.
+        A form can be used to locate a record and modify its information.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Edit a Record</summary>
+        <div>
+            <ol>
+                <li>Open the StudentForm.</li>
+                <li>Navigate to the record that needs modification.</li>
+                <li>Click the required field.</li>
+                <li>Change the incorrect or outdated information.</li>
+                <li>Check the modified information.</li>
+                <li>Save the record.</li>
+            </ol>
+        </div>
+    </details>
+
+    <div class="warning">
+        <strong>Important:</strong>
+        Before changing a record, make sure that you are editing the correct
+        student or record.
+    </div>
+</section>
+
+
+<section>
+    <h2>Deleting Records Through a Form</h2>
+
+    <p>
+        Sometimes a record may need to be removed from a database. Deleting
+        a record should be done carefully because the record may no longer
+        be available after deletion.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Delete a Record</summary>
+        <div>
+            <ol>
+                <li>Open the StudentForm.</li>
+                <li>Navigate to the record that needs to be deleted.</li>
+                <li>Verify that it is the correct record.</li>
+                <li>Use the appropriate delete-record command.</li>
+                <li>Confirm the deletion if LibreOffice asks for confirmation.</li>
+                <li>Check the remaining records.</li>
+            </ol>
+        </div>
+    </details>
+
+    <div class="warning">
+        <strong>Remember:</strong>
+        Do not delete a record unless you are sure that it is no longer
+        required or that deletion is authorised.
+    </div>
+</section>
+
+
+<section>
+    <h2>Form Design and Design View</h2>
+
+    <p>
+        A form can be modified after it has been created. Design View allows
+        the user to work with the controls and layout of a form.
+    </p>
+
+    <p>
+        Basic form design may include moving controls, changing their size,
+        changing labels and arranging information in a clearer way.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Basic Form Customization</summary>
+        <div>
+            <ol>
+                <li>Open the required form in Design View.</li>
+                <li>Select the control that you want to modify.</li>
+                <li>Move the control to the required position.</li>
+                <li>Resize the control if necessary.</li>
+                <li>Modify the label or displayed text where required.</li>
+                <li>Arrange related controls in a logical order.</li>
+                <li>Save the form.</li>
+                <li>Open the form normally and check its appearance.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Form vs Table</h2>
+
+    <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+
+        <tr>
+            <th style="padding:10px; border:1px solid #cbd5e1; background:#eef2ff;">
+                Table
+            </th>
+
+            <th style="padding:10px; border:1px solid #cbd5e1; background:#eef2ff;">
+                Form
+            </th>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Mainly stores data.
+            </td>
+
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Provides an interface for working with data.
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Displays data in rows and columns.
+            </td>
+
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Displays information using controls and fields.
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Can be less convenient for beginners.
+            </td>
+
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Provides a more user-friendly interface.
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Used as a main data storage object.
+            </td>
+
+            <td style="padding:10px; border:1px solid #cbd5e1;">
+                Used for entering, viewing and modifying data.
+            </td>
+        </tr>
+
+    </table>
+</section>
+
+
+<section>
+    <h2>Common Practical Mistakes</h2>
+
+    <ul>
+        <li>Selecting the wrong table while creating the form.</li>
+        <li>Selecting unnecessary or incorrect fields.</li>
+        <li>Giving the form an unclear name.</li>
+        <li>Entering incorrect information in a field.</li>
+        <li>Forgetting to save changes.</li>
+        <li>Editing the wrong record.</li>
+        <li>Deleting a record accidentally.</li>
+        <li>Changing the form layout without checking the final result.</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Complete Practical Activity – Student Data Entry Form</h2>
+
+    <p>
+        Create a form for the Students table and use it to enter and manage
+        student records.
+    </p>
+
+    <details>
+        <summary>🛠️ Practical Steps – Complete Activity</summary>
+        <div>
+            <ol>
+                <li>Open <strong>SchoolDatabase</strong>.</li>
+                <li>Open the <strong>Forms</strong> section.</li>
+                <li>Use the Form Wizard to create a new form.</li>
+                <li>Select the <strong>Students</strong> table.</li>
+                <li>Add Student_ID, Name, Class, Section and Marks.</li>
+                <li>Select a suitable layout.</li>
+                <li>Name the form <strong>StudentForm</strong>.</li>
+                <li>Finish and open the form.</li>
+                <li>Enter a new student record.</li>
+                <li>Navigate to another existing record.</li>
+                <li>Modify one piece of information in that record.</li>
+                <li>Save the modification.</li>
+                <li>Verify the information in the form.</li>
+            </ol>
+        </div>
+    </details>
+</section>
+
+
+<section>
+    <h2>Important Questions</h2>
+
+    <div class="question">
+        <strong>What is a form in a database?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A form is a database object that provides a user interface
+                for entering, viewing and modifying data stored in database
+                tables.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>Why are forms used in databases?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                Forms make data entry, viewing and modification easier by
+                providing a user-friendly interface instead of requiring
+                users to work directly with tables.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>What is Form Wizard?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                Form Wizard is a guided tool in LibreOffice Base that helps
+                users create a form step by step by selecting tables,
+                fields and layout options.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>What is the difference between a table and a form?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A table primarily stores data in fields and records, whereas
+                a form provides a user-friendly interface for entering,
+                viewing and modifying that data.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>What is the purpose of a text box in a form?</strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A text box is used to enter or display information such as
+                text or other values associated with a database field.
+            </div>
+        </details>
+    </div>
+</section>
+
+
+<section>
+    <h2>Application-Based Questions</h2>
+
+    <div class="question">
+        <strong>
+            A school clerk finds it difficult to enter student information
+            directly into a large table. Which database object can make
+            the process easier?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A <strong>form</strong> can make the process easier by
+                providing a user-friendly interface for entering student
+                information.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            A school wants a screen containing separate fields for Student
+            ID, Name, Class and Marks. What should be created?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A <strong>database form</strong> should be created using the
+                required fields.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            A teacher wants to correct the marks of an existing student
+            record. Can a form be used for this purpose?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                Yes. The teacher can open the form, locate the required
+                record, modify the Marks field and save the change.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            Which tool can help a beginner create a form step by step?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                <strong>Form Wizard</strong> can help create the form step
+                by step.
+            </div>
+        </details>
+    </div>
+</section>
+
+
+<section>
+    <h2>CBSE PYQ-Based Practice</h2>
+
+    <p>
+        These are provided as <strong>CBSE PYQ-Based Practice Questions</strong>.
+        A specific year is not mentioned unless the question has been
+        verified for that year.
+    </p>
+
+    <div class="question">
+        <strong>
+            What is the purpose of a form in a database?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A form provides a user-friendly interface for entering,
+                viewing and modifying information stored in database tables.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            Name the wizard used to create a form in LibreOffice Base.
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                <strong>Form Wizard</strong>.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            What is the use of a text box in a database form?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A text box is used to enter or display values associated with
+                a database field.
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <strong>
+            How does a form make data entry easier?
+        </strong>
+
+        <details>
+            <summary>View Answer</summary>
+            <div>
+                A form presents fields and controls in an organised,
+                user-friendly interface, making it easier to enter and
+                manage database records.
+            </div>
+        </details>
+    </div>
+</section>
+
+
+<section>
+    <h2>Practice MCQs</h2>
+
+    <div class="mcq">
+        <strong>1. What is the main purpose of a database form?</strong>
+
+        <span class="option">A. To delete the database</span>
+        <span class="option">B. To provide a user interface for database data</span>
+        <span class="option">C. To create an operating system</span>
+        <span class="option">D. To calculate formulas</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: B. To provide a user interface for database data</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>2. Which tool helps create a form step by step?</strong>
+
+        <span class="option">A. Query Wizard</span>
+        <span class="option">B. Form Wizard</span>
+        <span class="option">C. Table Wizard</span>
+        <span class="option">D. Report Wizard</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: B. Form Wizard</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>3. Which control is commonly used to enter text?</strong>
+
+        <span class="option">A. Text Box</span>
+        <span class="option">B. Label</span>
+        <span class="option">C. Option Button</span>
+        <span class="option">D. Check Box</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: A. Text Box</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>4. Which database object primarily stores records?</strong>
+
+        <span class="option">A. Form</span>
+        <span class="option">B. Table</span>
+        <span class="option">C. Query</span>
+        <span class="option">D. Control</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: B. Table</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>5. Which control displays a descriptive name for another control?</strong>
+
+        <span class="option">A. Label</span>
+        <span class="option">B. Text Box</span>
+        <span class="option">C. Check Box</span>
+        <span class="option">D. Combo Box</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: A. Label</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>6. A form can be used to:</strong>
+
+        <span class="option">A. Enter data</span>
+        <span class="option">B. View records</span>
+        <span class="option">C. Modify records</span>
+        <span class="option">D. All of these</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: D. All of these</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>7. Which control allows a user to select an item from a list?</strong>
+
+        <span class="option">A. Label</span>
+        <span class="option">B. List Box</span>
+        <span class="option">C. Text Box</span>
+        <span class="option">D. Button</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: B. List Box</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>8. What acts as an interface between the user and the database?</strong>
+
+        <span class="option">A. Form</span>
+        <span class="option">B. Field</span>
+        <span class="option">C. Record</span>
+        <span class="option">D. Data type</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: A. Form</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>9. Which view can be used for modifying the arrangement of form controls?</strong>
+
+        <span class="option">A. Design View</span>
+        <span class="option">B. Table View</span>
+        <span class="option">C. Query View</span>
+        <span class="option">D. Print View</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: A. Design View</strong>
+            </div>
+        </details>
+    </div>
+
+    <div class="mcq">
+        <strong>10. Which object contains the actual records used by a form?</strong>
+
+        <span class="option">A. Table</span>
+        <span class="option">B. Label</span>
+        <span class="option">C. Text Box</span>
+        <span class="option">D. Form Control</span>
+
+        <details>
+            <summary>View Answer</summary>
+            <div class="answer">
+                <strong>Answer: A. Table</strong>
+            </div>
+        </details>
+    </div>
+
+    <p style="margin-top:15px;">
+        <strong>More practice:</strong>
+        <a href="class10-it-unit3-session3-mcqs.html"
+           style="color:#0f766e; font-weight:bold;">
+            Open Session 3 MCQs
+        </a>
+    </p>
+</section>
+
+
+<div class="nav">
+
+    <a href="class10-it-unit3-session2-queries.html">
+        ← Session 2: Queries and Data Retrieval
+    </a>
+
+    <a href="class10-it-unit3-database-management-system.html">
+        Unit 3 Home
+    </a>
+
+    <a href="class10-it-unit3-session4-reports-management.html">
+        Session 4: Reports and Database Management →
+    </a>
+
+</div>
+
+</div>
+
+
+<footer>
+    <p><strong>Edusphere with Satyam</strong></p>
+    <p>Class 10 Information Technology (402)</p>
+</footer>
+
+</body>
+</html>
