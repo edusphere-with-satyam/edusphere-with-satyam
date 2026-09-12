@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Perfect Competition and Market Equilibrium | Class 11 Economics</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(15,23,42,.12);
+}
+
+header h1{
+    font-size:2rem;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:1rem;
+    opacity:.95;
+}
+
+.container{
+    max-width:1050px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.back-btn{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:8px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.card{
+    background:white;
+    margin:20px 0;
+    padding:24px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 14px rgba(15,23,42,.08);
+}
+
+.card h2{
+    color:#1e3a5f;
+    margin-bottom:14px;
+    font-size:1.35rem;
+}
+
+.card h3{
+    color:#0f766e;
+    margin:18px 0 8px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ccfbf1;
+    color:#115e59;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:.8rem;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.definition{
+    background:#f8fafc;
+    padding:14px 16px;
+    border-radius:9px;
+    margin:12px 0;
+    border-left:4px solid #6366f1;
+}
+
+.simple{
+    background:#ecfeff;
+    padding:14px 16px;
+    border-radius:9px;
+    margin:12px 0;
+    border-left:4px solid #0f766e;
+}
+
+.note{
+    background:#fff7ed;
+    padding:14px 16px;
+    border-radius:9px;
+    margin:14px 0;
+    border-left:4px solid #f97316;
+}
+
+.formula{
+    background:#eef2ff;
+    color:#312e81;
+    padding:15px;
+    border-radius:9px;
+    text-align:center;
+    font-weight:bold;
+    margin:14px 0;
+    font-size:1.05rem;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:10px;
+    text-align:left;
+    vertical-align:top;
+}
+
+th{
+    background:#e0f2fe;
+    color:#1e3a5f;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+details{
+    margin:14px 0;
+    border-radius:9px;
+    overflow:hidden;
+}
+
+summary{
+    cursor:pointer;
+    background:#1e3a5f;
+    color:white;
+    padding:11px 15px;
+    font-weight:bold;
+}
+
+.inside{
+    background:#f8fafc;
+    padding:17px;
+    border:1px solid #cbd5e1;
+    border-top:none;
+}
+
+.graph-box{
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    overflow-x:auto;
+    text-align:center;
+}
+
+.graph-box svg{
+    max-width:100%;
+    height:auto;
+}
+
+.question{
+    background:#f8fafc;
+    padding:16px;
+    margin:12px 0;
+    border-radius:9px;
+    border-left:4px solid #6366f1;
+}
+
+.answer{
+    background:#ecfeff;
+    padding:15px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+.mcq-btn{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a{
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:11px 16px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:35px;
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:1.55rem;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:.9rem;
+    }
+
+    .nav a{
+        width:100%;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🏪 Perfect Competition and Market Equilibrium</h1>
+    <p>Class 11 Economics • Unit 4 – Forms of Market and Price Determination</p>
+</header>
+
+<div class="container">
+
+<a href="economics-class11.html" class="back-btn">
+← Back to Class 11 Economics
+</a>
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<span class="badge">Topic 1</span>
+
+<h2>📚 Introduction to Market and Perfect Competition</h2>
+
+<p>
+A market is an arrangement through which buyers and sellers interact with each
+other for the purchase and sale of goods and services. A market does not
+necessarily mean a physical place. Buyers and sellers can interact through
+shops, markets, telephone, websites, applications or other communication
+systems.
+</p>
+
+<p>
+Markets differ according to the number of buyers and sellers, nature of the
+product, degree of competition and the ease with which firms can enter or leave
+the market.
+</p>
+
+<p>
+The major forms of market structure studied in economics include
+<strong>perfect competition, monopoly, monopolistic competition and oligopoly.</strong>
+</p>
+
+<div class="simple">
+<strong>Simple idea:</strong> Market structure tells us how a market is organised
+and how much control buyers and sellers have over price and output.
+</div>
+
+</div>
+
+
+<!-- MEANING OF PERFECT COMPETITION -->
+
+<div class="card">
+
+<h2>🏪 Meaning of Perfect Competition</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Perfect competition is a market structure in which there are a very large
+number of buyers and sellers, firms sell a homogeneous product, and no
+individual firm is able to influence the market price.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong>
+Perfect competition is a market where there are many buyers and sellers,
+the product is identical, and an individual firm has no power to decide the
+market price.
+</div>
+
+<p>
+The word <strong>perfect</strong> does not mean that every real-world market
+actually satisfies all these conditions. Perfect competition is primarily an
+economic model used to understand how price and output are determined when
+competition is extremely strong.
+</p>
+
+</div>
+
+
+<!-- FEATURES -->
+
+<div class="card">
+
+<h2>🔑 Features of Perfect Competition</h2>
+
+<h3>Large Number of Buyers and Sellers</h3>
+
+<p>
+There are a very large number of buyers and sellers. Each individual buyer
+purchases only a small part of total market output, while each individual firm
+produces only a small proportion of total market supply.
+</p>
+
+<p>
+Because an individual firm represents only a very small part of the market,
+changing its own output has no significant effect on the total market supply.
+Therefore, it cannot independently determine the market price.
+</p>
+
+<h3>Homogeneous Product</h3>
+
+<p>
+All firms sell a homogeneous product. This means that the products supplied by
+different firms are identical in terms of their essential characteristics.
+Buyers therefore do not have a reason to prefer one seller's product over
+another merely because of product differences.
+</p>
+
+<div class="simple">
+If products are identical and available at the same market price, a buyer would
+generally be willing to purchase from any seller.
+</div>
+
+<h3>Free Entry and Exit of Firms</h3>
+
+<p>
+There are no significant restrictions preventing firms from entering the
+industry when profitable opportunities exist or leaving the industry when they
+cannot earn sufficient returns.
+</p>
+
+<p>
+This assumption is important because the entry and exit of firms can influence
+market supply and therefore affect the market price over time.
+</p>
+
+<h3>Perfect Knowledge</h3>
+
+<p>
+Buyers and sellers are assumed to have complete knowledge about relevant market
+conditions, particularly the prevailing price.
+</p>
+
+<p>
+If the same homogeneous product were sold at different prices and buyers knew
+about the difference, they would prefer the lower-priced seller. Perfect
+knowledge therefore supports the existence of a common market price.
+</p>
+
+<h3>Perfect Mobility of Factors of Production</h3>
+
+<p>
+Factors of production are assumed to be freely mobile between different uses
+and firms. Resources can move toward activities where they are more
+productively or profitably employed.
+</p>
+
+<h3>Price-Taking Behaviour</h3>
+
+<p>
+An individual firm is a <strong>price taker</strong>. It accepts the price
+determined by market demand and market supply.
+</p>
+
+<div class="note">
+<strong>Important:</strong> A price-taking firm does not mean that the firm
+receives no revenue. It means that the individual firm cannot independently
+change the market price by changing its own output.
+</div>
+
+<h3>Low or No Significant Selling Costs</h3>
+
+<p>
+Since firms sell homogeneous products and buyers are assumed to have perfect
+knowledge, there is little need for advertising or other methods designed to
+differentiate one firm's product from another.
+</p>
+
+</div>
+
+
+<!-- FIRM AND INDUSTRY -->
+
+<div class="card">
+
+<h2>🏭 Firm and Industry</h2>
+
+<div class="definition">
+<strong>Firm:</strong> A firm is an individual production unit that produces
+and sells a commodity.
+</div>
+
+<div class="definition">
+<strong>Industry:</strong> An industry is the collection of all firms producing
+the same or closely related commodity.
+</div>
+
+<div class="simple">
+<strong>Example:</strong> If there are 1,000 firms producing the same commodity,
+each individual producer is a firm, while all 1,000 firms together constitute
+the industry.
+</div>
+
+<table>
+
+<tr>
+<th>Firm</th>
+<th>Industry</th>
+</tr>
+
+<tr>
+<td>Individual producer</td>
+<td>Collection of all firms producing the commodity</td>
+</tr>
+
+<tr>
+<td>Small share of total market supply</td>
+<td>Determines total market supply</td>
+</tr>
+
+<tr>
+<td>Takes the market price</td>
+<td>Market demand and supply determine equilibrium price</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- MARKET DEMAND -->
+
+<div class="card">
+
+<h2>📉 Market Demand</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Market demand refers to the total quantity of a commodity demanded by all
+buyers in the market at different possible prices during a given period.
+</div>
+
+<p>
+Market demand is obtained by adding the quantities demanded by all individual
+buyers at each price.
+</p>
+
+<div class="formula">
+Market Demand = Sum of Individual Demands
+</div>
+
+<p>
+The market demand curve generally slopes downward from left to right. This
+indicates an inverse relationship between price and quantity demanded, other
+things remaining constant.
+</p>
+
+</div>
+
+
+<!-- MARKET SUPPLY -->
+
+<div class="card">
+
+<h2>📈 Market Supply</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Market supply refers to the total quantity of a commodity that all firms are
+willing and able to supply at different possible prices during a given period.
+</div>
+
+<p>
+Market supply is obtained by adding the quantities supplied by all individual
+firms at each price.
+</p>
+
+<div class="formula">
+Market Supply = Sum of Individual Supplies
+</div>
+
+<p>
+The market supply curve generally slopes upward from left to right, indicating
+that producers are generally willing to supply more at higher prices, other
+things remaining constant.
+</p>
+
+</div>
+
+
+<!-- DEMAND SUPPLY GRAPH -->
+
+<div class="card">
+
+<h2>⚖️ Interaction of Market Demand and Market Supply</h2>
+
+<details>
+
+<summary>📊 View Demand–Supply Graph and Interpretation</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 700 450" width="700">
+
+<line x1="80" y1="370" x2="650" y2="370"
+stroke="#334155" stroke-width="2"/>
+
+<line x1="80" y1="370" x2="80" y2="40"
+stroke="#334155" stroke-width="2"/>
+
+<text x="365" y="420" text-anchor="middle">
+Quantity
+</text>
+
+<text x="22" y="220"
+transform="rotate(-90 22 220)"
+text-anchor="middle">
+Price
+</text>
+
+<path d="M120 80 L600 340"
+fill="none"
+stroke="#4f46e5"
+stroke-width="4"/>
+
+<text x="555" y="320">D</text>
+
+<path d="M120 340 L600 80"
+fill="none"
+stroke="#0f766e"
+stroke-width="4"/>
+
+<text x="555" y="105">S</text>
+
+<circle cx="360" cy="210" r="7" fill="#1e3a5f"/>
+
+<line x1="360" y1="210" x2="360" y2="370"
+stroke="#64748b"
+stroke-dasharray="7,6"
+stroke-width="2"/>
+
+<line x1="80" y1="210" x2="360" y2="210"
+stroke="#64748b"
+stroke-dasharray="7,6"
+stroke-width="2"/>
+
+<text x="360" y="390" text-anchor="middle">Qe</text>
+
+<text x="65" y="215" text-anchor="end">Pe</text>
+
+</svg>
+
+</div>
+
+<h3>Detailed Graph Interpretation</h3>
+
+<p>
+The downward-sloping <strong>D curve</strong> represents market demand.
+The upward-sloping <strong>S curve</strong> represents market supply.
+</p>
+
+<p>
+The two curves intersect at point <strong>E</strong>. This point represents
+market equilibrium because at this price and quantity, the quantity demanded
+is equal to the quantity supplied.
+</p>
+
+<p>
+The corresponding price is called the <strong>equilibrium price (Pe)</strong>
+and the corresponding quantity is called the
+<strong>equilibrium quantity (Qe)</strong>.
+</p>
+
+<div class="formula">
+At equilibrium: Quantity Demanded = Quantity Supplied
+</div>
+
+<p>
+There is no pressure for the market price to move away from equilibrium when
+the quantities demanded and supplied are equal, assuming other conditions
+remain unchanged.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- EQUILIBRIUM -->
+
+<div class="card">
+
+<h2>⚖️ Market Equilibrium</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Market equilibrium is a situation in which the quantity demanded of a commodity
+is equal to its quantity supplied at a particular price.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong>
+Market equilibrium is the point where buyers want to buy exactly the quantity
+that sellers want to sell at the prevailing price.
+</div>
+
+<h3>Equilibrium Price</h3>
+
+<p>
+The price at which quantity demanded equals quantity supplied is known as the
+<strong>equilibrium price</strong>.
+</p>
+
+<h3>Equilibrium Quantity</h3>
+
+<p>
+The quantity bought and sold at the equilibrium price is called the
+<strong>equilibrium quantity</strong>.
+</p>
+
+<div class="formula">
+Qd = Qs
+</div>
+
+</div>
+
+
+<!-- DEMAND SUPPLY TABLE -->
+
+<div class="card">
+
+<h2>📋 Determination of Equilibrium through a Schedule</h2>
+
+<table>
+
+<tr>
+<th>Price (₹)</th>
+<th>Quantity Demanded</th>
+<th>Quantity Supplied</th>
+<th>Market Situation</th>
+</tr>
+
+<tr>
+<td>10</td>
+<td>100</td>
+<td>40</td>
+<td>Excess Demand</td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>80</td>
+<td>60</td>
+<td>Excess Demand</td>
+</tr>
+
+<tr>
+<td>30</td>
+<td>60</td>
+<td>60</td>
+<td><strong>Equilibrium</strong></td>
+</tr>
+
+<tr>
+<td>40</td>
+<td>40</td>
+<td>80</td>
+<td>Excess Supply</td>
+</tr>
+
+<tr>
+<td>50</td>
+<td>20</td>
+<td>100</td>
+<td>Excess Supply</td>
+</tr>
+
+</table>
+
+<p>
+At ₹30, quantity demanded and quantity supplied are both 60 units.
+Therefore, ₹30 is the equilibrium price and 60 units is the equilibrium
+quantity.
+</p>
+
+</div>
+
+
+<!-- EXCESS DEMAND -->
+
+<div class="card">
+
+<h2>🔴 Excess Demand</h2>
+
+<div class="definition">
+<strong>Definition:</strong>
+Excess demand occurs when quantity demanded is greater than quantity supplied
+at a particular price.
+</div>
+
+<div class="formula">
+Excess Demand = Qd − Qs
+</div>
+
+<p>
+Suppose at a price of ₹20, buyers want to purchase 80 units while sellers are
+willing to supply only 60 units.</p>
+
+<div class="formula">
+Excess Demand = 80 − 60 = 20 units
+</div>
+
+<p>
+There is a shortage of 20 units. Buyers compete for the limited quantity
+available, creating upward pressure on price.
+</p>
+
+<div class="simple">
+<strong>Below equilibrium price → generally excess demand → upward pressure on
+price.</strong>
+</div>
+
+</div>
+
+
+<!-- EXCESS SUPPLY -->
+
+<div class="card">
+
+<h2>🔵 Excess Supply</h2>
+
+<div class="definition">
+<strong>Definition:</strong>
+Excess supply occurs when quantity supplied is greater than quantity demanded
+at a particular price.
+</div>
+
+<div class="formula">
+Excess Supply = Qs − Qd
+</div>
+
+<p>
+Suppose at a price of ₹40, sellers want to supply 80 units while buyers want
+to purchase only 40 units.</p>
+
+<div class="formula">
+Excess Supply = 80 − 40 = 40 units
+</div>
+
+<p>
+There is a surplus of 40 units. Sellers may reduce prices to attract buyers,
+creating downward pressure on price.
+</p>
+
+<div class="simple">
+<strong>Above equilibrium price → generally excess supply → downward pressure
+on price.</strong>
+</div>
+
+</div>
+
+
+<!-- ADJUSTMENT -->
+
+<div class="card">
+
+<h2>🔄 Adjustment toward Equilibrium</h2>
+
+<p>
+The market tends toward equilibrium through changes in price when there is
+excess demand or excess supply.
+</p>
+
+<table>
+
+<tr>
+<th>Situation</th>
+<th>Condition</th>
+<th>Pressure on Price</th>
+</tr>
+
+<tr>
+<td>Excess Demand</td>
+<td>Qd &gt; Qs</td>
+<td>Upward</td>
+</tr>
+
+<tr>
+<td>Equilibrium</td>
+<td>Qd = Qs</td>
+<td>No pressure for change</td>
+</tr>
+
+<tr>
+<td>Excess Supply</td>
+<td>Qs &gt; Qd</td>
+<td>Downward</td>
+</tr>
+
+</table>
+
+<p>
+This adjustment process helps explain why the intersection of demand and supply
+is important in determining the equilibrium price.
+</p>
+
+</div>
+
+
+<!-- CHANGE IN DEMAND -->
+
+<div class="card">
+
+<h2>📈 Change in Demand and New Equilibrium</h2>
+
+<p>
+A change in demand means a shift of the entire demand curve. It occurs because
+of factors other than the commodity's own price, such as income, tastes,
+preferences, prices of related goods, population or expectations.
+</p>
+
+<h3>Increase in Demand</h3>
+
+<p>
+An increase in demand shifts the demand curve to the right, assuming supply
+remains unchanged. The new intersection generally results in a higher
+equilibrium price and higher equilibrium quantity.
+</p>
+
+<details>
+
+<summary>📊 View Increase in Demand Graph and Interpretation</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 700 450" width="700">
+
+<line x1="80" y1="370" x2="650" y2="370"
+stroke="#334155" stroke-width="2"/>
+
+<line x1="80" y1="370" x2="80" y2="40"
+stroke="#334155" stroke-width="2"/>
+
+<text x="360" y="420" text-anchor="middle">Quantity</text>
+
+<text x="22" y="220"
+transform="rotate(-90 22 220)"
+text-anchor="middle">Price</text>
+
+<path d="M120 80 L600 340"
+stroke="#64748b"
+stroke-width="4"
+fill="none"/>
+
+<text x="575" y="330">D₁</text>
+
+<path d="M200 80 L650 330"
+stroke="#4f46e5"
+stroke-width="4"
+fill="none"/>
+
+<text x="615" y="320">D₂</text>
+
+<path d="M120 340 L600 80"
+stroke="#0f766e"
+stroke-width="4"
+fill="none"/>
+
+<text x="570" y="100">S</text>
+
+<circle cx="360" cy="210" r="6" fill="#1e3a5f"/>
+
+<circle cx="420" cy="195" r="6" fill="#1e3a5f"/>
+
+<line x1="360" y1="210" x2="360" y2="370"
+stroke="#64748b" stroke-dasharray="6,6"/>
+
+<line x1="420" y1="195" x2="420" y2="370"
+stroke="#64748b" stroke-dasharray="6,6"/>
+
+<text x="360" y="390" text-anchor="middle">Q₁</text>
+<text x="420" y="390" text-anchor="middle">Q₂</text>
+
+</svg>
+
+</div>
+
+<h3>Detailed Interpretation</h3>
+
+<p>
+The original equilibrium is determined by the intersection of D₁ and S.
+When demand increases, the demand curve shifts rightward from D₁ to D₂.
+</p>
+
+<p>
+At the original price, buyers now want to purchase more than firms are willing
+to supply. This creates excess demand.
+</p>
+
+<p>
+The resulting pressure on price raises the equilibrium price. As firms respond
+to the higher price by supplying more, the new equilibrium quantity also
+increases.
+</p>
+
+<div class="note">
+<strong>Result:</strong> With supply unchanged, an increase in demand generally
+raises both equilibrium price and equilibrium quantity.
+</div>
+
+</div>
+
+</details>
+
+
+<h3>Decrease in Demand</h3>
+
+<p>
+A decrease in demand shifts the demand curve to the left. With supply unchanged,
+the new equilibrium generally involves a lower equilibrium price and lower
+equilibrium quantity.
+</p>
+
+</div>
+
+
+<!-- CHANGE IN SUPPLY -->
+
+<div class="card">
+
+<h2>📉 Change in Supply and New Equilibrium</h2>
+
+<p>
+A change in supply means a shift of the entire supply curve. It can result from
+changes in input prices, technology, taxes, subsidies, number of firms,
+expectations and other supply-side factors.
+</p>
+
+<h3>Increase in Supply</h3>
+
+<p>
+An increase in supply shifts the supply curve to the right. With demand
+unchanged, the new equilibrium generally results in a lower equilibrium price
+and higher equilibrium quantity.
+</p>
+
+<details>
+
+<summary>📊 View Increase in Supply Graph and Interpretation</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 700 450" width="700">
+
+<line x1="80" y1="370" x2="650" y2="370"
+stroke="#334155" stroke-width="2"/>
+
+<line x1="80" y1="370" x2="80" y2="40"
+stroke="#334155" stroke-width="2"/>
+
+<text x="360" y="420" text-anchor="middle">Quantity</text>
+
+<text x="22" y="220"
+transform="rotate(-90 22 220)"
+text-anchor="middle">Price</text>
+
+<path d="M120 80 L600 340"
+stroke="#4f46e5"
+stroke-width="4"
+fill="none"/>
+
+<text x="570" y="330">D</text>
+
+<path d="M120 340 L600 80"
+stroke="#64748b"
+stroke-width="4"
+fill="none"/>
+
+<text x="570" y="100">S₁</text>
+
+<path d="M200 350 L650 100"
+stroke="#0f766e"
+stroke-width="4"
+fill="none"/>
+
+<text x="610" y="115">S₂</text>
+
+<circle cx="360" cy="210" r="6" fill="#1e3a5f"/>
+
+<circle cx="420" cy="195" r="6" fill="#1e3a5f"/>
+
+<line x1="360" y1="210" x2="360" y2="370"
+stroke="#64748b" stroke-dasharray="6,6"/>
+
+<line x1="420" y1="195" x2="420" y2="370"
+stroke="#64748b" stroke-dasharray="6,6"/>
+
+<text x="360" y="390" text-anchor="middle">Q₁</text>
+<text x="420" y="390" text-anchor="middle">Q₂</text>
+
+</svg>
+
+</div>
+
+<h3>Detailed Interpretation</h3>
+
+<p>
+The original equilibrium is determined by D and S₁. When supply increases,
+the supply curve shifts rightward from S₁ to S₂.
+</p>
+
+<p>
+At the original price, firms are now willing to supply more than buyers want
+to purchase. This creates downward pressure on price.
+</p>
+
+<p>
+The lower price encourages greater quantity demanded, resulting in a new
+equilibrium with a higher quantity and a lower price.
+</p>
+
+<div class="note">
+<strong>Result:</strong> With demand unchanged, an increase in supply generally
+reduces equilibrium price and increases equilibrium quantity.
+</div>
+
+</div>
+
+</details>
+
+
+<h3>Decrease in Supply</h3>
+
+<p>
+A decrease in supply shifts the supply curve to the left. With demand unchanged,
+the equilibrium price generally rises while equilibrium quantity falls.
+</p>
+
+</div>
+
+
+<!-- MOVEMENT VS SHIFT -->
+
+<div class="card">
+
+<h2>↔️ Movement along a Curve vs Shift of a Curve</h2>
+
+<p>
+This distinction is extremely important in demand and supply analysis.
+</p>
+
+<table>
+
+<tr>
+<th>Movement along Curve</th>
+<th>Shift of Curve</th>
+</tr>
+
+<tr>
+<td>Caused by change in the commodity's own price.</td>
+<td>Caused by factors other than the commodity's own price.</td>
+</tr>
+
+<tr>
+<td>Occurs on the same curve.</td>
+<td>The entire curve moves to a new position.</td>
+</tr>
+
+<tr>
+<td>For example, expansion or contraction of demand.</td>
+<td>For example, change in income or population causing demand to shift.</td>
+</tr>
+
+<tr>
+<td>For supply, a change in own price causes movement along the same supply curve.</td>
+<td>Technology, input prices, taxes or number of firms can shift supply.</td>
+</tr>
+
+</table>
+
+<div class="simple">
+<strong>Remember:</strong> Change in own price → movement along the curve.
+Other determinants → shift of the curve.
+</div>
+
+</div>
+
+
+<!-- DEMAND DETERMINANTS -->
+
+<div class="card">
+
+<h2>🛒 Determinants of Demand</h2>
+
+<p>
+Demand for a commodity is influenced by several factors other than its own
+price. A change in these factors can shift the demand curve.
+</p>
+
+<table>
+
+<tr>
+<th>Factor</th>
+<th>Possible Effect</th>
+</tr>
+
+<tr>
+<td>Income of consumers</td>
+<td>Can increase or decrease demand depending on the nature of the good.</td>
+</tr>
+
+<tr>
+<td>Prices of related goods</td>
+<td>Changes in prices of substitutes and complementary goods can affect demand.</td>
+</tr>
+
+<tr>
+<td>Tastes and preferences</td>
+<td>Favourable preferences can increase demand.</td>
+</tr>
+
+<tr>
+<td>Population</td>
+<td>An increase in the number of consumers can increase market demand.</td>
+</tr>
+
+<tr>
+<td>Future expectations</td>
+<td>Expected future price or income changes can influence present demand.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- SUPPLY DETERMINANTS -->
+
+<div class="card">
+
+<h2>🏭 Determinants of Supply</h2>
+
+<p>
+Supply is influenced by several factors other than the commodity's own price.
+Changes in these factors shift the supply curve.
+</p>
+
+<table>
+
+<tr>
+<th>Factor</th>
+<th>Effect on Supply</th>
+</tr>
+
+<tr>
+<td>Input prices</td>
+<td>Lower input costs can increase supply.</td>
+</tr>
+
+<tr>
+<td>Technology</td>
+<td>Improved technology can increase productive capacity and supply.</td>
+</tr>
+
+<tr>
+<td>Taxes</td>
+<td>Higher production taxes can reduce supply, other things remaining constant.</td>
+</tr>
+
+<tr>
+<td>Subsidies</td>
+<td>Subsidies can encourage production and increase supply.</td>
+</tr>
+
+<tr>
+<td>Number of firms</td>
+<td>More firms generally increase market supply.</td>
+</tr>
+
+<tr>
+<td>Future expectations</td>
+<td>Expected future conditions can influence present supply.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- SIMULTANEOUS CHANGES -->
+
+<div class="card">
+
+<h2>🔄 Simultaneous Changes in Demand and Supply</h2>
+
+<p>
+Sometimes demand and supply change at the same time. In such situations, the
+effect on equilibrium price and quantity depends on the direction and magnitude
+of the two shifts.
+</p>
+
+<table>
+
+<tr>
+<th>Change</th>
+<th>Likely Effect on Price</th>
+<th>Likely Effect on Quantity</th>
+</tr>
+
+<tr>
+<td>Demand increases</td>
+<td>Rises</td>
+<td>Rises</td>
+</tr>
+
+<tr>
+<td>Demand decreases</td>
+<td>Falls</td>
+<td>Falls</td>
+</tr>
+
+<tr>
+<td>Supply increases</td>
+<td>Falls</td>
+<td>Rises</td>
+</tr>
+
+<tr>
+<td>Supply decreases</td>
+<td>Rises</td>
+<td>Falls</td>
+</tr>
+
+</table>
+
+<div class="note">
+When demand and supply change simultaneously, do not memorise a single result
+for price. Analyse the relative size and direction of the shifts.
+</div>
+
+</div>
+
+
+<!-- NUMERICAL -->
+
+<div class="card">
+
+<h2>🧮 Five Strong Numerical Questions</h2>
+
+
+<div class="question">
+
+<strong>Question 1:</strong><br>
+At a price of ₹20, quantity demanded is 80 units and quantity supplied is
+50 units. Calculate excess demand.
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+Excess Demand = Qd − Qs
+
+= 80 − 50
+
+= <strong>30 units</strong>
+
+Therefore, the market has an excess demand of <strong>30 units</strong>.
+
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 2:</strong><br>
+At different prices, the following quantities are demanded and supplied:
+
+<table>
+<tr>
+<th>Price</th>
+<th>Qd</th>
+<th>Qs</th>
+</tr>
+
+<tr>
+<td>₹10</td>
+<td>100</td>
+<td>40</td>
+</tr>
+
+<tr>
+<td>₹20</td>
+<td>80</td>
+<td>60</td>
+</tr>
+
+<tr>
+<td>₹30</td>
+<td>60</td>
+<td>60</td>
+</tr>
+
+<tr>
+<td>₹40</td>
+<td>40</td>
+<td>80</td>
+</tr>
+</table>
+
+Find equilibrium price and equilibrium quantity.
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+At equilibrium:
+
+Qd = Qs
+
+At ₹30:
+
+Qd = 60 units
+
+Qs = 60 units
+
+Therefore:
+
+<strong>Equilibrium Price = ₹30</strong>
+
+<strong>Equilibrium Quantity = 60 units</strong>
+
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 3:</strong><br>
+Market demand is given by Qd = 100 − 2P and market supply is given by
+Qs = 20 + 2P. Find the equilibrium price and quantity.
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+At equilibrium:
+
+Qd = Qs
+
+Therefore:
+
+100 − 2P = 20 + 2P
+
+100 − 20 = 2P + 2P
+
+80 = 4P
+
+P = <strong>₹20</strong>
+
+Substitute P = 20 into the demand equation:
+
+Qd = 100 − 2(20)
+
+Qd = 100 − 40
+
+Qd = <strong>60 units</strong>
+
+Therefore:
+
+<strong>Equilibrium Price = ₹20</strong>
+
+<strong>Equilibrium Quantity = 60 units</strong>
+
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 4:</strong><br>
+Market demand is Qd = 120 − 2P and market supply is Qs = 20 + 3P.
+Find the equilibrium price and quantity.
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+At equilibrium:
+
+120 − 2P = 20 + 3P
+
+120 − 20 = 3P + 2P
+
+100 = 5P
+
+P = <strong>₹20</strong>
+
+Now substitute P = 20:
+
+Qd = 120 − 2(20)
+
+= 120 − 40
+
+= <strong>80 units</strong>
+
+Therefore:
+
+<strong>Equilibrium Price = ₹20</strong>
+
+<strong>Equilibrium Quantity = 80 units</strong>
+
+</div>
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 5:</strong><br>
+The equilibrium price of a commodity is ₹50 and the equilibrium quantity is
+100 units. Due to an increase in demand, at the original price buyers now want
+to purchase 130 units while sellers continue to supply 100 units. Explain the
+market situation and the direction in which equilibrium price is expected to
+move, assuming supply remains unchanged.
+
+<details>
+<summary>View Answer</summary>
+
+<div class="answer">
+
+At the original price:
+
+Quantity Demanded = 130 units
+
+Quantity Supplied = 100 units
+
+Therefore:
+
+Excess Demand = 130 − 100
+
+= <strong>30 units</strong>
+
+The market has excess demand.
+
+Buyers compete for the limited available supply, creating upward pressure on
+price.
+
+As price rises, producers are willing to supply more and consumers generally
+demand less. The market moves toward a new equilibrium.
+
+Therefore:
+
+<strong>The equilibrium price is expected to rise.</strong>
+
+With supply unchanged, an increase in demand generally also results in a higher
+equilibrium quantity.
+
+</div>
+</details>
+
+</div>
+
+</div>
+
+
+<!-- CONCEPT SUMMARY -->
+
+<div class="card">
+
+<h2>🧠 Important Relationships at a Glance</h2>
+
+<table>
+
+<tr>
+<th>Concept</th>
+<th>Key Relationship</th>
+</tr>
+
+<tr>
+<td>Market Equilibrium</td>
+<td>Qd = Qs</td>
+</tr>
+
+<tr>
+<td>Excess Demand</td>
+<td>Qd &gt; Qs</td>
+</tr>
+
+<tr>
+<td>Excess Supply</td>
+<td>Qs &gt; Qd</td>
+</tr>
+
+<tr>
+<td>Increase in Demand</td>
+<td>Demand curve shifts right</td>
+</tr>
+
+<tr>
+<td>Decrease in Demand</td>
+<td>Demand curve shifts left</td>
+</tr>
+
+<tr>
+<td>Increase in Supply</td>
+<td>Supply curve shifts right</td>
+</tr>
+
+<tr>
+<td>Decrease in Supply</td>
+<td>Supply curve shifts left</td>
+</tr>
+
+<tr>
+<td>Perfect Competition</td>
+<td>Firm is a price taker</td>
+</tr>
+
+<tr>
+<td>Homogeneous Product</td>
+<td>Products of different firms are identical in the relevant sense</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- EXAM TRAPS -->
+
+<div class="card">
+
+<h2>⚠️ Important Exam Points and Common Confusions</h2>
+
+<h3>1. Price Taker does not mean Price Maker</h3>
+
+<p>
+A perfectly competitive firm accepts the market price. It cannot independently
+fix a different market price because its share of total market supply is
+insignificant.
+</p>
+
+<h3>2. Market Demand is not Individual Demand</h3>
+
+<p>
+Individual demand belongs to one consumer. Market demand is the sum of the
+demands of all consumers.
+</p>
+
+<h3>3. Market Supply is not Individual Supply</h3>
+
+<p>
+Individual supply belongs to one firm. Market supply is the total supply of
+all firms.
+</p>
+
+<h3>4. Equilibrium does not mean Maximum Price</h3>
+
+<p>
+Equilibrium is the price at which quantity demanded equals quantity supplied.
+It is not necessarily the highest or lowest possible price.
+</p>
+
+<h3>5. Movement is not Shift</h3>
+
+<p>
+A change in the commodity's own price causes movement along the demand or
+supply curve. Changes in other determinants cause the entire curve to shift.
+</p>
+
+<h3>6. Excess Demand and Excess Supply</h3>
+
+<p>
+Below equilibrium price, there is generally excess demand. Above equilibrium
+price, there is generally excess supply, assuming the usual downward-sloping
+demand and upward-sloping supply curves.
+</p>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>📝 Topic 1 MCQ Test</h2>
+
+<p>
+Test your understanding of Perfect Competition and Market Equilibrium through
+the separate MCQ practice page.
+</p>
+
+<a href="class11-economics-unit4-perfect-competition-mcqs.html"
+class="mcq-btn">
+Take Topic 1 MCQ Test →
+</a>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="economics-class11.html">
+← Unit 4 Home
+</a>
+
+<a href="economics-class11.html">
+Unit 4 Home
+</a>
+
+<a href="class11-economics-unit4-other-market-forms.html">
+Topic 2 →
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+<p>© Edusphere with Satyam • Class 11 Economics</p>
+</footer>
+
+</body>
+</html>
