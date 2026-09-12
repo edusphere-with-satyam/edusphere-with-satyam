@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Production Function and Returns to a Factor | Class 11 Economics</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
+    color:#1f2937;
+    line-height:1.75;
+}
+
+header{
+    background:linear-gradient(135deg,#172554,#3730a3,#0f766e);
+    color:white;
+    text-align:center;
+    padding:35px 18px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:8px 0 0;
+    font-size:17px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.back{
+    display:inline-block;
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    margin:5px 0 20px;
+    font-weight:bold;
+}
+
+.back:hover{
+    background:#3730a3;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin:22px 0;
+    border-radius:16px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.card h2{
+    color:#312e81;
+    border-bottom:3px solid #818cf8;
+    padding-bottom:8px;
+}
+
+.card h3{
+    color:#1e3a8a;
+}
+
+.topic-box{
+    background:#f8fafc;
+    border-left:6px solid #4f46e5;
+    padding:18px;
+    margin:18px 0;
+    border-radius:10px;
+}
+
+.definition{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:16px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.simple{
+    background:#f0fdf4;
+    border-left:5px solid #16a34a;
+    padding:16px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.important{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:16px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.warning{
+    background:#fef2f2;
+    border-left:5px solid #dc2626;
+    padding:16px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.formula{
+    background:#f8fafc;
+    border:1px solid #cbd5e1;
+    padding:14px;
+    margin:14px 0;
+    border-radius:9px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    color:#172554;
+}
+
+.badge{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1e40af;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+    background:white;
+}
+
+th{
+    background:#172554;
+    color:white;
+    padding:10px;
+    border:1px solid #cbd5e1;
+}
+
+td{
+    padding:10px;
+    border:1px solid #cbd5e1;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+details{
+    margin:15px 0;
+}
+
+summary{
+    cursor:pointer;
+    display:inline-block;
+    background:#172554;
+    color:white;
+    padding:8px 14px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+summary:hover{
+    background:#3730a3;
+}
+
+details .inside{
+    margin-top:14px;
+    padding:17px;
+    background:#f8fafc;
+    border-left:4px solid #14b8a6;
+    border-radius:8px;
+}
+
+.graph-box{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+    overflow-x:auto;
+}
+
+.graph-title{
+    text-align:center;
+    font-weight:bold;
+    color:#172554;
+    margin-bottom:10px;
+}
+
+svg{
+    width:100%;
+    max-width:850px;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+
+.question{
+    background:#f8fafc;
+    border-left:5px solid #4f46e5;
+    padding:15px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+.answer{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:15px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.nav a{
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.nav a:hover{
+    background:#3730a3;
+}
+
+.mcq-button{
+    display:inline-block;
+    background:#172554;
+    color:white;
+    text-decoration:none;
+    padding:11px 17px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.mcq-button:hover{
+    background:#3730a3;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:28px;
+    margin-top:30px;
+}
+
+@media(max-width:650px){
+
+    .container{
+        padding:12px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,td{
+        padding:7px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>Class 11 Economics</h1>
+
+<p>
+Introductory Microeconomics | Unit 3 — Producer Behaviour and Supply
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back" href="economics-class11.html">
+← Back to Class 11 Economics
+</a>
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<span class="badge">UNIT 3 • TOPIC 1</span>
+
+<h2>🏭 Production Function and Returns to a Factor</h2>
+
+<p>
+Production is one of the most important economic activities performed
+by a producer or firm. A producer combines different inputs such as
+labour, capital, land and raw materials to produce goods and services.
+The study of production helps us understand how the quantity of output
+changes when the quantity of inputs changes.
+</p>
+
+<p>
+This topic introduces the concept of production function, fixed and
+variable factors, short run and long run, Total Product, Average Product,
+Marginal Product and the Law of Variable Proportions.
+</p>
+
+<div class="important">
+
+<strong>📌 Main focus of this topic:</strong><br><br>
+
+Production → Inputs and Output → Production Function →
+Short Run and Long Run → TP → AP → MP →
+Law of Variable Proportions → Three Stages →
+TP, AP and MP Relationships
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTION -->
+
+<div class="card">
+
+<h2>1. 📘 Meaning of Production</h2>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong><br>
+
+Production is the process of transforming inputs or factors of
+production into goods and services that satisfy human wants.
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+Production means using available resources to create goods and services.
+</div>
+
+<p>
+Production does not necessarily mean manufacturing a physical product.
+The creation or addition of utility through economic activity is also
+considered production.
+</p>
+
+<h3>Examples of Production</h3>
+
+<ul>
+
+<li>A farmer uses land, seeds, labour and machinery to produce crops.</li>
+
+<li>A factory uses machines, raw materials and workers to produce goods.</li>
+
+<li>A teacher provides educational services.</li>
+
+<li>A transport company provides transportation services.</li>
+
+<li>A bank provides financial services.</li>
+
+</ul>
+
+<details>
+
+<summary>▶ Example: Production in a Bakery</summary>
+
+<div class="inside">
+
+<p>
+Suppose a bakery uses flour, labour, ovens, electricity and a building
+to produce bread.
+</p>
+
+<p>
+Here, flour and electricity are inputs, workers provide labour, the oven
+and building are capital/fixed resources, and bread is the final output.
+</p>
+
+<p>
+The producer's objective is to organise these resources efficiently so
+that the required output can be produced.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- INPUTS OUTPUT -->
+
+<div class="card">
+
+<h2>2. ⚙️ Inputs and Output</h2>
+
+<h3>Input</h3>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong><br>
+
+An input is a resource or factor used by a producer in the production
+process.
+</div>
+
+<h3>Output</h3>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong><br>
+
+Output refers to the quantity of goods or services produced by a firm
+during a given period.
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+Inputs are what a producer uses, while output is what the producer
+produces.
+</div>
+
+<div class="important">
+
+<strong>Basic Production Process:</strong><br><br>
+
+Inputs → Production Process → Output
+
+</div>
+
+<details>
+
+<summary>▶ Example: Garment Factory</summary>
+
+<div class="inside">
+
+<p><strong>Inputs:</strong></p>
+
+<ul>
+<li>Workers</li>
+<li>Machines</li>
+<li>Cloth</li>
+<li>Electricity</li>
+<li>Factory building</li>
+</ul>
+
+<p>
+These inputs are combined through the production process to produce
+garments.
+</p>
+
+<p>
+<strong>Output:</strong> Number of garments produced.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- FACTORS -->
+
+<div class="card">
+
+<h2>3. 🌍 Factors of Production</h2>
+
+<p>
+Factors of production are the resources used for producing goods and
+services.
+</p>
+
+<h3>Land</h3>
+
+<p>
+Land refers to all natural resources used in production, such as soil,
+water, forests and minerals.
+</p>
+
+<h3>Labour</h3>
+
+<p>
+Labour refers to the physical and mental effort of human beings used
+in the production of goods and services.
+</p>
+
+<h3>Capital</h3>
+
+<p>
+Capital refers to man-made resources such as machines, tools,
+equipment and buildings that are used for further production.
+</p>
+
+<h3>Entrepreneur</h3>
+
+<p>
+An entrepreneur organises different factors of production, takes
+business decisions, bears risk and coordinates production activities.
+</p>
+
+<div class="important">
+
+<strong>Remember:</strong>
+
+Land, labour, capital and entrepreneurship are commonly discussed as
+the major factors of production.
+</div>
+
+</div>
+
+
+<!-- FIXED VARIABLE -->
+
+<div class="card">
+
+<h2>4. ⚖️ Fixed Factor and Variable Factor</h2>
+
+<h3>Fixed Factor</h3>
+
+<div class="definition">
+
+A fixed factor is a factor whose quantity cannot be changed during the
+relevant short-run production period.
+</div>
+
+<p>
+Examples may include the size of a factory building, heavy machinery
+or the amount of land available to a farmer.
+</p>
+
+<h3>Variable Factor</h3>
+
+<div class="definition">
+
+A variable factor is a factor whose quantity can be changed during the
+relevant production period.
+</div>
+
+<p>
+Labour is commonly treated as a variable factor in short-run analysis.
+</p>
+
+<table>
+
+<tr>
+<th>Basis</th>
+<th>Fixed Factor</th>
+<th>Variable Factor</th>
+</tr>
+
+<tr>
+<td>Quantity</td>
+<td>Cannot be changed in the short run</td>
+<td>Can be changed in the short run</td>
+</tr>
+
+<tr>
+<td>Example</td>
+<td>Factory building</td>
+<td>Labour</td>
+</tr>
+
+<tr>
+<td>Short-run role</td>
+<td>Remains fixed</td>
+<td>Can be increased or decreased</td>
+</tr>
+
+</table>
+
+<div class="warning">
+
+<strong>⚠️ Important:</strong><br>
+
+Fixed does not mean that the factor can never be changed. It means that
+its quantity is fixed with respect to the particular short-run period
+being considered.
+</div>
+
+</div>
+
+
+<!-- PRODUCTION FUNCTION -->
+
+<div class="card">
+
+<h2>5. 📊 Production Function</h2>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong><br>
+
+A production function shows the technical relationship between the
+quantities of inputs used and the maximum quantity of output that can
+be produced with those inputs, given the state of technology.
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+Production function tells us how much output can be produced from
+different combinations of inputs.
+</div>
+
+<h3>General Form</h3>
+
+<div class="formula">
+
+Q = f(L, K)
+
+</div>
+
+<p>Where:</p>
+
+<ul>
+
+<li><strong>Q</strong> = Quantity of output</li>
+
+<li><strong>L</strong> = Labour</li>
+
+<li><strong>K</strong> = Capital</li>
+
+<li><strong>f</strong> = Functional relationship between inputs and output</li>
+
+</ul>
+
+<h3>Important Features of Production Function</h3>
+
+<ul>
+
+<li>It shows a technical relationship between inputs and output.</li>
+
+<li>It relates quantities of inputs with quantity of output.</li>
+
+<li>It assumes a given state of technology.</li>
+
+<li>It considers the maximum possible output from given inputs under the specified conditions.</li>
+
+<li>It does not directly describe the monetary cost of production.</li>
+
+</ul>
+
+<details>
+
+<summary>▶ Example 1: Factory Production Function</summary>
+
+<div class="inside">
+
+<p>
+Suppose a factory uses labour and machines to produce tables.
+If the number of workers changes while the machines remain fixed,
+the quantity of tables produced may also change.
+</p>
+
+<p>
+The production function helps us study this technical relationship
+between the inputs and output.
+</p>
+
+</div>
+
+</details>
+
+<details>
+
+<summary>▶ Example 2: Agricultural Production</summary>
+
+<div class="inside">
+
+<p>
+A farmer uses land, labour, seeds, fertilisers and machinery to produce
+wheat.
+</p>
+
+<p>
+If the farmer changes the amount of labour while keeping land fixed,
+the resulting change in wheat production can be studied through the
+production function.
+</p>
+
+</div>
+
+</details>
+
+<div class="important">
+
+<strong>📌 Technology:</strong><br>
+
+A change in technology can change the production possibilities of a
+firm. Therefore, production function is generally discussed for a
+given state of technology.
+</div>
+
+</div>
+
+
+<!-- SHORT LONG RUN -->
+
+<div class="card">
+
+<h2>6. ⏳ Short Run and Long Run</h2>
+
+<h3>Short Run</h3>
+
+<div class="definition">
+
+The short run is a period in which at least one factor of production is
+fixed while other factors may be varied.
+</div>
+
+<h3>Long Run</h3>
+
+<div class="definition">
+
+The long run is a period in which all factors of production can be
+varied.
+</div>
+
+<div class="warning">
+
+<strong>⚠️ Very Important:</strong><br>
+
+Short run and long run are not defined simply by the number of days,
+months or years. The distinction is based on whether factors of
+production can be changed.
+</div>
+
+<table>
+
+<tr>
+<th>Basis</th>
+<th>Short Run</th>
+<th>Long Run</th>
+</tr>
+
+<tr>
+<td>Fixed factor</td>
+<td>At least one factor remains fixed</td>
+<td>All factors can be varied</td>
+</tr>
+
+<tr>
+<td>Variable factors</td>
+<td>Some factors can be varied</td>
+<td>All factors can be varied</td>
+</tr>
+
+<tr>
+<td>Production flexibility</td>
+<td>Relatively limited</td>
+<td>Greater flexibility</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- TP -->
+
+<div class="card">
+
+<h2>7. 📈 Total Product (TP)</h2>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong><br>
+
+Total Product is the total quantity of output produced by all units of
+the variable factor employed with given quantities of fixed factors.
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+TP means the total output produced by the firm.
+</div>
+
+<p>
+Suppose a factory has a fixed number of machines and keeps increasing
+the number of workers. The total quantity produced by all the workers
+together is Total Product.
+</p>
+
+<div class="formula">
+
+TP = Total Output
+
+</div>
+
+<details>
+
+<summary>▶ Example</summary>
+
+<div class="inside">
+
+<p>
+If 5 workers together produce 60 units of output, then:
+</p>
+
+<div class="formula">
+TP = 60 units
+</div>
+
+<p>
+TP does not mean output per worker. Output per worker is measured by
+Average Product.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- AP -->
+
+<div class="card">
+
+<h2>8. 📊 Average Product (AP)</h2>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong><br>
+
+Average Product is the output produced per unit of the variable factor.
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+AP tells us the average output produced by each unit of the variable
+factor.
+</div>
+
+<div class="formula">
+
+AP = TP ÷ Units of Variable Factor
+
+</div>
+
+<p>
+If 5 workers produce 60 units of output:
+</p>
+
+<div class="formula">
+
+AP = 60 ÷ 5 = 12 units per worker
+
+</div>
+
+<div class="important">
+
+<strong>📌 Remember:</strong><br>
+
+AP is output per unit of the variable factor. It is not the total output.
+</div>
+
+</div>
+
+
+<!-- MP -->
+
+<div class="card">
+
+<h2>9. 📉 Marginal Product (MP)</h2>
+
+<div class="definition">
+
+<strong>Formal Definition:</strong><br>
+
+Marginal Product is the change in Total Product resulting from employing
+one additional unit of the variable factor, while other factors remain
+constant.
+</div>
+
+<div class="simple">
+
+<strong>Simple Definition:</strong><br>
+
+MP tells us how much total output changes when one more unit of the
+variable factor is employed.
+</div>
+
+<div class="formula">
+
+MP = ΔTP ÷ ΔVariable Factor
+
+</div>
+
+<p>
+If the number of workers increases from 4 to 5 and TP increases from
+52 units to 60 units:
+</p>
+
+<div class="formula">
+
+MP = (60 − 52) ÷ (5 − 4) = 8 units
+
+</div>
+
+<div class="warning">
+
+<strong>⚠️ Important:</strong><br>
+
+MP can be positive, zero or negative.
+
+</div>
+
+</div>
+
+
+<!-- LAW -->
+
+<div class="card">
+
+<h2>10. ⭐ Law of Variable Proportions</h2>
+
+<div class="definition">
+
+<strong>Formal Statement:</strong><br>
+
+The Law of Variable Proportions states that as more and more units of
+a variable factor are employed with fixed factors, Total Product
+initially increases at an increasing rate, then increases at a
+diminishing rate, and eventually may decline.
+</div>
+
+<div class="simple">
+
+<strong>In simple words:</strong><br>
+
+If we keep adding more units of a variable input to fixed inputs,
+output may first increase rapidly, then increase slowly, and eventually
+start falling.
+</div>
+
+<h3>Why is it called Variable Proportions?</h3>
+
+<p>
+In the short run, at least one factor remains fixed while the quantity
+of another factor is increased. Therefore, the proportion between the
+fixed and variable factors changes.
+</p>
+
+<div class="important">
+
+<strong>Example:</strong><br>
+
+Suppose a factory has a fixed number of machines. If the number of
+workers increases from 1 to 2, 3, 4 and so on, the ratio between workers
+and machines keeps changing.
+</div>
+
+
+<details>
+
+<summary>📊 View Graph 1 — Total Product and Three Stages</summary>
+
+<div class="inside">
+
+<div class="graph-title">
+Total Product (TP) Curve
+</div>
+
+<div class="graph-box">
+
+<svg viewBox="0 0 800 480" aria-label="Total Product curve showing three stages">
+
+<line x1="80" y1="400" x2="730" y2="400" stroke="#172554" stroke-width="3"/>
+
+<line x1="80" y1="400" x2="80" y2="50" stroke="#172554" stroke-width="3"/>
+
+<path d="M90 380
+C170 350 220 270 300 190
+C380 115 440 90 500 100
+C570 115 625 170 700 290"
+fill="none"
+stroke="#4f46e5"
+stroke-width="5"/>
+
+<line x1="300" y1="400" x2="300" y2="190"
+stroke="#94a3b8"
+stroke-width="2"
+stroke-dasharray="7,7"/>
+
+<line x1="500" y1="400" x2="500" y2="100"
+stroke="#94a3b8"
+stroke-width="2"
+stroke-dasharray="7,7"/>
+
+<text x="365" y="435"
+font-size="18"
+fill="#172554">
+Units of Variable Factor
+</text>
+
+<text x="18" y="230"
+font-size="18"
+fill="#172554"
+transform="rotate(-90 18 230)">
+Total Product
+</text>
+
+<text x="175" y="125"
+font-size="18"
+fill="#1e3a8a">
+Stage I
+</text>
+
+<text x="375" y="75"
+font-size="18"
+fill="#1e3a8a">
+Stage II
+</text>
+
+<text x="590" y="210"
+font-size="18"
+fill="#1e3a8a">
+Stage III
+</text>
+
+<text x="275" y="420"
+font-size="15">
+End of I
+</text>
+
+<text x="475" y="420"
+font-size="15">
+TP Maximum
+</text>
+
+</svg>
+
+</div>
+
+<p>
+The TP curve shows how total output changes when more units of the
+variable factor are employed while fixed factors remain constant.
+</p>
+
+</div>
+
+</details>
+
+
+<details>
+
+<summary>📊 View Graph 2 — AP and MP Curves</summary>
+
+<div class="inside">
+
+<div class="graph-title">
+Average Product and Marginal Product
+</div>
+
+<div class="graph-box">
+
+<svg viewBox="0 0 800 480" aria-label="Average Product and Marginal Product curves">
+
+<line x1="80" y1="400" x2="730" y2="400"
+stroke="#172554" stroke-width="3"/>
+
+<line x1="80" y1="400" x2="80" y2="55"
+stroke="#172554" stroke-width="3"/>
+
+<path d="M90 360
+C150 260 220 130 320 110
+C390 100 450 160 510 230
+C580 310 640 350 700 370"
+fill="none"
+stroke="#4f46e5"
+stroke-width="5"/>
+
+<path d="M90 370
+C160 300 240 150 330 150
+C395 155 445 215 500 290
+C560 350 620 375 700 390"
+fill="none"
+stroke="#0f766e"
+stroke-width="5"/>
+
+<line x1="330" y1="400"
+x2="330" y2="110"
+stroke="#94a3b8"
+stroke-width="2"
+stroke-dasharray="7,7"/>
+
+<text x="345" y="125"
+font-size="17"
+fill="#1e3a8a">
+MP
+</text>
+
+<text x="350" y="180"
+font-size="17"
+fill="#0f766e">
+AP
+</text>
+
+<text x="350" y="435"
+font-size="16">
+Units of Variable Factor
+</text>
+
+<text x="15" y="240"
+font-size="16"
+transform="rotate(-90 15 240)">
+AP / MP
+</text>
+
+<text x="255" y="420"
+font-size="15">
+MP = AP
+</text>
+
+</svg>
+
+</div>
+
+<p>
+The AP and MP curves help us understand the relationship between the
+average productivity and marginal productivity of the variable factor.
+</p>
+
+</div>
+
+</details>
+
+
+<details>
+
+<summary>🔍 Detailed Graph Analysis</summary>
+
+<div class="inside">
+
+<h3>Stage I — Increasing Returns</h3>
+
+<p>
+In the beginning, the TP curve rises at an increasing rate. This means
+each additional unit of the variable factor adds more to output than
+the previous unit. MP rises during the initial portion and AP also
+rises.
+</p>
+
+<p>
+The fixed factor is initially underutilised. As more units of the
+variable factor are added, better utilisation, division of labour and
+specialisation can increase productivity.
+</p>
+
+<h3>End of Stage I</h3>
+
+<p>
+Stage I ends when AP reaches its maximum point. At this point:
+</p>
+
+<div class="formula">
+MP = AP
+</div>
+
+<h3>Stage II — Diminishing Returns</h3>
+
+<p>
+During Stage II, TP continues to rise but at a diminishing rate.
+Therefore, MP falls but remains positive.
+</p>
+
+<p>
+AP also falls during this stage after reaching its maximum.
+</p>
+
+<p>
+At the end of Stage II:
+</p>
+
+<div class="formula">
+MP = 0
+</div>
+
+<p>
+At this point, TP reaches its maximum.
+</p>
+
+<h3>Stage III — Negative Returns</h3>
+
+<p>
+After TP reaches its maximum, additional units of the variable factor
+can cause total output to fall. MP becomes negative.
+</p>
+
+<div class="formula">
+MP &lt; 0 → TP falls
+</div>
+
+<p>
+The excessive use of the variable factor creates overcrowding and
+interference with the fixed factor.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- THREE STAGES -->
+
+<div class="card">
+
+<h2>11. 📚 Three Stages of the Law of Variable Proportions</h2>
+
+<div class="topic-box">
+
+<h3>Stage I — Increasing Returns to a Factor</h3>
+
+<p>
+During this stage, Total Product increases at an increasing rate
+initially. Marginal Product rises and Average Product also rises.
+</p>
+
+<p>
+The main reason is better utilisation of the fixed factor along with
+division of labour and specialisation.
+</p>
+
+<p>
+Stage I ends where Average Product is maximum and:
+</p>
+
+<div class="formula">
+MP = AP
+</div>
+
+</div>
+
+
+<div class="topic-box">
+
+<h3>Stage II — Diminishing Returns to a Factor ⭐</h3>
+
+<p>
+During this stage, Total Product continues to increase but at a
+diminishing rate.
+</p>
+
+<p>
+Marginal Product decreases but remains positive. Average Product also
+decreases after reaching its maximum.
+</p>
+
+<p>
+Stage II ends when Marginal Product becomes zero.
+</p>
+
+<div class="formula">
+MP = 0 → TP is maximum
+</div>
+
+<p>
+This stage is generally considered the rational stage of production
+because the variable factor is still adding positively to total output,
+although at a diminishing rate.
+</p>
+
+</div>
+
+
+<div class="topic-box">
+
+<h3>Stage III — Negative Returns</h3>
+
+<p>
+During Stage III, Total Product begins to decline.
+Marginal Product becomes negative.
+</p>
+
+<div class="formula">
+MP &lt; 0 → TP decreases
+</div>
+
+<p>
+The variable factor has become excessive relative to the fixed factor.
+Additional units may interfere with one another and reduce overall
+production.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RELATIONSHIP -->
+
+<div class="card">
+
+<h2>12. 🔗 Relationship Between TP, AP and MP</h2>
+
+<p>
+The relationship between Total Product, Average Product and Marginal
+Product is one of the most important parts of this topic.
+It is especially important for numerical questions, graphs and MCQs.
+</p>
+
+<details>
+
+<summary>📈 Relationship 1 — MP and TP</summary>
+
+<div class="inside">
+
+<p>
+Marginal Product shows the change in Total Product.
+</p>
+
+<p>
+When MP is positive, TP increases.
+</p>
+
+<p>
+When MP is zero, TP reaches its maximum.
+</p>
+
+<p>
+When MP becomes negative, TP begins to fall.
+</p>
+
+<div class="formula">
+
+MP &gt; 0 → TP rises<br>
+MP = 0 → TP is maximum<br>
+MP &lt; 0 → TP falls
+
+</div>
+
+</div>
+
+</details>
+
+
+<details>
+
+<summary>📊 Relationship 2 — MP and AP</summary>
+
+<div class="inside">
+
+<p>
+Marginal Product has an important relationship with Average Product.
+</p>
+
+<div class="formula">
+
+MP &gt; AP → AP rises
+
+</div>
+
+<div class="formula">
+
+MP = AP → AP is maximum
+
+</div>
+
+<div class="formula">
+
+MP &lt; AP → AP falls
+
+</div>
+
+<p>
+The logic is similar to the effect of a new observation on an average.
+If the marginal value is greater than the current average, the average
+rises. If it is lower, the average falls.
+</p>
+
+</div>
+
+</details>
+
+
+<details>
+
+<summary>📉 Relationship 3 — TP and MP</summary>
+
+<div class="inside">
+
+<p>
+The slope of the TP curve is related to MP.
+</p>
+
+<p>
+When MP is increasing, TP rises at an increasing rate.
+When MP is falling but remains positive, TP rises at a diminishing rate.
+When MP becomes zero, TP reaches its maximum.
+</p>
+
+</div>
+
+</details>
+
+
+<details>
+
+<summary>📊 View Relationship Graph</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 800 420">
+
+<line x1="80" y1="350" x2="730" y2="350"
+stroke="#172554" stroke-width="3"/>
+
+<line x1="80" y1="350" x2="80" y2="50"
+stroke="#172554" stroke-width="3"/>
+
+<path d="M90 320
+C160 280 230 170 320 110
+C390 70 470 100 550 170
+C620 235 665 285 710 320"
+fill="none"
+stroke="#4f46e5"
+stroke-width="5"/>
+
+<text x="570" y="165"
+font-size="18"
+fill="#1e3a8a">
+TP
+</text>
+
+<text x="330" y="385"
+font-size="16">
+Variable Factor
+</text>
+
+<text x="15" y="220"
+font-size="16"
+transform="rotate(-90 15 220)">
+Output
+</text>
+
+</svg>
+
+</div>
+
+<p>
+The important idea is that MP tells us the change in TP caused by an
+additional unit of the variable factor. Therefore, MP determines whether
+TP is rising, reaching its maximum or falling.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- WHY LAW OPERATES -->
+
+<div class="card">
+
+<h2>13. 🤔 Why Does the Law of Variable Proportions Operate?</h2>
+
+<p>
+The Law of Variable Proportions operates because the fixed factor does
+not change while the variable factor keeps increasing.
+</p>
+
+<h3>During the Initial Stage</h3>
+
+<ul>
+
+<li>The fixed factor may be underutilised.</li>
+
+<li>Additional workers can use the fixed factor more effectively.</li>
+
+<li>Division of labour becomes possible.</li>
+
+<li>Specialisation may increase productivity.</li>
+
+</ul>
+
+<h3>During the Diminishing Returns Stage</h3>
+
+<ul>
+
+<li>The fixed factor becomes relatively scarce.</li>
+
+<li>Additional workers have less fixed capital available per worker.</li>
+
+<li>Efficiency gains from additional workers become smaller.</li>
+
+<li>Marginal Product starts falling.</li>
+
+</ul>
+
+<h3>During the Negative Returns Stage</h3>
+
+<ul>
+
+<li>The variable factor becomes excessive.</li>
+
+<li>Overcrowding may occur.</li>
+
+<li>Workers may interfere with one another.</li>
+
+<li>The fixed factor becomes inadequate.</li>
+
+<li>Additional units can reduce total output.</li>
+
+</ul>
+
+</div>
+
+
+<!-- COMPLETE TABLE -->
+
+<div class="card">
+
+<h2>14. 📊 Complete TP, AP and MP Table</h2>
+
+<table>
+
+<tr>
+<th>Labour</th>
+<th>TP</th>
+<th>AP</th>
+<th>MP</th>
+<th>Interpretation</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>10</td>
+<td>10</td>
+<td>10</td>
+<td>Initial production</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>24</td>
+<td>12</td>
+<td>14</td>
+<td>AP rises</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>39</td>
+<td>13</td>
+<td>15</td>
+<td>Increasing productivity</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>52</td>
+<td>13</td>
+<td>13</td>
+<td>MP = AP</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>60</td>
+<td>12</td>
+<td>8</td>
+<td>AP falls, MP positive</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>60</td>
+<td>10</td>
+<td>0</td>
+<td>TP maximum</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>55</td>
+<td>7.86</td>
+<td>-5</td>
+<td>TP falls</td>
+</tr>
+
+</table>
+
+<details>
+
+<summary>🔍 Analyse the Table</summary>
+
+<div class="inside">
+
+<p>
+At Labour = 4, MP and AP are equal. Therefore AP is at its maximum
+point.
+</p>
+
+<p>
+At Labour = 6, MP becomes zero. Therefore TP reaches its maximum of
+60 units.
+</p>
+
+<p>
+At Labour = 7, MP becomes negative. Therefore TP falls from 60 to
+55 units.
+</p>
+
+<p>
+This table demonstrates the important relationships among TP, AP and MP.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- TWO EXAMPLES -->
+
+<div class="card">
+
+<h2>15. 🧮 Detailed Examples</h2>
+
+<details>
+
+<summary>▶ Example 1 — Calculate AP and MP</summary>
+
+<div class="inside">
+
+<p>
+Suppose a firm employs workers as follows:
+</p>
+
+<table>
+
+<tr>
+<th>Workers</th>
+<th>TP</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>24</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>39</td>
+</tr>
+
+</table>
+
+<p><strong>For 2 workers:</strong></p>
+
+<div class="formula">
+AP = 24 ÷ 2 = 12
+</div>
+
+<div class="formula">
+MP = 24 − 10 = 14
+</div>
+
+<p>
+Therefore, AP is 12 units and MP is 14 units.
+</p>
+
+</div>
+
+</details>
+
+
+<details>
+
+<summary>▶ Example 2 — Identify the Stage</summary>
+
+<div class="inside">
+
+<p>
+Suppose MP is positive for several additional workers and then becomes
+zero.
+</p>
+
+<p>
+When MP is positive, TP continues to increase.
+When MP becomes zero, TP reaches its maximum.
+</p>
+
+<p>
+If MP becomes negative after that, TP starts declining.
+</p>
+
+<div class="important">
+
+<strong>Conclusion:</strong><br>
+
+Positive MP → TP rises<br>
+Zero MP → TP maximum<br>
+Negative MP → TP falls
+
+</div>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- KEY RELATIONSHIPS -->
+
+<div class="card">
+
+<h2>16. 📌 Important Relationships at a Glance</h2>
+
+<details>
+
+<summary>▶ View Key Relationships</summary>
+
+<div class="inside">
+
+<div class="formula">
+MP &gt; AP → AP rises
+</div>
+
+<div class="formula">
+MP = AP → AP is maximum
+</div>
+
+<div class="formula">
+MP &lt; AP → AP falls
+</div>
+
+<div class="formula">
+MP &gt; 0 → TP rises
+</div>
+
+<div class="formula">
+MP = 0 → TP is maximum
+</div>
+
+<div class="formula">
+MP &lt; 0 → TP falls
+</div>
+
+<div class="important">
+
+<strong>Very Important Exam Point:</strong><br>
+
+When MP is falling but remains positive, TP is still increasing.
+It is incorrect to say that TP falls merely because MP is falling.
+TP falls only when MP becomes negative.
+</div>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- COMMON CONFUSIONS -->
+
+<div class="card">
+
+<h2>17. ⚠️ Common Student Confusions</h2>
+
+<details>
+
+<summary>▶ Short Run vs Short Period</summary>
+
+<div class="inside">
+
+Short run does not necessarily mean a few days or months. It means
+that at least one factor remains fixed.
+</div>
+
+</details>
+
+<details>
+
+<summary>▶ TP vs AP</summary>
+
+<div class="inside">
+
+TP is total output, whereas AP is output per unit of the variable factor.
+</div>
+
+</details>
+
+<details>
+
+<summary>▶ Falling MP vs Negative MP</summary>
+
+<div class="inside">
+
+A falling MP can still be positive. TP continues to increase as long
+as MP remains positive.
+</div>
+
+</details>
+
+<details>
+
+<summary>▶ Maximum TP vs Maximum AP</summary>
+
+<div class="inside">
+
+Maximum TP occurs when MP = 0.
+
+Maximum AP occurs when MP = AP.
+
+These are different conditions.
+</div>
+
+</details>
+
+<details>
+
+<summary>▶ Diminishing Returns vs Negative Returns</summary>
+
+<div class="inside">
+
+Diminishing returns means MP is falling but still positive.
+
+Negative returns means MP has become negative.
+</div>
+
+</details>
+
+</div>
+
+
+<!-- FORMULA BOX -->
+
+<div class="card">
+
+<h2>🧠 18. Formula and Concept Box</h2>
+
+<div class="formula">
+AP = TP ÷ Units of Variable Factor
+</div>
+
+<div class="formula">
+MP = ΔTP ÷ ΔVariable Factor
+</div>
+
+<div class="formula">
+MP &gt; AP → AP rises
+</div>
+
+<div class="formula">
+MP = AP → AP is maximum
+</div>
+
+<div class="formula">
+MP &lt; AP → AP falls
+</div>
+
+<div class="formula">
+MP = 0 → TP is maximum
+</div>
+
+<div class="formula">
+MP &lt; 0 → TP falls
+</div>
+
+</div>
+
+
+<!-- 5 NUMERICAL QUESTIONS -->
+
+<div class="card">
+
+<h2>🧮 19. Five Strong Numerical Questions</h2>
+
+<p>
+These questions are designed to test calculation as well as conceptual
+understanding. Each answer is kept expandable so the page remains
+compact.
+</p>
+
+
+<div class="question">
+
+<strong>Question 1.</strong><br>
+
+A firm employs 5 workers and produces 60 units of output. Calculate
+Average Product.
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+AP = TP ÷ Labour
+
+<br><br>
+
+AP = 60 ÷ 5
+
+<br><br>
+
+<strong>AP = 12 units per worker</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 2.</strong><br>
+
+The Total Product of a firm increases from 52 units to 60 units when
+labour increases from 4 workers to 5 workers. Calculate Marginal Product.
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+MP = Change in TP ÷ Change in Labour
+
+<br><br>
+
+MP = (60 − 52) ÷ (5 − 4)
+
+<br><br>
+
+<strong>MP = 8 units</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 3.</strong><br>
+
+Complete the missing AP and MP values:
+
+<table>
+
+<tr>
+<th>Labour</th>
+<th>TP</th>
+<th>AP</th>
+<th>MP</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>10</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>24</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>39</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+</table>
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+For Labour = 1:
+
+AP = 10 ÷ 1 = <strong>10</strong>
+
+MP = 10 − 0 = <strong>10</strong>
+
+<br><br>
+
+For Labour = 2:
+
+AP = 24 ÷ 2 = <strong>12</strong>
+
+MP = 24 − 10 = <strong>14</strong>
+
+<br><br>
+
+For Labour = 3:
+
+AP = 39 ÷ 3 = <strong>13</strong>
+
+MP = 39 − 24 = <strong>15</strong>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 4.</strong><br>
+
+A firm's TP is 50 units at 5 workers and remains 50 units at
+6 workers. What is the MP of the sixth worker? What does this indicate?
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+MP = 50 − 50
+
+<br><br>
+
+<strong>MP = 0</strong>
+
+<br><br>
+
+When MP = 0, TP is maximum.
+
+Therefore, TP is maximum at 50 units.
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="question">
+
+<strong>Question 5.</strong><br>
+
+The TP of a firm is 70 units with 6 workers and falls to 64 units when
+the seventh worker is employed. Calculate MP of the seventh worker and
+identify the implication.
+
+<details>
+
+<summary>View Answer</summary>
+
+<div class="answer">
+
+MP = 64 − 70
+
+<br><br>
+
+<strong>MP = −6 units</strong>
+
+<br><br>
+
+Since MP is negative, TP falls. This indicates the operation of
+negative returns to the variable factor.
+
+</div>
+
+</details>
+
+</div>
+
+</div>
+
+
+<!-- EXAM CONCEPTS -->
+
+<div class="card">
+
+<h2>⭐ 20. Important Examination Concepts</h2>
+
+<ul>
+
+<li>Production function shows a technical relationship between inputs and output.</li>
+
+<li>It is considered for a given state of technology.</li>
+
+<li>In the short run, at least one factor is fixed.</li>
+
+<li>In the long run, all factors can be varied.</li>
+
+<li>TP represents total output.</li>
+
+<li>AP represents output per unit of variable factor.</li>
+
+<li>MP represents the change in TP caused by an additional unit of variable factor.</li>
+
+<li>When MP is positive, TP rises.</li>
+
+<li>When MP is zero, TP is maximum.</li>
+
+<li>When MP is negative, TP falls.</li>
+
+<li>When MP is greater than AP, AP rises.</li>
+
+<li>When MP equals AP, AP is maximum.</li>
+
+<li>When MP is less than AP, AP falls.</li>
+
+<li>Stage II is the rational stage of production because MP is positive but diminishing.</li>
+
+</ul>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>📝 21. Topic 1 MCQ Test</h2>
+
+<p>
+Test your understanding of Production Function and Returns to a Factor
+through concept-based, statement-based, numerical and application-based
+MCQs.
+</p>
+
+<a class="mcq-button"
+href="class11-economics-unit3-production-function-mcqs.html">
+
+Start Topic 1 MCQs →
+
+</a>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="economics-class11.html">
+← Class 11 Economics
+</a>
+
+<a href="class11-economics-unit3-cost-revenue-producer-equilibrium.html">
+Next Topic → Cost, Revenue & Producer's Equilibrium
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p><strong>Edusphere with Satyam</strong></p>
+
+<p>
+Class 11 Economics | Unit 3 — Producer Behaviour and Supply
+</p>
+
+<p>
+Topic 1 — Production Function and Returns to a Factor
+</p>
+
+</footer>
+
+
+</body>
+</html>
