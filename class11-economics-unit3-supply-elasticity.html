@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Supply and Price Elasticity of Supply | Class 11 Economics</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+}
+
+header h1{
+    font-size:2rem;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:1rem;
+    opacity:0.95;
+}
+
+.container{
+    max-width:1100px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#1e3a5f;
+    color:white;
+    padding:9px 16px;
+    border-radius:8px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    opacity:0.9;
+}
+
+.card{
+    background:white;
+    margin-bottom:22px;
+    padding:24px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 14px rgba(15,23,42,0.07);
+}
+
+.card h2{
+    color:#1e3a5f;
+    margin-bottom:15px;
+    font-size:1.45rem;
+}
+
+.card h3{
+    color:#334155;
+    margin:18px 0 10px;
+    font-size:1.15rem;
+}
+
+p{
+    margin-bottom:12px;
+}
+
+ul,ol{
+    margin:10px 0 15px 25px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+.definition{
+    background:#f0fdfa;
+    border-left:4px solid #14b8a6;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.simple{
+    background:#eff6ff;
+    border-left:4px solid #3b82f6;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.example{
+    background:#f8fafc;
+    border-left:4px solid #64748b;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.note{
+    background:#fffbeb;
+    border-left:4px solid #f59e0b;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.formula{
+    background:#ecfdf5;
+    border:1px solid #99f6e4;
+    padding:18px;
+    border-radius:10px;
+    text-align:center;
+    font-size:1.1rem;
+    font-weight:bold;
+    margin:18px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+    background:white;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#e0f2fe;
+    color:#1e3a5f;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+details{
+    background:#f8fafc;
+    border:1px solid #dbeafe;
+    border-radius:9px;
+    padding:12px 15px;
+    margin:12px 0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#1e3a5f;
+}
+
+.graph-box{
+    background:#f8fafc;
+    border:1px solid #cbd5e1;
+    border-radius:12px;
+    padding:15px;
+    margin:20px 0;
+    overflow-x:auto;
+}
+
+.graph-title{
+    text-align:center;
+    font-weight:bold;
+    color:#1e3a5f;
+    margin-bottom:10px;
+}
+
+.graph-explain{
+    background:#eef2ff;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.exam-tip{
+    background:#ecfdf5;
+    border-left:4px solid #10b981;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.question{
+    background:#ffffff;
+    border:1px solid #dbeafe;
+    padding:15px;
+    border-radius:10px;
+    margin:12px 0;
+}
+
+.mcq-button{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.mcq-button:hover{
+    opacity:0.9;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a{
+    flex:1;
+    min-width:200px;
+    text-align:center;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:22px;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:1.55rem;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:0.9rem;
+    }
+
+    .nav{
+        flex-direction:column;
+    }
+
+    .nav a{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Supply and Price Elasticity of Supply</h1>
+    <p>Class 11 Economics | Unit 3 – Producer Behaviour and Supply</p>
+</header>
+
+<div class="container">
+
+<a href="economics-class11.html" class="back-btn">← Back to Class 11 Economics</a>
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+<h2>Introduction to Supply</h2>
+
+<p>
+In economics, production is undertaken by producers with the objective of supplying goods and services to the market. A producer does not supply a commodity randomly. The quantity supplied depends upon several economic factors such as the price of the commodity, cost of inputs, technology, taxes, subsidies, number of sellers and expectations about future prices.
+</p>
+
+<p>
+The concept of supply helps us understand the producer's side of the market. While demand explains the behaviour of consumers, supply explains the behaviour of producers.
+</p>
+
+<div class="simple">
+<strong>In simple words:</strong> Demand tells us how much consumers are willing to buy, whereas supply tells us how much producers are willing and able to sell at different prices.
+</div>
+
+<p>
+The study of supply is important for understanding market equilibrium, price determination, production decisions and the effect of changes in market conditions.
+</p>
+</div>
+
+
+<!-- MEANING OF SUPPLY -->
+
+<div class="card">
+<h2>Meaning of Supply</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+Supply refers to the quantity of a commodity that a producer is willing and able to offer for sale at different possible prices during a given period of time, assuming other factors remain constant.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong><br>
+Supply means the quantity of a commodity that a seller is ready and able to sell at a particular price during a particular period.
+</div>
+
+<h3>Important Elements of Supply</h3>
+
+<p>A proper definition of supply contains several important elements:</p>
+
+<ol>
+<li><strong>Quantity:</strong> Supply refers to a specific quantity of a commodity.</li>
+<li><strong>Willingness:</strong> The producer must be willing to sell the commodity.</li>
+<li><strong>Ability:</strong> The producer must also have the ability to supply it.</li>
+<li><strong>Price:</strong> Supply is generally studied at different prices.</li>
+<li><strong>Time:</strong> Supply must relate to a particular period.</li>
+<li><strong>Other factors:</strong> When we study the law of supply, other factors are assumed to remain constant.</li>
+</ol>
+
+<div class="example">
+<strong>Example:</strong><br>
+If a shopkeeper is willing and able to sell 100 notebooks at ₹50 per notebook during one week, then 100 notebooks represent the quantity supplied at that price and during that period.
+</div>
+
+<div class="note">
+<strong>Exam Point:</strong> “Willingness to sell” alone is not enough. A producer must also have the ability to supply the commodity.
+</div>
+</div>
+
+
+<!-- STOCK VS SUPPLY -->
+
+<div class="card">
+<h2>Stock and Supply</h2>
+
+<p>
+Stock and supply are related concepts, but they are not the same. Students often use these terms interchangeably, which is incorrect.
+</p>
+
+<div class="definition">
+<strong>Stock:</strong> Stock refers to the total quantity of a commodity available with a producer at a particular point of time.
+</div>
+
+<div class="definition">
+<strong>Supply:</strong> Supply refers to the quantity of a commodity that the producer is willing and able to offer for sale at a particular price during a particular period.
+</div>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>Stock</th>
+<th>Supply</th>
+</tr>
+<tr>
+<td>Meaning</td>
+<td>Total quantity available</td>
+<td>Quantity offered for sale</td>
+</tr>
+<tr>
+<td>Price relationship</td>
+<td>Not necessarily related to a particular price</td>
+<td>Always considered in relation to price</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>Usually refers to quantity available at a point of time</td>
+<td>Refers to quantity offered during a period</td>
+</tr>
+<tr>
+<td>Relationship</td>
+<td>Stock can be greater than supply</td>
+<td>Supply can never exceed available stock</td>
+</tr>
+</table>
+
+<div class="example">
+<strong>Example:</strong><br>
+A farmer has 1,000 kg of wheat in stock. At the current market price, he may decide to sell only 600 kg. Therefore, stock = 1,000 kg, while supply = 600 kg.
+</div>
+
+<div class="note">
+<strong>Remember:</strong> Stock is the quantity available, while supply is the quantity actually offered for sale.
+</div>
+</div>
+
+
+<!-- INDIVIDUAL SUPPLY -->
+
+<div class="card">
+<h2>Individual Supply</h2>
+
+<div class="definition">
+<strong>Meaning:</strong> Individual supply refers to the quantity of a commodity supplied by an individual producer or seller at different prices during a given period.
+</div>
+
+<div class="simple">
+<strong>Simple Meaning:</strong> It tells us how much one particular seller is willing and able to sell at different prices.
+</div>
+
+<div class="example">
+<strong>Example:</strong><br>
+Suppose a baker supplies 20, 40, 60 and 80 cakes when the price is ₹100, ₹150, ₹200 and ₹250 respectively. This is the individual supply of that baker.
+</div>
+</div>
+
+
+<!-- MARKET SUPPLY -->
+
+<div class="card">
+<h2>Market Supply</h2>
+
+<div class="definition">
+<strong>Meaning:</strong> Market supply refers to the total quantity of a commodity supplied by all producers or sellers in the market at different prices during a given period.
+</div>
+
+<p>
+Market supply is obtained by adding the quantities supplied by all individual producers at the same price.
+</p>
+
+<div class="formula">
+Market Supply = Sum of Individual Supplies
+</div>
+
+<h3>Example</h3>
+
+<table>
+<tr>
+<th>Price (₹)</th>
+<th>Seller A</th>
+<th>Seller B</th>
+<th>Market Supply</th>
+</tr>
+<tr>
+<td>10</td>
+<td>20</td>
+<td>30</td>
+<td>50</td>
+</tr>
+<tr>
+<td>20</td>
+<td>30</td>
+<td>40</td>
+<td>70</td>
+</tr>
+<tr>
+<td>30</td>
+<td>40</td>
+<td>50</td>
+<td>90</td>
+</tr>
+<tr>
+<td>40</td>
+<td>50</td>
+<td>60</td>
+<td>110</td>
+</tr>
+<tr>
+<td>50</td>
+<td>60</td>
+<td>70</td>
+<td>130</td>
+</tr>
+</table>
+
+<p>
+At ₹30, Seller A supplies 40 units and Seller B supplies 50 units.
+</p>
+
+<div class="formula">
+Market Supply = 40 + 50 = 90 units
+</div>
+
+<div class="simple">
+Thus, market supply is obtained by horizontal addition of individual supplies at each price.
+</div>
+</div>
+
+
+<!-- DETERMINANTS -->
+
+<div class="card">
+<h2>Determinants of Supply</h2>
+
+<p>
+The quantity supplied of a commodity is affected by several factors. Price is important, but it is not the only factor affecting supply.
+</p>
+
+<h3>1. Price of the Commodity</h3>
+
+<p>
+Other things remaining constant, a rise in the price of a commodity generally encourages producers to supply more because higher prices may increase profitability.
+</p>
+
+<h3>2. Prices of Inputs</h3>
+
+<p>
+Inputs are resources used in production, such as raw materials, labour, electricity, fuel and machinery services.
+</p>
+
+<p>
+If input prices rise, the cost of production increases. This may reduce the producer's willingness to supply the commodity.
+</p>
+
+<h3>3. Technology</h3>
+
+<p>
+Improved technology can increase productivity and reduce the cost of production. Therefore, producers may be able to supply more at the same price.
+</p>
+
+<h3>4. Taxes</h3>
+
+<p>
+Taxes imposed on production or sale can increase the cost of supplying a commodity. Other things remaining constant, higher taxes tend to reduce supply.
+</p>
+
+<h3>5. Subsidies</h3>
+
+<p>
+A subsidy is financial assistance provided by the government. A subsidy may reduce the effective cost of production and encourage producers to increase supply.
+</p>
+
+<h3>6. Number of Firms</h3>
+
+<p>
+If more firms enter a market, total market supply generally increases. If firms leave the market, market supply may decrease.
+</p>
+
+<h3>7. Expectations About Future Prices</h3>
+
+<p>
+Producers may consider expected future prices while deciding how much to supply today.
+</p>
+
+<p>
+For example, if producers expect prices to rise significantly in the future, they may hold back some stock from the present market.
+</p>
+
+<h3>8. Goals of the Firm</h3>
+
+<p>
+Traditional economic analysis often assumes profit maximisation. However, firms may also have other objectives such as increasing market share, maintaining sales or ensuring long-term growth.
+</p>
+
+<h3>9. Natural and Environmental Conditions</h3>
+
+<p>
+In agriculture and some natural-resource industries, weather, rainfall, climate and other natural conditions can strongly affect supply.
+</p>
+
+<div class="note">
+<strong>Important:</strong> A change in the price of the commodity generally causes a movement along the same supply curve, whereas changes in other determinants generally cause a shift of the supply curve.
+</div>
+</div>
+
+
+<!-- SUPPLY SCHEDULE -->
+
+<div class="card">
+<h2>Supply Schedule</h2>
+
+<div class="definition">
+<strong>Meaning:</strong> A supply schedule is a tabular representation showing different quantities of a commodity supplied at different prices during a given period.
+</div>
+
+<h3>Individual Supply Schedule</h3>
+
+<table>
+<tr>
+<th>Price (₹)</th>
+<th>Quantity Supplied (units)</th>
+</tr>
+<tr><td>10</td><td>10</td></tr>
+<tr><td>20</td><td>20</td></tr>
+<tr><td>30</td><td>30</td></tr>
+<tr><td>40</td><td>40</td></tr>
+<tr><td>50</td><td>50</td></tr>
+</table>
+
+<p>
+The table shows that quantity supplied increases as price increases.
+</p>
+
+<div class="example">
+At ₹20, the producer supplies 20 units. When the price rises to ₹40, the quantity supplied rises to 40 units.
+</div>
+
+<h3>Market Supply Schedule</h3>
+
+<table>
+<tr>
+<th>Price (₹)</th>
+<th>Seller A</th>
+<th>Seller B</th>
+<th>Market Supply</th>
+</tr>
+<tr><td>10</td><td>10</td><td>15</td><td>25</td></tr>
+<tr><td>20</td><td>20</td><td>25</td><td>45</td></tr>
+<tr><td>30</td><td>30</td><td>35</td><td>65</td></tr>
+<tr><td>40</td><td>40</td><td>45</td><td>85</td></tr>
+<tr><td>50</td><td>50</td><td>55</td><td>105</td></tr>
+</table>
+
+<p>
+Market supply is calculated by adding the quantities supplied by all sellers at each price.
+</p>
+</div>
+
+
+<!-- SUPPLY CURVE -->
+
+<div class="card">
+<h2>Supply Curve</h2>
+
+<div class="definition">
+<strong>Meaning:</strong> A supply curve is a graphical representation of the relationship between the price of a commodity and its quantity supplied, other things remaining constant.
+</div>
+
+<p>
+In the standard diagram, <strong>price is shown on the vertical axis (Y-axis)</strong> and <strong>quantity supplied is shown on the horizontal axis (X-axis)</strong>.
+</p>
+
+<h3>Numerical Data for Drawing the Supply Curve</h3>
+
+<table>
+<tr>
+<th>Price (₹)</th>
+<th>Quantity Supplied</th>
+</tr>
+<tr><td>10</td><td>10</td></tr>
+<tr><td>20</td><td>20</td></tr>
+<tr><td>30</td><td>30</td></tr>
+<tr><td>40</td><td>40</td></tr>
+<tr><td>50</td><td>50</td></tr>
+</table>
+
+<div class="graph-box">
+<div class="graph-title">Supply Curve</div>
+
+<svg width="650" height="430" viewBox="0 0 650 430">
+
+<!-- Grid -->
+<g stroke="#d1d5db" stroke-width="1">
+<line x1="100" y1="350" x2="550" y2="350"/>
+<line x1="100" y1="290" x2="550" y2="290"/>
+<line x1="100" y1="230" x2="550" y2="230"/>
+<line x1="100" y1="170" x2="550" y2="170"/>
+<line x1="100" y1="110" x2="550" y2="110"/>
+<line x1="100" y1="50" x2="550" y2="50"/>
+
+<line x1="100" y1="50" x2="100" y2="350"/>
+<line x1="190" y1="50" x2="190" y2="350"/>
+<line x1="280" y1="50" x2="280" y2="350"/>
+<line x1="370" y1="50" x2="370" y2="350"/>
+<line x1="460" y1="50" x2="460" y2="350"/>
+<line x1="550" y1="50" x2="550" y2="350"/>
+</g>
+
+<!-- Axes -->
+<line x1="100" y1="350" x2="570" y2="350" stroke="#111827" stroke-width="3"/>
+<line x1="100" y1="350" x2="100" y2="30" stroke="#111827" stroke-width="3"/>
+
+<!-- Arrows -->
+<polygon points="570,350 558,344 558,356" fill="#111827"/>
+<polygon points="100,30 94,42 106,42" fill="#111827"/>
+
+<!-- Axis labels -->
+<text x="300" y="400" font-size="17" font-weight="bold">
+Quantity Supplied (units)
+</text>
+
+<text x="25" y="220" font-size="17" font-weight="bold"
+transform="rotate(-90 25 220)">
+Price (₹)
+</text>
+
+<!-- X values -->
+<text x="95" y="372" font-size="14">0</text>
+<text x="185" y="372" font-size="14">10</text>
+<text x="275" y="372" font-size="14">20</text>
+<text x="365" y="372" font-size="14">30</text>
+<text x="455" y="372" font-size="14">40</text>
+<text x="545" y="372" font-size="14">50</text>
+
+<!-- Y values -->
+<text x="70" y="355" font-size="14">0</text>
+<text x="65" y="295" font-size="14">10</text>
+<text x="65" y="235" font-size="14">20</text>
+<text x="65" y="175" font-size="14">30</text>
+<text x="65" y="115" font-size="14">40</text>
+<text x="65" y="55" font-size="14">50</text>
+
+<!-- Supply curve -->
+<polyline
+points="100,350 190,290 280,230 370,170 460,110 550,50"
+fill="none"
+stroke="#0f766e"
+stroke-width="4"/>
+
+<!-- Points -->
+<circle cx="190" cy="290" r="5" fill="#1e3a5f"/>
+<circle cx="280" cy="230" r="5" fill="#1e3a5f"/>
+<circle cx="370" cy="170" r="5" fill="#1e3a5f"/>
+<circle cx="460" cy="110" r="5" fill="#1e3a5f"/>
+<circle cx="550" cy="50" r="5" fill="#1e3a5f"/>
+
+<!-- Curve label -->
+<text x="470" y="95" font-size="18" font-weight="bold">S</text>
+
+</svg>
+
+<div class="graph-explain">
+<strong>Graph Interpretation:</strong>
+
+<p>
+The supply curve <strong>S</strong> slopes upward from left to right. This indicates a direct relationship between price and quantity supplied, other things remaining constant.
+</p>
+
+<p>
+When price rises from ₹10 to ₹20, quantity supplied rises from 10 units to 20 units. Similarly, when price rises from ₹30 to ₹40, quantity supplied rises from 30 units to 40 units.
+</p>
+
+<p>
+Therefore, movement upward along the supply curve represents an increase in quantity supplied due to a rise in price.
+</p>
+</div>
+</div>
+
+<div class="exam-tip">
+<strong>How to Draw This Graph in Your Notebook:</strong>
+<ol>
+<li>Draw two perpendicular axes.</li>
+<li>Label the vertical axis as <strong>Price (₹)</strong>.</li>
+<li>Label the horizontal axis as <strong>Quantity Supplied (units)</strong>.</li>
+<li>Mark equal numerical values on both axes: 10, 20, 30, 40 and 50.</li>
+<li>Use the table to plot the points: (10,10), (20,20), (30,30), (40,40), (50,50).</li>
+<li>Join the points smoothly to form an upward-sloping curve.</li>
+<li>Label the curve <strong>S</strong>.</li>
+</ol>
+</div>
+</div>
+
+
+<!-- WHY UPWARD -->
+
+<div class="card">
+<h2>Why Does the Supply Curve Generally Slope Upward?</h2>
+
+<p>
+The supply curve generally slopes upward because producers are normally willing to supply a larger quantity when they receive a higher price, other things remaining constant.
+</p>
+
+<h3>Reason 1: Profit Incentive</h3>
+
+<p>
+A higher price can increase the potential profit from selling a commodity. This encourages producers to expand production and supply.
+</p>
+
+<h3>Reason 2: Rising Marginal Cost</h3>
+
+<p>
+In the short run, some factors of production are fixed. As production is expanded, additional units may require increasingly costly use of variable factors. Therefore, producers generally need a higher price to supply larger quantities.
+</p>
+
+<h3>Reason 3: Entry of Producers</h3>
+
+<p>
+A higher market price can make production more attractive. In some markets, additional producers may enter, increasing total supply.
+</p>
+
+<div class="note">
+The upward slope represents a <strong>positive relationship</strong> between price and quantity supplied, not that every individual supply curve must always be upward sloping under every possible circumstance.
+</div>
+</div>
+
+
+<!-- SLOPE -->
+
+<div class="card">
+<h2>Slope of Supply Curve</h2>
+
+<p>
+The slope of a supply curve indicates how much the price changes when quantity supplied changes by one unit, depending upon which variables are placed on the axes.
+</p>
+
+<p>
+Since the standard diagram places price on the Y-axis and quantity supplied on the X-axis:
+</p>
+
+<div class="formula">
+Slope of Supply Curve = Change in Price ÷ Change in Quantity Supplied
+</div>
+
+<p>
+For the numerical supply schedule above, price and quantity both increase in the same direction. Therefore, the curve slopes upward.
+</p>
+
+<div class="simple">
+<strong>Do not confuse slope with elasticity.</strong> Slope measures the rate of change between the variables, whereas elasticity measures the degree of responsiveness of quantity supplied to a change in price.
+</div>
+</div>
+
+
+<!-- MOVEMENT -->
+
+<div class="card">
+<h2>Movement Along the Supply Curve</h2>
+
+<p>
+When the price of the commodity changes and all other factors remain constant, the quantity supplied changes along the same supply curve.
+</p>
+
+<p>
+This is called <strong>movement along the supply curve</strong>.
+</p>
+
+<p>There are two forms:</p>
+
+<ul>
+<li>Expansion of supply</li>
+<li>Contraction of supply</li>
+</ul>
+
+<h3>Expansion of Supply</h3>
+
+<div class="definition">
+Expansion of supply refers to an increase in quantity supplied due to a rise in the price of the commodity, other things remaining constant.
+</div>
+
+<h3>Contraction of Supply</h3>
+
+<div class="definition">
+Contraction of supply refers to a decrease in quantity supplied due to a fall in the price of the commodity, other things remaining constant.
+</div>
+
+<div class="graph-box">
+<div class="graph-title">Expansion of Supply – Movement Upward Along the Same Curve</div>
+
+<svg width="650" height="430" viewBox="0 0 650 430">
+
+<!-- Grid -->
+<g stroke="#d1d5db">
+<line x1="100" y1="350" x2="550" y2="350"/>
+<line x1="100" y1="290" x2="550" y2="290"/>
+<line x1="100" y1="230" x2="550" y2="230"/>
+<line x1="100" y1="170" x2="550" y2="170"/>
+<line x1="100" y1="110" x2="550" y2="110"/>
+<line x1="100" y1="50" x2="550" y2="50"/>
+</g>
+
+<!-- Axes -->
+<line x1="100" y1="350" x2="570" y2="350" stroke="#111827" stroke-width="3"/>
+<line x1="100" y1="350" x2="100" y2="30" stroke="#111827" stroke-width="3"/>
+
+<polygon points="570,350 558,344 558,356" fill="#111827"/>
+<polygon points="100,30 94,42 106,42" fill="#111827"/>
+
+<!-- Axis labels -->
+<text x="290" y="400" font-size="17" font-weight="bold">
+Quantity Supplied (units)
+</text>
+
+<text x="25" y="220" font-size="17" font-weight="bold"
+transform="rotate(-90 25 220)">
+Price (₹)
+</text>
+
+<!-- Numerical scale -->
+<text x="95" y="372">0</text>
+<text x="185" y="372">10</text>
+<text x="275" y="372">20</text>
+<text x="365" y="372">30</text>
+<text x="455" y="372">40</text>
+<text x="545" y="372">50</text>
+
+<text x="65" y="355">0</text>
+<text x="65" y="295">10</text>
+<text x="65" y="235">20</text>
+<text x="65" y="175">30</text>
+<text x="65" y="115">40</text>
+<text x="65" y="55">50</text>
+
+<!-- Curve -->
+<polyline
+points="100,350 190,290 280,230 370,170 460,110 550,50"
+fill="none"
+stroke="#0f766e"
+stroke-width="4"/>
+
+<!-- Points A and B -->
+<circle cx="280" cy="230" r="7" fill="#1e3a5f"/>
+<circle cx="460" cy="110" r="7" fill="#1e3a5f"/>
+
+<text x="290" y="225" font-size="17" font-weight="bold">A</text>
+<text x="470" y="105" font-size="17" font-weight="bold">B</text>
+
+<!-- Dashed guides -->
+<line x1="280" y1="230" x2="280" y2="350"
+stroke="#64748b" stroke-dasharray="6,5"/>
+
+<line x1="460" y1="110" x2="460" y2="350"
+stroke="#64748b" stroke-dasharray="6,5"/>
+
+<line x1="100" y1="230" x2="280" y2="230"
+stroke="#64748b" stroke-dasharray="6,5"/>
+
+<line x1="100" y1="110" x2="460" y2="110"
+stroke="#64748b" stroke-dasharray="6,5"/>
+
+<text x="300" y="145" font-size="16">Expansion</text>
+<text x="490" y="90" font-size="17" font-weight="bold">S</text>
+
+</svg>
+
+<div class="graph-explain">
+<strong>Interpretation:</strong>
+<p>
+The producer moves from point <strong>A</strong> to point <strong>B</strong> on the same supply curve <strong>S</strong>.
+</p>
+<p>
+Price rises and quantity supplied also rises. Since the supply curve itself has not shifted, this is an <strong>expansion of supply</strong>, not an increase in supply.
+</p>
+</div>
+</div>
+
+<div class="note">
+<strong>Exam trap:</strong> Expansion/contraction = movement along the same supply curve due to a change in price.
+</div>
+</div>
+
+
+<!-- SHIFT -->
+
+<div class="card">
+<h2>Shift in Supply Curve</h2>
+
+<p>
+A shift in supply occurs when supply changes because of factors other than the price of the commodity, while the price is held constant for comparison.
+</p>
+
+<p>
+A shift can be either:</p>
+
+<ul>
+<li>Increase in supply</li>
+<li>Decrease in supply</li>
+</ul>
+
+<h3>Increase in Supply</h3>
+
+<div class="definition">
+An increase in supply occurs when producers are willing and able to supply more at the same price due to favourable changes in factors other than the commodity's own price.
+</div>
+
+<p>Examples:</p>
+
+<ul>
+<li>Improvement in technology</li>
+<li>Fall in input prices</li>
+<li>Reduction in taxes</li>
+<li>Increase in subsidies</li>
+<li>Entry of new firms</li>
+</ul>
+
+<h3>Decrease in Supply</h3>
+
+<div class="definition">
+A decrease in supply occurs when producers are willing and able to supply less at the same price due to an unfavourable change in factors other than the commodity's own price.
+</div>
+
+<p>Examples:</p>
+
+<ul>
+<li>Rise in input prices</li>
+<li>Increase in taxes</li>
+<li>Removal or reduction of subsidies</li>
+<li>Adverse weather conditions</li>
+<li>Exit of firms</li>
+</ul>
+
+
+<div class="graph-box">
+<div class="graph-title">Increase in Supply – Rightward Shift</div>
+
+<svg width="700" height="450" viewBox="0 0 700 450">
+
+<!-- Grid -->
+<g stroke="#d1d5db">
+<line x1="110" y1="360" x2="620" y2="360"/>
+<line x1="110" y1="300" x2="620" y2="300"/>
+<line x1="110" y1="240" x2="620" y2="240"/>
+<line x1="110" y1="180" x2="620" y2="180"/>
+<line x1="110" y1="120" x2="620" y2="120"/>
+<line x1="110" y1="60" x2="620" y2="60"/>
+</g>
+
+<!-- Axes -->
+<line x1="110" y1="360" x2="650" y2="360" stroke="#111827" stroke-width="3"/>
+<line x1="110" y1="360" x2="110" y2="35" stroke="#111827" stroke-width="3"/>
+
+<polygon points="650,360 638,354 638,366" fill="#111827"/>
+<polygon points="110,35 104,47 116,47" fill="#111827"/>
+
+<!-- Labels -->
+<text x="315" y="415" font-size="17" font-weight="bold">
+Quantity Supplied (units)
+</text>
+
+<text x="30" y="225" font-size="17" font-weight="bold"
+transform="rotate(-90 30 225)">
+Price (₹)
+</text>
+
+<!-- X scale -->
+<text x="105" y="382">0</text>
+<text x="205" y="382">10</text>
+<text x="305" y="382">20</text>
+<text x="405" y="382">30</text>
+<text x="505" y="382">40</text>
+<text x="605" y="382">50</text>
+
+<!-- Y scale -->
+<text x="75" y="365">0</text>
+<text x="75" y="305">10</text>
+<text x="75" y="245">20</text>
+<text x="75" y="185">30</text>
+<text x="75" y="125">40</text>
+<text x="75" y="65">50</text>
+
+<!-- S1 -->
+<polyline
+points="110,360 210,300 310,240 410,180 510,120 610,60"
+fill="none"
+stroke="#64748b"
+stroke-width="4"/>
+
+<!-- S2 right shift -->
+<polyline
+points="210,360 310,300 410,240 510,180 610,120"
+fill="none"
+stroke="#0f766e"
+stroke-width="4"/>
+
+<!-- Same price guide -->
+<line x1="110" y1="180" x2="510" y2="180"
+stroke="#64748b" stroke-dasharray="6,5"/>
+
+<circle cx="410" cy="180" r="7" fill="#64748b"/>
+<circle cx="510" cy="180" r="7" fill="#0f766e"/>
+
+<text x="420" y="172" font-size="17">A</text>
+<text x="520" y="172" font-size="17">B</text>
+
+<text x="500" y="105" font-size="18" font-weight="bold">S₁</text>
+<text x="610" y="105" font-size="18" font-weight="bold">S₂</text>
+
+<text x="450" y="160" font-size="15">More quantity at same price</text>
+
+</svg>
+
+<div class="graph-explain">
+<strong>Graph Interpretation:</strong>
+
+<p>
+The original supply curve is <strong>S₁</strong>. The new supply curve <strong>S₂</strong> lies to the right of S₁.
+</p>
+
+<p>
+At the same price, the producer supplies a greater quantity after the shift. For example, at ₹30, quantity supplied increases from 30 units to 40 units.
+</p>
+
+<p>
+The cause is not a change in the commodity's own price. Instead, some other determinant of supply has changed favourably, such as technology, input prices, taxes or subsidies.
+</p>
+</div>
+</div>
+
+<div class="exam-tip">
+<strong>How to Draw:</strong>
+<ol>
+<li>Draw the original upward-sloping supply curve and label it <strong>S₁</strong>.</li>
+<li>Draw another upward-sloping curve to its right and label it <strong>S₂</strong>.</li>
+<li>Mark numerical values on both axes.</li>
+<li>Take one common price and draw a horizontal guide.</li>
+<li>Show that quantity supplied is greater on S₂ at the same price.</li>
+<li>Write: <strong>Increase in Supply → Rightward Shift</strong>.</li>
+</ol>
+</div>
+</div>
+
+
+<!-- MOVEMENT VS SHIFT -->
+
+<div class="card">
+<h2>Movement Along Supply Curve vs Shift in Supply Curve</h2>
+
+<table>
+<tr>
+<th>Basis</th>
+<th>Movement Along Supply Curve</th>
+<th>Shift in Supply Curve</th>
+</tr>
+
+<tr>
+<td>Cause</td>
+<td>Change in price of the commodity</td>
+<td>Change in other determinants</td>
+</tr>
+
+<tr>
+<td>Curve</td>
+<td>Same curve</td>
+<td>New supply curve</td>
+</tr>
+
+<tr>
+<td>Forms</td>
+<td>Expansion and contraction</td>
+<td>Increase and decrease</td>
+</tr>
+
+<tr>
+<td>Graph</td>
+<td>Movement from one point to another</td>
+<td>Entire curve shifts</td>
+</tr>
+
+<tr>
+<td>Example</td>
+<td>Price rises from ₹20 to ₹30</td>
+<td>Technology improves</td>
+</tr>
+</table>
+
+<div class="note">
+<strong>One-line memory rule:</strong><br>
+<strong>Price changes → Movement.</strong><br>
+<strong>Other factors change → Shift.</strong>
+</div>
+</div>
+
+
+<!-- DECREASE -->
+
+<div class="card">
+<h2>Decrease in Supply – Leftward Shift</h2>
+
+<p>
+A decrease in supply means that producers supply less at every given price because of an unfavourable change in one or more determinants of supply.
+</p>
+
+<div class="example">
+<strong>Example:</strong><br>
+Suppose a rise in the price of raw materials increases production costs. At ₹30, producers may now supply only 20 units instead of 30 units. The supply curve shifts leftward.
+</div>
+
+<div class="simple">
+<strong>Important:</strong> A decrease in supply is different from contraction of supply. A decrease shifts the entire supply curve to the left, while contraction is movement downward along the same curve because of a fall in price.
+</div>
+</div>
+
+
+<!-- SUPPLY LAW -->
+
+<div class="card">
+<h2>Law of Supply</h2>
+
+<div class="definition">
+<strong>Statement:</strong> Other things remaining constant, there is a direct relationship between the price of a commodity and its quantity supplied. As price rises, quantity supplied generally rises; as price falls, quantity supplied generally falls.
+</div>
+
+<div class="simple">
+<strong>Simple Explanation:</strong> Producers generally want to sell more when they can receive a higher price and less when they receive a lower price.
+</div>
+
+<h3>Assumptions of the Law of Supply</h3>
+
+<p>
+The law of supply assumes that factors other than the commodity's own price remain constant. These include:</p>
+
+<ul>
+<li>Prices of inputs</li>
+<li>Technology</li>
+<li>Taxes and subsidies</li>
+<li>Number of firms</li>
+<li>Future price expectations</li>
+<li>Natural conditions</li>
+</ul>
+
+<div class="note">
+The law explains a movement along a supply curve. A change in these other factors causes the supply curve itself to shift.
+</div>
+</div>
+
+
+<!-- PRICE ELASTICITY -->
+
+<div class="card">
+<h2>Price Elasticity of Supply</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong><br>
+Price elasticity of supply measures the degree of responsiveness of quantity supplied of a commodity to a change in its price, other things remaining constant.
+</div>
+
+<div class="simple">
+<strong>Simple Meaning:</strong><br>
+It tells us how strongly quantity supplied responds when price changes.
+</div>
+
+<p>
+Two commodities may experience the same percentage change in price but show different percentage changes in quantity supplied. Price elasticity of supply helps us measure this difference in responsiveness.
+</p>
+
+<div class="formula">
+E<sub>s</sub> = Percentage Change in Quantity Supplied ÷ Percentage Change in Price
+</div>
+
+<p>
+Where:</p>
+
+<ul>
+<li><strong>E<sub>s</sub></strong> = Price elasticity of supply</li>
+<li>Percentage change in quantity supplied measures the change in quantity supplied relative to the original quantity.</li>
+<li>Percentage change in price measures the change in price relative to the original price.</li>
+</ul>
+</div>
+
+
+<!-- PERCENTAGE METHOD -->
+
+<div class="card">
+<h2>Measurement of Price Elasticity of Supply by Percentage-Change Method</h2>
+
+<p>
+Under the percentage-change method, elasticity is calculated by dividing the percentage change in quantity supplied by the percentage change in price.
+</p>
+
+<div class="formula">
+E<sub>s</sub> =
+(% Change in Quantity Supplied)
+/
+(% Change in Price)
+</div>
+
+<h3>Percentage Change</h3>
+
+<div class="formula">
+Percentage Change =
+(Change ÷ Original Value) × 100
+</div>
+
+<p>
+Therefore:</p>
+
+<div class="formula">
+E<sub>s</sub> =
+[(ΔQ ÷ Q) × 100]
+÷
+[(ΔP ÷ P) × 100]
+</div>
+
+<p>
+The 100 cancels out, giving the useful form:</p>
+
+<div class="formula">
+E<sub>s</sub> = (ΔQ / Q) × (P / ΔP)
+</div>
+
+<div class="note">
+For Class 11 numerical questions using the percentage-change method, always identify the <strong>original price and original quantity</strong> before calculating percentage changes.
+</div>
+</div>
+
+
+<!-- DEGREES -->
+
+<div class="card">
+<h2>Degrees of Price Elasticity of Supply</h2>
+
+<p>
+Price elasticity of supply can take different values depending upon the responsiveness of quantity supplied to a change in price.
+</p>
+
+<h3>1. Perfectly Inelastic Supply</h3>
+
+<p>
+When quantity supplied does not change at all despite a change in price, supply is perfectly inelastic.
+</p>
+
+<div class="formula">
+E<sub>s</sub> = 0
+</div>
+
+<p>
+The supply curve is vertical.</p>
+
+<h3>2. Relatively Inelastic Supply</h3>
+
+<p>
+When the percentage change in quantity supplied is less than the percentage change in price, supply is relatively inelastic.
+</p>
+
+<div class="formula">
+0 &lt; E<sub>s</sub> &lt; 1
+</div>
+
+<h3>3. Unitary Elastic Supply</h3>
+
+<p>
+When the percentage change in quantity supplied is equal to the percentage change in price, supply is unitary elastic.
+</p>
+
+<div class="formula">
+E<sub>s</sub> = 1
+</div>
+
+<h3>4. Relatively Elastic Supply</h3>
+
+<p>
+When the percentage change in quantity supplied is greater than the percentage change in price, supply is relatively elastic.
+</p>
+
+<div class="formula">
+E<sub>s</sub> &gt; 1
+</div>
+
+<h3>5. Perfectly Elastic Supply</h3>
+
+<p>
+When an extremely small change in price can be associated with an unlimited change in quantity supplied at a given price, supply is perfectly elastic in the standard theoretical representation.
+</p>
+
+<div class="formula">
+E<sub>s</sub> = ∞
+</div>
+
+<table>
+<tr>
+<th>Value of E<sub>s</sub></th>
+<th>Degree</th>
+<th>Meaning</th>
+</tr>
+<tr>
+<td>0</td>
+<td>Perfectly Inelastic</td>
+<td>Quantity supplied does not respond</td>
+</tr>
+<tr>
+<td>Between 0 and 1</td>
+<td>Relatively Inelastic</td>
+<td>Quantity responds less than price</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Unitary Elastic</td>
+<td>Quantity and price change proportionately</td>
+</tr>
+<tr>
+<td>Greater than 1</td>
+<td>Relatively Elastic</td>
+<td>Quantity responds more than price</td>
+</tr>
+<tr>
+<td>∞</td>
+<td>Perfectly Elastic</td>
+<td>Extremely high responsiveness</td>
+</tr>
+</table>
+</div>
+
+
+<!-- ELASTICITY GRAPH -->
+
+<div class="card">
+<h2>Graphical Understanding of Elasticity of Supply</h2>
+
+<p>
+The shape of the supply curve gives a visual indication of how strongly quantity supplied responds to price changes. However, students should remember that elasticity is a numerical concept and cannot always be identified simply from the visual steepness of a curve without considering the scale and the particular method of measurement.
+</p>
+
+<div class="graph-box">
+<div class="graph-title">Perfectly Inelastic Supply</div>
+
+<svg width="600" height="400" viewBox="0 0 600 400">
+
+<line x1="100" y1="330" x2="520" y2="330" stroke="#111827" stroke-width="3"/>
+<line x1="100" y1="330" x2="100" y2="40" stroke="#111827" stroke-width="3"/>
+
+<polygon points="520,330 508,324 508,336" fill="#111827"/>
+<polygon points="100,40 94,52 106,52" fill="#111827"/>
+
+<!-- Numerical axes -->
+<text x="92" y="352">0</text>
+<text x="190" y="352">10</text>
+<text x="290" y="352">20</text>
+<text x="390" y="352">30</text>
+<text x="490" y="352">40</text>
+
+<text x="65" y="335">0</text>
+<text x="60" y="265">10</text>
+<text x="60" y="195">20</text>
+<text x="60" y="125">30</text>
+<text x="60" y="55">40</text>
+
+<text x="250" y="390" font-size="16" font-weight="bold">
+Quantity Supplied
+</text>
+
+<text x="25" y="220" font-size="16" font-weight="bold"
+transform="rotate(-90 25 220)">
+Price
+</text>
+
+<!-- Vertical supply -->
+<line x1="290" y1="330" x2="290" y2="50"
+stroke="#0f766e" stroke-width="5"/>
+
+<text x="305" y="85" font-size="18" font-weight="bold">S</text>
+
+</svg>
+
+<div class="graph-explain">
+<strong>Interpretation:</strong>
+<p>
+The vertical supply curve shows that quantity supplied remains fixed even when price changes.
+</p>
+<p>
+Therefore, the percentage change in quantity supplied is zero and elasticity of supply is zero.
+</p>
+</div>
+</div>
+
+
+<div class="graph-box">
+<div class="graph-title">Perfectly Elastic Supply</div>
+
+<svg width="600" height="400" viewBox="0 0 600 400">
+
+<line x1="100" y1="330" x2="520" y2="330" stroke="#111827" stroke-width="3"/>
+<line x1="100" y1="330" x2="100" y2="40" stroke="#111827" stroke-width="3"/>
+
+<polygon points="520,330 508,324 508,336" fill="#111827"/>
+<polygon points="100,40 94,52 106,52" fill="#111827"/>
+
+<text x="92" y="352">0</text>
+<text x="190" y="352">10</text>
+<text x="290" y="352">20</text>
+<text x="390" y="352">30</text>
+<text x="490" y="352">40</text>
+
+<text x="65" y="335">0</text>
+<text x="60" y="265">10</text>
+<text x="60" y="195">20</text>
+<text x="60" y="125">30</text>
+<text x="60" y="55">40</text>
+
+<text x="250" y="390" font-size="16" font-weight="bold">
+Quantity Supplied
+</text>
+
+<text x="25" y="220" font-size="16" font-weight="bold"
+transform="rotate(-90 25 220)">
+Price
+</text>
+
+<!-- Horizontal supply -->
+<line x1="120" y1="190" x2="500" y2="190"
+stroke="#0f766e" stroke-width="5"/>
+
+<text x="505" y="185" font-size="18" font-weight="bold">S</text>
+
+</svg>
+
+<div class="graph-explain">
+<strong>Interpretation:</strong>
+<p>
+The horizontal supply curve represents perfectly elastic supply at a particular price.
+</p>
+<p>
+The theoretical case indicates that suppliers are willing to supply different quantities at the given price, while a price below that level would not attract supply in the standard model.
+</p>
+</div>
+</div>
+</div>
+
+
+<!-- FACTORS ELASTICITY -->
+
+<div class="card">
+<h2>Factors Affecting Price Elasticity of Supply</h2>
+
+<h3>1. Time Period</h3>
+
+<p>
+Time is one of the most important determinants of elasticity of supply.
+</p>
+
+<p>
+In a very short period, producers may not have enough time to increase production even when price rises. Therefore, supply tends to be relatively less elastic.
+</p>
+
+<p>
+Over a longer period, producers have more time to adjust production, purchase machinery, hire workers and expand capacity. Therefore, supply can become more elastic.
+</p>
+
+<h3>2. Spare Production Capacity</h3>
+
+<p>
+If firms have unused or spare capacity, they can increase production quickly when price rises. Supply is therefore likely to be more elastic.
+</p>
+
+<h3>3. Nature of the Commodity</h3>
+
+<p>
+Some goods can be produced more easily than others. Goods that can be produced using flexible production processes may have more elastic supply.
+</p>
+
+<h3>4. Mobility of Factors of Production</h3>
+
+<p>
+If labour, capital and other factors can easily move from one use to another, producers can respond more quickly to price changes.
+</p>
+
+<h3>5. Storability of the Commodity</h3>
+
+<p>
+Goods that can be stored for a considerable period can often be supplied more flexibly because producers can release stored stocks when market conditions change.
+</p>
+
+<h3>6. Availability of Inputs</h3>
+
+<p>
+If raw materials and other inputs are readily available, production can be increased more easily. This tends to make supply more elastic.
+</p>
+
+<div class="note">
+<strong>Core idea:</strong> The easier and quicker it is for producers to adjust quantity supplied, the more elastic supply tends to be.
+</div>
+</div>
+
+
+<!-- TIME PERIOD -->
+
+<div class="card">
+<h2>Time Period and Elasticity of Supply</h2>
+
+<p>
+Suppose the price of a commodity suddenly increases. Producers cannot always increase output immediately.
+</p>
+
+<h3>Very Short Period</h3>
+
+<p>
+Production capacity is largely fixed. The producer may only be able to sell the existing stock or slightly adjust supply.
+</p>
+
+<h3>Shorter Adjustment Period</h3>
+
+<p>
+Some variable inputs can be changed, allowing producers to increase output to some extent.
+</p>
+
+<h3>Long Period</h3>
+
+<p>
+Firms can expand plant capacity, purchase machinery, hire additional workers and make other production adjustments. Therefore, supply is generally more responsive.
+</p>
+
+<div class="simple">
+<strong>Memory Rule:</strong><br>
+More time for adjustment → Greater ability to respond → Generally more elastic supply.
+</div>
+</div>
+
+
+<!-- NUMERICAL EXAMPLE -->
+
+<div class="card">
+<h2>Worked Example: Calculating Price Elasticity of Supply</h2>
+
+<p>
+Suppose the price of a commodity rises from ₹20 to ₹25 and quantity supplied rises from 100 units to 125 units.
+</p>
+
+<h3>Step 1: Calculate Change in Quantity</h3>
+
+<p>
+Change in quantity = 125 − 100 = 25 units
+</p>
+
+<h3>Step 2: Calculate Percentage Change in Quantity</h3>
+
+<div class="formula">
+(25 ÷ 100) × 100 = 25%
+</div>
+
+<h3>Step 3: Calculate Change in Price</h3>
+
+<p>
+Change in price = ₹25 − ₹20 = ₹5
+</p>
+
+<h3>Step 4: Calculate Percentage Change in Price</h3>
+
+<div class="formula">
+(5 ÷ 20) × 100 = 25%
+</div>
+
+<h3>Step 5: Calculate Elasticity</h3>
+
+<div class="formula">
+E<sub>s</sub> = 25% ÷ 25% = 1
+</div>
+
+<p>
+Therefore, supply is <strong>unitary elastic</strong>.
+</p>
+</div>
+
+
+<!-- MARKET SUPPLY GRAPHICAL -->
+
+<div class="card">
+<h2>Market Supply: Graphical Understanding</h2>
+
+<p>
+Market supply is obtained by adding the quantities supplied by all sellers at each price. The resulting quantities are then plotted against price to obtain the market supply curve.
+</p>
+
+<div class="example">
+<strong>Suppose:</strong><br>
+At ₹20, Seller A supplies 20 units and Seller B supplies 30 units.<br>
+Therefore, market supply = 20 + 30 = 50 units.
+</div>
+
+<p>
+The same process is repeated for every price. The resulting market supply schedule can then be represented graphically.
+</p>
+
+<div class="exam-tip">
+<strong>Exam Procedure:</strong>
+<ol>
+<li>Prepare individual supply schedules.</li>
+<li>Take one price at a time.</li>
+<li>Add quantities supplied by all sellers.</li>
+<li>Prepare the market supply schedule.</li>
+<li>Plot price on Y-axis and market quantity supplied on X-axis.</li>
+<li>Join the plotted points to obtain the market supply curve.</li>
+</ol>
+</div>
+</div>
+
+
+<!-- COMMON CONFUSIONS -->
+
+<div class="card">
+<h2>Common Student Confusions and Exam Traps</h2>
+
+<h3>Confusion 1: Stock vs Supply</h3>
+<p>
+Stock is the total quantity available. Supply is the quantity offered for sale at a particular price during a period.
+</p>
+
+<h3>Confusion 2: Expansion vs Increase in Supply</h3>
+<p>
+Expansion occurs because the commodity's own price rises. Increase in supply occurs because other determinants change favourably.
+</p>
+
+<h3>Confusion 3: Contraction vs Decrease in Supply</h3>
+<p>
+Contraction is movement down the same supply curve due to a fall in price. Decrease is a leftward shift caused by other factors.
+</p>
+
+<h3>Confusion 4: Individual Supply vs Market Supply</h3>
+<p>
+Individual supply belongs to one producer. Market supply is the total supply of all producers.
+</p>
+
+<h3>Confusion 5: Slope vs Elasticity</h3>
+<p>
+Slope measures the rate of change represented by the graph. Elasticity measures responsiveness in percentage terms.
+</p>
+
+<h3>Confusion 6: Price Change and Curve Shift</h3>
+<p>
+A change in the commodity's own price does not shift the supply curve in the standard supply analysis. It causes movement along the existing curve.
+</p>
+
+<div class="note">
+<strong>Very important for exams:</strong><br>
+If the question says <em>“price of the commodity changes”</em>, think <strong>movement</strong>.<br>
+If the question says <em>“technology, input price, tax, subsidy, number of firms etc. changes”</em>, think <strong>shift</strong>.
+</div>
+</div>
+
+
+<!-- FORMULA BOX -->
+
+<div class="card">
+<h2>Important Formula and Relationship Box</h2>
+
+<div class="formula">
+Market Supply = Σ Individual Supplies
+</div>
+
+<div class="formula">
+Percentage Change = (Change ÷ Original Value) × 100
+</div>
+
+<div class="formula">
+E<sub>s</sub> = % Change in Quantity Supplied ÷ % Change in Price
+</div>
+
+<table>
+<tr>
+<th>Elasticity Value</th>
+<th>Interpretation</th>
+</tr>
+<tr>
+<td>E<sub>s</sub> = 0</td>
+<td>Perfectly Inelastic</td>
+</tr>
+<tr>
+<td>0 &lt; E<sub>s</sub> &lt; 1</td>
+<td>Relatively Inelastic</td>
+</tr>
+<tr>
+<td>E<sub>s</sub> = 1</td>
+<td>Unitary Elastic</td>
+</tr>
+<tr>
+<td>E<sub>s</sub> &gt; 1</td>
+<td>Relatively Elastic</td>
+</tr>
+<tr>
+<td>E<sub>s</sub> = ∞</td>
+<td>Perfectly Elastic</td>
+</tr>
+</table>
+</div>
+
+
+<!-- FIVE NUMERICALS -->
+
+<div class="card">
+<h2>Practice Numericals with Solutions</h2>
+
+<p>
+These questions are designed to cover the important numerical patterns from supply and price elasticity of supply.
+</p>
+
+<details>
+<summary>Numerical 1 – Percentage Change Method</summary>
+
+<div class="question">
+<p>
+The price of a commodity rises from ₹40 to ₹50 and its quantity supplied rises from 200 units to 250 units. Calculate price elasticity of supply.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Change in quantity = 250 − 200 = 50 units
+</p>
+
+<p>
+Percentage change in quantity:
+</p>
+
+<div class="formula">
+(50 ÷ 200) × 100 = 25%
+</div>
+
+<p>
+Change in price = ₹50 − ₹40 = ₹10
+</p>
+
+<p>
+Percentage change in price:
+</p>
+
+<div class="formula">
+(10 ÷ 40) × 100 = 25%
+</div>
+
+<div class="formula">
+E<sub>s</sub> = 25 ÷ 25 = 1
+</div>
+
+<p>
+<strong>Answer: E<sub>s</sub> = 1, therefore supply is unitary elastic.</strong>
+</p>
+</div>
+</details>
+
+
+<details>
+<summary>Numerical 2 – Relatively Elastic Supply</summary>
+
+<div class="question">
+<p>
+The price of a commodity increases from ₹50 to ₹60 and quantity supplied increases from 100 units to 140 units. Calculate price elasticity of supply.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Change in quantity = 140 − 100 = 40 units
+</p>
+
+<div class="formula">
+Percentage change in quantity
+= (40 ÷ 100) × 100
+= 40%
+</div>
+
+<p>
+Change in price = ₹60 − ₹50 = ₹10
+</p>
+
+<div class="formula">
+Percentage change in price
+= (10 ÷ 50) × 100
+= 20%
+</div>
+
+<div class="formula">
+E<sub>s</sub> = 40 ÷ 20 = 2
+</div>
+
+<p>
+<strong>Answer: E<sub>s</sub> = 2.</strong>
+</p>
+
+<p>
+Since E<sub>s</sub> is greater than 1, supply is <strong>relatively elastic</strong>.
+</p>
+</div>
+</details>
+
+
+<details>
+<summary>Numerical 3 – Relatively Inelastic Supply</summary>
+
+<div class="question">
+<p>
+Price rises from ₹100 to ₹120 while quantity supplied increases from 500 units to 550 units. Find price elasticity of supply.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Change in quantity = 550 − 500 = 50 units
+</p>
+
+<div class="formula">
+Percentage change in quantity
+= (50 ÷ 500) × 100
+= 10%
+</div>
+
+<p>
+Change in price = ₹120 − ₹100 = ₹20
+</p>
+
+<div class="formula">
+Percentage change in price
+= (20 ÷ 100) × 100
+= 20%
+</div>
+
+<div class="formula">
+E<sub>s</sub> = 10 ÷ 20 = 0.5
+</div>
+
+<p>
+<strong>Answer: E<sub>s</sub> = 0.5.</strong>
+</p>
+
+<p>
+Since E<sub>s</sub> is between 0 and 1, supply is <strong>relatively inelastic</strong>.
+</p>
+</div>
+</details>
+
+
+<details>
+<summary>Numerical 4 – Finding Percentage Change in Quantity</summary>
+
+<div class="question">
+<p>
+Price increases from ₹80 to ₹100. The price elasticity of supply is 1.5. If the original quantity supplied is 200 units, find the new quantity supplied.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+First calculate percentage change in price:
+</p>
+
+<div class="formula">
+[(100 − 80) ÷ 80] × 100
+= 25%
+</div>
+
+<p>
+We know:</p>
+
+<div class="formula">
+E<sub>s</sub> = % Change in Quantity ÷ % Change in Price
+</div>
+
+<p>
+Therefore:</p>
+
+<div class="formula">
+1.5 = % Change in Quantity ÷ 25
+</div>
+
+<div class="formula">
+% Change in Quantity = 1.5 × 25 = 37.5%
+</div>
+
+<p>
+Original quantity = 200 units.
+</p>
+
+<p>
+Increase in quantity:</p>
+
+<div class="formula">
+37.5% of 200 = 75 units
+</div>
+
+<p>
+New quantity:</p>
+
+<div class="formula">
+200 + 75 = 275 units
+</div>
+
+<p>
+<strong>Answer: New quantity supplied = 275 units.</strong>
+</p>
+</div>
+</details>
+
+
+<details>
+<summary>Numerical 5 – Finding Price Elasticity from Percentage Changes</summary>
+
+<div class="question">
+<p>
+The quantity supplied of a commodity increases by 15% when its price increases by 10%. Calculate price elasticity of supply and state its degree.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<div class="formula">
+E<sub>s</sub> = 15% ÷ 10%
+</div>
+
+<div class="formula">
+E<sub>s</sub> = 1.5
+</div>
+
+<p>
+Since E<sub>s</sub> is greater than 1, supply is relatively elastic.
+</p>
+
+<p>
+<strong>Answer: E<sub>s</sub> = 1.5; supply is relatively elastic.</strong>
+</p>
+</div>
+</details>
+
+</div>
+
+
+<!-- IMPORTANT QUESTIONS -->
+
+<div class="card">
+<h2>Important Questions</h2>
+
+<details>
+<summary>What is supply?</summary>
+<p>
+Supply refers to the quantity of a commodity that a producer is willing and able to offer for sale at different possible prices during a given period, other things remaining constant.
+</p>
+</details>
+
+<details>
+<summary>Differentiate between stock and supply.</summary>
+<p>
+Stock is the total quantity of a commodity available with a producer at a particular point of time, whereas supply is the quantity that the producer is willing and able to offer for sale at a particular price during a given period.
+</p>
+</details>
+
+<details>
+<summary>What is market supply?</summary>
+<p>
+Market supply is the total quantity of a commodity supplied by all producers in the market at different prices during a given period.
+</p>
+</details>
+
+<details>
+<summary>What is expansion of supply?</summary>
+<p>
+Expansion of supply is an increase in quantity supplied caused by a rise in the price of the commodity, represented by an upward movement along the same supply curve.
+</p>
+</details>
+
+<details>
+<summary>What is increase in supply?</summary>
+<p>
+Increase in supply means that more quantity is supplied at the same price because of favourable changes in determinants other than the commodity's own price. It is represented by a rightward shift of the supply curve.
+</p>
+</details>
+
+<details>
+<summary>What is price elasticity of supply?</summary>
+<p>
+Price elasticity of supply measures the degree of responsiveness of quantity supplied to a change in the price of a commodity, other things remaining constant.
+</p>
+</details>
+</div>
+
+
+<!-- APPLICATION -->
+
+<div class="card">
+<h2>Application-Based Understanding</h2>
+
+<details>
+<summary>A new technology reduces the cost of producing smartphones. What happens to supply?</summary>
+<p>
+The cost of production falls. Producers can supply more smartphones at the same price. Therefore, supply increases and the supply curve shifts to the right.
+</p>
+</details>
+
+<details>
+<summary>The price of wheat rises. What happens to quantity supplied?</summary>
+<p>
+Other things remaining constant, producers generally increase quantity supplied. This is an expansion of supply and is represented by movement upward along the same supply curve.
+</p>
+</details>
+
+<details>
+<summary>The government increases a tax on production. What happens to supply?</summary>
+<p>
+The cost of production increases. Producers may supply less at the same price. Therefore, supply decreases and the supply curve shifts leftward.
+</p>
+</details>
+
+<details>
+<summary>A farmer expects the price of wheat to rise substantially next month. How may this affect present supply?</summary>
+<p>
+The farmer may hold back some stock from the current market in expectation of receiving a higher future price. Thus, present supply may decrease.
+</p>
+</details>
+</div>
+
+
+<!-- CBSE PYQ BASED -->
+
+<div class="card">
+<h2>CBSE PYQ-Based Practice</h2>
+
+<details>
+<summary>Question 1</summary>
+<p>
+Distinguish between expansion of supply and increase in supply.
+</p>
+<p><strong>Answer:</strong> Expansion of supply is movement along the same supply curve due to a rise in the commodity's price. Increase in supply is a rightward shift of the supply curve due to favourable changes in factors other than the commodity's own price.</p>
+</details>
+
+<details>
+<summary>Question 2</summary>
+<p>
+Explain any three determinants of supply.
+</p>
+<p><strong>Answer:</strong> Important determinants include input prices, technology, taxes and subsidies, number of firms, expectations about future prices and natural conditions. A rise in input prices generally reduces supply, whereas improved technology generally increases supply.</p>
+</details>
+
+<details>
+<summary>Question 3</summary>
+<p>
+Explain the concept of price elasticity of supply and state its formula.
+</p>
+<p><strong>Answer:</strong> Price elasticity of supply measures the responsiveness of quantity supplied to a change in price. It is measured as the percentage change in quantity supplied divided by the percentage change in price.</p>
+</details>
+</div>
+
+
+<!-- MCQ BUTTON -->
+
+<div class="card">
+<h2>Practice MCQs</h2>
+
+<p>
+Test your understanding of Supply and Price Elasticity of Supply with concept-based and examination-oriented MCQs.
+</p>
+
+<a href="class11-economics-unit3-supply-elasticity-mcqs.html" class="mcq-button">
+Open Topic 3 MCQs →
+</a>
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="class11-economics-unit3-cost-revenue-producer-equilibrium.html">
+← Previous: Cost, Revenue and Producer's Equilibrium
+</a>
+
+<a href="economics-class11.html">
+Unit 3 Home
+</a>
+
+<a href="class11-economics-unit4-perfect-competition.html">
+Next: Perfect Competition →
+</a>
+
+</div>
+
+</div>
+
+<footer>
+<p>© Edusphere with Satyam | Class 11 Economics</p>
+<p>Learn • Understand • Apply</p>
+</footer>
+
+</body>
+</html>
