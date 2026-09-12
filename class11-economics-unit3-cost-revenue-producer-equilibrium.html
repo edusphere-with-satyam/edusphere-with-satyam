@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cost, Revenue and Producer’s Equilibrium | Class 11 Economics</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ecfeff);
+    color:#1e293b;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#3730a3,#4f46e5,#0f766e);
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+header h1{
+    font-size:2rem;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:1rem;
+    opacity:.95;
+}
+
+.container{
+    max-width:1050px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.back-btn{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:8px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.card{
+    background:white;
+    margin:20px 0;
+    padding:24px;
+    border-radius:14px;
+    border-left:5px solid #14b8a6;
+    box-shadow:0 4px 14px rgba(15,23,42,.08);
+}
+
+.card h2{
+    color:#1e3a5f;
+    margin-bottom:14px;
+    font-size:1.35rem;
+}
+
+.card h3{
+    color:#0f766e;
+    margin:18px 0 8px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ccfbf1;
+    color:#115e59;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:.8rem;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.definition{
+    background:#f8fafc;
+    padding:14px 16px;
+    border-radius:9px;
+    margin:12px 0;
+    border-left:4px solid #6366f1;
+}
+
+.simple{
+    background:#ecfeff;
+    padding:14px 16px;
+    border-radius:9px;
+    margin:12px 0;
+    border-left:4px solid #0f766e;
+}
+
+.formula{
+    background:#eef2ff;
+    padding:15px;
+    border-radius:9px;
+    text-align:center;
+    font-weight:bold;
+    color:#312e81;
+    margin:14px 0;
+    font-size:1.05rem;
+}
+
+.note{
+    background:#fff7ed;
+    border-left:4px solid #f97316;
+    padding:14px 16px;
+    border-radius:9px;
+    margin:14px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+    overflow:hidden;
+}
+
+th,td{
+    border:1px solid #cbd5e1;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#e0f2fe;
+    color:#1e3a5f;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+details{
+    margin:14px 0;
+    border-radius:9px;
+    overflow:hidden;
+}
+
+summary{
+    cursor:pointer;
+    background:#1e3a5f;
+    color:white;
+    padding:11px 15px;
+    font-weight:bold;
+}
+
+details .inside{
+    background:#f8fafc;
+    padding:16px;
+    border:1px solid #cbd5e1;
+    border-top:none;
+}
+
+.graph-box{
+    background:white;
+    padding:10px;
+    border-radius:10px;
+    overflow-x:auto;
+    text-align:center;
+}
+
+.graph-box svg{
+    max-width:100%;
+    height:auto;
+}
+
+.question{
+    background:#f8fafc;
+    padding:16px;
+    border-radius:9px;
+    margin:12px 0;
+    border-left:4px solid #6366f1;
+}
+
+.answer{
+    background:#ecfeff;
+    padding:15px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+.mcq-btn{
+    display:inline-block;
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav a{
+    background:#1e3a5f;
+    color:white;
+    text-decoration:none;
+    padding:11px 16px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:35px;
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:1.55rem;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:.9rem;
+    }
+
+    .nav a{
+        width:100%;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📊 Cost, Revenue and Producer’s Equilibrium</h1>
+    <p>Class 11 Economics • Unit 3 – Producer Behaviour and Supply</p>
+</header>
+
+<div class="container">
+
+<a href="economics-class11.html" class="back-btn">← Back to Class 11 Economics</a>
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+<span class="badge">Topic 2</span>
+
+<h2>💡 Introduction to Cost, Revenue and Producer’s Equilibrium</h2>
+
+<p>
+A producer uses various inputs such as labour, raw materials, machines and buildings
+to produce goods and services. Production involves expenditure on these inputs,
+which is called <strong>cost</strong>. The producer earns money by selling the output,
+which is called <strong>revenue</strong>.
+</p>
+
+<p>
+A producer must compare cost with revenue while deciding the level of output.
+The level of output at which the producer is able to maximise profit is called
+<strong>producer’s equilibrium</strong>.
+</p>
+
+<div class="simple">
+<strong>In simple words:</strong> A producer asks three basic questions:
+How much does production cost? How much revenue will the output generate?
+And at what level of output should production be carried out?
+</div>
+</div>
+
+
+<!-- COST -->
+
+<div class="card">
+
+<h2>💰 Cost of Production</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Cost of production refers to the expenditure incurred by a producer on various
+factors of production and other inputs used for producing a commodity.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong>
+Cost is the money spent by a producer to produce goods or services.
+</div>
+
+<p>
+For example, a producer may spend money on wages, raw materials, electricity,
+rent, transport and machinery. All such expenditures form part of the cost of
+production.
+</p>
+
+<h3>Economic Cost and Money Cost</h3>
+
+<p>
+<strong>Money cost</strong> refers to the expenditure measured in monetary terms.
+<strong>Economic cost</strong> is a broader concept that considers the economic
+sacrifice involved in using resources for production, including relevant
+opportunity costs.
+</p>
+
+<div class="note">
+For the standard Class 11 numerical treatment in this topic, the focus is mainly
+on the short-run cost concepts such as TFC, TVC, TC, AFC, AVC, AC and MC.
+</div>
+
+</div>
+
+
+<!-- FIXED COST -->
+
+<div class="card">
+
+<h2>🏢 Fixed Cost</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Fixed cost is the cost that does not change with the level of output in the
+short run.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong>
+Whether the producer produces more, less or even zero output, fixed cost remains
+unchanged in the short run.
+</div>
+
+<p>Examples include rent of a factory, insurance and certain fixed contractual
+payments.</p>
+
+<table>
+<tr>
+<th>Output</th>
+<th>Fixed Cost</th>
+</tr>
+<tr><td>0</td><td>₹100</td></tr>
+<tr><td>1</td><td>₹100</td></tr>
+<tr><td>2</td><td>₹100</td></tr>
+<tr><td>3</td><td>₹100</td></tr>
+<tr><td>4</td><td>₹100</td></tr>
+</table>
+
+<div class="simple">
+<strong>Key point:</strong> TFC remains constant at every level of output in the
+short run.
+</div>
+
+</div>
+
+
+<!-- VARIABLE COST -->
+
+<div class="card">
+
+<h2>🔄 Variable Cost</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Variable cost is the cost that changes with the level of output in the short run.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong>
+When production increases, variable cost generally increases; when production
+falls, variable cost generally falls.
+</div>
+
+<p>
+Examples include raw materials, power used according to production and wages of
+workers whose employment varies with output.
+</p>
+
+</div>
+
+
+<!-- TOTAL COST -->
+
+<div class="card">
+
+<h2>➕ Total Cost</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Total cost is the total expenditure incurred by a producer on producing a given
+quantity of output.
+</div>
+
+<div class="formula">
+TC = TFC + TVC
+</div>
+
+<p>
+Since total cost consists of both fixed and variable costs, a change in TVC
+changes TC while TFC remains constant in the short run.
+</p>
+
+</div>
+
+
+<!-- TC TFC TVC GRAPH -->
+
+<div class="card">
+
+<h2>📈 Relationship among TFC, TVC and TC</h2>
+
+<details>
+<summary>📊 View Graph and Detailed Interpretation</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 700 430" width="700">
+
+<line x1="80" y1="350" x2="650" y2="350"
+stroke="#334155" stroke-width="2"/>
+
+<line x1="80" y1="350" x2="80" y2="45"
+stroke="#334155" stroke-width="2"/>
+
+<text x="350" y="405" text-anchor="middle">Output</text>
+<text x="22" y="200" transform="rotate(-90 22 200)"
+text-anchor="middle">Cost</text>
+
+<line x1="80" y1="270" x2="650" y2="270"
+stroke="#64748b" stroke-width="3"/>
+
+<text x="585" y="260">TFC</text>
+
+<path d="M80 350 C180 345,240 325,310 285 C400 235,520 150,650 75"
+fill="none" stroke="#0f766e" stroke-width="4"/>
+
+<text x="600" y="90">TVC</text>
+
+<path d="M80 270 C180 265,240 245,310 205 C400 155,520 70,650 30"
+fill="none" stroke="#4f46e5" stroke-width="4"/>
+
+<text x="590" y="45">TC</text>
+
+</svg>
+
+</div>
+
+<h3>Graph Interpretation</h3>
+
+<p>
+<strong>TFC:</strong> The horizontal TFC curve shows that fixed cost remains
+constant regardless of the level of output in the short run.
+</p>
+
+<p>
+<strong>TVC:</strong> TVC rises as output increases. Its shape reflects the
+changing productivity of the variable factor. When the variable factor becomes
+more productive initially, TVC may rise at a slower rate; when diminishing
+returns set in, TVC rises at an increasing rate.
+</p>
+
+<p>
+<strong>TC:</strong> Since TC = TFC + TVC, the TC curve has the same general
+shape as TVC but lies above it by the amount of TFC.
+</p>
+
+<div class="note">
+<strong>Important relationship:</strong>
+The vertical distance between TC and TVC remains equal to TFC at every level of
+output.
+</div>
+
+</div>
+</details>
+
+</div>
+
+
+<!-- AVERAGE COSTS -->
+
+<div class="card">
+
+<h2>📐 Average Cost</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Average cost is the cost per unit of output produced.
+</div>
+
+<div class="formula">
+AC = TC ÷ Q
+</div>
+
+<p>
+Average cost can also be divided into average fixed cost and average variable
+cost.
+</p>
+
+<div class="formula">
+AC = AFC + AVC
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📉 Average Fixed Cost</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Average fixed cost is fixed cost per unit of output.
+</div>
+
+<div class="formula">
+AFC = TFC ÷ Q
+</div>
+
+<p>
+As output increases, the same fixed cost is distributed over a larger number of
+units. Therefore, AFC continuously falls.
+</p>
+
+<div class="simple">
+<strong>Example:</strong> If fixed cost is ₹100, AFC is ₹100 at one unit,
+₹50 at two units and ₹25 at four units.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📉 Average Variable Cost</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Average variable cost is variable cost per unit of output.
+</div>
+
+<div class="formula">
+AVC = TVC ÷ Q
+</div>
+
+<p>
+AVC generally falls initially because productivity of the variable factor
+improves. After a point, diminishing returns cause AVC to rise.
+Therefore, the AVC curve is generally U-shaped.
+</p>
+
+</div>
+
+
+<!-- MC -->
+
+<div class="card">
+
+<h2>⚡ Marginal Cost</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Marginal cost is the addition to total cost caused by producing one additional
+unit of output.
+</div>
+
+<div class="formula">
+MC = ΔTC ÷ ΔQ
+</div>
+
+<p>
+Because fixed cost does not change with output in the short run, the change in
+total cost is caused by the change in variable cost. Therefore:
+</p>
+
+<div class="formula">
+MC = ΔTVC ÷ ΔQ
+</div>
+
+<div class="simple">
+<strong>Simple meaning:</strong> MC tells us the extra cost of producing one
+more unit.
+</div>
+
+</div>
+
+
+<!-- AC AVC MC GRAPH -->
+
+<div class="card">
+
+<h2>📊 Relationship among AFC, AVC, AC and MC</h2>
+
+<details>
+<summary>📈 View Cost Curves and Detailed Interpretation</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 700 450" width="700">
+
+<line x1="80" y1="370" x2="650" y2="370"
+stroke="#334155" stroke-width="2"/>
+
+<line x1="80" y1="370" x2="80" y2="40"
+stroke="#334155" stroke-width="2"/>
+
+<text x="350" y="420" text-anchor="middle">Output</text>
+<text x="22" y="210" transform="rotate(-90 22 210)"
+text-anchor="middle">Cost per Unit</text>
+
+<path d="M90 95 C190 145,300 200,420 245 C510 280,580 300,640 315"
+fill="none" stroke="#64748b" stroke-width="3"/>
+
+<text x="590" y="300">AFC</text>
+
+<path d="M90 300 C190 250,280 215,360 220 C450 225,540 285,640 335"
+fill="none" stroke="#0f766e" stroke-width="4"/>
+
+<text x="595" y="330">AVC</text>
+
+<path d="M90 180 C180 135,270 115,350 125 C450 140,540 215,640 290"
+fill="none" stroke="#4f46e5" stroke-width="4"/>
+
+<text x="590" y="285">AC</text>
+
+<path d="M90 340 C180 325,250 280,330 200 C410 120,480 80,540 100 C585 115,615 160,640 210"
+fill="none" stroke="#f97316" stroke-width="4"/>
+
+<text x="585" y="205">MC</text>
+
+</svg>
+
+</div>
+
+<h3>Graph Interpretation</h3>
+
+<p>
+<strong>AFC:</strong> AFC continuously falls because a fixed amount of cost is
+spread over increasingly more units of output. It approaches the horizontal
+axis but does not normally touch it.
+</p>
+
+<p>
+<strong>AVC:</strong> AVC is generally U-shaped. It initially falls because
+the variable factor becomes more productive. After diminishing returns begin,
+AVC rises.
+</p>
+
+<p>
+<strong>AC:</strong> AC is also generally U-shaped. It is the sum of AFC and AVC.
+At first, falling AFC and falling AVC reduce AC. Later, rising AVC becomes strong
+enough to increase AC.
+</p>
+
+<p>
+<strong>MC:</strong> MC generally falls initially and rises later because of
+changes in marginal productivity. It cuts AVC and AC at their respective
+minimum points.
+</p>
+
+<div class="note">
+<strong>Exam rule:</strong> MC intersects AVC and AC at the minimum points of
+AVC and AC respectively. This is one of the most important relationships in
+short-run cost analysis.
+</div>
+
+</div>
+</details>
+
+</div>
+
+
+<!-- REVENUE -->
+
+<div class="card">
+
+<h2>💵 Revenue</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Revenue refers to the receipts obtained by a producer from the sale of output.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong>
+Revenue is the money a producer receives by selling goods or services.
+</div>
+
+<p>
+The three important revenue concepts are:
+<strong>Total Revenue (TR), Average Revenue (AR), and Marginal Revenue (MR).</strong>
+</p>
+
+</div>
+
+
+<!-- TR -->
+
+<div class="card">
+
+<h2>💰 Total Revenue (TR)</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Total revenue is the total amount received by a producer from the sale of a given
+quantity of output.
+</div>
+
+<div class="formula">
+TR = Price × Quantity Sold
+</div>
+
+<p>
+For example, if a producer sells 10 units at ₹20 per unit:</p>
+
+<div class="formula">
+TR = ₹20 × 10 = ₹200
+</div>
+
+</div>
+
+
+<!-- AR -->
+
+<div class="card">
+
+<h2>💵 Average Revenue (AR)</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Average revenue is revenue earned per unit of output sold.
+</div>
+
+<div class="formula">
+AR = TR ÷ Q
+</div>
+
+<p>
+Since TR = P × Q:</p>
+
+<div class="formula">
+AR = P
+</div>
+
+<div class="simple">
+Therefore, <strong>AR is equal to price</strong>.
+</div>
+
+</div>
+
+
+<!-- MR -->
+
+<div class="card">
+
+<h2>➕ Marginal Revenue (MR)</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Marginal revenue is the addition to total revenue resulting from the sale of
+one additional unit of output.
+</div>
+
+<div class="formula">
+MR = ΔTR ÷ ΔQ
+</div>
+
+<div class="simple">
+<strong>Simple meaning:</strong> MR tells us how much additional revenue is
+earned from selling one more unit.
+</div>
+
+</div>
+
+
+<!-- PERFECT COMPETITION REVENUE -->
+
+<div class="card">
+
+<h2>🏪 Revenue under Perfect Competition</h2>
+
+<p>
+Under perfect competition, an individual firm is a price taker. The market
+determines the price and the individual firm accepts that price.
+</p>
+
+<p>
+Therefore, each additional unit can be sold at the same price. As a result:
+</p>
+
+<div class="formula">
+AR = MR = Price
+</div>
+
+</div>
+
+
+<!-- REVENUE GRAPH -->
+
+<div class="card">
+
+<h2>📈 TR, AR and MR under Perfect Competition</h2>
+
+<details>
+<summary>📊 View Revenue Graph and Detailed Interpretation</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 700 440" width="700">
+
+<line x1="80" y1="350" x2="650" y2="350"
+stroke="#334155" stroke-width="2"/>
+
+<line x1="80" y1="350" x2="80" y2="45"
+stroke="#334155" stroke-width="2"/>
+
+<text x="360" y="405" text-anchor="middle">Output</text>
+
+<text x="25" y="200" transform="rotate(-90 25 200)"
+text-anchor="middle">Revenue</text>
+
+<line x1="100" y1="300" x2="630" y2="300"
+stroke="#0f766e" stroke-width="4"/>
+
+<text x="580" y="290">AR = MR = P</text>
+
+<line x1="100" y1="350" x2="630" y2="90"
+stroke="#4f46e5" stroke-width="4"/>
+
+<text x="585" y="105">TR</text>
+
+</svg>
+
+</div>
+
+<h3>Graph Interpretation</h3>
+
+<p>
+<strong>TR:</strong> Since price remains constant under perfect competition,
+every additional unit adds the same amount to total revenue. Therefore, TR rises
+at a constant rate and is represented by a straight upward-sloping line from
+the origin.
+</p>
+
+<p>
+<strong>AR:</strong> AR equals price. Since price is constant, AR is represented
+by a horizontal line.
+</p>
+
+<p>
+<strong>MR:</strong> MR also equals price because selling one additional unit
+adds exactly the same price to total revenue. Therefore, MR coincides with AR.
+</p>
+
+<div class="note">
+<strong>Key conclusion:</strong> Under perfect competition, the firm's demand
+curve, AR curve and MR curve are horizontal at the market price.
+</div>
+
+</div>
+</details>
+
+</div>
+
+
+<!-- PRODUCER EQUILIBRIUM -->
+
+<div class="card">
+
+<h2>⚖️ Producer’s Equilibrium</h2>
+
+<div class="definition">
+<strong>Formal Definition:</strong>
+Producer’s equilibrium refers to the level of output at which a producer has no
+incentive to change the level of production because profit is maximised, subject
+to the relevant conditions.
+</div>
+
+<div class="simple">
+<strong>Simple Definition:</strong>
+It is the output level at which the producer chooses to stop increasing or
+decreasing production because the chosen level gives the maximum profit under
+the given conditions.
+</div>
+
+<h3>MR–MC Approach</h3>
+
+<p>
+The MR–MC approach determines producer’s equilibrium by comparing marginal
+revenue with marginal cost.
+</p>
+
+<div class="formula">
+MR = MC
+</div>
+
+<p>
+At the equilibrium output, the revenue from one additional unit is equal to the
+cost of producing that additional unit.
+</p>
+
+</div>
+
+
+<!-- WHY MC MUST CUT MR -->
+
+<div class="card">
+
+<h2>📌 Why Must MC Cut MR from Below?</h2>
+
+<p>
+The condition <strong>MR = MC</strong> alone is not sufficient. The MC curve
+should be rising at the point of equality and should cut the MR curve from
+below.
+</p>
+
+<p>
+Before the equilibrium point, if:
+<strong>MR &gt; MC</strong>, producing an additional unit adds more to revenue
+than to cost. Therefore, increasing output is beneficial.
+</p>
+
+<p>
+After the equilibrium point, if:
+<strong>MC &gt; MR</strong>, producing an additional unit adds more to cost than
+to revenue. Therefore, increasing output reduces profit.
+</p>
+
+<div class="simple">
+Thus, the producer reaches equilibrium where the incentive to expand production
+ends and the profit-maximising output is determined by the MR–MC condition.
+</div>
+
+</div>
+
+
+<!-- MR MC GRAPH -->
+
+<div class="card">
+
+<h2>📊 Producer’s Equilibrium: MR–MC Graph</h2>
+
+<details>
+<summary>📈 View Graph and Detailed Interpretation</summary>
+
+<div class="inside">
+
+<div class="graph-box">
+
+<svg viewBox="0 0 700 450" width="700">
+
+<line x1="80" y1="370" x2="650" y2="370"
+stroke="#334155" stroke-width="2"/>
+
+<line x1="80" y1="370" x2="80" y2="40"
+stroke="#334155" stroke-width="2"/>
+
+<text x="350" y="420" text-anchor="middle">Output</text>
+
+<text x="25" y="210" transform="rotate(-90 25 210)"
+text-anchor="middle">Revenue / Cost</text>
+
+<line x1="90" y1="180" x2="640" y2="180"
+stroke="#0f766e" stroke-width="4"/>
+
+<text x="595" y="170">MR</text>
+
+<path d="M100 340
+C180 330,230 310,280 275
+C330 235,370 190,410 180
+C455 170,510 110,570 75
+C600 58,625 48,640 45"
+fill="none"
+stroke="#f97316"
+stroke-width="4"/>
+
+<text x="595" y="70">MC</text>
+
+<line x1="410" y1="180" x2="410" y2="370"
+stroke="#64748b"
+stroke-width="2"
+stroke-dasharray="7,6"/>
+
+<text x="410" y="390" text-anchor="middle">Qe</text>
+
+<circle cx="410" cy="180" r="6" fill="#1e3a5f"/>
+
+</svg>
+
+</div>
+
+<h3>Graph Interpretation</h3>
+
+<p>
+The horizontal MR line represents constant marginal revenue under perfect
+competition. The rising MC curve represents the additional cost of producing
+successive units.
+</p>
+
+<p>
+At the equilibrium output <strong>Qe</strong>, MC becomes equal to MR.
+</p>
+
+<p>
+To the left of Qe, MC is below MR. Hence, an additional unit adds more revenue
+than cost and the producer has an incentive to increase output.
+</p>
+
+<p>
+To the right of Qe, MC is above MR. Hence, an additional unit adds more cost than
+revenue and increasing output reduces profit.
+</p>
+
+<p>
+Therefore, the intersection at Qe identifies the profit-maximising output under
+the standard MR–MC approach.
+</p>
+
+<div class="note">
+<strong>Exam point:</strong> Equilibrium requires MR = MC and MC must be rising
+and cut MR from below.
+</div>
+
+</div>
+</details>
+
+</div>
+
+
+<!-- PERFECT COMPETITION -->
+
+<div class="card">
+
+<h2>🏭 Producer’s Equilibrium under Perfect Competition</h2>
+
+<p>
+Under perfect competition, the firm accepts the market price. Therefore:
+</p>
+
+<div class="formula">
+AR = MR = P
+</div>
+
+<p>
+The firm compares this constant MR with MC. The equilibrium quantity is the
+quantity at which:
+</p>
+
+<div class="formula">
+MR = MC
+</div>
+
+<p>
+with MC rising and cutting MR from below.
+</p>
+
+<p>
+This means the producer continues expanding output as long as the additional
+revenue from another unit is greater than its additional cost. Once MC becomes
+greater than MR, further expansion is not desirable.
+</p>
+
+</div>
+
+
+<!-- INTEGRATED TABLE -->
+
+<div class="card">
+
+<h2>📋 Integrated Cost–Revenue Table</h2>
+
+<p>
+Consider a firm producing at a constant price of ₹10 per unit. The table
+illustrates the relationship between output, cost and revenue.
+</p>
+
+<table>
+<tr>
+<th>Q</th>
+<th>TFC</th>
+<th>TVC</th>
+<th>TC</th>
+<th>TR</th>
+<th>MR</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>20</td>
+<td>0</td>
+<td>20</td>
+<td>0</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>20</td>
+<td>8</td>
+<td>28</td>
+<td>10</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>20</td>
+<td>14</td>
+<td>34</td>
+<td>20</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>20</td>
+<td>19</td>
+<td>39</td>
+<td>30</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>20</td>
+<td>25</td>
+<td>45</td>
+<td>40</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>20</td>
+<td>33</td>
+<td>53</td>
+<td>50</td>
+<td>10</td>
+</tr>
+</table>
+
+<div class="simple">
+Notice that TFC remains constant, TVC increases with output, TC equals
+TFC + TVC, and under constant price TR increases by the same amount for every
+additional unit.
+</div>
+
+</div>
+
+
+<!-- KEY RELATIONSHIPS -->
+
+<div class="card">
+
+<h2>🧠 Important Formula and Relationship Box</h2>
+
+<table>
+<tr>
+<th>Concept</th>
+<th>Formula / Relationship</th>
+</tr>
+
+<tr>
+<td>Total Cost</td>
+<td>TC = TFC + TVC</td>
+</tr>
+
+<tr>
+<td>Average Cost</td>
+<td>AC = TC ÷ Q</td>
+</tr>
+
+<tr>
+<td>Average Fixed Cost</td>
+<td>AFC = TFC ÷ Q</td>
+</tr>
+
+<tr>
+<td>Average Variable Cost</td>
+<td>AVC = TVC ÷ Q</td>
+</tr>
+
+<tr>
+<td>Average Cost</td>
+<td>AC = AFC + AVC</td>
+</tr>
+
+<tr>
+<td>Marginal Cost</td>
+<td>MC = ΔTC ÷ ΔQ</td>
+</tr>
+
+<tr>
+<td>Total Revenue</td>
+<td>TR = P × Q</td>
+</tr>
+
+<tr>
+<td>Average Revenue</td>
+<td>AR = TR ÷ Q</td>
+</tr>
+
+<tr>
+<td>Marginal Revenue</td>
+<td>MR = ΔTR ÷ ΔQ</td>
+</tr>
+
+<tr>
+<td>Perfect Competition</td>
+<td>AR = MR = P</td>
+</tr>
+
+<tr>
+<td>Producer’s Equilibrium</td>
+<td>MR = MC</td>
+</tr>
+
+<tr>
+<td>Equilibrium condition</td>
+<td>MC must cut MR from below</td>
+</tr>
+</table>
+
+</div>
+
+
+<!-- COMMON CONFUSIONS -->
+
+<div class="card">
+
+<h2>⚠️ Common Student Confusions</h2>
+
+<h3>1. TFC vs TVC</h3>
+<p>
+TFC does not change with output in the short run, whereas TVC changes with
+output.
+</p>
+
+<h3>2. AC vs MC</h3>
+<p>
+AC is the average cost per unit, while MC is the additional cost of producing
+one more unit.
+</p>
+
+<h3>3. AR vs MR</h3>
+<p>
+AR is revenue per unit. MR is the additional revenue from selling one more unit.
+They are equal under perfect competition because price remains constant.
+</p>
+
+<h3>4. MR = MC does not mean MC is constant</h3>
+<p>
+MR = MC is an equality at the equilibrium output. It does not mean that the
+entire MC curve is equal to MR.
+</p>
+
+<h3>5. Why does MC cut AC at its minimum?</h3>
+<p>
+If MC is below AC, the average tends to fall. If MC is above AC, the average
+tends to rise. Therefore, MC meets AC at AC's minimum point. The same logic
+applies to AVC.
+</p>
+
+</div>
+
+
+<!-- NUMERICALS -->
+
+<div class="card">
+
+<h2>🧮 Five Strong Numerical Questions</h2>
+
+<div class="question">
+<strong>Question 1:</strong>
+A firm has TFC of ₹500 and TVC of ₹1,200 at an output of 100 units.
+Calculate TC, AFC, AVC and AC.
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+
+TC = TFC + TVC
+
+= ₹500 + ₹1,200
+
+= <strong>₹1,700</strong>
+
+AFC = TFC ÷ Q
+
+= ₹500 ÷ 100
+
+= <strong>₹5</strong>
+
+AVC = TVC ÷ Q
+
+= ₹1,200 ÷ 100
+
+= <strong>₹12</strong>
+
+AC = TC ÷ Q
+
+= ₹1,700 ÷ 100
+
+= <strong>₹17</strong>
+
+Check:
+
+AC = AFC + AVC
+
+= ₹5 + ₹12
+
+= ₹17
+
+</div>
+</details>
+</div>
+
+
+<div class="question">
+<strong>Question 2:</strong>
+A firm's total cost rises from ₹800 to ₹950 when output increases from
+40 units to 50 units. Calculate marginal cost.
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+
+MC = ΔTC ÷ ΔQ
+
+Change in TC = ₹950 − ₹800 = ₹150
+
+Change in Q = 50 − 40 = 10 units
+
+Therefore:
+
+MC = ₹150 ÷ 10
+
+= <strong>₹15 per unit</strong>
+
+</div>
+</details>
+</div>
+
+
+<div class="question">
+<strong>Question 3:</strong>
+A producer sells 80 units at ₹25 each. Calculate TR and AR.
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+
+TR = P × Q
+
+= ₹25 × 80
+
+= <strong>₹2,000</strong>
+
+AR = TR ÷ Q
+
+= ₹2,000 ÷ 80
+
+= <strong>₹25</strong>
+
+Therefore:
+
+<strong>AR = Price = ₹25</strong>
+
+</div>
+</details>
+</div>
+
+
+<div class="question">
+<strong>Question 4:</strong>
+The total revenue of a firm increases from ₹2,000 to ₹2,300 when output
+increases from 100 units to 120 units. Calculate marginal revenue.
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+
+MR = ΔTR ÷ ΔQ
+
+Change in TR = ₹2,300 − ₹2,000
+
+= ₹300
+
+Change in Q = 120 − 100
+
+= 20 units
+
+Therefore:
+
+MR = ₹300 ÷ 20
+
+= <strong>₹15 per unit</strong>
+
+</div>
+</details>
+</div>
+
+
+<div class="question">
+<strong>Question 5:</strong>
+A firm has the following marginal revenue and marginal cost:
+
+<table>
+<tr>
+<th>Output</th>
+<th>MR</th>
+<th>MC</th>
+</tr>
+<tr><td>1</td><td>₹12</td><td>₹7</td></tr>
+<tr><td>2</td><td>₹12</td><td>₹9</td></tr>
+<tr><td>3</td><td>₹12</td><td>₹12</td></tr>
+<tr><td>4</td><td>₹12</td><td>₹15</td></tr>
+<tr><td>5</td><td>₹12</td><td>₹19</td></tr>
+</table>
+
+Find the producer's equilibrium output using the MR–MC approach.
+
+<details>
+<summary>View Answer</summary>
+<div class="answer">
+
+At Q = 1:
+
+MR > MC → ₹12 > ₹7
+
+So increasing output is beneficial.
+
+At Q = 2:
+
+MR > MC → ₹12 > ₹9
+
+So increasing output is still beneficial.
+
+At Q = 3:
+
+MR = MC → ₹12 = ₹12
+
+This is the equilibrium condition.
+
+At Q = 4:
+
+MC > MR → ₹15 > ₹12
+
+Further increase in output reduces profit.
+
+Therefore:
+
+<strong>Producer's equilibrium output = 3 units.</strong>
+
+The condition is satisfied because MC has risen from ₹9 at Q = 2 to ₹12 at
+Q = 3 and then exceeds MR.
+
+</div>
+</details>
+</div>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>📝 Topic 2 MCQ Test</h2>
+
+<p>
+Test your understanding of Cost, Revenue and Producer’s Equilibrium with the
+separate MCQ practice page.
+</p>
+
+<a href="class11-economics-unit3-cost-revenue-producer-equilibrium-mcqs.html"
+class="mcq-btn">
+Take Topic 2 MCQ Test →
+</a>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="class11-economics-unit3-production-function.html">
+← Topic 1
+</a>
+
+<a href="economics-class11.html">
+Unit 3 Home
+</a>
+
+<a href="class11-economics-unit3-supply-elasticity.html">
+Topic 3 →
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+<p>© Edusphere with Satyam • Class 11 Economics</p>
+</footer>
+
+</body>
+</html>
