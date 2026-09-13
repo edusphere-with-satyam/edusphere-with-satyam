@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Previous Year Questions – Board & CUET | Edusphere with Satyam</title>
+
+<meta name="description"
+content="Previous year question papers for CBSE Board Class 12, Class 10 Information Technology and CUET subjects including Accountancy, Economics, Business Studies and General Test.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fc;
+    color: #26364a;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(135deg, #e8f4fb, #f3f8fc);
+    padding: 18px 20px;
+    border-bottom: 1px solid #d5e7f1;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Colourful Edusphere branding area */
+
+.logo {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d7edf8, #eaf6fb);
+    border: 1px solid #c8e2ee;
+    color: #245875;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(57, 111, 139, 0.08);
+}
+
+nav a {
+    text-decoration: none;
+    color: #35566f;
+    margin-left: 18px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #1672a5;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 35px 18px 50px;
+}
+
+
+/* =========================
+   PAGE INTRO
+========================= */
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.page-intro .tag {
+    display: inline-block;
+    background: #e3f1f8;
+    color: #28739d;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.page-intro h1 {
+    font-size: 34px;
+    color: #244b6b;
+    margin-bottom: 10px;
+}
+
+.page-intro p {
+    max-width: 750px;
+    margin: auto;
+    color: #617386;
+    font-size: 16px;
+}
+
+
+/* =========================
+   MAIN RESOURCE SECTIONS
+========================= */
+
+.resource-section {
+    background: #ffffff;
+    border: 1px solid #dce8f2;
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 5px 18px rgba(46, 78, 104, 0.06);
+}
+
+.resource-section > summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #285875;
+    padding: 5px;
+}
+
+.resource-section > summary::-webkit-details-marker {
+    display: none;
+}
+
+.resource-section > summary::before {
+    content: "▶";
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 10px;
+    color: #4b91b8;
+    transition: 0.2s;
+}
+
+.resource-section[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+
+/* =========================
+   CLASS
+========================= */
+
+.class-card {
+    background: #f8fbfe;
+    border: 1px solid #dce9f3;
+    border-radius: 14px;
+    margin-top: 16px;
+    overflow: hidden;
+}
+
+.class-card summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 15px 17px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #315c77;
+    background: #eef7fc;
+}
+
+.class-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.class-card summary::before {
+    content: "▶";
+    font-size: 11px;
+    margin-right: 9px;
+    color: #5c96b7;
+}
+
+.class-card[open] summary::before {
+    content: "▼";
+}
+
+
+/* =========================
+   SUBJECT
+========================= */
+
+.subject-list {
+    padding: 8px 14px 14px;
+}
+
+.subject {
+    background: #ffffff;
+    border: 1px solid #e1ebf2;
+    border-radius: 11px;
+    margin-top: 9px;
+    overflow: hidden;
+}
+
+.subject summary {
+    cursor: pointer;
+    list-style: none;
+    background: #ffffff;
+    padding: 12px 14px;
+    font-size: 16px;
+    color: #365f78;
+}
+
+.subject summary::-webkit-details-marker {
+    display: none;
+}
+
+.subject summary::before {
+    content: "＋";
+    color: #5c94b5;
+    margin-right: 7px;
+}
+
+.subject[open] summary::before {
+    content: "−";
+}
+
+
+/* =========================
+   YEAR
+========================= */
+
+.year-list {
+    padding: 4px 12px 12px;
+}
+
+.year {
+    margin-top: 7px;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.year summary {
+    cursor: pointer;
+    list-style: none;
+    background: #f1f8fc;
+    border: 1px solid #dcebf3;
+    padding: 10px 13px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #41677d;
+}
+
+.year summary::-webkit-details-marker {
+    display: none;
+}
+
+.year summary::before {
+    content: "📅";
+    margin-right: 8px;
+}
+
+
+/* =========================
+   PDF BUTTON
+========================= */
+
+.pdf-box {
+    background: #ffffff;
+    border: 1px solid #e2ebf1;
+    padding: 12px;
+    text-align: center;
+}
+
+.pdf-button {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #4d91b5, #397b9e);
+    color: white;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.pdf-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+
+/* =========================
+   CUET
+========================= */
+
+.cuet-section {
+    background: linear-gradient(135deg, #f0f8fc, #f8fbfd);
+}
+
+
+/* =========================
+   INFORMATION NOTE
+========================= */
+
+.info-note {
+    background: #fffaf0;
+    border: 1px solid #f0dfb8;
+    border-radius: 14px;
+    padding: 17px;
+    margin-top: 28px;
+    color: #6b5a38;
+    font-size: 14px;
+}
+
+.info-note strong {
+    color: #574728;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.bottom-navigation {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.home-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #e5f1f8;
+    color: #315e77;
+    padding: 10px 20px;
+    border-radius: 9px;
+    font-weight: bold;
+    border: 1px solid #d2e4ee;
+}
+
+.home-button:hover {
+    background: #dcecf5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #e8f1f7;
+    text-align: center;
+    padding: 20px;
+    color: #607586;
+    font-size: 14px;
+    border-top: 1px solid #d8e5ed;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .page-intro h1 {
+        font-size: 27px;
+    }
+
+    .resource-section {
+        padding: 16px;
+    }
+
+    .resource-section > summary {
+        font-size: 19px;
+    }
+
+    .class-card summary {
+        font-size: 17px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="header-container">
+
+        <div class="logo">
+            Edusphere with Satyam
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#subjects">Subjects</a>
+            <a href="pyqs.html">PYQs</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- =========================
+         PAGE INTRO
+    ========================= -->
+
+    <section class="page-intro">
+
+        <span class="tag">BOARD • CUET • PYQs</span>
+
+        <h1>Previous Year Questions</h1>
+
+        <p>
+            Access previous year question papers in an organised way.
+            Select your examination, class, subject and year to open the
+            required PDF.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         BOARD EXAMINATIONS
+    ========================= -->
+
+    <details class="resource-section">
+
+        <summary>🏫 Board Examinations</summary>
+
+
+        <!-- CLASS 12 -->
+
+        <details class="class-card">
+
+            <summary>📘 Class 12</summary>
+
+            <div class="subject-list">
+
+
+                <!-- ECONOMICS -->
+
+                <details class="subject">
+
+                    <summary>Economics</summary>
+
+                    <div class="year-list">
+
+                        <details class="year">
+                            <summary>2026</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/economics/2026.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2025</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/economics/2025.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2024</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/economics/2024.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2023</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/economics/2023.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2022</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/economics/2022.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+                    </div>
+
+                </details>
+
+
+                <!-- ACCOUNTANCY -->
+
+                <details class="subject">
+
+                    <summary>Accountancy</summary>
+
+                    <div class="year-list">
+
+                        <details class="year">
+                            <summary>2026</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/accountancy/2026.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2025</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/accountancy/2025.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2024</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/accountancy/2024.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2023</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/accountancy/2023.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2022</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/accountancy/2022.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+                    </div>
+
+                </details>
+
+
+                <!-- BUSINESS STUDIES -->
+
+                <details class="subject">
+
+                    <summary>Business Studies</summary>
+
+                    <div class="year-list">
+
+                        <details class="year">
+                            <summary>2026</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/business-studies/2026.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2025</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/business-studies/2025.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2024</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/business-studies/2024.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2023</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/business-studies/2023.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2022</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/business-studies/2022.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+                    </div>
+
+                </details>
+
+
+                <!-- ENGLISH -->
+
+                <details class="subject">
+
+                    <summary>English</summary>
+
+                    <div class="year-list">
+
+                        <details class="year">
+                            <summary>2026</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/english/2026.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2025</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/english/2025.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2024</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/english/2024.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2023</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/english/2023.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2022</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class12/english/2022.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </details>
+
+
+        <!-- CLASS 10 -->
+
+        <details class="class-card">
+
+            <summary>📗 Class 10</summary>
+
+            <div class="subject-list">
+
+                <details class="subject">
+
+                    <summary>Information Technology</summary>
+
+                    <div class="year-list">
+
+                        <details class="year">
+                            <summary>2026</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class10/information-technology/2026.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2025</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class10/information-technology/2025.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2024</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class10/information-technology/2024.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2023</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class10/information-technology/2023.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+
+                        <details class="year">
+                            <summary>2022</summary>
+
+                            <div class="pdf-box">
+                                <a class="pdf-button"
+                                   href="pyqs/class10/information-technology/2022.pdf"
+                                   target="_blank">
+                                    📄 Open PDF
+                                </a>
+                            </div>
+
+                        </details>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </details>
+
+    </details>
+
+
+    <!-- =========================
+         CUET
+    ========================= -->
+
+    <details class="resource-section cuet-section">
+
+        <summary>🎯 CUET</summary>
+
+        <div class="subject-list">
+
+
+            <!-- ACCOUNTANCY -->
+
+            <details class="subject">
+
+                <summary>Accountancy</summary>
+
+                <div class="year-list">
+
+                    <details class="year">
+                        <summary>2026</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/accountancy/2026.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2025</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/accountancy/2025.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2024</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/accountancy/2024.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2023</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/accountancy/2023.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2022</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/accountancy/2022.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </details>
+
+
+            <!-- ECONOMICS -->
+
+            <details class="subject">
+
+                <summary>Economics</summary>
+
+                <div class="year-list">
+
+                    <details class="year">
+                        <summary>2026</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/economics/2026.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2025</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/economics/2025.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2024</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/economics/2024.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2023</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/economics/2023.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2022</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/economics/2022.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </details>
+
+
+            <!-- BUSINESS STUDIES -->
+
+            <details class="subject">
+
+                <summary>Business Studies</summary>
+
+                <div class="year-list">
+
+                    <details class="year">
+                        <summary>2026</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/business-studies/2026.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2025</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/business-studies/2025.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2024</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/business-studies/2024.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2023</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/business-studies/2023.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2022</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/business-studies/2022.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </details>
+
+
+            <!-- GENERAL TEST -->
+
+            <details class="subject">
+
+                <summary>General Test</summary>
+
+                <div class="year-list">
+
+                    <details class="year">
+                        <summary>2026</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/general-test/2026.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2025</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/general-test/2025.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2024</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/general-test/2024.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2023</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/general-test/2023.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                    <details class="year">
+                        <summary>2022</summary>
+
+                        <div class="pdf-box">
+                            <a class="pdf-button"
+                               href="pyqs/cuet/general-test/2022.pdf"
+                               target="_blank">
+                                📄 Open PDF
+                            </a>
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </details>
+
+
+    <!-- =========================
+         IMPORTANT NOTE
+    ========================= -->
+
+    <div class="info-note">
+
+        <strong>📌 Important:</strong>
+        Question papers should be verified before being uploaded as
+        official previous year question papers. Any practice or
+        reconstructed paper should be clearly labelled as a
+        CBSE PYQ-Based Practice Question or CUET PYQ-Based Practice
+        Question.
+
+    </div>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <div class="bottom-navigation">
+
+        <a href="index.html" class="home-button">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    © 2026 Edusphere with Satyam • Learning Made Simple
+
+</footer>
+
+</body>
+</html>
