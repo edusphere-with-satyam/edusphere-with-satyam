@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Edusphere with Satyam - Educational notes, PPTs, MCQs and learning resources.">
+        content="Edusphere with Satyam - Educational notes, concepts, MCQs, Board and CUET preparation resources for students.">
 
   <title>Edusphere with Satyam</title>
 
@@ -239,58 +239,6 @@
 
 
     /* =========================
-       FEATURE CARDS
-    ========================= */
-
-    .features {
-      max-width: 1380px;
-      margin: 0 auto;
-      padding: 0 6% 65px;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .feature {
-      background: rgba(255,255,255,0.95);
-      border: 1px solid #e0e6f3;
-      border-radius: 15px;
-      padding: 22px;
-
-      display: flex;
-      align-items: center;
-      gap: 16px;
-
-      box-shadow: 0 10px 30px rgba(30,60,120,0.08);
-    }
-
-    .feature-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 13px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: #edf3ff;
-      font-size: 27px;
-    }
-
-    .feature h3 {
-      margin: 0 0 5px;
-      font-size: 17px;
-    }
-
-    .feature p {
-      margin: 0;
-      color: #667085;
-      font-size: 14px;
-    }
-
-
-    /* =========================
        SECTIONS
     ========================= */
 
@@ -332,7 +280,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
@@ -400,118 +348,61 @@
 
 
     /* =========================
-       RESOURCES
+       EXAM RESOURCES
     ========================= */
 
-    .resource-list {
-      max-width: 1000px;
-      display: grid;
-      gap: 15px;
-    }
-
-    .resource {
+    .exam-resource {
+      max-width: 900px;
       background: white;
       border: 1px solid #e1e6f0;
-      border-radius: 12px;
-      padding: 20px;
+      border-left: 5px solid #2563eb;
+      border-radius: 15px;
+      padding: 28px;
+
+      box-shadow: 0 10px 30px rgba(20,50,100,0.06);
 
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
     }
 
-    .resource > span {
-      font-size: 28px;
+    .exam-resource-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #edf3ff;
+      font-size: 30px;
+      flex-shrink: 0;
     }
 
-    .resource h3 {
-      margin: 0 0 5px;
+    .exam-resource-content h3 {
+      margin: 0 0 7px;
+      font-size: 21px;
     }
 
-    .resource p {
+    .exam-resource-content p {
       margin: 0;
       color: #68738a;
+      line-height: 1.6;
     }
 
-    .resource > a {
+    .exam-resource a {
       margin-left: auto;
       background: #172554;
       color: white;
-      padding: 9px 17px;
+      padding: 10px 18px;
       border-radius: 7px;
       font-weight: 600;
       white-space: nowrap;
     }
 
-
-    /* =========================
-       QUIZ
-    ========================= */
-
-    .quiz-card {
-      max-width: 800px;
-      background: white;
-      border: 1px solid #e1e6f0;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(20,50,100,0.06);
-    }
-
-    .answers {
-      display: grid;
-      gap: 10px;
-    }
-
-    .answers button {
-      text-align: left;
-      background: #f6f8fc;
-      border: 1px solid #dce3ef;
-      border-radius: 8px;
-      padding: 13px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    .answers button:hover {
-      background: #eaf1ff;
-    }
-
-    .result {
-      font-weight: 700;
-    }
-
-
-    /* =========================
-       ARTICLES
-    ========================= */
-
-    .article {
-      background: white;
-      border: 1px solid #e1e6f0;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 10px 30px rgba(20,50,100,0.05);
-    }
-
-    .article .tag {
-      color: #3164dc;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-    }
-
-    .article h3 {
-      font-size: 20px;
-    }
-
-    .article p {
-      color: #68738a;
-      line-height: 1.6;
-    }
-
-    .article a {
-      color: #2563eb;
-      font-weight: 700;
+    .exam-resource a:hover {
+      background: #2563eb;
     }
 
 
@@ -534,14 +425,13 @@
       margin-bottom: 20px;
     }
 
-    .about h3 {
-      margin-top: 30px;
-    }
-
-    .about p,
-    .about li {
+    .about p {
       color: #5f6b82;
       line-height: 1.7;
+    }
+
+    .about strong {
+      color: #101a3a;
     }
 
 
@@ -582,10 +472,6 @@
 
       .grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .features {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -646,10 +532,6 @@
         border-radius: 20px;
       }
 
-      .features {
-        padding: 0 20px 50px;
-      }
-
       .section,
       .about {
         padding: 55px 20px;
@@ -667,12 +549,12 @@
         min-height: auto;
       }
 
-      .resource {
+      .exam-resource {
         align-items: flex-start;
         flex-wrap: wrap;
       }
 
-      .resource > a {
+      .exam-resource a {
         margin-left: 0;
       }
     }
@@ -702,9 +584,7 @@
 
       <a href="#home">Home</a>
       <a href="#subjects">Subjects</a>
-      <a href="#resources">Resources</a>
-      <a href="#practice">MCQs</a>
-      <a href="#articles">Articles</a>
+      <a href="pyqs.html">Board & CUET PYQs</a>
       <a href="#about">About</a>
 
     </div>
@@ -737,18 +617,19 @@
       </h1>
 
       <p class="lead">
-        A simple learning space for notes, presentations,
-        practice questions and useful educational content.
+        A simple and organised learning platform for
+        notes, concepts, MCQs, previous year questions
+        and exam-oriented study material.
       </p>
 
       <div class="buttons">
 
-        <a class="btn primary" href="#resources">
-          Explore Resources →
+        <a class="btn primary" href="#subjects">
+          Explore Subjects →
         </a>
 
-        <a class="btn secondary" href="#about">
-          👨‍🏫 About the Teacher
+        <a class="btn secondary" href="pyqs.html">
+          📚 Board & CUET PYQs
         </a>
 
       </div>
@@ -770,6 +651,7 @@
 
 </section>
 
+
 <!-- =========================
      SUBJECTS
 ========================= -->
@@ -783,7 +665,8 @@
     <h2>Subjects & Learning Areas</h2>
 
     <p>
-      Start with a subject and explore the available resources.
+      Explore subjects and access the available
+      learning resources.
     </p>
 
   </div>
@@ -830,7 +713,7 @@
 
       <p>
         Constitutional provisions, Fundamental Rights,
-        articles, cases and revision notes.
+        articles, cases and study notes.
       </p>
 
       <div class="subject-buttons">
@@ -854,7 +737,7 @@
 
       <p>
         Class 11 and 12 concepts, explanations,
-        examples and revision material.
+        examples and exam-oriented study material.
       </p>
 
       <div class="subject-buttons">
@@ -871,178 +754,52 @@
 
     </article>
 
-
-    <!-- COMPETITIVE EXAMS -->
-
-    <article class="subject">
-
-      <div>📝</div>
-
-      <h3>Competitive Exams</h3>
-
-      <p>
-        Practice material, basic concepts,
-        MCQs and exam-oriented revision.
-      </p>
-
-      <div class="subject-buttons">
-
-        <a class="subject-btn" href="#practice">
-          Explore Now
-        </a>
-
-      </div>
-
-    </article>
-
   </div>
 
 </section>
 
 
 <!-- =========================
-     RESOURCES
+     BOARD & CUET
 ========================= -->
 
-<section class="section soft" id="resources">
+<section class="section soft" id="pyqs">
 
   <div class="section-heading">
 
-    <p class="eyebrow">STUDY MATERIAL</p>
+    <p class="eyebrow">EXAM PREPARATION</p>
 
-    <h2>Notes, PDFs & PPTs</h2>
+    <h2>Board & CUET PYQs</h2>
 
     <p>
-      Study material, presentations and useful
-      educational resources for students.
+      Previous year questions for Board examinations,
+      with CUET preparation resources planned as the
+      platform expands.
     </p>
 
   </div>
 
 
-  <div class="resource-list">
+  <div class="exam-resource">
 
+    <div class="exam-resource-icon">
+      📚
+    </div>
 
-    <div class="resource">
+    <div class="exam-resource-content">
 
-      <span>📄</span>
+      <h3>Previous Year Questions</h3>
 
-      <div>
-        <h3>Class Notes</h3>
-        <p>Topic-wise notes for students.</p>
-      </div>
-
-      <a href="#" onclick="demo(event)">
-        Open
-      </a>
+      <p>
+        Find Board and CUET previous year questions
+        organised class-wise, subject-wise and year-wise.
+      </p>
 
     </div>
 
-
-    <div class="resource">
-
-      <span>📊</span>
-
-      <div>
-        <h3>Teaching PPTs</h3>
-        <p>Presentation-ready educational slides.</p>
-      </div>
-
-      <a href="#" onclick="demo(event)">
-        Open
-      </a>
-
-    </div>
-
-
-    <div class="resource">
-
-      <span>📚</span>
-
-      <div>
-        <h3>PDF Library</h3>
-        <p>Downloadable revision and study material.</p>
-      </div>
-
-      <a href="#" onclick="demo(event)">
-        Open
-      </a>
-
-    </div>
-<!-- =========================
-     ARTICLES
-========================= -->
-
-<section class="section soft" id="articles">
-
-  <div class="section-heading">
-
-    <p class="eyebrow">BLOG</p>
-
-    <h2>Educational Articles</h2>
-
-    <p>
-      Explanations, exam tips and useful learning articles.
-    </p>
-
-  </div>
-
-
-  <div class="grid">
-
-
-    <article class="article">
-
-      <p class="tag">POLITY</p>
-
-      <h3>Understanding Fundamental Rights</h3>
-
-      <p>
-        Learn the important Fundamental Rights
-        of the Indian Constitution in simple language.
-      </p>
-
-      <a href="fundamental-rights.html">
-        Read article →
-      </a>
-
-    </article>
-
-
-    <article class="article">
-
-      <p class="tag">ECONOMICS</p>
-
-      <h3>Economics Concepts Made Simple</h3>
-
-      <p>
-        Understand difficult Economics concepts
-        using simple examples and explanations.
-      </p>
-
-      <a href="#" onclick="demo(event)">
-        Read article →
-      </a>
-
-    </article>
-
-
-    <article class="article">
-
-      <p class="tag">IT</p>
-
-      <h3>Computer Basics for Students</h3>
-
-      <p>
-        Beginner-friendly lessons and
-        revision guides for students.
-      </p>
-
-      <a href="#" onclick="demo(event)">
-        Read article →
-      </a>
-
-    </article>
+    <a href="pyqs.html">
+      Explore PYQs →
+    </a>
 
   </div>
 
@@ -1059,80 +816,27 @@
 
     <p class="eyebrow">ABOUT</p>
 
-    <h2>About Satyam</h2>
+    <h2>About Edusphere</h2>
 
     <p>
-      Welcome to <strong>Edusphere with Satyam</strong> —
-      an educational platform created to make learning
-      resources organised, accessible and easy to understand.
+      <strong>Edusphere with Satyam</strong> is an
+      educational platform created to provide students
+      with clear, organised and easy-to-understand
+      learning resources.
     </p>
 
     <p>
-      I am <strong>Satyam Pandey</strong>, an educator with
-      an academic background in Commerce and a strong
-      interest in Information Technology and Indian Polity.
-    </p>
-
-
-    <h3>🎓 Academic Background</h3>
-
-    <ul>
-
-      <li>
-        <strong>Graduation:</strong>
-        Bachelor of Commerce (B.Com.) —
-        Guru Ghasidas Vishwavidyalaya
-      </li>
-
-      <li>
-        <strong>Post-Graduation:</strong>
-        Master of Commerce (M.Com.) —
-        Dr. Ram Manohar Lohia Avadh University
-      </li>
-
-    </ul>
-
-
-    <h3>👨‍🏫 Teaching</h3>
-
-    <p>
-      Currently teaching at
-      <strong>TPS Memorial Convent Public School</strong>.
-    </p>
-
-
-    <h3>📚 Subjects</h3>
-
-    <ul>
-
-      <li>Economics</li>
-      <li>Information Technology</li>
-      <li>Accountancy</li>
-      <li>Indian Polity</li>
-
-    </ul>
-
-
-    <h3>🌐 About Edusphere with Satyam</h3>
-
-    <p>
-      Edusphere with Satyam aims to provide students
-      with clear and well-organised study material,
-      notes, presentations, practice questions,
-      MCQs and other useful learning resources.
+      The platform focuses on school subjects, concepts,
+      study notes, MCQs, previous year questions,
+      presentations and exam-oriented learning material.
     </p>
 
     <p>
       The goal is simple:
       <strong>
-        make learning easier, more organised and
-        more accessible for students.
+        make learning easier, organised and accessible
+        for students.
       </strong>
-    </p>
-
-    <p>
-      More educational content and learning resources
-      will be added regularly.
     </p>
 
   </div>
