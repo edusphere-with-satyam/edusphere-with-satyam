@@ -489,12 +489,18 @@ function normalise(text) {
 }
 
 
-function makeSlug(text) {
+/*
+   Converts:
 
-    return text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "");
+   Class 12  →  class12
+   Class12   →  class12
+
+   This fixes the class-name matching problem.
+*/
+
+function compact(text) {
+
+    return normalise(text).replace(/\s+/g, "");
 
 }
 
@@ -516,9 +522,10 @@ function fileUrl(path) {
 
 function findPDF(files, exam, year, subject, className = "") {
 
-    const wantedExam = normalise(exam);
-    const wantedSubject = normalise(subject);
-    const wantedClass = normalise(className);
+    const wantedExam = compact(exam);
+    const wantedSubject = compact(subject);
+    const wantedClass = compact(className);
+
 
     const pdfs = files.filter(file =>
         file.type === "blob" &&
@@ -531,15 +538,25 @@ function findPDF(files, exam, year, subject, className = "") {
 
        CUET_2026_Accountancy.pdf
 
-       CBSE_2026_Class12_Economics.pdf
+       CBSE_2026_Class12_Accountancy.pdf
+
+       CBSE_2026_Class10_Information_Technology.pdf
+
+       All files can be inside:
+
+       pyqs/papers/
     -------------------------------------- */
 
     for (const file of pdfs) {
 
         const filename =
-            file.path.split("/").pop().replace(/\.pdf$/i, "");
+            file.path
+                .split("/")
+                .pop()
+                .replace(/\.pdf$/i, "");
 
-        const text = normalise(filename);
+        const text = compact(filename);
+
 
         if (
             text.includes(wantedExam) &&
@@ -564,11 +581,14 @@ function findPDF(files, exam, year, subject, className = "") {
        pyqs/cuet/accountancy/2026.pdf
 
        pyqs/class12/economics/2026.pdf
+
+       pyqs/class10/information-technology/2026.pdf
     -------------------------------------- */
 
     for (const file of pdfs) {
 
-        const path = normalise(file.path);
+        const path = compact(file.path);
+
 
         if (
             path.includes(wantedExam) &&
@@ -589,6 +609,7 @@ function findPDF(files, exam, year, subject, className = "") {
 
     }
 
+
     return null;
 
 }
@@ -601,16 +622,19 @@ function findPDF(files, exam, year, subject, className = "") {
 function createYear(year, pdfPath) {
 
     const details = document.createElement("details");
+
     details.className = "year";
 
 
     const summary = document.createElement("summary");
+
     summary.textContent = year;
 
     details.appendChild(summary);
 
 
     const box = document.createElement("div");
+
     box.className = "pdf-box";
 
 
@@ -630,7 +654,9 @@ function createYear(year, pdfPath) {
 
         box.appendChild(link);
 
-    } else {
+    }
+
+    else {
 
         const text = document.createElement("span");
 
@@ -684,6 +710,7 @@ function createSubject(subject, exam, className, files) {
             subject,
             className
         );
+
 
         yearList.appendChild(
             createYear(year, pdfPath)
@@ -828,7 +855,11 @@ async function loadPYQs() {
 
 
         if (!response.ok) {
-            throw new Error("GitHub API request failed");
+
+            throw new Error(
+                "GitHub API request failed"
+            );
+
         }
 
 
@@ -844,7 +875,9 @@ async function loadPYQs() {
 
         createCUET(files);
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         console.error(error);
 
