@@ -1,0 +1,1201 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Class 10 IT MCQs | Information Technology 402</title><style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#f4f1ff,#eef5ff,#f1fbfa);
+    color:#20243a;
+    line-height:1.6;
+}
+
+.container{
+    width:92%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.top-bar{
+    padding:22px 0 10px;
+}
+
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#ffffff;
+    color:#4b4d78;
+    border:1px solid #dddff0;
+    padding:9px 16px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    box-shadow:0 3px 10px rgba(50,50,100,0.06);
+}
+
+.header{
+    text-align:center;
+    padding:20px 10px 28px;
+}
+
+.badge{
+    display:inline-block;
+    background:#eeeaff;
+    color:#6255b5;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.6px;
+}
+
+.header h1{
+    margin:12px 0 5px;
+    color:#302c63;
+    font-size:34px;
+}
+
+.header p{
+    margin:5px auto;
+    max-width:700px;
+    color:#666b82;
+    font-size:15px;
+}
+
+.info-box{
+    background:#ffffff;
+    border:1px solid #e2e3ee;
+    border-radius:16px;
+    padding:18px 22px;
+    margin-bottom:22px;
+    box-shadow:0 8px 25px rgba(60,60,110,.07);
+}
+
+.info-box strong{
+    color:#38336e;
+}
+
+.progress-area{
+    margin-top:14px;
+}
+
+.progress-text{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    color:#686d82;
+    margin-bottom:7px;
+}
+
+.progress{
+    height:8px;
+    background:#e8e8f1;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#7467c7,#5b9dd9);
+    transition:.3s;
+}
+
+.question-card{
+    background:#ffffff;
+    border:1px solid #e1e2ed;
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 7px 22px rgba(50,50,100,.055);
+}
+
+.question-number{
+    display:inline-block;
+    background:#f0edff;
+    color:#6255b5;
+    padding:4px 10px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:9px;
+}
+
+.question{
+    font-size:16px;
+    font-weight:700;
+    color:#292d48;
+    margin:2px 0 15px;
+}
+
+.option{
+    display:block;
+    position:relative;
+    background:#f8f9fd;
+    border:1px solid #e3e5ef;
+    border-radius:10px;
+    padding:11px 13px;
+    margin:9px 0;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    background:#f1efff;
+    border-color:#b9b1e8;
+}
+
+.option input{
+    margin-right:9px;
+    accent-color:#6759bd;
+}
+
+.option.correct{
+    background:#eaf8f0;
+    border-color:#8ac9a5;
+}
+
+.option.incorrect{
+    background:#fff0f0;
+    border-color:#e2a0a0;
+}
+
+.option.correct-answer{
+    font-weight:700;
+}
+
+.answer-note{
+    display:none;
+    margin-top:10px;
+    padding:10px 12px;
+    border-radius:9px;
+    font-size:13px;
+}
+
+.answer-note.show{
+    display:block;
+}
+
+.correct-note{
+    background:#edf9f2;
+    color:#287348;
+}
+
+.incorrect-note{
+    background:#fff1f1;
+    color:#a53e3e;
+}
+
+.submit-area{
+    text-align:center;
+    padding:10px 0 35px;
+}
+
+.submit-btn{
+    border:0;
+    background:linear-gradient(135deg,#6255b5,#4f78b9);
+    color:white;
+    padding:13px 30px;
+    border-radius:11px;
+    font-size:15px;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 6px 16px rgba(80,75,160,.22);
+}
+
+.submit-btn:hover{
+    transform:translateY(-1px);
+}
+
+.result{
+    display:none;
+    background:#ffffff;
+    border:1px solid #dfe1ed;
+    border-radius:18px;
+    padding:24px;
+    margin:10px 0 30px;
+    box-shadow:0 9px 28px rgba(50,50,100,.08);
+}
+
+.result.show{
+    display:block;
+}
+
+.result h2{
+    margin-top:0;
+    color:#39336f;
+    text-align:center;
+}
+
+.score{
+    text-align:center;
+    font-size:30px;
+    font-weight:900;
+    color:#5447a7;
+    margin:8px 0 20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.stat{
+    text-align:center;
+    background:#f8f9fd;
+    border:1px solid #e4e5ef;
+    border-radius:12px;
+    padding:13px 8px;
+}
+
+.stat-number{
+    display:block;
+    font-size:23px;
+    font-weight:900;
+    color:#39336f;
+}
+
+.stat-label{
+    font-size:12px;
+    color:#6d7185;
+}
+
+.reset-btn{
+    display:block;
+    margin:20px auto 0;
+    border:1px solid #c8c9dc;
+    background:white;
+    color:#4c4f70;
+    padding:10px 22px;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:25px 10px;
+    color:#777b8f;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+    .header h1{
+        font-size:27px;
+    }
+
+    .question-card{
+        padding:17px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+</style></head><body><div class="container"><div class="top-bar">
+    <a href="class10-it.html" class="back-btn">← Back to Class 10 IT</a>
+</div>
+
+<header class="header">
+    <span class="badge">CLASS 10 • IT (402) • MCQs</span>
+
+    <h1>📝 Class 10 Information Technology MCQs</h1>
+
+    <p>
+        Practice Employability Skills and Digital Documentation
+        questions and check your performance instantly.
+    </p>
+</header>
+
+<div class="info-box">
+    <strong>Instructions:</strong>
+    Select one option for each question and click
+    <strong>Submit Test</strong>. Your score, attempted questions,
+    correct answers and incorrect answers will be displayed.
+
+    <div class="progress-area">
+        <div class="progress-text">
+            <span>Attempt Progress</span>
+            <span id="progressText">0 / 50</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+</div>
+
+<form id="mcqForm"></form>
+
+<div class="submit-area">
+    <button type="button" class="submit-btn" onclick="submitTest()">
+        ✅ Submit Test
+    </button>
+</div>
+
+<div class="result" id="resultBox">
+
+    <h2>📊 Your Result</h2>
+
+    <div class="score" id="scoreText"></div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <span class="stat-number" id="attempted">0</span>
+            <span class="stat-label">Attempted</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number" id="unattempted">0</span>
+            <span class="stat-label">Unattempted</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number" id="correct">0</span>
+            <span class="stat-label">Correct</span>
+        </div>
+
+        <div class="stat">
+            <span class="stat-number" id="incorrect">0</span>
+            <span class="stat-label">Incorrect</span>
+        </div>
+
+    </div>
+
+    <button class="reset-btn" onclick="resetTest()">
+        🔄 Try Again
+    </button>
+
+</div>
+
+<footer>
+    © Edusphere with Satyam • Class 10 Information Technology (402)
+</footer>
+
+</div><script>
+
+const questions = [
+
+/* =========================
+   EMPLOYABILITY SKILLS
+   PYQ-BASED ADAPTED
+========================= */
+
+{
+q:"What is the main purpose of feedback in the communication cycle?",
+o:[
+"To start the communication",
+"To acknowledge and respond to the message",
+"To transmit the original message",
+"To stop communication"
+],
+a:1
+},
+
+{
+q:"What is the ultimate aim of effective stress management?",
+o:[
+"To remain stressed continuously",
+"To ignore stress completely",
+"To avoid relaxation",
+"To maintain a healthy balance among life, work and relaxation"
+],
+a:3
+},
+
+{
+q:"Which person is an example of a wage-employed worker?",
+o:[
+"A self-employed taxi owner",
+"An accountant employed by a bank",
+"A freelance photographer",
+"A shop owner"
+],
+a:1
+},
+
+{
+q:"In the SMART method of setting goals, what does S represent?",
+o:[
+"Simple",
+"Special",
+"Specific",
+"Social"
+],
+a:2
+},
+
+{
+q:"Why is sustainable development necessary?",
+o:[
+"To fulfil present needs while protecting the ability of future generations to fulfil theirs",
+"To concentrate only on environmental protection",
+"To increase resource consumption",
+"To focus only on short-term economic growth"
+],
+a:0
+},
+
+{
+q:"Which software is considered essential for controlling and managing a computer?",
+o:[
+"Gaming software",
+"Designing software",
+"Operating system",
+"Internet software"
+],
+a:2
+},
+
+{
+q:"Which symbol normally separates a filename from its extension?",
+o:[
+"$",
+".",
+"_",
+"#"
+],
+a:1
+},
+
+{
+q:"Which type of communication mainly uses pictures or images to convey information?",
+o:[
+"Verbal communication",
+"Gesture",
+"Visual communication",
+"Facial communication"
+],
+a:2
+},
+
+{
+q:"What is the ability to understand and manage your own emotions and understand those of others called?",
+o:[
+"Self-awareness",
+"Emotional intelligence",
+"Stress management",
+"Emotional barrier"
+],
+a:1
+},
+
+{
+q:"What acts as an internal driving force that helps a person work towards goals and improve life?",
+o:[
+"Stress management",
+"Self-awareness",
+"Self-growth",
+"Self-motivation"
+],
+a:3
+},
+
+{
+q:"Which of the following is NOT an essential quality of an entrepreneur?",
+o:[
+"Confidence",
+"Creativity",
+"Patience",
+"Being wealthy"
+],
+a:3
+},
+
+{
+q:"How many Sustainable Development Goals were adopted by the United Nations in 2015?",
+o:[
+"13",
+"11",
+"17",
+"19"
+],
+a:2
+},
+
+{
+q:"A school wants to inform every student about a career counselling workshop. Which method is most suitable?",
+o:[
+"Informal face-to-face communication",
+"Notice or poster",
+"Calling every student individually",
+"Meeting every student personally"
+],
+a:1
+},
+
+{
+q:"Which term best describes regulating one's own emotions and helping others manage emotions?",
+o:[
+"Managing emotions",
+"Harnessing emotions",
+"Knowing emotions",
+"Suppressing emotions"
+],
+a:0
+},
+
+{
+q:"A student regularly wakes up early, practises sample papers and completes revision to achieve better marks. This mainly demonstrates:",
+o:[
+"Self-awareness",
+"Self-motivation",
+"Influential motivation",
+"Emotional intelligence"
+],
+a:1
+},
+
+{
+q:"What is a computer location used to store a group of files called?",
+o:[
+"Folder",
+"SMPS",
+"CMOS",
+"UPS"
+],
+a:0
+},
+
+{
+q:"Which statement represents a common myth about entrepreneurship?",
+o:[
+"An entrepreneur should be confident",
+"Every business idea must be completely unique",
+"An entrepreneur should keep exploring ideas",
+"An entrepreneur should be creative"
+],
+a:1
+},
+
+{
+q:"Which factor is especially important for sustainable development because it helps citizens understand their responsibilities?",
+o:[
+"Sports",
+"Education",
+"Business",
+"Illiteracy"
+],
+a:1
+},
+
+/* =========================
+   DIGITAL DOCUMENTATION
+   PYQ-BASED ADAPTED
+========================= */
+
+{
+q:"What is a collection of saved formatting instructions that can be applied to a document called in Writer?",
+o:[
+"Table of Contents",
+"Style",
+"Comment",
+"Track Changes"
+],
+a:1
+},
+
+{
+q:"Which toolbar provides tools such as cropping, rotating and resizing an inserted image in Writer?",
+o:[
+"Image toolbar",
+"Drawing toolbar",
+"Formatting toolbar",
+"Standard toolbar"
+],
+a:0
+},
+
+{
+q:"Which feature lists topics and subtopics of a document along with their page numbers?",
+o:[
+"Template",
+"Table",
+"Table of Contents",
+"Content"
+],
+a:2
+},
+
+{
+q:"In LibreOffice Writer, where can the Track Changes option generally be found?",
+o:[
+"File",
+"Edit",
+"View",
+"Insert"
+],
+a:1
+},
+
+{
+q:"Which Writer feature controls how an image is positioned in relation to surrounding text?",
+o:[
+"Image Wrapping",
+"Picture Wrapping",
+"Image Placement",
+"Text Wrapping"
+],
+a:3
+},
+
+{
+q:"How many tabs are available in the Table of Contents, Index or Bibliography dialog box?",
+o:[
+"4",
+"5",
+"6",
+"7"
+],
+a:1
+},
+
+{
+q:"Which feature allows several formatting properties to be applied together?",
+o:[
+"Fill",
+"Styles",
+"Images",
+"Drag and Drop"
+],
+a:1
+},
+
+{
+q:"The Styles and Formatting option in Writer is associated with which menu?",
+o:[
+"Insert",
+"Tools",
+"Format",
+"Window"
+],
+a:2
+},
+
+{
+q:"When dragging an image into Writer, which key can be held to create a link to the image instead of embedding it?",
+o:[
+"No key",
+"Ctrl",
+"Shift",
+"Alt"
+],
+a:1
+},
+
+{
+q:"Resizing which type of image can significantly affect its resolution?",
+o:[
+"Vector image",
+"Raster image",
+"CAD image",
+"Coloured image"
+],
+a:1
+},
+
+{
+q:"In Writer, templates can be created in how many general ways?",
+o:[
+"One",
+"Two",
+"Three",
+"Four"
+],
+a:1
+},
+
+{
+q:"Which function key is used to view databases while working with Mail Merge?",
+o:[
+"F1",
+"F2",
+"F3",
+"F4"
+],
+a:3
+},
+
+{
+q:"A student wants to save formatting settings and apply them repeatedly throughout a report. Which Writer feature should be used?",
+o:[
+"Styles",
+"Image",
+"Mail Merge",
+"Preview"
+],
+a:0
+},
+
+{
+q:"Which image filter can be used to improve or increase the sharpness of an image?",
+o:[
+"Aging",
+"Mosaic",
+"Sharpen",
+"Smooth"
+],
+a:2
+},
+
+{
+q:"Which image arrangement option places a drawing object behind the document text?",
+o:[
+"To background",
+"To foreground",
+"Behind the text",
+"Back one"
+],
+a:2
+},
+
+{
+q:"Which Writer feature uses heading styles to automatically create a listing of document contents?",
+o:[
+"Table of Heading",
+"Index",
+"Label of Contents",
+"Table of Contents"
+],
+a:3
+},
+
+{
+q:"What is generally used as the default starting template when creating a new Writer document?",
+o:[
+"Resume template",
+"Project Report",
+"Blank document",
+"Chapter"
+],
+a:2
+},
+
+{
+q:"Which feature can be used to apply the same formatting style repeatedly to different parts of a document?",
+o:[
+"Fill Style",
+"Fill Format",
+"Apply Feature",
+"Apply Character"
+],
+a:1
+},
+
+/* =========================
+   ORIGINAL QUESTIONS
+   Q37-Q50
+========================= */
+
+{
+q:"Which feature in Writer is used to record modifications made by different users to a document?",
+o:[
+"Track Changes",
+"Mail Merge",
+"AutoCorrect",
+"Word Count"
+],
+a:0
+},
+
+{
+q:"What is the main advantage of using styles in a long document?",
+o:[
+"They automatically insert pictures",
+"They maintain consistent formatting",
+"They delete unwanted pages",
+"They convert text into images"
+],
+a:1
+},
+
+{
+q:"Which option is most useful when several people review and suggest changes in a document?",
+o:[
+"Track Changes",
+"Page Preview",
+"Spell Check",
+"Gallery"
+],
+a:0
+},
+
+{
+q:"What is the main purpose of comments in a Writer document?",
+o:[
+"To add notes or suggestions without changing the main text",
+"To delete paragraphs",
+"To create tables automatically",
+"To change the page size"
+],
+a:0
+},
+
+{
+q:"Which feature allows the same document to be used with different recipients' names and addresses?",
+o:[
+"Styles",
+"Mail Merge",
+"Track Changes",
+"Table of Contents"
+],
+a:1
+},
+
+{
+q:"Which type of image is made using mathematical paths and can generally be resized without losing quality?",
+o:[
+"Raster image",
+"Vector image",
+"Bitmap screenshot",
+"Scanned image"
+],
+a:1
+},
+
+{
+q:"Which image type is made up of individual pixels?",
+o:[
+"Vector image",
+"Raster image",
+"Text image",
+"Shape image"
+],
+a:1
+},
+
+{
+q:"What is the main purpose of a template?",
+o:[
+"To provide a predefined document structure and formatting",
+"To delete all formatting",
+"To increase computer memory",
+"To close Writer"
+],
+a:0
+},
+
+{
+q:"Which feature is useful for automatically generating a Table of Contents?",
+o:[
+"Heading styles",
+"Page colour",
+"Font colour",
+"Image filters"
+],
+a:0
+},
+
+{
+q:"What should normally be used for the main headings of a document when creating an automatic Table of Contents?",
+o:[
+"Heading styles",
+"Random font sizes",
+"Manual spaces",
+"Text boxes only"
+],
+a:0
+},
+
+{
+q:"Which option changes the position of an image relative to text?",
+o:[
+"Text Wrapping",
+"Font Effects",
+"AutoCorrect",
+"Word Count"
+],
+a:0
+},
+
+{
+q:"Which feature can combine a main document with a data source to create personalised letters?",
+o:[
+"Mail Merge",
+"Track Changes",
+"Styles",
+"Gallery"
+],
+a:0
+},
+
+{
+q:"Why are comments useful during collaborative document editing?",
+o:[
+"They allow reviewers to leave notes and suggestions",
+"They automatically print the document",
+"They remove all images",
+"They change the operating system"
+],
+a:0
+},
+
+{
+q:"Which Writer feature helps maintain the same heading appearance throughout a document?",
+o:[
+"Styles",
+"Zoom",
+"Page Preview",
+"Find"
+],
+a:0
+}
+
+];
+
+const form = document.getElementById("mcqForm");
+
+function renderQuestions(){
+
+    form.innerHTML = "";
+
+    questions.forEach((item,index)=>{
+
+        const card = document.createElement("div");
+        card.className = "question-card";
+        card.id = "question-" + index;
+
+        let optionsHTML = "";
+
+        item.o.forEach((option,optionIndex)=>{
+
+            optionsHTML += `
+                <label class="option">
+                    <input
+                        type="radio"
+                        name="q${index}"
+                        value="${optionIndex}"
+                        onchange="updateProgress()"
+                    >
+                    ${String.fromCharCode(65 + optionIndex)}. ${option}
+                </label>
+            `;
+
+        });
+
+        card.innerHTML = `
+            <span class="question-number">
+                Question ${index + 1}
+            </span>
+
+            <div class="question">
+                ${item.q}
+            </div>
+
+            ${optionsHTML}
+
+            <div class="answer-note" id="note-${index}"></div>
+        `;
+
+        form.appendChild(card);
+
+    });
+
+}
+
+function updateProgress(){
+
+    let attempted = 0;
+
+    questions.forEach((_,index)=>{
+
+        const selected =
+            document.querySelector(`input[name="q${index}"]:checked`);
+
+        if(selected){
+            attempted++;
+        }
+
+    });
+
+    const percentage =
+        (attempted / questions.length) * 100;
+
+    document.getElementById("progressText").textContent =
+        attempted + " / " + questions.length;
+
+    document.getElementById("progressBar").style.width =
+        percentage + "%";
+}
+
+function submitTest(){
+
+    let attempted = 0;
+    let correct = 0;
+    let incorrect = 0;
+
+    questions.forEach((item,index)=>{
+
+        const card =
+            document.getElementById("question-" + index);
+
+        const options =
+            card.querySelectorAll(".option");
+
+        const selected =
+            document.querySelector(
+                `input[name="q${index}"]:checked`
+            );
+
+        options.forEach(option=>{
+            option.classList.remove(
+                "correct",
+                "incorrect",
+                "correct-answer"
+            );
+        });
+
+        const note =
+            document.getElementById("note-" + index);
+
+        if(selected){
+
+            attempted++;
+
+            const selectedValue =
+                Number(selected.value);
+
+            if(selectedValue === item.a){
+
+                correct++;
+
+                options[selectedValue]
+                    .classList.add("correct");
+
+                note.className =
+                    "answer-note show correct-note";
+
+                note.innerHTML =
+                    "✅ Correct!";
+
+            }else{
+
+                incorrect++;
+
+                options[selectedValue]
+                    .classList.add("incorrect");
+
+                options[item.a]
+                    .classList.add(
+                        "correct",
+                        "correct-answer"
+                    );
+
+                note.className =
+                    "answer-note show incorrect-note";
+
+                note.innerHTML =
+                    "❌ Incorrect. Correct answer: " +
+                    String.fromCharCode(65 + item.a) +
+                    ". " +
+                    item.o[item.a];
+
+            }
+
+        }else{
+
+            options[item.a]
+                .classList.add(
+                    "correct",
+                    "correct-answer"
+                );
+
+            note.className =
+                "answer-note show incorrect-note";
+
+            note.innerHTML =
+                "⚪ Not attempted. Correct answer: " +
+                String.fromCharCode(65 + item.a) +
+                ". " +
+                item.o[item.a];
+
+        }
+
+    });
+
+    const unattempted =
+        questions.length - attempted;
+
+    const percentage =
+        Math.round((correct / questions.length) * 100);
+
+    document.getElementById("scoreText").textContent =
+        "Score: " + correct + " / " + questions.length +
+        " (" + percentage + "%)";
+
+    document.getElementById("attempted").textContent =
+        attempted;
+
+    document.getElementById("unattempted").textContent =
+        unattempted;
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("incorrect").textContent =
+        incorrect;
+
+    document.getElementById("resultBox")
+        .classList.add("show");
+
+    document.getElementById("resultBox")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+}
+
+function resetTest(){
+
+    questions.forEach((_,index)=>{
+
+        const inputs =
+            document.querySelectorAll(
+                `input[name="q${index}"]`
+            );
+
+        inputs.forEach(input=>{
+            input.checked = false;
+        });
+
+        const card =
+            document.getElementById("question-" + index);
+
+        card.querySelectorAll(".option")
+            .forEach(option=>{
+                option.classList.remove(
+                    "correct",
+                    "incorrect",
+                    "correct-answer"
+                );
+            });
+
+        const note =
+            document.getElementById("note-" + index);
+
+        note.className = "answer-note";
+        note.innerHTML = "";
+
+    });
+
+    document.getElementById("resultBox")
+        .classList.remove("show");
+
+    updateProgress();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+renderQuestions();
+
+</script></body>
+</html>
