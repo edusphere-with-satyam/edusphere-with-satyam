@@ -8,258 +8,290 @@
 
 <style>
 
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
-    color:#1f2937;
-    line-height:1.7;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#eef2ff,#ecfeff,#fff7ed);
+    color: #1f2937;
+    line-height: 1.7;
 }
 
-header{
-    background:linear-gradient(135deg,#172554,#3730a3,#0f766e);
-    color:white;
-    text-align:center;
-    padding:35px 18px;
+header {
+    background: linear-gradient(135deg,#172554,#3730a3,#0f766e);
+    color: white;
+    text-align: center;
+    padding: 35px 18px;
 }
 
-header h1{
-    margin:0;
-    font-size:30px;
+header h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
 }
 
-header p{
-    margin:8px 0 0;
-    font-size:17px;
+header p {
+    margin: 4px 0;
+    opacity: 0.95;
 }
 
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
 }
 
-.back{
-    display:inline-block;
-    background:#172554;
-    color:white;
-    text-decoration:none;
-    padding:11px 18px;
-    border-radius:8px;
-    margin:5px 0 20px;
-    font-weight:bold;
+.back {
+    display: inline-block;
+    background: #172554;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    margin:22px 0;
-    border-radius:16px;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
+.card {
+    background: white;
+    padding: 25px;
+    margin: 22px 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(20,50,100,0.08);
 }
 
-.card h2{
-    color:#312e81;
-    border-bottom:3px solid #818cf8;
-    padding-bottom:8px;
+.card h2 {
+    color: #312e81;
+    border-bottom: 3px solid #818cf8;
+    padding-bottom: 7px;
+    margin-top: 0;
 }
 
-.card h3{
-    color:#0f766e;
+.card h3 {
+    color: #0f766e;
+    margin-top: 20px;
 }
 
-.topic{
-    display:inline-block;
-    background:#dbeafe;
-    color:#1e40af;
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:bold;
+.card h4 {
+    color: #312e81;
+    margin-bottom: 5px;
 }
 
-.definition{
-    background:#eff6ff;
-    border-left:6px solid #2563eb;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
+.topic {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.highlight{
-    background:#ecfdf5;
-    border-left:6px solid #10b981;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
+.definition {
+    background: #eef2ff;
+    border-left: 5px solid #6366f1;
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
 }
 
-.example{
-    background:#fff7ed;
-    border-left:6px solid #f97316;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
+.highlight {
+    background: #ecfeff;
+    border-left: 5px solid #0f766e;
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
 }
 
-.formula{
-    background:#fef3c7;
-    border-left:6px solid #d97706;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
-    font-weight:bold;
+.example {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
 }
 
-.important{
-    background:#fdf2f8;
-    border-left:6px solid #db2777;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
+.formula {
+    background: #f5f3ff;
+    border-left: 5px solid #7c3aed;
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
+    font-weight: bold;
 }
 
-.tip{
-    background:#f5f3ff;
-    border-left:6px solid #7c3aed;
-    padding:16px;
-    margin:15px 0;
-    border-radius:8px;
+.important {
+    background: #fef2f2;
+    border-left: 5px solid #ef4444;
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
 }
 
-.advice-link{
-    display:block;
-    background:linear-gradient(135deg,#4f46e5,#7c3aed,#0f766e);
-    color:white;
-    text-decoration:none;
-    padding:20px;
-    border-radius:12px;
-    margin-top:15px;
-    text-align:center;
-    font-weight:bold;
-    font-size:18px;
+.tip {
+    background: #f0fdf4;
+    border-left: 5px solid #16a34a;
+    padding: 13px 16px;
+    border-radius: 8px;
+    margin: 12px 0;
 }
 
-.mcq-link{
-    display:block;
-    background:#0f766e;
-    color:white;
-    text-decoration:none;
-    padding:16px;
-    border-radius:10px;
-    text-align:center;
-    font-weight:bold;
-    margin-top:15px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:18px 0;
+th, td {
+    border: 1px solid #dbe3ef;
+    padding: 10px;
+    text-align: left;
 }
 
-th{
-    background:#312e81;
-    color:white;
-    padding:12px;
+th {
+    background: #eef2ff;
+    color: #312e81;
 }
 
-td{
-    border:1px solid #cbd5e1;
-    padding:11px;
+tr:nth-child(even) {
+    background: #fafbff;
 }
 
-tr:nth-child(even){
-    background:#f8fafc;
+ul, ol {
+    padding-left: 23px;
 }
 
-li{
-    margin:7px 0;
+li {
+    margin-bottom: 5px;
 }
 
-footer{
-    background:#172554;
-    color:white;
-    text-align:center;
-    padding:28px;
-    margin-top:30px;
+details {
+    margin: 12px 0;
 }
 
-@media(max-width:650px){
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #312e81;
+    padding: 8px 0;
+}
 
-    .container{
-        padding:12px;
+.advice-link {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(135deg,#312e81,#0f766e);
+    color: white;
+    padding: 13px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.mcq-link {
+    display: block;
+    text-decoration: none;
+    background: #0f766e;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+@media(max-width:700px) {
+
+    header h1 {
+        font-size: 27px;
     }
 
-    .card{
-        padding:18px;
+    .container {
+        padding: 12px;
     }
 
-    header h1{
-        font-size:24px;
+    .card {
+        padding: 18px;
+        margin: 16px 0;
     }
 
-    table{
-        font-size:14px;
+    table {
+        font-size: 13px;
     }
 
-    th,td{
-        padding:8px;
+    th, td {
+        padding: 8px;
     }
+
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <header>
 
 <h1>Class 12 Economics</h1>
 
-<p>
-Macroeconomics | Unit 1 — National Income and Related Aggregates
-</p>
+<p>Unit 1 – National Income</p>
+
+<p>Complete Theory • Methods • Formulae • Numericals • Exam Preparation</p>
 
 </header>
 
 
 <div class="container">
 
-
-<a class="back" href="economics-class12.html">
-← Back to Class 12 Economics
-</a>
+<a href="index.html" class="back">← Back to Home</a>
 
 
 <!-- INTRODUCTION -->
 
 <div class="card">
 
-<h2>📘 Unit 1 — National Income and Related Aggregates</h2>
+<span class="topic">UNIT 1</span>
 
-<div class="highlight">
+<h2>National Income – Introduction</h2>
 
-<strong>What you will learn:</strong><br><br>
+<div class="definition">
 
-National Income, Domestic Product, National Product, GDP, GNP,
-NDP, NNP, Market Price, Factor Cost, depreciation, NFIA,
-final and intermediate goods, double counting, value added,
-income method, expenditure method and important numericals.
+<strong>National Income</strong> refers to the total factor income earned by the normal residents of a country during an accounting year.
 
 </div>
 
 <p>
-National income accounting is a systematic method of measuring the
-economic activities and performance of an economy during a given
-accounting period.
+National income accounting is a systematic method of measuring the economic activities
+and income generated in an economy during a particular period, generally one accounting year.
 </p>
+
+<p>
+It helps us understand the level of production, income and expenditure in an economy.
+It also provides important information about economic growth, changes in living standards,
+sectoral performance and the overall condition of an economy.
+</p>
+
+<div class="highlight">
+
+<strong>Core idea:</strong>
+Production creates income, income creates expenditure, and expenditure is spent on the
+goods and services produced in the economy. Therefore, production, income and expenditure
+are different ways of looking at the same economic activity.
+
+</div>
 
 </div>
 
@@ -268,266 +300,52 @@ accounting period.
 
 <div class="card">
 
-<span class="topic">1. Basic Concepts</span>
+<span class="topic">BASIC CONCEPTS</span>
 
-<h2>📚 Basic Concepts of National Income</h2>
+<h2>Important Concepts of National Income</h2>
 
-<div class="definition">
-
-<strong>National Income</strong><br><br>
-
-National income is the sum of factor incomes earned by the normal
-residents of a country during an accounting year.
-
-</div>
+<h3>National Income</h3>
 
 <div class="definition">
 
-<strong>Domestic Product</strong><br><br>
-
-Domestic product refers to the value of final goods and services
-produced within the domestic territory of a country during an accounting
-year.
+National Income is the sum total of factor incomes earned by the normal residents of a country during an accounting year.
 
 </div>
+
+<p>
+Factor incomes include compensation of employees, rent, interest, profit and mixed income
+of self-employed persons, subject to the relevant national income accounting treatment.
+</p>
+
+
+<h3>Domestic Product</h3>
 
 <div class="definition">
 
-<strong>National Product</strong><br><br>
-
-National product refers to the value of final goods and services
-produced by the normal residents of a country during an accounting year.
+Domestic Product is the money value of all final goods and services produced within the domestic territory of a country during an accounting year.
 
 </div>
 
-</div>
+<p>
+The important point is <strong>location of production</strong>. Domestic product includes
+production taking place within the domestic territory irrespective of whether the producer
+is a resident or a non-resident.
+</p>
 
 
-<!-- DOMESTIC TERRITORY -->
-
-<div class="card">
-
-<span class="topic">2. Domestic Territory</span>
-
-<h2>🌍 Domestic Territory</h2>
+<h3>National Product</h3>
 
 <div class="definition">
 
-Domestic territory refers to the economic territory under the
-administrative control of a country within which economic activities
-take place.
+National Product measures the value of final goods and services produced by the normal residents of a country during an accounting year.
 
 </div>
 
-<div class="important">
-
-<strong>Important:</strong><br>
-
-Domestic territory is different from geographical territory.
-Certain economic territories outside the geographical boundaries may
-also be included according to national accounting rules.
-
-</div>
-
-</div>
-
-
-<!-- NORMAL RESIDENT -->
-
-<div class="card">
-
-<span class="topic">3. Normal Resident</span>
-
-<h2>👤 Normal Resident</h2>
-
-<div class="definition">
-
-A normal resident is a person or institution whose centre of economic
-interest lies in the economic territory of a country and who normally
-resides there for a sufficiently long period.
-
-</div>
-
-<div class="example">
-
-<strong>Example:</strong><br>
-
-An Indian resident working temporarily abroad may continue to be
-treated as a normal resident of India, depending on the circumstances.
-
-</div>
-
-</div>
-
-
-<!-- FINAL INTERMEDIATE -->
-
-<div class="card">
-
-<span class="topic">4. Final and Intermediate Goods</span>
-
-<h2>🛒 Final Goods and Intermediate Goods</h2>
-
-<div class="definition">
-
-<strong>Final Goods</strong><br><br>
-
-Final goods are goods purchased for final consumption or investment and
-are not meant for resale or further processing during the accounting
-period.
-
-</div>
-
-<div class="definition">
-
-<strong>Intermediate Goods</strong><br><br>
-
-Intermediate goods are goods used as inputs in the production of other
-goods and services during the same accounting period.
-
-</div>
-
-<table>
-
-<tr>
-<th>Basis</th>
-<th>Final Goods</th>
-<th>Intermediate Goods</th>
-</tr>
-
-<tr>
-<td>Purpose</td>
-<td>Final use</td>
-<td>Further production</td>
-</tr>
-
-<tr>
-<td>Use</td>
-<td>Consumption or investment</td>
-<td>Used as input</td>
-</tr>
-
-<tr>
-<td>National income</td>
-<td>Included</td>
-<td>Not counted separately</td>
-</tr>
-
-<tr>
-<td>Example</td>
-<td>Car purchased by a household</td>
-<td>Steel used by a car manufacturer</td>
-</tr>
-
-</table>
-
-<div class="important">
-
-<strong>Why are intermediate goods not counted separately?</strong><br><br>
-
-Because doing so may result in <strong>double counting</strong>.
-
-</div>
-
-</div>
-
-
-<!-- STOCK FLOW -->
-
-<div class="card">
-
-<span class="topic">5. Stock and Flow</span>
-
-<h2>📊 Stock and Flow</h2>
-
-<div class="definition">
-
-<strong>Stock</strong><br><br>
-
-A stock variable is measured at a particular point of time.
-
-<br><br>
-
-Examples: Wealth, capital stock and money balance.
-
-</div>
-
-<div class="definition">
-
-<strong>Flow</strong><br><br>
-
-A flow variable is measured over a period of time.
-
-<br><br>
-
-Examples: National income, production, consumption and investment.
-
-</div>
-
-<div class="tip">
-
-<strong>Easy Trick:</strong><br><br>
-
-Stock → Point of time<br>
-Flow → Period of time
-
-</div>
-
-</div>
-
-
-<!-- DEPRECIATION -->
-
-<div class="card">
-
-<span class="topic">6. Depreciation</span>
-
-<h2>⚙️ Depreciation</h2>
-
-<div class="definition">
-
-Depreciation refers to the fall in the value of fixed assets due to
-normal wear and tear, passage of time and expected obsolescence.
-
-</div>
-
-<div class="formula">
-
-Net Investment = Gross Investment − Depreciation
-
-</div>
-
-<div class="important">
-
-<strong>Remember:</strong><br>
-
-Gross → subtract depreciation → Net
-
-</div>
-
-</div>
-
-
-<!-- NFIA -->
-
-<div class="card">
-
-<span class="topic">7. NFIA</span>
-
-<h2>🌐 Net Factor Income from Abroad</h2>
-
-<div class="definition">
-
-NFIA is the difference between factor income received from abroad and
-factor income paid to the rest of the world.
-
-</div>
-
-<div class="formula">
-
-NFIA = Factor Income from Abroad − Factor Income to Abroad
-
-</div>
+<p>
+The important point is <strong>normal residence</strong>. Therefore, income earned by
+residents from abroad is included, while factor income earned by non-residents from the
+domestic territory is excluded when moving from domestic to national.
+</p>
 
 <div class="formula">
 
@@ -538,207 +356,452 @@ National Product = Domestic Product + NFIA
 </div>
 
 
-<!-- 8 AGGREGATES -->
+<!-- DOMESTIC TERRITORY -->
 
 <div class="card">
 
-<span class="topic">8. National Income Aggregates</span>
+<span class="topic">CONCEPT</span>
 
-<h2>⭐ 8 Important Aggregates of National Income</h2>
+<h2>Domestic Territory</h2>
+
+<div class="definition">
+
+Domestic territory refers to the economic territory that is under the administrative control of a government and within which persons, goods and capital can move freely.
+
+</div>
 
 <p>
-The following eight aggregates are extremely important for board
-examinations and numerical questions.
+For national income accounting, domestic territory is not exactly the same as geographical
+territory. It is an economic concept.
 </p>
 
+<h3>Included examples</h3>
 
-<h3>1. GDP at Market Price (GDP<sub>MP</sub>)</h3>
+<ul>
+<li>Political boundaries of the country.</li>
+<li>Ships and aircraft operated by normal residents between countries.</li>
+<li>Embassies and consulates of the country located abroad.</li>
+</ul>
 
-<div class="definition">
+<h3>Excluded examples</h3>
 
-GDP at Market Price is the market value of all final goods and services
-produced within the domestic territory of a country during an accounting
-year.
+<ul>
+<li>Foreign embassies located within the country.</li>
+<li>Foreign ships and aircraft operating within the country under the relevant accounting treatment.</li>
+</ul>
 
-</div>
+<div class="tip">
 
-<div class="formula">
-
-GDP<sub>MP</sub> = Value of final goods and services produced
-within domestic territory at market prices
-
-</div>
-
-
-<h3>2. GDP at Factor Cost (GDP<sub>FC</sub>)</h3>
-
-<div class="definition">
-
-GDP at Factor Cost measures the value of domestic product in terms of
-factor payments.
-
-</div>
-
-<div class="formula">
-
-GDP<sub>FC</sub> =
-GDP<sub>MP</sub> − Net Indirect Taxes
-
-</div>
-
-
-<h3>3. NDP at Market Price (NDP<sub>MP</sub>)</h3>
-
-<div class="definition">
-
-NDP at Market Price is GDP at Market Price after deducting depreciation.
-
-</div>
-
-<div class="formula">
-
-NDP<sub>MP</sub> =
-GDP<sub>MP</sub> − Depreciation
-
-</div>
-
-
-<h3>4. NDP at Factor Cost (NDP<sub>FC</sub>)</h3>
-
-<div class="definition">
-
-NDP at Factor Cost is the net domestic product valued at factor cost.
-
-</div>
-
-<div class="formula">
-
-NDP<sub>FC</sub> =
-NDP<sub>MP</sub> − Net Indirect Taxes
-
-</div>
-
-
-<h3>5. GNP at Market Price (GNP<sub>MP</sub>)</h3>
-
-<div class="definition">
-
-GNP at Market Price is GDP at Market Price adjusted for Net Factor
-Income from Abroad.
-
-</div>
-
-<div class="formula">
-
-GNP<sub>MP</sub> =
-GDP<sub>MP</sub> + NFIA
-
-</div>
-
-
-<h3>6. GNP at Factor Cost (GNP<sub>FC</sub>)</h3>
-
-<div class="definition">
-
-GNP at Factor Cost is GNP at Market Price after deducting Net Indirect
-Taxes.
-
-</div>
-
-<div class="formula">
-
-GNP<sub>FC</sub> =
-GNP<sub>MP</sub> − Net Indirect Taxes
-
-</div>
-
-
-<h3>7. NNP at Market Price (NNP<sub>MP</sub>)</h3>
-
-<div class="definition">
-
-NNP at Market Price is GNP at Market Price after deducting depreciation.
-
-</div>
-
-<div class="formula">
-
-NNP<sub>MP</sub> =
-GNP<sub>MP</sub> − Depreciation
-
-</div>
-
-
-<h3>8. NNP at Factor Cost (NNP<sub>FC</sub>)</h3>
-
-<div class="definition">
-
-NNP at Factor Cost is the net national product valued at factor cost.
-It is commonly known as <strong>National Income</strong>.
-
-</div>
-
-<div class="formula">
-
-<strong>National Income = NNP<sub>FC</sub></strong>
+<strong>Exam Tip:</strong>
+Whenever a question uses the words <strong>“within the domestic territory”</strong>,
+think in terms of the location of production.
 
 </div>
 
 </div>
 
 
-<!-- CONVERSION MAP -->
+<!-- NORMAL RESIDENT -->
 
 <div class="card">
 
-<h2>🔄 National Income Conversion Rules</h2>
+<span class="topic">CONCEPT</span>
+
+<h2>Normal Resident</h2>
+
+<div class="definition">
+
+A normal resident is a person or institution whose centre of economic interest lies in the economic territory of a country and who normally resides or operates there for a prolonged period.
+
+</div>
+
+<p>
+Normal residence is an economic concept and is not simply determined by citizenship.
+A person may be a citizen of one country but may be a normal resident of another country.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+An Indian citizen permanently working and living abroad may not be treated as a normal
+resident of India for national income accounting purposes.
+
+</div>
+
+<div class="important">
+
+<strong>Remember:</strong> Citizenship ≠ Normal Residence.
+
+</div>
+
+</div>
+
+
+<!-- FINAL AND INTERMEDIATE -->
+
+<div class="card">
+
+<span class="topic">CLASSIFICATION</span>
+
+<h2>Final Goods and Intermediate Goods</h2>
+
+<h3>Final Goods</h3>
+
+<div class="definition">
+
+Final goods are goods that are purchased for final consumption or investment and are not intended for resale or further processing during the accounting period.
+
+</div>
+
+<p>
+The value of final goods is included in the calculation of national income because including
+them represents the value of final output.
+</p>
+
+<h3>Intermediate Goods</h3>
+
+<div class="definition">
+
+Intermediate goods are goods used as inputs in the production of other goods and services during the same accounting period.
+
+</div>
+
+<div class="example">
+
+<strong>Example:</strong>
+Flour purchased by a bakery to make bread is an intermediate good for the bakery.
+
+</div>
 
 <table>
 
 <tr>
-<th>Conversion</th>
-<th>What to Do</th>
+<th>Final Goods</th>
+<th>Intermediate Goods</th>
 </tr>
 
 <tr>
-<td>Gross → Net</td>
-<td>− Depreciation</td>
+<td>Used for final consumption or investment.</td>
+<td>Used for further production.</td>
 </tr>
 
 <tr>
-<td>Net → Gross</td>
-<td>+ Depreciation</td>
+<td>Included in final output.</td>
+<td>Normally excluded separately to avoid double counting.</td>
 </tr>
 
 <tr>
-<td>Domestic → National</td>
-<td>+ NFIA</td>
-</tr>
-
-<tr>
-<td>National → Domestic</td>
-<td>− NFIA</td>
-</tr>
-
-<tr>
-<td>Market Price → Factor Cost</td>
-<td>− Net Indirect Taxes</td>
-</tr>
-
-<tr>
-<td>Factor Cost → Market Price</td>
-<td>+ Net Indirect Taxes</td>
+<td>Example: Bread purchased by a household.</td>
+<td>Example: Flour used by a bakery.</td>
 </tr>
 
 </table>
 
+</div>
+
+
+<!-- STOCK FLOW -->
+
+<div class="card">
+
+<span class="topic">BASIC CONCEPT</span>
+
+<h2>Stock and Flow</h2>
+
+<h3>Stock</h3>
+
+<div class="definition">
+
+Stock is a quantity measured at a particular point of time.
+
+</div>
+
+<p>
+Examples include wealth, capital and inventory at a particular date.
+</p>
+
+<h3>Flow</h3>
+
+<div class="definition">
+
+Flow is a quantity measured over a period of time.
+
+</div>
+
+<p>
+Examples include national income, production, consumption, saving and investment.
+</p>
+
+<div class="highlight">
+
+<strong>Easy distinction:</strong><br>
+Stock → measured <strong>at a point of time</strong><br>
+Flow → measured <strong>during a period of time</strong>
+
+</div>
+
+</div>
+
+
+<!-- DEPRECIATION -->
+
+<div class="card">
+
+<span class="topic">IMPORTANT</span>
+
+<h2>Depreciation</h2>
+
+<div class="definition">
+
+Depreciation is the loss in value of fixed capital assets due to normal wear and tear,
+normal obsolescence and expected damage arising from their use in production.
+
+</div>
+
+<p>
+Machines, buildings and other fixed capital assets gradually lose their productive value.
+This loss is taken into account while moving from gross measures to net measures.
+</p>
+
+<div class="formula">
+
+Net Product = Gross Product − Depreciation
+
+</div>
+
+<div class="example">
+
+<strong>Example:</strong>
+If GDP is ₹1,000 crore and depreciation is ₹100 crore:
+
+<br><br>
+
+NDP = ₹1,000 crore − ₹100 crore = <strong>₹900 crore</strong>
+
+</div>
+
 <div class="tip">
 
-<strong>Master Trick:</strong><br><br>
+<strong>Memory rule:</strong>
+Gross → subtract depreciation → Net.
 
-Gross → Net = Minus Depreciation<br>
-Domestic → National = Plus NFIA<br>
-MP → FC = Minus Net Indirect Taxes
+</div>
+
+</div>
+
+
+<!-- NFIA -->
+
+<div class="card">
+
+<span class="topic">CONVERSION</span>
+
+<h2>Net Factor Income from Abroad (NFIA)</h2>
+
+<div class="definition">
+
+NFIA is the difference between factor income received from abroad and factor income paid to factors of production owned by non-residents.
+
+</div>
+
+<div class="formula">
+
+NFIA = Factor Income from Abroad − Factor Income to Abroad
+
+</div>
+
+<h3>Components</h3>
+
+<ul>
+<li>Compensation of employees received from abroad minus compensation paid abroad.</li>
+<li>Property and entrepreneurial income received from abroad minus similar income paid abroad.</li>
+</ul>
+
+<div class="example">
+
+If factor income received from abroad = ₹80 crore and factor income paid abroad = ₹50 crore:
+
+<br><br>
+
+NFIA = ₹80 crore − ₹50 crore = <strong>₹30 crore</strong>.
+
+</div>
+
+<div class="important">
+
+<strong>Important:</strong>
+NFIA may be positive, zero or negative.
+
+</div>
+
+</div>
+
+
+<!-- AGGREGATES -->
+
+<div class="card">
+
+<span class="topic">EIGHT AGGREGATES</span>
+
+<h2>National Income Aggregates</h2>
+
+<p>
+The major aggregates are classified according to three important distinctions:
+<strong>Domestic/National</strong>, <strong>Gross/Net</strong> and
+<strong>Market Price/Factor Cost</strong>.
+</p>
+
+<table>
+
+<tr>
+<th>Aggregate</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>GDP at MP</td>
+<td>Gross Domestic Product at Market Price</td>
+</tr>
+
+<tr>
+<td>GDP at FC</td>
+<td>Gross Domestic Product at Factor Cost</td>
+</tr>
+
+<tr>
+<td>NDP at MP</td>
+<td>Net Domestic Product at Market Price</td>
+</tr>
+
+<tr>
+<td>NDP at FC</td>
+<td>Net Domestic Product at Factor Cost</td>
+</tr>
+
+<tr>
+<td>GNP at MP</td>
+<td>Gross National Product at Market Price</td>
+</tr>
+
+<tr>
+<td>GNP at FC</td>
+<td>Gross National Product at Factor Cost</td>
+</tr>
+
+<tr>
+<td>NNP at MP</td>
+<td>Net National Product at Market Price</td>
+</tr>
+
+<tr>
+<td>NNP at FC</td>
+<td>Net National Product at Factor Cost</td>
+</tr>
+
+</table>
+
+
+<h3>Market Price and Factor Cost</h3>
+
+<div class="definition">
+
+<strong>Market Price</strong> is the price actually paid by the purchaser for a good or service.
+
+</div>
+
+<div class="definition">
+
+<strong>Factor Cost</strong> refers to the payments made to factors of production for their contribution to the production process.
+
+</div>
+
+<h3>Net Indirect Taxes</h3>
+
+<div class="formula">
+
+Net Indirect Taxes = Indirect Taxes − Subsidies
+
+</div>
+
+<div class="example">
+
+If indirect taxes = ₹150 crore and subsidies = ₹40 crore:
+
+<br><br>
+
+NIT = ₹150 crore − ₹40 crore = <strong>₹110 crore</strong>.
+
+</div>
+
+</div>
+
+
+<!-- CONVERSION RULES -->
+
+<div class="card">
+
+<span class="topic">CONVERSION RULES</span>
+
+<h2>Conversion Between Aggregates</h2>
+
+<div class="formula">
+
+MP → FC : Subtract Net Indirect Taxes
+
+<br><br>
+
+FC → MP : Add Net Indirect Taxes
+
+<br><br>
+
+Gross → Net : Subtract Depreciation
+
+<br><br>
+
+Net → Gross : Add Depreciation
+
+<br><br>
+
+Domestic → National : Add NFIA
+
+<br><br>
+
+National → Domestic : Subtract NFIA
+
+</div>
+
+<h3>Examples</h3>
+
+<div class="example">
+
+GDP at MP = ₹800 crore<br>
+NIT = ₹100 crore
+
+<br><br>
+
+GDP at FC = ₹800 − ₹100 = <strong>₹700 crore</strong>
+
+</div>
+
+<div class="example">
+
+GDP at MP = ₹900 crore<br>
+Depreciation = ₹150 crore
+
+<br><br>
+
+NDP at MP = ₹900 − ₹150 = <strong>₹750 crore</strong>
+
+</div>
+
+<div class="example">
+
+GDP at MP = ₹1,000 crore<br>
+NFIA = ₹80 crore
+
+<br><br>
+
+GNP at MP = ₹1,000 + ₹80 = <strong>₹1,080 crore</strong>
 
 </div>
 
@@ -749,39 +812,50 @@ MP → FC = Minus Net Indirect Taxes
 
 <div class="card">
 
-<span class="topic">9. Double Counting</span>
+<span class="topic">IMPORTANT</span>
 
-<h2>⚠️ Problem of Double Counting</h2>
+<h2>Double Counting</h2>
 
 <div class="definition">
 
-Double counting means counting the value of the same product or service
-more than once while calculating national income.
+Double counting means counting the value of the same good or service more than once while calculating national income.
 
 </div>
+
+<p>
+It generally occurs when the value of intermediate goods is counted along with the value of
+final goods.
+</p>
 
 <div class="example">
 
-<strong>Example:</strong><br><br>
+Suppose wheat is sold for ₹20, flour for ₹35 and bread for ₹60.
 
-Suppose wheat is sold to a flour mill and the flour is then sold to a
-bakery. If the value of wheat and flour is counted separately along with
-the value of the final product, the same economic activity may be counted
-more than once.
+If all three values are added:
+
+<br><br>
+
+₹20 + ₹35 + ₹60 = ₹115
+
+<br><br>
+
+This would overstate production because the value of wheat and flour is already included
+in the value of bread.
 
 </div>
 
-<div class="important">
-
-<strong>Methods to Avoid Double Counting:</strong>
+<h3>Methods to avoid double counting</h3>
 
 <ul>
-
-<li>Count only the value of final goods and services.</li>
-
-<li>Use the Value Added Method.</li>
-
+<li>Count only final goods and services.</li>
+<li>Use the value added method.</li>
 </ul>
+
+<div class="tip">
+
+<strong>Best exam line:</strong>
+The value of intermediate goods is not counted separately because it is already included
+in the value of final goods.
 
 </div>
 
@@ -792,147 +866,78 @@ more than once.
 
 <div class="card">
 
-<span class="topic">10A. Value Added Method</span>
+<span class="topic">METHOD 1</span>
 
-<h2>🏭 Value Added Method</h2>
-
-<div class="definition">
-
-Under the Value Added Method, national income is estimated by adding
-the value added by all producing units or sectors of the economy during
-an accounting year.
-
-</div>
-
-<h3>What is Value Added?</h3>
+<h2>Value Added Method</h2>
 
 <div class="definition">
 
-<strong>Value Added</strong> is the addition to the value of goods and
-services at each stage of production.
+The Value Added Method measures national income by adding the value added by all producing units in the domestic economy during an accounting year.
 
 </div>
+
+<p>
+Value added represents the additional value created by a producer during the production process.
+It prevents double counting because only the additional contribution of each production unit
+is counted.
+</p>
 
 <div class="formula">
 
-Value Added =
-Value of Output − Intermediate Consumption
+Value Added = Value of Output − Intermediate Consumption
 
 </div>
 
+<h3>Step-by-step process</h3>
 
-<h3>Components of Value Added</h3>
+<ol>
+<li>Estimate the value of output produced by each producing unit.</li>
+<li>Calculate intermediate consumption.</li>
+<li>Subtract intermediate consumption from output.</li>
+<li>Obtain gross value added.</li>
+<li>Make the required adjustments for depreciation, taxes and subsidies.</li>
+<li>Move from domestic to national concept by adding NFIA where required.</li>
+</ol>
 
-<table>
+<h3>Important terms</h3>
 
-<tr>
-<th>Component</th>
-<th>Meaning</th>
-</tr>
+<h4>Value of Output</h4>
 
-<tr>
-<td>Value of Output</td>
-<td>Total value of goods and services produced</td>
-</tr>
+<p>
+It refers to the value of goods and services produced by a production unit during the
+accounting period. Sales and relevant changes in inventories are considered where applicable.
+</p>
 
-<tr>
-<td>Intermediate Consumption</td>
-<td>Value of goods and services used as inputs during production</td>
-</tr>
+<h4>Intermediate Consumption</h4>
 
-<tr>
-<td>Gross Value Added</td>
-<td>Value of Output − Intermediate Consumption</td>
-</tr>
-
-<tr>
-<td>Depreciation</td>
-<td>Loss in value of fixed assets due to normal wear and tear</td>
-</tr>
-
-<tr>
-<td>Net Value Added</td>
-<td>Gross Value Added − Depreciation</td>
-</tr>
-
-<tr>
-<td>Net Indirect Taxes</td>
-<td>Indirect taxes − subsidies</td>
-</tr>
-
-</table>
-
-
-<h3>Step-by-Step Understanding</h3>
-
-<div class="highlight">
-
-<strong>Step 1:</strong>
-Find the value of output.
-
-<br><br>
-
-<strong>Step 2:</strong>
-Subtract intermediate consumption.
-
-<br><br>
-
-<strong>Step 3:</strong>
-The result is Gross Value Added.
-
-<br><br>
-
-<strong>Step 4:</strong>
-Subtract depreciation to obtain Net Value Added.
-
-<br><br>
-
-<strong>Step 5:</strong>
-If required, adjust for Net Indirect Taxes and NFIA to reach the
-required national income aggregate.
-
-</div>
-
-
-<div class="formula">
-
-GVA = Value of Output − Intermediate Consumption
-
-</div>
-
-<div class="formula">
-
-NVA = GVA − Depreciation
-
-</div>
-
+<p>
+It refers to the value of goods and services used as inputs in the production process during
+the accounting period.
+</p>
 
 <div class="example">
 
-<strong>Example:</strong><br><br>
-
-Value of Output = ₹1,000 crore<br>
-Intermediate Consumption = ₹400 crore
+A firm produces goods worth ₹500 crore and uses intermediate goods worth ₹300 crore.
 
 <br><br>
 
-GVA = ₹1,000 − ₹400
+Value Added = ₹500 − ₹300
 
-<br><br>
+<br>
 
-<strong>GVA = ₹600 crore</strong>
-
-</div>
-
-
-<div class="important">
-
-<strong>Board Exam Point:</strong><br><br>
-
-The Value Added Method avoids double counting because only the additional
-value created at each stage of production is counted.
+<strong>= ₹200 crore</strong>
 
 </div>
+
+<h3>Precautions</h3>
+
+<ul>
+<li>Do not count intermediate goods separately.</li>
+<li>Exclude purely financial transactions.</li>
+<li>Exclude transfer payments.</li>
+<li>Carefully treat changes in inventories.</li>
+<li>Do not count the value of second-hand goods as current production.</li>
+</ul>
 
 </div>
 
@@ -941,163 +946,84 @@ value created at each stage of production is counted.
 
 <div class="card">
 
-<span class="topic">10B. Income Method</span>
+<span class="topic">METHOD 2</span>
 
-<h2>👨‍💼 Income Method</h2>
-
-<div class="definition">
-
-Under the Income Method, national income is calculated by adding all
-factor incomes earned by the factors of production during an accounting
-year.
-
-</div>
-
-
-<h3>Components of Factor Income</h3>
-
-<table>
-
-<tr>
-<th>Component</th>
-<th>Meaning</th>
-<th>Examples</th>
-</tr>
-
-<tr>
-<td>Compensation of Employees</td>
-<td>Payment made to employees for their services</td>
-<td>Wages, salaries and employers' social contributions</td>
-</tr>
-
-<tr>
-<td>Operating Surplus</td>
-<td>Income generated from ownership of property and entrepreneurship</td>
-<td>Rent, interest and profit</td>
-</tr>
-
-<tr>
-<td>Mixed Income of Self-Employed</td>
-<td>Income containing more than one type of factor income</td>
-<td>Income of small shopkeepers, farmers and self-employed persons</td>
-</tr>
-
-</table>
-
-
-<h3>1. Compensation of Employees</h3>
+<h2>Income Method</h2>
 
 <div class="definition">
 
-Compensation of Employees is the total remuneration paid by employers
-to employees for the services provided by them.
+The Income Method measures national income by adding factor incomes earned by factors of production during the accounting year.
 
 </div>
 
-<div class="highlight">
+<p>
+Factors of production receive income for participating in production. Therefore, the total
+factor income generated through production can be used to measure national income.
+</p>
 
-<strong>It includes:</strong>
+<h3>Main components</h3>
 
-<ul>
+<h4>Compensation of Employees</h4>
 
-<li>Wages and salaries in cash</li>
+<p>
+It includes payments received by employees in return for their contribution to production.
+It broadly includes wages, salaries and relevant employer contributions.
+</p>
 
-<li>Wages and salaries in kind</li>
+<h4>Operating Surplus</h4>
 
-<li>Employers' social contributions</li>
+<p>
+Operating surplus mainly includes factor income in the form of rent, royalty, interest
+and profit arising from production.
+</p>
 
-</ul>
+<h4>Mixed Income of Self-Employed</h4>
 
-</div>
-
-
-<h3>2. Operating Surplus</h3>
-
-<div class="definition">
-
-Operating Surplus refers to factor income from property and
-entrepreneurship.
-
-</div>
-
-<div class="highlight">
-
-<strong>It generally includes:</strong>
-
-<ul>
-
-<li>Rent</li>
-
-<li>Royalty</li>
-
-<li>Interest</li>
-
-<li>Profit</li>
-
-</ul>
-
-</div>
-
-
-<h3>3. Mixed Income of Self-Employed</h3>
-
-<div class="definition">
-
-Mixed Income of Self-Employed is the income of self-employed persons
-where it is difficult to separately identify the payments for their
-labour, capital and entrepreneurship.
-
-</div>
-
-<div class="example">
-
-<strong>Example:</strong><br><br>
-
-A small shopkeeper works himself, uses his own capital and manages his
-business. His total income contains elements of wages, interest and
-profit. Therefore, it is called mixed income.
-
-</div>
-
-
-<h3>Income Method Formula</h3>
+<p>
+Self-employed persons often perform several functions simultaneously. Their income may contain
+elements of wages, rent, interest and profit. Such income is therefore treated as mixed income.
+</p>
 
 <div class="formula">
 
-NDP<sub>FC</sub> =
-Compensation of Employees
-+ Operating Surplus
-+ Mixed Income of Self-Employed
+Domestic Factor Income =
+Compensation of Employees + Operating Surplus + Mixed Income
 
 </div>
 
-<div class="important">
+<h3>Important exclusions</h3>
 
-<strong>Important:</strong><br><br>
-
-Transfer payments such as pensions, scholarships and gifts are not
-factor incomes because they are not payments made for current productive
-services.
-
-</div>
-
+<ul>
+<li>Transfer payments.</li>
+<li>Windfall gains that do not arise from current production.</li>
+<li>Sale of second-hand goods itself.</li>
+<li>Purely financial transactions.</li>
+</ul>
 
 <div class="example">
 
-<strong>Example:</strong><br><br>
-
-Compensation of Employees = ₹500 crore<br>
-Operating Surplus = ₹300 crore<br>
-Mixed Income = ₹200 crore
+A production sector generates:
 
 <br><br>
 
-NDP<sub>FC</sub>
-= ₹500 + ₹300 + ₹200
+Compensation of Employees = ₹400 crore<br>
+Operating Surplus = ₹250 crore<br>
+Mixed Income = ₹150 crore
 
 <br><br>
 
-<strong>= ₹1,000 crore</strong>
+Domestic Factor Income = 400 + 250 + 150
+
+<br>
+
+<strong>= ₹800 crore</strong>
+
+</div>
+
+<div class="tip">
+
+<strong>Remember:</strong>
+Income Method focuses on <strong>income earned by factors</strong>, not every payment received by individuals.
 
 </div>
 
@@ -1108,183 +1034,45 @@ NDP<sub>FC</sub>
 
 <div class="card">
 
-<span class="topic">10C. Expenditure Method</span>
+<span class="topic">METHOD 3</span>
 
-<h2>🛒 Expenditure Method</h2>
-
-<div class="definition">
-
-Under the Expenditure Method, national income is measured by adding
-expenditure on final goods and services made by different sectors of
-the economy during an accounting year.
-
-</div>
-
-
-<h3>Main Components of Expenditure</h3>
-
-<table>
-
-<tr>
-<th>Symbol</th>
-<th>Component</th>
-<th>Meaning</th>
-</tr>
-
-<tr>
-<td>C</td>
-<td>Private Final Consumption Expenditure</td>
-<td>Consumption expenditure by households</td>
-</tr>
-
-<tr>
-<td>I</td>
-<td>Investment Expenditure</td>
-<td>Expenditure on capital goods and inventories</td>
-</tr>
-
-<tr>
-<td>G</td>
-<td>Government Final Consumption Expenditure</td>
-<td>Government expenditure on final goods and services</td>
-</tr>
-
-<tr>
-<td>X</td>
-<td>Exports</td>
-<td>Goods and services sold to other countries</td>
-</tr>
-
-<tr>
-<td>M</td>
-<td>Imports</td>
-<td>Goods and services purchased from other countries</td>
-</tr>
-
-</table>
-
-
-<h3>1. Private Final Consumption Expenditure (C)</h3>
+<h2>Expenditure Method</h2>
 
 <div class="definition">
 
-Private Final Consumption Expenditure is the expenditure made by
-households on final goods and services for consumption purposes.
+The Expenditure Method measures national income by adding expenditure incurred on final goods and services during an accounting year.
 
 </div>
 
-<div class="example">
+<p>
+Since production generates income and income is spent on final goods and services,
+total final expenditure can be used to estimate the value of final output.
+</p>
 
-<strong>Examples:</strong>
+<h3>Main components</h3>
 
-<ul>
+<h4>Private Final Consumption Expenditure</h4>
 
-<li>Food purchased by households</li>
+<p>
+Expenditure incurred by households and non-profit institutions on final goods and services
+for consumption purposes.
+</p>
 
-<li>Clothes</li>
+<h4>Government Final Consumption Expenditure</h4>
 
-<li>Education services</li>
+<p>
+Government expenditure on final goods and services used for providing public services and
+satisfying collective needs.
+</p>
 
-<li>Medical services</li>
+<h4>Gross Domestic Capital Formation</h4>
 
-<li>Transport services</li>
+<p>
+It represents expenditure on capital formation within the domestic economy and includes
+relevant fixed capital formation and changes in inventories.
+</p>
 
-</ul>
-
-</div>
-
-
-<h3>2. Investment Expenditure (I)</h3>
-
-<div class="definition">
-
-Investment expenditure refers to expenditure on capital goods and
-changes in inventories that add to the productive capacity or stock
-of the economy.
-
-</div>
-
-<div class="highlight">
-
-<strong>It may include:</strong>
-
-<ul>
-
-<li>Purchase of machinery</li>
-
-<li>Construction of factories</li>
-
-<li>Purchase of equipment</li>
-
-<li>Change in inventories</li>
-
-</ul>
-
-</div>
-
-
-<h3>3. Government Final Consumption Expenditure (G)</h3>
-
-<div class="definition">
-
-Government Final Consumption Expenditure refers to government expenditure
-on final goods and services that directly satisfy collective needs.
-
-</div>
-
-<div class="example">
-
-<strong>Examples:</strong>
-
-<ul>
-
-<li>Government expenditure on public administration</li>
-
-<li>Defence services</li>
-
-<li>Public education services</li>
-
-<li>Public health services</li>
-
-</ul>
-
-</div>
-
-
-<h3>4. Exports (X)</h3>
-
-<div class="definition">
-
-Exports are goods and services produced domestically and sold to
-residents of other countries.
-
-</div>
-
-<div class="important">
-
-Exports are added because they represent domestic production purchased
-by foreigners.
-
-</div>
-
-
-<h3>5. Imports (M)</h3>
-
-<div class="definition">
-
-Imports are goods and services purchased from other countries.
-
-</div>
-
-<div class="important">
-
-Imports are subtracted because they are included in domestic expenditure
-but are not produced within the domestic territory.
-
-</div>
-
-
-<h3>Net Exports</h3>
+<h4>Net Exports</h4>
 
 <div class="formula">
 
@@ -1292,100 +1080,240 @@ Net Exports = Exports − Imports
 
 </div>
 
-
-<h3>Expenditure Method Formula</h3>
+<p>
+Exports represent expenditure by foreigners on domestically produced goods and services,
+while imports represent expenditure on goods and services produced outside the domestic economy.
+</p>
 
 <div class="formula">
 
-GDP<sub>MP</sub> =
-C + I + G + (X − M)
+GDP at MP =
+PFCE + GFCE + GDCF + (Exports − Imports)
 
 </div>
 
+<h3>Precautions</h3>
+
+<ul>
+<li>Count only expenditure on final goods and services.</li>
+<li>Exclude expenditure on intermediate goods.</li>
+<li>Exclude purely financial transactions.</li>
+<li>Exclude transfer payments.</li>
+<li>Correctly account for imports and exports.</li>
+<li>Include relevant changes in inventories.</li>
+</ul>
 
 <div class="example">
 
-<strong>Numerical Example:</strong><br><br>
-
-C = ₹600 crore<br>
-I = ₹200 crore<br>
-G = ₹150 crore<br>
-X = ₹100 crore<br>
-M = ₹50 crore
+Suppose:
 
 <br><br>
 
-GDP<sub>MP</sub>
-= 600 + 200 + 150 + (100 − 50)
+PFCE = ₹600 crore<br>
+GFCE = ₹200 crore<br>
+GDCF = ₹150 crore<br>
+Exports = ₹100 crore<br>
+Imports = ₹80 crore
 
 <br><br>
 
-= 600 + 200 + 150 + 50
+GDP at MP = 600 + 200 + 150 + (100 − 80)
 
-<br><br>
+<br>
 
-<strong>= ₹1,000 crore</strong>
+<strong>= ₹970 crore</strong>
 
 </div>
 
 </div>
 
 
-<!-- THREE METHODS COMPARISON -->
+<!-- THREE METHODS -->
 
 <div class="card">
 
-<h2>🧠 Don't Get Confused — Three Methods</h2>
+<span class="topic">COMPARISON</span>
+
+<h2>Three Methods at a Glance</h2>
 
 <table>
 
 <tr>
 <th>Method</th>
-<th>What is Added?</th>
-<th>Main Components</th>
+<th>Measures Through</th>
+<th>Main Focus</th>
 </tr>
 
 <tr>
 <td>Value Added Method</td>
 <td>Value added by producers</td>
-<td>Output − Intermediate Consumption</td>
+<td>Production</td>
 </tr>
 
 <tr>
 <td>Income Method</td>
 <td>Factor incomes</td>
-<td>COE + Operating Surplus + Mixed Income</td>
+<td>Income generation</td>
 </tr>
 
 <tr>
 <td>Expenditure Method</td>
 <td>Final expenditure</td>
-<td>C + I + G + (X − M)</td>
+<td>Spending</td>
 </tr>
 
 </table>
 
+<div class="highlight">
 
-<div class="tip">
+All three methods should theoretically give the same overall result when applied correctly
+because production, income and expenditure are interconnected parts of the same economic activity.
 
-<strong>Easy Memory Trick:</strong><br><br>
-
-🏭 <strong>Value Added Method</strong> → What producers ADD<br><br>
-
-👨‍💼 <strong>Income Method</strong> → What factors of production EARN<br><br>
-
-🛒 <strong>Expenditure Method</strong> → What different sectors SPEND
+</div>
 
 </div>
 
 
-<div class="important">
+<!-- FACTOR AND TRANSFER INCOME -->
 
-<strong>Important:</strong><br><br>
+<div class="card">
 
-All three methods measure the same economic activity from different
-angles. Therefore, when properly calculated, they should give the same
-value for the corresponding national income aggregate.
+<span class="topic">DISTINCTION</span>
+
+<h2>Factor Income and Transfer Income</h2>
+
+<h3>Factor Income</h3>
+
+<div class="definition">
+
+Factor income is income earned by factors of production for rendering productive services.
+
+</div>
+
+<p>
+Examples include wages, rent, interest and profit.
+</p>
+
+<h3>Transfer Income</h3>
+
+<div class="definition">
+
+Transfer income is income received without providing any current productive service in return.
+
+</div>
+
+<p>
+Examples may include pensions, scholarships and certain social security benefits,
+depending on their nature.
+</p>
+
+<table>
+
+<tr>
+<th>Factor Income</th>
+<th>Transfer Income</th>
+</tr>
+
+<tr>
+<td>Arises from productive services.</td>
+<td>Does not arise from current productive services.</td>
+</tr>
+
+<tr>
+<td>Included as factor income.</td>
+<td>Excluded from national income as factor income.</td>
+</tr>
+
+<tr>
+<td>Example: Salary for work.</td>
+<td>Example: Certain pension payments.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- DOMESTIC NATIONAL -->
+
+<div class="card">
+
+<span class="topic">DISTINCTION</span>
+
+<h2>Domestic Product vs National Product</h2>
+
+<table>
+
+<tr>
+<th>Basis</th>
+<th>Domestic Product</th>
+<th>National Product</th>
+</tr>
+
+<tr>
+<td>Basis</td>
+<td>Domestic territory</td>
+<td>Normal residents</td>
+</tr>
+
+<tr>
+<td>Foreign factor income</td>
+<td>Relevant to domestic-national adjustment</td>
+<td>Included through NFIA</td>
+</tr>
+
+<tr>
+<td>Basic question</td>
+<td>Where was production carried out?</td>
+<td>Who are the normal residents earning the factor income?</td>
+</tr>
+
+</table>
+
+<div class="formula">
+
+National Product = Domestic Product + NFIA
+
+</div>
+
+</div>
+
+
+<!-- GROSS NET -->
+
+<div class="card">
+
+<span class="topic">DISTINCTION</span>
+
+<h2>Gross and Net Concepts</h2>
+
+<p>
+The word <strong>gross</strong> means depreciation has not been deducted.
+The word <strong>net</strong> means depreciation has been deducted.
+</p>
+
+<div class="formula">
+
+Net = Gross − Depreciation
+
+<br><br>
+
+Gross = Net + Depreciation
+
+</div>
+
+<div class="example">
+
+GDP = ₹1,200 crore<br>
+Depreciation = ₹200 crore
+
+<br><br>
+
+NDP = ₹1,200 − ₹200
+
+<br>
+
+<strong>= ₹1,000 crore</strong>
 
 </div>
 
@@ -1396,64 +1324,149 @@ value for the corresponding national income aggregate.
 
 <div class="card">
 
-<h2>⚠️ Common Mistakes in National Income Questions</h2>
+<details>
 
-<ul>
+<summary>⚠️ Common Mistakes in National Income</summary>
 
-<li>Do not count intermediate goods separately.</li>
+<h3>1. Confusing Domestic and National</h3>
 
-<li>Do not add transfer payments as factor income.</li>
+<p>
+Domestic is based on the <strong>domestic territory</strong>, whereas national is based on
+the <strong>normal residents</strong>.
+</p>
 
-<li>Remember that depreciation converts Gross into Net.</li>
+<h3>2. Forgetting NFIA</h3>
 
-<li>Remember that NFIA converts Domestic into National.</li>
+<p>
+When converting Domestic Product into National Product, remember:
+</p>
 
-<li>Remember that Net Indirect Taxes are deducted when converting
-Market Price into Factor Cost.</li>
+<div class="formula">
 
-<li>Imports are subtracted in the expenditure method.</li>
+National = Domestic + NFIA
 
-<li>Exports are added in the expenditure method.</li>
+</div>
 
-<li>Mixed income is included under the Income Method.</li>
+<h3>3. Wrong treatment of depreciation</h3>
 
-<li>Value added is calculated after deducting intermediate consumption.</li>
+<p>
+Gross to Net means subtract depreciation. Net to Gross means add depreciation.
+</p>
 
-<li>Do not confuse investment expenditure with purchase of financial
-assets.</li>
+<h3>4. Wrong treatment of subsidies</h3>
 
-</ul>
+<div class="formula">
+
+NIT = Indirect Taxes − Subsidies
+
+</div>
+
+<p>
+Subsidies are subtracted from indirect taxes while calculating net indirect taxes.
+</p>
+
+<h3>5. Counting intermediate goods</h3>
+
+<p>
+Counting intermediate goods separately can result in double counting.
+</p>
+
+<h3>6. Confusing factor income with transfer income</h3>
+
+<p>
+A payment received by a person is not automatically factor income. The payment must arise
+from a productive factor service.
+</p>
+
+<h3>7. Including second-hand goods as current production</h3>
+
+<p>
+The second-hand good itself was produced in an earlier period. However, current services
+such as brokerage or commission associated with its sale may be relevant.
+</p>
+
+<h3>8. Treating financial transactions as current production</h3>
+
+<p>
+Purchase and sale of financial assets do not themselves represent current production of
+goods and services.
+</p>
+
+<h3>9. Forgetting imports in expenditure method</h3>
+
+<p>
+Imports are deducted because they are included in domestic expenditure but are not produced
+within the domestic economy.
+</p>
+
+<h3>10. Using citizenship instead of residence</h3>
+
+<p>
+National income accounting uses the concept of normal residence rather than citizenship.
+</p>
+
+</details>
 
 </div>
 
 
-<!-- METHODS SUMMARY -->
+<!-- METHODS AT A GLANCE EXPANDABLE -->
 
 <div class="card">
 
-<h2>📋 Methods at a Glance</h2>
+<details>
+
+<summary>📊 Methods at a Glance</summary>
+
+<h3>Value Added Method</h3>
 
 <div class="formula">
 
-<strong>Value Added Method</strong><br>
-Value of Output − Intermediate Consumption
+Value Added = Value of Output − Intermediate Consumption
 
 </div>
+
+<p>
+<strong>Focus:</strong> Production and contribution of producing units.
+</p>
+
+<h3>Income Method</h3>
 
 <div class="formula">
 
-<strong>Income Method</strong><br>
-Compensation of Employees + Operating Surplus
-+ Mixed Income of Self-Employed
+Domestic Factor Income =
+Compensation of Employees + Operating Surplus + Mixed Income
 
 </div>
+
+<p>
+<strong>Focus:</strong> Factor incomes generated during production.
+</p>
+
+<h3>Expenditure Method</h3>
 
 <div class="formula">
 
-<strong>Expenditure Method</strong><br>
-C + I + G + (X − M)
+GDP at MP =
+PFCE + GFCE + GDCF + (X − M)
 
 </div>
+
+<p>
+<strong>Focus:</strong> Expenditure on final goods and services.
+</p>
+
+<div class="highlight">
+
+<strong>One-line memory:</strong>
+
+Production → Value Added Method<br>
+Income → Income Method<br>
+Spending → Expenditure Method
+
+</div>
+
+</details>
 
 </div>
 
@@ -1462,39 +1475,100 @@ C + I + G + (X − M)
 
 <div class="card">
 
-<h2>📌 Important Formula Sheet</h2>
+<details>
+
+<summary>🧮 Important Formula Sheet</summary>
+
+<h3>Basic Conversion Formulae</h3>
 
 <div class="formula">
-GDP<sub>MP</sub> = C + I + G + (X − M)
+
+NDP = GDP − Depreciation
+
+<br><br>
+
+GNP = GDP + NFIA
+
+<br><br>
+
+NNP = GNP − Depreciation
+
 </div>
 
-<div class="formula">
-NDP<sub>MP</sub> = GDP<sub>MP</sub> − Depreciation
-</div>
+<h3>Market Price and Factor Cost</h3>
 
 <div class="formula">
-GNP<sub>MP</sub> = GDP<sub>MP</sub> + NFIA
+
+GDP at FC = GDP at MP − NIT
+
+<br><br>
+
+NDP at FC = NDP at MP − NIT
+
+<br><br>
+
+GNP at FC = GNP at MP − NIT
+
+<br><br>
+
+NNP at FC = NNP at MP − NIT
+
 </div>
 
-<div class="formula">
-NNP<sub>MP</sub> = GNP<sub>MP</sub> − Depreciation
-</div>
+<h3>Net Indirect Taxes</h3>
 
 <div class="formula">
-GDP<sub>FC</sub> = GDP<sub>MP</sub> − Net Indirect Taxes
+
+NIT = Indirect Taxes − Subsidies
+
 </div>
 
-<div class="formula">
-NDP<sub>FC</sub> = NDP<sub>MP</sub> − Net Indirect Taxes
-</div>
+<h3>National Income</h3>
 
 <div class="formula">
-GNP<sub>FC</sub> = GNP<sub>MP</sub> − Net Indirect Taxes
+
+National Income = NNP at FC
+
 </div>
 
+<h3>National-Domestic Conversion</h3>
+
 <div class="formula">
-<strong>NNP<sub>FC</sub> = National Income</strong>
+
+National = Domestic + NFIA
+
+<br><br>
+
+Domestic = National − NFIA
+
 </div>
+
+<h3>Net Exports</h3>
+
+<div class="formula">
+
+Net Exports = Exports − Imports
+
+</div>
+
+<h3>Expenditure Method</h3>
+
+<div class="formula">
+
+GDP at MP =
+PFCE + GFCE + GDCF + (X − M)
+
+</div>
+
+<h3>Value Added</h3>
+
+<div class="formula">
+
+Value Added = Value of Output − Intermediate Consumption
+
+</div>
+
+</details>
 
 </div>
 
@@ -1503,445 +1577,443 @@ GNP<sub>FC</sub> = GNP<sub>MP</sub> − Net Indirect Taxes
 
 <div class="card">
 
-<h2>🧮 Solved Numerical Examples</h2>
+<details>
 
+<summary>🧮 Solved Numerical Examples</summary>
 
-<h3>Example 1 — GDP to NDP</h3>
+<h3>Example 1 – GDP to NDP</h3>
 
-<div class="example">
+<p>
+GDP at MP = ₹2,000 crore<br>
+Depreciation = ₹250 crore
+</p>
 
-GDP<sub>MP</sub> = ₹1,000 crore<br>
-Depreciation = ₹100 crore
+<div class="formula">
 
-<br><br>
-
-NDP<sub>MP</sub>
-= GDP<sub>MP</sub> − Depreciation
-
-<br><br>
-
-= ₹1,000 − ₹100
+NDP at MP = GDP at MP − Depreciation
 
 <br><br>
 
-<strong>= ₹900 crore</strong>
+= 2,000 − 250
+
+<br>
+
+<strong>= ₹1,750 crore</strong>
 
 </div>
 
 
-<h3>Example 2 — GDP to GNP</h3>
+<h3>Example 2 – GDP at MP to GDP at FC</h3>
 
-<div class="example">
+<p>
+GDP at MP = ₹1,500 crore<br>
+Indirect Taxes = ₹200 crore<br>
+Subsidies = ₹50 crore
+</p>
 
-GDP<sub>MP</sub> = ₹2,000 crore<br>
-NFIA = ₹100 crore
+<div class="formula">
 
-<br><br>
-
-GNP<sub>MP</sub>
-= GDP<sub>MP</sub> + NFIA
-
-<br><br>
-
-= ₹2,000 + ₹100
+NIT = 200 − 50 = ₹150 crore
 
 <br><br>
 
-<strong>= ₹2,100 crore</strong>
+GDP at FC = 1,500 − 150
+
+<br>
+
+<strong>= ₹1,350 crore</strong>
 
 </div>
 
 
-<h3>Example 3 — Market Price to Factor Cost</h3>
+<h3>Example 3 – GDP to GNP</h3>
 
-<div class="example">
+<p>
+GDP at MP = ₹3,000 crore<br>
+Factor income from abroad = ₹180 crore<br>
+Factor income paid abroad = ₹120 crore
+</p>
 
-GDP<sub>MP</sub> = ₹1,500 crore<br>
-Net Indirect Taxes = ₹200 crore
+<div class="formula">
 
-<br><br>
-
-GDP<sub>FC</sub>
-= GDP<sub>MP</sub> − NIT
-
-<br><br>
-
-= ₹1,500 − ₹200
+NFIA = 180 − 120 = ₹60 crore
 
 <br><br>
 
-<strong>= ₹1,300 crore</strong>
+GNP at MP = 3,000 + 60
+
+<br>
+
+<strong>= ₹3,060 crore</strong>
 
 </div>
 
 
-<h3>Example 4 — Value Added</h3>
+<h3>Example 4 – Expenditure Method</h3>
 
-<div class="example">
+<p>
+PFCE = ₹800 crore<br>
+GFCE = ₹250 crore<br>
+GDCF = ₹300 crore<br>
+Exports = ₹150 crore<br>
+Imports = ₹100 crore
+</p>
 
-Value of Output = ₹800 crore<br>
-Intermediate Consumption = ₹300 crore
+<div class="formula">
+
+GDP at MP =
+800 + 250 + 300 + (150 − 100)
 
 <br><br>
 
-Value Added
-= Output − Intermediate Consumption
+= 800 + 250 + 300 + 50
 
-<br><br>
+<br>
 
-= ₹800 − ₹300
-
-<br><br>
-
-<strong>= ₹500 crore</strong>
+<strong>= ₹1,400 crore</strong>
 
 </div>
 
+
+<h3>Example 5 – Value Added</h3>
+
+<p>
+Value of output = ₹900 crore<br>
+Intermediate consumption = ₹550 crore
+</p>
+
+<div class="formula">
+
+Value Added = 900 − 550
+
+<br>
+
+<strong>= ₹350 crore</strong>
+
+</div>
+
+</details>
+
 </div>
 
 
-<!-- IMPORTANT QUESTIONS -->
+<!-- PROBLEM SOLVING -->
 
 <div class="card">
 
-<h2>⭐ Important Board Exam Questions</h2>
+<span class="topic">NUMERICALS</span>
 
-<ul>
+<h2>How to Solve National Income Numericals</h2>
 
-<li>Define National Income. Why is NNP at Factor Cost considered National Income?</li>
+<ol>
 
-<li>Differentiate between GDP and GNP.</li>
+<li>
+<strong>Read the question carefully.</strong>
+Identify whether the question asks for GDP, NDP, GNP, NNP or National Income.
+</li>
 
-<li>Differentiate between final goods and intermediate goods with suitable examples.</li>
+<li>
+<strong>Identify the required conversion.</strong>
+Check whether you need to move between domestic/national, gross/net or market price/factor cost.
+</li>
 
-<li>Explain the problem of double counting.</li>
+<li>
+<strong>Write the formula first.</strong>
+Do not immediately start calculating.
+</li>
 
-<li>Explain any two methods of avoiding double counting.</li>
+<li>
+<strong>Substitute the values.</strong>
+Keep units such as ₹ crore or ₹ lakh consistent.
+</li>
 
-<li>What is depreciation?</li>
+<li>
+<strong>Check the direction.</strong>
+For example, Gross → Net means depreciation is deducted.
+</li>
 
-<li>What is Net Factor Income from Abroad?</li>
+<li>
+<strong>Write the final answer clearly.</strong>
+Mention the aggregate and unit.
+</li>
 
-<li>Explain the Value Added Method.</li>
-
-<li>Explain the Income Method of measuring national income.</li>
-
-<li>Explain the Expenditure Method of measuring national income.</li>
-
-<li>Explain the relationship between GDP, GNP, NDP and NNP.</li>
-
-</ul>
-
-</div>
-
-
-<!-- 15 QUESTIONS -->
-
-<div class="card">
-
-<h2>📝 15 Previous-Year / Board-Style Questions</h2>
+</ol>
 
 <div class="important">
 
-<strong>Practice Note:</strong><br>
+<strong>Numerical checklist:</strong><br>
+Gross/Net → Depreciation<br>
+Domestic/National → NFIA<br>
+MP/FC → NIT<br>
+Expenditure → Exports − Imports
 
-These questions are provided for board-exam practice. They include
-common CBSE-style questions and numerical patterns; they should not be
-treated as verified year-specific PYQs unless a particular examination
-year is separately cited.
+</div>
 
 </div>
 
 
-<h3>Question 1</h3>
-<p>
-Define National Income. Why is NNP at Factor Cost considered National Income?
-</p>
-
-
-<h3>Question 2</h3>
-<p>
-Distinguish between Domestic Product and National Product.
-</p>
-
-
-<h3>Question 3</h3>
-<p>
-Distinguish between final goods and intermediate goods with suitable examples.
-</p>
-
-
-<h3>Question 4</h3>
-<p>
-What is double counting? Explain any two methods of avoiding double counting.
-</p>
-
-
-<h3>Question 5</h3>
-<p>
-Distinguish between stock and flow with suitable examples.
-</p>
-
-
-<h3>Question 6</h3>
-<p>
-What is depreciation? Why is it deducted while calculating net product?
-</p>
-
-
-<h3>Question 7</h3>
-<p>
-Explain the meaning of Net Factor Income from Abroad.
-</p>
-
-
-<h3>Question 8</h3>
-<p>
-GDP at Market Price is ₹5,000 crore and depreciation is ₹500 crore.
-Calculate NDP at Market Price.
-</p>
-
-
-<h3>Question 9</h3>
-<p>
-GDP at Market Price is ₹4,000 crore and NFIA is ₹200 crore.
-Calculate GNP at Market Price.
-</p>
-
-
-<h3>Question 10</h3>
-<p>
-GDP at Market Price is ₹3,500 crore and Net Indirect Taxes are
-₹400 crore. Calculate GDP at Factor Cost.
-</p>
-
-
-<h3>Question 11</h3>
-<p>
-Explain the Value Added Method of measuring national income.
-</p>
-
-
-<h3>Question 12</h3>
-<p>
-Explain the Income Method of measuring national income.
-</p>
-
-
-<h3>Question 13</h3>
-<p>
-Explain the Expenditure Method of measuring national income.
-</p>
-
-
-<h3>Question 14</h3>
-<p>
-Explain the relationship between GDP, NDP, GNP and NNP.
-</p>
-
-
-<h3>Question 15</h3>
-<p>
-Explain the steps required to calculate National Income when GDP,
-depreciation, NFIA and Net Indirect Taxes are given.
-</p>
-
-</div>
-
-
-<!-- BOARD EXAM BOOSTER -->
+<!-- IMPORTANT DISTINCTIONS -->
 
 <div class="card">
 
-<h2>🎯 Board Exam Booster</h2>
+<span class="topic">EXAM CONCEPTS</span>
+
+<h2>Important Distinctions</h2>
+
+<h3>Gross vs Net</h3>
+
+<p>
+Gross includes depreciation; net excludes depreciation.
+</p>
+
+<h3>Domestic vs National</h3>
+
+<p>
+Domestic is based on domestic territory; national is based on normal residents.
+</p>
+
+<h3>Market Price vs Factor Cost</h3>
+
+<p>
+Market price is the price paid by the purchaser, while factor cost represents factor payments
+for production.
+</p>
+
+<h3>Final Goods vs Intermediate Goods</h3>
+
+<p>
+Final goods are meant for final use, whereas intermediate goods are used for further production.
+</p>
+
+<h3>Stock vs Flow</h3>
+
+<p>
+Stock is measured at a point of time, while flow is measured over a period of time.
+</p>
+
+<h3>Factor Income vs Transfer Income</h3>
+
+<p>
+Factor income arises from productive services, while transfer income is received without
+providing current productive services in return.
+</p>
+
+</div>
+
+
+<!-- AGGREGATE FLOW -->
+
+<div class="card">
+
+<span class="topic">CONCEPT MAP</span>
+
+<h2>Understanding the Aggregate Conversion Flow</h2>
 
 <div class="highlight">
 
-<strong>Prepare this unit smartly!</strong><br><br>
+<strong>GDP at MP</strong>
 
-Get focused board-exam preparation material including important
-questions, numerical practice, key concepts, diagrams, revision points,
-answer-writing guidance and common mistakes.
+<br>↓ subtract depreciation
+
+<br><br>
+
+<strong>NDP at MP</strong>
+
+<br>↓ subtract NIT
+
+<br><br>
+
+<strong>NDP at FC</strong>
+
+<br>↓ add NFIA
+
+<br><br>
+
+<strong>NNP at FC = National Income</strong>
 
 </div>
-
-<a class="advice-link"
-href="class12-macroeconomics-unit1-board-exam.html">
-
-🎯 Open Board Exam Booster →
-
-</a>
-
-</div>
-
-
-<!-- MCQ -->
-
-<div class="card">
-
-<h2>📝 Test Your Knowledge</h2>
 
 <p>
-
-After completing Unit 1, test your understanding with the interactive
-MCQ test.
-
+The same conversion logic can be applied in reverse when the question provides National
+Income and asks for another aggregate.
 </p>
 
-<a class="mcq-link"
-href="class12-macroeconomics-unit1-mcqs.html">
+<div class="tip">
 
-Start Unit 1 MCQs →
-
-</a>
+<strong>Master the four adjustments:</strong>
+Depreciation, NFIA, Indirect Taxes and Subsidies.
 
 </div>
 
-<!-- MCQ SET 2 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 2</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set2.html" class="btn">
-        Start Unit 1 MCQs – Set 2 →
-    </a>
 </div>
 
-<!-- MCQ SET 3 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 3</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set3.html" class="btn">
-        Start Unit 1 MCQs – Set 3 →
-    </a>
-</div>
 
-<!-- MCQ SET 4 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 4</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set4.html" class="btn">
-        Start Unit 1 MCQs – Set 4 →
-    </a>
-</div>
-
-<!-- MCQ SET 5 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 5</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set5.html" class="btn">
-        Start Unit 1 MCQs – Set 5 →
-    </a>
-</div>
-
-<!-- MCQ SET 6 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 6</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set6.html" class="btn">
-        Start Unit 1 MCQs – Set 6 →
-    </a>
-</div>
-
-<!-- MCQ SET 7 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 7</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set7.html" class="btn">
-        Start Unit 1 MCQs – Set 7 →
-    </a>
-</div>
-
-<!-- MCQ SET 8 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 8</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set8.html" class="btn">
-        Start Unit 1 MCQs – Set 8 →
-    </a>
-</div>
-
-<!-- MCQ SET 9 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 9</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set9.html" class="btn">
-        Start Unit 1 MCQs – Set 9 →
-    </a>
-</div>
-
-<!-- MCQ SET 10 -->
-<div class="card">
-    <h2>📝 Unit 1 MCQ – Set 10</h2>
-    <p>
-        Practice another set of important National Income
-        multiple-choice questions.
-    </p>
-    <a href="class12-national-income-mcq-set10.html" class="btn">
-        Start Unit 1 MCQs – Set 10 →
-    </a>
-</div>
-<!-- QUICK REVISION -->
+<!-- IMPORTANCE -->
 
 <div class="card">
 
-<h2>🚀 Quick Revision</h2>
+<span class="topic">UNDERSTANDING</span>
+
+<h2>Why National Income is Important</h2>
 
 <ul>
 
-<li>GDP measures production within domestic territory.</li>
+<li>
+It helps measure the size and performance of an economy.
+</li>
 
-<li>GNP = GDP + NFIA.</li>
+<li>
+It helps compare economic performance over different years.
+</li>
 
-<li>NDP = GDP − Depreciation.</li>
+<li>
+It provides information about production and income generation.
+</li>
 
-<li>NNP = GNP − Depreciation.</li>
+<li>
+It assists governments in economic planning and policy formulation.
+</li>
 
-<li>Gross → Net = subtract depreciation.</li>
+<li>
+It helps analyse changes in different sectors of the economy.
+</li>
 
-<li>Domestic → National = add NFIA.</li>
+<li>
+It provides a basis for studying economic growth.
+</li>
 
-<li>Market Price → Factor Cost = subtract Net Indirect Taxes.</li>
+<li>
+It helps in analysing consumption, saving and investment patterns.
+</li>
 
-<li>National Income = NNP at Factor Cost.</li>
-
-<li>Intermediate goods are excluded separately to avoid double counting.</li>
-
-<li>Value Added = Value of Output − Intermediate Consumption.</li>
-
-<li>Income Method = Compensation of Employees + Operating Surplus
-+ Mixed Income of Self-Employed.</li>
-
-<li>Expenditure Method = C + I + G + (X − M).</li>
-
-<li>National income is a flow concept.</li>
-
-<li>Depreciation is also known as consumption of fixed capital.</li>
+<li>
+It provides useful information for economic decision-making.
+</li>
 
 </ul>
+
+<div class="highlight">
+
+National income statistics are therefore not merely numerical calculations;
+they provide a structured picture of economic activity.
+
+</div>
+
+</div>
+
+
+<!-- BOARD EXAM -->
+
+<div class="card">
+
+<span class="topic">EXAM PREPARATION</span>
+
+<h2>Board Exam Preparation</h2>
+
+<p>
+For detailed board-oriented practice, numerical questions, concept-based questions,
+formula application and answer-writing practice, use the dedicated Board Exam Booster.
+</p>
+
+<a href="class12-macroeconomics-unit1-board-exam.html"
+class="advice-link">
+
+📘 Open Unit 1 Board Exam Booster →
+
+</a>
+
+</div>
+
+
+<!-- ONLY 5 MCQ SETS -->
+
+<div class="card">
+
+<span class="topic">MCQ PRACTICE</span>
+
+<h2>National Income – MCQ Sets</h2>
+
+<p>
+Practice National Income through five dedicated MCQ sets covering concepts, formulas,
+methods, conversions and numerical applications.
+</p>
+
+<a href="class12-macroeconomics-unit1-mcqs.html"
+class="mcq-link">
+
+📝 MCQ Set 1 – National Income →
+
+</a>
+
+<a href="class12-macroeconomics-unit1-mcq-set2.html"
+class="mcq-link">
+
+📝 MCQ Set 2 – National Income →
+
+</a>
+
+<a href="class12-macroeconomics-unit1-mcq-set3.html"
+class="mcq-link">
+
+📝 MCQ Set 3 – National Income →
+
+</a>
+
+<a href="class12-macroeconomics-unit1-mcq-set4.html"
+class="mcq-link">
+
+📝 MCQ Set 4 – National Income →
+
+</a>
+
+<a href="class12-macroeconomics-unit1-mcq-set5.html"
+class="mcq-link">
+
+📝 MCQ Set 5 – National Income →
+
+</a>
+
+</div>
+
+
+<!-- STUDY GUIDANCE -->
+
+<div class="card">
+
+<span class="topic">STUDY GUIDE</span>
+
+<h2>How to Study This Unit</h2>
+
+<p>
+National Income becomes much easier when the concepts are connected rather than memorised
+individually.
+</p>
+
+<div class="highlight">
+
+<strong>First understand:</strong><br>
+Domestic Territory → Normal Resident → Final Goods → Depreciation → NFIA
+
+</div>
+
+<div class="highlight">
+
+<strong>Then master:</strong><br>
+Gross/Net → Domestic/National → Market Price/Factor Cost
+
+</div>
+
+<div class="highlight">
+
+<strong>Finally practise:</strong><br>
+Value Added Method → Income Method → Expenditure Method → Numericals
+
+</div>
+
+<p>
+For numerical questions, always identify the required aggregate first and then apply the
+necessary adjustments in the correct direction.
+</p>
 
 </div>
 
@@ -1951,11 +2023,9 @@ Start Unit 1 MCQs →
 
 <footer>
 
-<p><strong>Edusphere with Satyam</strong></p>
+<p>© Edusphere with Satyam | Class 12 Economics</p>
 
-<p>
-Class 12 Economics | Macroeconomics | Unit 1
-</p>
+<p>Unit 1 – National Income</p>
 
 </footer>
 
